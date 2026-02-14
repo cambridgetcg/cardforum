@@ -3,18 +3,18 @@
  *
  * Scores bridge proposals based on:
  *   - Cycle length (fewer legs = better)
- *   - Region locality (all same region = bonus)
- *   - Condition match accuracy
- *   - User ratings
+ *   - Region locality (fully local = big bonus)
+ *   - Condition quality (NM > LP > MP...)
  */
 
 import type { BridgeProposal } from "./bridge-builder";
 
 const WEIGHTS = {
-  cycleLengthPenalty: -10,
-  sameRegionBonus: 20,
-  conditionMatchBonus: 15,
   baseScore: 100,
+  cycleLengthPenalty: -10,
+  fullyLocalBonus: 30,
+  fewRegionsBonus: 15,
+  conditionBonus: { NM: 5, LP: 4, MP: 3, HP: 2, DMG: 1 } as Record<string, number>,
 };
 
 /**
@@ -23,13 +23,20 @@ const WEIGHTS = {
 export function scoreProposal(proposal: BridgeProposal): number {
   let score = WEIGHTS.baseScore;
 
-  // Shorter cycles are better
+  // Shorter cycles are better (2-leg direct swap is ideal)
   score += proposal.cycle.length * WEIGHTS.cycleLengthPenalty;
 
-  // All legs in same region is ideal
-  const uniqueRegions = new Set(proposal.cycle.regions);
-  if (uniqueRegions.size === 1) {
-    score += WEIGHTS.sameRegionBonus;
+  // Fully local is a huge bonus
+  if (proposal.cycle.isFullyLocal) {
+    score += WEIGHTS.fullyLocalBonus;
+  } else {
+    const uniqueRegions = new Set(proposal.cycle.regions).size;
+    if (uniqueRegions <= 2) score += WEIGHTS.fewRegionsBonus;
+  }
+
+  // Better conditions = small bonus
+  for (const leg of proposal.legs) {
+    score += WEIGHTS.conditionBonus[leg.condition] ?? 0;
   }
 
   return Math.max(0, score);

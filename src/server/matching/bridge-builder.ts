@@ -3,36 +3,63 @@
  *
  * Takes cycles found by the cycle-finder and constructs
  * MatchProposals with local-only TradeLeg assignments.
- *
- * Key constraint: every leg must be same-region (local delivery).
  */
 
-import type { Cycle } from "./cycle-finder";
+import type { Cycle, ListingEdge } from "./cycle-finder";
+import { scoreProposal } from "./scorer";
 
 export interface BridgeProposal {
   cycle: Cycle;
-  legs: {
-    fromUserId: string;
-    toUserId: string;
-    cardId: string;
-    region: string;
-    haveListingId: string;
-    wantListingId: string;
-    sequence: number;
-  }[];
+  legs: BridgeLeg[];
   score: number;
+  userIds: string[];
+}
+
+export interface BridgeLeg {
+  fromUserId: string;
+  toUserId: string;
+  cardId: string;
+  region: string;
+  haveListingId: string;
+  wantListingId: string;
+  condition: string;
+  sequence: number;
 }
 
 /**
  * Build bridge proposals from detected cycles.
- * Ensures all legs are local (same region).
+ * Prioritizes fully-local cycles, then scores and ranks.
  */
 export function buildBridges(cycles: Cycle[]): BridgeProposal[] {
-  // TODO: Implement bridge construction
-  // 1. For each cycle, verify all legs are local
-  // 2. Construct leg assignments with sequence numbers
-  // 3. Score each proposal
-  // 4. Return sorted by score (highest first)
-  void cycles;
-  return [];
+  const proposals: BridgeProposal[] = [];
+
+  for (const cycle of cycles) {
+    const legs = buildLegs(cycle.edges);
+    const userIds = [...new Set(cycle.edges.map((e) => e.haveUserId))];
+
+    const proposal: BridgeProposal = {
+      cycle,
+      legs,
+      score: 0,
+      userIds,
+    };
+    proposal.score = scoreProposal(proposal);
+    proposals.push(proposal);
+  }
+
+  proposals.sort((a, b) => b.score - a.score);
+  return proposals;
+}
+
+function buildLegs(edges: ListingEdge[]): BridgeLeg[] {
+  return edges.map((edge, i) => ({
+    fromUserId: edge.haveUserId,
+    toUserId: edge.wantUserId,
+    cardId: edge.cardId,
+    region: edge.haveRegion,
+    haveListingId: edge.haveListingId,
+    wantListingId: edge.wantListingId,
+    condition: edge.condition,
+    sequence: i,
+  }));
 }

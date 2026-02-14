@@ -1,5 +1,4 @@
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardSearch } from "@/components/listings/card-search";
 
 export default function BrowsePage() {
   return (
@@ -9,19 +8,8 @@ export default function BrowsePage() {
         Search the card catalog across all supported TCGs
       </p>
 
-      <div className="mt-6 max-w-lg">
-        <Input placeholder="Search cards by name, set, or number..." />
-      </div>
-
-      <div className="mt-8">
-        <Card>
-          <CardContent className="py-12 text-center">
-            <p className="text-gray-500">
-              Search for a card to get started. The catalog supports Pokemon,
-              Yu-Gi-Oh!, One Piece, and Magic: The Gathering.
-            </p>
-          </CardContent>
-        </Card>
+      <div className="mt-6">
+        <CardSearch />
       </div>
     </div>
   );

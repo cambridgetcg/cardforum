@@ -1,13 +1,28 @@
 import { NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
+import { runMatching, getUserProposals } from "@/server/services/matching.service";
 
 // GET /api/matches — View match proposals for current user
 export async function GET() {
-  // TODO: Implement with matching engine
-  return NextResponse.json({ proposals: [] });
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const proposals = await getUserProposals(session.user.id);
+  return NextResponse.json({ proposals });
 }
 
-// POST /api/matches — Trigger matching for current user's listings
+// POST /api/matches — Trigger global matching run
 export async function POST() {
-  // TODO: Implement with matching engine
-  return NextResponse.json({ error: "Not implemented" }, { status: 501 });
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const proposals = await runMatching();
+  return NextResponse.json({
+    found: proposals.length,
+    message: `Found ${proposals.length} potential bridge matches`,
+  });
 }

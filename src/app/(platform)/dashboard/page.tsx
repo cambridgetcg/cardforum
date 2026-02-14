@@ -1,7 +1,38 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { ArrowRightLeft, ListChecks, Package } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRightLeft, ListChecks, Package, Sparkles } from "lucide-react";
+
+interface DashboardStats {
+  listings: number;
+  haveCount: number;
+  wantCount: number;
+  activeTrades: number;
+  completedTrades: number;
+  pendingProposals: number;
+}
 
 export default function DashboardPage() {
+  const [stats, setStats] = useState<DashboardStats | null>(null);
+
+  useEffect(() => {
+    fetch("/api/dashboard")
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setStats);
+  }, []);
+
+  const s = stats ?? {
+    listings: 0,
+    haveCount: 0,
+    wantCount: 0,
+    activeTrades: 0,
+    completedTrades: 0,
+    pendingProposals: 0,
+  };
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
@@ -9,17 +40,19 @@ export default function DashboardPage() {
         Welcome to CardForum. Here&apos;s your trading overview.
       </p>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-3">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
               <ListChecks className="h-5 w-5 text-indigo-600" />
-              <h3 className="font-semibold text-gray-900">Active Listings</h3>
+              <h3 className="font-semibold text-gray-900">Listings</h3>
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-gray-900">0</p>
-            <p className="text-sm text-gray-500">have &amp; want listings</p>
+            <p className="text-3xl font-bold text-gray-900">{s.listings}</p>
+            <p className="text-sm text-gray-500">
+              {s.haveCount} have &middot; {s.wantCount} want
+            </p>
           </CardContent>
         </Card>
 
@@ -31,7 +64,7 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-gray-900">0</p>
+            <p className="text-3xl font-bold text-gray-900">{s.activeTrades}</p>
             <p className="text-sm text-gray-500">trades in progress</p>
           </CardContent>
         </Card>
@@ -44,18 +77,59 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-gray-900">0</p>
+            <p className="text-3xl font-bold text-gray-900">{s.completedTrades}</p>
             <p className="text-sm text-gray-500">successful trades</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-indigo-600" />
+              <h3 className="font-semibold text-gray-900">Matches</h3>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold text-gray-900">{s.pendingProposals}</p>
+            <p className="text-sm text-gray-500">pending proposals</p>
           </CardContent>
         </Card>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <Card>
-          <CardContent className="py-12 text-center">
+          <CardContent className="py-8 text-center">
+            {s.listings === 0 ? (
+              <>
+                <p className="text-gray-500">
+                  Start by listing cards you want to trade!
+                </p>
+                <Link href="/listings" className="mt-3 inline-block">
+                  <Button>Go to Listings</Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-500">
+                  You have {s.listings} active listing{s.listings !== 1 ? "s" : ""}.
+                  The matching engine can find bridge trades for you.
+                </p>
+                <Link href="/trades" className="mt-3 inline-block">
+                  <Button>View Trades</Button>
+                </Link>
+              </>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="py-8 text-center">
             <p className="text-gray-500">
-              No recent activity. Start by listing cards you want to trade!
+              Browse the card catalog to discover cards across all TCGs.
             </p>
+            <Link href="/browse" className="mt-3 inline-block">
+              <Button variant="outline">Browse Cards</Button>
+            </Link>
           </CardContent>
         </Card>
       </div>
