@@ -1,0 +1,419 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Enums ──────────────────────────────────────────────
+
+enum TCG {
+  POKEMON
+  ONEPIECE
+  YUGIOH
+  MTG
+}
+
+enum Condition {
+  NM // Near Mint
+  LP // Lightly Played
+  MP // Moderately Played
+  HP // Heavily Played
+  DMG // Damaged
+}
+
+enum TradeStatus {
+  PROPOSED
+  ACCEPTED
+  ESCROWED
+  CARDS_SUBMITTED
+  AUTHENTICATING
+  VERIFIED
+  DELIVERING
+  DELIVERED
+  COMPLETED
+  REJECTED
+  CANCELLED
+  DISPUTED
+}
+
+enum TradeLegStatus {
+  PENDING
+  CARD_RECEIVED
+  AUTHENTICATING
+  VERIFIED
+  SHIPPED
+  DELIVERED
+  FAILED
+}
+
+enum AuthenticatorTier {
+  STANDARD
+  VERIFIED
+  PREMIUM
+}
+
+enum EscrowStatus {
+  HELD
+  RELEASED
+  REFUNDED
+  DISPUTED
+}
+
+enum EscrowEntryType {
+  HOLD
+  RELEASE
+  REFUND
+}
+
+enum DisputeStatus {
+  OPEN
+  INVESTIGATING
+  RESOLVED_BUYER
+  RESOLVED_SELLER
+  ESCALATED
+  CLOSED
+}
+
+enum NotificationType {
+  TRADE_PROPOSED
+  TRADE_ACCEPTED
+  TRADE_UPDATE
+  MATCH_FOUND
+  VERIFICATION_COMPLETE
+  DISPUTE_UPDATE
+  SYSTEM
+}
+
+// ─── Auth.js Tables ─────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  region        String?
+  country       String?
+  bio           String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+
+  haveListings  HaveListing[]
+  wantListings  WantListing[]
+  tradesAsA     Trade[]       @relation("TradeUserA")
+  tradesAsB     Trade[]       @relation("TradeUserB")
+  notifications Notification[]
+
+  authenticator Authenticator? @relation("UserAuthenticator")
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ─── Card Catalog ───────────────────────────────────────
+
+model Card {
+  id        String   @id @default(cuid())
+  tcg       TCG
+  name      String
+  setName   String
+  setCode   String?
+  number    String?
+  rarity    String?
+  imageUrl  String?
+  createdAt DateTime @default(now())
+
+  variants     CardVariant[]
+  haveListings HaveListing[]
+  wantListings WantListing[]
+
+  @@unique([tcg, setName, number])
+  @@index([tcg, name])
+  @@map("cards")
+}
+
+model CardVariant {
+  id       String  @id @default(cuid())
+  cardId   String
+  language String
+  edition  String? // 1st Edition, Unlimited, etc.
+  imageUrl String?
+
+  card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  @@unique([cardId, language, edition])
+  @@map("card_variants")
+}
+
+// ─── Listings ───────────────────────────────────────────
+
+model HaveListing {
+  id          String    @id @default(cuid())
+  userId      String
+  cardId      String
+  condition   Condition
+  language    String    @default("EN")
+  quantity    Int       @default(1)
+  notes       String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card Card @relation(fields: [cardId], references: [id])
+
+  tradeLegs TradeLeg[] @relation("HaveListingLeg")
+
+  @@index([cardId, condition, isActive])
+  @@index([userId])
+  @@map("have_listings")
+}
+
+model WantListing {
+  id               String     @id @default(cuid())
+  userId           String
+  cardId           String
+  minCondition     Condition  @default(LP)
+  language         String?
+  maxQuantity      Int        @default(1)
+  notes            String?
+  isActive         Boolean    @default(true)
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card Card @relation(fields: [cardId], references: [id])
+
+  tradeLegs TradeLeg[] @relation("WantListingLeg")
+
+  @@index([cardId, minCondition, isActive])
+  @@index([userId])
+  @@map("want_listings")
+}
+
+// ─── Matching & Trades ──────────────────────────────────
+
+model MatchProposal {
+  id           String   @id @default(cuid())
+  score        Float
+  cycleLength  Int
+  regions      String[] // regions involved
+  isViable     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+
+  trade Trade?
+  legs  MatchProposalLeg[]
+
+  @@map("match_proposals")
+}
+
+model MatchProposalLeg {
+  id         String @id @default(cuid())
+  proposalId String
+  fromUserId String
+  toUserId   String
+  cardId     String
+  region     String
+  sequence   Int
+
+  proposal MatchProposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+
+  @@map("match_proposal_legs")
+}
+
+model Trade {
+  id             String      @id @default(cuid())
+  proposalId     String      @unique
+  userAId        String
+  userBId        String
+  status         TradeStatus @default(PROPOSED)
+  statusHistory  Json        @default("[]")
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  completedAt    DateTime?
+
+  proposal MatchProposal @relation(fields: [proposalId], references: [id])
+  userA    User          @relation("TradeUserA", fields: [userAId], references: [id])
+  userB    User          @relation("TradeUserB", fields: [userBId], references: [id])
+
+  legs     TradeLeg[]
+  escrow   Escrow?
+  disputes Dispute[]
+
+  @@index([userAId, status])
+  @@index([userBId, status])
+  @@map("trades")
+}
+
+model TradeLeg {
+  id              String         @id @default(cuid())
+  tradeId         String
+  haveListingId   String
+  wantListingId   String
+  fromUserId      String
+  toUserId        String
+  region          String
+  status          TradeLegStatus @default(PENDING)
+  authenticatorId String?
+  sequence        Int
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  trade         Trade          @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  haveListing   HaveListing    @relation("HaveListingLeg", fields: [haveListingId], references: [id])
+  wantListing   WantListing    @relation("WantListingLeg", fields: [wantListingId], references: [id])
+
+  verification  VerificationAssignment?
+
+  @@map("trade_legs")
+}
+
+// ─── Authenticator Network ──────────────────────────────
+
+model Authenticator {
+  id            String            @id @default(cuid())
+  userId        String            @unique
+  businessName  String?
+  tier          AuthenticatorTier @default(STANDARD)
+  region        String
+  tcgExpertise  TCG[]
+  isActive      Boolean           @default(true)
+  rating        Float             @default(5.0)
+  totalVerified Int               @default(0)
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  user          User @relation("UserAuthenticator", fields: [userId], references: [id])
+  assignments   VerificationAssignment[]
+
+  @@index([region, isActive])
+  @@map("authenticators")
+}
+
+model VerificationAssignment {
+  id              String   @id @default(cuid())
+  tradeLegId      String   @unique
+  authenticatorId String
+  assignedAt      DateTime @default(now())
+  completedAt     DateTime?
+  result          Json?    // { authentic: boolean, conditionVerified: Condition, notes: string }
+  photos          String[]
+
+  tradeLeg      TradeLeg      @relation(fields: [tradeLegId], references: [id])
+  authenticator Authenticator @relation(fields: [authenticatorId], references: [id])
+
+  @@map("verification_assignments")
+}
+
+// ─── Escrow ─────────────────────────────────────────────
+
+model Escrow {
+  id          String       @id @default(cuid())
+  tradeId     String       @unique
+  status      EscrowStatus @default(HELD)
+  totalAmount Int          // in cents
+  currency    String       @default("USD")
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  trade   Trade         @relation(fields: [tradeId], references: [id])
+  entries EscrowEntry[]
+
+  @@map("escrows")
+}
+
+model EscrowEntry {
+  id        String          @id @default(cuid())
+  escrowId  String
+  type      EscrowEntryType
+  amount    Int             // in cents
+  note      String?
+  createdAt DateTime        @default(now())
+
+  escrow Escrow @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+
+  @@map("escrow_entries")
+}
+
+// ─── Disputes ───────────────────────────────────────────
+
+model Dispute {
+  id          String        @id @default(cuid())
+  tradeId     String
+  raisedById  String
+  reason      String
+  evidence    String[]
+  status      DisputeStatus @default(OPEN)
+  resolution  String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  trade Trade @relation(fields: [tradeId], references: [id])
+
+  @@map("disputes")
+}
+
+// ─── Notifications ──────────────────────────────────────
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  title     String
+  message   String
+  link      String?
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isRead])
+  @@map("notifications")
+}
