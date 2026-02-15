@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { ArrowRightLeft, Menu, X } from "lucide-react";
+import { ArrowRightLeft, Layers, Menu, Shield, Wallet, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -23,6 +23,9 @@ export function Header() {
           <Link href="/browse" className="text-sm text-gray-600 hover:text-gray-900">
             Browse
           </Link>
+          <Link href="/marketplace" className="text-sm text-gray-600 hover:text-gray-900">
+            Market
+          </Link>
           {session ? (
             <>
               <Link href="/dashboard" className="text-sm text-gray-600 hover:text-gray-900">
@@ -33,6 +36,18 @@ export function Header() {
               </Link>
               <Link href="/trades" className="text-sm text-gray-600 hover:text-gray-900">
                 Trades
+              </Link>
+              <Link href="/digital-marketplace" className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900">
+                <Layers className="h-3.5 w-3.5" />
+                Digital
+              </Link>
+              <Link href="/wallet" className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900">
+                <Wallet className="h-3.5 w-3.5" />
+                Wallet
+              </Link>
+              <Link href="/authenticator/dashboard" className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900">
+                <Shield className="h-3.5 w-3.5" />
+                Verify
               </Link>
               <Link href="/settings" className="text-sm text-gray-600 hover:text-gray-900">
                 Settings
@@ -67,6 +82,9 @@ export function Header() {
             <Link href="/browse" className="text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
               Browse
             </Link>
+            <Link href="/marketplace" className="text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
+              Market
+            </Link>
             {session ? (
               <>
                 <Link href="/dashboard" className="text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
@@ -77,6 +95,18 @@ export function Header() {
                 </Link>
                 <Link href="/trades" className="text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
                   Trades
+                </Link>
+                <Link href="/digital-marketplace" className="flex items-center gap-1 text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
+                  <Layers className="h-3.5 w-3.5" />
+                  Digital Marketplace
+                </Link>
+                <Link href="/wallet" className="flex items-center gap-1 text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
+                  <Wallet className="h-3.5 w-3.5" />
+                  Wallet
+                </Link>
+                <Link href="/authenticator/dashboard" className="flex items-center gap-1 text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
+                  <Shield className="h-3.5 w-3.5" />
+                  Verify
                 </Link>
                 <Link href="/settings" className="text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
                   Settings

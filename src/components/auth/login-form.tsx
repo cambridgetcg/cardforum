@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,10 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export function LoginForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -26,8 +31,11 @@ export function LoginForm() {
 
     if (result?.error) {
       setError("Invalid email or password");
+      setLoading(false);
+      return;
     }
-    setLoading(false);
+
+    router.push(callbackUrl);
   }
 
   return (
@@ -43,14 +51,14 @@ export function LoginForm() {
           <Button
             variant="outline"
             className="w-full"
-            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+            onClick={() => signIn("google", { callbackUrl })}
           >
             Continue with Google
           </Button>
           <Button
             variant="outline"
             className="w-full"
-            onClick={() => signIn("discord", { callbackUrl: "/dashboard" })}
+            onClick={() => signIn("discord", { callbackUrl })}
           >
             Continue with Discord
           </Button>

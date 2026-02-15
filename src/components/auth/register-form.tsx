@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
@@ -8,9 +9,14 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export function RegisterForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -18,6 +24,12 @@ export function RegisterForm() {
     e.preventDefault();
     setLoading(true);
     setError("");
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch("/api/auth/register", {
@@ -29,17 +41,25 @@ export function RegisterForm() {
       if (!res.ok) {
         const data = await res.json();
         setError(data.error || "Registration failed");
+        setLoading(false);
         return;
       }
 
-      await signIn("credentials", {
+      const result = await signIn("credentials", {
         email,
         password,
-        callbackUrl: "/dashboard",
+        redirect: false,
       });
+
+      if (result?.error) {
+        setError("Account created but sign-in failed. Please log in.");
+        setLoading(false);
+        return;
+      }
+
+      router.push(callbackUrl);
     } catch {
       setError("Something went wrong");
-    } finally {
       setLoading(false);
     }
   }
@@ -57,14 +77,14 @@ export function RegisterForm() {
           <Button
             variant="outline"
             className="w-full"
-            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+            onClick={() => signIn("google", { callbackUrl })}
           >
             Continue with Google
           </Button>
           <Button
             variant="outline"
             className="w-full"
-            onClick={() => signIn("discord", { callbackUrl: "/dashboard" })}
+            onClick={() => signIn("discord", { callbackUrl })}
           >
             Continue with Discord
           </Button>
@@ -99,11 +119,24 @@ export function RegisterForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          <div>
+            <Input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              minLength={8}
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              Min 8 characters with uppercase, lowercase, and a number
+            </p>
+          </div>
           <Input
             type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Confirm password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
             required
             minLength={8}
           />

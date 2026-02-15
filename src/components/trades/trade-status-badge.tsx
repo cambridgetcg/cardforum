@@ -9,6 +9,7 @@ const STATUS_CONFIG: Record<TradeStatus, { label: string; variant: BadgeProps["v
   AUTHENTICATING: { label: "Authenticating", variant: "warning" },
   VERIFIED: { label: "Verified", variant: "success" },
   DELIVERING: { label: "Delivering", variant: "warning" },
+  SHIPPING: { label: "Shipping", variant: "warning" },
   DELIVERED: { label: "Delivered", variant: "success" },
   COMPLETED: { label: "Completed", variant: "success" },
   REJECTED: { label: "Rejected", variant: "error" },

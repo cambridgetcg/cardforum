@@ -10,6 +10,8 @@ export async function GET(req: NextRequest) {
   const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") ?? 20)));
   const skip = (page - 1) * limit;
 
+  const set = searchParams.get("set");
+
   const where = {
     ...(query && {
       OR: [
@@ -19,11 +21,16 @@ export async function GET(req: NextRequest) {
       ],
     }),
     ...(tcg && { tcg: tcg as "POKEMON" | "ONEPIECE" | "YUGIOH" | "MTG" }),
+    ...(set && { set: { code: set } }),
   };
 
   const [cards, total] = await Promise.all([
     db.card.findMany({
       where,
+      include: {
+        set: true,
+        _count: { select: { variants: true } },
+      },
       orderBy: [{ tcg: "asc" }, { name: "asc" }],
       skip,
       take: limit,

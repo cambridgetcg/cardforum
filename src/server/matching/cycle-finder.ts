@@ -21,6 +21,8 @@ export interface ListingEdge {
   haveRegion: string;
   wantRegion: string;
   condition: string;
+  askPrice: number; // cents — from HaveListing
+  bidPrice: number; // cents — from WantListing
 }
 
 export interface Cycle {
@@ -90,6 +92,9 @@ function dfs(
   if (!outEdges) return;
 
   for (const edge of outEdges) {
+    // Skip non-viable edges: buyer won't pay seller's price
+    if (edge.bidPrice < edge.askPrice) continue;
+
     const nextUser = edge.wantUserId;
 
     // Don't reuse the same have listing in one cycle

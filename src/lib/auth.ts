@@ -3,11 +3,12 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
 import Discord from "next-auth/providers/discord";
+import { compare } from "bcryptjs";
 import { db } from "@/lib/db";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(db),
-  session: { strategy: "jwt" },
+  session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
   pages: {
     signIn: "/login",
   },
@@ -27,12 +28,28 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        // TODO: Implement password verification with bcrypt
-        // For now, credentials auth is a placeholder
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
-        return null;
+
+        const user = await db.user.findUnique({
+          where: { email: credentials.email as string },
+        });
+
+        if (!user?.passwordHash) {
+          return null;
+        }
+
+        const valid = await compare(
+          credentials.password as string,
+          user.passwordHash,
+        );
+
+        if (!valid) {
+          return null;
+        }
+
+        return { id: user.id, name: user.name, email: user.email, image: user.image };
       },
     }),
   ],

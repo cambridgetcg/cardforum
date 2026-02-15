@@ -24,6 +24,11 @@ enum Condition {
   DMG // Damaged
 }
 
+enum TradeMode {
+  AUTHENTICATED
+  DIRECT
+}
+
 enum TradeStatus {
   PROPOSED
   ACCEPTED
@@ -32,6 +37,7 @@ enum TradeStatus {
   AUTHENTICATING
   VERIFIED
   DELIVERING
+  SHIPPING       // direct trades: seller ships to buyer
   DELIVERED
   COMPLETED
   REJECTED
@@ -42,6 +48,7 @@ enum TradeStatus {
 enum TradeLegStatus {
   PENDING
   CARD_RECEIVED
+  PHOTO_REVIEW
   AUTHENTICATING
   VERIFIED
   SHIPPED
@@ -49,10 +56,97 @@ enum TradeLegStatus {
   FAILED
 }
 
+enum PhotoApprovalStatus {
+  PENDING_PHOTOS
+  PENDING_REVIEW
+  APPROVED
+  REJECTED
+}
+
+enum GradingCompany {
+  PSA
+  BGS
+  CGC
+  SGC
+}
+
 enum AuthenticatorTier {
   STANDARD
   VERIFIED
   PREMIUM
+}
+
+enum AuthenticatorApplicationStatus {
+  DRAFT
+  SUBMITTED
+  PENDING_REVIEW
+  MORE_INFO_NEEDED
+  APPROVED
+  ONBOARDING
+  ACTIVE
+  SUSPENDED
+  DEACTIVATED
+  REVOKED
+}
+
+enum WalletTransactionType {
+  DEPOSIT
+  WITHDRAWAL
+  WITHDRAWAL_REVERSAL
+  TRADE_HOLD
+  TRADE_RELEASE
+  TRADE_FEE
+  TRADE_REFUND
+  VERIFICATION_FEE        // debit from user to fund authenticator verification
+  VERIFICATION_FEE_REFUND // credit back if trade cancelled after AUTHENTICATING
+  AUTHENTICATOR_EARN      // credit to authenticator when trade completes
+  DIGITISATION_FEE         // debit from digitiser to fund verification
+  DIGITISATION_FEE_REFUND  // credit back if digitisation rejected/cancelled
+  DIGITAL_TRADE_HOLD       // buyer funds held during digital trade
+  DIGITAL_TRADE_RELEASE    // buyer funds released to seller on completion
+  DIGITAL_TRADE_FEE        // platform fee on digital trade
+  DIGITISER_ROYALTY         // royalty credit to original digitiser
+  REDEMPTION_FEE           // debit from redeemer for redemption handling
+  VAULT_EARN               // credit to vault authenticator on redemption
+}
+
+// ─── Digitisation Enums ──────────────────────────────────
+
+enum DigitisationStatus {
+  SUBMITTED          // User submitted request, card not yet received
+  RECEIVED           // Authenticator received physical card
+  VERIFYING          // Authenticator inspecting card
+  VERIFIED           // Card passed verification
+  MINTED             // Digital token created
+  REJECTED           // Card failed verification, returned to owner
+  CANCELLED          // User cancelled before verification
+}
+
+enum DigitalTokenStatus {
+  ACTIVE             // Token exists, tradeable
+  LISTED             // Token listed for sale on marketplace
+  TRADE_LOCKED       // Token locked in an active trade
+  REDEMPTION_PENDING // Redemption initiated, awaiting fulfillment
+  REDEEMED           // Physical card delivered, token consumed
+  BURNED             // Token destroyed (admin action or orphan cleanup)
+}
+
+enum RedemptionStatus {
+  REQUESTED          // User requested redemption
+  STOCK_RESERVED     // Physical card reserved at vault
+  PREPARING          // Vault authenticator preparing shipment
+  SHIPPED            // Card shipped to redeemer
+  DELIVERED          // Card delivered
+  COMPLETED          // Confirmed receipt, token burned
+  FAILED             // No stock available or delivery failed
+  CANCELLED          // User cancelled before shipping
+}
+
+enum PayoutStatus {
+  PENDING
+  PAID
+  FAILED
+  REVERSED
 }
 
 enum EscrowStatus {
@@ -77,6 +171,11 @@ enum DisputeStatus {
   CLOSED
 }
 
+enum DeliveryMethod {
+  DROP_OFF
+  MAIL
+}
+
 enum NotificationType {
   TRADE_PROPOSED
   TRADE_ACCEPTED
@@ -84,7 +183,65 @@ enum NotificationType {
   MATCH_FOUND
   VERIFICATION_COMPLETE
   DISPUTE_UPDATE
+  PHOTO_APPROVAL
+  SHIPPING_REMINDER    // authenticator/sender: ship your card
+  SHIPPING_SLA_WARNING // authenticator: shipping overdue
+  DELIVERY_CONFIRMED   // recipient confirmed receipt
+  CARD_RETURN          // trade cancelled, retrieve your card
+  DEPOSIT_FAILED       // payment failed during checkout
+  ACH_PROCESSING       // ACH deposit submitted, awaiting settlement
+  ACH_SETTLED          // ACH deposit settled, funds credited
+  ACH_FAILED           // ACH deposit failed after async processing
+  CHARGEBACK_ALERT     // Stripe chargeback filed against user
+  CHARGEBACK_RESOLVED  // Stripe chargeback resolved
+  PAYOUT_COMPLETED     // Express payout reached user's bank
+  PAYOUT_FAILED        // Express payout failed at bank level
+  WALLET_FROZEN        // wallet frozen due to chargeback/fraud
   SYSTEM
+}
+
+// ─── KYC Enums ─────────────────────────────────────────
+
+enum KYCStatus {
+  UNVERIFIED
+  BASIC_PENDING
+  BASIC_VERIFIED
+  BASIC_REJECTED
+  ENHANCED_PENDING
+  ENHANCED_VERIFIED
+  ENHANCED_REJECTED
+  SUSPENDED
+  REVOKED
+}
+
+enum KYCDocumentType {
+  GOVERNMENT_ID      // passport, driver license, national ID
+  SELFIE             // liveness selfie matching ID photo
+  PROOF_OF_ADDRESS   // utility bill, bank statement, tax document
+  BANK_VERIFICATION  // micro-deposit verification result
+}
+
+enum KYCDocumentStatus {
+  PENDING   // uploaded, awaiting review
+  APPROVED  // verified by reviewer or automated check
+  REJECTED  // failed verification
+  EXPIRED   // document past expiration date
+}
+
+// ─── Platform Configuration ─────────────────────────────
+
+model PlatformConfig {
+  key         String   @id                // e.g. "platform_fee_rate", "authenticator_fees.STANDARD"
+  value       Json                        // any JSON-serializable value
+  category    String   @default("general") // grouping: "fees", "thresholds", "matching", "kyc", "shipping"
+  description String?                     // human-readable explanation
+  version     Int      @default(1)        // increments on each update (optimistic locking)
+  updatedBy   String?                     // admin userId who last changed this
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  @@index([category])
+  @@map("platform_config")
 }
 
 // ─── Auth.js Tables ─────────────────────────────────────
@@ -99,20 +256,59 @@ model User {
   region        String?
   country       String?
   bio           String?
+  stripeCustomerId          String? @unique
+  stripeConnectAccountId    String? @unique
+  connectOnboardingComplete Boolean @default(false)
+  preferredCurrency         String  @default("USD") // ISO-4217 currency code
+  walletBalance             Int     @default(0)  // cached balance in USD cents
+  walletFrozen              Boolean @default(false)
+  walletFrozenReason        String?
+
+  // AI agreement tracking (Phase 3)
+  aiAgreementRate           Float?  // fraction of trades where seller's condition matched auth (±1 tier)
+  aiAgreementCount          Int     @default(0) // total comparisons with AI grading + authenticator CCS
+
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
   accounts      Account[]
   sessions      Session[]
+  walletTransactions WalletTransaction[]
+  pendingDeposits    PendingDeposit[]
+  payouts        Payout[]
 
-  haveListings  HaveListing[]
-  wantListings  WantListing[]
-  tradesAsA     Trade[]       @relation("TradeUserA")
-  tradesAsB     Trade[]       @relation("TradeUserB")
-  notifications Notification[]
+  haveListings        HaveListing[]
+  wantListings        WantListing[]
+  gradedHaveListings  GradedHaveListing[]
+  gradedWantListings  GradedWantListing[]
+  tradesAsA           Trade[]       @relation("TradeUserA")
+  tradesAsB           Trade[]       @relation("TradeUserB")
+  notifications       Notification[]
 
   authenticator Authenticator? @relation("UserAuthenticator")
 
+  // Digitisation
+  tokensDigitised        DigitalToken[]         @relation("TokenDigitiser")
+  tokensOwned            DigitalToken[]         @relation("TokenOwner")
+  digitalTokenListings   DigitalTokenListing[]  @relation("DigitalTokenSeller")
+  digitalTradesAsBuyer   DigitalTrade[]         @relation("DigitalTradeBuyer")
+  digitalTradesAsSeller  DigitalTrade[]         @relation("DigitalTradeSeller")
+  digitisationRequests   DigitisationRequest[]
+  redemptions            Redemption[]
+
+  // Shipping
+  shippingAddresses  ShippingAddress[]
+
+  // KYC
+  kycStatus          KYCStatus  @default(UNVERIFIED)
+  kycVerifiedAt      DateTime?
+  kycTierChangedAt   DateTime?
+  kycReviewedBy      String?
+  kycRejectionReason String?
+  kycDocuments       KYCDocument[]
+  kycAudits          KYCAudit[]
+
+  @@index([kycStatus])
   @@map("users")
 }
 
@@ -156,7 +352,61 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
+// ─── Regions ───────────────────────────────────────────
+
+model Region {
+  id        String   @id @default(cuid())
+  country   String   // ISO 3166-1 alpha-2 (e.g., "JP", "US", "DE")
+  name      String   // Metro area name (e.g., "Tokyo", "Los Angeles")
+  createdAt DateTime @default(now())
+
+  authenticators Authenticator[]
+
+  @@unique([country, name])
+  @@map("regions")
+}
+
+// ─── Shipping Addresses ─────────────────────────────────
+
+model ShippingAddress {
+  id         String   @id @default(cuid())
+  userId     String
+  label      String   // "Home", "Office", "PO Box"
+  line1      String
+  line2      String?
+  city       String
+  state      String?  // not all countries have states/provinces
+  postalCode String
+  country    String   // ISO 3166-1 alpha-2 (JP, US, DE, GB)
+  phone      String?
+  isDefault  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tradeLegs TradeLeg[] @relation("ShippingAddressLeg")
+
+  @@index([userId])
+  @@map("shipping_addresses")
+}
+
 // ─── Card Catalog ───────────────────────────────────────
+
+model CardSet {
+  id           String   @id @default(cuid())
+  tcg          TCG
+  code         String   // "OP01", "ST01", "EB01"
+  name         String   // "Romance Dawn"
+  productType  String?  // "booster" | "starter" | "extra" | "premium" | "promo"
+  totalCards   Int?
+  cardmarketId Int?     // Cardmarket expansion ID for re-scraping
+  createdAt    DateTime @default(now())
+
+  cards Card[]
+
+  @@unique([tcg, code])
+  @@map("card_sets")
+}
 
 model Card {
   id        String   @id @default(cuid())
@@ -167,11 +417,18 @@ model Card {
   number    String?
   rarity    String?
   imageUrl  String?
+  setId     String?
   createdAt DateTime @default(now())
 
-  variants     CardVariant[]
-  haveListings HaveListing[]
-  wantListings WantListing[]
+  set                    CardSet?  @relation(fields: [setId], references: [id])
+  variants               CardVariant[]
+  haveListings           HaveListing[]
+  wantListings           WantListing[]
+  gradedHaveListings     GradedHaveListing[]
+  gradedWantListings     GradedWantListing[]
+  authenticatorInventory AuthenticatorInventory[]
+  digitalTokens          DigitalToken[]
+  digitisationRequests   DigitisationRequest[]
 
   @@unique([tcg, setName, number])
   @@index([tcg, name])
@@ -179,53 +436,89 @@ model Card {
 }
 
 model CardVariant {
-  id       String  @id @default(cuid())
-  cardId   String
-  language String
-  edition  String? // 1st Edition, Unlimited, etc.
-  imageUrl String?
+  id        String  @id @default(cuid())
+  cardId    String
+  language  String  @default("EN")
+  edition   String  @default("")  // "1st Edition", "Unlimited", or "" for default
+  treatment String? // "regular", "alt_art", "manga_rare", "parallel"
+  rarity    String? // Per-variant rarity ("C", "SR", "SEC", etc.)
+  version   String  @default("")  // Cardmarket version: "V.1", "V.2", "V.3", or ""
+  sourceUrl String? // Cardmarket product URL
+  imageUrl  String?
 
   card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
 
-  @@unique([cardId, language, edition])
+  @@unique([cardId, language, edition, version])
   @@map("card_variants")
 }
 
 // ─── Listings ───────────────────────────────────────────
 
 model HaveListing {
-  id          String    @id @default(cuid())
-  userId      String
-  cardId      String
-  condition   Condition
-  language    String    @default("EN")
-  quantity    Int       @default(1)
-  notes       String?
-  isActive    Boolean   @default(true)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id                       String    @id @default(cuid())
+  userId                   String
+  cardId                   String
+  condition                Condition
+  language                 String    @default("EN")
+  quantity                 Int       @default(1)
+  askPrice                 Int       // minor units in listing currency — minimum value the user wants
+  currency                 String    @default("USD") // ISO-4217 currency of askPrice
+  usdEquivalent            Int?      // askPrice converted to USD cents at listing time
+  exchangeRate             Float?    // rate used: 1 unit local currency = rate USD
+  rateTimestamp            DateTime? // when the exchange rate was captured
+  notes                    String?
+  isActive                 Boolean   @default(true)
+  autoAccept               Boolean   @default(false)
+  autoAcceptMaxGap         Int?      // max value gap in cents the user will auto-accept
+  autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
+  autoAcceptRegions        String[]  // regions the user will auto-accept trades from
+
+  // AI grading fields (Phase 1)
+  aiGradingResult          Json?     // full Ximilar API response for audit
+  aiConditionSuggestion    Condition? // AI-suggested condition tier
+  aiCCSSurface             Float?    // AI dimension score: surface (1.0-10.0)
+  aiCCSCorners             Float?    // AI dimension score: corners (1.0-10.0)
+  aiCCSEdges               Float?    // AI dimension score: edges (1.0-10.0)
+  aiCCSCentering           Float?    // AI dimension score: centering (1.0-10.0)
+  aiCCSComposite           Float?    // AI composite CCS score
+  sellerOverrodeAI         Boolean   @default(false)
+  overrideReason           String?   // seller's explanation for overriding AI (Phase 3)
+
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   card Card @relation(fields: [cardId], references: [id])
 
-  tradeLegs TradeLeg[] @relation("HaveListingLeg")
+  tradeLegs            TradeLeg[]            @relation("HaveListingLeg")
+  conditionComparisons ConditionComparison[]
 
   @@index([cardId, condition, isActive])
   @@index([userId])
+  @@index([userId, isActive, createdAt])
   @@map("have_listings")
 }
 
 model WantListing {
-  id               String     @id @default(cuid())
-  userId           String
-  cardId           String
-  minCondition     Condition  @default(LP)
-  language         String?
-  maxQuantity      Int        @default(1)
-  notes            String?
-  isActive         Boolean    @default(true)
-  createdAt        DateTime   @default(now())
-  updatedAt        DateTime   @updatedAt
+  id                       String     @id @default(cuid())
+  userId                   String
+  cardId                   String
+  minCondition             Condition  @default(LP)
+  language                 String?
+  maxQuantity              Int        @default(1)
+  bidPrice                 Int        // minor units in listing currency — maximum the user will pay
+  currency                 String     @default("USD") // ISO-4217 currency of bidPrice
+  usdEquivalent            Int?       // bidPrice converted to USD cents at listing time
+  exchangeRate             Float?     // rate used: 1 unit local currency = rate USD
+  rateTimestamp            DateTime?  // when the exchange rate was captured
+  notes                    String?
+  isActive                 Boolean    @default(true)
+  autoAccept               Boolean    @default(false)
+  autoAcceptMaxGap         Int?      // max value gap in cents the user will auto-accept
+  autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
+  autoAcceptRegions        String[]  // regions the user will auto-accept trades from
+  createdAt                DateTime   @default(now())
+  updatedAt                DateTime   @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   card Card @relation(fields: [cardId], references: [id])
@@ -234,18 +527,85 @@ model WantListing {
 
   @@index([cardId, minCondition, isActive])
   @@index([userId])
+  @@index([userId, isActive, createdAt])
   @@map("want_listings")
+}
+
+// ─── Graded Listings ─────────────────────────────────────
+
+model GradedHaveListing {
+  id                       String         @id @default(cuid())
+  userId                   String
+  cardId                   String
+  gradingCompany           GradingCompany
+  grade                    Float          // 1.0–10.0
+  certNumber               String         @unique // grading company certification ID
+  language                 String         @default("EN")
+  askPrice                 Int            // minor units in listing currency
+  currency                 String         @default("USD") // ISO-4217
+  usdEquivalent            Int?           // USD cents at listing time
+  exchangeRate             Float?
+  rateTimestamp            DateTime?
+  notes                    String?
+  isActive                 Boolean        @default(true)
+  autoAccept               Boolean        @default(false)
+  autoAcceptMaxGap         Int?
+  autoAcceptMaxCycleLength Int?
+  autoAcceptRegions        String[]
+  createdAt                DateTime       @default(now())
+  updatedAt                DateTime       @updatedAt
+
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card      Card @relation(fields: [cardId], references: [id])
+  tradeLegs TradeLeg[] @relation("GradedHaveListingLeg")
+
+  @@index([cardId, gradingCompany, grade, isActive])
+  @@index([userId])
+  @@map("graded_have_listings")
+}
+
+model GradedWantListing {
+  id                       String          @id @default(cuid())
+  userId                   String
+  cardId                   String
+  gradingCompany           GradingCompany? // null = any company
+  minGrade                 Float           // minimum acceptable grade
+  maxGrade                 Float?          // null = exact minGrade only
+  language                 String?
+  bidPrice                 Int             // minor units in listing currency
+  currency                 String          @default("USD") // ISO-4217
+  usdEquivalent            Int?            // USD cents at listing time
+  exchangeRate             Float?
+  rateTimestamp            DateTime?
+  notes                    String?
+  isActive                 Boolean         @default(true)
+  autoAccept               Boolean         @default(false)
+  autoAcceptMaxGap         Int?
+  autoAcceptMaxCycleLength Int?
+  autoAcceptRegions        String[]
+  createdAt                DateTime        @default(now())
+  updatedAt                DateTime        @updatedAt
+
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card      Card @relation(fields: [cardId], references: [id])
+  tradeLegs TradeLeg[] @relation("GradedWantListingLeg")
+
+  @@index([cardId, isActive])
+  @@index([userId])
+  @@map("graded_want_listings")
 }
 
 // ─── Matching & Trades ──────────────────────────────────
 
 model MatchProposal {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   score        Float
   cycleLength  Int
-  regions      String[] // regions involved
-  isViable     Boolean  @default(true)
-  createdAt    DateTime @default(now())
+  regions      String[]  // regions involved
+  tradeMode      TradeMode @default(AUTHENTICATED)
+  isViable       Boolean   @default(true)
+  isInternational Boolean  @default(false) // true if any leg requires cross-border shipping
+  createdAt    DateTime  @default(now())
   expiresAt    DateTime
 
   trade Trade?
@@ -263,6 +623,11 @@ model MatchProposalLeg {
   region     String
   sequence   Int
 
+  haveListingId       String?
+  wantListingId       String?
+  gradedHaveListingId String?
+  gradedWantListingId String?
+
   proposal MatchProposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
 
   @@map("match_proposal_legs")
@@ -273,6 +638,8 @@ model Trade {
   proposalId     String      @unique
   userAId        String
   userBId        String
+  participantIds String[]    // all user IDs involved (for multi-party cycles)
+  mode           TradeMode   @default(AUTHENTICATED)
   status         TradeStatus @default(PROPOSED)
   statusHistory  Json        @default("[]")
   createdAt      DateTime    @default(now())
@@ -283,36 +650,81 @@ model Trade {
   userA    User          @relation("TradeUserA", fields: [userAId], references: [id])
   userB    User          @relation("TradeUserB", fields: [userBId], references: [id])
 
-  legs     TradeLeg[]
-  escrow   Escrow?
-  disputes Dispute[]
+  legs               TradeLeg[]
+  escrow             Escrow?
+  disputes           Dispute[]
+  walletTransactions WalletTransaction[]
 
   @@index([userAId, status])
   @@index([userBId, status])
+  @@index([status, createdAt])
   @@map("trades")
 }
 
 model TradeLeg {
-  id              String         @id @default(cuid())
-  tradeId         String
-  haveListingId   String
-  wantListingId   String
-  fromUserId      String
-  toUserId        String
-  region          String
-  status          TradeLegStatus @default(PENDING)
-  authenticatorId String?
-  sequence        Int
-  createdAt       DateTime       @default(now())
-  updatedAt       DateTime       @updatedAt
+  id                  String         @id @default(cuid())
+  tradeId             String
+  haveListingId       String?        // set for raw legs
+  wantListingId       String?        // set for raw legs
+  gradedHaveListingId String?        // set for graded legs
+  gradedWantListingId String?        // set for graded legs
+  isGraded            Boolean        @default(false)
+  fromUserId          String
+  toUserId            String
+  region              String
+  status              TradeLegStatus @default(PENDING)
+  authenticatorId     String?
+  trackingNumber      String?        // inbound tracking: user → authenticator (mail) or sender → recipient (direct)
+  preShipmentPhotos   String[]       // sender evidence photos before shipping
+  sequence            Int
 
-  trade         Trade          @relation(fields: [tradeId], references: [id], onDelete: Cascade)
-  haveListing   HaveListing    @relation("HaveListingLeg", fields: [haveListingId], references: [id])
-  wantListing   WantListing    @relation("WantListingLeg", fields: [wantListingId], references: [id])
+  // ─── Shipping fields ─────────────────────────────
+  shippingAddressId   String?        // recipient's locked address for this leg
+  outboundTracking    String?        // authenticator → recipient tracking (authenticated mode)
+  deliveryMethod      DeliveryMethod? // how card reaches authenticator (DROP_OFF or MAIL)
+  shippedAt           DateTime?      // when authenticator/sender created shipment
+  deliveredAt         DateTime?      // when recipient confirmed delivery
+  isInternational     Boolean        @default(false) // true if this leg requires cross-border shipping
+  internationalCost   Int?           // quoted international postage cost in cents (user must accept)
+  returnTracking      String?        // return tracking if trade cancelled (authenticator → sender)
+  receiptPhotos       String[]       // authenticator photos on card receipt
+  preShipPhotos       String[]       // authenticator photos before outbound shipping
+  deliveryPhotos      String[]       // recipient photos on delivery
 
-  verification  VerificationAssignment?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
 
+  trade             Trade              @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  haveListing       HaveListing?       @relation("HaveListingLeg", fields: [haveListingId], references: [id])
+  wantListing       WantListing?       @relation("WantListingLeg", fields: [wantListingId], references: [id])
+  gradedHaveListing GradedHaveListing? @relation("GradedHaveListingLeg", fields: [gradedHaveListingId], references: [id])
+  gradedWantListing GradedWantListing? @relation("GradedWantListingLeg", fields: [gradedWantListingId], references: [id])
+
+  shippingAddress ShippingAddress? @relation("ShippingAddressLeg", fields: [shippingAddressId], references: [id])
+  verification    VerificationAssignment?
+  photoApproval   PhotoApproval?
+
+  @@index([tradeId, status])
   @@map("trade_legs")
+}
+
+// ─── Photo Approval ─────────────────────────────────────
+
+model PhotoApproval {
+  id            String              @id @default(cuid())
+  tradeLegId    String              @unique
+  status        PhotoApprovalStatus @default(PENDING_PHOTOS)
+  photos        String[]
+  rejectionNote String?
+  attempts      Int                 @default(0)
+  submittedAt   DateTime?
+  reviewedAt    DateTime?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+
+  tradeLeg TradeLeg @relation(fields: [tradeLegId], references: [id])
+
+  @@map("photo_approvals")
 }
 
 // ─── Authenticator Network ──────────────────────────────
@@ -323,6 +735,7 @@ model Authenticator {
   businessName  String?
   tier          AuthenticatorTier @default(STANDARD)
   region        String
+  regionId      String?
   tcgExpertise  TCG[]
   isActive      Boolean           @default(true)
   rating        Float             @default(5.0)
@@ -330,11 +743,71 @@ model Authenticator {
   createdAt     DateTime          @default(now())
   updatedAt     DateTime          @updatedAt
 
-  user          User @relation("UserAuthenticator", fields: [userId], references: [id])
-  assignments   VerificationAssignment[]
+  // Application fields
+  applicationStatus AuthenticatorApplicationStatus @default(DRAFT)
+  experienceDesc    String?
+  proofOfExpertise  String[]       // URLs/references
+  appliedAt         DateTime?
+  approvedAt        DateTime?
+
+  // Operational fields
+  currentLoad       Int            @default(0)  // active assignments
+  maxLoad           Int            @default(5)  // concurrent assignment limit
+  lastActiveAt      DateTime?
+  suspendedAt       DateTime?
+  suspensionReason  String?
+
+  // Shipping logistics
+  businessAddress      String?     // publicly visible drop-off/mailing address
+  shippingNotes        String?     // "Open M-F 10am-6pm", "Mail preferred"
+  acceptsDropOff       Boolean     @default(true)
+  acceptsMail          Boolean     @default(true)
+
+  // Insurance bond (Phase 3: PREMIUM tier requirement)
+  insuranceBondAmount  Int?        // cents — required for PREMIUM tier
+  insuranceBondPaidAt  DateTime?
+
+  // Vault operator fields
+  vaultCapacity      Int     @default(0)
+  isVaultOperator    Boolean @default(false)
+
+  user               User @relation("UserAuthenticator", fields: [userId], references: [id])
+  regionRef          Region? @relation(fields: [regionId], references: [id])
+  assignments        VerificationAssignment[] @relation("PrimaryAssignments")
+  reserveAssignments VerificationAssignment[] @relation("ReserveAssignments")
+  inventory          AuthenticatorInventory[]
+  audits             AuthenticatorAudit[]
+  ratings            AuthenticatorRating[]
+
+  // Digitisation relations
+  vaultHoldings          DigitalToken[]         @relation("VaultHolding")
+  digitisationRequests   DigitisationRequest[]
+  redemptions            Redemption[]           @relation("RedemptionVault")
 
   @@index([region, isActive])
+  @@index([regionId, isActive])
+  @@index([applicationStatus])
   @@map("authenticators")
+}
+
+model AuthenticatorInventory {
+  id              String    @id @default(cuid())
+  authenticatorId String
+  cardId          String
+  condition       Condition
+  language        String    @default("EN")
+  quantity        Int       @default(1)
+  isAvailable     Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  authenticator Authenticator @relation(fields: [authenticatorId], references: [id], onDelete: Cascade)
+  card          Card          @relation(fields: [cardId], references: [id])
+
+  @@unique([authenticatorId, cardId, condition, language])
+  @@index([cardId, isAvailable])
+  @@index([authenticatorId])
+  @@map("authenticator_inventory")
 }
 
 model VerificationAssignment {
@@ -346,10 +819,172 @@ model VerificationAssignment {
   result          Json?    // { authentic: boolean, conditionVerified: Condition, notes: string }
   photos          String[]
 
-  tradeLeg      TradeLeg      @relation(fields: [tradeLegId], references: [id])
-  authenticator Authenticator @relation(fields: [authenticatorId], references: [id])
+  // Reserve authenticator failover (Phase 4)
+  reserveAuthenticatorId String?
+  acceptedAt             DateTime?  // when primary authenticator accepted
+  isAudit                Boolean    @default(false)  // Phase 2: random audit flag
+
+  tradeLeg               TradeLeg       @relation(fields: [tradeLegId], references: [id])
+  authenticator          Authenticator  @relation("PrimaryAssignments", fields: [authenticatorId], references: [id])
+  reserveAuthenticator   Authenticator? @relation("ReserveAssignments", fields: [reserveAuthenticatorId], references: [id])
 
   @@map("verification_assignments")
+}
+
+model AuthenticatorAudit {
+  id              String   @id @default(cuid())
+  authenticatorId String
+  type            String   // PROMOTION, DEMOTION, WARNING, SUSPENSION, APPLICATION_REVIEW
+  details         Json
+  createdAt       DateTime @default(now())
+
+  authenticator Authenticator @relation(fields: [authenticatorId], references: [id])
+
+  @@index([authenticatorId, type])
+  @@map("authenticator_audits")
+}
+
+model AuthenticatorRating {
+  id              String   @id @default(cuid())
+  authenticatorId String
+  tradeLegId      String   @unique
+  raterId         String   // the card recipient
+  score           Float    // 1.0-5.0 overall
+
+  // Component scores (Phase 2: composite rating)
+  accuracyScore       Float?  // 1.0-5.0, 40% weight
+  speedScore          Float?  // 1.0-5.0, 20% weight
+  satisfactionScore   Float?  // 1.0-5.0, 25% weight
+  communicationScore  Float?  // 1.0-5.0, 15% weight
+
+  comment         String?
+  createdAt       DateTime @default(now())
+
+  authenticator Authenticator @relation(fields: [authenticatorId], references: [id])
+
+  @@index([authenticatorId, createdAt])
+  @@map("authenticator_ratings")
+}
+
+// ─── Condition Comparison (Phase 4) ─────────────────────
+
+model ConditionComparison {
+  id              String @id @default(cuid())
+  tradeLegId      String @unique
+  haveListingId   String
+
+  // AI CCS dimensions (from HaveListing at listing time)
+  aiSurface       Float
+  aiCorners       Float
+  aiEdges         Float
+  aiCentering     Float
+  aiComposite     Float
+
+  // Authenticator CCS dimensions (from VerificationAssignment.result)
+  authSurface     Float
+  authCorners     Float
+  authEdges       Float
+  authCentering   Float
+  authComposite   Float
+
+  // Absolute deltas per dimension
+  deltaSurface    Float
+  deltaCorners    Float
+  deltaEdges      Float
+  deltaCentering  Float
+  deltaComposite  Float
+
+  // Agreement flag (composite delta ≤ 1.0)
+  agreed          Boolean
+
+  // Context
+  authenticatorId   String
+  authenticatorTier AuthenticatorTier
+  sellerId          String
+
+  createdAt DateTime @default(now())
+
+  haveListing HaveListing @relation(fields: [haveListingId], references: [id])
+
+  @@index([authenticatorId, agreed])
+  @@index([sellerId, agreed])
+  @@index([createdAt])
+  @@map("condition_comparisons")
+}
+
+// ─── Wallet ─────────────────────────────────────────────
+
+model WalletTransaction {
+  id                    String                @id @default(cuid())
+  userId                String
+  type                  WalletTransactionType
+  amount                Int                   // USD cents: positive = credit, negative = debit
+  balanceAfter          Int                   // running balance after this transaction (USD cents)
+  description           String
+  originalAmount        Int?                  // amount in user's local currency minor units (null = USD)
+  originalCurrency      String?               // ISO-4217 of original amount (null = USD)
+  exchangeRate          Float?                // rate used for conversion to USD
+  tradeId               String?
+  stripePaymentIntentId String?  @unique
+  stripePayoutId        String?
+  createdAt             DateTime              @default(now())
+
+  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trade  Trade?  @relation(fields: [tradeId], references: [id])
+  payout Payout?
+
+  @@index([userId, createdAt])
+  @@index([userId, type, createdAt])
+  @@index([tradeId])
+  @@map("wallet_transactions")
+}
+
+// ─── Pending ACH Deposits ─────────────────────────────
+
+model PendingDeposit {
+  id                    String               @id @default(cuid())
+  userId                String
+  amountCents           Int
+  stripeSessionId       String               @unique
+  stripePaymentIntentId String?              @unique
+  status                PendingDepositStatus @default(PROCESSING)
+  createdAt             DateTime             @default(now())
+  resolvedAt            DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@map("pending_deposits")
+}
+
+enum PendingDepositStatus {
+  PROCESSING
+  SUCCEEDED
+  FAILED
+}
+
+// ─── Payouts ──────────────────────────────────────────
+
+model Payout {
+  id                  String       @id @default(cuid())
+  userId              String
+  walletTransactionId String       @unique
+  stripeTransferId    String?      @unique
+  stripePayoutId      String?
+  amount              Int          // cents
+  status              PayoutStatus @default(PENDING)
+  failureReason       String?
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+  paidAt              DateTime?
+  failedAt            DateTime?
+
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  walletTransaction WalletTransaction @relation(fields: [walletTransactionId], references: [id])
+
+  @@index([userId, status])
+  @@index([stripeTransferId])
+  @@map("payouts")
 }
 
 // ─── Escrow ─────────────────────────────────────────────
@@ -387,8 +1022,9 @@ model EscrowEntry {
 model Dispute {
   id          String        @id @default(cuid())
   tradeId     String
+  tradeLegId  String?       // optional: per-leg shipping disputes
   raisedById  String
-  reason      String
+  reason      String        // free text or structured: NOT_RECEIVED, DAMAGED_IN_TRANSIT, WRONG_CARD, EMPTY_PACKAGE, CONDITION_MISMATCH
   evidence    String[]
   status      DisputeStatus @default(OPEN)
   resolution  String?
@@ -397,6 +1033,7 @@ model Dispute {
 
   trade Trade @relation(fields: [tradeId], references: [id])
 
+  @@index([tradeId])
   @@map("disputes")
 }
 
@@ -416,4 +1053,257 @@ model Notification {
 
   @@index([userId, isRead])
   @@map("notifications")
+}
+
+// ─── KYC ───────────────────────────────────────────────
+
+model KYCDocument {
+  id              String            @id @default(cuid())
+  userId          String
+  type            KYCDocumentType
+  status          KYCDocumentStatus @default(PENDING)
+
+  // Document metadata (NOT raw file content)
+  fileName        String
+  mimeType        String            // image/jpeg, image/png, application/pdf
+  storageKey      String            // S3 key: "kyc/{userId}/{docId}/{fileName}"
+
+  // Verification
+  verifiedAt      DateTime?
+  verifiedBy      String?           // admin userId (null for automatic)
+  rejectedAt      DateTime?
+  rejectionReason String?
+
+  // Expiration tracking (for IDs with expiry dates)
+  documentExpiry  DateTime?
+  isExpired       Boolean           @default(false)
+
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, type, status])
+  @@index([status])
+  @@map("kyc_documents")
+}
+
+model KYCAudit {
+  id         String    @id @default(cuid())
+  userId     String
+  action     String    // SUBMIT_BASIC, SUBMIT_ENHANCED, APPROVE, REJECT, SUSPEND, REVOKE, REINSTATE
+  fromStatus KYCStatus
+  toStatus   KYCStatus
+  reason     String?
+  reviewedBy String?   // admin userId (null for user-initiated actions)
+  details    Json?     // additional context (document IDs, rejection details, etc.)
+  createdAt  DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@map("kyc_audits")
+}
+
+// ─── Digitisation ────────────────────────────────────────
+
+model DigitisationRequest {
+  id                String             @id @default(cuid())
+  userId            String
+  cardId            String
+  condition         Condition
+  language          String             @default("EN")
+  authenticatorId   String
+  status            DigitisationStatus @default(SUBMITTED)
+
+  // Verification outcome
+  verifiedCondition Condition?
+  ccsResult         Json?
+  rejectionReason   String?
+
+  // Tracking
+  trackingInbound   String?
+  receivedAt        DateTime?
+  verifiedAt        DateTime?
+  mintedAt          DateTime?
+
+  // Fee
+  verificationFeeCents Int
+
+  // Result
+  tokenId           String?  @unique
+
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id])
+  card          Card          @relation(fields: [cardId], references: [id])
+  authenticator Authenticator @relation(fields: [authenticatorId], references: [id])
+  token         DigitalToken? @relation(fields: [tokenId], references: [id])
+
+  @@index([userId, status])
+  @@index([authenticatorId, status])
+  @@map("digitisation_requests")
+}
+
+// ─── Digital Token ───────────────────────────────────────
+
+model DigitalToken {
+  id              String             @id @default(cuid())
+  cardId          String
+  condition       Condition
+  language        String             @default("EN")
+
+  // Ownership
+  digitiserId     String
+  currentOwnerId  String
+
+  // Status
+  status          DigitalTokenStatus @default(ACTIVE)
+
+  // Vault tracking
+  vaultAuthenticatorId String
+
+  // Timestamps
+  mintedAt        DateTime
+  lastTradedAt    DateTime?
+  redeemedAt      DateTime?
+
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  card            Card               @relation(fields: [cardId], references: [id])
+  digitiser       User               @relation("TokenDigitiser", fields: [digitiserId], references: [id])
+  currentOwner    User               @relation("TokenOwner", fields: [currentOwnerId], references: [id])
+  vaultAuthenticator Authenticator   @relation("VaultHolding", fields: [vaultAuthenticatorId], references: [id])
+
+  digitisationRequest DigitisationRequest?
+  transfers       DigitalTokenTransfer[]
+  listings        DigitalTokenListing[]
+  redemption      Redemption?
+
+  @@index([cardId, condition, status])
+  @@index([currentOwnerId, status])
+  @@index([digitiserId])
+  @@index([vaultAuthenticatorId])
+  @@map("digital_tokens")
+}
+
+// ─── Transfer Log (Audit Trail) ──────────────────────────
+
+model DigitalTokenTransfer {
+  id           String   @id @default(cuid())
+  tokenId      String
+  fromUserId   String
+  toUserId     String
+  priceCents   Int
+  royaltyCents Int
+  platformFeeCents Int
+  tradeId      String?
+  transferredAt DateTime @default(now())
+
+  token DigitalToken @relation(fields: [tokenId], references: [id])
+
+  @@index([tokenId, transferredAt])
+  @@index([fromUserId])
+  @@index([toUserId])
+  @@map("digital_token_transfers")
+}
+
+// ─── Digital Token Marketplace ───────────────────────────
+
+model DigitalTokenListing {
+  id          String   @id @default(cuid())
+  tokenId     String
+  sellerId    String
+  askPrice    Int
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  token  DigitalToken @relation(fields: [tokenId], references: [id])
+  seller User         @relation("DigitalTokenSeller", fields: [sellerId], references: [id])
+  trade  DigitalTrade?
+
+  @@index([tokenId, isActive])
+  @@index([sellerId, isActive])
+  @@map("digital_token_listings")
+}
+
+// ─── Digital Trade ───────────────────────────────────────
+
+model DigitalTrade {
+  id           String   @id @default(cuid())
+  listingId    String   @unique
+  buyerId      String
+  sellerId     String
+  tokenId      String
+  priceCents   Int
+  platformFeeCents Int
+  royaltyCents Int
+  sellerNetCents Int
+
+  completedAt  DateTime?
+  createdAt    DateTime @default(now())
+
+  listing DigitalTokenListing @relation(fields: [listingId], references: [id])
+  buyer   User                @relation("DigitalTradeBuyer", fields: [buyerId], references: [id])
+  seller  User                @relation("DigitalTradeSeller", fields: [sellerId], references: [id])
+
+  @@index([buyerId])
+  @@index([sellerId])
+  @@map("digital_trades")
+}
+
+// ─── Redemption ──────────────────────────────────────────
+
+model Redemption {
+  id                   String           @id @default(cuid())
+  tokenId              String           @unique
+  redeemerId           String
+
+  // Which vault fulfills
+  vaultAuthenticatorId String
+  vaultCountry         String
+  redeemerCountry      String
+  isCrossZone          Boolean          @default(false)
+
+  status               RedemptionStatus @default(REQUESTED)
+
+  // Fulfillment tracking
+  trackingOutbound     String?
+
+  // Fees
+  redemptionFeeCents   Int
+  crossZoneSurcharge   Int              @default(0)
+
+  shippedAt            DateTime?
+  deliveredAt          DateTime?
+  completedAt          DateTime?
+  failureReason        String?
+
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
+
+  token             DigitalToken  @relation(fields: [tokenId], references: [id])
+  redeemer          User          @relation(fields: [redeemerId], references: [id])
+  vaultAuthenticator Authenticator @relation("RedemptionVault", fields: [vaultAuthenticatorId], references: [id])
+
+  @@index([redeemerId, status])
+  @@index([vaultAuthenticatorId, status])
+  @@map("redemptions")
+}
+
+// ─── Exchange Rate Cache ─────────────────────────────
+
+model ExchangeRateCache {
+  id            String   @id @default(cuid())
+  baseCurrency  String   @default("USD")     // rates are relative to this
+  rates         Json                         // { "EUR": 0.921, "JPY": 148.5, ... }
+  source        String   @default("wise")    // "wise" | "openexchangerates" | "ecb"
+  fetchedAt     DateTime @default(now())
+  expiresAt     DateTime                     // fetchedAt + TTL
+
+  @@index([baseCurrency, fetchedAt])
+  @@map("exchange_rate_cache")
 }

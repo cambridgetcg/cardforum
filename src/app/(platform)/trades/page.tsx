@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TradeCard } from "@/components/trades/trade-card";
-import type { TradeStatus } from "@/types/domain";
+import type { TradeStatus, TradeMode } from "@/types/domain";
 
 interface TradeLeg {
   id: string;
@@ -14,10 +14,22 @@ interface TradeLeg {
   region: string;
   status: string;
   sequence: number;
+  photoApproval?: {
+    id: string;
+    status: "PENDING_PHOTOS" | "PENDING_REVIEW" | "APPROVED" | "REJECTED";
+    photos: string[];
+    rejectionNote?: string | null;
+    attempts: number;
+  } | null;
+  haveListing?: {
+    askPrice: number;
+    card: { name: string };
+  } | null;
 }
 
 interface Trade {
   id: string;
+  mode?: TradeMode;
   status: TradeStatus;
   createdAt: string;
   updatedAt: string;
@@ -31,6 +43,7 @@ export default function TradesPage() {
   const [trades, setTrades] = useState<Trade[]>([]);
   const [loading, setLoading] = useState(true);
   const [matchingStatus, setMatchingStatus] = useState("");
+  const [modeFilter, setModeFilter] = useState<"ALL" | "DIRECT" | "AUTHENTICATED">("ALL");
 
   const fetchTrades = useCallback(async () => {
     try {
@@ -60,19 +73,26 @@ export default function TradesPage() {
     }
   }
 
-  async function handleTradeAction(tradeId: string, action: "accept" | "reject" | "cancel") {
-    await fetch("/api/trades", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ tradeId, action }),
-    });
+  async function handleTradeAction(tradeId: string, action: "accept" | "reject" | "cancel" | "request-auth") {
+    if (action === "request-auth") {
+      await fetch(`/api/trades/${tradeId}/request-auth`, { method: "POST" });
+    } else {
+      await fetch("/api/trades", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tradeId, action }),
+      });
+    }
     fetchTrades();
   }
 
-  const activeTrades = trades.filter(
+  const filteredTrades = modeFilter === "ALL"
+    ? trades
+    : trades.filter((t) => (t.mode ?? "AUTHENTICATED") === modeFilter);
+  const activeTrades = filteredTrades.filter(
     (t) => !["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status)
   );
-  const completedTrades = trades.filter((t) =>
+  const completedTrades = filteredTrades.filter((t) =>
     ["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status)
   );
 
@@ -102,6 +122,18 @@ export default function TradesPage() {
           </Button>
         </div>
       </div>
+      <div className="mt-4 flex gap-2">
+        {(["ALL", "DIRECT", "AUTHENTICATED"] as const).map((filter) => (
+          <Button
+            key={filter}
+            size="sm"
+            variant={modeFilter === filter ? "primary" : "outline"}
+            onClick={() => setModeFilter(filter)}
+          >
+            {filter === "ALL" ? "All" : filter === "DIRECT" ? "Direct" : "Authenticated"}
+          </Button>
+        ))}
+      </div>
 
       {/* Active Trades */}
       <div className="mt-8">
@@ -123,8 +155,10 @@ export default function TradesPage() {
               <TradeCard
                 key={trade.id}
                 {...trade}
+                mode={trade.mode ?? "AUTHENTICATED"}
                 currentUserId={session?.user?.id ?? ""}
                 onAction={handleTradeAction}
+                onRefresh={fetchTrades}
               />
             ))}
           </div>
@@ -142,8 +176,10 @@ export default function TradesPage() {
               <TradeCard
                 key={trade.id}
                 {...trade}
+                mode={trade.mode ?? "AUTHENTICATED"}
                 currentUserId={session?.user?.id ?? ""}
                 onAction={handleTradeAction}
+                onRefresh={fetchTrades}
               />
             ))}
           </div>

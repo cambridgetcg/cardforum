@@ -1,20 +1,16 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+import { withAuth } from "@/server/middleware/with-auth";
 import { db } from "@/lib/db";
 
 // GET /api/dashboard — Dashboard stats for current user
-export async function GET() {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
+export const GET = withAuth(async (_req, { userId }) => {
 
-  const userId = session.user.id;
-
-  const [haveCount, wantCount, activeTrades, completedTrades, proposals] =
+  const [haveCount, wantCount, gradedHaveCount, gradedWantCount, activeTrades, completedTrades, proposals] =
     await Promise.all([
       db.haveListing.count({ where: { userId, isActive: true } }),
       db.wantListing.count({ where: { userId, isActive: true } }),
+      db.gradedHaveListing.count({ where: { userId, isActive: true } }),
+      db.gradedWantListing.count({ where: { userId, isActive: true } }),
       db.trade.count({
         where: {
           OR: [{ userAId: userId }, { userBId: userId }],
@@ -44,11 +40,13 @@ export async function GET() {
     ]);
 
   return NextResponse.json({
-    listings: haveCount + wantCount,
+    listings: haveCount + wantCount + gradedHaveCount + gradedWantCount,
     haveCount,
     wantCount,
+    gradedHaveCount,
+    gradedWantCount,
     activeTrades,
     completedTrades,
     pendingProposals: proposals,
   });
-}
+});

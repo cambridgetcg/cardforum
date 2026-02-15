@@ -1,13 +1,96 @@
 @import "tailwindcss";
 
+/* ─── Theme Variables ──────────────────────────────── */
+/* All color tokens live here. Components use these via
+   Tailwind's `var()` or custom utility classes.
+   To change the theme: override these variables.         */
+
 :root {
+  /* Base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary (brand) — currently indigo */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-ring: #6366f1;
+  --primary-foreground: #ffffff;
+
+  /* Secondary */
+  --secondary: #f3f4f6;
+  --secondary-hover: #e5e7eb;
+  --secondary-foreground: #111827;
+
+  /* Destructive */
+  --destructive: #dc2626;
+  --destructive-hover: #b91c1c;
+  --destructive-ring: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Border & muted */
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
+
+  /* Card */
+  --card: #ffffff;
+  --card-border: #e5e7eb;
+  --card-border-light: #f3f4f6;
+
+  /* Badge variants */
+  --badge-default-bg: #f3f4f6;
+  --badge-default-fg: #1f2937;
+  --badge-success-bg: #dcfce7;
+  --badge-success-fg: #166534;
+  --badge-warning-bg: #fef9c3;
+  --badge-warning-fg: #854d0e;
+  --badge-error-bg: #fee2e2;
+  --badge-error-fg: #991b1b;
+  --badge-info-bg: #dbeafe;
+  --badge-info-fg: #1e40af;
+
+  /* Input */
+  --input-border: #d1d5db;
+  --input-ring: #6366f1;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-ring: var(--primary-ring);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-hover: var(--destructive-hover);
+  --color-destructive-ring: var(--destructive-ring);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-card-border-light: var(--card-border-light);
+  --color-badge-default-bg: var(--badge-default-bg);
+  --color-badge-default-fg: var(--badge-default-fg);
+  --color-badge-success-bg: var(--badge-success-bg);
+  --color-badge-success-fg: var(--badge-success-fg);
+  --color-badge-warning-bg: var(--badge-warning-bg);
+  --color-badge-warning-fg: var(--badge-warning-fg);
+  --color-badge-error-bg: var(--badge-error-bg);
+  --color-badge-error-fg: var(--badge-error-fg);
+  --color-badge-info-bg: var(--badge-info-bg);
+  --color-badge-info-fg: var(--badge-info-fg);
+  --color-input-border: var(--input-border);
+  --color-input-ring: var(--input-ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +99,40 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: #818cf8;
+    --primary-hover: #6366f1;
+    --primary-ring: #818cf8;
+    --primary-foreground: #0a0a0a;
+
+    --secondary: #1f2937;
+    --secondary-hover: #374151;
+    --secondary-foreground: #f3f4f6;
+
+    --destructive: #ef4444;
+    --destructive-hover: #dc2626;
+    --destructive-ring: #f87171;
+    --destructive-foreground: #0a0a0a;
+
+    --border: #374151;
+    --border-light: #1f2937;
+    --muted: #9ca3af;
+    --muted-foreground: #6b7280;
+
+    --card: #111827;
+    --card-border: #374151;
+    --card-border-light: #1f2937;
+
+    --badge-default-bg: #1f2937;
+    --badge-default-fg: #e5e7eb;
+    --badge-success-bg: #064e3b;
+    --badge-success-fg: #6ee7b7;
+    --badge-warning-bg: #78350f;
+    --badge-warning-fg: #fde68a;
+    --badge-error-bg: #7f1d1d;
+    --badge-error-fg: #fca5a5;
+    --badge-info-bg: #1e3a5f;
+    --badge-info-fg: #93c5fd;
   }
 }
 

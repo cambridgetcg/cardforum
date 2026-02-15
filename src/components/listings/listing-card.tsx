@@ -2,8 +2,9 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CONDITION_LABELS, TCG_LABELS, type TCG, type Condition } from "@/types/domain";
+import { CONDITION_LABELS, TCG_LABELS, formatPrice, type TCG, type Condition } from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
+import { ConditionBadge } from "./condition-badge";
 import { Trash2 } from "lucide-react";
 
 interface ListingCardProps {
@@ -19,9 +20,14 @@ interface ListingCardProps {
   };
   condition: Condition;
   quantity: number;
+  price: number; // cents — askPrice for have, bidPrice for want
   notes: string | null;
   createdAt: string;
   onDelete: (id: string, type: "have" | "want") => void;
+  // AI condition trust data (optional — only for have listings with AI grading)
+  aiCCSComposite?: number | null;
+  sellerOverrodeAI?: boolean;
+  isAuthVerified?: boolean;
 }
 
 export function ListingCard({
@@ -30,9 +36,13 @@ export function ListingCard({
   card,
   condition,
   quantity,
+  price,
   notes,
   createdAt,
   onDelete,
+  aiCCSComposite,
+  sellerOverrodeAI,
+  isAuthVerified,
 }: ListingCardProps) {
   return (
     <div className="flex items-start justify-between gap-3 rounded-xl border border-gray-200 bg-white p-4">
@@ -42,6 +52,15 @@ export function ListingCard({
           <Badge variant={type === "have" ? "success" : "info"}>
             {type === "have" ? "Have" : "Want"}
           </Badge>
+          {type === "have" && (
+            <ConditionBadge
+              listing={{
+                aiCCSComposite: aiCCSComposite ?? null,
+                sellerOverrodeAI: sellerOverrodeAI ?? false,
+              }}
+              isAuthVerified={isAuthVerified}
+            />
+          )}
         </div>
         <p className="text-sm text-gray-600">
           {card.setName}
@@ -54,6 +73,9 @@ export function ListingCard({
             {type === "have" ? condition : `Min: ${condition}`} — {CONDITION_LABELS[condition]}
           </Badge>
           {quantity > 1 && <Badge variant="default">x{quantity}</Badge>}
+          <Badge variant="default">
+            {type === "have" ? "Ask" : "Bid"}: {formatPrice(price)}
+          </Badge>
         </div>
         {notes && <p className="text-xs text-gray-400">{notes}</p>}
         <p className="text-xs text-gray-400">{formatRelativeTime(new Date(createdAt))}</p>

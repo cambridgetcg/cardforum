@@ -1,13 +1,56 @@
 import { db } from "@/lib/db";
-import { canTransition, type TradeStatus } from "@/types/domain";
+import { canTransition, type TradeStatus, type TradeMode } from "@/types/domain";
+import { computeSettlements } from "@/server/matching/bridge-builder";
+import { areAllLegsPhotoCleared, createPhotoApprovalIfNeeded } from "./photo-approval.service";
+import { assignForLegs } from "./authenticator.service";
+import {
+  holdVerificationFees,
+  releaseFeesToAuthenticators,
+  debitVerificationFees,
+  refundVerificationFees,
+} from "./fee.service";
+import { createEscrow, releaseEscrow, refundEscrow } from "./escrow.service";
+import {
+  holdForTrade,
+  releaseFromTrade,
+  refundTradeHold,
+  calculateHoldAmounts,
+  type TxClient,
+} from "./wallet.service";
+import { assertCanTrade } from "./kyc.service";
+import {
+  lockShippingAddresses,
+  initiateCardReturns,
+} from "./shipping.service";
 
 export async function getUserTrades(userId: string) {
   return db.trade.findMany({
     where: {
       OR: [{ userAId: userId }, { userBId: userId }],
     },
-    include: {
-      legs: true,
+    select: {
+      id: true,
+      proposalId: true,
+      userAId: true,
+      userBId: true,
+      participantIds: true,
+      mode: true,
+      status: true,
+      statusHistory: true,
+      createdAt: true,
+      updatedAt: true,
+      completedAt: true,
+      legs: {
+        include: {
+          photoApproval: true,
+          haveListing: {
+            select: {
+              askPrice: true,
+              card: { select: { name: true } },
+            },
+          },
+        },
+      },
       proposal: true,
     },
     orderBy: { updatedAt: "desc" },
@@ -22,22 +65,287 @@ export async function transitionTrade(
   const trade = await db.trade.findUnique({ where: { id: tradeId } });
 
   if (!trade) throw new Error("Trade not found");
-  if (trade.userAId !== userId && trade.userBId !== userId) {
+  const participants = trade.participantIds as string[];
+  if (!participants.includes(userId)) {
     throw new Error("Not authorized");
   }
-  if (!canTransition(trade.status as TradeStatus, newStatus)) {
+  const mode = (trade.mode ?? "AUTHENTICATED") as TradeMode;
+  if (!canTransition(trade.status as TradeStatus, newStatus, mode)) {
     throw new Error(`Cannot transition from ${trade.status} to ${newStatus}`);
   }
 
-  const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
-  statusHistory.push({ status: newStatus, at: new Date().toISOString() });
+  // ─── Read-only gates (outside transaction) ────────
+  if (newStatus === "ACCEPTED") {
+    const legs = await db.tradeLeg.findMany({
+      where: { tradeId },
+      include: { haveListing: { select: { askPrice: true } } },
+    });
+    const totalValue = legs.reduce((sum, leg) => sum + (leg.haveListing?.askPrice ?? 0), 0);
+    await assertCanTrade(trade.userAId, totalValue);
+    await assertCanTrade(trade.userBId, totalValue);
+  }
+
+  if (newStatus === "AUTHENTICATING" && mode === "AUTHENTICATED") {
+    const cleared = await areAllLegsPhotoCleared(tradeId);
+    if (!cleared) {
+      throw new Error("Not all legs have passed photo approval");
+    }
+  }
+
+  // ─── All mutations in a single transaction ────────
+  const updated = await db.$transaction(async (tx: TxClient) => {
+    const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+    statusHistory.push({ status: newStatus, at: new Date().toISOString() });
+
+    // ─── ACCEPTED: deactivate consumed listings ───
+    if (newStatus === "ACCEPTED") {
+      const legs = await tx.tradeLeg.findMany({
+        where: { tradeId },
+        select: {
+          haveListingId: true,
+          wantListingId: true,
+          gradedHaveListingId: true,
+          gradedWantListingId: true,
+        },
+      });
+      const haveIds = legs.map(l => l.haveListingId).filter(Boolean) as string[];
+      const wantIds = legs.map(l => l.wantListingId).filter(Boolean) as string[];
+      const gradedHaveIds = legs.map(l => l.gradedHaveListingId).filter(Boolean) as string[];
+      const gradedWantIds = legs.map(l => l.gradedWantListingId).filter(Boolean) as string[];
+
+      if (haveIds.length > 0) await tx.haveListing.updateMany({ where: { id: { in: haveIds } }, data: { isActive: false } });
+      if (wantIds.length > 0) await tx.wantListing.updateMany({ where: { id: { in: wantIds } }, data: { isActive: false } });
+      if (gradedHaveIds.length > 0) await tx.gradedHaveListing.updateMany({ where: { id: { in: gradedHaveIds } }, data: { isActive: false } });
+      if (gradedWantIds.length > 0) await tx.gradedWantListing.updateMany({ where: { id: { in: gradedWantIds } }, data: { isActive: false } });
+    }
+
+    // ─── ESCROWED: lock addresses + hold funds + create escrow ───
+    if (newStatus === "ESCROWED") {
+      await lockShippingAddresses(tradeId, tx);
+      const totalHold = await holdWalletFunds(tradeId, tx);
+      await createEscrow(tradeId, totalHold, "USD", tx);
+    }
+
+    // ─── Status update ───
+    const result = await tx.trade.update({
+      where: { id: tradeId },
+      data: {
+        status: newStatus,
+        statusHistory,
+        ...(newStatus === "COMPLETED" ? { completedAt: new Date() } : {}),
+      },
+    });
+
+    // ─── CARDS_SUBMITTED: create photo approvals ───
+    if (newStatus === "CARDS_SUBMITTED") {
+      const legs = await tx.tradeLeg.findMany({ where: { tradeId } });
+      for (const leg of legs) {
+        await createPhotoApprovalIfNeeded(leg.id, tx);
+      }
+    }
+
+    // ─── AUTHENTICATING: assign + hold/debit verification fees ───
+    if (newStatus === "AUTHENTICATING" && mode === "AUTHENTICATED") {
+      await assignForLegs(tradeId, tx);
+      await holdVerificationFees(tradeId, tx);
+      await debitVerificationFees(tradeId, tx);
+    }
+
+    // ─── DISPUTED: create dispute ───
+    if (newStatus === "DISPUTED") {
+      await tx.dispute.create({
+        data: {
+          tradeId,
+          raisedById: userId,
+          reason: "Trade disputed by participant",
+          status: "OPEN",
+        },
+      });
+    }
+
+    // ─── COMPLETED: settle funds + release fees + release escrow ───
+    if (newStatus === "COMPLETED") {
+      await settleWalletFunds(tradeId, tx);
+      if (mode === "AUTHENTICATED") {
+        await releaseFeesToAuthenticators(tradeId, tx);
+      }
+      const tradeWithEscrow = await tx.trade.findUnique({
+        where: { id: tradeId },
+        select: { escrow: { select: { id: true } } },
+      });
+      if (tradeWithEscrow?.escrow) {
+        await releaseEscrow(tradeWithEscrow.escrow.id, tx);
+      }
+    }
+
+    // ─── CANCELLED: refund holds + refund fees + return cards + refund escrow ───
+    if (newStatus === "CANCELLED") {
+      await refundWalletHolds(tradeId, tx);
+      if (mode === "AUTHENTICATED") {
+        await refundVerificationFees(tradeId, tx);
+        await initiateCardReturns(tradeId, tx);
+      }
+      const tradeWithEscrow = await tx.trade.findUnique({
+        where: { id: tradeId },
+        select: { escrow: { select: { id: true } } },
+      });
+      if (tradeWithEscrow?.escrow) {
+        await refundEscrow(tradeWithEscrow.escrow.id, "Trade cancelled", tx);
+      }
+    }
+
+    return result;
+  });
+
+  return updated;
+}
+
+// ─── Wallet Helpers ──────────────────────────────────────
+
+interface TradeLegForWallet {
+  fromUserId: string;
+  toUserId: string;
+  askPrice: number;
+}
+
+async function loadTradeLegs(tradeId: string, client: TxClient | typeof db = db): Promise<TradeLegForWallet[]> {
+  const legs = await client.tradeLeg.findMany({
+    where: { tradeId },
+    include: {
+      haveListing: { select: { askPrice: true } },
+      gradedHaveListing: { select: { askPrice: true } },
+    },
+  });
+
+  return legs.map((leg) => ({
+    fromUserId: leg.fromUserId,
+    toUserId: leg.toUserId,
+    askPrice: leg.haveListing?.askPrice ?? leg.gradedHaveListing?.askPrice ?? 0,
+  }));
+}
+
+function toBridgeLegs(legs: TradeLegForWallet[]) {
+  return legs.map((l, i) => ({
+    fromUserId: l.fromUserId,
+    toUserId: l.toUserId,
+    cardId: "",
+    region: "",
+    haveListingId: "",
+    wantListingId: "",
+    condition: "",
+    askPrice: l.askPrice,
+    sequence: i,
+  }));
+}
+
+/**
+ * Hold funds from each participant's wallet when trade enters ESCROWED.
+ * hold = max(netSettlement, 0) + sellerFees
+ * Returns total held amount (for escrow creation).
+ *
+ * When called with an outer transaction client, joins that transaction.
+ * Otherwise creates its own transaction to ensure all holds are atomic.
+ */
+async function holdWalletFunds(tradeId: string, tx?: TxClient): Promise<number> {
+  const client = tx ?? db;
+  const legs = await loadTradeLegs(tradeId, client);
+  const bridgeLegs = toBridgeLegs(legs);
+  const settlements = computeSettlements(bridgeLegs);
+  const holds = calculateHoldAmounts(legs, settlements);
+
+  const execute = async (innerTx: TxClient) => {
+    let totalHeld = 0;
+    for (const [userId, holdAmount] of holds) {
+      if (holdAmount > 0) {
+        await holdForTrade(userId, tradeId, holdAmount, innerTx);
+        totalHeld += holdAmount;
+      }
+    }
+    return totalHeld;
+  };
+
+  if (tx) return execute(tx);
+  return db.$transaction((innerTx: TxClient) => execute(innerTx));
+}
+
+/**
+ * Settle wallet balances when trade completes.
+ *
+ * Only release settlement credits — seller fees are NOT captured as separate
+ * transactions because they are already implicitly captured in the hold:
+ *
+ *   hold = max(net, 0) + sellerFees
+ *
+ * At settlement, users with negative net (owed money) receive TRADE_RELEASE.
+ * The unreleased portion of each user's hold IS their seller fee — it stays
+ * deducted from their balance permanently, which is the platform's revenue.
+ *
+ *   Positive-net user: hold = net + fees. Release = 0. Retained = net + fees.
+ *     → net portion settles their debt (funds other users' releases).
+ *     → fees portion is platform revenue. ✓
+ *
+ *   Negative-net user: hold = 0 + fees. Release = |net|. Retained = fees.
+ *     → Release credits them the settlement they're owed.
+ *     → fees portion is platform revenue. ✓
+ */
+async function settleWalletFunds(tradeId: string, tx?: TxClient) {
+  const client = tx ?? db;
+  const legs = await loadTradeLegs(tradeId, client);
+  const bridgeLegs = toBridgeLegs(legs);
+  const settlements = computeSettlements(bridgeLegs);
+
+  const execute = async (innerTx: TxClient) => {
+    for (const [userId, net] of settlements) {
+      // Credit users who are owed money (negative net = sent higher-value card)
+      if (net < 0) {
+        await releaseFromTrade(userId, tradeId, Math.abs(net), innerTx);
+      }
+    }
+  };
+
+  if (tx) return execute(tx);
+  await db.$transaction((innerTx: TxClient) => execute(innerTx));
+}
+
+/**
+ * Refund all wallet holds for a cancelled trade.
+ */
+async function refundWalletHolds(tradeId: string, tx?: TxClient) {
+  const client = tx ?? db;
+  const holdTxns = await client.walletTransaction.findMany({
+    where: { tradeId, type: "TRADE_HOLD" },
+  });
+
+  const execute = async (innerTx: TxClient) => {
+    for (const txn of holdTxns) {
+      // TRADE_HOLD amounts are negative; refund the absolute value
+      await refundTradeHold(txn.userId, tradeId, Math.abs(txn.amount), innerTx);
+    }
+  };
+
+  if (tx) return execute(tx);
+  await db.$transaction((innerTx: TxClient) => execute(innerTx));
+}
+
+/**
+ * Upgrade a DIRECT trade to AUTHENTICATED mode.
+ * Can only be done before escrow (PROPOSED or ACCEPTED status).
+ */
+export async function requestAuthentication(tradeId: string, userId: string) {
+  const trade = await db.trade.findUnique({ where: { id: tradeId } });
+  if (!trade) throw new Error("Trade not found");
+  if ((trade.mode ?? "AUTHENTICATED") !== "DIRECT") {
+    throw new Error("Trade is already authenticated");
+  }
+  if (!["PROPOSED", "ACCEPTED"].includes(trade.status)) {
+    throw new Error("Can only request authentication before escrow");
+  }
+  if (trade.userAId !== userId && trade.userBId !== userId) {
+    throw new Error("Not authorized");
+  }
 
   return db.trade.update({
     where: { id: tradeId },
-    data: {
-      status: newStatus,
-      statusHistory,
-      ...(newStatus === "COMPLETED" ? { completedAt: new Date() } : {}),
-    },
+    data: { mode: "AUTHENTICATED" },
   });
 }

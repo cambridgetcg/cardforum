@@ -3,12 +3,20 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { getUserTrades, transitionTrade } from "@/server/services/trade.service";
 import { tradeActionSchema } from "@/lib/validators";
+import { createShippingDispute } from "@/server/services/dispute.service";
+import type { TradeStatus } from "@/types/domain";
 
-const ACTION_STATUS_MAP = {
+const ACTION_STATUS_MAP: Record<string, string> = {
   accept: "ACCEPTED",
   reject: "REJECTED",
   cancel: "CANCELLED",
-} as const;
+  escrow: "ESCROWED",
+  submit_cards: "CARDS_SUBMITTED",
+  authenticate: "AUTHENTICATING",
+  deliver: "DELIVERING",
+  complete: "COMPLETED",
+  dispute: "DISPUTED",
+};
 
 // GET /api/trades — List current user's trades
 export async function GET() {
@@ -60,8 +68,23 @@ export async function POST(req: NextRequest) {
         proposalId: proposal.id,
         userAId: userIds[0],
         userBId: userIds[1] ?? userIds[0],
+        participantIds: userIds,
+        mode: proposal.tradeMode ?? "AUTHENTICATED",
         status: "PROPOSED",
         statusHistory: [{ status: "PROPOSED", at: new Date().toISOString() }],
+        legs: {
+          create: proposal.legs.map((leg) => ({
+            haveListingId: leg.haveListingId,
+            wantListingId: leg.wantListingId,
+            gradedHaveListingId: leg.gradedHaveListingId,
+            gradedWantListingId: leg.gradedWantListingId,
+            isGraded: !!(leg.gradedHaveListingId),
+            fromUserId: leg.fromUserId,
+            toUserId: leg.toUserId,
+            region: leg.region,
+            sequence: leg.sequence,
+          })),
+        },
       },
       include: { legs: true },
     });
@@ -76,7 +99,39 @@ export async function POST(req: NextRequest) {
   }
 
   const { tradeId, action } = parsed.data;
-  const newStatus = ACTION_STATUS_MAP[action];
+
+  // Handle dispute action separately — uses createShippingDispute with structured data
+  if (action === "dispute") {
+    if (!parsed.data.reason) {
+      return NextResponse.json(
+        { error: "reason is required for dispute action" },
+        { status: 400 }
+      );
+    }
+
+    try {
+      // If tradeLegId provided, create a per-leg shipping dispute
+      if (parsed.data.tradeLegId) {
+        const dispute = await createShippingDispute(
+          tradeId,
+          parsed.data.tradeLegId,
+          session.user.id,
+          parsed.data.reason,
+          parsed.data.evidence ?? [],
+        );
+        return NextResponse.json({ dispute });
+      }
+
+      // Otherwise, fall through to general DISPUTED transition
+      const trade = await transitionTrade(tradeId, session.user.id, "DISPUTED");
+      return NextResponse.json(trade);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Failed to create dispute";
+      return NextResponse.json({ error: message }, { status: 400 });
+    }
+  }
+
+  const newStatus = ACTION_STATUS_MAP[action] as TradeStatus;
 
   try {
     const trade = await transitionTrade(tradeId, session.user.id, newStatus);
