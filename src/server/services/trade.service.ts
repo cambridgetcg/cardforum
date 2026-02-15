@@ -18,6 +18,7 @@ import {
   type TxClient,
 } from "./wallet.service";
 import { assertCanTrade } from "./kyc.service";
+import { PHOTO_APPROVAL_THRESHOLD_CENTS } from "@/lib/constants";
 import {
   lockShippingAddresses,
   initiateCardReturns,
@@ -93,6 +94,8 @@ export async function transitionTrade(
   }
 
   // ─── All mutations in a single transaction ────────
+  let autoNextStatus: TradeStatus | null = null;
+
   const updated = await db.$transaction(async (tx: TxClient) => {
     const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
     statusHistory.push({ status: newStatus, at: new Date().toISOString() });
@@ -194,8 +197,46 @@ export async function transitionTrade(
       }
     }
 
+    // ─── Auto-transition detection ───
+    // Set flags for cascading transitions that happen AFTER this transaction commits.
+    if (newStatus === "ACCEPTED") {
+      autoNextStatus = "ESCROWED";
+    }
+
+    if (newStatus === "CARDS_SUBMITTED") {
+      // If all legs pass photo check (below threshold or already approved), auto-advance
+      const legs = await tx.tradeLeg.findMany({
+        where: { tradeId },
+        include: {
+          photoApproval: { select: { status: true } },
+          haveListing: { select: { askPrice: true } },
+        },
+      });
+      const allCleared = legs.every(
+        (leg) =>
+          !leg.haveListing ||
+          leg.haveListing.askPrice < PHOTO_APPROVAL_THRESHOLD_CENTS ||
+          leg.photoApproval?.status === "APPROVED"
+      );
+      if (allCleared && mode === "AUTHENTICATED") {
+        autoNextStatus = "AUTHENTICATING";
+      }
+    }
+
     return result;
   });
+
+  // ─── Cascading auto-transitions (outside transaction) ───
+  // These re-enter transitionTrade recursively for the next state.
+  if (autoNextStatus && canTransition(newStatus, autoNextStatus, mode)) {
+    try {
+      return await transitionTrade(tradeId, userId, autoNextStatus);
+    } catch {
+      // Auto-transition failed (e.g., insufficient balance for ESCROWED).
+      // The original transition still succeeded — return that result.
+      return updated;
+    }
+  }
 
   return updated;
 }
