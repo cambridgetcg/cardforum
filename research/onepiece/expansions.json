@@ -1,0 +1,1020 @@
+{
+  "discoveredAt": "2026-02-15T14:48:30.249Z",
+  "totalExpansions": 169,
+  "expansions": [
+    {
+      "code": "500YEARSIN",
+      "name": "500 Years into the Future",
+      "cardmarketId": 5586,
+      "productType": "other"
+    },
+    {
+      "code": "500YEARSIN",
+      "name": "500 Years into the Future (Non-English)",
+      "cardmarketId": 5587,
+      "productType": "other"
+    },
+    {
+      "code": "ACCESSORIE",
+      "name": "Accessories",
+      "cardmarketId": 5,
+      "productType": "other"
+    },
+    {
+      "code": "AFISTOFDIV",
+      "name": "A Fist of Divine Speed",
+      "cardmarketId": 6033,
+      "productType": "other"
+    },
+    {
+      "code": "AFISTOFDIV",
+      "name": "A Fist of Divine Speed (Non-English)",
+      "cardmarketId": 6034,
+      "productType": "other"
+    },
+    {
+      "code": "ALTERNATEA",
+      "name": "Alternate Art",
+      "cardmarketId": 283,
+      "productType": "other"
+    },
+    {
+      "code": "ANIME25THC",
+      "name": "Anime 25th Collection",
+      "cardmarketId": 6028,
+      "productType": "other"
+    },
+    {
+      "code": "ANIME25THC",
+      "name": "Anime 25th Collection (Non-English)",
+      "cardmarketId": 6018,
+      "productType": "other"
+    },
+    {
+      "code": "APPAREL",
+      "name": "Apparel",
+      "cardmarketId": 1081,
+      "productType": "other"
+    },
+    {
+      "code": "AWAKENINGO",
+      "name": "Awakening of the New Era (Non-English)",
+      "cardmarketId": 5481,
+      "productType": "other"
+    },
+    {
+      "code": "BINDERS",
+      "name": "Binders",
+      "cardmarketId": 14,
+      "productType": "other"
+    },
+    {
+      "code": "BOOKSCOMIC",
+      "name": "Books - Comics - Guides",
+      "cardmarketId": 44,
+      "productType": "other"
+    },
+    {
+      "code": "BOOSTERBOX",
+      "name": "Booster Boxes",
+      "cardmarketId": 3,
+      "productType": "other"
+    },
+    {
+      "code": "BOOSTERBOX",
+      "name": "Booster Boxes",
+      "cardmarketId": 1624,
+      "productType": "other"
+    },
+    {
+      "code": "BOOSTERS",
+      "name": "Boosters",
+      "cardmarketId": 2,
+      "productType": "other"
+    },
+    {
+      "code": "BOOSTERS",
+      "name": "Boosters",
+      "cardmarketId": 1622,
+      "productType": "other"
+    },
+    {
+      "code": "BOOSTERS",
+      "name": "Boosters",
+      "cardmarketId": 1623,
+      "productType": "other"
+    },
+    {
+      "code": "CARDSCANNE",
+      "name": "Card Scanners",
+      "cardmarketId": 1025,
+      "productType": "other"
+    },
+    {
+      "code": "CARRYINGON",
+      "name": "Carrying on his Will",
+      "cardmarketId": 6187,
+      "productType": "other"
+    },
+    {
+      "code": "CARRYINGON",
+      "name": "Carrying on his Will (Non-English)",
+      "cardmarketId": 6277,
+      "productType": "other"
+    },
+    {
+      "code": "COMMON",
+      "name": "Common",
+      "cardmarketId": 289,
+      "productType": "other"
+    },
+    {
+      "code": "DECKBOXES",
+      "name": "Deck Boxes",
+      "cardmarketId": 15,
+      "productType": "other"
+    },
+    {
+      "code": "DICE",
+      "name": "Dice",
+      "cardmarketId": 16,
+      "productType": "other"
+    },
+    {
+      "code": "DICEBAGS",
+      "name": "Dice Bags",
+      "cardmarketId": 49,
+      "productType": "other"
+    },
+    {
+      "code": "DIVIDERS",
+      "name": "Dividers",
+      "cardmarketId": 45,
+      "productType": "other"
+    },
+    {
+      "code": "DON",
+      "name": "DON!!",
+      "cardmarketId": 290,
+      "productType": "other"
+    },
+    {
+      "code": "EB01",
+      "name": "Memorial Collection",
+      "cardmarketId": 5585,
+      "productType": "extra"
+    },
+    {
+      "code": "EB01",
+      "name": "Memorial Collection (Non-English)",
+      "cardmarketId": 5580,
+      "productType": "extra"
+    },
+    {
+      "code": "EGGHEADCRI",
+      "name": "Egghead Crisis (Asia Region Legal)",
+      "cardmarketId": 6478,
+      "productType": "other"
+    },
+    {
+      "code": "EMPERORSIN",
+      "name": "Emperors in the New World (Non-English)",
+      "cardmarketId": 5887,
+      "productType": "other"
+    },
+    {
+      "code": "GAMEKITS",
+      "name": "Game Kits",
+      "cardmarketId": 50,
+      "productType": "other"
+    },
+    {
+      "code": "GAMINGSTON",
+      "name": "Gaming Stones",
+      "cardmarketId": 41,
+      "productType": "other"
+    },
+    {
+      "code": "GRADING",
+      "name": "Grading",
+      "cardmarketId": 1082,
+      "productType": "other"
+    },
+    {
+      "code": "HEROINESED",
+      "name": "Heroines Edition",
+      "cardmarketId": 6449,
+      "productType": "other"
+    },
+    {
+      "code": "HEROINESED",
+      "name": "Heroines Edition (Asia Region Legal)",
+      "cardmarketId": 6379,
+      "productType": "other"
+    },
+    {
+      "code": "KINGDOMSOF",
+      "name": "Kingdoms of Intrigue (Non-English)",
+      "cardmarketId": 5485,
+      "productType": "other"
+    },
+    {
+      "code": "LEADER",
+      "name": "Leader",
+      "cardmarketId": 286,
+      "productType": "other"
+    },
+    {
+      "code": "LEARNTOGET",
+      "name": "Learn Together Deck Set 01",
+      "cardmarketId": 6338,
+      "productType": "other"
+    },
+    {
+      "code": "LEGACYOFTH",
+      "name": "Legacy of the Master",
+      "cardmarketId": 6186,
+      "productType": "other"
+    },
+    {
+      "code": "LEGACYOFTH",
+      "name": "Legacy of the Master (Non-English)",
+      "cardmarketId": 6157,
+      "productType": "other"
+    },
+    {
+      "code": "LIFECOUNTE",
+      "name": "Life Counter",
+      "cardmarketId": 43,
+      "productType": "other"
+    },
+    {
+      "code": "LOTS",
+      "name": "Lots",
+      "cardmarketId": 6,
+      "productType": "other"
+    },
+    {
+      "code": "LOTS",
+      "name": "Lots",
+      "cardmarketId": 1626,
+      "productType": "other"
+    },
+    {
+      "code": "MANGARARE",
+      "name": "Manga Rare",
+      "cardmarketId": 318,
+      "productType": "other"
+    },
+    {
+      "code": "MEMORABILI",
+      "name": "Memorabilia",
+      "cardmarketId": 46,
+      "productType": "other"
+    },
+    {
+      "code": "ONEPIECEPR",
+      "name": "One Piece Products",
+      "cardmarketId": 5244,
+      "productType": "other"
+    },
+    {
+      "code": "OP01",
+      "name": "Romance Dawn",
+      "cardmarketId": 5229,
+      "productType": "booster"
+    },
+    {
+      "code": "OP02",
+      "name": "Paramount War",
+      "cardmarketId": 5263,
+      "productType": "booster"
+    },
+    {
+      "code": "OP02",
+      "name": "Paramount War",
+      "cardmarketId": 5398,
+      "productType": "booster"
+    },
+    {
+      "code": "OP03",
+      "name": "Pillars of Strength",
+      "cardmarketId": 5364,
+      "productType": "booster"
+    },
+    {
+      "code": "OP03",
+      "name": "Pillars of Strength",
+      "cardmarketId": 5477,
+      "productType": "booster"
+    },
+    {
+      "code": "OP04",
+      "name": "Kingdoms of Intrigue",
+      "cardmarketId": 5365,
+      "productType": "booster"
+    },
+    {
+      "code": "OP04",
+      "name": "Kingdoms of Intrigue",
+      "cardmarketId": 5573,
+      "productType": "booster"
+    },
+    {
+      "code": "OP05",
+      "name": "Awakening of the New Era",
+      "cardmarketId": 5426,
+      "productType": "booster"
+    },
+    {
+      "code": "OP05",
+      "name": "Awakening of the New Era",
+      "cardmarketId": 5660,
+      "productType": "booster"
+    },
+    {
+      "code": "OP06",
+      "name": "Wings of the Captain",
+      "cardmarketId": 5524,
+      "productType": "booster"
+    },
+    {
+      "code": "OP06",
+      "name": "Wings of the Captain",
+      "cardmarketId": 5779,
+      "productType": "booster"
+    },
+    {
+      "code": "OP07",
+      "name": "500 Years in the Future",
+      "cardmarketId": 5884,
+      "productType": "booster"
+    },
+    {
+      "code": "OP08",
+      "name": "Two Legends",
+      "cardmarketId": 5610,
+      "productType": "booster"
+    },
+    {
+      "code": "OP08",
+      "name": "Two Legends",
+      "cardmarketId": 5966,
+      "productType": "booster"
+    },
+    {
+      "code": "OP09",
+      "name": "Emperors in the New World",
+      "cardmarketId": 5755,
+      "productType": "booster"
+    },
+    {
+      "code": "OP09",
+      "name": "Emperors in the New World",
+      "cardmarketId": 6064,
+      "productType": "booster"
+    },
+    {
+      "code": "OP10",
+      "name": "Royal Blood",
+      "cardmarketId": 5974,
+      "productType": "booster"
+    },
+    {
+      "code": "OP10",
+      "name": "Royal Blood",
+      "cardmarketId": 6201,
+      "productType": "booster"
+    },
+    {
+      "code": "PARAMOUNTW",
+      "name": "Paramount War (Japanese)",
+      "cardmarketId": 5483,
+      "productType": "other"
+    },
+    {
+      "code": "PILLARSOFS",
+      "name": "Pillars of Strength (Japanese)",
+      "cardmarketId": 5482,
+      "productType": "other"
+    },
+    {
+      "code": "PLAYMATS",
+      "name": "Playmats",
+      "cardmarketId": 35,
+      "productType": "other"
+    },
+    {
+      "code": "POCKETPAGE",
+      "name": "Pocket Pages",
+      "cardmarketId": 13,
+      "productType": "other"
+    },
+    {
+      "code": "PRECONSTRU",
+      "name": "Preconstructed Decks",
+      "cardmarketId": 1625,
+      "productType": "other"
+    },
+    {
+      "code": "PREMIUMBAN",
+      "name": "Premium Bandai Products",
+      "cardmarketId": 5267,
+      "productType": "other"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promo Products",
+      "cardmarketId": 1628,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Judge Promos",
+      "cardmarketId": 5312,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos",
+      "cardmarketId": 5230,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos (Japanese)",
+      "cardmarketId": 5511,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: 500 Years into the Future",
+      "cardmarketId": 5803,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: A Fist of Divine Speed",
+      "cardmarketId": 6160,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Awakening of the New Era",
+      "cardmarketId": 5565,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Carrying on his Will",
+      "cardmarketId": 6372,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Emperors in the New World",
+      "cardmarketId": 5979,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Kingdoms of Intrigue",
+      "cardmarketId": 5486,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Legacy of the Master",
+      "cardmarketId": 6264,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Paramount War",
+      "cardmarketId": 5300,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Pillars of Strength",
+      "cardmarketId": 5413,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Royal Blood",
+      "cardmarketId": 6090,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: The Azure Sea's Seven",
+      "cardmarketId": 6446,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Two Legends",
+      "cardmarketId": 5896,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promos: Wings of the Captain",
+      "cardmarketId": 5622,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Special Tournament Promos",
+      "cardmarketId": 5262,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Special Tournament Promos (Non-English)",
+      "cardmarketId": 5598,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Unnumbered Promos",
+      "cardmarketId": 5303,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Unnumbered Promos (Non-English)",
+      "cardmarketId": 5510,
+      "productType": "promo"
+    },
+    {
+      "code": "PROMO",
+      "name": "Promo",
+      "cardmarketId": 282,
+      "productType": "promo"
+    },
+    {
+      "code": "RARE",
+      "name": "Rare",
+      "cardmarketId": 287,
+      "productType": "other"
+    },
+    {
+      "code": "REPRINTS",
+      "name": "Reprints",
+      "cardmarketId": 5302,
+      "productType": "other"
+    },
+    {
+      "code": "ROMANCEDAW",
+      "name": "Romance Dawn (Japanese)",
+      "cardmarketId": 5484,
+      "productType": "other"
+    },
+    {
+      "code": "ROMANCEDAW",
+      "name": "Romance Dawn (Pre-Errata)",
+      "cardmarketId": 5624,
+      "productType": "other"
+    },
+    {
+      "code": "ROYALBLOOD",
+      "name": "Royal Blood (Non-English)",
+      "cardmarketId": 5975,
+      "productType": "other"
+    },
+    {
+      "code": "SEALEDPROD",
+      "name": "Sealed Products",
+      "cardmarketId": 4,
+      "productType": "other"
+    },
+    {
+      "code": "SECRETRARE",
+      "name": "Secret Rare",
+      "cardmarketId": 284,
+      "productType": "other"
+    },
+    {
+      "code": "SINGLES",
+      "name": "Singles",
+      "cardmarketId": 1,
+      "productType": "other"
+    },
+    {
+      "code": "SINGLES",
+      "name": "Singles",
+      "cardmarketId": 1621,
+      "productType": "other"
+    },
+    {
+      "code": "SLEEVES",
+      "name": "Sleeves",
+      "cardmarketId": 12,
+      "productType": "other"
+    },
+    {
+      "code": "SPECIALRAR",
+      "name": "Special Rare",
+      "cardmarketId": 317,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: 3D2Y",
+      "cardmarketId": 5611,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: 3D2Y (Japanese)",
+      "cardmarketId": 5850,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Absolute Justice",
+      "cardmarketId": 5265,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Animal Kingdom Pirates",
+      "cardmarketId": 5240,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Animal Kingdom Pirates (Non-English)",
+      "cardmarketId": 6032,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Big Mom Pirates",
+      "cardmarketId": 5377,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Black Marshall.D.Teach",
+      "cardmarketId": 6148,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Black Marshall.D.Teach (Non-English)",
+      "cardmarketId": 6225,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Blue Buggy",
+      "cardmarketId": 6150,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Blue Buggy (Non-English)",
+      "cardmarketId": 6227,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Charlotte Katakuri",
+      "cardmarketId": 5752,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Charlotte Katakuri (Non-English)",
+      "cardmarketId": 5973,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Donquixote Doflamingo",
+      "cardmarketId": 5749,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Donquixote Doflamingo (Non-English)",
+      "cardmarketId": 5970,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Edward.Newgate",
+      "cardmarketId": 5747,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Edward.Newgate (Non-English)",
+      "cardmarketId": 5968,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Egghead",
+      "cardmarketId": 6444,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Egghead (Asia Region Legal)",
+      "cardmarketId": 6445,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: EX Ace & Newgate",
+      "cardmarketId": 6270,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: EX Ace & Newgate (Non-English)",
+      "cardmarketId": 6138,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: EX Gear 5",
+      "cardmarketId": 5998,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: EX Gear 5 (Non English)",
+      "cardmarketId": 5999,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Jewelry Bonney",
+      "cardmarketId": 6151,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Jewelry Bonney (Non-English)",
+      "cardmarketId": 6228,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Uta",
+      "cardmarketId": 5748,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Uta (Non-English)",
+      "cardmarketId": 5969,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Yellow Yamato",
+      "cardmarketId": 6147,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Green Yellow Yamato (Non-English)",
+      "cardmarketId": 6224,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Monkey.D.Luffy",
+      "cardmarketId": 5366,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: ONE PIECE FILM edition",
+      "cardmarketId": 5255,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Purple Black Monkey.D.Luffy",
+      "cardmarketId": 6149,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Purple Black Monkey.D.Luffy (Non-English)",
+      "cardmarketId": 6226,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Purple Monkey.D.Luffy",
+      "cardmarketId": 5750,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Purple Monkey.D.Luffy (Non-English)",
+      "cardmarketId": 5971,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Red Shanks",
+      "cardmarketId": 6152,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Red Shanks (Non-English)",
+      "cardmarketId": 6229,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Smoker",
+      "cardmarketId": 5751,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Smoker (Non-English)",
+      "cardmarketId": 5972,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Straw Hat Crew",
+      "cardmarketId": 5237,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Straw Hat Crew (Non-English)",
+      "cardmarketId": 6029,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: The Seven Warlords of the Sea",
+      "cardmarketId": 5239,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: The Seven Warlords of the Sea (Non-English)",
+      "cardmarketId": 6031,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Uta",
+      "cardmarketId": 5427,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Uta (Non-English)",
+      "cardmarketId": 5591,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Worst Generation",
+      "cardmarketId": 5238,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Worst Generation (Non-English)",
+      "cardmarketId": 6030,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Yamato",
+      "cardmarketId": 5367,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Yamato (Non-English)",
+      "cardmarketId": 6215,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Zoro & Sanji",
+      "cardmarketId": 5593,
+      "productType": "other"
+    },
+    {
+      "code": "STARTERDEC",
+      "name": "Starter Deck: Zoro & Sanji (Non-English)",
+      "cardmarketId": 5592,
+      "productType": "other"
+    },
+    {
+      "code": "STORAGE",
+      "name": "Storage",
+      "cardmarketId": 40,
+      "productType": "other"
+    },
+    {
+      "code": "SUPERRARE",
+      "name": "Super Rare",
+      "cardmarketId": 285,
+      "productType": "other"
+    },
+    {
+      "code": "THEAZURESE",
+      "name": "The Azure Sea's Seven",
+      "cardmarketId": 6432,
+      "productType": "other"
+    },
+    {
+      "code": "THEAZURESE",
+      "name": "The Azure Sea's Seven (Asia Region Legal)",
+      "cardmarketId": 6411,
+      "productType": "other"
+    },
+    {
+      "code": "THEBEST",
+      "name": "The Best",
+      "cardmarketId": 5805,
+      "productType": "other"
+    },
+    {
+      "code": "THEBESTNON",
+      "name": "The Best (Non-English)",
+      "cardmarketId": 5804,
+      "productType": "other"
+    },
+    {
+      "code": "THEBESTVOL",
+      "name": "The Best Vol. 2 (Non-English)",
+      "cardmarketId": 6233,
+      "productType": "other"
+    },
+    {
+      "code": "THEBESTVOL",
+      "name": "The Best Vol.2",
+      "cardmarketId": 6242,
+      "productType": "other"
+    },
+    {
+      "code": "TREASURERA",
+      "name": "Treasure Rare",
+      "cardmarketId": 340,
+      "productType": "other"
+    },
+    {
+      "code": "TWOLEGENDS",
+      "name": "Two Legends (Non-English)",
+      "cardmarketId": 5744,
+      "productType": "other"
+    },
+    {
+      "code": "ULTIMATEDE",
+      "name": "Ultimate Deck - The Three Captains (Non-English)",
+      "cardmarketId": 5558,
+      "productType": "other"
+    },
+    {
+      "code": "ULTIMATEDE",
+      "name": "Ultimate Deck: The Three Brothers (Non-English)",
+      "cardmarketId": 5594,
+      "productType": "other"
+    },
+    {
+      "code": "ULTRADECKT",
+      "name": "Ultra Deck: The Three Brothers",
+      "cardmarketId": 5595,
+      "productType": "other"
+    },
+    {
+      "code": "ULTRADECKT",
+      "name": "Ultra Deck: The Three Captains",
+      "cardmarketId": 5380,
+      "productType": "other"
+    },
+    {
+      "code": "UNCOMMON",
+      "name": "Uncommon",
+      "cardmarketId": 288,
+      "productType": "other"
+    },
+    {
+      "code": "WINGSOFTHE",
+      "name": "Wings of the Captain (Non-English)",
+      "cardmarketId": 5551,
+      "productType": "other"
+    }
+  ]
+}
