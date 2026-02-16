@@ -13,7 +13,12 @@ import { IntentPanel } from "@/components/listings/intent-panel";
 import { SetInsights } from "@/components/expert/set-insights";
 import { PullRateTable } from "@/components/collection/pull-rate-table";
 import { TCG_LABELS, TCG_BADGE_COLORS, type TCG } from "@/types/domain";
-import { useCollectionCheck, useCollectionStats, useAddToCollection, usePullRates } from "@/hooks/use-api";
+import {
+  useCollectionCheck,
+  useCollectionStats,
+  useAddToCollection,
+  usePullRates,
+} from "@/hooks/use-api";
 
 interface SetInfo {
   id: string;
@@ -54,6 +59,8 @@ export default function SetDetailPage() {
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+  const [rarityFilter, setRarityFilter] = useState("");
+  const [treatmentFilter, setTreatmentFilter] = useState("");
   const [intentCard, setIntentCard] = useState<CardResult | null>(null);
   const [intentType, setIntentType] = useState<"have" | "want" | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>("cards");
@@ -83,12 +90,14 @@ export default function SetDetailPage() {
   }, [setCode]);
 
   const fetchCards = useCallback(
-    async (q: string, p: number) => {
+    async (q: string, p: number, rarity: string, treatment: string) => {
       if (!setCode) return;
       setLoading(true);
       const params = new URLSearchParams();
       params.set("set", setCode);
       if (q) params.set("query", q);
+      if (rarity) params.set("rarity", rarity);
+      if (treatment) params.set("treatment", treatment);
       params.set("page", String(p));
       params.set("limit", "40");
 
@@ -102,20 +111,20 @@ export default function SetDetailPage() {
         setLoading(false);
       }
     },
-    [setCode]
+    [setCode],
   );
 
-  // Debounced search
+  // Debounced search + filter changes reset to page 1
   useEffect(() => {
     setPage(1);
-    const timer = setTimeout(() => fetchCards(query, 1), 300);
+    const timer = setTimeout(() => fetchCards(query, 1, rarityFilter, treatmentFilter), 300);
     return () => clearTimeout(timer);
-  }, [query, fetchCards]);
+  }, [query, rarityFilter, treatmentFilter, fetchCards]);
 
   // Page change
   useEffect(() => {
-    if (page > 1) fetchCards(query, page);
-  }, [page, query, fetchCards]);
+    if (page > 1) fetchCards(query, page, rarityFilter, treatmentFilter);
+  }, [page, query, rarityFilter, treatmentFilter, fetchCards]);
 
   // Use stats endpoint for accurate full-set completion (not page-limited)
   const setStats = useMemo(
@@ -142,15 +151,13 @@ export default function SetDetailPage() {
             <Badge variant={TCG_BADGE_COLORS[setInfo.tcg]} className="text-[10px]">
               {TCG_LABELS[setInfo.tcg]}
             </Badge>
-            <span className="rounded bg-gray-100 px-1.5 py-0.5 text-xs font-mono font-medium text-gray-600">
+            <span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-xs font-medium text-gray-600">
               {setInfo.code}
             </span>
             {setInfo.productType && (
               <span className="text-sm text-gray-400 capitalize">{setInfo.productType}</span>
             )}
-            <span className="text-sm text-gray-400">
-              {setInfo._count.cards} cards
-            </span>
+            <span className="text-sm text-gray-400">{setInfo._count.cards} cards</span>
           </div>
         </div>
       ) : (
@@ -166,7 +173,8 @@ export default function SetDetailPage() {
               Your Collection
             </span>
             <span className="text-rose-600">
-              {ownedCount} / {totalCards} ({totalCards > 0 ? Math.round((ownedCount / totalCards) * 100) : 0}%)
+              {ownedCount} / {totalCards} (
+              {totalCards > 0 ? Math.round((ownedCount / totalCards) * 100) : 0}%)
             </span>
           </div>
           <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-rose-200">
@@ -187,7 +195,7 @@ export default function SetDetailPage() {
       <div className="mt-5 flex gap-1 border-b border-gray-200">
         <button
           onClick={() => setActiveTab("cards")}
-          className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+          className={`border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
             activeTab === "cards"
               ? "border-indigo-600 text-indigo-600"
               : "border-transparent text-gray-500 hover:text-gray-700"
@@ -198,7 +206,7 @@ export default function SetDetailPage() {
         {pullRates && (
           <button
             onClick={() => setActiveTab("pull-rates")}
-            className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+            className={`flex items-center gap-1.5 border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === "pull-rates"
                 ? "border-indigo-600 text-indigo-600"
                 : "border-transparent text-gray-500 hover:text-gray-700"
@@ -214,14 +222,57 @@ export default function SetDetailPage() {
       {activeTab === "cards" && (
         <>
           {/* Search within set */}
-          <div className="mt-5 relative max-w-md">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+          <div className="relative mt-5 max-w-md">
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <Input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search within this set..."
               className="pl-10"
             />
+          </div>
+
+          {/* Rarity & treatment filters */}
+          <div className="mt-3 flex flex-wrap gap-2">
+            {[
+              { value: "", label: "All" },
+              { value: "SEC", label: "SEC" },
+              { value: "SR", label: "SR" },
+              { value: "R", label: "R" },
+              { value: "UC", label: "UC" },
+              { value: "C", label: "C" },
+              { value: "L", label: "Leader" },
+            ].map((r) => (
+              <button
+                key={r.value}
+                onClick={() => setRarityFilter(r.value)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                  rarityFilter === r.value
+                    ? "bg-indigo-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {r.label}
+              </button>
+            ))}
+            <span className="mx-1 self-center text-gray-300">|</span>
+            {[
+              { value: "", label: "All Prints" },
+              { value: "parallel", label: "Parallel / Alt Art" },
+              { value: "regular", label: "Regular" },
+            ].map((t) => (
+              <button
+                key={t.value}
+                onClick={() => setTreatmentFilter(t.value)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                  treatmentFilter === t.value
+                    ? "bg-purple-600 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {t.label}
+              </button>
+            ))}
           </div>
 
           <div className="mt-5">
@@ -231,7 +282,7 @@ export default function SetDetailPage() {
               <>
                 <p className="mb-4 text-sm text-gray-500">
                   {cards.total} card{cards.total !== 1 ? "s" : ""}
-                  {query && " matching your search"}
+                  {(query || rarityFilter || treatmentFilter) && " matching filters"}
                 </p>
 
                 {cards.cards.length === 0 ? (
@@ -239,7 +290,7 @@ export default function SetDetailPage() {
                     <p className="text-gray-500">No cards found.</p>
                   </div>
                 ) : (
-                  <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     {cards.cards.map((card) => (
                       <CardGridItem
                         key={card.id}
@@ -253,11 +304,21 @@ export default function SetDetailPage() {
                         imageUrl={card.imageUrl}
                         variantCount={card._count.variants}
                         owned={ownedSet.has(card.id)}
-                        onHave={() => { setIntentCard(card); setIntentType("have"); }}
-                        onWant={() => { setIntentCard(card); setIntentType("want"); }}
-                        onCollect={session ? () => {
-                          addToCollection.mutate({ cardId: card.id });
-                        } : undefined}
+                        onHave={() => {
+                          setIntentCard(card);
+                          setIntentType("have");
+                        }}
+                        onWant={() => {
+                          setIntentCard(card);
+                          setIntentType("want");
+                        }}
+                        onCollect={
+                          session
+                            ? () => {
+                                addToCollection.mutate({ cardId: card.id });
+                              }
+                            : undefined
+                        }
                       />
                     ))}
                   </div>
@@ -321,18 +382,28 @@ export default function SetDetailPage() {
       {/* Intent Panel from hover overlay */}
       <IntentPanel
         open={intentType !== null}
-        card={intentCard ? {
-          id: intentCard.id,
-          tcg: intentCard.tcg,
-          name: intentCard.name,
-          setName: intentCard.setName,
-          setCode: intentCard.setCode,
-          number: intentCard.number,
-          imageUrl: intentCard.imageUrl,
-        } : null}
+        card={
+          intentCard
+            ? {
+                id: intentCard.id,
+                tcg: intentCard.tcg,
+                name: intentCard.name,
+                setName: intentCard.setName,
+                setCode: intentCard.setCode,
+                number: intentCard.number,
+                imageUrl: intentCard.imageUrl,
+              }
+            : null
+        }
         type={intentType ?? "have"}
-        onClose={() => { setIntentType(null); setIntentCard(null); }}
-        onCreated={() => { setIntentType(null); setIntentCard(null); }}
+        onClose={() => {
+          setIntentType(null);
+          setIntentCard(null);
+        }}
+        onCreated={() => {
+          setIntentType(null);
+          setIntentCard(null);
+        }}
       />
     </div>
   );

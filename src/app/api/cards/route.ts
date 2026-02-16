@@ -11,6 +11,8 @@ export async function GET(req: NextRequest) {
   const skip = (page - 1) * limit;
 
   const set = searchParams.get("set");
+  const rarity = searchParams.get("rarity");
+  const treatment = searchParams.get("treatment");
 
   const where = {
     ...(query && {
@@ -22,6 +24,8 @@ export async function GET(req: NextRequest) {
     }),
     ...(tcg && { tcg: tcg as "POKEMON" | "ONEPIECE" | "YUGIOH" | "MTG" }),
     ...(set && { set: { code: set } }),
+    ...(rarity && { rarity }),
+    ...(treatment && { variants: { some: { treatment } } }),
   };
 
   const [cards, total] = await Promise.all([
@@ -31,7 +35,7 @@ export async function GET(req: NextRequest) {
         set: true,
         _count: { select: { variants: true } },
       },
-      orderBy: [{ tcg: "asc" }, { name: "asc" }],
+      orderBy: set ? [{ number: "asc" }, { name: "asc" }] : [{ tcg: "asc" }, { name: "asc" }],
       skip,
       take: limit,
     }),
