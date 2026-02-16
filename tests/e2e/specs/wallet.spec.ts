@@ -3,6 +3,11 @@ import { WalletPage } from "../pages/wallet.page";
 
 /**
  * Wallet tests — verify balance display, deposit/withdraw UI.
+ *
+ * Wallet page fires 3 parallel fetches on mount:
+ *   /api/wallet/balance, /api/wallet/history, /api/connect/status
+ * These complete before waitForResponse can be set up, so we
+ * wait for DOM content instead of intercepting responses.
  */
 test.describe("Wallet", () => {
   test("wallet page loads with balance", async ({ authedPage }) => {
@@ -10,12 +15,7 @@ test.describe("Wallet", () => {
     await wallet.navigate();
     await wallet.assertHeading("Wallet");
 
-    // Wait for API response
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/wallet/balance") && r.status() === 200,
-      { timeout: 10_000 },
-    );
-
+    // Wait for "Loading wallet..." to disappear and balance to render
     await wallet.assertBalanceVisible();
   });
 
@@ -23,11 +23,7 @@ test.describe("Wallet", () => {
     const wallet = new WalletPage(authedPage);
     await wallet.navigate();
 
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/wallet/balance") && r.status() === 200,
-      { timeout: 10_000 },
-    );
-
+    // Wait for page to finish loading
     await wallet.assertDepositButtonVisible();
   });
 
@@ -35,11 +31,7 @@ test.describe("Wallet", () => {
     const wallet = new WalletPage(authedPage);
     await wallet.navigate();
 
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/connect/status") && r.status() === 200,
-      { timeout: 10_000 },
-    );
-
+    // Wait for connect status to load
     await wallet.assertConnectSectionVisible();
   });
 });

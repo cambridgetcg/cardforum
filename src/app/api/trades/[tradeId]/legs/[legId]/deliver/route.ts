@@ -27,15 +27,18 @@ export async function PATCH(
     const allDelivered = await confirmDelivery(legId, session.user.id, parsed.data.photos);
 
     // If all legs are delivered, transition trade to DELIVERED then COMPLETED
+    // Use the actual confirming user (session.user.id) who is a verified participant
     if (allDelivered) {
       const trade = await db.trade.findUnique({
         where: { id: tradeId },
-        select: { status: true, userAId: true },
+        select: { status: true, participantIds: true },
       });
 
       if (trade && trade.status !== "DELIVERED" && trade.status !== "COMPLETED") {
-        await transitionTrade(tradeId, trade.userAId, "DELIVERED");
-        await transitionTrade(tradeId, trade.userAId, "COMPLETED");
+        const participants = trade.participantIds as string[];
+        const actorId = participants.includes(session.user.id) ? session.user.id : participants[0];
+        await transitionTrade(tradeId, actorId, "DELIVERED");
+        await transitionTrade(tradeId, actorId, "COMPLETED");
       }
     }
 

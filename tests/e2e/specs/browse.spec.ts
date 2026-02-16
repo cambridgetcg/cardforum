@@ -20,12 +20,22 @@ test.describe("Browse Flow", () => {
   test("filtering by One Piece shows only One Piece sets", async ({ authedPage }) => {
     const browse = new BrowsePage(authedPage);
     await browse.navigate();
-    await browse.filterByTCG("One Piece");
 
-    // Wait for API response
-    await authedPage.waitForResponse((r) =>
-      r.url().includes("/api/card-sets") && r.status() === 200
+    // Wait for initial sets to load before clicking filter
+    await expect(authedPage.locator("a[href^='/browse/sets/']").first()).toBeVisible({
+      timeout: 10_000,
+    });
+
+    // Set up response listener BEFORE clicking
+    const responsePromise = authedPage.waitForResponse(
+      (r) =>
+        r.url().includes("/api/card-sets") &&
+        r.url().includes("tcg=ONEPIECE") &&
+        r.status() === 200,
     );
+
+    await browse.filterByTCG("One Piece");
+    await responsePromise;
 
     // All visible set cards should be One Piece
     const setLinks = authedPage.locator("a[href^='/browse/sets/']");
@@ -37,32 +47,26 @@ test.describe("Browse Flow", () => {
     const browse = new BrowsePage(authedPage);
     await browse.navigate();
 
-    // Click on the first set link
+    // Wait for sets to load
     const firstSet = authedPage.locator("a[href^='/browse/sets/']").first();
-    await expect(firstSet).toBeVisible();
-    const href = await firstSet.getAttribute("href");
-    await firstSet.click();
+    await expect(firstSet).toBeVisible({ timeout: 10_000 });
 
-    await authedPage.waitForLoadState("domcontentloaded");
+    // Click and wait for navigation
+    await firstSet.click();
+    await authedPage.waitForURL(/\/browse\/sets\//, { timeout: 10_000 });
+
     expect(authedPage.url()).toContain("/browse/sets/");
 
-    // Back link should be visible
-    await expect(authedPage.getByRole("link", { name: /browse/i })).toBeVisible();
+    // Back link should be visible in main content (not the header/footer nav links)
+    await expect(authedPage.getByRole("main").locator("a[href='/browse']")).toBeVisible();
   });
 
   test("set detail page shows card grid with pagination", async ({ authedPage }) => {
-    const browse = new BrowsePage(authedPage);
-
     // Navigate directly to a known set
     await authedPage.goto("/browse/sets/OP01");
     await authedPage.waitForLoadState("domcontentloaded");
 
-    // Wait for cards API response
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/cards") && r.status() === 200
-    );
-
-    // Card grid should have items
+    // Card grid should have items (CardGridItem renders <Link href="/browse/cards/{id}">)
     const cardLinks = authedPage.locator("a[href^='/browse/cards/']");
     await expect(cardLinks.first()).toBeVisible({ timeout: 10_000 });
   });
@@ -70,41 +74,47 @@ test.describe("Browse Flow", () => {
   test("card detail page shows card info and listing tables", async ({ authedPage }) => {
     // Navigate to set, then click first card
     await authedPage.goto("/browse/sets/OP01");
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/cards") && r.status() === 200
-    );
+    await authedPage.waitForLoadState("domcontentloaded");
 
     const firstCard = authedPage.locator("a[href^='/browse/cards/']").first();
     await expect(firstCard).toBeVisible({ timeout: 10_000 });
     await firstCard.click();
 
-    await authedPage.waitForLoadState("domcontentloaded");
+    // Wait for client-side navigation to card detail
+    await authedPage.waitForURL(/\/browse\/cards\//, { timeout: 10_000 });
     expect(authedPage.url()).toContain("/browse/cards/");
 
-    // Card detail should show name and action buttons
+    // Card detail should show name heading
     await expect(authedPage.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(authedPage.getByRole("link", { name: "Create Listing" })).toBeVisible();
-    await expect(authedPage.getByRole("link", { name: "View Order Book" })).toBeVisible();
+
+    // Action buttons: "I Have This", "I Want This", "View Order Book"
+    await expect(authedPage.getByRole("button", { name: "I Have This" })).toBeVisible();
+    await expect(authedPage.getByRole("button", { name: "I Want This" })).toBeVisible();
+    await expect(authedPage.getByRole("button", { name: "View Order Book" })).toBeVisible();
 
     // Listing tables should be present (even if empty)
-    await expect(authedPage.getByText("Active Have Listings")).toBeVisible();
-    await expect(authedPage.getByText("Active Want Listings")).toBeVisible();
+    await expect(authedPage.getByText(/Active Have Listings/)).toBeVisible();
+    await expect(authedPage.getByText(/Active Want Listings/)).toBeVisible();
   });
 
   test("search within set filters cards", async ({ authedPage }) => {
     await authedPage.goto("/browse/sets/OP01");
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/cards") && r.status() === 200
-    );
+    await authedPage.waitForLoadState("domcontentloaded");
 
-    const browse = new BrowsePage(authedPage);
-    await browse.searchInSet("Luffy");
+    // Wait for cards to initially load
+    const cardLinks = authedPage.locator("a[href^='/browse/cards/']");
+    await expect(cardLinks.first()).toBeVisible({ timeout: 10_000 });
 
-    // Wait for filtered API response
-    await authedPage.waitForResponse(
+    // Set up response listener BEFORE typing in search
+    const searchResponsePromise = authedPage.waitForResponse(
       (r) => r.url().includes("/api/cards") && r.url().includes("query=Luffy"),
-      { timeout: 5_000 }
+      { timeout: 10_000 },
     );
+
+    // Search — placeholder is "Search within this set..." (with ... ending)
+    await authedPage.getByPlaceholder("Search within this set...").fill("Luffy");
+
+    await searchResponsePromise;
 
     // Results should be filtered (fewer cards or specific names)
     const cards = authedPage.locator("a[href^='/browse/cards/']");

@@ -1,36 +1,47 @@
 import { test as teardown } from "@playwright/test";
+import pg from "pg";
 
 /**
  * Global teardown: cleans up test data created during the E2E run.
- * Uses the same FK-safe cascade order as tests/helpers.ts:129-167.
+ * Uses raw pg instead of Prisma to avoid ESM/CJS module issues.
+ * Table names use snake_case (Prisma @@map).
+ * FK-safe cascade order: leaf → root.
  */
 teardown("clean up test data", async () => {
-  const { db } = await import("../../src/lib/db");
-
-  const testEmails = ["e2e-test@cardforum.test"];
-
-  // Find test users
-  const testUsers = await db.user.findMany({
-    where: { email: { in: testEmails } },
-    select: { id: true },
+  const pool = new pg.Pool({
+    connectionString: process.env.DATABASE_URL,
   });
 
-  if (testUsers.length === 0) return;
+  try {
+    const testEmails = ["e2e-test@cardforum.test"];
 
-  const userIds = testUsers.map((u) => u.id);
+    const { rows: testUsers } = await pool.query(`SELECT id FROM users WHERE email = ANY($1)`, [
+      testEmails,
+    ]);
 
-  // Delete in FK-safe order (leaf → root)
-  // Only delete data owned by test users to avoid nuking real data
-  await db.notification.deleteMany({ where: { userId: { in: userIds } } });
-  await db.walletTransaction.deleteMany({ where: { userId: { in: userIds } } });
-  await db.payout.deleteMany({ where: { userId: { in: userIds } } });
+    if (testUsers.length === 0) return;
 
-  await db.haveListing.deleteMany({ where: { userId: { in: userIds } } });
-  await db.wantListing.deleteMany({ where: { userId: { in: userIds } } });
+    const userIds = testUsers.map((u) => u.id);
 
-  await db.shippingAddress.deleteMany({ where: { userId: { in: userIds } } });
-  await db.session.deleteMany({ where: { userId: { in: userIds } } });
-  await db.account.deleteMany({ where: { userId: { in: userIds } } });
+    // Delete in FK-safe order (leaf → root)
+    // Table names from Prisma @@map directives
+    const tables = [
+      "notifications",
+      "wallet_transactions",
+      "payouts",
+      "have_listings",
+      "want_listings",
+      "shipping_addresses",
+      "sessions",
+      "accounts",
+    ];
 
-  await db.user.deleteMany({ where: { id: { in: userIds } } });
+    for (const table of tables) {
+      await pool.query(`DELETE FROM ${table} WHERE "userId" = ANY($1)`, [userIds]);
+    }
+
+    await pool.query(`DELETE FROM users WHERE id = ANY($1)`, [userIds]);
+  } finally {
+    await pool.end();
+  }
 });

@@ -33,7 +33,7 @@ export class BrowsePage extends BasePage {
   /** Click on a specific set by code (e.g. "OP01"). */
   async clickSet(setCode: string) {
     await this.page.locator(`a[href='/browse/sets/${setCode}']`).click();
-    await this.page.waitForLoadState("domcontentloaded");
+    await this.page.waitForURL(`**/browse/sets/${setCode}`, { timeout: 10_000 });
   }
 
   /** Assert we're on a set detail page. */
@@ -52,13 +52,13 @@ export class BrowsePage extends BasePage {
   /** Click on the first card in the grid. */
   async clickFirstCard() {
     await this.page.locator("a[href^='/browse/cards/']").first().click();
-    await this.page.waitForLoadState("domcontentloaded");
+    await this.page.waitForURL(/\/browse\/cards\//, { timeout: 10_000 });
   }
 
-  /** Search within a set. */
+  /** Search within a set — placeholder ends with "..." */
   async searchInSet(query: string) {
-    await this.page.getByPlaceholder("Search within this set").fill(query);
-    // Wait for debounced search
+    await this.page.getByPlaceholder("Search within this set...").fill(query);
+    // Wait for debounced search (300ms in set detail page)
     await this.page.waitForTimeout(400);
   }
 }

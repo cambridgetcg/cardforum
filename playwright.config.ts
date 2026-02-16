@@ -1,4 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
+import path from "path";
+
+// Load .env file for DATABASE_URL, AUTH_SECRET, etc.
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 /**
  * Playwright E2E test configuration.
@@ -38,12 +43,14 @@ export default defineConfig({
     // Setup project: creates test user + session cookie
     {
       name: "setup",
+      testDir: "./tests/e2e",
       testMatch: /global-setup\.ts/,
       teardown: "teardown",
     },
     // Teardown project: cleans up test data
     {
       name: "teardown",
+      testDir: "./tests/e2e",
       testMatch: /global-teardown\.ts/,
     },
     // Main test project: runs with pre-authenticated session

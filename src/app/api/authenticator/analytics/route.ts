@@ -1,16 +1,9 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+import { withRole } from "@/server/middleware/rbac";
 import { db } from "@/lib/db";
 
-// GET /api/authenticator/analytics — Operator analytics dashboard
-export async function GET() {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  // TODO: Add proper admin role check.
-
+// GET /api/authenticator/analytics — Operator analytics dashboard (admin only)
+export const GET = withRole("ADMIN")(async () => {
   const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
 
   const [
@@ -107,4 +100,4 @@ export async function GET() {
       totalActiveAssignments: loadStats._sum.currentLoad,
     },
   });
-}
+});

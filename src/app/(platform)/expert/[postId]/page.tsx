@@ -35,7 +35,12 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
   }
 
   if (isLoading) return <div className="py-12 text-center text-gray-400">Loading...</div>;
-  if (error || !post) return <div className="py-12 text-center text-red-500">{error instanceof Error ? error.message : "Post not found"}</div>;
+  if (error || !post)
+    return (
+      <div className="py-12 text-center text-red-500">
+        {error instanceof Error ? error.message : "Post not found"}
+      </div>
+    );
 
   const score = post.upvotes - post.downvotes;
   const isAuthor = session?.user?.id === post.authorId;
@@ -43,7 +48,10 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
   return (
     <div className="mx-auto max-w-3xl space-y-6 px-4 py-8">
       {/* Back link */}
-      <Link href="/expert" className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+      <Link
+        href="/expert"
+        className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+      >
         <ArrowLeft className="h-4 w-4" /> Back to Expert Hub
       </Link>
 
@@ -51,7 +59,9 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
       <div className="space-y-3">
         <div className="flex flex-wrap gap-2">
           <Badge variant="info">
-            {EXPERT_POST_CATEGORY_LABELS[post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS] ?? post.category}
+            {EXPERT_POST_CATEGORY_LABELS[
+              post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS
+            ] ?? post.category}
           </Badge>
           {post.tcg && <Badge>{TCG_LABELS[post.tcg as keyof typeof TCG_LABELS] ?? post.tcg}</Badge>}
           {post.language && <Badge variant="default">{post.language}</Badge>}
@@ -75,17 +85,25 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
       {(post.card || post.set) && (
         <div className="flex items-center gap-4 rounded-lg border border-gray-100 bg-gray-50 p-3">
           {post.card?.imageUrl && (
-            <img src={post.card.imageUrl} alt={post.card.name} className="h-24 w-16 rounded object-cover" />
+            <img
+              src={post.card.imageUrl}
+              alt={post.card.name}
+              className="h-24 w-16 rounded object-cover"
+            />
           )}
           <div className="text-sm">
             {post.card && (
-              <Link href={`/browse/cards/${post.card.id}`} className="font-medium text-indigo-600 hover:underline">
-                {post.card.name}{post.card.number ? ` #${post.card.number}` : ""}
+              <Link
+                href={`/browse/cards/${post.card.id}`}
+                className="font-medium text-indigo-600 hover:underline"
+              >
+                {post.card.name}
+                {post.card.number ? ` #${post.card.number}` : ""}
               </Link>
             )}
             {post.set && (
               <p className="text-gray-500">
-                <Link href={`/browse/sets/${post.set.id}`} className="hover:underline">
+                <Link href={`/browse/sets/${post.set.code}`} className="hover:underline">
                   {post.set.name} ({post.set.code})
                 </Link>
               </p>
@@ -95,15 +113,15 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
       )}
 
       {/* Content */}
-      <div className="prose max-w-none text-gray-800 whitespace-pre-wrap">
-        {post.content}
-      </div>
+      <div className="prose max-w-none whitespace-pre-wrap text-gray-800">{post.content}</div>
 
       {/* Tags */}
       {post.tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
           {post.tags.map((tag) => (
-            <Badge key={tag} variant="default">{tag}</Badge>
+            <Badge key={tag} variant="default">
+              {tag}
+            </Badge>
           ))}
         </div>
       )}
@@ -118,7 +136,9 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
           >
             <ThumbsUp className="h-5 w-5" />
           </button>
-          <span className={`text-lg font-semibold ${score > 0 ? "text-emerald-600" : score < 0 ? "text-red-500" : "text-gray-400"}`}>
+          <span
+            className={`text-lg font-semibold ${score > 0 ? "text-emerald-600" : score < 0 ? "text-red-500" : "text-gray-400"}`}
+          >
             {score}
           </span>
           <button
@@ -135,7 +155,12 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
         <div className="flex-1" />
 
         {isAuthor && (
-          <Button variant="ghost" size="sm" onClick={handleDelete} className="text-red-500 hover:text-red-600">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleDelete}
+            className="text-red-500 hover:text-red-600"
+          >
             <Trash2 className="mr-1 h-4 w-4" /> Delete
           </Button>
         )}
@@ -149,7 +174,9 @@ export default function ExpertPostPage({ params }: { params: Promise<{ postId: s
           </h3>
           {post.endorsements.map((e) => (
             <div key={e.id} className="text-sm text-emerald-700">
-              <span className="font-medium">{e.endorserType === "authenticator" ? "Authenticator" : "Admin"}</span>
+              <span className="font-medium">
+                {e.endorserType === "authenticator" ? "Authenticator" : "Admin"}
+              </span>
               {e.note && <span> — {e.note}</span>}
             </div>
           ))}
