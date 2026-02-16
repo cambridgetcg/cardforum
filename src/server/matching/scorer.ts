@@ -21,6 +21,7 @@ const DEFAULT_WEIGHTS = {
   regionalImbalancePenalty: -25, // penalty for cross-region value flow
   chainBonus: 10, // chains are more robust than cycles
   gradeMatchBonus: 5, // graded cards with exact same company+grade are highly fungible
+  dmmPriorityBonus: 15, // proposals involving DMM liquidity get priority
 };
 
 type ScorerWeights = typeof DEFAULT_WEIGHTS;
@@ -50,8 +51,8 @@ export async function scoreProposal(proposal: BridgeProposal): Promise<number> {
   }
 
   // Value balance: smaller total settlement = better (cards closer in value)
-  const totalSettlement = [...proposal.settlements.values()]
-    .reduce((sum, v) => sum + Math.abs(v), 0) / 2; // divide by 2 since zero-sum doubles
+  const totalSettlement =
+    [...proposal.settlements.values()].reduce((sum, v) => sum + Math.abs(v), 0) / 2; // divide by 2 since zero-sum doubles
   const avgAskPrice = proposal.legs.reduce((s, l) => s + l.askPrice, 0) / proposal.legs.length;
   if (avgAskPrice > 0) {
     const balanceRatio = 1 - Math.min(totalSettlement / avgAskPrice, 1);
@@ -78,6 +79,11 @@ export async function scoreProposal(proposal: BridgeProposal): Promise<number> {
     if (companies.size === 1) {
       score += WEIGHTS.gradeMatchBonus;
     }
+  }
+
+  // DMM priority: proposals that include DMM listings get a scoring bonus
+  if (proposal.hasDMM) {
+    score += WEIGHTS.dmmPriorityBonus;
   }
 
   // Trust bonus (Loop 6): higher-trust participants get a small scoring bump

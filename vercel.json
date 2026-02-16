@@ -61,6 +61,14 @@
     {
       "path": "/api/cron/ccs-calibration",
       "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/trends",
+      "schedule": "0 4 * * *"
+    },
+    {
+      "path": "/api/cron/dmm-obligations",
+      "schedule": "0 7 * * *"
     }
   ]
 }

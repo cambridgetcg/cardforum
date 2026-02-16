@@ -107,9 +107,7 @@ export function registerEventSubscribers(): void {
     });
 
     const authenticatorIds = new Set(
-      legs
-        .map((l) => l.verification?.authenticatorId)
-        .filter((id): id is string => id != null),
+      legs.map((l) => l.verification?.authenticatorId).filter((id): id is string => id != null),
     );
 
     for (const authId of authenticatorIds) {
@@ -161,7 +159,12 @@ export function registerEventSubscribers(): void {
     // Loop 4: Update MatchOutcome with cancellation data
     const trade = await db.trade.findUnique({
       where: { id: payload.tradeId },
-      select: { proposalId: true, createdAt: true, participantIds: true, disputes: { select: { id: true } } },
+      select: {
+        proposalId: true,
+        createdAt: true,
+        participantIds: true,
+        disputes: { select: { id: true } },
+      },
     });
     if (!trade) return;
 
@@ -169,9 +172,7 @@ export function registerEventSubscribers(): void {
       where: { proposalId: trade.proposalId },
       data: {
         outcome: "CANCELLED",
-        completionDays: Math.ceil(
-          (Date.now() - trade.createdAt.getTime()) / (24 * 60 * 60 * 1000),
-        ),
+        completionDays: Math.ceil((Date.now() - trade.createdAt.getTime()) / (24 * 60 * 60 * 1000)),
         disputeCount: trade.disputes.length,
         resolvedAt: new Date(),
       },
@@ -312,6 +313,62 @@ export function registerEventSubscribers(): void {
   });
 
   // ═══════════════════════════════════════════════════════
+  // DMM events
+  // ═══════════════════════════════════════════════════════
+
+  eventBus.on("dmm.designated", async (payload) => {
+    const authenticator = await db.authenticator.findUnique({
+      where: { id: payload.authenticatorId },
+      select: { userId: true },
+    });
+    if (!authenticator) return;
+
+    await db.notification.create({
+      data: {
+        userId: authenticator.userId,
+        type: "SYSTEM",
+        title: "DMM designation",
+        message:
+          "You have been designated as a Market Maker. Your inventory will be quoted automatically.",
+      },
+    });
+  });
+
+  eventBus.on("dmm.obligation_breached", async (payload) => {
+    const authenticator = await db.authenticator.findUnique({
+      where: { id: payload.authenticatorId },
+      select: { userId: true },
+    });
+    if (!authenticator) return;
+
+    await db.notification.create({
+      data: {
+        userId: authenticator.userId,
+        type: "SYSTEM",
+        title: "DMM obligation warning",
+        message: `You have ${payload.activeQuotes} active quotes but ${payload.required} are required. Please add more inventory.`,
+      },
+    });
+  });
+
+  eventBus.on("dmm.revoked", async (payload) => {
+    const authenticator = await db.authenticator.findUnique({
+      where: { id: payload.authenticatorId },
+      select: { userId: true },
+    });
+    if (!authenticator) return;
+
+    await db.notification.create({
+      data: {
+        userId: authenticator.userId,
+        type: "SYSTEM",
+        title: "DMM designation revoked",
+        message: `Your Market Maker designation has been revoked: ${payload.reason}`,
+      },
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════
   // Expert Hub events (notifications)
   // ═══════════════════════════════════════════════════════
 
@@ -374,13 +431,24 @@ export function registerEventSubscribers(): void {
 
 /** Known defect keywords found in expert posts */
 const DEFECT_KEYWORDS = [
-  "centering", "miscut", "off-center", "off center",
-  "color_shift", "color shift", "colour shift",
-  "ink", "print line", "print lines",
-  "whitening", "edge whitening",
-  "crimped", "crimp",
-  "foil bleed", "holo bleed",
-  "surface scratch", "surface damage",
+  "centering",
+  "miscut",
+  "off-center",
+  "off center",
+  "color_shift",
+  "color shift",
+  "colour shift",
+  "ink",
+  "print line",
+  "print lines",
+  "whitening",
+  "edge whitening",
+  "crimped",
+  "crimp",
+  "foil bleed",
+  "holo bleed",
+  "surface scratch",
+  "surface damage",
 ] as const;
 
 /**

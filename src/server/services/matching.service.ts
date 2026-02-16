@@ -11,11 +11,17 @@ import {
 import { packProposals } from "@/server/matching/packer";
 import { findChains, chainToProposal, type ChainAnchor } from "@/server/matching/chain-finder";
 import { buildGradedEdges } from "@/server/matching/graded-edge-builder";
+import { buildSealedEdges } from "@/server/matching/sealed-edge-builder";
 import { conditionMeetsMinimum, type Condition } from "@/types/domain";
 import { getConfig } from "@/server/services/config.service";
+import { refreshAllDMMQuotes } from "./dmm.service";
 
 /** Resolve a user's effective region string, preferring the normalized Region FK */
-function resolveRegion(user: { region: string | null; regionId?: string | null; regionRef?: { name: string; country: string } | null }): string {
+function resolveRegion(user: {
+  region: string | null;
+  regionId?: string | null;
+  regionRef?: { name: string; country: string } | null;
+}): string {
   if (user.regionRef) return `${user.regionRef.name}, ${user.regionRef.country}`;
   return user.region ?? "unknown";
 }
@@ -25,15 +31,36 @@ function resolveRegion(user: { region: string | null; regionId?: string | null; 
  * Returns the newly created match proposals.
  */
 export async function runMatching(): Promise<BridgeProposal[]> {
+  // 0. Refresh DMM quotes before matching
+  await refreshAllDMMQuotes();
+
   // 1. Load all active have and want listings with user region info
   const [haveListings, wantListings] = await Promise.all([
     db.haveListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
     }),
     db.wantListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
     }),
   ]);
 
@@ -62,6 +89,10 @@ export async function runMatching(): Promise<BridgeProposal[]> {
         continue;
       }
 
+      // Language filter: want.language specified → must match have.language
+      // want.language null → accepts any language
+      if (want.language && have.language !== want.language) continue;
+
       edges.push({
         haveListingId: have.id,
         wantListingId: want.id,
@@ -71,6 +102,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
         haveRegion: resolveRegion(have.user),
         wantRegion: resolveRegion(want.user),
         condition: have.condition,
+        language: have.language,
         askPrice: have.askPrice,
         bidPrice: want.bidPrice,
       });
@@ -91,6 +123,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
     authenticatorId: item.authenticatorId,
     cardId: item.cardId,
     condition: item.condition,
+    language: item.language,
     region: item.authenticator.region,
     askPrice: 0, // vault stock — no ask price (custody, not for sale)
   }));
@@ -111,11 +144,29 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   const [gradedHaveListings, gradedWantListings] = await Promise.all([
     db.gradedHaveListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
     }),
     db.gradedWantListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
     }),
   ]);
 
@@ -128,10 +179,64 @@ export async function runMatching(): Promise<BridgeProposal[]> {
     p.isGraded = true;
   }
 
-  // 4. Build and score proposals (raw cycles + chains + graded cycles merged)
+  // 3.7. Sealed product matching (separate pool)
+  const [sealedHaveListings, sealedWantListings] = await Promise.all([
+    db.sealedHaveListing.findMany({
+      where: { isActive: true },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
+    }),
+    db.sealedWantListing.findMany({
+      where: { isActive: true },
+      include: {
+        user: {
+          select: {
+            id: true,
+            region: true,
+            regionId: true,
+            regionRef: { select: { name: true, country: true } },
+          },
+        },
+      },
+    }),
+  ]);
+
+  const sealedEdges = buildSealedEdges(sealedHaveListings, sealedWantListings);
+  const sealedCycles = findCycles(sealedEdges);
+  const sealedProposals = await buildBridges(sealedCycles);
+
+  // Tag sealed proposals
+  for (const p of sealedProposals) {
+    p.isSealed = true;
+  }
+
+  // 4. Build and score proposals (raw cycles + chains + graded + sealed merged)
   const cycleProposals = await buildBridges(cycles);
-  const proposals = [...cycleProposals, ...chainProposals, ...gradedProposals]
-    .sort((a, b) => b.score - a.score);
+
+  // 4.1. Tag proposals that involve DMM listings
+  const dmmHaveIds = new Set(haveListings.filter((h) => h.isDMM).map((h) => h.id));
+  const dmmWantIds = new Set(wantListings.filter((w) => w.isDMM).map((w) => w.id));
+
+  for (const p of [...cycleProposals, ...chainProposals]) {
+    p.hasDMM = p.legs.some(
+      (l) => dmmHaveIds.has(l.haveListingId) || dmmWantIds.has(l.wantListingId),
+    );
+  }
+
+  const proposals = [
+    ...cycleProposals,
+    ...chainProposals,
+    ...gradedProposals,
+    ...sealedProposals,
+  ].sort((a, b) => b.score - a.score);
 
   // 4.5. Pack non-overlapping proposals (replaces naive slice)
   const { packed } = packProposals(proposals);
@@ -144,7 +249,17 @@ export async function runMatching(): Promise<BridgeProposal[]> {
 
   for (const proposal of packed) {
     const isGraded = proposal.isGraded ?? false;
+    const isSealed = proposal.isSealed ?? false;
     const uniqueRegions = new Set(proposal.cycle.regions);
+
+    // Determine which FK fields to populate on proposal legs
+    const legFKs = (leg: (typeof proposal.legs)[number]) => {
+      if (isSealed)
+        return { sealedHaveListingId: leg.haveListingId, sealedWantListingId: leg.wantListingId };
+      if (isGraded)
+        return { gradedHaveListingId: leg.haveListingId, gradedWantListingId: leg.wantListingId };
+      return { haveListingId: leg.haveListingId, wantListingId: leg.wantListingId };
+    };
 
     const matchProposal = await db.matchProposal.create({
       data: {
@@ -160,9 +275,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
             cardId: leg.cardId,
             region: leg.region,
             sequence: leg.sequence,
-            ...(isGraded
-              ? { gradedHaveListingId: leg.haveListingId, gradedWantListingId: leg.wantListingId }
-              : { haveListingId: leg.haveListingId, wantListingId: leg.wantListingId }),
+            ...legFKs(leg),
           })),
         },
       },
@@ -187,9 +300,9 @@ export async function runMatching(): Promise<BridgeProposal[]> {
           ],
           legs: {
             create: proposal.legs.map((leg) => ({
-              ...(isGraded
-                ? { gradedHaveListingId: leg.haveListingId, gradedWantListingId: leg.wantListingId, isGraded: true }
-                : { haveListingId: leg.haveListingId, wantListingId: leg.wantListingId }),
+              ...legFKs(leg),
+              isGraded,
+              isSealed,
               fromUserId: leg.fromUserId,
               toUserId: leg.toUserId,
               region: leg.region,
@@ -211,6 +324,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
           isFullyLocal: proposal.cycle.isFullyLocal ?? false,
           isChain: proposal.isChain ?? false,
           isGraded,
+          isSealed,
         },
       });
 
@@ -218,7 +332,18 @@ export async function runMatching(): Promise<BridgeProposal[]> {
       const haveIds = proposal.legs.map((l) => l.haveListingId);
       const wantIds = proposal.legs.map((l) => l.wantListingId);
 
-      if (isGraded) {
+      if (isSealed) {
+        await Promise.all([
+          db.sealedHaveListing.updateMany({
+            where: { id: { in: haveIds } },
+            data: { isActive: false },
+          }),
+          db.sealedWantListing.updateMany({
+            where: { id: { in: wantIds } },
+            data: { isActive: false },
+          }),
+        ]);
+      } else if (isGraded) {
         await Promise.all([
           db.gradedHaveListing.updateMany({
             where: { id: { in: haveIds } },
@@ -274,16 +399,25 @@ async function loadAutoAcceptConstraints(
   } as const;
 
   const isGraded = proposal.isGraded ?? false;
+  const isSealed = proposal.isSealed ?? false;
 
-  const [haveListings, wantListings] = isGraded
-    ? await Promise.all([
-        db.gradedHaveListing.findMany({ where: { id: { in: haveIds } }, select: selectFields }),
-        db.gradedWantListing.findMany({ where: { id: { in: wantIds } }, select: selectFields }),
-      ])
-    : await Promise.all([
-        db.haveListing.findMany({ where: { id: { in: haveIds } }, select: selectFields }),
-        db.wantListing.findMany({ where: { id: { in: wantIds } }, select: selectFields }),
-      ]);
+  let haveListings, wantListings;
+  if (isSealed) {
+    [haveListings, wantListings] = await Promise.all([
+      db.sealedHaveListing.findMany({ where: { id: { in: haveIds } }, select: selectFields }),
+      db.sealedWantListing.findMany({ where: { id: { in: wantIds } }, select: selectFields }),
+    ]);
+  } else if (isGraded) {
+    [haveListings, wantListings] = await Promise.all([
+      db.gradedHaveListing.findMany({ where: { id: { in: haveIds } }, select: selectFields }),
+      db.gradedWantListing.findMany({ where: { id: { in: wantIds } }, select: selectFields }),
+    ]);
+  } else {
+    [haveListings, wantListings] = await Promise.all([
+      db.haveListing.findMany({ where: { id: { in: haveIds } }, select: selectFields }),
+      db.wantListing.findMany({ where: { id: { in: wantIds } }, select: selectFields }),
+    ]);
+  }
 
   const constraints = new Map<string, AutoAcceptConstraint>();
   for (const listing of [...haveListings, ...wantListings]) {

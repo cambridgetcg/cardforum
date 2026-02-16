@@ -1,5 +1,9 @@
 import { db } from "@/lib/db";
-import type { CreateHaveListingInput, CreateWantListingInput, UpdateListingInput } from "@/lib/validators";
+import type {
+  CreateHaveListingInput,
+  CreateWantListingInput,
+  UpdateListingInput,
+} from "@/lib/validators";
 import { assertCanCreateListing } from "./kyc.service";
 import { convertToUsdCents } from "./exchange-rate.service";
 import { eventBus } from "@/server/events/event-bus";
@@ -20,12 +24,18 @@ export async function getUserListings(userId: string) {
   return { have, want };
 }
 
-export async function createHaveListing(userId: string, input: CreateHaveListingInput) {
+export async function createHaveListing(
+  userId: string,
+  input: CreateHaveListingInput,
+  options?: { skipKycGate?: boolean },
+) {
   const currency = input.currency ?? "USD";
   const { usdCents, rate, rateTimestamp } = await convertToUsdCents(input.askPrice, currency);
 
   // KYC gate uses USD equivalent for cap checks
-  await assertCanCreateListing(userId, usdCents);
+  if (!options?.skipKycGate) {
+    await assertCanCreateListing(userId, usdCents);
+  }
 
   const listing = await db.haveListing.create({
     data: {
@@ -49,12 +59,18 @@ export async function createHaveListing(userId: string, input: CreateHaveListing
   return listing;
 }
 
-export async function createWantListing(userId: string, input: CreateWantListingInput) {
+export async function createWantListing(
+  userId: string,
+  input: CreateWantListingInput,
+  options?: { skipKycGate?: boolean },
+) {
   const currency = input.currency ?? "USD";
   const { usdCents, rate, rateTimestamp } = await convertToUsdCents(input.bidPrice, currency);
 
   // KYC gate uses USD equivalent for cap checks
-  await assertCanCreateListing(userId, usdCents);
+  if (!options?.skipKycGate) {
+    await assertCanCreateListing(userId, usdCents);
+  }
 
   const listing = await db.wantListing.create({
     data: {

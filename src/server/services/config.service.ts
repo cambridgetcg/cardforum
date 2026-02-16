@@ -3,7 +3,18 @@ import * as defaults from "@/lib/constants";
 
 // ─── Types ──────────────────────────────────────────────
 
-type ConfigCategory = "fees" | "thresholds" | "matching" | "kyc" | "shipping" | "authenticator" | "rating" | "ccs" | "digital" | "calibration" | "general";
+type ConfigCategory =
+  | "fees"
+  | "thresholds"
+  | "matching"
+  | "kyc"
+  | "shipping"
+  | "authenticator"
+  | "rating"
+  | "ccs"
+  | "digital"
+  | "calibration"
+  | "general";
 
 /** All known config keys with their types. Add new keys here. */
 export interface ConfigKeys {
@@ -68,6 +79,11 @@ export interface ConfigKeys {
   "matching.proposal_expiry_days": number;
   "matching.scorer_weights": Record<string, number | Record<string, number>>;
   "matching.trust_bonus_weight": number; // per-point bonus for participant trust (Loop 6)
+  "matching.dmm_priority_bonus": number;
+  "matching.dmm_max_spread_bps": number;
+  "matching.dmm_min_quote_cards": number;
+  "matching.dmm_obligation_check_hours": number;
+  "matching.dmm_quote_staleness_hours": number;
 
   // Digital
   "digital.redemption_base_fee_cents": number;
@@ -155,6 +171,11 @@ const CONFIG_DEFAULTS: Record<ConfigKey, unknown> = {
   },
 
   "matching.trust_bonus_weight": 0.1, // 0.1 score per trust point (max +10 at trust=100)
+  "matching.dmm_priority_bonus": defaults.DMM_PRIORITY_BONUS,
+  "matching.dmm_max_spread_bps": defaults.DMM_DEFAULT_MAX_SPREAD_BPS,
+  "matching.dmm_min_quote_cards": defaults.DMM_DEFAULT_MIN_QUOTE_CARDS,
+  "matching.dmm_obligation_check_hours": defaults.DMM_OBLIGATION_CHECK_HOURS,
+  "matching.dmm_quote_staleness_hours": defaults.DMM_QUOTE_STALENESS_HOURS,
 
   "digital.redemption_base_fee_cents": defaults.REDEMPTION_BASE_FEE_CENTS,
   "digital.cross_zone_surcharge_cents": defaults.CROSS_ZONE_SURCHARGE_CENTS,
@@ -244,7 +265,9 @@ export async function getConfig<K extends ConfigKey>(key: K): Promise<ConfigKeys
 /**
  * Get multiple config values at once (batch read).
  */
-export async function getConfigs<K extends ConfigKey>(keys: K[]): Promise<Record<K, ConfigKeys[K]>> {
+export async function getConfigs<K extends ConfigKey>(
+  keys: K[],
+): Promise<Record<K, ConfigKeys[K]>> {
   const result = {} as Record<K, ConfigKeys[K]>;
   const uncachedKeys: K[] = [];
 

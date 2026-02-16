@@ -238,6 +238,24 @@ enum MatchOutcomeResult {
   DISPUTED
 }
 
+// ─── Sealed Product Enums ──────────────────────────────────
+
+enum SealedCondition {
+  FACTORY_SEALED
+  OPENED       // opened but complete contents
+  DAMAGED_BOX  // box damage, contents intact
+}
+
+enum SealedProductType {
+  BOOSTER_BOX
+  BOOSTER_PACK
+  STARTER_DECK
+  BUNDLE
+  COLLECTION_BOX
+  PREMIUM_PACK
+  OTHER
+}
+
 // ─── Platform Configuration ─────────────────────────────
 
 model PlatformConfig {
@@ -308,6 +326,8 @@ model User {
   wantListings        WantListing[]
   gradedHaveListings  GradedHaveListing[]
   gradedWantListings  GradedWantListing[]
+  sealedHaveListings  SealedHaveListing[]
+  sealedWantListings  SealedWantListing[]
   tradesAsA           Trade[]       @relation("TradeUserA")
   tradesAsB           Trade[]       @relation("TradeUserB")
   notifications       Notification[]
@@ -448,6 +468,7 @@ model CardSet {
   createdAt    DateTime  @default(now())
 
   cards Card[]
+  sealedProducts SealedProduct[]
   expertPosts ExpertPost[]
 
   @@unique([tcg, code])
@@ -498,13 +519,15 @@ model CardVariant {
   sourceUrl          String?   // Cardmarket product URL
   imageUrl           String?
   priceEur           Float?    // Latest Cardmarket price in EUR
-  priceUpdatedAt     DateTime? // When price was last scraped
+  priceEurUpdatedAt  DateTime? // When EUR price was last scraped
+  priceUpdatedAt     DateTime? // Legacy: kept for backward compat, prefer per-currency fields
   tcgplayerProductId Int?      // TCGPlayer product ID (via TCGCSV)
   tcgplayerUrl       String?   // TCGPlayer product URL
   priceUsd           Float?    // TCGPlayer market price in USD
   priceUsdLow        Float?    // TCGPlayer low price in USD
   priceUsdMid        Float?    // TCGPlayer mid price in USD
   priceUsdHigh       Float?    // TCGPlayer high price in USD
+  priceUsdUpdatedAt  DateTime? // When USD prices were last refreshed
 
   card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
 
@@ -616,6 +639,7 @@ model HaveListing {
   autoAcceptMaxGap         Int?      // max value gap in cents the user will auto-accept
   autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
   autoAcceptRegions        String[]  // regions the user will auto-accept trades from
+  isDMM                    Boolean   @default(false) // Created by DMM service, not user
 
   // AI grading fields (Phase 1)
   aiGradingResult          Json?     // full Ximilar API response for audit
@@ -661,6 +685,7 @@ model WantListing {
   autoAcceptMaxGap         Int?      // max value gap in cents the user will auto-accept
   autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
   autoAcceptRegions        String[]  // regions the user will auto-accept trades from
+  isDMM                    Boolean   @default(false) // Created by DMM service, not user
   createdAt                DateTime   @default(now())
   updatedAt                DateTime   @updatedAt
 
@@ -739,6 +764,96 @@ model GradedWantListing {
   @@map("graded_want_listings")
 }
 
+// ─── Sealed Products ────────────────────────────────────
+
+model SealedProduct {
+  id                 String            @id @default(cuid())
+  tcg                TCG
+  name               String
+  setName            String
+  setCode            String?
+  productType        SealedProductType
+  imageUrl           String?
+  language           String            @default("EN")
+  tcgplayerProductId Int?              @unique
+  tcgplayerUrl       String?
+  priceUsd           Float?
+  priceUsdLow        Float?
+  priceUsdMid        Float?
+  priceUpdatedAt     DateTime?
+  setId              String?
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+
+  set                CardSet?               @relation(fields: [setId], references: [id])
+  sealedHaveListings SealedHaveListing[]
+  sealedWantListings SealedWantListing[]
+
+  @@unique([tcg, name, language])
+  @@index([tcg, productType])
+  @@map("sealed_products")
+}
+
+model SealedHaveListing {
+  id                       String          @id @default(cuid())
+  userId                   String
+  sealedProductId          String
+  condition                SealedCondition @default(FACTORY_SEALED)
+  language                 String          @default("EN")
+  quantity                 Int             @default(1)
+  askPrice                 Int             // minor units
+  currency                 String          @default("USD")
+  usdEquivalent            Int?
+  exchangeRate             Float?
+  rateTimestamp            DateTime?
+  notes                    String?
+  isActive                 Boolean         @default(true)
+  autoAccept               Boolean         @default(false)
+  autoAcceptMaxGap         Int?
+  autoAcceptMaxCycleLength Int?
+  autoAcceptRegions        String[]
+  createdAt                DateTime        @default(now())
+  updatedAt                DateTime        @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sealedProduct SealedProduct @relation(fields: [sealedProductId], references: [id])
+  tradeLegs     TradeLeg[]    @relation("SealedHaveListingLeg")
+
+  @@index([sealedProductId, condition, isActive])
+  @@index([userId])
+  @@map("sealed_have_listings")
+}
+
+model SealedWantListing {
+  id                       String           @id @default(cuid())
+  userId                   String
+  sealedProductId          String
+  minCondition             SealedCondition  @default(FACTORY_SEALED)
+  language                 String?          // null = any
+  maxQuantity              Int              @default(1)
+  bidPrice                 Int              // minor units
+  currency                 String           @default("USD")
+  usdEquivalent            Int?
+  exchangeRate             Float?
+  rateTimestamp            DateTime?
+  notes                    String?
+  isActive                 Boolean          @default(true)
+  autoAccept               Boolean          @default(false)
+  autoAcceptMaxGap         Int?
+  autoAcceptMaxCycleLength Int?
+  autoAcceptRegions        String[]
+  createdAt                DateTime         @default(now())
+  updatedAt                DateTime         @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sealedProduct SealedProduct @relation(fields: [sealedProductId], references: [id])
+  tradeLegs     TradeLeg[]    @relation("SealedWantListingLeg")
+
+  @@index([sealedProductId, minCondition, isActive])
+  @@index([userId])
+  @@map("sealed_want_listings")
+}
+
 // ─── Matching & Trades ──────────────────────────────────
 
 model MatchProposal {
@@ -772,6 +887,8 @@ model MatchProposalLeg {
   wantListingId       String?
   gradedHaveListingId String?
   gradedWantListingId String?
+  sealedHaveListingId String?
+  sealedWantListingId String?
 
   proposal MatchProposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
 
@@ -826,6 +943,7 @@ model MatchOutcome {
   isFullyLocal    Boolean             @default(false)
   isChain         Boolean             @default(false)
   isGraded        Boolean             @default(false)
+  isSealed        Boolean             @default(false)
   createdAt       DateTime            @default(now())
   updatedAt       DateTime            @updatedAt
   resolvedAt      DateTime?
@@ -908,7 +1026,10 @@ model TradeLeg {
   wantListingId       String?        // set for raw legs
   gradedHaveListingId String?        // set for graded legs
   gradedWantListingId String?        // set for graded legs
+  sealedHaveListingId String?        // set for sealed legs
+  sealedWantListingId String?        // set for sealed legs
   isGraded            Boolean        @default(false)
+  isSealed            Boolean        @default(false)
   fromUserId          String
   toUserId            String
   region              String
@@ -939,6 +1060,8 @@ model TradeLeg {
   wantListing       WantListing?       @relation("WantListingLeg", fields: [wantListingId], references: [id])
   gradedHaveListing GradedHaveListing? @relation("GradedHaveListingLeg", fields: [gradedHaveListingId], references: [id])
   gradedWantListing GradedWantListing? @relation("GradedWantListingLeg", fields: [gradedWantListingId], references: [id])
+  sealedHaveListing SealedHaveListing? @relation("SealedHaveListingLeg", fields: [sealedHaveListingId], references: [id])
+  sealedWantListing SealedWantListing? @relation("SealedWantListingLeg", fields: [sealedWantListingId], references: [id])
 
   shippingAddress ShippingAddress? @relation("ShippingAddressLeg", fields: [shippingAddressId], references: [id])
   verification    VerificationAssignment?
@@ -1016,6 +1139,7 @@ model Authenticator {
   assignments        VerificationAssignment[] @relation("PrimaryAssignments")
   reserveAssignments VerificationAssignment[] @relation("ReserveAssignments")
   inventory          AuthenticatorInventory[]
+  dmmDesignation     DMMDesignation?
   audits             AuthenticatorAudit[]
   ratings            AuthenticatorRating[]
 
@@ -1048,6 +1172,25 @@ model AuthenticatorInventory {
   @@index([cardId, isAvailable])
   @@index([authenticatorId])
   @@map("authenticator_inventory")
+}
+
+model DMMDesignation {
+  id              String    @id @default(cuid())
+  authenticatorId String    @unique
+  designatedAt    DateTime  @default(now())
+  designatedBy    String    // admin userId
+  isActive        Boolean   @default(true)
+  maxSpreadBps    Int       @default(500)  // max allowed spread in basis points (5%)
+  minQuoteCards   Int       @default(10)   // minimum cards they must quote
+  obligationMet   Boolean   @default(true) // tracked by cron
+  lastCheckAt     DateTime?
+  revokedAt       DateTime?
+  revokedBy       String?
+  revokeReason    String?
+
+  authenticator   Authenticator @relation(fields: [authenticatorId], references: [id])
+
+  @@map("dmm_designations")
 }
 
 model VerificationAssignment {

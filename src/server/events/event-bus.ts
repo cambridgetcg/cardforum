@@ -45,7 +45,12 @@ export interface DomainEvents {
 
   // Authentication
   "authenticator.assigned": { authenticatorId: string; tradeLegId: string; tradeId: string };
-  "authenticator.verified": { tradeLegId: string; tradeId: string; authentic: boolean; conditionMatches: boolean };
+  "authenticator.verified": {
+    tradeLegId: string;
+    tradeId: string;
+    authentic: boolean;
+    conditionMatches: boolean;
+  };
   "authenticator.audit_completed": { auditId: string; authenticatorId: string; aligned: boolean };
 
   // Shipping
@@ -65,15 +70,51 @@ export interface DomainEvents {
   "photo.reviewed": { tradeLegId: string; approved: boolean };
 
   // Calibration
-  "calibration.report_generated": { reportId: string; sampleSize: number; driftDetected: boolean; confidenceLevel: string };
-  "calibration.extreme_delta_alert": { tradeLegId: string; authenticatorId: string; deltaComposite: number; threshold: number };
-  "calibration.weights_applied": { reportId: string; adminId: string; oldWeights: Record<string, number>; newWeights: Record<string, number> };
+  "calibration.report_generated": {
+    reportId: string;
+    sampleSize: number;
+    driftDetected: boolean;
+    confidenceLevel: string;
+  };
+  "calibration.extreme_delta_alert": {
+    tradeLegId: string;
+    authenticatorId: string;
+    deltaComposite: number;
+    threshold: number;
+  };
+  "calibration.weights_applied": {
+    reportId: string;
+    adminId: string;
+    oldWeights: Record<string, number>;
+    newWeights: Record<string, number>;
+  };
 
   // Expert Posts
-  "expert_post.created": { postId: string; authorId: string; category: string; tcg?: string; cardId?: string; setId?: string };
+  "expert_post.created": {
+    postId: string;
+    authorId: string;
+    category: string;
+    tcg?: string;
+    cardId?: string;
+    setId?: string;
+  };
   "expert_post.published": { postId: string; authorId: string; category: string };
-  "expert_post.moderated": { postId: string; moderatorId: string; action: "approve" | "flag" | "remove" };
-  "expert_post.endorsed": { postId: string; endorserId: string; endorserType: "authenticator" | "admin" };
+  "expert_post.moderated": {
+    postId: string;
+    moderatorId: string;
+    action: "approve" | "flag" | "remove";
+  };
+  "expert_post.endorsed": {
+    postId: string;
+    endorserId: string;
+    endorserType: "authenticator" | "admin";
+  };
+
+  // DMM (Designated Market Maker)
+  "dmm.designated": { authenticatorId: string; adminId: string };
+  "dmm.obligation_breached": { authenticatorId: string; activeQuotes: number; required: number };
+  "dmm.revoked": { authenticatorId: string; reason: string };
+  "dmm.quotes_refreshed": { authenticatorId: string; updated: number };
 }
 
 // ─── Types ───────────────────────────────────────────
@@ -106,7 +147,10 @@ class DomainEventBus {
     return () => {
       const current = this.handlers.get(event);
       if (current) {
-        this.handlers.set(event, current.filter((s) => s.id !== id));
+        this.handlers.set(
+          event,
+          current.filter((s) => s.id !== id),
+        );
       }
     };
   }

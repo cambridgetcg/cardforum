@@ -24,6 +24,8 @@ export interface BridgeProposal {
   regionalBalance: RegionalBalance;
   isChain?: boolean;
   isGraded?: boolean;
+  isSealed?: boolean;
+  hasDMM?: boolean;
   tradeMode?: "AUTHENTICATED" | "DIRECT";
 }
 
@@ -32,6 +34,7 @@ export interface BridgeLeg {
   toUserId: string;
   cardId: string;
   region: string;
+  language: string; // card language (EN, JP)
   haveListingId: string;
   wantListingId: string;
   condition: string;
@@ -83,6 +86,7 @@ function buildLegs(edges: ListingEdge[]): BridgeLeg[] {
     toUserId: edge.wantUserId,
     cardId: edge.cardId,
     region: edge.haveRegion,
+    language: edge.language,
     haveListingId: edge.haveListingId,
     wantListingId: edge.wantListingId,
     condition: edge.condition,
@@ -170,7 +174,10 @@ export function isAutoAcceptEligible(
 
     // Check cycle length constraints
     for (const c of [haveConstraint, wantConstraint]) {
-      if (c.autoAcceptMaxCycleLength != null && proposal.cycle.length > c.autoAcceptMaxCycleLength) {
+      if (
+        c.autoAcceptMaxCycleLength != null &&
+        proposal.cycle.length > c.autoAcceptMaxCycleLength
+      ) {
         return false;
       }
     }
