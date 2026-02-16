@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cardforum_test
+  AUTH_SECRET: ci-test-secret-at-least-32-characters-long
+  NODE_ENV: test
+
+jobs:
+  # ─── Job 1: Code Quality ─────────────────────────────────
+  quality:
+    name: Lint & Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+
+      # Format check — catches unformatted code
+      - name: Check formatting
+        run: npm run format:check
+
+      # Lint — catches anti-patterns and unused code
+      - name: Lint
+        run: npm run lint
+
+      # Typecheck — catches type errors
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Schema — catches invalid Prisma schema
+      - name: Validate Prisma schema
+        run: npx prisma validate
+
+  # ─── Job 2: Unit & Integration Tests ─────────────────────
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: cardforum_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - name: Push schema to test DB
+        run: npx prisma db push --skip-generate
+      - name: Run tests
+        run: npm test
+
+  # ─── Job 3: Build Check ──────────────────────────────────
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build

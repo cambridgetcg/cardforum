@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+build/
+
+# Generated
+src/generated/
+*.tsbuildinfo
+next-env.d.ts
+
+# Research data (large JSON files)
+research/onepiece/*.json
+research/factories/*.json
+public/data/**/*.json
+
+# Package lock
+package-lock.json
+
+# Prisma migrations (auto-generated SQL)
+prisma/migrations/
