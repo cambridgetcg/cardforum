@@ -16,6 +16,7 @@ import { ShippingStatus } from "@/components/shipping/shipping-status";
 import { RecordShipment } from "@/components/shipping/record-shipment";
 import { DeliveryConfirmation } from "@/components/shipping/delivery-confirmation";
 import { ShippingAddressForm } from "@/components/shipping/shipping-address-form";
+import { TradePaymentConfirmation } from "@/components/trades/trade-payment-confirmation";
 import { formatRelativeTime } from "@/lib/utils";
 import { formatPrice, getTradeTransitions } from "@/types/domain";
 import type { TradeStatus, TradeMode, PhotoApprovalStatus } from "@/types/domain";
@@ -568,6 +569,16 @@ export default function TradeDetailPage() {
               </CardContent>
             </Card>
           )}
+
+          {/* Payment authorization (DIRECT trades, ESCROWED+) */}
+          {isDirect &&
+            !["PROPOSED", "ACCEPTED", "REJECTED", "CANCELLED"].includes(trade.status) && (
+              <TradePaymentConfirmation
+                tradeId={trade.id}
+                tradeStatus={trade.status}
+                onPaymentConfirmed={fetchTrade}
+              />
+            )}
 
           {/* Trade summary */}
           <Card>

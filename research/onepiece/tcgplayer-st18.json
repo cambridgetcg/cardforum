@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 18: PURPLE Monkey.D.Luffy",
+  "groupId": 23493,
+  "setCode": "ST18",
+  "totalProducts": 18,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:43.129Z",
+  "durationMs": 71,
+  "cards": [
+    {
+      "productId": 581021,
+      "cardId": "OP05-060",
+      "name": "Monkey.D.Luffy (OP05-060)",
+      "cleanName": "MonkeyDLuffy OP05 060",
+      "url": "https://www.tcgplayer.com/product/581021/one-piece-card-game-starter-deck-18-purple-monkeydluffy-monkeydluffy-op05-060",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581021_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 3.72,
+          "highPrice": 50,
+          "marketPrice": 2.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581022,
+      "cardId": "OP05-061",
+      "name": "Uso-Hachi (OP05-061)",
+      "cleanName": "Uso Hachi OP05 061",
+      "url": "https://www.tcgplayer.com/product/581022/one-piece-card-game-starter-deck-18-purple-monkeydluffy-uso-hachi-op05-061",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581022_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x1] [When Attacking] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.22,
+          "highPrice": 5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581023,
+      "cardId": "OP05-063",
+      "name": "O-Robi",
+      "cleanName": "O Robi",
+      "url": "https://www.tcgplayer.com/product/581023/one-piece-card-game-starter-deck-18-purple-monkeydluffy-o-robi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581023_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.29,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581024,
+      "cardId": "OP05-066",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/581024/one-piece-card-game-starter-deck-18-purple-monkeydluffy-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581024_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[Opponent's Turn] If you have 10 DON!! cards on your field, this Character gains +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.99,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581025,
+      "cardId": "OP05-067",
+      "name": "Zoro-Juurou (OP05-067)",
+      "cleanName": "Zoro Juurou OP05 067",
+      "url": "https://www.tcgplayer.com/product/581025/one-piece-card-game-starter-deck-18-purple-monkeydluffy-zoro-juurou-op05-067",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581025_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.28,
+          "highPrice": 5,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581026,
+      "cardId": "OP05-068",
+      "name": "Chopa-Emon",
+      "cleanName": "Chopa Emon",
+      "url": "https://www.tcgplayer.com/product/581026/one-piece-card-game-starter-deck-18-purple-monkeydluffy-chopa-emon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581026_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, set up to 1 of your purple \"Straw Hat Crew\" type Characters with 6000 power or less as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.29,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581027,
+      "cardId": "OP05-070",
+      "name": "Fra-Nosuke",
+      "cleanName": "Fra Nosuke",
+      "url": "https://www.tcgplayer.com/product/581027/one-piece-card-game-starter-deck-18-purple-monkeydluffy-fra-nosuke",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581027_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 8 or more DON!! cards on your field, this Character gains [Rush].<br><br>\r\n<em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.17,
+          "highPrice": 1.33,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581028,
+      "cardId": "OP05-072",
+      "name": "Hone-Kichi",
+      "cleanName": "Hone Kichi",
+      "url": "https://www.tcgplayer.com/product/581028/one-piece-card-game-starter-deck-18-purple-monkeydluffy-hone-kichi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581028_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, give up to 2 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.29,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581029,
+      "cardId": "OP05-076",
+      "name": "When You're at Sea You Fight against Pirates!!",
+      "cleanName": "When Youre at Sea You Fight against Pirates",
+      "url": "https://www.tcgplayer.com/product/581029/one-piece-card-game-starter-deck-18-purple-monkeydluffy-when-youre-at-sea-you-fight-against-pirates",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581029_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": null,
+      "attribute": null,
+      "effectText": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\", \"Kid Pirates\", or \"Heart Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.3,
+          "highPrice": 10,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581030,
+      "cardId": "P-041",
+      "name": "Monkey.D.Luffy (P-041)",
+      "cleanName": "MonkeyDLuffy P 041",
+      "url": "https://www.tcgplayer.com/product/581030/one-piece-card-game-starter-deck-18-purple-monkeydluffy-monkeydluffy-p-041",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581030_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.43,
+          "midPrice": 3.6,
+          "highPrice": 25,
+          "marketPrice": 1.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581031,
+      "cardId": "ST18-001",
+      "name": "Uso-Hachi (ST18-001)",
+      "cleanName": "Uso Hachi ST18 001",
+      "url": "https://www.tcgplayer.com/product/581031/one-piece-card-game-starter-deck-18-purple-monkeydluffy-uso-hachi-st18-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581031_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 4.2,
+          "midPrice": 5.84,
+          "highPrice": 25,
+          "marketPrice": 5.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581032,
+      "cardId": "ST18-002",
+      "name": "O-Nami",
+      "cleanName": "O Nami",
+      "url": "https://www.tcgplayer.com/product/581032/one-piece-card-game-starter-deck-18-purple-monkeydluffy-o-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581032_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[On Play] If you have 8 or more DON!! cards on your field, trash 1 card from your hand and draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.33,
+          "highPrice": 5,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581033,
+      "cardId": "ST18-003",
+      "name": "San-Gorou",
+      "cleanName": "San Gorou",
+      "url": "https://www.tcgplayer.com/product/581033/one-piece-card-game-starter-deck-18-purple-monkeydluffy-san-gorou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581033_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] [Once Per Turn] If you have 8 or more DON!! cards on your field, draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 1.75,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581034,
+      "cardId": "ST18-004",
+      "name": "Zoro-Juurou (ST18-004)",
+      "cleanName": "Zoro Juurou ST18 004",
+      "url": "https://www.tcgplayer.com/product/581034/one-piece-card-game-starter-deck-18-purple-monkeydluffy-zoro-juurou-st18-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581034_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 purple \"Straw Hat Crew\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 2.7,
+          "highPrice": 25,
+          "marketPrice": 1.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581035,
+      "cardId": "ST18-005",
+      "name": "Luffy-Tarou",
+      "cleanName": "Luffy Tarou",
+      "url": "https://www.tcgplayer.com/product/581035/one-piece-card-game-starter-deck-18-purple-monkeydluffy-luffy-tarou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581035_200w.jpg",
+      "groupId": 23493,
+      "setCode": "ST18",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play up to 1 purple \"Straw Hat Crew\" type Character card with a cost of 5 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.3,
+          "midPrice": 3.5,
+          "highPrice": 95,
+          "marketPrice": 2.92,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { PLATFORM_FEE_RATE } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import { formatPrice } from "@/lib/currency";
 import type { WalletTransactionType } from "@/generated/prisma/client";
 
@@ -163,10 +163,11 @@ export async function getTransactions(userId: string, limit = 50) {
  * netSettlement: from computeSettlements (positive = user owes)
  * seller fees: PLATFORM_FEE_RATE * askPrice of each card the user sends
  */
-export function calculateHoldAmounts(
+export async function calculateHoldAmounts(
   legs: { fromUserId: string; askPrice: number }[],
   settlements: Map<string, number>,
-): Map<string, number> {
+): Promise<Map<string, number>> {
+  const feeRate = await getConfig("fees.platform_rate");
   const holds = new Map<string, number>();
 
   // Collect all user IDs
@@ -183,7 +184,7 @@ export function calculateHoldAmounts(
     // Seller fee on cards this user sends
     const sellerFee = legs
       .filter((l) => l.fromUserId === userId)
-      .reduce((sum, l) => sum + Math.ceil(l.askPrice * PLATFORM_FEE_RATE), 0);
+      .reduce((sum, l) => sum + Math.ceil(l.askPrice * feeRate), 0);
 
     holds.set(userId, settlementHold + sellerFee);
   }

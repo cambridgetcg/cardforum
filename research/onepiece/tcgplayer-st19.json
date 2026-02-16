@@ -1,0 +1,434 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 19: BLACK Smoker",
+  "groupId": 23494,
+  "setCode": "ST19",
+  "totalProducts": 17,
+  "totalCards": 14,
+  "scrapedAt": "2026-02-15T22:54:44.199Z",
+  "durationMs": 68,
+  "cards": [
+    {
+      "productId": 581036,
+      "cardId": "OP02-093",
+      "name": "Smoker (OP02-093)",
+      "cleanName": "Smoker OP02 093",
+      "url": "https://www.tcgplayer.com/product/581036/one-piece-card-game-starter-deck-19-black-smoker-smoker-op02-093",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581036_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] Give up to 1 of your opponent's Characters 1 cost during this turn. Then, if there is a Character with a cost of 0, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.89,
+          "highPrice": 50,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581037,
+      "cardId": "OP02-098",
+      "name": "Koby",
+      "cleanName": "Koby",
+      "url": "https://www.tcgplayer.com/product/581037/one-piece-card-game-starter-deck-19-black-smoker-koby",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581037_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] You may trash 1 card from your hand: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.23,
+          "highPrice": 1.39,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581038,
+      "cardId": "OP02-106",
+      "name": "Tsuru",
+      "cleanName": "Tsuru",
+      "url": "https://www.tcgplayer.com/product/581038/one-piece-card-game-starter-deck-19-black-smoker-tsuru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581038_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters 2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581039,
+      "cardId": "OP02-108",
+      "name": "Donquixote Rosinante",
+      "cleanName": "Donquixote Rosinante",
+      "url": "https://www.tcgplayer.com/product/581039/one-piece-card-game-starter-deck-19-black-smoker-donquixote-rosinante",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581039_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581040,
+      "cardId": "OP02-109",
+      "name": "Jaguar.D.Saul",
+      "cleanName": "JaguarDSaul",
+      "url": "https://www.tcgplayer.com/product/581040/one-piece-card-game-starter-deck-19-black-smoker-jaguardsaul",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581040_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Giant;Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.29,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581041,
+      "cardId": "OP02-113",
+      "name": "Helmeppo",
+      "cleanName": "Helmeppo",
+      "url": "https://www.tcgplayer.com/product/581041/one-piece-card-game-starter-deck-19-black-smoker-helmeppo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581041_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] Give up to 1 of your opponent's Characters 2 cost during this turn. Then, if there is a Character with a cost of 0, this Character gains +2000 power during this battle.<br><br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.29,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581042,
+      "cardId": "OP02-116",
+      "name": "Yamakaji",
+      "cleanName": "Yamakaji",
+      "url": "https://www.tcgplayer.com/product/581042/one-piece-card-game-starter-deck-19-black-smoker-yamakaji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581042_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.29,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581044,
+      "cardId": "OP03-079",
+      "name": "Vergo",
+      "cleanName": "Vergo",
+      "url": "https://www.tcgplayer.com/product/581044/one-piece-card-game-starter-deck-19-black-smoker-vergo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581044_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] This Character cannot be K.O.'d in battle.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 1.31,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581045,
+      "cardId": "OP03-089",
+      "name": "Brannew",
+      "cleanName": "Brannew",
+      "url": "https://www.tcgplayer.com/product/581045/one-piece-card-game-starter-deck-19-black-smoker-brannew",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581045_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 3 cards from the top of your deck; reveal up to 1 \"Navy\" type card other than [Brannew] and add it to your hand. Then, trash the rest.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.14,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581046,
+      "cardId": "ST19-001",
+      "name": "Smoker (ST19-001)",
+      "cleanName": "Smoker ST19 001",
+      "url": "https://www.tcgplayer.com/product/581046/one-piece-card-game-starter-deck-19-black-smoker-smoker-st19-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581046_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] You may trash 1 black \"Navy\" type card from your hand: Up to 2 of your opponent's Characters with a cost of 4 or less cannot attack until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.19,
+          "highPrice": 7.5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581047,
+      "cardId": "ST19-002",
+      "name": "Sengoku",
+      "cleanName": "Sengoku",
+      "url": "https://www.tcgplayer.com/product/581047/one-piece-card-game-starter-deck-19-black-smoker-sengoku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581047_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] You may trash 2 black \"Navy\" type cards from your hand: If your Leader has the \"Navy\" type, draw 3 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.3,
+          "midPrice": 0.88,
+          "highPrice": 10,
+          "marketPrice": 0.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581048,
+      "cardId": "ST19-003",
+      "name": "Tashigi",
+      "cleanName": "Tashigi",
+      "url": "https://www.tcgplayer.com/product/581048/one-piece-card-game-starter-deck-19-black-smoker-tashigi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581048_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader is [Smoker], give up to 1 of your opponent's Characters 4 cost during this turn.<br><br>\r\n[Activate: Main] [Once Per Turn] If this Character was played on this turn, trash up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1,
+          "highPrice": 12.5,
+          "marketPrice": 0.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581049,
+      "cardId": "ST19-004",
+      "name": "Hina",
+      "cleanName": "Hina",
+      "url": "https://www.tcgplayer.com/product/581049/one-piece-card-game-starter-deck-19-black-smoker-hina",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581049_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Opponent's Turn] This Character gains +4 cost.<br><br>\r\n[Activate: Main] [Once Per Turn] You may place 1 card from your trash at the bottom of your deck: Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.49,
+          "midPrice": 1.19,
+          "highPrice": 25,
+          "marketPrice": 0.85,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581050,
+      "cardId": "ST19-005",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/581050/one-piece-card-game-starter-deck-19-black-smoker-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581050_200w.jpg",
+      "groupId": 23494,
+      "setCode": "ST19",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[Activate: Main] [Once Per Turn] You may place 1 card from your trash at the bottom of your deck: Give up to 1 of your opponent's Characters 1 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.24,
+          "highPrice": 3,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

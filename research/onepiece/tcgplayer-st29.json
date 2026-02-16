@@ -1,0 +1,944 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 29: Egghead",
+  "groupId": 24575,
+  "setCode": "ST29",
+  "totalProducts": 34,
+  "totalCards": 31,
+  "scrapedAt": "2026-02-15T22:54:55.037Z",
+  "durationMs": 70,
+  "cards": [
+    {
+      "productId": 671534,
+      "cardId": "ST29-001",
+      "name": "Monkey.D.Luffy (001)",
+      "cleanName": "MonkeyDLuffy 001",
+      "url": "https://www.tcgplayer.com/product/671534/one-piece-card-game-starter-deck-29-egghead-monkeydluffy-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671534_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "6",
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If you have 2 or less Life cards, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.95,
+          "midPrice": 3.34,
+          "highPrice": 12,
+          "marketPrice": 2.64,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671547,
+      "cardId": "ST29-001",
+      "name": "Monkey.D.Luffy (001) (Parallel)",
+      "cleanName": "MonkeyDLuffy 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/671547/one-piece-card-game-starter-deck-29-egghead-monkeydluffy-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671547_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "6",
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If you have 2 or less Life cards, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 38,
+          "midPrice": 48.9,
+          "highPrice": 179,
+          "marketPrice": 39.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671548,
+      "cardId": "ST29-002",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/671548/one-piece-card-game-starter-deck-29-egghead-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671548_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Ranged",
+      "effectText": "[On Play] / [When Attacking] Rest up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 0.84,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671550,
+      "cardId": "ST29-002",
+      "name": "Usopp (Full Art)",
+      "cleanName": "Usopp Full Art",
+      "url": "https://www.tcgplayer.com/product/671550/one-piece-card-game-starter-deck-29-egghead-usopp-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671550_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Ranged",
+      "effectText": "[On Play] / [When Attacking] Rest up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 2.49,
+          "highPrice": 12,
+          "marketPrice": 1.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671554,
+      "cardId": "ST29-003",
+      "name": "Kaku",
+      "cleanName": "Kaku",
+      "url": "https://www.tcgplayer.com/product/671554/one-piece-card-game-starter-deck-29-egghead-kaku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671554_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Slash",
+      "effectText": "If the number of your Life cards is equal to or less than the number of your opponent's Life cards, this Character gains +1000 power.\r\n<br>[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 0.84,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671555,
+      "cardId": "ST29-003",
+      "name": "Kaku (Full Art)",
+      "cleanName": "Kaku Full Art",
+      "url": "https://www.tcgplayer.com/product/671555/one-piece-card-game-starter-deck-29-egghead-kaku-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671555_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Slash",
+      "effectText": "If the number of your Life cards is equal to or less than the number of your opponent's Life cards, this Character gains +1000 power.\r\n<br>[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.35,
+          "midPrice": 1,
+          "highPrice": 14.99,
+          "marketPrice": 0.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671557,
+      "cardId": "ST29-004",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/671557/one-piece-card-game-starter-deck-29-egghead-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671557_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>[Trigger] You may trash 1 card from your hand: Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.6,
+          "midPrice": 1.62,
+          "highPrice": 5,
+          "marketPrice": 1.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671558,
+      "cardId": "ST29-004",
+      "name": "Sanji (Full Art)",
+      "cleanName": "Sanji Full Art",
+      "url": "https://www.tcgplayer.com/product/671558/one-piece-card-game-starter-deck-29-egghead-sanji-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671558_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>[Trigger] You may trash 1 card from your hand: Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12.25,
+          "midPrice": 14.97,
+          "highPrice": 39.95,
+          "marketPrice": 13.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671559,
+      "cardId": "ST29-005",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/671559/one-piece-card-game-starter-deck-29-egghead-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671559_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.42,
+          "highPrice": 1,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671560,
+      "cardId": "ST29-005",
+      "name": "Jinbe (Full Art)",
+      "cleanName": "Jinbe Full Art",
+      "url": "https://www.tcgplayer.com/product/671560/one-piece-card-game-starter-deck-29-egghead-jinbe-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671560_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 6.02,
+          "highPrice": 18.51,
+          "marketPrice": 5.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671562,
+      "cardId": "ST29-006",
+      "name": "Stussy",
+      "cleanName": "Stussy",
+      "url": "https://www.tcgplayer.com/product/671562/one-piece-card-game-starter-deck-29-egghead-stussy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671562_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Egghead",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 0.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671563,
+      "cardId": "ST29-006",
+      "name": "Stussy (Full Art)",
+      "cleanName": "Stussy Full Art",
+      "url": "https://www.tcgplayer.com/product/671563/one-piece-card-game-starter-deck-29-egghead-stussy-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671563_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Egghead",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.98,
+          "midPrice": 3.62,
+          "highPrice": 19.99,
+          "marketPrice": 2.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671595,
+      "cardId": "ST29-007",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/671595/one-piece-card-game-starter-deck-29-egghead-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671595_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On K.O.] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> Add up to 1 card from your hand to the top of your Life cards.\r\n<br>[Trigger] Up to 1 of your [Monkey.D.Luffy] cards gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.27,
+          "highPrice": 3.56,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671596,
+      "cardId": "ST29-007",
+      "name": "Tony Tony.Chopper (Full Art)",
+      "cleanName": "Tony TonyChopper Full Art",
+      "url": "https://www.tcgplayer.com/product/671596/one-piece-card-game-starter-deck-29-egghead-tony-tonychopper-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671596_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On K.O.] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> Add up to 1 card from your hand to the top of your Life cards.\r\n<br>[Trigger] Up to 1 of your [Monkey.D.Luffy] cards gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.6,
+          "midPrice": 6,
+          "highPrice": 77,
+          "marketPrice": 5.38,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671597,
+      "cardId": "ST29-008",
+      "name": "Nami",
+      "cleanName": "Nami",
+      "url": "https://www.tcgplayer.com/product/671597/one-piece-card-game-starter-deck-29-egghead-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671597_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Special",
+      "effectText": "If your {Egghead} type Character would be K.O.'d by your opponent's effect, you may turn 1 card from the top of your Life cards face-up instead.\r\n<br>[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.31,
+          "highPrice": 5,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671598,
+      "cardId": "ST29-008",
+      "name": "Nami (Full Art)",
+      "cleanName": "Nami Full Art",
+      "url": "https://www.tcgplayer.com/product/671598/one-piece-card-game-starter-deck-29-egghead-nami-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671598_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Special",
+      "effectText": "If your {Egghead} type Character would be K.O.'d by your opponent's effect, you may turn 1 card from the top of your Life cards face-up instead.\r\n<br>[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 23.25,
+          "midPrice": 29.8,
+          "highPrice": 100,
+          "marketPrice": 25.7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671599,
+      "cardId": "ST29-009",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/671599/one-piece-card-game-starter-deck-29-egghead-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671599_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.39,
+          "midPrice": 0.75,
+          "highPrice": 3,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671600,
+      "cardId": "ST29-009",
+      "name": "Nico Robin (Full Art)",
+      "cleanName": "Nico Robin Full Art",
+      "url": "https://www.tcgplayer.com/product/671600/one-piece-card-game-starter-deck-29-egghead-nico-robin-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671600_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[Trigger] If your Leader is [Monkey.D.Luffy], play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 23.8,
+          "midPrice": 30,
+          "highPrice": 80,
+          "marketPrice": 26.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671601,
+      "cardId": "ST29-010",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/671601/one-piece-card-game-starter-deck-29-egghead-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671601_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 25,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671602,
+      "cardId": "ST29-010",
+      "name": "Franky (Full Art)",
+      "cleanName": "Franky Full Art",
+      "url": "https://www.tcgplayer.com/product/671602/one-piece-card-game-starter-deck-29-egghead-franky-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671602_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.75,
+          "midPrice": 1.73,
+          "highPrice": 14.99,
+          "marketPrice": 1.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671603,
+      "cardId": "ST29-011",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/671603/one-piece-card-game-starter-deck-29-egghead-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671603_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 0.84,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671604,
+      "cardId": "ST29-011",
+      "name": "Brook (Full Art)",
+      "cleanName": "Brook Full Art",
+      "url": "https://www.tcgplayer.com/product/671604/one-piece-card-game-starter-deck-29-egghead-brook-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671604_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 3.36,
+          "highPrice": 15,
+          "marketPrice": 2.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671605,
+      "cardId": "ST29-012",
+      "name": "Monkey.D.Luffy (012)",
+      "cleanName": "MonkeyDLuffy 012",
+      "url": "https://www.tcgplayer.com/product/671605/one-piece-card-game-starter-deck-29-egghead-monkeydluffy-012",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671605_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to 1 of your [Monkey.D.Luffy] cards.\r\n<br>[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.24,
+          "highPrice": 25,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671606,
+      "cardId": "ST29-012",
+      "name": "Monkey.D.Luffy (012) (Full Art)",
+      "cleanName": "MonkeyDLuffy 012 Full Art",
+      "url": "https://www.tcgplayer.com/product/671606/one-piece-card-game-starter-deck-29-egghead-monkeydluffy-012-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671606_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to 1 of your [Monkey.D.Luffy] cards.\r\n<br>[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.78,
+          "midPrice": 7.95,
+          "highPrice": 100,
+          "marketPrice": 5.81,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671607,
+      "cardId": "ST29-013",
+      "name": "Rob Lucci",
+      "cleanName": "Rob Lucci",
+      "url": "https://www.tcgplayer.com/product/671607/one-piece-card-game-starter-deck-29-egghead-rob-lucci",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671607_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the total of your and your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 15,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671608,
+      "cardId": "ST29-013",
+      "name": "Rob Lucci (Full Art)",
+      "cleanName": "Rob Lucci Full Art",
+      "url": "https://www.tcgplayer.com/product/671608/one-piece-card-game-starter-deck-29-egghead-rob-lucci-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671608_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the total of your and your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.7,
+          "midPrice": 1.5,
+          "highPrice": 20,
+          "marketPrice": 0.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671609,
+      "cardId": "ST29-014",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/671609/one-piece-card-game-starter-deck-29-egghead-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671609_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Rush: Character] <em>(This card can attack Characters on the turn in which it is played.)</em>\r\n<br>[Activate: Main] [Once Per Turn] <strong>You may trash 1 card with a [Trigger] from your hand:</strong> Draw 1 card and give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 1,
+          "highPrice": 10,
+          "marketPrice": 0.79,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671610,
+      "cardId": "ST29-014",
+      "name": "Roronoa Zoro (Full Art)",
+      "cleanName": "Roronoa Zoro Full Art",
+      "url": "https://www.tcgplayer.com/product/671610/one-piece-card-game-starter-deck-29-egghead-roronoa-zoro-full-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671610_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Rush: Character] <em>(This card can attack Characters on the turn in which it is played.)</em>\r\n<br>[Activate: Main] [Once Per Turn] <strong>You may trash 1 card with a [Trigger] from your hand:</strong> Draw 1 card and give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.68,
+          "midPrice": 9.99,
+          "highPrice": 24,
+          "marketPrice": 8.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671611,
+      "cardId": "ST29-015",
+      "name": "Raw Heat Strike",
+      "cleanName": "Raw Heat Strike",
+      "url": "https://www.tcgplayer.com/product/671611/one-piece-card-game-starter-deck-29-egghead-raw-heat-strike",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671611_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 1 or less Life cards, give up to 1 of your opponent's Leader or Character cards -2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671612,
+      "cardId": "ST29-016",
+      "name": "Kizaru!! Compared to Two Years Ago We're a Hundred Times Stronger Now!!",
+      "cleanName": "Kizaru Compared to Two Years Ago Were a Hundred Times Stronger Now",
+      "url": "https://www.tcgplayer.com/product/671612/one-piece-card-game-starter-deck-29-egghead-kizaru-compared-to-two-years-ago-were-a-hundred-times-stronger-now",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671612_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": null,
+      "effectText": "[Main] Your [Monkey.D.Luffy] Leader gains [Unblockable] during this turn.\r\n<br><em>(This card cannot be blocked.)</em>\r\n<br>[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.47,
+          "highPrice": 5,
+          "marketPrice": 0.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 671614,
+      "cardId": "ST29-017",
+      "name": "Iai Death Lion Song",
+      "cleanName": "Iai Death Lion Song",
+      "url": "https://www.tcgplayer.com/product/671614/one-piece-card-game-starter-deck-29-egghead-iai-death-lion-song",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/671614_200w.jpg",
+      "groupId": 24575,
+      "setCode": "ST29",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.\r\n<br>[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 3.5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

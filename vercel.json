@@ -1,4 +1,30 @@
 {
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "X-CardForum-Version", "value": "0.1.0" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/dashboard",
+      "permanent": false
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron/matching",
@@ -7,6 +33,34 @@
     {
       "path": "/api/cron/auto-complete",
       "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/shipping-sla",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/refresh-rates",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/carrier-tracking",
+      "schedule": "0 */2 * * *"
+    },
+    {
+      "path": "/api/cron/tier-check",
+      "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/assignment-timeouts",
+      "schedule": "0 */3 * * *"
+    },
+    {
+      "path": "/api/cron/sanctions-rescreen",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/cron/ccs-calibration",
+      "schedule": "0 8 * * *"
     }
   ]
 }

@@ -4,6 +4,8 @@ import {
   CONDITION_VALUES,
   GRADING_COMPANY_VALUES,
   DELIVERY_METHOD_VALUES,
+  EXPERT_POST_CATEGORY_VALUES,
+  EXPERT_POST_STATUS_VALUES,
 } from "@/types/domain";
 import { SUPPORTED_CURRENCIES } from "@/lib/currency";
 
@@ -67,6 +69,22 @@ export const createWantListingSchema = z.object({
   autoAcceptRegions: z.array(z.string().min(1)).default([]),
 });
 export type CreateWantListingInput = z.infer<typeof createWantListingSchema>;
+
+// ─── Update Listing Validator ────────────────────────────
+
+export const updateListingSchema = z.object({
+  type: z.enum(["have", "want"]),
+  askPrice: z.number().int().min(1).max(10_000_000).optional(),
+  bidPrice: z.number().int().min(1).max(10_000_000).optional(),
+  condition: z.enum(conditionValues).optional(),
+  minCondition: z.enum(conditionValues).optional(),
+  quantity: z.number().int().min(1).max(99).optional(),
+  maxQuantity: z.number().int().min(1).max(99).optional(),
+  notes: z.string().max(500).optional(),
+  currency: z.enum(currencyValues).optional(),
+  isActive: z.boolean().optional(),
+});
+export type UpdateListingInput = z.infer<typeof updateListingSchema>;
 
 // ─── Graded Listing Validators ────────────────────────────
 
@@ -172,6 +190,7 @@ export type SearchCardsInput = z.infer<typeof searchCardsSchema>;
 export const updateProfileSchema = z.object({
   name: z.string().min(1).max(100).optional(),
   region: z.string().min(1).max(100).optional(),
+  regionId: z.string().min(1).optional(),
   country: z.string().min(2).max(2).optional(),
   bio: z.string().max(500).optional(),
 });
@@ -266,8 +285,8 @@ export const verificationResultSchema = z.object({
   // For graded cards
   slabIntact: z.boolean().optional(),
   certVerified: z.boolean().optional(),
-  // CCS dimension scores (optional — will be required for high-value cards in Phase 3)
-  ccs: ccsInputSchema.optional(),
+  // CCS dimension scores (required — feeds AI vs authenticator calibration pipeline)
+  ccs: ccsInputSchema,
 });
 export type VerificationResultInput = z.infer<typeof verificationResultSchema>;
 
@@ -384,7 +403,71 @@ export type CreateDigitalTokenListingInput = z.infer<typeof createDigitalTokenLi
 
 export const createRedemptionSchema = z.object({
   tokenId: z.string().min(1, "Token is required"),
-  redeemerCountry: z.string().min(2).max(2),
+  redeemerCountry: z.string().min(2).max(2).optional(), // Auto-detected from shipping address if omitted
   preferredVaultId: z.string().optional(),
 });
 export type CreateRedemptionInput = z.infer<typeof createRedemptionSchema>;
+
+// ─── Expert Post Validators ────────────────────────────
+
+const expertPostCategoryValues = EXPERT_POST_CATEGORY_VALUES;
+const expertPostStatusValues = EXPERT_POST_STATUS_VALUES;
+
+export const createExpertPostSchema = z.object({
+  title: z.string().min(5, "Title must be at least 5 characters").max(200),
+  content: z.string().min(20, "Content must be at least 20 characters").max(50_000),
+  excerpt: z.string().max(500).optional(),
+  category: z.enum(expertPostCategoryValues),
+  cardId: z.string().min(1).optional(),
+  setId: z.string().min(1).optional(),
+  tcg: z.enum(tcgValues).optional(),
+  language: z.string().min(2).max(5).optional(), // e.g. "EN", "JP", "DE"
+  tags: z.array(z.string().min(1).max(50)).max(10).default([]),
+  mediaUrls: z.array(z.string().url()).max(10).default([]),
+});
+export type CreateExpertPostInput = z.infer<typeof createExpertPostSchema>;
+
+export const updateExpertPostSchema = z.object({
+  title: z.string().min(5).max(200).optional(),
+  content: z.string().min(20).max(50_000).optional(),
+  excerpt: z.string().max(500).optional(),
+  category: z.enum(expertPostCategoryValues).optional(),
+  cardId: z.string().min(1).nullable().optional(),
+  setId: z.string().min(1).nullable().optional(),
+  tcg: z.enum(tcgValues).nullable().optional(),
+  language: z.string().min(2).max(5).nullable().optional(),
+  tags: z.array(z.string().min(1).max(50)).max(10).optional(),
+  mediaUrls: z.array(z.string().url()).max(10).optional(),
+  status: z.enum(expertPostStatusValues).optional(),
+});
+export type UpdateExpertPostInput = z.infer<typeof updateExpertPostSchema>;
+
+export const voteExpertPostSchema = z.object({
+  value: z.union([z.literal(1), z.literal(-1)]),
+  helpful: z.boolean().default(false),
+});
+export type VoteExpertPostInput = z.infer<typeof voteExpertPostSchema>;
+
+export const endorseExpertPostSchema = z.object({
+  note: z.string().max(500).optional(),
+});
+export type EndorseExpertPostInput = z.infer<typeof endorseExpertPostSchema>;
+
+export const moderateExpertPostSchema = z.object({
+  action: z.enum(["approve", "flag", "remove"]),
+  note: z.string().max(1000).optional(),
+});
+export type ModerateExpertPostInput = z.infer<typeof moderateExpertPostSchema>;
+
+export const listExpertPostsSchema = z.object({
+  tcg: z.enum(tcgValues).optional(),
+  setId: z.string().optional(),
+  cardId: z.string().optional(),
+  category: z.enum(expertPostCategoryValues).optional(),
+  language: z.string().min(2).max(5).optional(),
+  authorId: z.string().optional(),
+  status: z.enum(expertPostStatusValues).optional(),
+  sort: z.enum(["recent", "popular", "helpful"]).default("recent"),
+  page: z.number().int().min(1).default(1),
+  limit: z.number().int().min(1).max(50).default(20),
+});

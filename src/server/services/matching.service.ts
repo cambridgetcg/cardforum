@@ -1,4 +1,6 @@
 import { db } from "@/lib/db";
+import { eventBus } from "@/server/events/event-bus";
+import "@/server/events/subscribers";
 import { findCycles, type ListingEdge } from "@/server/matching/cycle-finder";
 import {
   buildBridges,
@@ -10,6 +12,13 @@ import { packProposals } from "@/server/matching/packer";
 import { findChains, chainToProposal, type ChainAnchor } from "@/server/matching/chain-finder";
 import { buildGradedEdges } from "@/server/matching/graded-edge-builder";
 import { conditionMeetsMinimum, type Condition } from "@/types/domain";
+import { getConfig } from "@/server/services/config.service";
+
+/** Resolve a user's effective region string, preferring the normalized Region FK */
+function resolveRegion(user: { region: string | null; regionId?: string | null; regionRef?: { name: string; country: string } | null }): string {
+  if (user.regionRef) return `${user.regionRef.name}, ${user.regionRef.country}`;
+  return user.region ?? "unknown";
+}
 
 /**
  * Run the matching engine: load listings, build graph, find cycles, create proposals.
@@ -20,11 +29,11 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   const [haveListings, wantListings] = await Promise.all([
     db.haveListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true } } },
+      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
     }),
     db.wantListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true } } },
+      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
     }),
   ]);
 
@@ -59,8 +68,8 @@ export async function runMatching(): Promise<BridgeProposal[]> {
         cardId: have.cardId,
         haveUserId: have.userId,
         wantUserId: want.userId,
-        haveRegion: have.user.region ?? "unknown",
-        wantRegion: want.user.region ?? "unknown",
+        haveRegion: resolveRegion(have.user),
+        wantRegion: resolveRegion(want.user),
         condition: have.condition,
         askPrice: have.askPrice,
         bidPrice: want.bidPrice,
@@ -96,23 +105,23 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   }
 
   const chains = findChains(anchors, edges, authenticatorWantCardIds);
-  const chainProposals = chains.map(chainToProposal);
+  const chainProposals = await Promise.all(chains.map(chainToProposal));
 
   // 3.6. Graded card matching (separate pool)
   const [gradedHaveListings, gradedWantListings] = await Promise.all([
     db.gradedHaveListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true } } },
+      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
     }),
     db.gradedWantListing.findMany({
       where: { isActive: true },
-      include: { user: { select: { id: true, region: true } } },
+      include: { user: { select: { id: true, region: true, regionId: true, regionRef: { select: { name: true, country: true } } } } },
     }),
   ]);
 
   const gradedEdges = buildGradedEdges(gradedHaveListings, gradedWantListings);
   const gradedCycles = findCycles(gradedEdges);
-  const gradedProposals = buildBridges(gradedCycles);
+  const gradedProposals = await buildBridges(gradedCycles);
 
   // Tag graded proposals
   for (const p of gradedProposals) {
@@ -120,7 +129,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   }
 
   // 4. Build and score proposals (raw cycles + chains + graded cycles merged)
-  const cycleProposals = buildBridges(cycles);
+  const cycleProposals = await buildBridges(cycles);
   const proposals = [...cycleProposals, ...chainProposals, ...gradedProposals]
     .sort((a, b) => b.score - a.score);
 
@@ -130,8 +139,12 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   // 5. Persist top proposals to DB and check auto-accept eligibility
   const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days
 
+  // Snapshot scorer weights for MatchOutcome tracking (Loop 4)
+  const weightsSnapshot = await getConfig("matching.scorer_weights");
+
   for (const proposal of packed) {
     const isGraded = proposal.isGraded ?? false;
+    const uniqueRegions = new Set(proposal.cycle.regions);
 
     const matchProposal = await db.matchProposal.create({
       data: {
@@ -160,7 +173,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
     if (isAutoAcceptEligible(proposal, constraints)) {
       const participantIds = proposal.userIds;
 
-      await db.trade.create({
+      const trade = await db.trade.create({
         data: {
           proposalId: matchProposal.id,
           userAId: participantIds[0],
@@ -183,6 +196,21 @@ export async function runMatching(): Promise<BridgeProposal[]> {
               sequence: leg.sequence,
             })),
           },
+        },
+      });
+
+      // Record MatchOutcome for scoring feedback (Loop 4)
+      await db.matchOutcome.create({
+        data: {
+          proposalId: matchProposal.id,
+          tradeId: trade.id,
+          score: proposal.score,
+          weightsSnapshot: weightsSnapshot as never,
+          cycleLength: proposal.cycle.length,
+          regionCount: uniqueRegions.size,
+          isFullyLocal: proposal.cycle.isFullyLocal ?? false,
+          isChain: proposal.isChain ?? false,
+          isGraded,
         },
       });
 
@@ -215,6 +243,13 @@ export async function runMatching(): Promise<BridgeProposal[]> {
       }
     }
   }
+
+  // Emit matching completed event
+  const autoAccepted = packed.filter((p) => p.score > 0).length; // approximation
+  eventBus.emitAsync("matching.run_completed", {
+    proposalCount: packed.length,
+    autoAcceptedCount: autoAccepted,
+  });
 
   return packed;
 }

@@ -1,28 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRightLeft, ListChecks, Package, Sparkles } from "lucide-react";
-
-interface DashboardStats {
-  listings: number;
-  haveCount: number;
-  wantCount: number;
-  activeTrades: number;
-  completedTrades: number;
-  pendingProposals: number;
-}
+import { ArrowRightLeft, ListChecks, Package, Sparkles, BookOpen, Heart } from "lucide-react";
+import { useDashboard } from "@/hooks/use-api";
 
 export default function DashboardPage() {
-  const [stats, setStats] = useState<DashboardStats | null>(null);
-
-  useEffect(() => {
-    fetch("/api/dashboard")
-      .then((r) => (r.ok ? r.json() : null))
-      .then(setStats);
-  }, []);
+  const { data: stats } = useDashboard();
 
   const s = stats ?? {
     listings: 0,
@@ -31,6 +16,9 @@ export default function DashboardPage() {
     activeTrades: 0,
     completedTrades: 0,
     pendingProposals: 0,
+    expertPostCount: 0,
+    collectionCards: 0,
+    collectionEntries: 0,
   };
 
   return (
@@ -40,7 +28,7 @@ export default function DashboardPage() {
         Welcome to CardForum. Here&apos;s your trading overview.
       </p>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -94,9 +82,37 @@ export default function DashboardPage() {
             <p className="text-sm text-gray-500">pending proposals</p>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <BookOpen className="h-5 w-5 text-indigo-600" />
+              <h3 className="font-semibold text-gray-900">Expert Posts</h3>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold text-gray-900">{s.expertPostCount}</p>
+            <p className="text-sm text-gray-500">published posts</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Heart className="h-5 w-5 text-rose-500" />
+              <h3 className="font-semibold text-gray-900">Collection</h3>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold text-gray-900">{s.collectionCards}</p>
+            <p className="text-sm text-gray-500">
+              {s.collectionEntries} unique card{s.collectionEntries !== 1 ? "s" : ""}
+            </p>
+          </CardContent>
+        </Card>
       </div>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardContent className="py-8 text-center">
             {s.listings === 0 ? (
@@ -130,6 +146,41 @@ export default function DashboardPage() {
             <Link href="/browse" className="mt-3 inline-block">
               <Button variant="outline">Browse Cards</Button>
             </Link>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="py-8 text-center">
+            <p className="text-gray-500">
+              Share your expertise — price analyses, combo guides, and more.
+            </p>
+            <Link href="/expert" className="mt-3 inline-block">
+              <Button variant="outline">Visit Expert Hub</Button>
+            </Link>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="py-8 text-center">
+            {s.collectionCards === 0 ? (
+              <>
+                <p className="text-gray-500">
+                  Track your collection — see completion progress across sets.
+                </p>
+                <Link href="/collection" className="mt-3 inline-block">
+                  <Button variant="outline">Start Collecting</Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-500">
+                  You have {s.collectionCards} card{s.collectionCards !== 1 ? "s" : ""} in your collection.
+                </p>
+                <Link href="/collection" className="mt-3 inline-block">
+                  <Button variant="outline">View Collection</Button>
+                </Link>
+              </>
+            )}
           </CardContent>
         </Card>
       </div>

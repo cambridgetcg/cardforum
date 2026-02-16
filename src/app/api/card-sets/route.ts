@@ -14,9 +14,19 @@ export async function GET(req: NextRequest) {
     where,
     include: {
       _count: { select: { cards: true } },
+      cards: {
+        take: 1,
+        select: { imageUrl: true },
+        orderBy: { number: "asc" },
+      },
     },
     orderBy: [{ tcg: "asc" }, { code: "asc" }],
   });
 
-  return NextResponse.json({ sets });
+  const result = sets.map(({ cards, ...set }) => ({
+    ...set,
+    coverImage: cards[0]?.imageUrl ?? null,
+  }));
+
+  return NextResponse.json({ sets: result });
 }

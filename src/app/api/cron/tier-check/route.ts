@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { runDailyTierCheck } from "@/server/services/tier-promotion.service";
 
-// POST /api/cron/tier-check — Run daily tier promotion/demotion checks
-// Intended to be called by Vercel Cron or external scheduler
-export async function POST(req: NextRequest) {
+// GET /api/cron/tier-check — Run daily tier promotion/demotion checks
+// Called by Vercel Cron daily at 7am UTC
+export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

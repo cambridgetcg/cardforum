@@ -3,7 +3,7 @@ import * as defaults from "@/lib/constants";
 
 // ─── Types ──────────────────────────────────────────────
 
-type ConfigCategory = "fees" | "thresholds" | "matching" | "kyc" | "shipping" | "authenticator" | "rating" | "ccs" | "digital" | "general";
+type ConfigCategory = "fees" | "thresholds" | "matching" | "kyc" | "shipping" | "authenticator" | "rating" | "ccs" | "digital" | "calibration" | "general";
 
 /** All known config keys with their types. Add new keys here. */
 export interface ConfigKeys {
@@ -23,12 +23,17 @@ export interface ConfigKeys {
   "authenticator.ship_sla_hours": number;
   "authenticator.ship_warning_hours": number;
   "authenticator.ship_escalation_hours": number;
+  "authenticator.dispute_demotion_window_days": number;
+  "authenticator.dispute_demotion_threshold": number;
+  "authenticator.inactivity_demotion_days": number;
 
   // Photo approval
   "thresholds.photo_approval_cents": number;
   "thresholds.max_photo_count": number;
   "thresholds.max_photo_size_bytes": number;
   "thresholds.max_photo_attempts": number;
+  "thresholds.photo_trust_min_agreement_rate": number;
+  "thresholds.photo_trust_min_comparisons": number;
 
   // Shipping
   "shipping.insurance_threshold_cents": number;
@@ -44,6 +49,8 @@ export interface ConfigKeys {
   "kyc.basic_listing_cap_cents": number;
   "kyc.basic_trade_cap_cents": number;
   "kyc.max_document_size_bytes": number;
+  "kyc.presigned_url_expiry_seconds": number;
+  "kyc.document_retention_years": number;
 
   // Rating
   "rating.component_weights": Record<string, number>;
@@ -53,15 +60,28 @@ export interface ConfigKeys {
   "ccs.dimension_weights": Record<string, number>;
   "ccs.min_cap_threshold": number;
   "ccs.tier_boundaries": Record<string, { min: number }>;
+  "ccs.sub_tier_boundaries": Record<string, { min: number; max: number }>;
 
   // Matching
   "matching.max_cycle_depth": number;
   "matching.max_packed": number;
   "matching.proposal_expiry_days": number;
+  "matching.scorer_weights": Record<string, number | Record<string, number>>;
+  "matching.trust_bonus_weight": number; // per-point bonus for participant trust (Loop 6)
 
   // Digital
   "digital.redemption_base_fee_cents": number;
   "digital.cross_zone_surcharge_cents": number;
+
+  // Calibration
+  "calibration.drift_threshold": number;
+  "calibration.outlier_delta_threshold": number;
+  "calibration.outlier_min_samples": number;
+  "calibration.min_sample_size": number;
+  "calibration.recent_window_days": number;
+  "calibration.baseline_window_days": number;
+  "calibration.extreme_delta_threshold": number;
+  "calibration.agreement_threshold": number;
 }
 
 export type ConfigKey = keyof ConfigKeys;
@@ -85,11 +105,16 @@ const CONFIG_DEFAULTS: Record<ConfigKey, unknown> = {
   "authenticator.ship_sla_hours": defaults.AUTHENTICATOR_SHIP_SLA_HOURS,
   "authenticator.ship_warning_hours": defaults.AUTHENTICATOR_SHIP_WARNING_HOURS,
   "authenticator.ship_escalation_hours": defaults.AUTHENTICATOR_SHIP_ESCALATION_HOURS,
+  "authenticator.dispute_demotion_window_days": 30,
+  "authenticator.dispute_demotion_threshold": 3,
+  "authenticator.inactivity_demotion_days": 90,
 
   "thresholds.photo_approval_cents": defaults.PHOTO_APPROVAL_THRESHOLD_CENTS,
   "thresholds.max_photo_count": defaults.MAX_PHOTO_COUNT,
   "thresholds.max_photo_size_bytes": defaults.MAX_PHOTO_SIZE_BYTES,
   "thresholds.max_photo_attempts": defaults.MAX_PHOTO_ATTEMPTS,
+  "thresholds.photo_trust_min_agreement_rate": defaults.PHOTO_TRUST_MIN_AGREEMENT_RATE,
+  "thresholds.photo_trust_min_comparisons": defaults.PHOTO_TRUST_MIN_COMPARISONS,
 
   "shipping.insurance_threshold_cents": defaults.SHIPPING_INSURANCE_THRESHOLD_CENTS,
   "shipping.signature_threshold_cents": defaults.SHIPPING_SIGNATURE_THRESHOLD_CENTS,
@@ -103,6 +128,8 @@ const CONFIG_DEFAULTS: Record<ConfigKey, unknown> = {
   "kyc.basic_listing_cap_cents": defaults.KYC_BASIC_LISTING_CAP_CENTS,
   "kyc.basic_trade_cap_cents": defaults.KYC_BASIC_TRADE_CAP_CENTS,
   "kyc.max_document_size_bytes": defaults.KYC_MAX_DOCUMENT_SIZE_BYTES,
+  "kyc.presigned_url_expiry_seconds": defaults.KYC_PRESIGNED_URL_EXPIRY_SECONDS,
+  "kyc.document_retention_years": defaults.KYC_DOCUMENT_RETENTION_YEARS,
 
   "rating.component_weights": defaults.RATING_COMPONENT_WEIGHTS,
   "rating.decay_weights": { last90Days: 0.6, days91to180: 0.3, lifetime: 0.1 },
@@ -110,13 +137,36 @@ const CONFIG_DEFAULTS: Record<ConfigKey, unknown> = {
   "ccs.dimension_weights": defaults.CCS_DIMENSION_WEIGHTS,
   "ccs.min_cap_threshold": defaults.CCS_MIN_CAP_THRESHOLD,
   "ccs.tier_boundaries": defaults.CCS_TIER_BOUNDARIES,
+  "ccs.sub_tier_boundaries": defaults.CCS_SUB_TIER_BOUNDARIES,
 
   "matching.max_cycle_depth": 6,
   "matching.max_packed": 50,
   "matching.proposal_expiry_days": 7,
+  "matching.scorer_weights": {
+    baseScore: 100,
+    cycleLengthPenalty: -10,
+    fullyLocalBonus: 30,
+    fewRegionsBonus: 15,
+    conditionBonus: { NM: 5, LP: 4, MP: 3, HP: 2, DMG: 1 },
+    valueBalanceBonus: 20,
+    regionalImbalancePenalty: -25,
+    chainBonus: 10,
+    gradeMatchBonus: 5,
+  },
+
+  "matching.trust_bonus_weight": 0.1, // 0.1 score per trust point (max +10 at trust=100)
 
   "digital.redemption_base_fee_cents": defaults.REDEMPTION_BASE_FEE_CENTS,
   "digital.cross_zone_surcharge_cents": defaults.CROSS_ZONE_SURCHARGE_CENTS,
+
+  "calibration.drift_threshold": 0.5,
+  "calibration.outlier_delta_threshold": 2.0,
+  "calibration.outlier_min_samples": 5,
+  "calibration.min_sample_size": 10,
+  "calibration.recent_window_days": 30,
+  "calibration.baseline_window_days": 180,
+  "calibration.extreme_delta_threshold": 3.0,
+  "calibration.agreement_threshold": 1.0,
 };
 
 // Category derived from key prefix
@@ -132,6 +182,7 @@ function categoryFromKey(key: ConfigKey): ConfigCategory {
     ccs: "ccs",
     matching: "matching",
     digital: "digital",
+    calibration: "calibration",
   };
   return map[prefix] ?? "general";
 }
@@ -235,6 +286,10 @@ export async function setConfig<K extends ConfigKey>(
 ): Promise<{ key: string; value: unknown; version: number }> {
   const category = categoryFromKey(key);
 
+  // Read current value for audit trail
+  const existing = await db.platformConfig.findUnique({ where: { key } });
+  const oldValue = existing ? existing.value : null;
+
   const row = await db.platformConfig.upsert({
     where: { key },
     create: {
@@ -248,6 +303,16 @@ export async function setConfig<K extends ConfigKey>(
       value: value as never,
       updatedBy: adminId,
       version: { increment: 1 },
+    },
+  });
+
+  // Audit trail
+  await db.configAudit.create({
+    data: {
+      key,
+      oldValue: oldValue ?? undefined,
+      newValue: value as never,
+      changedBy: adminId,
     },
   });
 
@@ -304,4 +369,16 @@ export async function deleteConfig(key: ConfigKey): Promise<void> {
  */
 export function getDefault<K extends ConfigKey>(key: K): ConfigKeys[K] {
   return CONFIG_DEFAULTS[key] as ConfigKeys[K];
+}
+
+/**
+ * Get the audit log for config changes.
+ * Optionally filter by key. Returns most recent first.
+ */
+export async function getConfigAuditLog(key?: string, limit = 100) {
+  return db.configAudit.findMany({
+    where: key ? { key } : {},
+    orderBy: { createdAt: "desc" },
+    take: limit,
+  });
 }

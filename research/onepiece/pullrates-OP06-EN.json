@@ -1,0 +1,139 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP06",
+  "language": "EN",
+  "productType": "op_booster",
+  "packsPerBox": 24,
+  "rates": [
+    {
+      "rarity": "C",
+      "perPack": 5.4,
+      "perBox": 129.60000000000002,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.8800000000000003,
+      "uniqueCards": 45
+    },
+    {
+      "rarity": "UC",
+      "perPack": 3.4,
+      "perBox": 81.6,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.6322580645161286,
+      "uniqueCards": 31
+    },
+    {
+      "rarity": "R",
+      "perPack": 2.98,
+      "perBox": 71.52,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.7507692307692304,
+      "uniqueCards": 26
+    },
+    {
+      "rarity": "SR",
+      "perPack": 0.165,
+      "perBox": 3.96,
+      "packProbability": 0.165,
+      "boxProbability": 0.9868029940772288,
+      "perSpecificCardPerBox": 0.264,
+      "uniqueCards": 15
+    },
+    {
+      "rarity": "SEC",
+      "perPack": 0.038,
+      "perBox": 0.9119999999999999,
+      "packProbability": 0.038,
+      "boxProbability": 0.6053594307462595,
+      "perSpecificCardPerBox": 0.45599999999999996,
+      "uniqueCards": 2
+    },
+    {
+      "rarity": "L",
+      "perPack": 0.017,
+      "perBox": 0.40800000000000003,
+      "packProbability": 0.017,
+      "boxProbability": 0.3373496556762642,
+      "perSpecificCardPerBox": 0.068,
+      "uniqueCards": 6
+    },
+    {
+      "rarity": "TR",
+      "perPack": 0,
+      "perBox": 0,
+      "packProbability": 0,
+      "boxProbability": 0,
+      "perSpecificCardPerBox": 0,
+      "uniqueCards": 1
+    }
+  ],
+  "ratesByRarity": {
+    "C": {
+      "rarity": "C",
+      "perPack": 5.4,
+      "perBox": 129.60000000000002,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.8800000000000003,
+      "uniqueCards": 45
+    },
+    "UC": {
+      "rarity": "UC",
+      "perPack": 3.4,
+      "perBox": 81.6,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.6322580645161286,
+      "uniqueCards": 31
+    },
+    "R": {
+      "rarity": "R",
+      "perPack": 2.98,
+      "perBox": 71.52,
+      "packProbability": 1,
+      "boxProbability": 1,
+      "perSpecificCardPerBox": 2.7507692307692304,
+      "uniqueCards": 26
+    },
+    "SR": {
+      "rarity": "SR",
+      "perPack": 0.165,
+      "perBox": 3.96,
+      "packProbability": 0.165,
+      "boxProbability": 0.9868029940772288,
+      "perSpecificCardPerBox": 0.264,
+      "uniqueCards": 15
+    },
+    "SEC": {
+      "rarity": "SEC",
+      "perPack": 0.038,
+      "perBox": 0.9119999999999999,
+      "packProbability": 0.038,
+      "boxProbability": 0.6053594307462595,
+      "perSpecificCardPerBox": 0.45599999999999996,
+      "uniqueCards": 2
+    },
+    "L": {
+      "rarity": "L",
+      "perPack": 0.017,
+      "perBox": 0.40800000000000003,
+      "packProbability": 0.017,
+      "boxProbability": 0.3373496556762642,
+      "perSpecificCardPerBox": 0.068,
+      "uniqueCards": 6
+    },
+    "TR": {
+      "rarity": "TR",
+      "perPack": 0,
+      "perBox": 0,
+      "packProbability": 0,
+      "boxProbability": 0,
+      "perSpecificCardPerBox": 0,
+      "uniqueCards": 1
+    }
+  },
+  "generatedAt": "2026-02-15T23:14:53.952Z",
+  "source": "box-structure:Community consensus + distribution:tcgplayer-json"
+}

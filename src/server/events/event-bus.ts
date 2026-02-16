@@ -45,7 +45,8 @@ export interface DomainEvents {
 
   // Authentication
   "authenticator.assigned": { authenticatorId: string; tradeLegId: string; tradeId: string };
-  "authenticator.verified": { tradeLegId: string; tradeId: string; authentic: boolean };
+  "authenticator.verified": { tradeLegId: string; tradeId: string; authentic: boolean; conditionMatches: boolean };
+  "authenticator.audit_completed": { auditId: string; authenticatorId: string; aligned: boolean };
 
   // Shipping
   "shipping.shipped": { tradeLegId: string; trackingNumber: string };
@@ -62,6 +63,17 @@ export interface DomainEvents {
   // Photos
   "photo.uploaded": { tradeLegId: string; photoCount: number };
   "photo.reviewed": { tradeLegId: string; approved: boolean };
+
+  // Calibration
+  "calibration.report_generated": { reportId: string; sampleSize: number; driftDetected: boolean; confidenceLevel: string };
+  "calibration.extreme_delta_alert": { tradeLegId: string; authenticatorId: string; deltaComposite: number; threshold: number };
+  "calibration.weights_applied": { reportId: string; adminId: string; oldWeights: Record<string, number>; newWeights: Record<string, number> };
+
+  // Expert Posts
+  "expert_post.created": { postId: string; authorId: string; category: string; tcg?: string; cardId?: string; setId?: string };
+  "expert_post.published": { postId: string; authorId: string; category: string };
+  "expert_post.moderated": { postId: string; moderatorId: string; action: "approve" | "flag" | "remove" };
+  "expert_post.endorsed": { postId: string; endorserId: string; endorserType: "authenticator" | "admin" };
 }
 
 // ─── Types ───────────────────────────────────────────

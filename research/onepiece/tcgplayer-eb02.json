@@ -1,0 +1,3164 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Extra Booster: Anime 25th Collection",
+  "groupId": 23834,
+  "setCode": "EB02",
+  "totalProducts": 108,
+  "totalCards": 105,
+  "scrapedAt": "2026-02-15T22:53:58.309Z",
+  "durationMs": 115,
+  "cards": [
+    {
+      "productId": 629086,
+      "cardId": "EB01-001",
+      "name": "Kouzuki Oden (SP)",
+      "cleanName": "Kouzuki Oden SP",
+      "url": "https://www.tcgplayer.com/product/629086/one-piece-card-game-extra-booster-anime-25th-collection-kouzuki-oden-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629086_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "All of your \"Land of Wano\" type Character cards without a Counter have a +1000 Counter, according to the rules.<br>\r\n[DON!! x1] [When Attacking] If you have a \"Land of Wano\" type Character with a cost of 5 or more, this Leader gains +1000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 900,
+          "midPrice": 950,
+          "highPrice": 999.99,
+          "marketPrice": 244.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629087,
+      "cardId": "EB01-021",
+      "name": "Hannyabal (SP)",
+      "cleanName": "Hannyabal SP",
+      "url": "https://www.tcgplayer.com/product/629087/one-piece-card-game-extra-booster-anime-25th-collection-hannyabal-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629087_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Impel Down",
+      "attribute": "Slash",
+      "effectText": "[End of Your Turn] <strong>You may return 1 of your \"Impel Down\" type Characters with a cost of 2 or more to the owner's hand:</strong> Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 500,
+          "midPrice": 500,
+          "highPrice": 500,
+          "marketPrice": 141,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629088,
+      "cardId": "EB01-040",
+      "name": "Kyros (SP)",
+      "cleanName": "Kyros SP",
+      "url": "https://www.tcgplayer.com/product/629088/one-piece-card-game-extra-booster-anime-25th-collection-kyros-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629088_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 308.72,
+          "midPrice": 352.5,
+          "highPrice": 385.94,
+          "marketPrice": 122.91,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629089,
+      "cardId": "EB02-001",
+      "name": "Karoo",
+      "cleanName": "Karoo",
+      "url": "https://www.tcgplayer.com/product/629089/one-piece-card-game-extra-booster-anime-25th-collection-karoo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629089_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Alabasta",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629090,
+      "cardId": "EB02-002",
+      "name": "Sabo",
+      "cleanName": "Sabo",
+      "url": "https://www.tcgplayer.com/product/629090/one-piece-card-game-extra-booster-anime-25th-collection-sabo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629090_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> Up to 1 of your \"Revolutionary Army\" type Characters other than [Sabo] gains +2000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.8,
+          "highPrice": 4,
+          "marketPrice": 0.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629091,
+      "cardId": "EB02-003",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/629091/one-piece-card-game-extra-booster-anime-25th-collection-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629091_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Drum Kingdom",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [Opponent's Turn] This Character gains +2000 power.<br>\r\n[On Play] If your Leader has the \"Straw Hat Crew\" type, give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.6,
+          "highPrice": 5,
+          "marketPrice": 0.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629092,
+      "cardId": "EB02-003",
+      "name": "Tony Tony.Chopper (Alternate Art)",
+      "cleanName": "Tony TonyChopper Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629092/one-piece-card-game-extra-booster-anime-25th-collection-tony-tonychopper-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629092_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Drum Kingdom",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [Opponent's Turn] This Character gains +2000 power.<br>\r\n[On Play] If your Leader has the \"Straw Hat Crew\" type, give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 27.99,
+          "midPrice": 30.43,
+          "highPrice": 125.99,
+          "marketPrice": 29.68,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629093,
+      "cardId": "EB02-004",
+      "name": "Don Accino",
+      "cleanName": "Don Accino",
+      "url": "https://www.tcgplayer.com/product/629093/one-piece-card-game-extra-booster-anime-25th-collection-don-accino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629093_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Accino Family",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629094,
+      "cardId": "EB02-005",
+      "name": "Fake Straw Hat Crew",
+      "cleanName": "Fake Straw Hat Crew",
+      "url": "https://www.tcgplayer.com/product/629094/one-piece-card-game-extra-booster-anime-25th-collection-fake-straw-hat-crew",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629094_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fake Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[Your Turn] This Character gains +2000 power.<br>\r\n[Opponent's Turn] Give this Character 2000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629095,
+      "cardId": "EB02-006",
+      "name": "Yamato",
+      "cleanName": "Yamato",
+      "url": "https://www.tcgplayer.com/product/629095/one-piece-card-game-extra-booster-anime-25th-collection-yamato",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629095_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] If your Leader has the \"Land of Wano\" type or is [Portgas.D.Ace], give up to 1 rested DON!! card to 1 of your Leader. Then, this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.74,
+          "midPrice": 12.6,
+          "highPrice": 30,
+          "marketPrice": 10.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629096,
+      "cardId": "EB02-006",
+      "name": "Yamato (Alternate Art)",
+      "cleanName": "Yamato Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629096/one-piece-card-game-extra-booster-anime-25th-collection-yamato-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629096_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] If your Leader has the \"Land of Wano\" type or is [Portgas.D.Ace], give up to 1 rested DON!! card to 1 of your Leader. Then, this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 40,
+          "midPrice": 47.12,
+          "highPrice": 100,
+          "marketPrice": 42.79,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629097,
+      "cardId": "EB02-007",
+      "name": "Cloven Rose Blizzard",
+      "cleanName": "Cloven Rose Blizzard",
+      "url": "https://www.tcgplayer.com/product/629097/one-piece-card-game-extra-booster-anime-25th-collection-cloven-rose-blizzard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629097_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Water Seven",
+      "attribute": null,
+      "effectText": "[Main] Up to a total of 3 of your Leader and Character cards gain +1000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 3000 power or less.<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.99,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629098,
+      "cardId": "EB02-008",
+      "name": "The Peak",
+      "cleanName": "The Peak",
+      "url": "https://www.tcgplayer.com/product/629098/one-piece-card-game-extra-booster-anime-25th-collection-the-peak",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629098_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.33,
+          "midPrice": 0.75,
+          "highPrice": 55,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629099,
+      "cardId": "EB02-009",
+      "name": "Thousand Sunny",
+      "cleanName": "Thousand Sunny",
+      "url": "https://www.tcgplayer.com/product/629099/one-piece-card-game-extra-booster-anime-25th-collection-thousand-sunny",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629099_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage:</strong> Give up to 1 of your currently given DON!! cards to 1 of your \"Straw Hat Crew\" type Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629100,
+      "cardId": "EB02-010",
+      "name": "Monkey.D.Luffy (010)",
+      "cleanName": "MonkeyDLuffy 010",
+      "url": "https://www.tcgplayer.com/product/629100/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-010",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629100_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>DON!! 2:</strong> If the only Characters on your field are \"Straw Hat Crew\" type Characters, set up to 2 of your DON!! cards as active. Then, this Leader gains +1000 power until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.38,
+          "highPrice": 5,
+          "marketPrice": 0.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629101,
+      "cardId": "EB02-010",
+      "name": "Monkey.D.Luffy (010) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 010 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629101/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-010-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629101_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>DON!! 2:</strong> If the only Characters on your field are \"Straw Hat Crew\" type Characters, set up to 2 of your DON!! cards as active. Then, this Leader gains +1000 power until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1000,
+          "midPrice": 2449.35,
+          "highPrice": 7500,
+          "marketPrice": 731.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629102,
+      "cardId": "EB02-011",
+      "name": "Arlong",
+      "cleanName": "Arlong",
+      "url": "https://www.tcgplayer.com/product/629102/one-piece-card-game-extra-booster-anime-25th-collection-arlong",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629102_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Fish-Man;Arlong Pirates;East Blue",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"Fish-Man\" or \"East Blue\" type, give up to 1 rested DON!! card to 1 of your Leader. Then, up to 1 of your opponent's Characters with a cost of 5 or less cannot be rested until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.2,
+          "midPrice": 7,
+          "highPrice": 50,
+          "marketPrice": 4.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629103,
+      "cardId": "EB02-011",
+      "name": "Arlong (Alternate Art)",
+      "cleanName": "Arlong Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629103/one-piece-card-game-extra-booster-anime-25th-collection-arlong-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629103_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Fish-Man;Arlong Pirates;East Blue",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"Fish-Man\" or \"East Blue\" type, give up to 1 rested DON!! card to 1 of your Leader. Then, up to 1 of your opponent's Characters with a cost of 5 or less cannot be rested until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20,
+          "midPrice": 25.28,
+          "highPrice": 300,
+          "marketPrice": 24.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629104,
+      "cardId": "EB02-012",
+      "name": "Gaimon",
+      "cleanName": "Gaimon",
+      "url": "https://www.tcgplayer.com/product/629104/one-piece-card-game-extra-booster-anime-25th-collection-gaimon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629104_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "East Blue",
+      "attribute": "Wisdom",
+      "effectText": "If you have a [Sarfunkel], this Character gains [Blocker].",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629105,
+      "cardId": "EB02-013",
+      "name": "Carrot",
+      "cleanName": "Carrot",
+      "url": "https://www.tcgplayer.com/product/629105/one-piece-card-game-extra-booster-anime-25th-collection-carrot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629105_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 3 or more DON!! cards on your field, look at 7 cards from the top of your deck; reveal up to 1 [Zou] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Zou] from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 2.39,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629106,
+      "cardId": "EB02-014",
+      "name": "Sarfunkel",
+      "cleanName": "Sarfunkel",
+      "url": "https://www.tcgplayer.com/product/629106/one-piece-card-game-extra-booster-anime-25th-collection-sarfunkel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629106_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "East Blue",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Play up to 1 [Gaimon] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629107,
+      "cardId": "EB02-015",
+      "name": "Jewelry Bonney",
+      "cleanName": "Jewelry Bonney",
+      "url": "https://www.tcgplayer.com/product/629107/one-piece-card-game-extra-booster-anime-25th-collection-jewelry-bonney",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629107_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your opponent's rested Characters will not become active in your opponent's next Refresh Phase. Then, set up to 1 of your DON!! cards as active at the end of this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 2.98,
+          "highPrice": 20,
+          "marketPrice": 1.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629108,
+      "cardId": "EB02-015",
+      "name": "Jewelry Bonney (Alternate Art)",
+      "cleanName": "Jewelry Bonney Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629108/one-piece-card-game-extra-booster-anime-25th-collection-jewelry-bonney-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629108_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your opponent's rested Characters will not become active in your opponent's next Refresh Phase. Then, set up to 1 of your DON!! cards as active at the end of this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 18.84,
+          "midPrice": 24.09,
+          "highPrice": 75,
+          "marketPrice": 20.68,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629109,
+      "cardId": "EB02-016",
+      "name": "Chopperman",
+      "cleanName": "Chopperman",
+      "url": "https://www.tcgplayer.com/product/629109/one-piece-card-game-extra-booster-anime-25th-collection-chopperman",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629109_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "Also treat this card's name as [Tony Tony.Chopper] according to the rules.<br>\r\n[On Play] Play up to 1 \"Animal\" type Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629110,
+      "cardId": "EB02-017",
+      "name": "Nami",
+      "cleanName": "Nami",
+      "url": "https://www.tcgplayer.com/product/629110/one-piece-card-game-extra-booster-anime-25th-collection-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629110_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.91,
+          "midPrice": 5.55,
+          "highPrice": 8.99,
+          "marketPrice": 5.01,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629111,
+      "cardId": "EB02-017",
+      "name": "Nami (Alternate Art)",
+      "cleanName": "Nami Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629111/one-piece-card-game-extra-booster-anime-25th-collection-nami-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629111_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 82.3,
+          "midPrice": 100,
+          "highPrice": 500,
+          "marketPrice": 82.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629112,
+      "cardId": "EB02-018",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/629112/one-piece-card-game-extra-booster-anime-25th-collection-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629112_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Buggy Pirates;East Blue",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have no other [Buggy] Characters, up to 1 of your Leader gains [Double Attack] during this turn.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.5,
+          "highPrice": 59,
+          "marketPrice": 0.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629113,
+      "cardId": "EB02-019",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/629113/one-piece-card-game-extra-booster-anime-25th-collection-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629113_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Slash",
+      "effectText": "If your opponent has 2 or more Characters, this Character can attack Characters on the turn in which it is played.<br>\r\n[On Play] If your Leader has the \"Straw Hat Crew\" type, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.24,
+          "midPrice": 0.55,
+          "highPrice": 10,
+          "marketPrice": 0.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629114,
+      "cardId": "EB02-020",
+      "name": "We Are!",
+      "cleanName": "We Are",
+      "url": "https://www.tcgplayer.com/product/629114/one-piece-card-game-extra-booster-anime-25th-collection-we-are",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629114_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.49,
+          "midPrice": 2.99,
+          "highPrice": 15,
+          "marketPrice": 1.68,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629115,
+      "cardId": "EB02-021",
+      "name": "Gum-Gum Giant Pistol",
+      "cleanName": "Gum Gum Giant Pistol",
+      "url": "https://www.tcgplayer.com/product/629115/one-piece-card-game-extra-booster-anime-25th-collection-gum-gum-giant-pistol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629115_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Water Seven",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your \"Straw Hat Crew\" type Characters gains +6000 power during this turn. Then, the selected Character will not become active in your next Refresh Phase.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629116,
+      "cardId": "EB02-022",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/629116/one-piece-card-game-extra-booster-anime-25th-collection-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629116_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 2 or less Characters with 5000 power or more, play up to 1 Character card with 6000 power or less and no base effect from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.27,
+          "highPrice": 4,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629117,
+      "cardId": "EB02-022",
+      "name": "Usopp (Alternate Art)",
+      "cleanName": "Usopp Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629117/one-piece-card-game-extra-booster-anime-25th-collection-usopp-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629117_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 2 or less Characters with 5000 power or more, play up to 1 Character card with 6000 power or less and no base effect from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15.98,
+          "midPrice": 23,
+          "highPrice": 89.87,
+          "marketPrice": 21.77,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629118,
+      "cardId": "EB02-023",
+      "name": "Crocodile",
+      "cleanName": "Crocodile",
+      "url": "https://www.tcgplayer.com/product/629118/one-piece-card-game-extra-booster-anime-25th-collection-crocodile",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629118_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] When your opponent's Character is returned to the owner's hand by your effect, look at 3 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629119,
+      "cardId": "EB02-024",
+      "name": "Sogeking",
+      "cleanName": "Sogeking",
+      "url": "https://www.tcgplayer.com/product/629119/one-piece-card-game-extra-booster-anime-25th-collection-sogeking",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629119_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Sniper Island",
+      "attribute": "Ranged",
+      "effectText": "Also treat this card's name as [Usopp] according to the rules.<br>\r\n[On Play] Draw 2 cards and place 2 cards from your hand at the bottom of your deck in any order. Then, return up to 1 Character with a cost of 1 or less to the owner's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629120,
+      "cardId": "EB02-025",
+      "name": "Donquixote Rosinante",
+      "cleanName": "Donquixote Rosinante",
+      "url": "https://www.tcgplayer.com/product/629120/one-piece-card-game-extra-booster-anime-25th-collection-donquixote-rosinante",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629120_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest 1 of your DON!! cards and this Character:</strong> If your Leader is [Donquixote Rosinante], look at 5 cards from the top of your deck; play up to 1 Character card with a cost of 2 or less rested. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629121,
+      "cardId": "EB02-026",
+      "name": "Nefeltari Vivi",
+      "cleanName": "Nefeltari Vivi",
+      "url": "https://www.tcgplayer.com/product/629121/one-piece-card-game-extra-booster-anime-25th-collection-nefeltari-vivi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629121_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader is multicolored and you have 5 or less cards in your hand, draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8.22,
+          "midPrice": 10.5,
+          "highPrice": 19.99,
+          "marketPrice": 10.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629122,
+      "cardId": "EB02-026",
+      "name": "Nefeltari Vivi (Alternate Art)",
+      "cleanName": "Nefeltari Vivi Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629122/one-piece-card-game-extra-booster-anime-25th-collection-nefeltari-vivi-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629122_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader is multicolored and you have 5 or less cards in your hand, draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 54.98,
+          "midPrice": 61.2,
+          "highPrice": 100,
+          "marketPrice": 59.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629123,
+      "cardId": "EB02-027",
+      "name": "Vista",
+      "cleanName": "Vista",
+      "url": "https://www.tcgplayer.com/product/629123/one-piece-card-game-extra-booster-anime-25th-collection-vista",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629123_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters with 1000 power or less at the bottom of the owner's deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629124,
+      "cardId": "EB02-028",
+      "name": "Portgas.D.Ace",
+      "cleanName": "PortgasDAce",
+      "url": "https://www.tcgplayer.com/product/629124/one-piece-card-game-extra-booster-anime-25th-collection-portgasdace",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629124_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Alabasta;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", look at 5 cards from the top of your deck; reveal up to 1 Character card with a cost of 2 and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 Character card with a cost of 2 from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.29,
+          "highPrice": 4,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629125,
+      "cardId": "EB02-029",
+      "name": "Grandpa Ryu",
+      "cleanName": "Grandpa Ryu",
+      "url": "https://www.tcgplayer.com/product/629125/one-piece-card-game-extra-booster-anime-25th-collection-grandpa-ryu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629125_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;East Blue",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629126,
+      "cardId": "EB02-030",
+      "name": "And That's When Somebody Makes Fun of Their Friend's Dream!!!!",
+      "cleanName": "And Thats When Somebody Makes Fun of Their Friends Dream",
+      "url": "https://www.tcgplayer.com/product/629126/one-piece-card-game-extra-booster-anime-25th-collection-and-thats-when-somebody-makes-fun-of-their-friends-dream",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629126_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Alabasta;Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] If any of your Characters would be K.O.'d in battle during this turn, you may trash 1 card from your hand instead.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629127,
+      "cardId": "EB02-031",
+      "name": "Hope",
+      "cleanName": "Hope",
+      "url": "https://www.tcgplayer.com/product/629127/one-piece-card-game-extra-booster-anime-25th-collection-hope",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629127_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 5,
+          "marketPrice": 0.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629128,
+      "cardId": "EB02-032",
+      "name": "Iceburg",
+      "cleanName": "Iceburg",
+      "url": "https://www.tcgplayer.com/product/629128/one-piece-card-game-extra-booster-anime-25th-collection-iceburg",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629128_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Galley-La Company;Water Seven",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have 3 or more DON!! cards on your field, look at 7 cards from the top of your deck; reveal up to 1 [Galley-La Company] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Galley-La Company] from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629129,
+      "cardId": "EB02-033",
+      "name": "Klabautermann",
+      "cleanName": "Klabautermann",
+      "url": "https://www.tcgplayer.com/product/629129/one-piece-card-game-extra-booster-anime-25th-collection-klabautermann",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629129_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Sprite",
+      "attribute": "Wisdom",
+      "effectText": "If you have [Merry Go] on your field, this Character gains [Blocker].",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629130,
+      "cardId": "EB02-034",
+      "name": "Komei",
+      "cleanName": "Komei",
+      "url": "https://www.tcgplayer.com/product/629130/one-piece-card-game-extra-booster-anime-25th-collection-komei",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629130_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy;Foxy Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629131,
+      "cardId": "EB02-035",
+      "name": "Sanji & Pudding",
+      "cleanName": "Sanji and Pudding",
+      "url": "https://www.tcgplayer.com/product/629131/one-piece-card-game-extra-booster-anime-25th-collection-sanji-and-pudding",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629131_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Big Mom Pirates",
+      "attribute": "Strike;Wisdom",
+      "effectText": "[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active.<br>\r\n[On Play] If the number of DON!! cards on your field is equal to or less than the number on your opponent's field, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11,
+          "midPrice": 12.99,
+          "highPrice": 38.86,
+          "marketPrice": 12.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629132,
+      "cardId": "EB02-035",
+      "name": "Sanji & Pudding (Alternate Art)",
+      "cleanName": "Sanji and Pudding Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629132/one-piece-card-game-extra-booster-anime-25th-collection-sanji-and-pudding-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629132_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Big Mom Pirates",
+      "attribute": "Strike;Wisdom",
+      "effectText": "[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active.<br>\r\n[On Play] If the number of DON!! cards on your field is equal to or less than the number on your opponent's field, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 54.99,
+          "midPrice": 65,
+          "highPrice": 350,
+          "marketPrice": 59.64,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629133,
+      "cardId": "EB02-036",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/629133/one-piece-card-game-extra-booster-anime-25th-collection-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629133_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] <strong>DON!! 1:</strong> Look at 3 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.05,
+          "highPrice": 5,
+          "marketPrice": 1.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629134,
+      "cardId": "EB02-036",
+      "name": "Nico Robin (Alternate Art)",
+      "cleanName": "Nico Robin Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629134/one-piece-card-game-extra-booster-anime-25th-collection-nico-robin-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629134_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] <strong>DON!! 1:</strong> Look at 3 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 54.91,
+          "midPrice": 60.51,
+          "highPrice": 350,
+          "marketPrice": 58.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629135,
+      "cardId": "EB02-037",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/629135/one-piece-card-game-extra-booster-anime-25th-collection-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629135_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Water Seven",
+      "attribute": "Strike",
+      "effectText": "[On Play]/[When Attacking] If your Leader has the \"Straw Hat Crew\" type and the number of DON!! cards on your field is equal to or less than the number on your opponent's field, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.33,
+          "highPrice": 3,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629136,
+      "cardId": "EB02-038",
+      "name": "Magellan",
+      "cleanName": "Magellan",
+      "url": "https://www.tcgplayer.com/product/629136/one-piece-card-game-extra-booster-anime-25th-collection-magellan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629136_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Special",
+      "effectText": "[On Play] Play up to 1 \"Impel Down\" type Character card with a cost of 2 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629137,
+      "cardId": "EB02-039",
+      "name": "GERMA 66",
+      "cleanName": "GERMA 66",
+      "url": "https://www.tcgplayer.com/product/629137/one-piece-card-game-extra-booster-anime-25th-collection-germa-66",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629137_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may trash 1 \"GERMA 66\" type Character card with 4000 power or less from your hand:</strong> If the number of DON!! cards on your field is equal to or less than the number on your opponent's field, play up to 1 Character card with 5000 to 7000 power and the same card name as the trashed card from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629138,
+      "cardId": "EB02-040",
+      "name": "BRAND NEW WORLD",
+      "cleanName": "BRAND NEW WORLD",
+      "url": "https://www.tcgplayer.com/product/629138/one-piece-card-game-extra-booster-anime-25th-collection-brand-new-world",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629138_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.55,
+          "highPrice": 5,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629139,
+      "cardId": "EB02-041",
+      "name": "Merry Go (041)",
+      "cleanName": "Merry Go 041",
+      "url": "https://www.tcgplayer.com/product/629139/one-piece-card-game-extra-booster-anime-25th-collection-merry-go-041",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629139_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Stage",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[On Play] If your Leader has the \"Straw Hat Crew\" type, draw 1 card.<br>\r\n[Activate: Main] <strong>You may rest this Stage:</strong> If the number of DON!! cards on your field is equal to or less than the number on your opponent's field, up to 1 of your \"Straw Hat Crew\" type Characters gains +2 cost until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.75,
+          "highPrice": 5,
+          "marketPrice": 0.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629140,
+      "cardId": "EB02-042",
+      "name": "All-Hunt Grount",
+      "cleanName": "All Hunt Grount",
+      "url": "https://www.tcgplayer.com/product/629140/one-piece-card-game-extra-booster-anime-25th-collection-all-hunt-grount",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629140_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629141,
+      "cardId": "EB02-043",
+      "name": "Jonathan",
+      "cleanName": "Jonathan",
+      "url": "https://www.tcgplayer.com/product/629141/one-piece-card-game-extra-booster-anime-25th-collection-jonathan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629141_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629142,
+      "cardId": "EB02-044",
+      "name": "Sengoku",
+      "cleanName": "Sengoku",
+      "url": "https://www.tcgplayer.com/product/629142/one-piece-card-game-extra-booster-anime-25th-collection-sengoku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629142_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]<br>\r\n[On Play] Play up to 1 black \"Navy\" type Character card with a cost of 4 or less from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.99,
+          "midPrice": 4.99,
+          "highPrice": 40,
+          "marketPrice": 3.66,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629143,
+      "cardId": "EB02-044",
+      "name": "Sengoku (Alternate Art)",
+      "cleanName": "Sengoku Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629143/one-piece-card-game-extra-booster-anime-25th-collection-sengoku-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629143_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]<br>\r\n[On Play] Play up to 1 black \"Navy\" type Character card with a cost of 4 or less from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14,
+          "midPrice": 18.37,
+          "highPrice": 420.69,
+          "marketPrice": 15.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629144,
+      "cardId": "EB02-045",
+      "name": "Trafalgar Law",
+      "cleanName": "Trafalgar Law",
+      "url": "https://www.tcgplayer.com/product/629144/one-piece-card-game-extra-booster-anime-25th-collection-trafalgar-law",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629144_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[Blocker]<br>\r\n[On Play] <strong>You may place 2 cards from your trash at the bottom of your deck in any order:</strong> Choose one:<br>\r\n• Draw 1 card.<br>\r\n• If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 2.75,
+          "highPrice": 15,
+          "marketPrice": 2.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629145,
+      "cardId": "EB02-045",
+      "name": "Trafalgar Law (Alternate Art)",
+      "cleanName": "Trafalgar Law Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629145/one-piece-card-game-extra-booster-anime-25th-collection-trafalgar-law-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629145_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[Blocker]<br>\r\n[On Play] <strong>You may place 2 cards from your trash at the bottom of your deck in any order:</strong> Choose one:<br>\r\n• Draw 1 card.<br>\r\n• If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 21.94,
+          "midPrice": 25.89,
+          "highPrice": 45,
+          "marketPrice": 22.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629146,
+      "cardId": "EB02-046",
+      "name": "Hildon",
+      "cleanName": "Hildon",
+      "url": "https://www.tcgplayer.com/product/629146/one-piece-card-game-extra-booster-anime-25th-collection-hildon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629146_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Trash 2 cards from the top of your deck and give up to 1 of your opponent's Characters 1 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629147,
+      "cardId": "EB02-047",
+      "name": "Blueno",
+      "cleanName": "Blueno",
+      "url": "https://www.tcgplayer.com/product/629147/one-piece-card-game-extra-booster-anime-25th-collection-blueno",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629147_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "CP9",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may trash 1 card from your hand and trash this Character:</strong> Play up to 1 Character card with a type including \"CP\" and a cost of 5 or less other than [Blueno] from your trash.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629148,
+      "cardId": "EB02-048",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/629148/one-piece-card-game-extra-booster-anime-25th-collection-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629148_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] Add up to 1 [Laboon] from your trash to your hand.<br>\r\n[On K.O.] Play up to 1 [Laboon] with a cost of 4 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.28,
+          "highPrice": 5,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629149,
+      "cardId": "EB02-048",
+      "name": "Brook (Alternate Art)",
+      "cleanName": "Brook Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629149/one-piece-card-game-extra-booster-anime-25th-collection-brook-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629149_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] Add up to 1 [Laboon] from your trash to your hand.<br>\r\n[On K.O.] Play up to 1 [Laboon] with a cost of 4 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 22.91,
+          "midPrice": 39.87,
+          "highPrice": 160,
+          "marketPrice": 26.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629150,
+      "cardId": "EB02-049",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/629150/one-piece-card-game-extra-booster-anime-25th-collection-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629150_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] Give up to 2 rested DON!! cards to 1 of your Leader.<br>\r\n[Activate: Main] <strong>You may rest this Character:</strong> If your Leader is [Monkey.D.Garp], K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629151,
+      "cardId": "EB02-050",
+      "name": "Kokoro no Chizu",
+      "cleanName": "Kokoro no Chizu",
+      "url": "https://www.tcgplayer.com/product/629151/one-piece-card-game-extra-booster-anime-25th-collection-kokoro-no-chizu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629151_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 4.99,
+          "marketPrice": 0.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629152,
+      "cardId": "EB02-051",
+      "name": "Three-Pace Hum Soul Notch Slash",
+      "cleanName": "Three Pace Hum Soul Notch Slash",
+      "url": "https://www.tcgplayer.com/product/629152/one-piece-card-game-extra-booster-anime-25th-collection-three-pace-hum-soul-notch-slash",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629152_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Former Rumbar Pirates",
+      "attribute": null,
+      "effectText": "[Main] Choose one:<br>\r\n• K.O. up to 1 of your opponent's Characters with a cost of 2 or less.<br>\r\n• Give up to 1 of your opponent's Characters 4 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629153,
+      "cardId": "EB02-052",
+      "name": "Enel",
+      "cleanName": "Enel",
+      "url": "https://www.tcgplayer.com/product/629153/one-piece-card-game-extra-booster-anime-25th-collection-enel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629153_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "11000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "If your Leader has the \"Sky Island\" type, this Character gains [Rush].<br>\r\n[When Attacking] <strong>You may trash 1 card from your hand:</strong> If you have 1 or less Life cards, add up to 1 card from the top of your deck to the top of your Life cards. Then, this Character gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7,
+          "midPrice": 12.55,
+          "highPrice": 49.99,
+          "marketPrice": 9.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629154,
+      "cardId": "EB02-052",
+      "name": "Enel (Alternate Art)",
+      "cleanName": "Enel Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629154/one-piece-card-game-extra-booster-anime-25th-collection-enel-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629154_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "11000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "If your Leader has the \"Sky Island\" type, this Character gains [Rush].<br>\r\n[When Attacking] <strong>You may trash 1 card from your hand:</strong> If you have 1 or less Life cards, add up to 1 card from the top of your deck to the top of your Life cards. Then, this Character gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 38.67,
+          "midPrice": 55.88,
+          "highPrice": 250,
+          "marketPrice": 56.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629155,
+      "cardId": "EB02-053",
+      "name": "Myskina Olga",
+      "cleanName": "Myskina Olga",
+      "url": "https://www.tcgplayer.com/product/629155/one-piece-card-game-extra-booster-anime-25th-collection-myskina-olga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629155_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Alchemi",
+      "attribute": "Wisdom",
+      "effectText": "[On Play]/[On K.O.] Look at up to 1 card from the top of your or your opponent's Life cards and place it at the top or bottom of the Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629156,
+      "cardId": "EB02-054",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/629156/one-piece-card-game-extra-booster-anime-25th-collection-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629156_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If you have 2 or less Life cards, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.39,
+          "midPrice": 0.75,
+          "highPrice": 7,
+          "marketPrice": 0.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629157,
+      "cardId": "EB02-054",
+      "name": "Sanji (Alternate Art)",
+      "cleanName": "Sanji Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629157/one-piece-card-game-extra-booster-anime-25th-collection-sanji-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629157_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If you have 2 or less Life cards, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14.99,
+          "midPrice": 22.49,
+          "highPrice": 49.99,
+          "marketPrice": 20.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629158,
+      "cardId": "EB02-055",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/629158/one-piece-card-game-extra-booster-anime-25th-collection-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629158_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Trigger] If your Leader has the \"Fish-Man\" or \"Merfolk\" type and you have 2 or less Life cards, play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 2,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629159,
+      "cardId": "EB02-056",
+      "name": "Vegapunk",
+      "cleanName": "Vegapunk",
+      "url": "https://www.tcgplayer.com/product/629159/one-piece-card-game-extra-booster-anime-25th-collection-vegapunk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629159_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]<br>\r\n[On Play] Look at 5 cards from the top of your deck; play up to 1 \"Scientist\" type Character card with a cost of 5 or less other than [Vegapunk]. Then, place the rest at the bottom of your deck in any order and if your opponent has 2 or less Characters, trash 1 card from your hand.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.45,
+          "midPrice": 7.25,
+          "highPrice": 20,
+          "marketPrice": 5.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629160,
+      "cardId": "EB02-056",
+      "name": "Vegapunk (Alternate Art)",
+      "cleanName": "Vegapunk Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629160/one-piece-card-game-extra-booster-anime-25th-collection-vegapunk-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629160_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]<br>\r\n[On Play] Look at 5 cards from the top of your deck; play up to 1 \"Scientist\" type Character card with a cost of 5 or less other than [Vegapunk]. Then, place the rest at the bottom of your deck in any order and if your opponent has 2 or less Characters, trash 1 card from your hand.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 26.24,
+          "midPrice": 30.88,
+          "highPrice": 100,
+          "marketPrice": 29.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629161,
+      "cardId": "EB02-057",
+      "name": "Mad Treasure",
+      "cleanName": "Mad Treasure",
+      "url": "https://www.tcgplayer.com/product/629161/one-piece-card-game-extra-booster-anime-25th-collection-mad-treasure",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629161_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Treasure Pirates",
+      "attribute": "Special",
+      "effectText": "[When Attacking] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> Add up to 1 of your opponent's Characters with a cost of 3 or less to the top or bottom of your opponent's Life cards face-up.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629162,
+      "cardId": "EB02-058",
+      "name": "UUUUUS!",
+      "cleanName": "UUUUUS",
+      "url": "https://www.tcgplayer.com/product/629162/one-piece-card-game-extra-booster-anime-25th-collection-uuuuus",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629162_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Music",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 4 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 2,
+          "highPrice": 7.99,
+          "marketPrice": 1.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629163,
+      "cardId": "EB02-059",
+      "name": "Without Your Help I Can't Become the King of the Pirates!!!!",
+      "cleanName": "Without Your Help I Cant Become the King of the Pirates",
+      "url": "https://www.tcgplayer.com/product/629163/one-piece-card-game-extra-booster-anime-25th-collection-without-your-help-i-cant-become-the-king-of-the-pirates",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629163_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +1000 power during this battle. Then, if you have 1 or less Life cards, play up to 1 of your yellow \"Straw Hat Crew\" type Character cards or [Sanji] with a cost of 5 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629164,
+      "cardId": "EB02-060",
+      "name": "Merry Go (060)",
+      "cleanName": "Merry Go 060",
+      "url": "https://www.tcgplayer.com/product/629164/one-piece-card-game-extra-booster-anime-25th-collection-merry-go-060",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629164_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage and turn 1 card from the top of your Life cards face-up:</strong> Up to 1 of your \"Straw Hat Crew\" type Characters gains +1000 power until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.99,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629165,
+      "cardId": "EB02-061",
+      "name": "Monkey.D.Luffy (061)",
+      "cleanName": "MonkeyDLuffy 061",
+      "url": "https://www.tcgplayer.com/product/629165/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-061",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629165_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Water Seven",
+      "attribute": "Strike",
+      "effectText": "If your Leader is multicolored and your opponent has 5 or more DON!! cards on their field, this Character gains [Rush].<br>\r\n[When Attacking] [Once Per Turn] <strong>You may return 2 of your active DON!! cards to your DON!! deck:</strong> Set this Character as active. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11,
+          "midPrice": 15,
+          "highPrice": 93.36,
+          "marketPrice": 11.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629166,
+      "cardId": "EB02-061",
+      "name": "Monkey.D.Luffy (061) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 061 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/629166/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-061-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629166_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Water Seven",
+      "attribute": "Strike",
+      "effectText": "If your Leader is multicolored and your opponent has 5 or more DON!! cards on their field, this Character gains [Rush].<br>\r\n[When Attacking] [Once Per Turn] <strong>You may return 2 of your active DON!! cards to your DON!! deck:</strong> Set this Character as active. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 75,
+          "midPrice": 94.99,
+          "highPrice": 300,
+          "marketPrice": 91.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629167,
+      "cardId": "EB02-061",
+      "name": "Monkey.D.Luffy (061) (Manga)",
+      "cleanName": "MonkeyDLuffy 061 Manga",
+      "url": "https://www.tcgplayer.com/product/629167/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-061-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629167_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Water Seven",
+      "attribute": "Strike",
+      "effectText": "If your Leader is multicolored and your opponent has 5 or more DON!! cards on their field, this Character gains [Rush].<br>\r\n[When Attacking] [Once Per Turn] <strong>You may return 2 of your active DON!! cards to your DON!! deck:</strong> Set this Character as active. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5500,
+          "midPrice": 5999.99,
+          "highPrice": 18000,
+          "marketPrice": 1607.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629168,
+      "cardId": "OP05-001",
+      "name": "Sabo (SP)",
+      "cleanName": "Sabo SP",
+      "url": "https://www.tcgplayer.com/product/629168/one-piece-card-game-extra-booster-anime-25th-collection-sabo-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629168_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Opponent's Turn] [Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character 1000 power during this turn instead of that Character being K.O.'d.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 949.99,
+          "midPrice": 1375,
+          "highPrice": 1800,
+          "marketPrice": 334.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629169,
+      "cardId": "OP05-002",
+      "name": "Belo Betty (SP)",
+      "cleanName": "Belo Betty SP",
+      "url": "https://www.tcgplayer.com/product/629169/one-piece-card-game-extra-booster-anime-25th-collection-belo-betty-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629169_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may trash 1 \"Revolutionary Army\" type card from your hand:</strong> Up to 3 of your \"Revolutionary Army\" type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2995,
+          "midPrice": 2995,
+          "highPrice": 2995,
+          "marketPrice": 266.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629170,
+      "cardId": "OP05-022",
+      "name": "Donquixote Rosinante (SP)",
+      "cleanName": "Donquixote Rosinante SP",
+      "url": "https://www.tcgplayer.com/product/629170/one-piece-card-game-extra-booster-anime-25th-collection-donquixote-rosinante-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629170_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Green",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 649.99,
+          "midPrice": 698.99,
+          "highPrice": 1000,
+          "marketPrice": 228.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629171,
+      "cardId": "OP05-060",
+      "name": "Monkey.D.Luffy (SP)",
+      "cleanName": "MonkeyDLuffy SP",
+      "url": "https://www.tcgplayer.com/product/629171/one-piece-card-game-extra-booster-anime-25th-collection-monkeydluffy-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629171_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may add 1 card from the top of your Life cards to your hand:</strong> If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5500,
+          "midPrice": 6500,
+          "highPrice": 7000,
+          "marketPrice": 649.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629172,
+      "cardId": "OP05-098",
+      "name": "Enel (SP)",
+      "cleanName": "Enel SP",
+      "url": "https://www.tcgplayer.com/product/629172/one-piece-card-game-extra-booster-anime-25th-collection-enel-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629172_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] [Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 897.78,
+          "midPrice": 1023.89,
+          "highPrice": 1150,
+          "marketPrice": 275.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629173,
+      "cardId": "OP06-001",
+      "name": "Uta (SP)",
+      "cleanName": "Uta SP",
+      "url": "https://www.tcgplayer.com/product/629173/one-piece-card-game-extra-booster-anime-25th-collection-uta-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629173_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[When Attacking] <strong>You may trash 1 \"FILM\" type card from your hand:</strong> Give up to 1 of your opponent's Characters 2000 power during this turn. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 950,
+          "midPrice": 999.99,
+          "highPrice": 999.99,
+          "marketPrice": 296.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629174,
+      "cardId": "OP06-020",
+      "name": "Hody Jones (SP)",
+      "cleanName": "Hody Jones SP",
+      "url": "https://www.tcgplayer.com/product/629174/one-piece-card-game-extra-booster-anime-25th-collection-hody-jones-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629174_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Fish-Man;New Fish-Man Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may rest this Leader:</strong> Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 3 or less. Then, you cannot add Life cards to your hand using your own effects during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 373.71,
+          "midPrice": 499.98,
+          "highPrice": 1850,
+          "marketPrice": 86.7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629175,
+      "cardId": "OP06-021",
+      "name": "Perona (SP)",
+      "cleanName": "Perona SP",
+      "url": "https://www.tcgplayer.com/product/629175/one-piece-card-game-extra-booster-anime-25th-collection-perona-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629175_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] Choose one:<br>\r\n• Rest up to 1 of your opponent's Characters with a cost of 4 or less.<br>\r\n• Give up to 1 of your opponent's Characters 1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1300,
+          "midPrice": 1300,
+          "highPrice": 1300,
+          "marketPrice": 360.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629176,
+      "cardId": "OP06-022",
+      "name": "Yamato (SP)",
+      "cleanName": "Yamato SP",
+      "url": "https://www.tcgplayer.com/product/629176/one-piece-card-game-extra-booster-anime-25th-collection-yamato-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629176_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Double Attack] <em>(This card deals 2 damage.)</em><br>\r\n[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1050,
+          "midPrice": 1150,
+          "highPrice": 4000,
+          "marketPrice": 369,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629177,
+      "cardId": "OP06-042",
+      "name": "Vinsmoke Reiju (SP)",
+      "cleanName": "Vinsmoke Reiju SP",
+      "url": "https://www.tcgplayer.com/product/629177/one-piece-card-game-extra-booster-anime-25th-collection-vinsmoke-reiju-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629177_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 600,
+          "midPrice": 1200,
+          "highPrice": 1250.68,
+          "marketPrice": 286.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629178,
+      "cardId": "OP06-080",
+      "name": "Gecko Moria (SP)",
+      "cleanName": "Gecko Moria SP",
+      "url": "https://www.tcgplayer.com/product/629178/one-piece-card-game-extra-booster-anime-25th-collection-gecko-moria-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629178_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Seven Warlords of the Sea;Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [When Attacking] 2 <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may trash 1 card from your hand:</strong> Trash 2 cards from the top of your deck and play up to 1 \"Thriller Bark Pirates\" type Character card with a cost of 4 or less from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 480,
+          "midPrice": 550,
+          "highPrice": 1200,
+          "marketPrice": 238.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629179,
+      "cardId": "OP07-001",
+      "name": "Monkey.D.Dragon (SP)",
+      "cleanName": "MonkeyDDragon SP",
+      "url": "https://www.tcgplayer.com/product/629179/one-piece-card-game-extra-booster-anime-25th-collection-monkeyddragon-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629179_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 2 total of your currently given DON!! cards to 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 690,
+          "midPrice": 1845,
+          "highPrice": 2999.99,
+          "marketPrice": 197.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629180,
+      "cardId": "OP07-019",
+      "name": "Jewelry Bonney (SP)",
+      "cleanName": "Jewelry Bonney SP",
+      "url": "https://www.tcgplayer.com/product/629180/one-piece-card-game-extra-booster-anime-25th-collection-jewelry-bonney-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629180_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] 1 <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Rest up to 1 of your opponent's Leader or Character cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1898.99,
+          "midPrice": 1966.44,
+          "highPrice": 2033.88,
+          "marketPrice": 527.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629181,
+      "cardId": "OP07-038",
+      "name": "Boa Hancock (SP)",
+      "cleanName": "Boa Hancock SP",
+      "url": "https://www.tcgplayer.com/product/629181/one-piece-card-game-extra-booster-anime-25th-collection-boa-hancock-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629181_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] This effect can be activated when a Character is removed from the field by your effect. If you have 5 or less cards in your hand, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4998.69,
+          "midPrice": 6969.69,
+          "highPrice": 15000,
+          "marketPrice": 532.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629182,
+      "cardId": "OP07-059",
+      "name": "Foxy (SP)",
+      "cleanName": "Foxy SP",
+      "url": "https://www.tcgplayer.com/product/629182/one-piece-card-game-extra-booster-anime-25th-collection-foxy-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629182_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Foxy Pirates",
+      "attribute": "Special",
+      "effectText": "[When Attacking] <strong>DON!! 3 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> If you have 3 or more \"Foxy Pirates\" type Characters, select your opponent's rested Leader and up to 1 Character card. The selected cards will not become active in your opponent's next Refresh Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 400.19,
+          "midPrice": 799.97,
+          "highPrice": 999.99,
+          "marketPrice": 130.95,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629183,
+      "cardId": "OP07-079",
+      "name": "Rob Lucci (SP)",
+      "cleanName": "Rob Lucci SP",
+      "url": "https://www.tcgplayer.com/product/629183/one-piece-card-game-extra-booster-anime-25th-collection-rob-lucci-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629183_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "CP0",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] <strong>You may trash 2 cards from the top of your deck:</strong> Give up to 1 of your opponent's Characters 1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 495,
+          "midPrice": 529.65,
+          "highPrice": 1498.99,
+          "marketPrice": 207.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629184,
+      "cardId": "OP07-097",
+      "name": "Vegapunk (SP)",
+      "cleanName": "Vegapunk SP",
+      "url": "https://www.tcgplayer.com/product/629184/one-piece-card-game-extra-booster-anime-25th-collection-vegapunk-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629184_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "2",
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "This Leader cannot attack.<br>\r\n[Activate: Main] [Once Per Turn] 1 <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Select up to 1 \"Egghead\" type card with a cost of 5 or less from your hand and play it or add it to the top of your Life cards face-up.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 900,
+          "midPrice": 998.68,
+          "highPrice": 999,
+          "marketPrice": 345.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629185,
+      "cardId": "OP08-001",
+      "name": "Tony Tony.Chopper (SP)",
+      "cleanName": "Tony TonyChopper SP",
+      "url": "https://www.tcgplayer.com/product/629185/one-piece-card-game-extra-booster-anime-25th-collection-tony-tonychopper-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629185_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Animal;Straw Hat Crew;Drum Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 3 of your \"Animal\" or \"Drum Kingdom\" type Characters up to 1 rested DON!! card each.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2000,
+          "midPrice": 5201.6,
+          "highPrice": 8000,
+          "marketPrice": 228.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629186,
+      "cardId": "OP08-002",
+      "name": "Marco (SP)",
+      "cleanName": "Marco SP",
+      "url": "https://www.tcgplayer.com/product/629186/one-piece-card-game-extra-booster-anime-25th-collection-marco-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629186_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] Draw 1 card and place 1 card from your hand at the top or bottom of your deck. Then, give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 350,
+          "midPrice": 699.69,
+          "highPrice": 1000,
+          "marketPrice": 199.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629187,
+      "cardId": "OP08-021",
+      "name": "Carrot (SP)",
+      "cleanName": "Carrot SP",
+      "url": "https://www.tcgplayer.com/product/629187/one-piece-card-game-extra-booster-anime-25th-collection-carrot-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629187_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Minks",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] If you have a \"Minks\" type Character, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 700,
+          "midPrice": 799.99,
+          "highPrice": 1299.99,
+          "marketPrice": 269.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629188,
+      "cardId": "OP08-057",
+      "name": "King (SP)",
+      "cleanName": "King SP",
+      "url": "https://www.tcgplayer.com/product/629188/one-piece-card-game-extra-booster-anime-25th-collection-king-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629188_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>DON!! 2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Choose one:<br>\r\n• If you have 5 or less cards in your hand, draw 1 card.<br>\r\n• Give up to 1 of your opponent's Characters 2 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1000,
+          "midPrice": 1000,
+          "highPrice": 1000,
+          "marketPrice": 217.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629189,
+      "cardId": "OP08-058",
+      "name": "Charlotte Pudding (SP)",
+      "cleanName": "Charlotte Pudding SP",
+      "url": "https://www.tcgplayer.com/product/629189/one-piece-card-game-extra-booster-anime-25th-collection-charlotte-pudding-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629189_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[When Attacking] <strong>You may turn 2 cards from the top of your Life cards face-up:</strong> Add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 750,
+          "midPrice": 1375,
+          "highPrice": 2000,
+          "marketPrice": 236.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 629190,
+      "cardId": "OP08-098",
+      "name": "Kalgara (SP)",
+      "cleanName": "Kalgara SP",
+      "url": "https://www.tcgplayer.com/product/629190/one-piece-card-game-extra-booster-anime-25th-collection-kalgara-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/629190_200w.jpg",
+      "groupId": 23834,
+      "setCode": "EB02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Sky Island;Shandian Warrior;Jaya",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Play up to 1 \"Shandian Warrior\" type Character card from your hand with a cost equal to or less than the number of DON!! cards on your field. If you do, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 550.88,
+          "midPrice": 550.88,
+          "highPrice": 550.88,
+          "marketPrice": 149.61,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

@@ -1,0 +1,5258 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Carrying On His Will",
+  "groupId": 24303,
+  "setCode": "OP13",
+  "totalProducts": 181,
+  "totalCards": 175,
+  "scrapedAt": "2026-02-15T22:54:16.938Z",
+  "durationMs": 92,
+  "cards": [
+    {
+      "productId": 654923,
+      "cardId": "EB02-028",
+      "name": "Portgas.D.Ace - EB02-028 (SP)",
+      "cleanName": "PortgasDAce EB02 028 SP",
+      "url": "https://www.tcgplayer.com/product/654923/one-piece-card-game-carrying-on-his-will-portgasdace-eb02-028-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/654923_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Alabasta;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", look at 5 cards from the top of your deck; reveal up to 1 Character card with a cost of 2 and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 Character card with a cost of 2 from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 220,
+          "midPrice": 239.99,
+          "highPrice": 700,
+          "marketPrice": 268.81,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 655081,
+      "cardId": "OP07-111",
+      "name": "Lilith - OP07-111 (SP)",
+      "cleanName": "Lilith OP07 111 SP",
+      "url": "https://www.tcgplayer.com/product/655081/one-piece-card-game-carrying-on-his-will-lilith-op07-111-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/655081_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Egghead] type card other than [Lilith] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] If your Leader is [Vegapunk], play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 78.98,
+          "midPrice": 92.37,
+          "highPrice": 200,
+          "marketPrice": 91.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 655082,
+      "cardId": "OP07-118",
+      "name": "Sabo - OP07-118 (SP)",
+      "cleanName": "Sabo OP07 118 SP",
+      "url": "https://www.tcgplayer.com/product/655082/one-piece-card-game-carrying-on-his-will-sabo-op07-118-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/655082_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less and up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 124.99,
+          "midPrice": 210,
+          "highPrice": 750.69,
+          "marketPrice": 188.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657442,
+      "cardId": "OP09-004",
+      "name": "Shanks - OP09-004 (SP) (Gold)",
+      "cleanName": "Shanks OP09 004 SP Gold",
+      "url": "https://www.tcgplayer.com/product/657442/one-piece-card-game-carrying-on-his-will-shanks-op09-004-sp-gold",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657442_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters 1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2499,
+          "midPrice": 2651,
+          "highPrice": 4500,
+          "marketPrice": 1506.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657443,
+      "cardId": "OP09-004",
+      "name": "Shanks - OP09-004 (SP) (Silver)",
+      "cleanName": "Shanks OP09 004 SP Silver",
+      "url": "https://www.tcgplayer.com/product/657443/one-piece-card-game-carrying-on-his-will-shanks-op09-004-sp-silver",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657443_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters 1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1239.99,
+          "midPrice": 1389.72,
+          "highPrice": 4999.99,
+          "marketPrice": 982.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657444,
+      "cardId": "OP09-009",
+      "name": "Benn.Beckman (SP)",
+      "cleanName": "BennBeckman SP",
+      "url": "https://www.tcgplayer.com/product/657444/one-piece-card-game-carrying-on-his-will-bennbeckman-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657444_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 110,
+          "midPrice": 122.28,
+          "highPrice": 420.69,
+          "marketPrice": 122.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657446,
+      "cardId": "OP09-118",
+      "name": "Gol.D.Roger - OP09-118 (SP) (Wanted Poster)",
+      "cleanName": "GolDRoger OP09 118 SP Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/657446/one-piece-card-game-carrying-on-his-will-goldroger-op09-118-sp-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657446_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\nWhen your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 280,
+          "midPrice": 290,
+          "highPrice": 500,
+          "marketPrice": 292.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657448,
+      "cardId": "OP09-119",
+      "name": "Monkey.D.Luffy - OP09-119 (SP)",
+      "cleanName": "MonkeyDLuffy OP09 119 SP",
+      "url": "https://www.tcgplayer.com/product/657448/one-piece-card-game-carrying-on-his-will-monkeydluffy-op09-119-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657448_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Draw 1 card and this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 539,
+          "midPrice": 684.31,
+          "highPrice": 1300,
+          "marketPrice": 573.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657449,
+      "cardId": "OP10-030",
+      "name": "Smoker - OP10-030 (SP)",
+      "cleanName": "Smoker OP10 030 SP",
+      "url": "https://www.tcgplayer.com/product/657449/one-piece-card-game-carrying-on-his-will-smoker-op10-030-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657449_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[Activate: Main] Set up to 1 of your DON!! cards as active. Then, you cannot set DON!! cards as active using Character effects during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 82.99,
+          "midPrice": 96.03,
+          "highPrice": 199.99,
+          "marketPrice": 96.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 659982,
+      "cardId": "OP11-058",
+      "name": "Monkey.D.Luffy - OP11-058 (TR)",
+      "cleanName": "MonkeyDLuffy OP11 058 TR",
+      "url": "https://www.tcgplayer.com/product/659982/one-piece-card-game-carrying-on-his-will-monkeydluffy-op11-058-tr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/659982_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "TR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "If you have 5 or more cards in your hand, this Character cannot attack.<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 65,
+          "midPrice": 88.85,
+          "highPrice": 599.99,
+          "marketPrice": 83.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657250,
+      "cardId": "OP13-001",
+      "name": "Monkey.D.Luffy (001)",
+      "cleanName": "MonkeyDLuffy 001",
+      "url": "https://www.tcgplayer.com/product/657250/one-piece-card-game-carrying-on-his-will-monkeydluffy-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657250_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [On Your Opponent's Attack] If you have 5 or less active DON!! cards, you may rest any number of your DON!! cards. For every DON!! card rested this way, this Leader or up to 1 of your \"Straw Hat Crew\" type Characters gains +2000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 13.69,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657251,
+      "cardId": "OP13-001",
+      "name": "Monkey.D.Luffy (001) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 001 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657251/one-piece-card-game-carrying-on-his-will-monkeydluffy-001-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657251_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [On Your Opponent's Attack] If you have 5 or less active DON!! cards, you may rest any number of your DON!! cards. For every DON!! card rested this way, this Leader or up to 1 of your \"Straw Hat Crew\" type Characters gains +2000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 67.86,
+          "midPrice": 85.59,
+          "highPrice": 499.99,
+          "marketPrice": 78.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657252,
+      "cardId": "OP13-002",
+      "name": "Portgas.D.Ace (002)",
+      "cleanName": "PortgasDAce 002",
+      "url": "https://www.tcgplayer.com/product/657252/one-piece-card-game-carrying-on-his-will-portgasdace-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657252_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Red",
+      "power": "6000",
+      "cost": null,
+      "life": "3",
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] <strong>You may trash 1 card from your hand:</strong> Give up to 1 of your opponent's Leader or Character cards 2000 power during this battle.<br>\r\n[DON!! x1] [Once Per Turn] When you take damage or your Character with 6000 base power or more is K.O.'d, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 12,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657253,
+      "cardId": "OP13-002",
+      "name": "Portgas.D.Ace (002) (Alternate Art)",
+      "cleanName": "PortgasDAce 002 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657253/one-piece-card-game-carrying-on-his-will-portgasdace-002-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657253_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Red",
+      "power": "6000",
+      "cost": null,
+      "life": "3",
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] <strong>You may trash 1 card from your hand:</strong> Give up to 1 of your opponent's Leader or Character cards 2000 power during this battle.<br>\r\n[DON!! x1] [Once Per Turn] When you take damage or your Character with 6000 base power or more is K.O.'d, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 55,
+          "midPrice": 65.07,
+          "highPrice": 224.99,
+          "marketPrice": 64.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657254,
+      "cardId": "OP13-003",
+      "name": "Gol.D.Roger (003)",
+      "cleanName": "GolDRoger 003",
+      "url": "https://www.tcgplayer.com/product/657254/one-piece-card-game-carrying-on-his-will-goldroger-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657254_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "7000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "If you have any DON!! cards on your field, 1 DON!! card placed during your DON!! Phase is given to your Leader.<br>\r\nIf you have 9 or less DON!! cards on your field, give this Leader 2000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 2.74,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657255,
+      "cardId": "OP13-003",
+      "name": "Gol.D.Roger (003) (Alternate Art)",
+      "cleanName": "GolDRoger 003 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657255/one-piece-card-game-carrying-on-his-will-goldroger-003-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657255_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "7000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "If you have any DON!! cards on your field, 1 DON!! card placed during your DON!! Phase is given to your Leader.<br>\r\nIf you have 9 or less DON!! cards on your field, give this Leader 2000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 42,
+          "midPrice": 49.9,
+          "highPrice": 420.69,
+          "marketPrice": 44.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657256,
+      "cardId": "OP13-004",
+      "name": "Sabo (004)",
+      "cleanName": "Sabo 004",
+      "url": "https://www.tcgplayer.com/product/657256/one-piece-card-game-carrying-on-his-will-sabo-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657256_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "If you have 4 or more Life cards, give this Leader 1000 power.<br>\r\n[DON!! x1] If you have a Character with a cost of 8 or more, your Leader and all of your Characters gain +1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 2.74,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657257,
+      "cardId": "OP13-004",
+      "name": "Sabo (004) (Alternate Art)",
+      "cleanName": "Sabo 004 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657257/one-piece-card-game-carrying-on-his-will-sabo-004-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657257_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "If you have 4 or more Life cards, give this Leader 1000 power.<br>\r\n[DON!! x1] If you have a Character with a cost of 8 or more, your Leader and all of your Characters gain +1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 28.99,
+          "midPrice": 33.95,
+          "highPrice": 533.13,
+          "marketPrice": 32.85,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657258,
+      "cardId": "OP13-005",
+      "name": "Inazuma",
+      "cleanName": "Inazuma",
+      "url": "https://www.tcgplayer.com/product/657258/one-piece-card-game-carrying-on-his-will-inazuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657258_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Slash",
+      "effectText": "[On Play] Give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657259,
+      "cardId": "OP13-006",
+      "name": "Woop Slap",
+      "cleanName": "Woop Slap",
+      "url": "https://www.tcgplayer.com/product/657259/one-piece-card-game-carrying-on-his-will-woop-slap",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657259_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Give up to 2 rested DON!! cards to 1 of your [Monkey.D.Luffy] cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657260,
+      "cardId": "OP13-007",
+      "name": "Ace & Sabo & Luffy",
+      "cleanName": "Ace and Sabo and Luffy",
+      "url": "https://www.tcgplayer.com/product/657260/one-piece-card-game-carrying-on-his-will-ace-and-sabo-and-luffy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657260_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may give 1 of your active DON!! cards to 1 of your Leader or Character cards and trash this Character:</strong> Give up to 1 of your opponent's Characters 3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 2,
+          "highPrice": 45,
+          "marketPrice": 1.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657261,
+      "cardId": "OP13-007",
+      "name": "Ace & Sabo & Luffy (Alternate Art)",
+      "cleanName": "Ace and Sabo and Luffy Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657261/one-piece-card-game-carrying-on-his-will-ace-and-sabo-and-luffy-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657261_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may give 1 of your active DON!! cards to 1 of your Leader or Character cards and trash this Character:</strong> Give up to 1 of your opponent's Characters 3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 23,
+          "midPrice": 37.94,
+          "highPrice": 89.78,
+          "marketPrice": 25.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657262,
+      "cardId": "OP13-008",
+      "name": "Emporio.Ivankov",
+      "cleanName": "EmporioIvankov",
+      "url": "https://www.tcgplayer.com/product/657262/one-piece-card-game-carrying-on-his-will-emporioivankov",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657262_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "If your \"Revolutionary Army\" type Character would be K.O.'d by your opponent's effect, you may trash this Character instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657263,
+      "cardId": "OP13-009",
+      "name": "Curly.Dadan",
+      "cleanName": "CurlyDadan",
+      "url": "https://www.tcgplayer.com/product/657263/one-piece-card-game-carrying-on-his-will-curlydadan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657263_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mountain Bandits;Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "If you have a \"Mountain Bandits\" type Character other than this card, this Character gains [Double Attack].",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657264,
+      "cardId": "OP13-010",
+      "name": "Lord of the Coast",
+      "cleanName": "Lord of the Coast",
+      "url": "https://www.tcgplayer.com/product/657264/one-piece-card-game-carrying-on-his-will-lord-of-the-coast",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657264_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "East Blue;Neptunian",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657265,
+      "cardId": "OP13-011",
+      "name": "Nefeltari Cobra",
+      "cleanName": "Nefeltari Cobra",
+      "url": "https://www.tcgplayer.com/product/657265/one-piece-card-game-carrying-on-his-will-nefeltari-cobra",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657265_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657266,
+      "cardId": "OP13-012",
+      "name": "Nefeltari Vivi",
+      "cleanName": "Nefeltari Vivi",
+      "url": "https://www.tcgplayer.com/product/657266/one-piece-card-game-carrying-on-his-will-nefeltari-vivi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657266_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Alabasta\" or \"Straw Hat Crew\" type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 14,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657267,
+      "cardId": "OP13-013",
+      "name": "Higuma",
+      "cleanName": "Higuma",
+      "url": "https://www.tcgplayer.com/product/657267/one-piece-card-game-carrying-on-his-will-higuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657267_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mountain Bandits;Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with 0 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657268,
+      "cardId": "OP13-014",
+      "name": "Portgas.D.Rouge",
+      "cleanName": "PortgasDRouge",
+      "url": "https://www.tcgplayer.com/product/657268/one-piece-card-game-carrying-on-his-will-portgasdrouge",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657268_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Baterilla",
+      "attribute": "Wisdom",
+      "effectText": "[Trigger] Up to 1 of your [Portgas.D.Ace] cards gains +3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657269,
+      "cardId": "OP13-015",
+      "name": "Makino",
+      "cleanName": "Makino",
+      "url": "https://www.tcgplayer.com/product/657269/one-piece-card-game-carrying-on-his-will-makino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657269_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> Up to 1 of your [Monkey.D.Luffy] cards gains +2000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657270,
+      "cardId": "OP13-016",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/657270/one-piece-card-game-carrying-on-his-will-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657270_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is [Sabo], [Portgas.D.Ace] or [Monkey.D.Luffy], look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 3 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.35,
+          "highPrice": 5,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657271,
+      "cardId": "OP13-016",
+      "name": "Monkey.D.Garp (Alternate Art)",
+      "cleanName": "MonkeyDGarp Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657271/one-piece-card-game-carrying-on-his-will-monkeydgarp-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657271_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is [Sabo], [Portgas.D.Ace] or [Monkey.D.Luffy], look at 4 cards from the top of your deck; reveal up to 1 card with a cost of 3 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14.47,
+          "midPrice": 21.99,
+          "highPrice": 50,
+          "marketPrice": 18.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657272,
+      "cardId": "OP13-017",
+      "name": "Monkey.D.Dragon",
+      "cleanName": "MonkeyDDragon",
+      "url": "https://www.tcgplayer.com/product/657272/one-piece-card-game-carrying-on-his-will-monkeyddragon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657272_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Once Per Turn] If your \"Revolutionary Army\" type Character would be removed from the field by your opponent's effect, you may give this Character 2000 power during this turn instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 12,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657273,
+      "cardId": "OP13-018",
+      "name": "Wapol",
+      "cleanName": "Wapol",
+      "url": "https://www.tcgplayer.com/product/657273/one-piece-card-game-carrying-on-his-will-wapol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657273_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Evil Black Drum Kingdom",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657274,
+      "cardId": "OP13-019",
+      "name": "But Ace Here Said You Deserved It!!",
+      "cleanName": "But Ace Here Said You Deserved It",
+      "url": "https://www.tcgplayer.com/product/657274/one-piece-card-game-carrying-on-his-will-but-ace-here-said-you-deserved-it",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657274_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 4 of your DON!! cards:</strong> Give up to 1 of your opponent's Characters 3000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 3000 power or less.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2.71,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657275,
+      "cardId": "OP13-020",
+      "name": "Meteor Fist",
+      "cleanName": "Meteor Fist",
+      "url": "https://www.tcgplayer.com/product/657275/one-piece-card-game-carrying-on-his-will-meteor-fist",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657275_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters 5000 power during this turn.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657276,
+      "cardId": "OP13-021",
+      "name": "Gum-Gum Gatling Gun",
+      "cleanName": "Gum Gum Gatling Gun",
+      "url": "https://www.tcgplayer.com/product/657276/one-piece-card-game-carrying-on-his-will-gum-gum-gatling-gun",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657276_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 rested DON!! card to 1 of your [Monkey.D.Luffy] cards. Then, give up to 1 of your opponent's Characters 2000 power during this turn.<br>\r\n[Trigger] Give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657277,
+      "cardId": "OP13-022",
+      "name": "Windmill Village",
+      "cleanName": "Windmill Village",
+      "url": "https://www.tcgplayer.com/product/657277/one-piece-card-game-carrying-on-his-will-windmill-village",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657277_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage:</strong> Up to 1 of your Characters with 2000 base power or less gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657278,
+      "cardId": "OP13-023",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/657278/one-piece-card-game-carrying-on-his-will-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657278_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[On Play] Set up to 2 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.<br>\r\n[On K.O.] Play up to 1 Character card with a cost of 5 or less from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.55,
+          "highPrice": 25,
+          "marketPrice": 0.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657279,
+      "cardId": "OP13-023",
+      "name": "Uta (Alternate Art)",
+      "cleanName": "Uta Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657279/one-piece-card-game-carrying-on-his-will-uta-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657279_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[On Play] Set up to 2 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.<br>\r\n[On K.O.] Play up to 1 Character card with a cost of 5 or less from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8.3,
+          "midPrice": 11.99,
+          "highPrice": 58.1,
+          "marketPrice": 9.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657280,
+      "cardId": "OP13-024",
+      "name": "Gordon",
+      "cleanName": "Gordon",
+      "url": "https://www.tcgplayer.com/product/657280/one-piece-card-game-carrying-on-his-will-gordon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657280_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>You may reveal 1 \"Music\" or \"FILM\" type card from your hand:</strong> Set up to 2 of your DON!! cards as active at the end of this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657281,
+      "cardId": "OP13-025",
+      "name": "Koby",
+      "cleanName": "Koby",
+      "url": "https://www.tcgplayer.com/product/657281/one-piece-card-game-carrying-on-his-will-koby",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657281_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Navy",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If your Leader has the \"FILM\" type or the \"Strike\" attribute, set up to 1 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657282,
+      "cardId": "OP13-026",
+      "name": "Sunny-Kun",
+      "cleanName": "Sunny Kun",
+      "url": "https://www.tcgplayer.com/product/657282/one-piece-card-game-carrying-on-his-will-sunny-kun",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657282_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may rest 1 of your DON!! cards:</strong> This Character gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657283,
+      "cardId": "OP13-027",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/657283/one-piece-card-game-carrying-on-his-will-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657283_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Set up to 2 of your DON!! cards as active.<br>\r\n[End of Your Turn] If your Leader has the \"FILM\" or \"Straw Hat Crew\" type, set up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657284,
+      "cardId": "OP13-027",
+      "name": "Sanji (Alternate Art)",
+      "cleanName": "Sanji Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657284/one-piece-card-game-carrying-on-his-will-sanji-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657284_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Set up to 2 of your DON!! cards as active.<br>\r\n[End of Your Turn] If your Leader has the \"FILM\" or \"Straw Hat Crew\" type, set up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.2,
+          "midPrice": 13.4,
+          "highPrice": 420.69,
+          "marketPrice": 12.52,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657285,
+      "cardId": "OP13-028",
+      "name": "Shanks (028)",
+      "cleanName": "Shanks 028",
+      "url": "https://www.tcgplayer.com/product/657285/one-piece-card-game-carrying-on-his-will-shanks-028",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657285_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "FILM;The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Set all of your DON!! cards as active. Then, you cannot play cards from your hand during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.88,
+          "highPrice": 50,
+          "marketPrice": 0.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657286,
+      "cardId": "OP13-028",
+      "name": "Shanks (028) (Alternate Art)",
+      "cleanName": "Shanks 028 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657286/one-piece-card-game-carrying-on-his-will-shanks-028-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657286_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "FILM;The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Set all of your DON!! cards as active. Then, you cannot play cards from your hand during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 10,
+          "midPrice": 15.64,
+          "highPrice": 69.99,
+          "marketPrice": 14.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657287,
+      "cardId": "OP13-029",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/657287/one-piece-card-game-carrying-on-his-will-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657287_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "FILM;Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657288,
+      "cardId": "OP13-030",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/657288/one-piece-card-game-carrying-on-his-will-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657288_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;FILM;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Set up to 2 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.49,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657289,
+      "cardId": "OP13-031",
+      "name": "Trafalgar Law",
+      "cleanName": "Trafalgar Law",
+      "url": "https://www.tcgplayer.com/product/657289/one-piece-card-game-carrying-on-his-will-trafalgar-law",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657289_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "FILM;Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "If you have 1 or less Life cards, this Character gains [Blocker].<br>\r\n[On Play] <strong>You may return 1 of your Characters to the owner's hand:</strong> Play up to 1 Character card with a cost of 5 or less from your hand rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.56,
+          "highPrice": 5,
+          "marketPrice": 0.56,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657290,
+      "cardId": "OP13-032",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/657290/one-piece-card-game-carrying-on-his-will-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657290_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Up to 1 of your opponent's Characters with a cost of 8 or less cannot be rested until the end of your opponent's next End Phase.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5.09,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657291,
+      "cardId": "OP13-033",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/657291/one-piece-card-game-carrying-on-his-will-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657291_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] Rest up to 2 of your opponent's cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657292,
+      "cardId": "OP13-034",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/657292/one-piece-card-game-carrying-on-his-will-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657292_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"FILM\" or \"Straw Hat Crew\" type, set up to 1 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657293,
+      "cardId": "OP13-035",
+      "name": "Bepo",
+      "cleanName": "Bepo",
+      "url": "https://www.tcgplayer.com/product/657293/one-piece-card-game-carrying-on-his-will-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657293_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Heart Pirates;Minks",
+      "attribute": "Strike",
+      "effectText": "[End of Your Turn] Set this Character or up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657294,
+      "cardId": "OP13-036",
+      "name": "Helmeppo",
+      "cleanName": "Helmeppo",
+      "url": "https://www.tcgplayer.com/product/657294/one-piece-card-game-carrying-on-his-will-helmeppo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657294_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657295,
+      "cardId": "OP13-037",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/657295/one-piece-card-game-carrying-on-his-will-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657295_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"FILM\" or \"Straw Hat Crew\" type, set up to 2 of your DON!! cards as active.<br>\r\n[End of Your Turn] Set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.35,
+          "highPrice": 25,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657296,
+      "cardId": "OP13-038",
+      "name": "Gum-Gum Elephant Gun",
+      "cleanName": "Gum Gum Elephant Gun",
+      "url": "https://www.tcgplayer.com/product/657296/one-piece-card-game-carrying-on-his-will-gum-gum-elephant-gun",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657296_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, set up to 2 of your DON!! cards as active at the end of this turn.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657297,
+      "cardId": "OP13-039",
+      "name": "Gum-Gum Snake Shot",
+      "cleanName": "Gum Gum Snake Shot",
+      "url": "https://www.tcgplayer.com/product/657297/one-piece-card-game-carrying-on-his-will-gum-gum-snake-shot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657297_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Counter] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.<br>\r\n[Trigger] Activate this card's [Counter] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657298,
+      "cardId": "OP13-040",
+      "name": "I Know You're Strong... So I'll Go All Out from the Very Start!!!",
+      "cleanName": "I Know Youre Strong So Ill Go All Out from the Very Start",
+      "url": "https://www.tcgplayer.com/product/657298/one-piece-card-game-carrying-on-his-will-i-know-youre-strong-so-ill-go-all-out-from-the-very-start",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657298_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 2 of your DON!! cards:</strong> Up to 2 of your opponent's rested Characters with a cost of 7 or less will not become active in your opponent's next Refresh Phase.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657299,
+      "cardId": "OP13-041",
+      "name": "Izo",
+      "cleanName": "Izo",
+      "url": "https://www.tcgplayer.com/product/657299/one-piece-card-game-carrying-on-his-will-izo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657299_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;Whitebeard Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657300,
+      "cardId": "OP13-042",
+      "name": "Edward.Newgate",
+      "cleanName": "EdwardNewgate",
+      "url": "https://www.tcgplayer.com/product/657300/one-piece-card-game-carrying-on-his-will-edwardnewgate",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657300_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On Play] Draw 2 cards and trash 1 card from your hand. Then, give your Leader and 1 Character up to 2 rested DON!! cards each.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.45,
+          "midPrice": 1.62,
+          "highPrice": 25,
+          "marketPrice": 1.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657301,
+      "cardId": "OP13-042",
+      "name": "Edward.Newgate (Alternate Art)",
+      "cleanName": "EdwardNewgate Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657301/one-piece-card-game-carrying-on-his-will-edwardnewgate-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657301_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On Play] Draw 2 cards and trash 1 card from your hand. Then, give your Leader and 1 Character up to 2 rested DON!! cards each.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25,
+          "midPrice": 32.97,
+          "highPrice": 420.69,
+          "marketPrice": 26.86,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657302,
+      "cardId": "OP13-043",
+      "name": "Otama",
+      "cleanName": "Otama",
+      "url": "https://www.tcgplayer.com/product/657302/one-piece-card-game-carrying-on-his-will-otama",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657302_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 3 or less Life cards, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.36,
+          "highPrice": 5,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657303,
+      "cardId": "OP13-044",
+      "name": "Curiel",
+      "cleanName": "Curiel",
+      "url": "https://www.tcgplayer.com/product/657303/one-piece-card-game-carrying-on-his-will-curiel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657303_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Ranged",
+      "effectText": "[When Attacking] Give up to 1 rested DON!! card to your Leader with a type including \"Whitebeard Pirates\" or 1 Character with a type including \"Whitebeard Pirates\".<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657304,
+      "cardId": "OP13-045",
+      "name": "Haruta",
+      "cleanName": "Haruta",
+      "url": "https://www.tcgplayer.com/product/657304/one-piece-card-game-carrying-on-his-will-haruta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657304_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 4 or less cards in your hand, draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657305,
+      "cardId": "OP13-046",
+      "name": "Vista",
+      "cleanName": "Vista",
+      "url": "https://www.tcgplayer.com/product/657305/one-piece-card-game-carrying-on-his-will-vista",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657305_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Double Attack]<br>\r\n[Once Per Turn] If this Character would be K.O.'d or would be removed from the field by your opponent's effect, you may trash 1 card with a type including \"Whitebeard Pirates\" from your hand instead.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657306,
+      "cardId": "OP13-047",
+      "name": "Fossa",
+      "cleanName": "Fossa",
+      "url": "https://www.tcgplayer.com/product/657306/one-piece-card-game-carrying-on-his-will-fossa",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657306_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "If your Character with a type including \"Whitebeard Pirates\" would be K.O.'d by your opponent's effect, you may trash this Character instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657307,
+      "cardId": "OP13-048",
+      "name": "Blamenco",
+      "cleanName": "Blamenco",
+      "url": "https://www.tcgplayer.com/product/657307/one-piece-card-game-carrying-on-his-will-blamenco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657307_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657308,
+      "cardId": "OP13-049",
+      "name": "Blenheim",
+      "cleanName": "Blenheim",
+      "url": "https://www.tcgplayer.com/product/657308/one-piece-card-game-carrying-on-his-will-blenheim",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657308_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657309,
+      "cardId": "OP13-050",
+      "name": "Boa Sandersonia",
+      "cleanName": "Boa Sandersonia",
+      "url": "https://www.tcgplayer.com/product/657309/one-piece-card-game-carrying-on-his-will-boa-sandersonia",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657309_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kuja Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is [Boa Hancock], play up to 1 [Boa Hancock] with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657310,
+      "cardId": "OP13-051",
+      "name": "Boa Hancock",
+      "cleanName": "Boa Hancock",
+      "url": "https://www.tcgplayer.com/product/657310/one-piece-card-game-carrying-on-his-will-boa-hancock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657310_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On K.O.] If your Leader is [Boa Hancock] or multicolored, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.21,
+          "highPrice": 2.99,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657311,
+      "cardId": "OP13-051",
+      "name": "Boa Hancock (Alternate Art)",
+      "cleanName": "Boa Hancock Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657311/one-piece-card-game-carrying-on-his-will-boa-hancock-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657311_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On K.O.] If your Leader is [Boa Hancock] or multicolored, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20,
+          "midPrice": 32,
+          "highPrice": 299.99,
+          "marketPrice": 28.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657312,
+      "cardId": "OP13-052",
+      "name": "Boa Marigold",
+      "cleanName": "Boa Marigold",
+      "url": "https://www.tcgplayer.com/product/657312/one-piece-card-game-carrying-on-his-will-boa-marigold",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657312_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kuja Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker]<br>\r\n[On Play] If your Leader is [Boa Hancock], play up to 1 [Boa Hancock] with a cost of 6 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.49,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657313,
+      "cardId": "OP13-053",
+      "name": "Marshall.D.Teach",
+      "cleanName": "MarshallDTeach",
+      "url": "https://www.tcgplayer.com/product/657313/one-piece-card-game-carrying-on-his-will-marshalldteach",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657313_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] <strong>You may trash 1 of your Characters with a type including \"Whitebeard Pirates\":</strong> Draw 1 card and this Character gains [Banish] during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657314,
+      "cardId": "OP13-054",
+      "name": "Yamato",
+      "cleanName": "Yamato",
+      "url": "https://www.tcgplayer.com/product/657314/one-piece-card-game-carrying-on-his-will-yamato",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657314_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 3 or less Life cards, draw 2 cards. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 25,
+          "marketPrice": 0.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657315,
+      "cardId": "OP13-054",
+      "name": "Yamato (Alternate Art)",
+      "cleanName": "Yamato Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657315/one-piece-card-game-carrying-on-his-will-yamato-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657315_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 3 or less Life cards, draw 2 cards. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19.99,
+          "midPrice": 31,
+          "highPrice": 49.99,
+          "marketPrice": 23.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657316,
+      "cardId": "OP13-055",
+      "name": "Rakuyo",
+      "cleanName": "Rakuyo",
+      "url": "https://www.tcgplayer.com/product/657316/one-piece-card-game-carrying-on-his-will-rakuyo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657316_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If you have 4 or less cards in your hand, all of your Characters with a type including \"Whitebeard Pirates\" gain +1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657317,
+      "cardId": "OP13-056",
+      "name": "LittleOars Jr.",
+      "cleanName": "LittleOars Jr",
+      "url": "https://www.tcgplayer.com/product/657317/one-piece-card-game-carrying-on-his-will-littleoars-jr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657317_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Giant;Whitebeard Pirates Allies",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If your Leader's type includes \"Whitebeard Pirates\", draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657318,
+      "cardId": "OP13-057",
+      "name": "If I Bowed Down to Power, What's the Point in Living?",
+      "cleanName": "If I Bowed Down to Power Whats the Point in Living",
+      "url": "https://www.tcgplayer.com/product/657318/one-piece-card-game-carrying-on-his-will-if-i-bowed-down-to-power-whats-the-point-in-living",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657318_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 1 of your DON!! cards:</strong> If you have 1 or less Life cards, your opponent cannot activate [Blocker] whenever your Leader attacks during this turn.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 4,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657319,
+      "cardId": "OP13-058",
+      "name": "Phoenix Pyreapple",
+      "cleanName": "Phoenix Pyreapple",
+      "url": "https://www.tcgplayer.com/product/657319/one-piece-card-game-carrying-on-his-will-phoenix-pyreapple",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657319_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Former Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 1 of your DON!! cards:</strong> Place up to 1 of your opponent's Characters with 3000 power or less at the bottom of the owner's deck.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.49,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657320,
+      "cardId": "OP13-059",
+      "name": "Brilliant Punk",
+      "cleanName": "Brilliant Punk",
+      "url": "https://www.tcgplayer.com/product/657320/one-piece-card-game-carrying-on-his-will-brilliant-punk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657320_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may return 1 of your Characters to the owner's hand:</strong> Return up to 1 Character with a cost of 6 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657321,
+      "cardId": "OP13-060",
+      "name": "Amatsuki Toki",
+      "cleanName": "Amatsuki Toki",
+      "url": "https://www.tcgplayer.com/product/657321/one-piece-card-game-carrying-on-his-will-amatsuki-toki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657321_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Roger Pirates",
+      "attribute": "Wisdom",
+      "effectText": "If your Character with a type including \"Roger Pirates\" would be K.O.'d by your opponent's effect, you may trash this Character instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657322,
+      "cardId": "OP13-061",
+      "name": "Inuarashi",
+      "cleanName": "Inuarashi",
+      "url": "https://www.tcgplayer.com/product/657322/one-piece-card-game-carrying-on-his-will-inuarashi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657322_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Minks;Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have any DON!! cards given, add up to 1 DON!! card from your DON!! deck and rest it. Then, K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657323,
+      "cardId": "OP13-062",
+      "name": "Crocus",
+      "cleanName": "Crocus",
+      "url": "https://www.tcgplayer.com/product/657323/one-piece-card-game-carrying-on-his-will-crocus",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657323_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have any DON!! cards given, add up to 1 DON!! card from your DON!! deck and set it as active.<br>\r\n[When Attacking] Return up to 1 of your opponent's Characters with a base power of 3000 or less to the owner's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657324,
+      "cardId": "OP13-063",
+      "name": "Kouzuki Oden",
+      "cleanName": "Kouzuki Oden",
+      "url": "https://www.tcgplayer.com/product/657324/one-piece-card-game-carrying-on-his-will-kouzuki-oden",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657324_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan;Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If you have any DON!! cards given, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.49,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657325,
+      "cardId": "OP13-064",
+      "name": "Gol.D.Roger (064)",
+      "cleanName": "GolDRoger 064",
+      "url": "https://www.tcgplayer.com/product/657325/one-piece-card-game-carrying-on-his-will-goldroger-064",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657325_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "Your Leader and all of your Characters that do not have a type including \"Roger Pirates\" have their effects negated.<br>\r\n[On Play] <strong>DON!! 3:</strong> Your Leader gains +2000 power until the end of your opponent's next End Phase. Then, give all of your opponent's Characters -2000 power until the end of your opponent's next End Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.4,
+          "highPrice": 20,
+          "marketPrice": 0.38,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657326,
+      "cardId": "OP13-064",
+      "name": "Gol.D.Roger (064) (Alternate Art)",
+      "cleanName": "GolDRoger 064 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657326/one-piece-card-game-carrying-on-his-will-goldroger-064-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657326_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "Your Leader and all of your Characters that do not have a type including \"Roger Pirates\" have their effects negated.<br>\r\n[On Play] <strong>DON!! 3:</strong> Your Leader gains +2000 power until the end of your opponent's next End Phase. Then, give all of your opponent's Characters 2000 power until the end of your opponent's next End Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 28,
+          "midPrice": 37.11,
+          "highPrice": 529.46,
+          "marketPrice": 29.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657327,
+      "cardId": "OP13-065",
+      "name": "Shanks (065)",
+      "cleanName": "Shanks 065",
+      "url": "https://www.tcgplayer.com/product/657327/one-piece-card-game-carrying-on-his-will-shanks-065",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657327_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Roger Pirates\" other than [Shanks] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2.74,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657328,
+      "cardId": "OP13-065",
+      "name": "Shanks (065) (Alternate Art)",
+      "cleanName": "Shanks 065 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657328/one-piece-card-game-carrying-on-his-will-shanks-065-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657328_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Roger Pirates\" other than [Shanks] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 10,
+          "midPrice": 14.85,
+          "highPrice": 420.69,
+          "marketPrice": 12.79,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657329,
+      "cardId": "OP13-066",
+      "name": "Silvers Rayleigh",
+      "cleanName": "Silvers Rayleigh",
+      "url": "https://www.tcgplayer.com/product/657329/one-piece-card-game-carrying-on-his-will-silvers-rayleigh",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657329_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush]<br>\r\n[On Play] If you have any DON!! cards given, rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, add up to 1 DON!! card from your DON!! deck and set it as active at the end of this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.14,
+          "midPrice": 0.7,
+          "highPrice": 1000,
+          "marketPrice": 0.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657330,
+      "cardId": "OP13-066",
+      "name": "Silvers Rayleigh (Alternate Art)",
+      "cleanName": "Silvers Rayleigh Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657330/one-piece-card-game-carrying-on-his-will-silvers-rayleigh-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657330_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush]<br>\r\n[On Play] If you have any DON!! cards given, rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, add up to 1 DON!! card from your DON!! deck and set it as active at the end of this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8.69,
+          "midPrice": 12.89,
+          "highPrice": 48,
+          "marketPrice": 10.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657331,
+      "cardId": "OP13-067",
+      "name": "Scopper Gaban",
+      "cleanName": "Scopper Gaban",
+      "url": "https://www.tcgplayer.com/product/657331/one-piece-card-game-carrying-on-his-will-scopper-gaban",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657331_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader's type includes \"Roger Pirates\", draw 2 cards and trash 1 card from your hand. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 2.82,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657332,
+      "cardId": "OP13-068",
+      "name": "Douglas Bullet",
+      "cleanName": "Douglas Bullet",
+      "url": "https://www.tcgplayer.com/product/657332/one-piece-card-game-carrying-on-his-will-douglas-bullet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657332_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "FILM;Former Roger Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 8 or more DON!! cards on your field, this Character gains +2000 power.<br>\r\n[On Play] If your Leader's type includes \"Roger Pirates\", add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 4,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657333,
+      "cardId": "OP13-069",
+      "name": "Tom",
+      "cleanName": "Tom",
+      "url": "https://www.tcgplayer.com/product/657333/one-piece-card-game-carrying-on-his-will-tom",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657333_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Water Seven",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>DON!! -1:</strong> Add up to 1 Stage card with a cost of 3 or less from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657334,
+      "cardId": "OP13-070",
+      "name": "Napoleon",
+      "cleanName": "Napoleon",
+      "url": "https://www.tcgplayer.com/product/657334/one-piece-card-game-carrying-on-his-will-napoleon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657334_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Big Mom Pirates;Homies",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657335,
+      "cardId": "OP13-071",
+      "name": "Nekomamushi",
+      "cleanName": "Nekomamushi",
+      "url": "https://www.tcgplayer.com/product/657335/one-piece-card-game-carrying-on-his-will-nekomamushi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657335_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Minks;Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, K.O. up to 1 of your opponent's Characters with 3000 base power or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657336,
+      "cardId": "OP13-072",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/657336/one-piece-card-game-carrying-on-his-will-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657336_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader's type includes \"Roger Pirates\" and you have any DON!! cards given, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657337,
+      "cardId": "OP13-073",
+      "name": "Prometheus",
+      "cleanName": "Prometheus",
+      "url": "https://www.tcgplayer.com/product/657337/one-piece-card-game-carrying-on-his-will-prometheus",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657337_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Big Mom Pirates;Homies",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657338,
+      "cardId": "OP13-074",
+      "name": "Hera",
+      "cleanName": "Hera",
+      "url": "https://www.tcgplayer.com/product/657338/one-piece-card-game-carrying-on-his-will-hera",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657338_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Big Mom Pirates;Homies",
+      "attribute": "Special",
+      "effectText": "[On Play] Play up to 1 [Homies] type Character card with 3000 power or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 4,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657339,
+      "cardId": "OP13-075",
+      "name": "Guess We'll Have Another Scrap. You Can Only Risk Death While You're Still Alive!!",
+      "cleanName": "Guess Well Have Another Scrap You Can Only Risk Death While Youre Still Alive",
+      "url": "https://www.tcgplayer.com/product/657339/one-piece-card-game-carrying-on-his-will-guess-well-have-another-scrap-you-can-only-risk-death-while-youre-still-alive",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657339_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 1 of your DON!! cards:</strong> If your Leader is [Gol.D.Roger] and you have any DON!! cards given, add up to 1 DON!! card from your DON!! deck and rest it.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.49,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657340,
+      "cardId": "OP13-076",
+      "name": "Divine Departure",
+      "cleanName": "Divine Departure",
+      "url": "https://www.tcgplayer.com/product/657340/one-piece-card-game-carrying-on-his-will-divine-departure",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657340_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "0",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> If you have any DON!! cards given, give up to 1 of your opponent's Characters 8000 power during this turn.<br>\r\n[Counter] <strong>You may trash 1 card from your hand:</strong> Up to 1 of your Leader or Character cards gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.04,
+          "midPrice": 1.6,
+          "highPrice": 6.5,
+          "marketPrice": 1.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657341,
+      "cardId": "OP13-076",
+      "name": "Divine Departure (Alternate Art)",
+      "cleanName": "Divine Departure Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657341/one-piece-card-game-carrying-on-his-will-divine-departure-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657341_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "0",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> If you have any DON!! cards given, give up to 1 of your opponent's Characters 8000 power during this turn.<br>\r\n[Counter] <strong>You may trash 1 card from your hand:</strong> Up to 1 of your Leader or Character cards gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 106,
+          "midPrice": 138.45,
+          "highPrice": 599.99,
+          "marketPrice": 130.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657342,
+      "cardId": "OP13-077",
+      "name": "Go All the Way to the Top!!",
+      "cleanName": "Go All the Way to the Top",
+      "url": "https://www.tcgplayer.com/product/657342/one-piece-card-game-carrying-on-his-will-go-all-the-way-to-the-top",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657342_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Former Roger Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 3 of your DON!! cards:</strong> If you have any DON!! cards given, K.O. up to 1 of your opponent's Characters with 4000 base power or less and up to 1 of your opponent's Characters with 3000 base power or less.<br>\r\n[Counter] Your Leader gains +3000 power during this turn.\r\n<br><https://en.onepiece-cardgame.com/topics/notice_op13.php>This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657343,
+      "cardId": "OP13-078",
+      "name": "Oro Jackson",
+      "cleanName": "Oro Jackson",
+      "url": "https://www.tcgplayer.com/product/657343/one-piece-card-game-carrying-on-his-will-oro-jackson",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657343_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": null,
+      "effectText": "[Once Per Turn] When your Character with a type including \"Roger Pirates\" is removed from the field by your opponent's effect, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657344,
+      "cardId": "OP13-079",
+      "name": "Imu",
+      "cleanName": "Imu",
+      "url": "https://www.tcgplayer.com/product/657344/one-piece-card-game-carrying-on-his-will-imu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657344_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": null,
+      "attribute": null,
+      "effectText": "Under the rules of this game, you cannot include Events with a cost of 2 or more in your deck and at the start of the game, play up to 1 [Mary Geoise] type Stage card from your deck.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may trash 1 of your [Celestial Dragons] type Characters or 1 card from your hand:</strong> Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.22,
+          "highPrice": 2,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657345,
+      "cardId": "OP13-079",
+      "name": "Imu (Alternate Art)",
+      "cleanName": "Imu Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657345/one-piece-card-game-carrying-on-his-will-imu-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657345_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": null,
+      "attribute": null,
+      "effectText": "Under the rules of this game, you cannot include Events with a cost of 2 or more in your deck and at the start of the game, play up to 1 [Mary Geoise] type Stage card from your deck.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may trash 1 of your [Celestial Dragons] type Characters or 1 card from your hand:</strong> Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 40,
+          "midPrice": 53.58,
+          "highPrice": 121.48,
+          "marketPrice": 43.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657346,
+      "cardId": "OP13-080",
+      "name": "St. Ethanbaron V. Nusjuro",
+      "cleanName": "St Ethanbaron V Nusjuro",
+      "url": "https://www.tcgplayer.com/product/657346/one-piece-card-game-carrying-on-his-will-st-ethanbaron-v-nusjuro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657346_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Slash",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Rush].<br>\r\n[When Attacking] If you have 10 or more cards in your trash, give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.39,
+          "midPrice": 0.58,
+          "highPrice": 5,
+          "marketPrice": 0.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657347,
+      "cardId": "OP13-080",
+      "name": "St. Ethanbaron V. Nusjuro (Alternate Art)",
+      "cleanName": "St Ethanbaron V Nusjuro Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657347/one-piece-card-game-carrying-on-his-will-st-ethanbaron-v-nusjuro-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657347_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Slash",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Rush].<br>\r\n[When Attacking] If you have 10 or more cards in your trash, give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25,
+          "midPrice": 33,
+          "highPrice": 89.99,
+          "marketPrice": 27.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657348,
+      "cardId": "OP13-080",
+      "name": "St. Ethanbaron V. Nusjuro (Parallel)",
+      "cleanName": "St Ethanbaron V Nusjuro Parallel",
+      "url": "https://www.tcgplayer.com/product/657348/one-piece-card-game-carrying-on-his-will-st-ethanbaron-v-nusjuro-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657348_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Slash",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Rush].<br>\r\n[When Attacking] If you have 10 or more cards in your trash, give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 623.99,
+          "midPrice": 693.23,
+          "highPrice": 800,
+          "marketPrice": 545.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657349,
+      "cardId": "OP13-081",
+      "name": "Koala",
+      "cleanName": "Koala",
+      "url": "https://www.tcgplayer.com/product/657349/one-piece-card-game-carrying-on-his-will-koala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657349_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "If your Leader has the \"Revolutionary Army\" type, this Character gains +3 cost.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may place 1 card from your trash at the bottom of your deck:</strong> Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657350,
+      "cardId": "OP13-082",
+      "name": "Five Elders",
+      "cleanName": "Five Elders",
+      "url": "https://www.tcgplayer.com/product/657350/one-piece-card-game-carrying-on-his-will-five-elders",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657350_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Slash;Special",
+      "effectText": "[Activate: Main] <strong>If your Leader is [Imu], you may rest 1 of your DON!! cards and trash 1 card from your hand:</strong> Trash all of your Characters and play up to 5 \"Five Elders\" type Character cards with 5000 power and different card names from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 3.82,
+          "highPrice": 50,
+          "marketPrice": 2.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657351,
+      "cardId": "OP13-082",
+      "name": "Five Elders (Alternate Art)",
+      "cleanName": "Five Elders Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657351/one-piece-card-game-carrying-on-his-will-five-elders-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657351_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Slash;Special",
+      "effectText": "[Activate: Main] <strong>If your Leader is [Imu], you may rest 1 of your DON!! cards and trash 1 card from your hand:</strong> Trash all of your Characters and play up to 5 \"Five Elders\" type Character cards with 5000 power and different card names from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 30.51,
+          "midPrice": 45.05,
+          "highPrice": 98,
+          "marketPrice": 37.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657352,
+      "cardId": "OP13-083",
+      "name": "St. Jaygarcia Saturn",
+      "cleanName": "St Jaygarcia Saturn",
+      "url": "https://www.tcgplayer.com/product/657352/one-piece-card-game-carrying-on-his-will-st-jaygarcia-saturn",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657352_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Five Elders\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.3,
+          "midPrice": 0.58,
+          "highPrice": 5,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657353,
+      "cardId": "OP13-083",
+      "name": "St. Jaygarcia Saturn (Alternate Art)",
+      "cleanName": "St Jaygarcia Saturn Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657353/one-piece-card-game-carrying-on-his-will-st-jaygarcia-saturn-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657353_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Five Elders\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 23.71,
+          "midPrice": 30.16,
+          "highPrice": 75,
+          "marketPrice": 24.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657354,
+      "cardId": "OP13-083",
+      "name": "St. Jaygarcia Saturn (Parallel)",
+      "cleanName": "St Jaygarcia Saturn Parallel",
+      "url": "https://www.tcgplayer.com/product/657354/one-piece-card-game-carrying-on-his-will-st-jaygarcia-saturn-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657354_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Five Elders\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 672.1,
+          "midPrice": 846.94,
+          "highPrice": 1000,
+          "marketPrice": 521.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657355,
+      "cardId": "OP13-084",
+      "name": "St. Shepherd Ju Peter",
+      "cleanName": "St Shepherd Ju Peter",
+      "url": "https://www.tcgplayer.com/product/657355/one-piece-card-game-carrying-on-his-will-st-shepherd-ju-peter",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657355_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Five Elders\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.29,
+          "midPrice": 0.6,
+          "highPrice": 2.99,
+          "marketPrice": 0.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657356,
+      "cardId": "OP13-084",
+      "name": "St. Shepherd Ju Peter (Alternate Art)",
+      "cleanName": "St Shepherd Ju Peter Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657356/one-piece-card-game-carrying-on-his-will-st-shepherd-ju-peter-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657356_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[Your Turn] If you have 10 or more cards in your trash, set the base power of all of your \"Five Elders\" type Characters to 7000.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 22.99,
+          "midPrice": 33.31,
+          "highPrice": 75,
+          "marketPrice": 25.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657357,
+      "cardId": "OP13-084",
+      "name": "St. Shepherd Ju Peter (Parallel)",
+      "cleanName": "St Shepherd Ju Peter Parallel",
+      "url": "https://www.tcgplayer.com/product/657357/one-piece-card-game-carrying-on-his-will-st-shepherd-ju-peter-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657357_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects.<br>\r\n[Your Turn] If you have 10 or more cards in your trash, set the base power of all of your \"Five Elders\" type Characters to 7000.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 605,
+          "midPrice": 887.99,
+          "highPrice": 999,
+          "marketPrice": 497.88,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657358,
+      "cardId": "OP13-085",
+      "name": "Saint Jalmac",
+      "cleanName": "Saint Jalmac",
+      "url": "https://www.tcgplayer.com/product/657358/one-piece-card-game-carrying-on-his-will-saint-jalmac",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657358_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657359,
+      "cardId": "OP13-086",
+      "name": "Saint Shalria",
+      "cleanName": "Saint Shalria",
+      "url": "https://www.tcgplayer.com/product/657359/one-piece-card-game-carrying-on-his-will-saint-shalria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657359_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Look at 3 cards from the top of your deck; reveal up to 1 \"Celestial Dragons\" type card other than [Saint Shalria] and add it to your hand. Then, trash the rest and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.45,
+          "highPrice": 2.69,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657360,
+      "cardId": "OP13-087",
+      "name": "Saint Charlos",
+      "cleanName": "Saint Charlos",
+      "url": "https://www.tcgplayer.com/product/657360/one-piece-card-game-carrying-on-his-will-saint-charlos",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657360_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Trash 1 card from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.19,
+          "highPrice": 1.49,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657361,
+      "cardId": "OP13-088",
+      "name": "Terry Gilteo",
+      "cleanName": "Terry Gilteo",
+      "url": "https://www.tcgplayer.com/product/657361/one-piece-card-game-carrying-on-his-will-terry-gilteo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657361_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657362,
+      "cardId": "OP13-089",
+      "name": "St. Topman Warcury",
+      "cleanName": "St Topman Warcury",
+      "url": "https://www.tcgplayer.com/product/657362/one-piece-card-game-carrying-on-his-will-st-topman-warcury",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657362_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.74,
+          "highPrice": 1000,
+          "marketPrice": 0.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657363,
+      "cardId": "OP13-089",
+      "name": "St. Topman Warcury (Alternate Art)",
+      "cleanName": "St Topman Warcury Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657363/one-piece-card-game-carrying-on-his-will-st-topman-warcury-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657363_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 24.5,
+          "midPrice": 32.19,
+          "highPrice": 54.99,
+          "marketPrice": 29.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657364,
+      "cardId": "OP13-089",
+      "name": "St. Topman Warcury (Parallel)",
+      "cleanName": "St Topman Warcury Parallel",
+      "url": "https://www.tcgplayer.com/product/657364/one-piece-card-game-carrying-on-his-will-st-topman-warcury-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657364_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 648.45,
+          "midPrice": 657.25,
+          "highPrice": 999,
+          "marketPrice": 467.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657365,
+      "cardId": "OP13-090",
+      "name": "Hack",
+      "cleanName": "Hack",
+      "url": "https://www.tcgplayer.com/product/657365/one-piece-card-game-carrying-on-his-will-hack",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657365_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Fish-Man;Revolutionary Army;Dressrosa",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657366,
+      "cardId": "OP13-091",
+      "name": "St. Marcus Mars",
+      "cleanName": "St Marcus Mars",
+      "url": "https://www.tcgplayer.com/product/657366/one-piece-card-game-carrying-on-his-will-st-marcus-mars",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657366_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On Play] <strong>You may trash 1 card from your hand:</strong> K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.43,
+          "midPrice": 0.67,
+          "highPrice": 1000,
+          "marketPrice": 0.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657367,
+      "cardId": "OP13-091",
+      "name": "St. Marcus Mars (Alternate Art)",
+      "cleanName": "St Marcus Mars Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657367/one-piece-card-game-carrying-on-his-will-st-marcus-mars-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657367_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On Play] <strong>You may trash 1 card from your hand:</strong> K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 27.86,
+          "midPrice": 35.29,
+          "highPrice": 75,
+          "marketPrice": 28.71,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657368,
+      "cardId": "OP13-091",
+      "name": "St. Marcus Mars (Parallel)",
+      "cleanName": "St Marcus Mars Parallel",
+      "url": "https://www.tcgplayer.com/product/657368/one-piece-card-game-carrying-on-his-will-st-marcus-mars-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657368_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": "Special",
+      "effectText": "If you have 7 or more cards in your trash, this Character cannot be removed from the field by your opponent's effects and gains [Blocker].<br>\r\n[On Play] <strong>You may trash 1 card from your hand:</strong> K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 785.95,
+          "midPrice": 797.5,
+          "highPrice": 999,
+          "marketPrice": 512.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657369,
+      "cardId": "OP13-092",
+      "name": "Saint Mjosgard",
+      "cleanName": "Saint Mjosgard",
+      "url": "https://www.tcgplayer.com/product/657369/one-piece-card-game-carrying-on-his-will-saint-mjosgard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657369_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have 3 or less Life cards, play up to 1 \"Mary Geoise\" type Stage card with a cost of 1 from your trash.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.49,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657370,
+      "cardId": "OP13-093",
+      "name": "Morgans",
+      "cleanName": "Morgans",
+      "url": "https://www.tcgplayer.com/product/657370/one-piece-card-game-carrying-on-his-will-morgans",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657370_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Journalist",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Draw 2 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657371,
+      "cardId": "OP13-094",
+      "name": "York",
+      "cleanName": "York",
+      "url": "https://www.tcgplayer.com/product/657371/one-piece-card-game-carrying-on-his-will-york",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657371_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Up to 1 of your \"Celestial Dragons\" type Characters gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657372,
+      "cardId": "OP13-095",
+      "name": "Saint Rosward",
+      "cleanName": "Saint Rosward",
+      "url": "https://www.tcgplayer.com/product/657372/one-piece-card-game-carrying-on-his-will-saint-rosward",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657372_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand:</strong> If you only have \"Celestial Dragons\" type Characters, K.O. up to 2 of your opponent's Characters with a base cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657373,
+      "cardId": "OP13-096",
+      "name": "The Five Elders Are at Your Service!!!",
+      "cleanName": "The Five Elders Are at Your Service",
+      "url": "https://www.tcgplayer.com/product/657373/one-piece-card-game-carrying-on-his-will-the-five-elders-are-at-your-service",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657373_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": null,
+      "effectText": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 \"Celestial Dragons\" type card other than [The Five Elders Are at Your Service!!!] and add it to your hand. Then, trash the rest.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.61,
+          "highPrice": 4,
+          "marketPrice": 0.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657374,
+      "cardId": "OP13-097",
+      "name": "The World's Equilibrium Cannot Be Maintained Forever",
+      "cleanName": "The Worlds Equilibrium Cannot Be Maintained Forever",
+      "url": "https://www.tcgplayer.com/product/657374/one-piece-card-game-carrying-on-his-will-the-worlds-equilibrium-cannot-be-maintained-forever",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657374_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> If the only Characters on your field are \"Celestial Dragons\" type Characters, K.O. up to 1 of your opponent's Characters with a base cost of 6 or less.<br>\r\n[Counter] Your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 1.98,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657375,
+      "cardId": "OP13-098",
+      "name": "Never Existed... in the First Place...",
+      "cleanName": "Never Existed in the First Place",
+      "url": "https://www.tcgplayer.com/product/657375/one-piece-card-game-carrying-on-his-will-never-existed-in-the-first-place",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657375_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Celestial Dragons;Five Elders",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 1 of your DON!! cards:</strong> If your Leader is [Imu], K.O. up to 1 of your opponent's Stages with a cost of 7.<br>\r\n[Counter] If your Leader is [Imu], up to 1 of your Leader or Character cards gains +4000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.5,
+          "highPrice": 22,
+          "marketPrice": 0.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657376,
+      "cardId": "OP13-099",
+      "name": "The Empty Throne",
+      "cleanName": "The Empty Throne",
+      "url": "https://www.tcgplayer.com/product/657376/one-piece-card-game-carrying-on-his-will-the-empty-throne",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657376_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Black",
+      "power": null,
+      "cost": "7",
+      "life": null,
+      "subtypes": "Mary Geoise",
+      "attribute": null,
+      "effectText": "[Your Turn] If you have 19 or more cards in your trash, your Leader gains +1000 power.<br>\r\n[Activate: Main] <strong>You may rest this card and 3 of your DON!! cards:</strong> Play up to 1 black \"Five Elders\" type Character card with a cost equal to or less than the number of DON!! cards on your field from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657377,
+      "cardId": "OP13-100",
+      "name": "Jewelry Bonney (100)",
+      "cleanName": "Jewelry Bonney 100",
+      "url": "https://www.tcgplayer.com/product/657377/one-piece-card-game-carrying-on-his-will-jewelry-bonney-100",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657377_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] This effect can be activated when you play a Character with a [Trigger]. Give up to 2 rested DON!! cards to 1 of your Leader or Character cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657378,
+      "cardId": "OP13-100",
+      "name": "Jewelry Bonney (100) (Alternate Art)",
+      "cleanName": "Jewelry Bonney 100 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657378/one-piece-card-game-carrying-on-his-will-jewelry-bonney-100-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657378_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] This effect can be activated when you play a Character with a [Trigger]. Give up to 2 rested DON!! cards to 1 of your Leader or Character cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20,
+          "midPrice": 24.78,
+          "highPrice": 98,
+          "marketPrice": 21.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657379,
+      "cardId": "OP13-101",
+      "name": "Atlas",
+      "cleanName": "Atlas",
+      "url": "https://www.tcgplayer.com/product/657379/one-piece-card-game-carrying-on-his-will-atlas",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657379_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657380,
+      "cardId": "OP13-102",
+      "name": "Edison",
+      "cleanName": "Edison",
+      "url": "https://www.tcgplayer.com/product/657380/one-piece-card-game-carrying-on-his-will-edison",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657380_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] <strong>You may trash this Character:</strong> If the number of your Life cards is equal to or less than the number of your opponent's Life cards, draw 1 card. Then, rest up to 1 of your opponent's Characters with a cost of 3 or less.<br>\r\n[Trigger] Draw 1 card and rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657381,
+      "cardId": "OP13-103",
+      "name": "Gyogyo",
+      "cleanName": "Gyogyo",
+      "url": "https://www.tcgplayer.com/product/657381/one-piece-card-game-carrying-on-his-will-gyogyo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657381_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Bonney Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657382,
+      "cardId": "OP13-104",
+      "name": "Kouzuki Hiyori",
+      "cleanName": "Kouzuki Hiyori",
+      "url": "https://www.tcgplayer.com/product/657382/one-piece-card-game-carrying-on-his-will-kouzuki-hiyori",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657382_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] <strong>You may trash 1 card from your hand:</strong> If your Leader is multicolored, add up to 1 card from the top of your deck to the top of your Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.26,
+          "highPrice": 1000,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657383,
+      "cardId": "OP13-105",
+      "name": "Kouzuki Momonosuke",
+      "cleanName": "Kouzuki Momonosuke",
+      "url": "https://www.tcgplayer.com/product/657383/one-piece-card-game-carrying-on-his-will-kouzuki-momonosuke",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657383_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at all of your Life cards and place them back in your Life area in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657384,
+      "cardId": "OP13-106",
+      "name": "Conney",
+      "cleanName": "Conney",
+      "url": "https://www.tcgplayer.com/product/657384/one-piece-card-game-carrying-on-his-will-conney",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657384_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Bonney Pirates",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] When a [Trigger] activates, this Character gains [Blocker] during this turn.<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657385,
+      "cardId": "OP13-107",
+      "name": "Shaka",
+      "cleanName": "Shaka",
+      "url": "https://www.tcgplayer.com/product/657385/one-piece-card-game-carrying-on-his-will-shaka",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657385_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657386,
+      "cardId": "OP13-108",
+      "name": "Jewelry Bonney (108)",
+      "cleanName": "Jewelry Bonney 108",
+      "url": "https://www.tcgplayer.com/product/657386/one-piece-card-game-carrying-on-his-will-jewelry-bonney-108",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657386_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"Egghead\" type, this Character gains [Rush] during this turn. Then, your opponent adds 1 card from the top of their Life cards to their hand.<br>\r\n[Trigger] If you have 1 or less Life cards, rest up to 1 of your opponent's Characters with a cost of 7 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 4.52,
+          "highPrice": 80,
+          "marketPrice": 3.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657387,
+      "cardId": "OP13-108",
+      "name": "Jewelry Bonney (108) (Alternate Art)",
+      "cleanName": "Jewelry Bonney 108 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657387/one-piece-card-game-carrying-on-his-will-jewelry-bonney-108-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657387_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"Egghead\" type, this Character gains [Rush] during this turn. Then, your opponent adds 1 card from the top of their Life cards to their hand.<br>\r\n[Trigger] If you have 1 or less Life cards, rest up to 1 of your opponent's Characters with a cost of 7 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 44.14,
+          "midPrice": 59,
+          "highPrice": 420.69,
+          "marketPrice": 52.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657388,
+      "cardId": "OP13-109",
+      "name": "Jewelry Bonney (109)",
+      "cleanName": "Jewelry Bonney 109",
+      "url": "https://www.tcgplayer.com/product/657388/one-piece-card-game-carrying-on-his-will-jewelry-bonney-109",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657388_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "If this Character would be removed from the field by your opponent's effect, you may turn 1 card from the top of your Life cards face-up instead.<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657389,
+      "cardId": "OP13-110",
+      "name": "Stussy",
+      "cleanName": "Stussy",
+      "url": "https://www.tcgplayer.com/product/657389/one-piece-card-game-carrying-on-his-will-stussy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657389_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On Play] If your Leader has the \"Egghead\" type, play up to 1 Character card with a cost of 5 or less and a [Trigger] from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.9,
+          "highPrice": 7,
+          "marketPrice": 0.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657390,
+      "cardId": "OP13-110",
+      "name": "Stussy (Alternate Art)",
+      "cleanName": "Stussy Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657390/one-piece-card-game-carrying-on-his-will-stussy-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657390_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On Play] If your Leader has the \"Egghead\" type, play up to 1 Character card with a cost of 5 or less and a [Trigger] from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 21.43,
+          "midPrice": 28.71,
+          "highPrice": 55.99,
+          "marketPrice": 27.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657391,
+      "cardId": "OP13-111",
+      "name": "Pythagoras",
+      "cleanName": "Pythagoras",
+      "url": "https://www.tcgplayer.com/product/657391/one-piece-card-game-carrying-on-his-will-pythagoras",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657391_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657392,
+      "cardId": "OP13-112",
+      "name": "Vegapunk",
+      "cleanName": "Vegapunk",
+      "url": "https://www.tcgplayer.com/product/657392/one-piece-card-game-carrying-on-his-will-vegapunk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657392_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "If you have a total of 2 or more given DON!! cards, this Character gains [Blocker].<br>\r\n<em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657393,
+      "cardId": "OP13-113",
+      "name": "Lilith",
+      "cleanName": "Lilith",
+      "url": "https://www.tcgplayer.com/product/657393/one-piece-card-game-carrying-on-his-will-lilith",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657393_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 card with a [Trigger] other than [Lilith] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [On Play] effect.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 1.17,
+          "highPrice": 1000,
+          "marketPrice": 1.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657394,
+      "cardId": "OP13-113",
+      "name": "Lilith (Alternate Art)",
+      "cleanName": "Lilith Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657394/one-piece-card-game-carrying-on-his-will-lilith-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657394_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 card with a [Trigger] other than [Lilith] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [On Play] effect.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 27,
+          "midPrice": 35,
+          "highPrice": 420.69,
+          "marketPrice": 31.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657395,
+      "cardId": "OP13-114",
+      "name": "S-Snake",
+      "cleanName": "S Snake",
+      "url": "https://www.tcgplayer.com/product/657395/one-piece-card-game-carrying-on-his-will-s-snake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657395_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Egghead;Seraphim",
+      "attribute": "Special",
+      "effectText": "[On Play]/[When Attacking] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> Give up to 1 of your opponent's Characters 2000 power during this turn.<br>\r\n[Trigger] <strong>You may trash 1 card from your hand:</strong> Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.22,
+          "highPrice": 1000,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657396,
+      "cardId": "OP13-114",
+      "name": "S-Snake (Alternate Art)",
+      "cleanName": "S Snake Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657396/one-piece-card-game-carrying-on-his-will-s-snake-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657396_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Egghead;Seraphim",
+      "attribute": "Special",
+      "effectText": "[On Play]/[When Attacking] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> Give up to 1 of your opponent's Characters 2000 power during this turn.<br>\r\n[Trigger] <strong>You may trash 1 card from your hand:</strong> Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8.5,
+          "midPrice": 11.26,
+          "highPrice": 50,
+          "marketPrice": 11.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657397,
+      "cardId": "OP13-115",
+      "name": "Paper Art Afterimage",
+      "cleanName": "Paper Art Afterimage",
+      "url": "https://www.tcgplayer.com/product/657397/one-piece-card-game-carrying-on-his-will-paper-art-afterimage",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657397_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "CP0;Egghead",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, if your opponent has 2 or less Life cards, up to 1 of your Leader or Character cards gains +1000 power during this turn.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.49,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657398,
+      "cardId": "OP13-116",
+      "name": "The One Who Is the Most Free Is the Pirate King!!!",
+      "cleanName": "The One Who Is the Most Free Is the Pirate King",
+      "url": "https://www.tcgplayer.com/product/657398/one-piece-card-game-carrying-on-his-will-the-one-who-is-the-most-free-is-the-pirate-king",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657398_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Supernovas\" type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 30,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657399,
+      "cardId": "OP13-117",
+      "name": "Gum-Gum Dawn Stamp",
+      "cleanName": "Gum Gum Dawn Stamp",
+      "url": "https://www.tcgplayer.com/product/657399/one-piece-card-game-carrying-on-his-will-gum-gum-dawn-stamp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657399_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors;Egghead",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> K.O. up to 1 of your opponent's Characters with a base cost of 6 or less.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2.98,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657400,
+      "cardId": "OP13-118",
+      "name": "Monkey.D.Luffy (118)",
+      "cleanName": "MonkeyDLuffy 118",
+      "url": "https://www.tcgplayer.com/product/657400/one-piece-card-game-carrying-on-his-will-monkeydluffy-118",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657400_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "[Double Attack]<br>\r\n[On Play] If your Leader is multicolored, set up to 4 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19,
+          "midPrice": 22.94,
+          "highPrice": 420.69,
+          "marketPrice": 19.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657401,
+      "cardId": "OP13-118",
+      "name": "Monkey.D.Luffy (118) (Red Super Alternate Art)",
+      "cleanName": "MonkeyDLuffy 118 Red Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657401/one-piece-card-game-carrying-on-his-will-monkeydluffy-118-red-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657401_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "[Double Attack]<br>\r\n[On Play] If your Leader is multicolored, set up to 4 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19999,
+          "midPrice": 59999,
+          "highPrice": 99999,
+          "marketPrice": 8489.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657402,
+      "cardId": "OP13-118",
+      "name": "Monkey.D.Luffy (118) (Super Alternate Art)",
+      "cleanName": "MonkeyDLuffy 118 Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657402/one-piece-card-game-carrying-on-his-will-monkeydluffy-118-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657402_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "[Double Attack]<br>\r\n[On Play] If your Leader is multicolored, set up to 4 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3399.99,
+          "midPrice": 3699.99,
+          "highPrice": 5000,
+          "marketPrice": 1948.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657403,
+      "cardId": "OP13-118",
+      "name": "Monkey.D.Luffy (118) (Parallel)",
+      "cleanName": "MonkeyDLuffy 118 Parallel",
+      "url": "https://www.tcgplayer.com/product/657403/one-piece-card-game-carrying-on-his-will-monkeydluffy-118-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657403_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "[Double Attack]<br>\r\n[On Play] If your Leader is multicolored, set up to 4 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 99,
+          "midPrice": 128,
+          "highPrice": 1000,
+          "marketPrice": 100.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657404,
+      "cardId": "OP13-118",
+      "name": "Monkey.D.Luffy (118) (Wanted Poster)",
+      "cleanName": "MonkeyDLuffy 118 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/657404/one-piece-card-game-carrying-on-his-will-monkeydluffy-118-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657404_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "[Double Attack]<br>\r\n[On Play] If your Leader is multicolored, set up to 4 of your DON!! cards as active. Then, you cannot play Character cards with a base cost of 5 or more during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 375,
+          "midPrice": 586.32,
+          "highPrice": 1500,
+          "marketPrice": 475.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657405,
+      "cardId": "OP13-119",
+      "name": "Portgas.D.Ace (119)",
+      "cleanName": "PortgasDAce 119",
+      "url": "https://www.tcgplayer.com/product/657405/one-piece-card-game-carrying-on-his-will-portgasdace-119",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657405_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 3 or less Life cards, this Character gains [Rush].<br>\r\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, you may return up to 1 of your opponent's Characters with a cost of 5 or less to the owner's hand. If you do, your opponent plays up to 1 Character card with a cost of 4 or less from their hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.29,
+          "midPrice": 4.5,
+          "highPrice": 420.69,
+          "marketPrice": 2.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657406,
+      "cardId": "OP13-119",
+      "name": "Portgas.D.Ace (119) (Red Super Alternate Art)",
+      "cleanName": "PortgasDAce 119 Red Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657406/one-piece-card-game-carrying-on-his-will-portgasdace-119-red-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657406_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 3 or less Life cards, this Character gains [Rush].<br>\r\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, you may return up to 1 of your opponent's Characters with a cost of 5 or less to the owner's hand. If you do, your opponent plays up to 1 Character card with a cost of 4 or less from their hand.",
+      "counterPlus": null,
+      "prices": []
+    },
+    {
+      "productId": 657407,
+      "cardId": "OP13-119",
+      "name": "Portgas.D.Ace (119) (Super Alternate Art)",
+      "cleanName": "PortgasDAce 119 Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657407/one-piece-card-game-carrying-on-his-will-portgasdace-119-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657407_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 3 or less Life cards, this Character gains [Rush].<br>\r\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, you may return up to 1 of your opponent's Characters with a cost of 5 or less to the owner's hand. If you do, your opponent plays up to 1 Character card with a cost of 4 or less from their hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1375,
+          "midPrice": 1850,
+          "highPrice": 2800,
+          "marketPrice": 1197.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657408,
+      "cardId": "OP13-119",
+      "name": "Portgas.D.Ace (119) (Parallel)",
+      "cleanName": "PortgasDAce 119 Parallel",
+      "url": "https://www.tcgplayer.com/product/657408/one-piece-card-game-carrying-on-his-will-portgasdace-119-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657408_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 3 or less Life cards, this Character gains [Rush].<br>\r\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, you may return up to 1 of your opponent's Characters with a cost of 5 or less to the owner's hand. If you do, your opponent plays up to 1 Character card with a cost of 4 or less from their hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 34,
+          "midPrice": 41.48,
+          "highPrice": 500,
+          "marketPrice": 39.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657409,
+      "cardId": "OP13-119",
+      "name": "Portgas.D.Ace (119) (Wanted Poster)",
+      "cleanName": "PortgasDAce 119 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/657409/one-piece-card-game-carrying-on-his-will-portgasdace-119-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657409_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If you have 3 or less Life cards, this Character gains [Rush].<br>\r\n[On Play] Give up to 1 rested DON!! card to your Leader. Then, you may return up to 1 of your opponent's Characters with a cost of 5 or less to the owner's hand. If you do, your opponent plays up to 1 Character card with a cost of 4 or less from their hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/topics/notice_op13-119.php\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 674.88,
+          "midPrice": 809.86,
+          "highPrice": 5499.99,
+          "marketPrice": 686.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657410,
+      "cardId": "OP13-120",
+      "name": "Sabo (120)",
+      "cleanName": "Sabo 120",
+      "url": "https://www.tcgplayer.com/product/657410/one-piece-card-game-carrying-on-his-will-sabo-120",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657410_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] Up to 1 of your Characters gains +2 cost until the end of your opponent's next turn. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.71,
+          "midPrice": 9.98,
+          "highPrice": 30,
+          "marketPrice": 8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657411,
+      "cardId": "OP13-120",
+      "name": "Sabo (120) (Red Super Alternate Art)",
+      "cleanName": "Sabo 120 Red Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657411/one-piece-card-game-carrying-on-his-will-sabo-120-red-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657411_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] Up to 1 of your Characters gains +2 cost until the end of your opponent's next turn. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19999,
+          "midPrice": 19999,
+          "highPrice": 19999,
+          "marketPrice": 4749.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657412,
+      "cardId": "OP13-120",
+      "name": "Sabo (120) (Super Alternate Art)",
+      "cleanName": "Sabo 120 Super Alternate Art",
+      "url": "https://www.tcgplayer.com/product/657412/one-piece-card-game-carrying-on-his-will-sabo-120-super-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657412_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] Up to 1 of your Characters gains +2 cost until the end of your opponent's next turn. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 900,
+          "midPrice": 1196.44,
+          "highPrice": 1998.99,
+          "marketPrice": 839.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657413,
+      "cardId": "OP13-120",
+      "name": "Sabo (120) (Parallel)",
+      "cleanName": "Sabo 120 Parallel",
+      "url": "https://www.tcgplayer.com/product/657413/one-piece-card-game-carrying-on-his-will-sabo-120-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657413_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] Up to 1 of your Characters gains +2 cost until the end of your opponent's next turn. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 33.59,
+          "midPrice": 39.01,
+          "highPrice": 200,
+          "marketPrice": 33.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 657414,
+      "cardId": "OP13-120",
+      "name": "Sabo (120) (Wanted Poster)",
+      "cleanName": "Sabo 120 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/657414/one-piece-card-game-carrying-on-his-will-sabo-120-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/657414_200w.jpg",
+      "groupId": 24303,
+      "setCode": "OP13",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] Up to 1 of your Characters gains +2 cost until the end of your opponent's next turn. Then, give up to 1 rested DON!! card to your Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 144.99,
+          "midPrice": 167.6,
+          "highPrice": 500,
+          "marketPrice": 159.62,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 4,
+  "errors": [
+    "Product 660710 (DON!! Card (Gol.D.Roger) (Gold)) has no Number in extendedData",
+    "Product 660744 (DON!! Card (Gol.D.Roger)) has no Number in extendedData"
+  ]
+}

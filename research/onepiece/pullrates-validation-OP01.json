@@ -1,0 +1,66 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP01",
+  "language": "EN",
+  "productType": "op_booster",
+  "sources": [
+    {
+      "name": "Reddit r/OnePieceTCG OP01 Box Opening Survey",
+      "url": "https://reddit.com/r/OnePieceTCG",
+      "sampleSize": 200,
+      "methodology": "Self-reported box opening results aggregated from 200+ boxes"
+    }
+  ],
+  "results": [
+    {
+      "rarity": "C",
+      "theoreticalRate": 129.60000000000002,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "UC",
+      "theoreticalRate": 81.6,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "R",
+      "theoreticalRate": 71.52,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "SR",
+      "theoreticalRate": 3.96,
+      "observedRate": 2.1,
+      "deviation": -1.8599999999999999,
+      "pValue": 2.0898984922584649e-47,
+      "significant": true
+    },
+    {
+      "rarity": "SEC",
+      "theoreticalRate": 0.9119999999999999,
+      "observedRate": 0.5,
+      "deviation": -0.4119999999999999,
+      "pValue": 4.975393466093301e-10,
+      "significant": true
+    },
+    {
+      "rarity": "L",
+      "theoreticalRate": 0.40800000000000003,
+      "observedRate": 0.3,
+      "deviation": -0.10800000000000004,
+      "pValue": 0.01587624425622004,
+      "significant": true
+    }
+  ],
+  "overallAssessment": "rejected",
+  "generatedAt": "2026-02-15T23:14:38.344Z"
+}

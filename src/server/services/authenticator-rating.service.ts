@@ -94,7 +94,7 @@ async function recalculateAggregateRating(authenticatorId: string) {
     .filter((r) => r.weight > 0);
 
   // Compute time-weighted composite
-  const effectiveRating = computeTimeWeightedRating(weightedRatings);
+  const effectiveRating = await computeTimeWeightedRating(weightedRatings);
 
   await db.authenticator.update({
     where: { id: authenticatorId },

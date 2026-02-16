@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 9: Yamato",
+  "groupId": 22957,
+  "setCode": "ST09",
+  "totalProducts": 18,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:33.251Z",
+  "durationMs": 70,
+  "cards": [
+    {
+      "productId": 503523,
+      "cardId": "ST09-001",
+      "name": "Yamato (001)",
+      "cleanName": "Yamato 001",
+      "url": "https://www.tcgplayer.com/product/503523/one-piece-card-game-starter-deck-9-yamato-yamato-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503523_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Opponent's Turn] If you have 2 or less Life cards, this Leader gains +1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 4,
+          "highPrice": 10,
+          "marketPrice": 3.77,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504457,
+      "cardId": "ST09-002",
+      "name": "Uzuki Tempura",
+      "cleanName": "Uzuki Tempura",
+      "url": "https://www.tcgplayer.com/product/504457/one-piece-card-game-starter-deck-9-yamato-uzuki-tempura",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504457_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Slash",
+      "effectText": "[Trigger] Rest up to 1 of your opponent's Characters with a cost of 2 or less and add this card to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.98,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504464,
+      "cardId": "ST09-003",
+      "name": "Ulti",
+      "cleanName": "Ulti",
+      "url": "https://www.tcgplayer.com/product/504464/one-piece-card-game-starter-deck-9-yamato-ulti",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504464_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504465,
+      "cardId": "ST09-004",
+      "name": "Kaido",
+      "cleanName": "Kaido",
+      "url": "https://www.tcgplayer.com/product/504465/one-piece-card-game-starter-deck-9-yamato-kaido",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504465_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] If you have 2 or less Life cards, this Character cannot be K.O.'d in battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 1.98,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503654,
+      "cardId": "ST09-005",
+      "name": "Kouzuki Oden",
+      "cleanName": "Kouzuki Oden",
+      "url": "https://www.tcgplayer.com/product/503654/one-piece-card-game-starter-deck-9-yamato-kouzuki-oden",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503654_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] This Character gains [Double Attack]. <em>(This card deals 2 damage.)</em>\r\n<br>\r\n[On K.O.] <strong>You may trash 2 cards from your hand</strong>: Add up to 1 card from the top of your deck to the top of your Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.08,
+          "highPrice": 1025,
+          "marketPrice": 1.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504456,
+      "cardId": "ST09-006",
+      "name": "Kouzuki Momonosuke",
+      "cleanName": "Kouzuki Momonosuke",
+      "url": "https://www.tcgplayer.com/product/504456/one-piece-card-game-starter-deck-9-yamato-kouzuki-momonosuke",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504456_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 1.98,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504459,
+      "cardId": "ST09-007",
+      "name": "Shinobu",
+      "cleanName": "Shinobu",
+      "url": "https://www.tcgplayer.com/product/504459/one-piece-card-game-starter-deck-9-yamato-shinobu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504459_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: This Character gains +4000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 1.98,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504455,
+      "cardId": "ST09-008",
+      "name": "Shimotsuki Ushimaru",
+      "cleanName": "Shimotsuki Ushimaru",
+      "url": "https://www.tcgplayer.com/product/504455/one-piece-card-game-starter-deck-9-yamato-shimotsuki-ushimaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504455_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Play up to 1 yellow [Land of Wano] type Character card with a cost of 4 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.17,
+          "highPrice": 1.98,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504460,
+      "cardId": "ST09-009",
+      "name": "Fugetsu Omusubi",
+      "cleanName": "Fugetsu Omusubi",
+      "url": "https://www.tcgplayer.com/product/504460/one-piece-card-game-starter-deck-9-yamato-fugetsu-omusubi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504460_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Slash",
+      "effectText": "[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 1 or less and add this card to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.98,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503538,
+      "cardId": "ST09-010",
+      "name": "Portgas.D.Ace",
+      "cleanName": "PortgasDAce",
+      "url": "https://www.tcgplayer.com/product/503538/one-piece-card-game-starter-deck-9-yamato-portgasdace",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503538_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Once Per Turn] If this Character would be K.O.'d, you may trash 1 card from the top or bottom of your Life cards instead.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504454,
+      "cardId": "ST09-011",
+      "name": "Monkey.D.Luffy",
+      "cleanName": "MonkeyDLuffy",
+      "url": "https://www.tcgplayer.com/product/504454/one-piece-card-game-starter-deck-9-yamato-monkeydluffy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504454_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.2,
+          "highPrice": 1.98,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504461,
+      "cardId": "ST09-012",
+      "name": "Yamato (012)",
+      "cleanName": "Yamato 012",
+      "url": "https://www.tcgplayer.com/product/504461/one-piece-card-game-starter-deck-9-yamato-yamato-012",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504461_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: This Character gains +2000 power until the start of your next turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.24,
+          "highPrice": 1.98,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504462,
+      "cardId": "ST09-013",
+      "name": "Yamato (013)",
+      "cleanName": "Yamato 013",
+      "url": "https://www.tcgplayer.com/product/504462/one-piece-card-game-starter-deck-9-yamato-yamato-013",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504462_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.18,
+          "highPrice": 1.98,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504463,
+      "cardId": "ST09-014",
+      "name": "Narikabura Arrow",
+      "cleanName": "Narikabura Arrow",
+      "url": "https://www.tcgplayer.com/product/504463/one-piece-card-game-starter-deck-9-yamato-narikabura-arrow",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504463_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": null,
+      "effectText": "[Counter] If you have 2 or less Life cards, give up to 1 of your opponent's Leader or Character cards -3000 power during this turn.\r\n<br>\r\n[Trigger] <strong>You may trash 2 cards from your hand</strong>: Add up to 1 card from the top of your deck to the top of your Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 8,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 504458,
+      "cardId": "ST09-015",
+      "name": "Thunder Bagua",
+      "cleanName": "Thunder Bagua",
+      "url": "https://www.tcgplayer.com/product/504458/one-piece-card-game-starter-deck-9-yamato-thunder-bagua",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/504458_200w.jpg",
+      "groupId": 22957,
+      "setCode": "ST09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, add up to 1 of your opponent's Characters with a cost of 3 or less to the top or bottom of the owner's Life cards face-up.\r\n<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.24,
+          "highPrice": 4.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

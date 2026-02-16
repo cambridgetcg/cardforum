@@ -1,0 +1,314 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 17: BLUE Donquixote Doflamingo",
+  "groupId": 23492,
+  "setCode": "ST17",
+  "totalProducts": 13,
+  "totalCards": 10,
+  "scrapedAt": "2026-02-15T22:54:42.055Z",
+  "durationMs": 110,
+  "cards": [
+    {
+      "productId": 581006,
+      "cardId": "OP01-060",
+      "name": "Donquixote Doflamingo (OP01-060)",
+      "cleanName": "Donquixote Doflamingo OP01 060",
+      "url": "https://www.tcgplayer.com/product/581006/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-donquixote-doflamingo-op01-060",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581006_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [When Attacking] [1] <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Reveal 1 card from the top of your deck. If that card is a \"The Seven Warlords of the Sea\" type Character card with a cost of 4 or less, you may play that card rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.98,
+          "highPrice": 50,
+          "marketPrice": 1.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581007,
+      "cardId": "OP01-073",
+      "name": "Donquixote Doflamingo (OP01-073)",
+      "cleanName": "Donquixote Doflamingo OP01 073",
+      "url": "https://www.tcgplayer.com/product/581007/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-donquixote-doflamingo-op01-073",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581007_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 6.99,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581009,
+      "cardId": "OP02-054",
+      "name": "Gecko Moria (OP02-054)",
+      "cleanName": "Gecko Moria OP02 054",
+      "url": "https://www.tcgplayer.com/product/581009/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-gecko-moria-op02-054",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581009_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea;Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.29,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581010,
+      "cardId": "OP02-057",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/581010/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581010_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 2 cards from the top of your deck; reveal up to 1 \"The Seven Warlords of the Sea\" type card and add it to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581011,
+      "cardId": "P-030",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/581011/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581011_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;The Seven Warlords of the Sea;The Sun Pirates",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] Place up to 1 Character with a cost of 3 or less at the bottom of the owner's deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.28,
+          "highPrice": 5,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581016,
+      "cardId": "ST17-001",
+      "name": "Crocodile",
+      "cleanName": "Crocodile",
+      "url": "https://www.tcgplayer.com/product/581016/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-crocodile",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581016_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] Reveal 1 card from the top of your deck. If that card is a \"The Seven Warlords of the Sea\" type card, draw 2 cards and place 1 card from your hand at the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.18,
+          "highPrice": 1.98,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581017,
+      "cardId": "ST17-002",
+      "name": "Trafalgar Law (ST17-002)",
+      "cleanName": "Trafalgar Law ST17 002",
+      "url": "https://www.tcgplayer.com/product/581017/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-trafalgar-law-st17-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581017_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates;The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[On Play] You may return 1 of your Characters to the owner's hand: If your Leader has the \"The Seven Warlords of the Sea\" type, return up to 1 Character with a cost of 4 or less to the owner's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.56,
+          "midPrice": 1.49,
+          "highPrice": 25,
+          "marketPrice": 1.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581018,
+      "cardId": "ST17-003",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/581018/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581018_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Buggy's Delivery;The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 3 cards from the top of your deck and place them at the top of your deck in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.16,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581019,
+      "cardId": "ST17-004",
+      "name": "Boa Hancock",
+      "cleanName": "Boa Hancock",
+      "url": "https://www.tcgplayer.com/product/581019/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-boa-hancock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581019_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[On Play] Look at 3 cards from the top of your deck and place them at the top or bottom of your deck in any order. Then, give up to 1 rested DON!! card to 1 of your \"The Seven Warlords of the Sea\" type Leader or Character cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12,
+          "midPrice": 15,
+          "highPrice": 50,
+          "marketPrice": 13.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581020,
+      "cardId": "ST17-005",
+      "name": "Marshall.D.Teach",
+      "cleanName": "MarshallDTeach",
+      "url": "https://www.tcgplayer.com/product/581020/one-piece-card-game-starter-deck-17-blue-donquixote-doflamingo-marshalldteach",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581020_200w.jpg",
+      "groupId": 23492,
+      "setCode": "ST17",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] You may place 1 card from your hand at the top of your deck: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.3,
+          "highPrice": 5,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

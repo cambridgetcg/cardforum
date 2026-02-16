@@ -132,6 +132,39 @@ export function parseCardsFromHtml(html: string, setCode: string, expansionName:
 }
 
 /**
+ * Infer set code from scraped card IDs.
+ * Card IDs follow pattern: "OP01-077", "ST01-001", "EB01-023", "P-001".
+ * Uses majority vote from card IDs to determine the correct set code.
+ */
+function inferSetCodeFromCardIds(cards: CardmarketCard[], currentCode: string): string {
+  if (cards.length === 0) return currentCode;
+
+  // Extract prefix from card IDs: "ST01-001" → "ST01", "OP01-077" → "OP01"
+  const codeCounts = new Map<string, number>();
+  for (const card of cards) {
+    const match = card.cardId.match(/^([A-Z]{1,4}\d{0,2})-\d+$/);
+    if (match) {
+      const prefix = match[1];
+      codeCounts.set(prefix, (codeCounts.get(prefix) || 0) + 1);
+    }
+  }
+
+  if (codeCounts.size === 0) return currentCode;
+
+  // Use the most common prefix (majority vote)
+  let bestCode = currentCode;
+  let bestCount = 0;
+  for (const [code, count] of codeCounts) {
+    if (count > bestCount) {
+      bestCode = code;
+      bestCount = count;
+    }
+  }
+
+  return bestCode;
+}
+
+/**
  * Scrape all pages of a single Cardmarket expansion.
  * Fetches page 1, determines total pages, then fetches remaining pages sequentially.
  */
@@ -213,6 +246,16 @@ export async function scrapeExpansion(
     console.log(`  Page ${page}: ${pageResult.cards.length} cards [${result.durationMs}ms]`);
   }
 
+  // Post-scrape code correction: infer setCode from actual card IDs
+  // e.g., if cards have IDs like "ST01-001", the setCode should be "ST01"
+  const correctedCode = inferSetCodeFromCardIds(allCards, setCode);
+  if (correctedCode !== setCode) {
+    console.log(`  Code correction: ${setCode} → ${correctedCode} (inferred from card IDs)`);
+    for (const card of allCards) {
+      card.setCode = correctedCode;
+    }
+  }
+
   const elapsed = Date.now() - start;
   console.log(`\nDone: ${allCards.length} cards scraped in ${(elapsed / 1000).toFixed(1)}s`);
   console.log(`Bright Data requests: ${client.stats.requestCount}`);
@@ -220,7 +263,7 @@ export async function scrapeExpansion(
   return {
     expansion: expansionName,
     expansionId,
-    setCode,
+    setCode: correctedCode,
     totalPages,
     totalCards: allCards.length,
     scrapedAt: new Date().toISOString(),

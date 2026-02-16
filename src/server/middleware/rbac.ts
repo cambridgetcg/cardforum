@@ -151,6 +151,44 @@ export interface RBACContext {
   role: Role;
 }
 
+// ─── Inline Helpers (for dynamic routes with params) ─
+
+/**
+ * Check minimum role inline — use in dynamic route handlers where
+ * `withRole()` wrapper can't pass through Next.js `params`.
+ *
+ * Usage:
+ *   const ctx = await requireRole("ADMIN");
+ *   if (ctx instanceof NextResponse) return ctx;
+ *   // ctx.userId, ctx.role available
+ */
+export async function requireRole(requiredRole: Role): Promise<RBACContext | NextResponse> {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  const role = await resolveRole(session.user.id);
+  if (!hasRole(role, requiredRole)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return { userId: session.user.id, role };
+}
+
+/**
+ * Check specific permission inline — same pattern as requireRole.
+ */
+export async function requirePermission(required: Permission): Promise<RBACContext | NextResponse> {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  const role = await resolveRole(session.user.id);
+  if (!hasPermission(role, required)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return { userId: session.user.id, role };
+}
+
 type RBACHandler = (
   req: NextRequest,
   ctx: RBACContext,

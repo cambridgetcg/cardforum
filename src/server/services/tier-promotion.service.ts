@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { TIER_PROMOTION_THRESHOLDS } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import { computeTimeWeightedRating } from "@/lib/authenticator-ratings";
 import type { AuthenticatorTier } from "@/types/domain";
 
@@ -102,16 +102,17 @@ export async function getTierEligibility(userId: string) {
   if (!auth) throw new Error("Authenticator not found");
 
   const currentTier = auth.tier as AuthenticatorTier;
-  const effectiveRating = computeTimeWeightedRating(auth.ratings);
+  const effectiveRating = await computeTimeWeightedRating(auth.ratings);
   const daysSinceApproval = auth.approvedAt
     ? (Date.now() - auth.approvedAt.getTime()) / (24 * 60 * 60 * 1000)
     : 0;
 
+  const thresholds = await getConfig("authenticator.tier_promotion_thresholds");
   const nextTier = getNextTier(currentTier);
   let nextTierProgress = null;
 
   if (nextTier === "VERIFIED") {
-    const t = TIER_PROMOTION_THRESHOLDS.VERIFIED;
+    const t = thresholds.VERIFIED;
     nextTierProgress = {
       targetTier: "VERIFIED",
       verifications: { current: auth.totalVerified, required: t.minVerifications },
@@ -119,7 +120,7 @@ export async function getTierEligibility(userId: string) {
       daysActive: { current: Math.floor(daysSinceApproval), required: t.minDaysActive },
     };
   } else if (nextTier === "PREMIUM") {
-    const t = TIER_PROMOTION_THRESHOLDS.PREMIUM;
+    const t = thresholds.PREMIUM;
     nextTierProgress = {
       targetTier: "PREMIUM",
       verifications: { current: auth.totalVerified, required: t.minVerifications },
@@ -180,11 +181,12 @@ type AuthWithRatings = NonNullable<Awaited<ReturnType<typeof db.authenticator.fi
 };
 
 async function isEligibleForTier(auth: AuthWithRatings, targetTier: AuthenticatorTier): Promise<boolean> {
+  const thresholds = await getConfig("authenticator.tier_promotion_thresholds");
   if (targetTier === "VERIFIED") {
-    const t = TIER_PROMOTION_THRESHOLDS.VERIFIED;
+    const t = thresholds.VERIFIED;
     if (auth.totalVerified < t.minVerifications) return false;
 
-    const effectiveRating = computeTimeWeightedRating(auth.ratings);
+    const effectiveRating = await computeTimeWeightedRating(auth.ratings);
     if (effectiveRating < t.minRating) return false;
 
     const daysSinceApproval = auth.approvedAt
@@ -209,10 +211,10 @@ async function isEligibleForTier(auth: AuthWithRatings, targetTier: Authenticato
   }
 
   if (targetTier === "PREMIUM") {
-    const t = TIER_PROMOTION_THRESHOLDS.PREMIUM;
+    const t = thresholds.PREMIUM;
     if (auth.totalVerified < t.minVerifications) return false;
 
-    const effectiveRating = computeTimeWeightedRating(auth.ratings);
+    const effectiveRating = await computeTimeWeightedRating(auth.ratings);
     if (effectiveRating < t.minRating) return false;
 
     const daysSinceApproval = auth.approvedAt
@@ -242,34 +244,50 @@ async function isEligibleForTier(auth: AuthWithRatings, targetTier: Authenticato
 
 async function getDemotionReason(auth: AuthWithRatings): Promise<string | null> {
   const currentTier = auth.tier as AuthenticatorTier;
-  const effectiveRating = computeTimeWeightedRating(auth.ratings);
+  const effectiveRating = await computeTimeWeightedRating(auth.ratings);
+  const thresholds = await getConfig("authenticator.tier_promotion_thresholds");
+  const demotionWindowDays = await getConfig("authenticator.dispute_demotion_window_days");
+  const demotionThreshold = await getConfig("authenticator.dispute_demotion_threshold");
+  const inactivityDays = await getConfig("authenticator.inactivity_demotion_days");
 
   // Check: rating below tier minimum
-  if (currentTier === "PREMIUM" && effectiveRating < TIER_PROMOTION_THRESHOLDS.PREMIUM.minRating) {
-    return `Rating dropped below ${TIER_PROMOTION_THRESHOLDS.PREMIUM.minRating} (current: ${effectiveRating.toFixed(2)})`;
+  if (currentTier === "PREMIUM" && effectiveRating < thresholds.PREMIUM.minRating) {
+    return `Rating dropped below ${thresholds.PREMIUM.minRating} (current: ${effectiveRating.toFixed(2)})`;
   }
-  if (currentTier === "VERIFIED" && effectiveRating < TIER_PROMOTION_THRESHOLDS.VERIFIED.minRating) {
-    return `Rating dropped below ${TIER_PROMOTION_THRESHOLDS.VERIFIED.minRating} (current: ${effectiveRating.toFixed(2)})`;
+  if (currentTier === "VERIFIED" && effectiveRating < thresholds.VERIFIED.minRating) {
+    return `Rating dropped below ${thresholds.VERIFIED.minRating} (current: ${effectiveRating.toFixed(2)})`;
   }
 
-  // Check: 3+ disputes in 30 days
-  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  // Check: disputes exceeding threshold in window
+  const windowStart = new Date(Date.now() - demotionWindowDays * 24 * 60 * 60 * 1000);
   const recentDisputes = await db.dispute.count({
     where: {
       trade: {
         legs: { some: { authenticatorId: auth.id } },
       },
-      createdAt: { gte: thirtyDaysAgo },
+      createdAt: { gte: windowStart },
     },
   });
-  if (recentDisputes >= 3) {
-    return `${recentDisputes} disputes in last 30 days`;
+  if (recentDisputes >= demotionThreshold) {
+    return `${recentDisputes} disputes in last ${demotionWindowDays} days`;
   }
 
-  // Check: inactivity 90+ days
-  const ninetyDaysAgo = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000);
-  if (auth.lastActiveAt && auth.lastActiveAt < ninetyDaysAgo) {
-    return "Inactive for 90+ days";
+  // Check: failed audits (escalations) in window
+  const failedAudits = await db.authenticatorAudit.count({
+    where: {
+      authenticatorId: auth.id,
+      type: "AUDIT_ESCALATION",
+      createdAt: { gte: windowStart },
+    },
+  });
+  if (failedAudits >= 1) {
+    return `${failedAudits} failed audit escalation(s) in last ${demotionWindowDays} days`;
+  }
+
+  // Check: inactivity
+  const inactivityCutoff = new Date(Date.now() - inactivityDays * 24 * 60 * 60 * 1000);
+  if (auth.lastActiveAt && auth.lastActiveAt < inactivityCutoff) {
+    return `Inactive for ${inactivityDays}+ days`;
   }
 
   return null;

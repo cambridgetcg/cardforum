@@ -1,0 +1,4661 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Romance Dawn",
+  "groupId": 3188,
+  "setCode": "OP01",
+  "totalProducts": 163,
+  "totalCards": 154,
+  "scrapedAt": "2026-02-15T22:53:15.302Z",
+  "durationMs": 471,
+  "cards": [
+    {
+      "productId": 454512,
+      "cardId": "OP01-001",
+      "name": "Roronoa Zoro (001)",
+      "cleanName": "Roronoa Zoro 001",
+      "url": "https://www.tcgplayer.com/product/454512/one-piece-card-game-romance-dawn-roronoa-zoro-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454512_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Your Turn] All of your Characters gain +1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1,
+          "midPrice": 2.98,
+          "highPrice": 9.99,
+          "marketPrice": 2.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454513,
+      "cardId": "OP01-001",
+      "name": "Roronoa Zoro (001) (Parallel)",
+      "cleanName": "Roronoa Zoro 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/454513/one-piece-card-game-romance-dawn-roronoa-zoro-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454513_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Your Turn] All of your Characters gain +1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 527.99,
+          "midPrice": 597,
+          "highPrice": 1500,
+          "marketPrice": 504.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453505,
+      "cardId": "OP01-002",
+      "name": "Trafalgar Law (002)",
+      "cleanName": "Trafalgar Law 002",
+      "url": "https://www.tcgplayer.com/product/453505/one-piece-card-game-romance-dawn-trafalgar-law-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453505_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] (2) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: If you have 5 Characters, return 1 of your Characters to your hand. Then, play up to 1 Character with a cost of 5 or less from your hand that is a different color than the returned Character.<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-1\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.28,
+          "midPrice": 0.99,
+          "highPrice": 5,
+          "marketPrice": 0.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454514,
+      "cardId": "OP01-002",
+      "name": "Trafalgar Law (002) (Parallel)",
+      "cleanName": "Trafalgar Law 002 Parallel",
+      "url": "https://www.tcgplayer.com/product/454514/one-piece-card-game-romance-dawn-trafalgar-law-002-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454514_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] (2) <em>(You may rest the specified number of DON!! cards in your cost area)</em>: If you have 5 Characters, return 1 of your Characters to your hand. Then, play up to 1 Character with a cost of 5 or less from your hand that is a different color than the returned character.<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-2\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 450,
+          "midPrice": 500,
+          "highPrice": 3000,
+          "marketPrice": 414.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453506,
+      "cardId": "OP01-003",
+      "name": "Monkey.D.Luffy (003) (Parallel)",
+      "cleanName": "MonkeyDLuffy 003 Parallel",
+      "url": "https://www.tcgplayer.com/product/453506/one-piece-card-game-romance-dawn-monkeydluffy-003-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453506_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] (4) <em>(You may rest the specified number of DON!! cards in your cost area)</em>: Set up to 1 of your \"Supernova\" or \"Straw Hat Crew\" type Character cards with a cost of 5 or less as active. It gains +1000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-4\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1897.69,
+          "midPrice": 2500,
+          "highPrice": 3000,
+          "marketPrice": 795.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454515,
+      "cardId": "OP01-003",
+      "name": "Monkey.D.Luffy (003)",
+      "cleanName": "MonkeyDLuffy 003",
+      "url": "https://www.tcgplayer.com/product/454515/one-piece-card-game-romance-dawn-monkeydluffy-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454515_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] (4) <em>(You may rest the specified number of DON!! cards in your cost area)</em>: Set up to 1 of your \"Supernova\" or \"Straw Hat Crew\" type Character cards with a cost of 5 or less as active. It gains +1000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-3\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1,
+          "midPrice": 5,
+          "highPrice": 30,
+          "marketPrice": 2.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454516,
+      "cardId": "OP01-004",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/454516/one-piece-card-game-romance-dawn-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454516_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x1] [Your Turn] [Once Per Turn] Draw 1 card when your opponent activates an Event.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454517,
+      "cardId": "OP01-005",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/454517/one-piece-card-game-romance-dawn-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454517_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": null,
+      "attribute": "Special",
+      "effectText": "[On Play] Add up to 1 red Character card other than [Uta] with a cost of 3 or less from your trash to your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-5\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.26,
+          "highPrice": 1.98,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.17,
+          "midPrice": 0.41,
+          "highPrice": 9.99,
+          "marketPrice": 0.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454518,
+      "cardId": "OP01-006",
+      "name": "Otama",
+      "cleanName": "Otama",
+      "url": "https://www.tcgplayer.com/product/454518/one-piece-card-game-romance-dawn-otama",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454518_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -2000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-6\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.24,
+          "midPrice": 0.96,
+          "highPrice": 9,
+          "marketPrice": 0.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454519,
+      "cardId": "OP01-007",
+      "name": "Caribou",
+      "cleanName": "Caribou",
+      "url": "https://www.tcgplayer.com/product/454519/one-piece-card-game-romance-dawn-caribou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454519_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Caribou Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On K.O.] K.O. up to 1 of your opponent's Characters with 4000 power or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-7\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453507,
+      "cardId": "OP01-008",
+      "name": "Cavendish (Box Topper)",
+      "cleanName": "Cavendish Box Topper",
+      "url": "https://www.tcgplayer.com/product/453507/one-piece-card-game-romance-dawn-cavendish-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453507_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may add 1 card from your Life area to your hand:</strong> This Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em><br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/announcements/op01.php\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.58,
+          "midPrice": 8,
+          "highPrice": 50,
+          "marketPrice": 5.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454520,
+      "cardId": "OP01-008",
+      "name": "Cavendish",
+      "cleanName": "Cavendish",
+      "url": "https://www.tcgplayer.com/product/454520/one-piece-card-game-romance-dawn-cavendish",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454520_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may add 1 card from your Life area to your hand:</strong> This Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em><br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/announcements/op01.php\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454522,
+      "cardId": "OP01-009",
+      "name": "Carrot",
+      "cleanName": "Carrot",
+      "url": "https://www.tcgplayer.com/product/454522/one-piece-card-game-romance-dawn-carrot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454522_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Strike",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.16,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454525,
+      "cardId": "OP01-010",
+      "name": "Komachiyo",
+      "cleanName": "Komachiyo",
+      "url": "https://www.tcgplayer.com/product/454525/one-piece-card-game-romance-dawn-komachiyo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454525_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal;Land of Wano",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454526,
+      "cardId": "OP01-011",
+      "name": "Gordon",
+      "cleanName": "Gordon",
+      "url": "https://www.tcgplayer.com/product/454526/one-piece-card-game-romance-dawn-gordon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454526_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>You may place 1 card from your hand at the bottom of your deck:</strong> Draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454527,
+      "cardId": "OP01-012",
+      "name": "Sai",
+      "cleanName": "Sai",
+      "url": "https://www.tcgplayer.com/product/454527/one-piece-card-game-romance-dawn-sai",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454527_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Happosui Army",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454529,
+      "cardId": "OP01-013",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/454529/one-piece-card-game-romance-dawn-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454529_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] <strong>You may add 1 card from your Life area to your hand:</strong> This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.95,
+          "midPrice": 2.22,
+          "highPrice": 14.99,
+          "marketPrice": 1.62,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454530,
+      "cardId": "OP01-013",
+      "name": "Sanji (Parallel)",
+      "cleanName": "Sanji Parallel",
+      "url": "https://www.tcgplayer.com/product/454530/one-piece-card-game-romance-dawn-sanji-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454530_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] <strong>You may add 1 card from your Life area to your hand:</strong> This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 51.71,
+          "midPrice": 60.62,
+          "highPrice": 168.97,
+          "marketPrice": 58.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454532,
+      "cardId": "OP01-014",
+      "name": "Jinbe (014)",
+      "cleanName": "Jinbe 014",
+      "url": "https://www.tcgplayer.com/product/454532/one-piece-card-game-romance-dawn-jinbe-014",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454532_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x1] [On Block] Play up to 1 red Character card with a cost of 2 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-8\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454533,
+      "cardId": "OP01-015",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/454533/one-piece-card-game-romance-dawn-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454533_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand:</strong> Add up to 1 \"Straw Hat Crew\" type Character card other than [Tony Tony.Chopper] with a cost of 4 or less from your trash to your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-9\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.33,
+          "highPrice": 3,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454534,
+      "cardId": "OP01-016",
+      "name": "Nami",
+      "cleanName": "Nami",
+      "url": "https://www.tcgplayer.com/product/454534/one-piece-card-game-romance-dawn-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454534_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type Character card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-10\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.3,
+          "midPrice": 3.75,
+          "highPrice": 20,
+          "marketPrice": 2.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454536,
+      "cardId": "OP01-016",
+      "name": "Nami (Parallel)",
+      "cleanName": "Nami Parallel",
+      "url": "https://www.tcgplayer.com/product/454536/one-piece-card-game-romance-dawn-nami-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454536_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type Character card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-11\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 399.99,
+          "midPrice": 580,
+          "highPrice": 3000,
+          "marketPrice": 457.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454538,
+      "cardId": "OP01-017",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/454538/one-piece-card-game-romance-dawn-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454538_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-12\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.41,
+          "highPrice": 9.99,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454540,
+      "cardId": "OP01-018",
+      "name": "Hajrudin",
+      "cleanName": "Hajrudin",
+      "url": "https://www.tcgplayer.com/product/454540/one-piece-card-game-romance-dawn-hajrudin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454540_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Giant;New Giant Pirate Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454542,
+      "cardId": "OP01-019",
+      "name": "Bartolomeo",
+      "cleanName": "Bartolomeo",
+      "url": "https://www.tcgplayer.com/product/454542/one-piece-card-game-romance-dawn-bartolomeo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454542_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Barto Club Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x2] [Opponent's Turn] This Character gains +3000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454543,
+      "cardId": "OP01-020",
+      "name": "Hyogoro",
+      "cleanName": "Hyogoro",
+      "url": "https://www.tcgplayer.com/product/454543/one-piece-card-game-romance-dawn-hyogoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454543_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may rest this Character:</strong> Up to 1 of your Leader or Character cards gains +2000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-13\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454544,
+      "cardId": "OP01-021",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/454544/one-piece-card-game-romance-dawn-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454544_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454545,
+      "cardId": "OP01-022",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/454545/one-piece-card-game-romance-dawn-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454545_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 2 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.27,
+          "highPrice": 4.25,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454546,
+      "cardId": "OP01-023",
+      "name": "Marco",
+      "cleanName": "Marco",
+      "url": "https://www.tcgplayer.com/product/454546/one-piece-card-game-romance-dawn-marco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454546_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Former Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453508,
+      "cardId": "OP01-024",
+      "name": "Monkey.D.Luffy (024)",
+      "cleanName": "MonkeyDLuffy 024",
+      "url": "https://www.tcgplayer.com/product/453508/one-piece-card-game-romance-dawn-monkeydluffy-024",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453508_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] This Character cannot be K.O.'d in battle by \"Strike\" attribute Characters.\r\n<br>\r\n[Activate:Main] [Once Per Turn] Give this Character up to 2 rested DON!! cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 4,
+          "highPrice": 99,
+          "marketPrice": 2.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453509,
+      "cardId": "OP01-024",
+      "name": "Monkey.D.Luffy (024) (Parallel)",
+      "cleanName": "MonkeyDLuffy 024 Parallel",
+      "url": "https://www.tcgplayer.com/product/453509/one-piece-card-game-romance-dawn-monkeydluffy-024-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453509_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] This Character cannot be K.O.'d in battle by \"Strike\" attribute Characters.\r\n<br>\r\n[Activate:Main] [Once Per Turn] Give this Character up to 2 rested DON!! cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 128,
+          "midPrice": 179.97,
+          "highPrice": 1000,
+          "marketPrice": 155.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453510,
+      "cardId": "OP01-025",
+      "name": "Roronoa Zoro (025)",
+      "cleanName": "Roronoa Zoro 025",
+      "url": "https://www.tcgplayer.com/product/453510/one-piece-card-game-romance-dawn-roronoa-zoro-025",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453510_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.38,
+          "midPrice": 8.13,
+          "highPrice": 39.99,
+          "marketPrice": 7.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453511,
+      "cardId": "OP01-025",
+      "name": "Roronoa Zoro (025) (Parallel)",
+      "cleanName": "Roronoa Zoro 025 Parallel",
+      "url": "https://www.tcgplayer.com/product/453511/one-piece-card-game-romance-dawn-roronoa-zoro-025-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453511_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 160.99,
+          "midPrice": 193.19,
+          "highPrice": 1200,
+          "marketPrice": 185.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454547,
+      "cardId": "OP01-026",
+      "name": "Gum-Gum Fire-Fist Pistol Red Hawk",
+      "cleanName": "Gum Gum Fire Fist Pistol Red Hawk",
+      "url": "https://www.tcgplayer.com/product/454547/one-piece-card-game-romance-dawn-gum-gum-fire-fist-pistol-red-hawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454547_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, K.O. up to 1 of your opponent's Characters with 4000 power or less.\r\n<br>\r\n[Trigger] Give up to 1 of your opponent's Leader or Character cards -10000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-14\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.59,
+          "midPrice": 1.61,
+          "highPrice": 10,
+          "marketPrice": 0.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454548,
+      "cardId": "OP01-027",
+      "name": "Round Table",
+      "cleanName": "Round Table",
+      "url": "https://www.tcgplayer.com/product/454548/one-piece-card-game-romance-dawn-round-table",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454548_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters -10000 power during this turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-15\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.12,
+          "midPrice": 0.85,
+          "highPrice": 24,
+          "marketPrice": 0.8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454549,
+      "cardId": "OP01-028",
+      "name": "Green Star Rafflesia",
+      "cleanName": "Green Star Rafflesia",
+      "url": "https://www.tcgplayer.com/product/454549/one-piece-card-game-romance-dawn-green-star-rafflesia",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454549_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] Give up to 1 of your opponent's Leader or Character cards -2000 power during this turn.\r\n<br>\r\n[Trigger] Activate this card's [Counter] effect.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-16\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454550,
+      "cardId": "OP01-029",
+      "name": "Radical Beam!!",
+      "cleanName": "Radical Beam",
+      "url": "https://www.tcgplayer.com/product/454550/one-piece-card-game-romance-dawn-radical-beam",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454550_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 2 or less Life cards, that card gains an additional +2000 power.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-17\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.24,
+          "midPrice": 0.5,
+          "highPrice": 7,
+          "marketPrice": 0.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453512,
+      "cardId": "OP01-030",
+      "name": "In Two Years!! At the Sabaody Archipelago!!",
+      "cleanName": "In Two Years At the Sabaody Archipelago",
+      "url": "https://www.tcgplayer.com/product/453512/one-piece-card-game-romance-dawn-in-two-years-at-the-sabaody-archipelago",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453512_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-18\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 3,
+          "highPrice": 5,
+          "marketPrice": 2.86,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454551,
+      "cardId": "OP01-031",
+      "name": "Kouzuki Oden",
+      "cleanName": "Kouzuki Oden",
+      "url": "https://www.tcgplayer.com/product/454551/one-piece-card-game-romance-dawn-kouzuki-oden",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454551_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] <strong>You can trash 1 \"Land of Wano\" type card from your hand:</strong> Set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.27,
+          "highPrice": 4.99,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454552,
+      "cardId": "OP01-031",
+      "name": "Kouzuki Oden (Parallel)",
+      "cleanName": "Kouzuki Oden Parallel",
+      "url": "https://www.tcgplayer.com/product/454552/one-piece-card-game-romance-dawn-kouzuki-oden-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454552_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] <strong>You can trash 1 \"Land of Wano\" type card from your hand:</strong> Set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 108,
+          "midPrice": 149.98,
+          "highPrice": 420.69,
+          "marketPrice": 122.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454553,
+      "cardId": "OP01-032",
+      "name": "Ashura Doji",
+      "cleanName": "Ashura Doji",
+      "url": "https://www.tcgplayer.com/product/454553/one-piece-card-game-romance-dawn-ashura-doji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454553_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] If your opponent has 2 or more rested Characters, this Character gains +2000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454554,
+      "cardId": "OP01-033",
+      "name": "Izo",
+      "cleanName": "Izo",
+      "url": "https://www.tcgplayer.com/product/454554/one-piece-card-game-romance-dawn-izo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454554_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Former Whitebeard Pirates;Land of Wano",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-19\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.43,
+          "highPrice": 10,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453513,
+      "cardId": "OP01-034",
+      "name": "Inuarashi (Box Topper)",
+      "cleanName": "Inuarashi Box Topper",
+      "url": "https://www.tcgplayer.com/product/453513/one-piece-card-game-romance-dawn-inuarashi-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453513_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x2] [When Attacking] Set up to 1 of your DON!! cards as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-21\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.4,
+          "midPrice": 4.01,
+          "highPrice": 19.99,
+          "marketPrice": 3.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454555,
+      "cardId": "OP01-034",
+      "name": "Inuarashi",
+      "cleanName": "Inuarashi",
+      "url": "https://www.tcgplayer.com/product/454555/one-piece-card-game-romance-dawn-inuarashi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454555_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Former Whitebeard Pirates;Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x2] [When Attacking] Set up to 1 of your DON!! cards as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-20\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454556,
+      "cardId": "OP01-035",
+      "name": "Okiku",
+      "cleanName": "Okiku",
+      "url": "https://www.tcgplayer.com/product/454556/one-piece-card-game-romance-dawn-okiku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454556_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] [Once Per Turn] Rest up to 1 of your opponent's Characters with a cost of 5 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-22\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.14,
+          "midPrice": 0.28,
+          "highPrice": 4.99,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454558,
+      "cardId": "OP01-036",
+      "name": "Otsuru",
+      "cleanName": "Otsuru",
+      "url": "https://www.tcgplayer.com/product/454558/one-piece-card-game-romance-dawn-otsuru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454558_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454560,
+      "cardId": "OP01-037",
+      "name": "Kawamatsu",
+      "cleanName": "Kawamatsu",
+      "url": "https://www.tcgplayer.com/product/454560/one-piece-card-game-romance-dawn-kawamatsu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454560_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454562,
+      "cardId": "OP01-038",
+      "name": "Kanjuro",
+      "cleanName": "Kanjuro",
+      "url": "https://www.tcgplayer.com/product/454562/one-piece-card-game-romance-dawn-kanjuro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454562_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] K.O. up to 1 of your opponent's rested Characters with a cost of 2 or less.\r\n<br>\r\n[On K.O.] Your opponent chooses 1 card from your hand; trash that card.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-23\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454563,
+      "cardId": "OP01-039",
+      "name": "Killer",
+      "cleanName": "Killer",
+      "url": "https://www.tcgplayer.com/product/454563/one-piece-card-game-romance-dawn-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454563_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x1] [On Block] If you have 3 or more Characters, draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.3,
+          "highPrice": 501.5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453514,
+      "cardId": "OP01-040",
+      "name": "Kin'emon",
+      "cleanName": "Kinemon",
+      "url": "https://www.tcgplayer.com/product/453514/one-piece-card-game-romance-dawn-kinemon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453514_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader is [Kouzuki Oden], play up to 1 \"The Akazaya Nine\" type Character card with a cost of 3 or less from your hand.\r\n<br>\r\n[DON!! x1] [When Attacking] [Once Per Turn] Set up to 1 of your \"The Akazaya Nine\" type Character cards with a cost of 3 or less as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-24\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 1,
+          "highPrice": 14.5,
+          "marketPrice": 0.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454564,
+      "cardId": "OP01-040",
+      "name": "Kin'emon (Parallel)",
+      "cleanName": "Kinemon Parallel",
+      "url": "https://www.tcgplayer.com/product/454564/one-piece-card-game-romance-dawn-kinemon-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454564_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader is [Kouzuki Oden], play up to 1 \"The Akazaya Nine\" type Character card with a cost of 3 or less from your hand.\r\n<br>\r\n[DON!! x1] [When Attacking] [Once Per Turn] Set up to 1 of your \"The Akazaya Nine\" type Character cards with a cost of 3 or less as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-25\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 10.99,
+          "midPrice": 18.85,
+          "highPrice": 64.49,
+          "marketPrice": 11.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454565,
+      "cardId": "OP01-041",
+      "name": "Kouzuki Momonosuke",
+      "cleanName": "Kouzuki Momonosuke",
+      "url": "https://www.tcgplayer.com/product/454565/one-piece-card-game-romance-dawn-kouzuki-momonosuke",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454565_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area)</em> <strong>You may rest this Character:</strong> Look at 5 cards from the top of your deck; reveal up to 1 \"Land of Wano\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-26\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.34,
+          "highPrice": 19,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454566,
+      "cardId": "OP01-042",
+      "name": "Komurasaki",
+      "cleanName": "Komurasaki",
+      "url": "https://www.tcgplayer.com/product/454566/one-piece-card-game-romance-dawn-komurasaki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454566_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] (3) <em>(You may rest the specified number of DON!! cards in your cost area)</strong>: If your Leader is [Kouzuki Oden], set up to 1 of your \"Land of Wano\" type Character cards with a cost of 3 or less as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-27\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.16,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454567,
+      "cardId": "OP01-043",
+      "name": "Shinobu",
+      "cleanName": "Shinobu",
+      "url": "https://www.tcgplayer.com/product/454567/one-piece-card-game-romance-dawn-shinobu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454567_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454568,
+      "cardId": "OP01-044",
+      "name": "Shachi",
+      "cleanName": "Shachi",
+      "url": "https://www.tcgplayer.com/product/454568/one-piece-card-game-romance-dawn-shachi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454568_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] If you don't have [Penguin], play up to 1 [Penguin] from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-28\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454569,
+      "cardId": "OP01-045",
+      "name": "Jean Bart",
+      "cleanName": "Jean Bart",
+      "url": "https://www.tcgplayer.com/product/454569/one-piece-card-game-romance-dawn-jean-bart",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454569_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 501.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454570,
+      "cardId": "OP01-046",
+      "name": "Denjiro",
+      "cleanName": "Denjiro",
+      "url": "https://www.tcgplayer.com/product/454570/one-piece-card-game-romance-dawn-denjiro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454570_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] If your Leader is [Kouzuki Oden], set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.14,
+          "midPrice": 0.41,
+          "highPrice": 25,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453515,
+      "cardId": "OP01-047",
+      "name": "Trafalgar Law (047) (Parallel)",
+      "cleanName": "Trafalgar Law 047 Parallel",
+      "url": "https://www.tcgplayer.com/product/453515/one-piece-card-game-romance-dawn-trafalgar-law-047-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453515_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] <strong>You may return 1 Character to your hand:</strong> Play up to 1 Character card with a cost of 3 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-30\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 34.99,
+          "midPrice": 53.18,
+          "highPrice": 99.99,
+          "marketPrice": 46.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454571,
+      "cardId": "OP01-047",
+      "name": "Trafalgar Law (047)",
+      "cleanName": "Trafalgar Law 047",
+      "url": "https://www.tcgplayer.com/product/454571/one-piece-card-game-romance-dawn-trafalgar-law-047",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454571_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] <strong>You may return 1 Character to your hand:</strong> Play up to 1 Character card with a cost of 3 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-29\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.49,
+          "midPrice": 1.49,
+          "highPrice": 38.94,
+          "marketPrice": 1.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453516,
+      "cardId": "OP01-048",
+      "name": "Nekomamushi (Box Topper)",
+      "cleanName": "Nekomamushi Box Topper",
+      "url": "https://www.tcgplayer.com/product/453516/one-piece-card-game-romance-dawn-nekomamushi-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453516_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 3 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-32\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.96,
+          "midPrice": 4,
+          "highPrice": 24,
+          "marketPrice": 3.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454572,
+      "cardId": "OP01-048",
+      "name": "Nekomamushi",
+      "cleanName": "Nekomamushi",
+      "url": "https://www.tcgplayer.com/product/454572/one-piece-card-game-romance-dawn-nekomamushi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454572_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 3 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-31\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454573,
+      "cardId": "OP01-049",
+      "name": "Bepo",
+      "cleanName": "Bepo",
+      "url": "https://www.tcgplayer.com/product/454573/one-piece-card-game-romance-dawn-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454573_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates;Minks",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Play up to 1 \"Heart Pirates\" type card other than [Bepo] with a cost of 4 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-33\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.11,
+          "midPrice": 0.26,
+          "highPrice": 2.5,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454574,
+      "cardId": "OP01-050",
+      "name": "Penguin",
+      "cleanName": "Penguin",
+      "url": "https://www.tcgplayer.com/product/454574/one-piece-card-game-romance-dawn-penguin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454574_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] If you don't have [Shachi], play up to 1 [Shachi] from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-34\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454575,
+      "cardId": "OP01-051",
+      "name": "Eustass\"Captain\"Kid",
+      "cleanName": "EustassCaptainKid",
+      "url": "https://www.tcgplayer.com/product/454575/one-piece-card-game-romance-dawn-eustasscaptainkid",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454575_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Opponent's Turn] If this Character is rested, your opponent cannot attack any card other than the Character [Eustass\"Captain\"Kid].\r\n<br>\r\n[Activate:Main] [Once Per Turn] <strong>You may rest this Character:</strong> Play up to 1 Character card with a cost of 3 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-35\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.95,
+          "midPrice": 2.01,
+          "highPrice": 25,
+          "marketPrice": 1.71,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454576,
+      "cardId": "OP01-051",
+      "name": "Eustass\"Captain\"Kid (Parallel)",
+      "cleanName": "EustassCaptainKid Parallel",
+      "url": "https://www.tcgplayer.com/product/454576/one-piece-card-game-romance-dawn-eustasscaptainkid-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454576_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Opponent's Turn] If this Character is rested, your opponent cannot attack any card other than the Character [Eustass\"Captain\"Kid].\r\n<br>\r\n[Activate:Main] [Once Per Turn] <strong>You may rest this Character:</strong> Play up to 1 Character card with a cost of 3 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-36\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 22.99,
+          "midPrice": 28,
+          "highPrice": 145,
+          "marketPrice": 25.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454577,
+      "cardId": "OP01-052",
+      "name": "Raizo",
+      "cleanName": "Raizo",
+      "url": "https://www.tcgplayer.com/product/454577/one-piece-card-game-romance-dawn-raizo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454577_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] [Once Per Turn] If you have 2 or more rested Characters, draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454578,
+      "cardId": "OP01-053",
+      "name": "Wire",
+      "cleanName": "Wire",
+      "url": "https://www.tcgplayer.com/product/454578/one-piece-card-game-romance-dawn-wire",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454578_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 501.5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454579,
+      "cardId": "OP01-054",
+      "name": "X.Drake (054)",
+      "cleanName": "XDrake 054",
+      "url": "https://www.tcgplayer.com/product/454579/one-piece-card-game-romance-dawn-xdrake-054",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454579_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Drake Pirates;Navy;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-37\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.18,
+          "midPrice": 0.35,
+          "highPrice": 6.99,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454580,
+      "cardId": "OP01-055",
+      "name": "You Can Be My Samurai!!",
+      "cleanName": "You Can Be My Samurai",
+      "url": "https://www.tcgplayer.com/product/454580/one-piece-card-game-romance-dawn-you-can-be-my-samurai",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454580_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 2 of your Characters:</strong> Draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.25,
+          "highPrice": 4,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454581,
+      "cardId": "OP01-056",
+      "name": "Demon Face",
+      "cleanName": "Demon Face",
+      "url": "https://www.tcgplayer.com/product/454581/one-piece-card-game-romance-dawn-demon-face",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454581_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "6",
+      "life": null,
+      "subtypes": "Hawkins Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 2 of your opponent's rested Characters with a cost of 5 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-38\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454582,
+      "cardId": "OP01-057",
+      "name": "Paradise Waterfall",
+      "cleanName": "Paradise Waterfall",
+      "url": "https://www.tcgplayer.com/product/454582/one-piece-card-game-romance-dawn-paradise-waterfall",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454582_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, set up to 1 of your Characters as active.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-39\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.1,
+          "midPrice": 2,
+          "highPrice": 5,
+          "marketPrice": 1.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454583,
+      "cardId": "OP01-058",
+      "name": "Punk Gibson",
+      "cleanName": "Punk Gibson",
+      "url": "https://www.tcgplayer.com/product/454583/one-piece-card-game-romance-dawn-punk-gibson",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454583_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-40\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.45,
+          "midPrice": 0.86,
+          "highPrice": 9.99,
+          "marketPrice": 0.61,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454584,
+      "cardId": "OP01-059",
+      "name": "BE-BENG!!",
+      "cleanName": "BE BENG",
+      "url": "https://www.tcgplayer.com/product/454584/one-piece-card-game-romance-dawn-be-beng",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454584_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may trash 1 \"Land of Wano\" type card from your hand:</strong> Set up to 1 of your \"Land of Wano\" type Character cards with a cost of 3 or less as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-41\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454585,
+      "cardId": "OP01-060",
+      "name": "Donquixote Doflamingo (060)",
+      "cleanName": "Donquixote Doflamingo 060",
+      "url": "https://www.tcgplayer.com/product/454585/one-piece-card-game-romance-dawn-donquixote-doflamingo-060",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454585_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [When Attacking] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Reveal 1 card from the top of your deck. If that card is a \"The Seven Warlords of the Sea\" type Character card with a cost of 4 or less, you may play that card rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.45,
+          "highPrice": 5.99,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454586,
+      "cardId": "OP01-060",
+      "name": "Donquixote Doflamingo (060) (Parallel)",
+      "cleanName": "Donquixote Doflamingo 060 Parallel",
+      "url": "https://www.tcgplayer.com/product/454586/one-piece-card-game-romance-dawn-donquixote-doflamingo-060-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454586_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [When Attacking] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Reveal 1 card from the top of your deck. If that card is a \"The Seven Warlords of the Sea\" type Character card with a cost of 4 or less, you may play that card rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 275,
+          "midPrice": 347,
+          "highPrice": 3000,
+          "marketPrice": 295.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453517,
+      "cardId": "OP01-061",
+      "name": "Kaido (061)",
+      "cleanName": "Kaido 061",
+      "url": "https://www.tcgplayer.com/product/453517/one-piece-card-game-romance-dawn-kaido-061",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453517_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Your Turn] [Once Per Turn] When your opponent's Character is K.O.'d, add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-42\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.34,
+          "highPrice": 2,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454587,
+      "cardId": "OP01-061",
+      "name": "Kaido (061) (Parallel)",
+      "cleanName": "Kaido 061 Parallel",
+      "url": "https://www.tcgplayer.com/product/454587/one-piece-card-game-romance-dawn-kaido-061-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454587_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Your Turn] [Once Per Turn] When your opponent's Character is K.O.'d, add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-43\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 137.09,
+          "midPrice": 160.99,
+          "highPrice": 699.99,
+          "marketPrice": 152.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454588,
+      "cardId": "OP01-062",
+      "name": "Crocodile (062)",
+      "cleanName": "Crocodile 062",
+      "url": "https://www.tcgplayer.com/product/454588/one-piece-card-game-romance-dawn-crocodile-062",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454588_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] When you activate an Event, you may draw 1 card if you have 4 or less cards in your hand and haven't drawn a card using this Leader's effect during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.31,
+          "highPrice": 69.99,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454589,
+      "cardId": "OP01-062",
+      "name": "Crocodile (062) (Parallel)",
+      "cleanName": "Crocodile 062 Parallel",
+      "url": "https://www.tcgplayer.com/product/454589/one-piece-card-game-romance-dawn-crocodile-062-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454589_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] When you activate an Event, you may draw 1 card if you have 4 or less cards in your hand and haven't drawn a card using this Leader's effect during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 144.99,
+          "midPrice": 162.74,
+          "highPrice": 399.99,
+          "marketPrice": 146.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454590,
+      "cardId": "OP01-063",
+      "name": "Arlong",
+      "cleanName": "Arlong",
+      "url": "https://www.tcgplayer.com/product/454590/one-piece-card-game-romance-dawn-arlong",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454590_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Arlong Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Activate:Main] <strong>You may rest this Character:</strong> Choose 1 card from your opponent's hand; your opponent reveals that card. If the revealed card is an Event, place up to 1 card from your opponent's Life area at the bottom of the owner's deck.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-44\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453518,
+      "cardId": "OP01-064",
+      "name": "Alvida (Box Topper)",
+      "cleanName": "Alvida Box Topper",
+      "url": "https://www.tcgplayer.com/product/453518/one-piece-card-game-romance-dawn-alvida-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453518_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand:</strong> Return up to 1 of your opponent's Characters with a cost of 3 or less to the owner's hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-46\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.96,
+          "midPrice": 12.99,
+          "highPrice": 99.99,
+          "marketPrice": 9.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454591,
+      "cardId": "OP01-064",
+      "name": "Alvida",
+      "cleanName": "Alvida",
+      "url": "https://www.tcgplayer.com/product/454591/one-piece-card-game-romance-dawn-alvida",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454591_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand:</strong> Return up to 1 of your opponent's Characters with a cost of 3 or less to the owner's hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-45\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 501.5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454592,
+      "cardId": "OP01-065",
+      "name": "Vergo",
+      "cleanName": "Vergo",
+      "url": "https://www.tcgplayer.com/product/454592/one-piece-card-game-romance-dawn-vergo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454592_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454593,
+      "cardId": "OP01-066",
+      "name": "Krieg",
+      "cleanName": "Krieg",
+      "url": "https://www.tcgplayer.com/product/454593/one-piece-card-game-romance-dawn-krieg",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454593_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Krieg Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453519,
+      "cardId": "OP01-067",
+      "name": "Crocodile (067)",
+      "cleanName": "Crocodile 067",
+      "url": "https://www.tcgplayer.com/product/453519/one-piece-card-game-romance-dawn-crocodile-067",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453519_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>\r\n<br>\r\n[DON!! x1] Give blue Events in your hand -1 cost.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.99,
+          "highPrice": 7,
+          "marketPrice": 0.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454594,
+      "cardId": "OP01-067",
+      "name": "Crocodile (067) (Parallel)",
+      "cleanName": "Crocodile 067 Parallel",
+      "url": "https://www.tcgplayer.com/product/454594/one-piece-card-game-romance-dawn-crocodile-067-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454594_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>\r\n<br>\r\n[DON!! x1] Give blue Events in your hand -1 cost.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 16.99,
+          "midPrice": 19.92,
+          "highPrice": 100,
+          "marketPrice": 17.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454596,
+      "cardId": "OP01-068",
+      "name": "Gecko Moria",
+      "cleanName": "Gecko Moria",
+      "url": "https://www.tcgplayer.com/product/454596/one-piece-card-game-romance-dawn-gecko-moria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454596_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea;Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[Your Turn] This Character gains [Double Attack] if you have 5 or more cards in your hand. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.35,
+          "highPrice": 2,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.12,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454597,
+      "cardId": "OP01-069",
+      "name": "Caesar Clown",
+      "cleanName": "Caesar Clown",
+      "url": "https://www.tcgplayer.com/product/454597/one-piece-card-game-romance-dawn-caesar-clown",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454597_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Punk Hazard;Scientist",
+      "attribute": "Special",
+      "effectText": "[On K.O.] Play up to 1 [Smiley] from your deck, then shuffle your deck.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-47\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 4.99,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454598,
+      "cardId": "OP01-070",
+      "name": "Dracule Mihawk",
+      "cleanName": "Dracule Mihawk",
+      "url": "https://www.tcgplayer.com/product/454598/one-piece-card-game-romance-dawn-dracule-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454598_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "9000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 Character with a cost of 7 or less at the bottom of the owner's deck.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-48\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.85,
+          "midPrice": 2.62,
+          "highPrice": 28,
+          "marketPrice": 2.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454599,
+      "cardId": "OP01-070",
+      "name": "Dracule Mihawk (Parallel)",
+      "cleanName": "Dracule Mihawk Parallel",
+      "url": "https://www.tcgplayer.com/product/454599/one-piece-card-game-romance-dawn-dracule-mihawk-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454599_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "9000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 Character with a cost of 7 or less at the bottom of the owner's deck.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-49\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 49.99,
+          "midPrice": 66.24,
+          "highPrice": 150,
+          "marketPrice": 51.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454600,
+      "cardId": "OP01-071",
+      "name": "Jinbe (071)",
+      "cleanName": "Jinbe 071",
+      "url": "https://www.tcgplayer.com/product/454600/one-piece-card-game-romance-dawn-jinbe-071",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454600_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Place up to 1 Character with a cost of 3 or less at the bottom of the owner's deck.\r\n<br>\r\n[Trigger] Play this card.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-50\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454601,
+      "cardId": "OP01-072",
+      "name": "Smiley",
+      "cleanName": "Smiley",
+      "url": "https://www.tcgplayer.com/product/454601/one-piece-card-game-romance-dawn-smiley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454601_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Biological Weapon;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Your Turn] This Character gains +1000 power for every card in your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454602,
+      "cardId": "OP01-073",
+      "name": "Donquixote Doflamingo (073)",
+      "cleanName": "Donquixote Doflamingo 073",
+      "url": "https://www.tcgplayer.com/product/454602/one-piece-card-game-romance-dawn-donquixote-doflamingo-073",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454602_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.24,
+          "midPrice": 0.52,
+          "highPrice": 7.5,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454603,
+      "cardId": "OP01-073",
+      "name": "Donquixote Doflamingo (073) (Parallel)",
+      "cleanName": "Donquixote Doflamingo 073 Parallel",
+      "url": "https://www.tcgplayer.com/product/454603/one-piece-card-game-romance-dawn-donquixote-doflamingo-073-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454603_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25.99,
+          "midPrice": 30.02,
+          "highPrice": 100,
+          "marketPrice": 28.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454604,
+      "cardId": "OP01-074",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/454604/one-piece-card-game-romance-dawn-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454604_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] Play up to 1 [Pacifista] with a cost of 4 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-51\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.04,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454605,
+      "cardId": "OP01-075",
+      "name": "Pacifista",
+      "cleanName": "Pacifista",
+      "url": "https://www.tcgplayer.com/product/454605/one-piece-card-game-romance-dawn-pacifista",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454605_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Biological Weapon;Navy",
+      "attribute": "Special",
+      "effectText": "Under the rules of this game, you may have any number of this card in your deck.\r\n<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454606,
+      "cardId": "OP01-076",
+      "name": "Bellamy",
+      "cleanName": "Bellamy",
+      "url": "https://www.tcgplayer.com/product/454606/one-piece-card-game-romance-dawn-bellamy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454606_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 501.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453520,
+      "cardId": "OP01-077",
+      "name": "Perona (Box Topper)",
+      "cleanName": "Perona Box Topper",
+      "url": "https://www.tcgplayer.com/product/453520/one-piece-card-game-romance-dawn-perona-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453520_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 29.9,
+          "midPrice": 46.24,
+          "highPrice": 200,
+          "marketPrice": 42.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454607,
+      "cardId": "OP01-077",
+      "name": "Perona",
+      "cleanName": "Perona",
+      "url": "https://www.tcgplayer.com/product/454607/one-piece-card-game-romance-dawn-perona",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454607_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 501.5,
+          "marketPrice": 0.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454608,
+      "cardId": "OP01-078",
+      "name": "Boa Hancock",
+      "cleanName": "Boa Hancock",
+      "url": "https://www.tcgplayer.com/product/454608/one-piece-card-game-romance-dawn-boa-hancock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454608_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x1] [When Attacking]/[On Block] Draw 1 card if you have 5 or less cards in your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 3.2,
+          "highPrice": 21.29,
+          "marketPrice": 2.9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454609,
+      "cardId": "OP01-078",
+      "name": "Boa Hancock (Parallel)",
+      "cleanName": "Boa Hancock Parallel",
+      "url": "https://www.tcgplayer.com/product/454609/one-piece-card-game-romance-dawn-boa-hancock-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454609_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x1] [When Attacking]/[On Block] Draw 1 card if you have 5 or less cards in your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 145,
+          "midPrice": 169.99,
+          "highPrice": 3000,
+          "marketPrice": 153.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454610,
+      "cardId": "OP01-079",
+      "name": "Ms. All Sunday",
+      "cleanName": "Ms All Sunday",
+      "url": "https://www.tcgplayer.com/product/454610/one-piece-card-game-romance-dawn-ms-all-sunday",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454610_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] If your Leader has the \"Baroque Works\" type, add up to 1 Event from your trash to your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-52\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.24,
+          "midPrice": 0.75,
+          "highPrice": 95,
+          "marketPrice": 0.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454611,
+      "cardId": "OP01-080",
+      "name": "Miss Doublefinger(Zala)",
+      "cleanName": "Miss DoublefingerZala",
+      "url": "https://www.tcgplayer.com/product/454611/one-piece-card-game-romance-dawn-miss-doublefingerzala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454611_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Slash",
+      "effectText": "[On K.O.] Draw a card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454612,
+      "cardId": "OP01-081",
+      "name": "Mocha",
+      "cleanName": "Mocha",
+      "url": "https://www.tcgplayer.com/product/454612/one-piece-card-game-romance-dawn-mocha",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454612_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 501.5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454613,
+      "cardId": "OP01-082",
+      "name": "Monet",
+      "cleanName": "Monet",
+      "url": "https://www.tcgplayer.com/product/454613/one-piece-card-game-romance-dawn-monet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454613_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454614,
+      "cardId": "OP01-083",
+      "name": "Mr.1 (Daz.Bonez)",
+      "cleanName": "Mr1 DazBonez",
+      "url": "https://www.tcgplayer.com/product/454614/one-piece-card-game-romance-dawn-mr1-dazbonez",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454614_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Your Turn] If your Leader has the \"Baroque Works\" type, this Character gains +1000 power for every 2 Events in your trash.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454615,
+      "cardId": "OP01-084",
+      "name": "Mr.2.Bon.Kurei (Bentham)",
+      "cleanName": "Mr2BonKurei Bentham",
+      "url": "https://www.tcgplayer.com/product/454615/one-piece-card-game-romance-dawn-mr2bonkurei-bentham",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454615_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 \"Baroque Works\" type Event card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-53\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454616,
+      "cardId": "OP01-085",
+      "name": "Mr.3 (Galdino)",
+      "cleanName": "Mr3 Galdino",
+      "url": "https://www.tcgplayer.com/product/454616/one-piece-card-game-romance-dawn-mr3-galdino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454616_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"Baroque Works\" type, select up to 1 of your opponent's Characters with a cost of 4 or less. The selected Character cannot attack until the end of your opponent's next turn.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-54\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.17,
+          "highPrice": 501.5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454617,
+      "cardId": "OP01-086",
+      "name": "Overheat",
+      "cleanName": "Overheat",
+      "url": "https://www.tcgplayer.com/product/454617/one-piece-card-game-romance-dawn-overheat",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454617_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, return up to 1 active Character with a cost of 3 or less to the owner's hand.\r\n<br>\r\n[Trigger] Return up to 1 card with a cost of 4 or less to the owner's hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-55\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.31,
+          "highPrice": 4.99,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454618,
+      "cardId": "OP01-087",
+      "name": "Officer Agents",
+      "cleanName": "Officer Agents",
+      "url": "https://www.tcgplayer.com/product/454618/one-piece-card-game-romance-dawn-officer-agents",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454618_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": null,
+      "effectText": "[Counter] Play up to 1 \"Baroque Works\" type card with a cost of 3 or less from your hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-56\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454619,
+      "cardId": "OP01-088",
+      "name": "Desert Spada",
+      "cleanName": "Desert Spada",
+      "url": "https://www.tcgplayer.com/product/454619/one-piece-card-game-romance-dawn-desert-spada",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454619_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, look at 3 cards from the top of your deck and place them at the top or bottom of the deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-57\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.29,
+          "midPrice": 0.64,
+          "highPrice": 3.99,
+          "marketPrice": 0.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454620,
+      "cardId": "OP01-089",
+      "name": "Crescent Cutlass",
+      "cleanName": "Crescent Cutlass",
+      "url": "https://www.tcgplayer.com/product/454620/one-piece-card-game-romance-dawn-crescent-cutlass",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454620_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Counter] If your Leader has the \"The Seven Warlords of the Sea\" type, return up to 1 Character with a cost of 5 or less to the owner's hand.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-58\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454621,
+      "cardId": "OP01-090",
+      "name": "Baroque Works",
+      "cleanName": "Baroque Works",
+      "url": "https://www.tcgplayer.com/product/454621/one-piece-card-game-romance-dawn-baroque-works",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454621_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Baroque Works\" type card other than [Baroque Works] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-59\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454622,
+      "cardId": "OP01-091",
+      "name": "King (091)",
+      "cleanName": "King 091",
+      "url": "https://www.tcgplayer.com/product/454622/one-piece-card-game-romance-dawn-king-091",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454622_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[Your Turn] If you have 10 DON!! cards on your field, give all of your opponent's Characters -1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 4.99,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454623,
+      "cardId": "OP01-091",
+      "name": "King (091) (Parallel)",
+      "cleanName": "King 091 Parallel",
+      "url": "https://www.tcgplayer.com/product/454623/one-piece-card-game-romance-dawn-king-091-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454623_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[Your Turn] If you have 10 DON!! cards on your field, give all of your opponent's Characters -1000 power.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 120.68,
+          "midPrice": 145.86,
+          "highPrice": 499.99,
+          "marketPrice": 144.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454624,
+      "cardId": "OP01-092",
+      "name": "Urashima",
+      "cleanName": "Urashima",
+      "url": "https://www.tcgplayer.com/product/454624/one-piece-card-game-romance-dawn-urashima",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454624_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454625,
+      "cardId": "OP01-093",
+      "name": "Ulti",
+      "cleanName": "Ulti",
+      "url": "https://www.tcgplayer.com/product/454625/one-piece-card-game-romance-dawn-ulti",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454625_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-60\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.35,
+          "highPrice": 5,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454626,
+      "cardId": "OP01-093",
+      "name": "Ulti (Parallel)",
+      "cleanName": "Ulti Parallel",
+      "url": "https://www.tcgplayer.com/product/454626/one-piece-card-game-romance-dawn-ulti-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454626_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-61\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 16.68,
+          "midPrice": 21.99,
+          "highPrice": 99.99,
+          "marketPrice": 21.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453521,
+      "cardId": "OP01-094",
+      "name": "Kaido (094)",
+      "cleanName": "Kaido 094",
+      "url": "https://www.tcgplayer.com/product/453521/one-piece-card-game-romance-dawn-kaido-094",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453521_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -6 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: If your Leader has the \"Animal Kingdom Pirates\" type, K.O. all Characters other than this Character.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.8,
+          "midPrice": 8.85,
+          "highPrice": 50,
+          "marketPrice": 7.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454627,
+      "cardId": "OP01-094",
+      "name": "Kaido (094) (Parallel)",
+      "cleanName": "Kaido 094 Parallel",
+      "url": "https://www.tcgplayer.com/product/454627/one-piece-card-game-romance-dawn-kaido-094-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454627_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -6 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: If your Leader has the \"Animal Kingdom Pirates\" type, K.O. all Characters other than this Character.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 36.99,
+          "midPrice": 57.99,
+          "highPrice": 160,
+          "marketPrice": 54.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454628,
+      "cardId": "OP01-095",
+      "name": "Kyoshirou",
+      "cleanName": "Kyoshirou",
+      "url": "https://www.tcgplayer.com/product/454628/one-piece-card-game-romance-dawn-kyoshirou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454628_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Slash",
+      "effectText": "[On Play] Draw 1 card if you have 8 or more DON!! cards on your field.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454629,
+      "cardId": "OP01-096",
+      "name": "King (096)",
+      "cleanName": "King 096",
+      "url": "https://www.tcgplayer.com/product/454629/one-piece-card-game-romance-dawn-king-096",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454629_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. up to 1 of your opponent's Characters with a cost of 3 or less and up to 1 of your opponent's Characters with a cost of 2 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-62\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.99,
+          "highPrice": 10,
+          "marketPrice": 0.67,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454630,
+      "cardId": "OP01-096",
+      "name": "King (096) (Parallel)",
+      "cleanName": "King 096 Parallel",
+      "url": "https://www.tcgplayer.com/product/454630/one-piece-card-game-romance-dawn-king-096-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454630_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. up to 1 of your opponent's Characters with a cost of 3 or less and up to 1 of your opponent's Characters with a cost of 2 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-63\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11.57,
+          "midPrice": 14,
+          "highPrice": 100,
+          "marketPrice": 12.81,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454631,
+      "cardId": "OP01-097",
+      "name": "Queen",
+      "cleanName": "Queen",
+      "url": "https://www.tcgplayer.com/product/454631/one-piece-card-game-romance-dawn-queen",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454631_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character gains [Rush] during this turn. Then, give up to 1 of your opponent's Characters -2000 power during this turn. <em>(This card can attack on the turn in which it is played.)</em>\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-64\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454632,
+      "cardId": "OP01-097",
+      "name": "Queen (Parallel)",
+      "cleanName": "Queen Parallel",
+      "url": "https://www.tcgplayer.com/product/454632/one-piece-card-game-romance-dawn-queen-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454632_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character gains [Rush] during this turn. Then, give up to 1 of your opponent's Characters -2000 power during this turn. <em>(This card can attack on the turn in which it is played.)</em>\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-65\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.35,
+          "midPrice": 9.99,
+          "highPrice": 75,
+          "marketPrice": 9.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454633,
+      "cardId": "OP01-098",
+      "name": "Kurozumi Orochi",
+      "cleanName": "Kurozumi Orochi",
+      "url": "https://www.tcgplayer.com/product/454633/one-piece-card-game-romance-dawn-kurozumi-orochi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454633_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kurozumi Clan",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Reveal up to 1 [Artificial Devil Fruit SMILE] from your deck and add it to your hand. Then, shuffle your deck.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-66\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 2.5,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454634,
+      "cardId": "OP01-099",
+      "name": "Kurozumi Semimaru",
+      "cleanName": "Kurozumi Semimaru",
+      "url": "https://www.tcgplayer.com/product/454634/one-piece-card-game-romance-dawn-kurozumi-semimaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454634_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Kurozumi Clan",
+      "attribute": "Special",
+      "effectText": "\"Kurozumi Clan\" type Characters other than your [Kurozumi Semimaru] cannot be K.O.'d in battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454635,
+      "cardId": "OP01-100",
+      "name": "Kurozumi Higurashi",
+      "cleanName": "Kurozumi Higurashi",
+      "url": "https://www.tcgplayer.com/product/454635/one-piece-card-game-romance-dawn-kurozumi-higurashi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454635_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Kurozumi Clan",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454636,
+      "cardId": "OP01-101",
+      "name": "Sasaki",
+      "cleanName": "Sasaki",
+      "url": "https://www.tcgplayer.com/product/454636/one-piece-card-game-romance-dawn-sasaki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454636_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand:</strong> Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-67\">This card has been officially errata'd.</a>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.47,
+          "highPrice": 4,
+          "marketPrice": 0.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454637,
+      "cardId": "OP01-102",
+      "name": "Jack",
+      "cleanName": "Jack",
+      "url": "https://www.tcgplayer.com/product/454637/one-piece-card-game-romance-dawn-jack",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454637_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.06,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454638,
+      "cardId": "OP01-102",
+      "name": "Jack (Parallel)",
+      "cleanName": "Jack Parallel",
+      "url": "https://www.tcgplayer.com/product/454638/one-piece-card-game-romance-dawn-jack-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454638_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.26,
+          "midPrice": 8.49,
+          "highPrice": 48,
+          "marketPrice": 7.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454639,
+      "cardId": "OP01-103",
+      "name": "Scratchmen Apoo",
+      "cleanName": "Scratchmen Apoo",
+      "url": "https://www.tcgplayer.com/product/454639/one-piece-card-game-romance-dawn-scratchmen-apoo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454639_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;On-Air Pirates",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454640,
+      "cardId": "OP01-104",
+      "name": "Speed",
+      "cleanName": "Speed",
+      "url": "https://www.tcgplayer.com/product/454640/one-piece-card-game-romance-dawn-speed",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454640_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Strike",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454641,
+      "cardId": "OP01-105",
+      "name": "Bao Huang",
+      "cleanName": "Bao Huang",
+      "url": "https://www.tcgplayer.com/product/454641/one-piece-card-game-romance-dawn-bao-huang",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454641_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Choose 2 cards from your opponent's hand; your opponent reveals those cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454642,
+      "cardId": "OP01-106",
+      "name": "Basil Hawkins",
+      "cleanName": "Basil Hawkins",
+      "url": "https://www.tcgplayer.com/product/454642/one-piece-card-game-romance-dawn-basil-hawkins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454642_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Hawkins Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br>\r\n[Trigger] Play this card.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-68\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.36,
+          "highPrice": 5,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454643,
+      "cardId": "OP01-107",
+      "name": "Babanuki",
+      "cleanName": "Babanuki",
+      "url": "https://www.tcgplayer.com/product/454643/one-piece-card-game-romance-dawn-babanuki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454643_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 455808,
+      "cardId": "OP01-108",
+      "name": "Hitokiri Kamazo",
+      "cleanName": "Hitokiri Kamazo",
+      "url": "https://www.tcgplayer.com/product/455808/one-piece-card-game-romance-dawn-hitokiri-kamazo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/455808_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas;SMILE",
+      "attribute": "Slash",
+      "effectText": "[On K.O.] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck)</em>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-69\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 4,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 453522,
+      "cardId": "OP01-109",
+      "name": "Who's.Who (Box Topper)",
+      "cleanName": "WhosWho Box Topper",
+      "url": "https://www.tcgplayer.com/product/453522/one-piece-card-game-romance-dawn-whoswho-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/453522_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Your Turn] If you have 8 or more DON!! cards on your field, this Character gains +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.02,
+          "midPrice": 4.5,
+          "highPrice": 35,
+          "marketPrice": 3.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454644,
+      "cardId": "OP01-109",
+      "name": "Who's.Who",
+      "cleanName": "WhosWho",
+      "url": "https://www.tcgplayer.com/product/454644/one-piece-card-game-romance-dawn-whoswho",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454644_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Your Turn] If you have 8 or more DON!! cards on your field, this Character gains +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454645,
+      "cardId": "OP01-110",
+      "name": "Fukurokuju",
+      "cleanName": "Fukurokuju",
+      "url": "https://www.tcgplayer.com/product/454645/one-piece-card-game-romance-dawn-fukurokuju",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454645_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Land of Wano",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454646,
+      "cardId": "OP01-111",
+      "name": "Black Maria",
+      "cleanName": "Black Maria",
+      "url": "https://www.tcgplayer.com/product/454646/one-piece-card-game-romance-dawn-black-maria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454646_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character gains +1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 6.67,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454648,
+      "cardId": "OP01-112",
+      "name": "Page One",
+      "cleanName": "Page One",
+      "url": "https://www.tcgplayer.com/product/454648/one-piece-card-game-romance-dawn-page-one",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454648_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character can also attack your opponent's active Characters during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454651,
+      "cardId": "OP01-113",
+      "name": "Holedem",
+      "cleanName": "Holedem",
+      "url": "https://www.tcgplayer.com/product/454651/one-piece-card-game-romance-dawn-holedem",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454651_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Special",
+      "effectText": "[On K.O.] Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-70\">This card has been officially errata'd.</a>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454652,
+      "cardId": "OP01-114",
+      "name": "X.Drake (114)",
+      "cleanName": "XDrake 114",
+      "url": "https://www.tcgplayer.com/product/454652/one-piece-card-game-romance-dawn-xdrake-114",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454652_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Drake Pirates;Navy",
+      "attribute": "Slash",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your opponent trashes 1 card from their hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.4,
+          "highPrice": 6.5,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454659,
+      "cardId": "OP01-115",
+      "name": "Elephant's Marchoo",
+      "cleanName": "Elephants Marchoo",
+      "url": "https://www.tcgplayer.com/product/454659/one-piece-card-game-romance-dawn-elephants-marchoo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454659_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 2 or less, then add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-71\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454660,
+      "cardId": "OP01-116",
+      "name": "Artificial Devil Fruit SMILE",
+      "cleanName": "Artificial Devil Fruit SMILE",
+      "url": "https://www.tcgplayer.com/product/454660/one-piece-card-game-romance-dawn-artificial-devil-fruit-smile",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454660_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; play up to 1 \"SMILE\" type Character card with a cost of 3 or less. Then, place the rest at the bottom of your deck in any order.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-72\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 4,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454661,
+      "cardId": "OP01-117",
+      "name": "Sheep's Horn",
+      "cleanName": "Sheeps Horn",
+      "url": "https://www.tcgplayer.com/product/454661/one-piece-card-game-romance-dawn-sheeps-horn",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454661_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": null,
+      "effectText": "[Main] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Rest up to 1 of your opponent's Characters with a cost of 6 or less.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-73\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454662,
+      "cardId": "OP01-118",
+      "name": "Ulti-Mortar",
+      "cleanName": "Ulti Mortar",
+      "url": "https://www.tcgplayer.com/product/454662/one-piece-card-game-romance-dawn-ulti-mortar",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454662_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": null,
+      "effectText": "[Counter] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, draw 1 card.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-74\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454663,
+      "cardId": "OP01-119",
+      "name": "Thunder Bagua",
+      "cleanName": "Thunder Bagua",
+      "url": "https://www.tcgplayer.com/product/454663/one-piece-card-game-romance-dawn-thunder-bagua",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454663_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 2 or less Life cards, add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br><br>\r\n<a href=\"https://en.onepiece-cardgame.com/rules/errata_card/#group_20221111-75\">This card has been officially errata'd.</a>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.99,
+          "midPrice": 3.51,
+          "highPrice": 13,
+          "marketPrice": 2.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454664,
+      "cardId": "OP01-120",
+      "name": "Shanks",
+      "cleanName": "Shanks",
+      "url": "https://www.tcgplayer.com/product/454664/one-piece-card-game-romance-dawn-shanks",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454664_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[When Attacking] Your opponent cannot activate a [Blocker] Character that has 2000 or less power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.99,
+          "midPrice": 11.5,
+          "highPrice": 130,
+          "marketPrice": 9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454665,
+      "cardId": "OP01-120",
+      "name": "Shanks (Parallel)",
+      "cleanName": "Shanks Parallel",
+      "url": "https://www.tcgplayer.com/product/454665/one-piece-card-game-romance-dawn-shanks-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454665_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[When Attacking] Your opponent cannot activate a [Blocker] Character that has 2000 or less power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 90,
+          "midPrice": 125,
+          "highPrice": 500,
+          "marketPrice": 112.88,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454666,
+      "cardId": "OP01-120",
+      "name": "Shanks (Parallel) (Manga) (Alternate Art)",
+      "cleanName": "Shanks Parallel Manga Alternate Art",
+      "url": "https://www.tcgplayer.com/product/454666/one-piece-card-game-romance-dawn-shanks-parallel-manga-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454666_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[When Attacking] Your opponent cannot activate a [Blocker] Character that has 2000 or less power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4049.99,
+          "midPrice": 4225,
+          "highPrice": 9999.99,
+          "marketPrice": 1571.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454667,
+      "cardId": "OP01-121",
+      "name": "Yamato",
+      "cleanName": "Yamato",
+      "url": "https://www.tcgplayer.com/product/454667/one-piece-card-game-romance-dawn-yamato",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454667_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "Also treat this card's name as [Kouzuki Oden] according to the rules.\r\n<br>\r\n[Double Attack] <em>(This card deals 2 damage.)</em>\r\n<br>\r\n[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.5,
+          "midPrice": 10.99,
+          "highPrice": 150,
+          "marketPrice": 7.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 454669,
+      "cardId": "OP01-121",
+      "name": "Yamato (Parallel)",
+      "cleanName": "Yamato Parallel",
+      "url": "https://www.tcgplayer.com/product/454669/one-piece-card-game-romance-dawn-yamato-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/454669_200w.jpg",
+      "groupId": 3188,
+      "setCode": "OP01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "Also treat this card's name as [Kouzuki Oden] according to the rules.\r\n<br>\r\n[Double Attack] <em>(This card deals 2 damage.)</em>\r\n<br>\r\n[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 105,
+          "midPrice": 132.5,
+          "highPrice": 699.99,
+          "marketPrice": 107.89,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 7,
+  "errors": [
+    "Product 456059 (DON!! Card (Manga) (Alternate Art)) has no Number in extendedData",
+    "Product 456320 (DON!! Card // One Piece Film RED Promo) has no Number in extendedData"
+  ]
+}

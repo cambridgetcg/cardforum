@@ -67,7 +67,7 @@ export async function gradeCardWithAI(
     }
 
     const ccsInput = ximilarToCCSInput(record);
-    const ccs = calculateCCS(ccsInput);
+    const ccs = await calculateCCS(ccsInput);
 
     return {
       success: true,

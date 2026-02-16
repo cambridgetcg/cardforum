@@ -10,9 +10,7 @@
 
 import { db } from "@/lib/db";
 import { ccsDelta } from "@/lib/ccs";
-
-/** Agreement threshold: composite delta ≤ 1.0 CCS points. */
-const AGREEMENT_THRESHOLD = 1.0;
+import { getConfig } from "@/server/services/config.service";
 
 /**
  * Recalculate a seller's AI agreement rate from all their
@@ -46,10 +44,12 @@ export async function recalculateUserAIAgreement(
  * Check if a CCS delta indicates agreement.
  *
  * Exported for use in condition-comparison.service.ts.
+ * Uses configurable threshold from PlatformConfig.
  */
-export function isWithinAgreement(
+export async function isWithinAgreement(
   aiComposite: number,
   authComposite: number,
-): boolean {
-  return ccsDelta(aiComposite, authComposite) <= AGREEMENT_THRESHOLD;
+): Promise<boolean> {
+  const threshold = await getConfig("calibration.agreement_threshold");
+  return ccsDelta(aiComposite, authComposite) <= threshold;
 }

@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
+import { resolveRole, hasRole } from "@/server/middleware/rbac";
 import { resolveDispute } from "@/server/services/dispute.service";
 import type { DisputeStatus } from "@/types/domain";
 
@@ -17,6 +18,11 @@ export async function POST(
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const role = await resolveRole(session.user.id);
+  if (!hasRole(role, "ADMIN")) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
   const { disputeId } = await params;

@@ -8,8 +8,10 @@
  */
 
 import type { BridgeProposal } from "./bridge-builder";
+import { getConfig } from "@/server/services/config.service";
+import { getBatchTrustScores } from "@/server/services/trust-profile.service";
 
-const WEIGHTS = {
+const DEFAULT_WEIGHTS = {
   baseScore: 100,
   cycleLengthPenalty: -10,
   fullyLocalBonus: 30,
@@ -21,10 +23,14 @@ const WEIGHTS = {
   gradeMatchBonus: 5, // graded cards with exact same company+grade are highly fungible
 };
 
+type ScorerWeights = typeof DEFAULT_WEIGHTS;
+
 /**
  * Score a bridge proposal. Higher is better.
  */
-export function scoreProposal(proposal: BridgeProposal): number {
+export async function scoreProposal(proposal: BridgeProposal): Promise<number> {
+  const raw = await getConfig("matching.scorer_weights");
+  const WEIGHTS = { ...DEFAULT_WEIGHTS, ...raw } as ScorerWeights;
   let score = WEIGHTS.baseScore;
 
   // Shorter cycles are better (2-leg direct swap is ideal)
@@ -74,14 +80,23 @@ export function scoreProposal(proposal: BridgeProposal): number {
     }
   }
 
+  // Trust bonus (Loop 6): higher-trust participants get a small scoring bump
+  const trustBonusWeight = await getConfig("matching.trust_bonus_weight");
+  if (trustBonusWeight > 0 && proposal.userIds.length > 0) {
+    const trustScores = await getBatchTrustScores(proposal.userIds);
+    const avgTrust = [...trustScores.values()].reduce((s, v) => s + v, 0) / trustScores.size;
+    score += avgTrust * trustBonusWeight;
+  }
+
   return Math.max(0, score);
 }
 
 /**
  * Score and sort proposals, returning the best matches first.
  */
-export function rankProposals(proposals: BridgeProposal[]): BridgeProposal[] {
-  return proposals
-    .map((p) => ({ ...p, score: scoreProposal(p) }))
-    .sort((a, b) => b.score - a.score);
+export async function rankProposals(proposals: BridgeProposal[]): Promise<BridgeProposal[]> {
+  const scored = await Promise.all(
+    proposals.map(async (p) => ({ ...p, score: await scoreProposal(p) })),
+  );
+  return scored.sort((a, b) => b.score - a.score);
 }

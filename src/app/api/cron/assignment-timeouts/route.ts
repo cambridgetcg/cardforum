@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { checkAcceptanceTimeouts } from "@/server/services/reserve-assignment.service";
 
-// POST /api/cron/assignment-timeouts — Check for timed-out verification assignments
-// Intended to be called by Vercel Cron or external scheduler
-export async function POST(req: NextRequest) {
+// GET /api/cron/assignment-timeouts — Check for timed-out verification assignments
+// Called by Vercel Cron every 3 hours
+export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

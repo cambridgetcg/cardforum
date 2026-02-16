@@ -197,6 +197,10 @@ enum NotificationType {
   PAYOUT_COMPLETED     // Express payout reached user's bank
   PAYOUT_FAILED        // Express payout failed at bank level
   WALLET_FROZEN        // wallet frozen due to chargeback/fraud
+  TRADE_PAYMENT_FAILED // marketplace escrow payment failed
+  TRADE_SETTLED        // marketplace trade settlement completed
+  EXPERT_POST_ENDORSED // expert post endorsed by authenticator/admin
+  EXPERT_POST_FLAGGED  // expert post flagged for moderation
   SYSTEM
 }
 
@@ -228,6 +232,12 @@ enum KYCDocumentStatus {
   EXPIRED   // document past expiration date
 }
 
+enum MatchOutcomeResult {
+  COMPLETED
+  CANCELLED
+  DISPUTED
+}
+
 // ─── Platform Configuration ─────────────────────────────
 
 model PlatformConfig {
@@ -244,6 +254,19 @@ model PlatformConfig {
   @@map("platform_config")
 }
 
+model ConfigAudit {
+  id        String   @id @default(cuid())
+  key       String
+  oldValue  Json?
+  newValue  Json
+  changedBy String
+  createdAt DateTime @default(now())
+
+  @@index([key])
+  @@index([changedBy])
+  @@map("config_audit")
+}
+
 // ─── Auth.js Tables ─────────────────────────────────────
 
 model User {
@@ -254,6 +277,8 @@ model User {
   image         String?
   passwordHash  String?
   region        String?
+  regionId      String?
+  regionRef     Region?   @relation(fields: [regionId], references: [id])
   country       String?
   bio           String?
   stripeCustomerId          String? @unique
@@ -276,6 +301,8 @@ model User {
   walletTransactions WalletTransaction[]
   pendingDeposits    PendingDeposit[]
   payouts        Payout[]
+  tradePayments  TradePayment[]
+  tradeTransfers TradeTransfer[]
 
   haveListings        HaveListing[]
   wantListings        WantListing[]
@@ -299,6 +326,9 @@ model User {
   // Shipping
   shippingAddresses  ShippingAddress[]
 
+  // Disputes
+  disputes  Dispute[]
+
   // KYC
   kycStatus          KYCStatus  @default(UNVERIFIED)
   kycVerifiedAt      DateTime?
@@ -308,7 +338,17 @@ model User {
   kycDocuments       KYCDocument[]
   kycAudits          KYCAudit[]
 
+  // Sanctions
+  sanctionsScreenings SanctionsScreening[]
+
+  // Expert Hub
+  expertPosts ExpertPost[]
+
+  // Collection
+  collectionEntries CollectionEntry[]
+
   @@index([kycStatus])
+  @@index([regionId])
   @@map("users")
 }
 
@@ -355,14 +395,17 @@ model VerificationToken {
 // ─── Regions ───────────────────────────────────────────
 
 model Region {
-  id        String   @id @default(cuid())
-  country   String   // ISO 3166-1 alpha-2 (e.g., "JP", "US", "DE")
-  name      String   // Metro area name (e.g., "Tokyo", "Los Angeles")
-  createdAt DateTime @default(now())
+  id          String   @id @default(cuid())
+  country     String   // ISO 3166-1 alpha-2 (e.g., "JP", "US", "DE")
+  name        String   // Metro area name (e.g., "Tokyo", "Los Angeles")
+  customsZone String?  // EU, US, JP, UK, AU, CA — derived from country via CUSTOMS_ZONES
+  createdAt   DateTime @default(now())
 
   authenticators Authenticator[]
+  users          User[]
 
   @@unique([country, name])
+  @@index([customsZone])
   @@map("regions")
 }
 
@@ -393,32 +436,39 @@ model ShippingAddress {
 // ─── Card Catalog ───────────────────────────────────────
 
 model CardSet {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   tcg          TCG
-  code         String   // "OP01", "ST01", "EB01"
-  name         String   // "Romance Dawn"
-  productType  String?  // "booster" | "starter" | "extra" | "premium" | "promo"
+  code         String    // "OP01", "ST01", "EB01"
+  name         String    // "Romance Dawn"
+  productType  String?   // "booster" | "starter" | "extra" | "premium" | "promo"
   totalCards   Int?
-  cardmarketId Int?     // Cardmarket expansion ID for re-scraping
-  createdAt    DateTime @default(now())
+  cardmarketId     Int?      // Cardmarket expansion ID for re-scraping
+  tcgplayerGroupId Int?      // TCGPlayer group ID (via TCGCSV)
+  releaseDate      DateTime? // English release date
+  createdAt    DateTime  @default(now())
 
   cards Card[]
+  expertPosts ExpertPost[]
 
   @@unique([tcg, code])
   @@map("card_sets")
 }
 
 model Card {
-  id        String   @id @default(cuid())
-  tcg       TCG
-  name      String
-  setName   String
-  setCode   String?
-  number    String?
-  rarity    String?
-  imageUrl  String?
-  setId     String?
-  createdAt DateTime @default(now())
+  id         String   @id @default(cuid())
+  tcg        TCG
+  name       String
+  setName    String
+  setCode    String?
+  number     String?
+  rarity     String?
+  imageUrl   String?
+  setId      String?
+  cardType   String?  // "Character", "Event", "Stage", "Leader", "DON!!"
+  effectText String?  // Game mechanics and abilities
+  cost       Int?     // Mana or power cost
+  power      Int?     // Card power/strength value
+  createdAt  DateTime @default(now())
 
   set                    CardSet?  @relation(fields: [setId], references: [id])
   variants               CardVariant[]
@@ -429,6 +479,8 @@ model Card {
   authenticatorInventory AuthenticatorInventory[]
   digitalTokens          DigitalToken[]
   digitisationRequests   DigitisationRequest[]
+  expertPosts            ExpertPost[]
+  collectionEntries      CollectionEntry[]
 
   @@unique([tcg, setName, number])
   @@index([tcg, name])
@@ -436,20 +488,112 @@ model Card {
 }
 
 model CardVariant {
-  id        String  @id @default(cuid())
-  cardId    String
-  language  String  @default("EN")
-  edition   String  @default("")  // "1st Edition", "Unlimited", or "" for default
-  treatment String? // "regular", "alt_art", "manga_rare", "parallel"
-  rarity    String? // Per-variant rarity ("C", "SR", "SEC", etc.)
-  version   String  @default("")  // Cardmarket version: "V.1", "V.2", "V.3", or ""
-  sourceUrl String? // Cardmarket product URL
-  imageUrl  String?
+  id             String    @id @default(cuid())
+  cardId         String
+  language       String    @default("EN")
+  edition        String    @default("")  // "1st Edition", "Unlimited", or "" for default
+  treatment      String?   // "regular", "alt_art", "manga_rare", "parallel"
+  rarity         String?   // Per-variant rarity ("C", "SR", "SEC", etc.)
+  version        String    @default("")  // Cardmarket version: "V.1", "V.2", "V.3", or ""
+  sourceUrl          String?   // Cardmarket product URL
+  imageUrl           String?
+  priceEur           Float?    // Latest Cardmarket price in EUR
+  priceUpdatedAt     DateTime? // When price was last scraped
+  tcgplayerProductId Int?      // TCGPlayer product ID (via TCGCSV)
+  tcgplayerUrl       String?   // TCGPlayer product URL
+  priceUsd           Float?    // TCGPlayer market price in USD
+  priceUsdLow        Float?    // TCGPlayer low price in USD
+  priceUsdMid        Float?    // TCGPlayer mid price in USD
+  priceUsdHigh       Float?    // TCGPlayer high price in USD
 
   card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
 
   @@unique([cardId, language, edition, version])
   @@map("card_variants")
+}
+
+// ─── Collection ─────────────────────────────────────────
+
+model CollectionEntry {
+  id         String     @id @default(cuid())
+  userId     String
+  cardId     String
+  quantity   Int        @default(1)
+  condition  Condition?
+  acquiredAt DateTime   @default(now())
+  pricePaid  Int?       // cents — what the user paid to acquire
+  notes      String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, cardId, condition])
+  @@index([userId])
+  @@index([cardId])
+  @@map("collection_entries")
+}
+
+// ─── Factory / Production Run Research ──────────────────
+
+enum FactoryConfidence {
+  CONFIRMED
+  LIKELY
+  UNCONFIRMED
+}
+
+model PrintingFactory {
+  id                 String              @id @default(cuid())
+  name               String
+  code               String              @unique // slug: "cartamundi-be", "dnp-jp"
+  location           String?             // city or region
+  country            String              // ISO 3166-1 alpha-2
+  operator           String?             // parent company
+  tcgsSupported      TCG[]
+  languagesSupported String[]            // ISO 639-1: "en", "ja", "de"
+  foundedYear        Int?
+  websiteUrl         String?
+  researchSources    String[]            // URLs confirming this factory
+  confidence         FactoryConfidence   @default(UNCONFIRMED)
+  qualityNotes       String?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  productionRuns ProductionRun[]
+
+  @@unique([name, country])
+  @@index([country])
+  @@map("printing_factories")
+}
+
+model ProductionRun {
+  id              String             @id @default(cuid())
+  tcg             TCG
+  setCode         String
+  setName         String
+  language        String             // ISO 639-1: "en", "ja", "de"
+  factoryId       String
+  printingPeriod  String?            // "2023 Q1", "1st Edition Run"
+  startDate       DateTime?
+  endDate         DateTime?
+  edition         String?            // "1st Edition", "Unlimited"
+  estimatedVolume Int?
+  knownDefects    String[]           // "centering", "color_shift", "miscut"
+  researchSources String[]
+  researchNotes   String?
+  confidence      FactoryConfidence  @default(UNCONFIRMED)
+  crowdsourced    Boolean            @default(false)
+  reportCount     Int                @default(0)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  factory     PrintingFactory @relation(fields: [factoryId], references: [id])
+  expertPosts ExpertPost[]
+
+  @@unique([tcg, setCode, language, factoryId, printingPeriod])
+  @@index([tcg, setCode, language])
+  @@map("production_runs")
 }
 
 // ─── Listings ───────────────────────────────────────────
@@ -608,8 +752,9 @@ model MatchProposal {
   createdAt    DateTime  @default(now())
   expiresAt    DateTime
 
-  trade Trade?
-  legs  MatchProposalLeg[]
+  trade        Trade?
+  legs         MatchProposalLeg[]
+  matchOutcome MatchOutcome?
 
   @@map("match_proposals")
 }
@@ -654,11 +799,106 @@ model Trade {
   escrow             Escrow?
   disputes           Dispute[]
   walletTransactions WalletTransaction[]
+  tradePayments      TradePayment[]
+  tradeTransfers     TradeTransfer[]
+  matchOutcome       MatchOutcome?
 
   @@index([userAId, status])
   @@index([userBId, status])
   @@index([status, createdAt])
+  @@index([participantIds]) // For multi-party trade lookups. For GIN: CREATE INDEX CONCURRENTLY trades_participant_ids_gin ON trades USING GIN (participant_ids);
   @@map("trades")
+}
+
+/// Records match quality data: score at match time + outcome after trade resolves.
+/// Enables the scoring feedback loop (Loop 4) — learn which weights produce good trades.
+model MatchOutcome {
+  id              String              @id @default(cuid())
+  proposalId      String              @unique
+  tradeId         String?             @unique
+  score           Float               // score at match time
+  weightsSnapshot Json                // scorer weights snapshot at match time
+  outcome         MatchOutcomeResult? // null until trade resolves
+  completionDays  Int?                // days from trade creation to completion
+  disputeCount    Int                 @default(0)
+  cycleLength     Int
+  regionCount     Int
+  isFullyLocal    Boolean             @default(false)
+  isChain         Boolean             @default(false)
+  isGraded        Boolean             @default(false)
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  resolvedAt      DateTime?
+
+  proposal MatchProposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+  trade    Trade?        @relation(fields: [tradeId], references: [id])
+
+  @@index([outcome])
+  @@index([createdAt])
+  @@map("match_outcomes")
+}
+
+/// Tracks per-user Stripe PaymentIntent for marketplace escrow.
+/// Each user who owes money in a trade gets a PaymentIntent (manual capture).
+model TradePayment {
+  id                   String             @id @default(cuid())
+  tradeId              String
+  userId               String
+  amountCents          Int                // how much this user owes (settlement + fees)
+  currency             String             @default("USD")
+  stripePaymentIntentId String?           @unique
+  stripeChargeId       String?            // populated after capture
+  status               TradePaymentStatus @default(PENDING)
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  capturedAt           DateTime?
+  cancelledAt          DateTime?
+
+  trade Trade @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id])
+
+  @@unique([tradeId, userId])
+  @@index([stripePaymentIntentId])
+  @@map("trade_payments")
+}
+
+/// Tracks per-user Stripe Transfers for marketplace settlement.
+/// Each user who is owed money in a trade gets a Transfer to their Connect account.
+model TradeTransfer {
+  id                    String              @id @default(cuid())
+  tradeId               String
+  userId                String              // the recipient (seller)
+  amountCents           Int                 // amount transferred to seller
+  platformFeeCents      Int                 // platform fee deducted
+  currency              String              @default("USD")
+  stripeTransferId      String?             @unique
+  status                TradeTransferStatus @default(PENDING)
+  createdAt             DateTime            @default(now())
+  completedAt           DateTime?
+
+  trade Trade? @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  user  User   @relation(fields: [userId], references: [id])
+
+  @@index([tradeId])
+  @@map("trade_transfers")
+}
+
+enum TradePaymentStatus {
+  PENDING           // PaymentIntent not yet created
+  REQUIRES_ACTION   // PaymentIntent created, awaiting user confirmation
+  AUTHORIZED        // PaymentIntent authorized (hold active)
+  CAPTURED          // PaymentIntent captured (trade completed)
+  CANCELLED         // PaymentIntent cancelled (trade cancelled/refunded)
+  FAILED            // PaymentIntent failed
+  REFUNDED          // Captured payment refunded (saga rollback)
+  VOIDED            // Authorized payment voided during saga rollback
+}
+
+enum TradeTransferStatus {
+  PENDING    // transfer not yet created
+  PAID       // transfer completed
+  FAILED     // transfer failed
+  REVERSED   // transfer reversed
 }
 
 model TradeLeg {
@@ -897,6 +1137,16 @@ model ConditionComparison {
   // Agreement flag (composite delta ≤ 1.0)
   agreed          Boolean
 
+  // Signed deltas: AI - Auth (positive = AI grades higher)
+  signedDeltaSurface   Float?
+  signedDeltaCorners   Float?
+  signedDeltaEdges     Float?
+  signedDeltaCentering Float?
+  signedDeltaComposite Float?
+
+  // Denormalized TCG for efficient per-TCG calibration queries
+  tcg TCG?
+
   // Context
   authenticatorId   String
   authenticatorTier AuthenticatorTier
@@ -909,7 +1159,56 @@ model ConditionComparison {
   @@index([authenticatorId, agreed])
   @@index([sellerId, agreed])
   @@index([createdAt])
+  @@index([tcg, createdAt])
   @@map("condition_comparisons")
+}
+
+// ─── Calibration Reports ─────────────────────────────────
+
+model CalibrationReport {
+  id              String   @id @default(cuid())
+  windowStart     DateTime
+  windowEnd       DateTime
+  sampleSize      Int
+  agreementRate   Float    // fraction within agreement threshold
+  confidenceLevel String   // HIGH (>=50), MODERATE (20-49), LOW (<20)
+
+  // Per-dimension signed bias (mean of AI - Auth)
+  biasSurface     Float
+  biasCorners     Float
+  biasEdges       Float
+  biasCentering   Float
+  biasComposite   Float
+
+  // Per-dimension mean absolute delta
+  madSurface      Float
+  madCorners      Float
+  madEdges        Float
+  madCentering    Float
+  madComposite    Float
+
+  // Drift detection
+  driftDetected     Boolean
+  driftDimensions   String[]
+  driftDetails      Json?    // per-dimension recent vs baseline comparison
+
+  // Breakdowns
+  perTcgBreakdown       Json? // per-TCG metrics
+  outlierAuthenticators Json? // flagged authenticators
+
+  // Weight suggestions
+  suggestedWeights Json?  // proposed weight adjustments (null if no change needed)
+  currentWeights   Json   // snapshot of weights at report time
+
+  // Lifecycle
+  status    String    @default("GENERATED") // GENERATED, WEIGHTS_APPLIED, DISMISSED
+  appliedAt DateTime?
+  appliedBy String?
+  createdAt DateTime  @default(now())
+
+  @@index([createdAt])
+  @@index([status])
+  @@map("calibration_reports")
 }
 
 // ─── Wallet ─────────────────────────────────────────────
@@ -1031,7 +1330,8 @@ model Dispute {
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
 
-  trade Trade @relation(fields: [tradeId], references: [id])
+  trade    Trade @relation(fields: [tradeId], references: [id])
+  raisedBy User  @relation(fields: [raisedById], references: [id])
 
   @@index([tradeId])
   @@map("disputes")
@@ -1306,4 +1606,151 @@ model ExchangeRateCache {
 
   @@index([baseCurrency, fetchedAt])
   @@map("exchange_rate_cache")
+}
+
+// ─── Stripe Webhook Dedup ───────────────────────────
+
+model ProcessedStripeEvent {
+  id          String   @id // Stripe event ID (evt_...)
+  type        String   // event type for debugging
+  processedAt DateTime @default(now())
+
+  @@map("processed_stripe_events")
+}
+
+// ─── Sanctions Screening ──────────────────────────────────────
+
+enum SanctionsScreeningStatus {
+  CLEAR
+  PENDING_REVIEW
+  FLAGGED
+  DENIED
+}
+
+model SanctionsScreening {
+  id               String                    @id @default(cuid())
+  userId           String
+  status           SanctionsScreeningStatus  @default(CLEAR)
+  screenedName     String                    // name that was screened
+  matchName        String?                   // SDN entry that matched (if any)
+  matchScore       Float?                    // similarity score 0-1
+  matchProgram     String?                   // OFAC program (e.g. "SDGT", "IRAN")
+  source           String                    @default("OFAC_SDN") // screening source
+  reviewedBy       String?                   // admin user ID
+  reviewNotes      String?
+  createdAt        DateTime                  @default(now())
+  updatedAt        DateTime                  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@map("sanctions_screenings")
+}
+
+// ─── Expert Knowledge Hub ────────────────────────────
+
+enum ExpertPostCategory {
+  PRICE_ANALYSIS
+  COMBO_GUIDE
+  SET_REVIEW
+  CONDITION_GUIDE
+  META_ANALYSIS
+  FACTORY_DEFECT
+  GRADING_TIPS
+  STORAGE_TIPS
+  INVESTMENT_OUTLOOK
+  MARKET_TRENDS
+}
+
+enum ExpertPostStatus {
+  DRAFT
+  PENDING
+  PUBLISHED
+  FLAGGED
+  REMOVED
+}
+
+model ExpertPost {
+  id          String              @id @default(cuid())
+  authorId    String
+  category    ExpertPostCategory
+  title       String              // max 200 chars, enforced by validator
+  content     String              @db.Text // Markdown content
+  excerpt     String?             // auto-generated from first 200 chars of content
+
+  // Catalog anchors (at least one required, enforced by service)
+  cardId      String?
+  setId       String?
+  tcg         TCG?
+
+  // Language — null = cross-language
+  language    String?
+
+  // Metadata
+  tags        String[]            @default([])
+  mediaUrls   String[]            @default([])
+
+  // Trust / moderation
+  status      ExpertPostStatus    @default(DRAFT)
+  upvotes     Int                 @default(0)
+  downvotes   Int                 @default(0)
+  helpfulCount Int                @default(0)
+  reportCount  Int                @default(0)
+  moderatedBy  String?
+  moderatedAt  DateTime?
+  moderationNote String?
+
+  // Timestamps
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  publishedAt DateTime?
+
+  // Factory link (Loop 5: Expert→Catalog enrichment)
+  productionRunId String?
+
+  // Relations
+  author        User               @relation(fields: [authorId], references: [id])
+  card          Card?              @relation(fields: [cardId], references: [id])
+  set           CardSet?           @relation(fields: [setId], references: [id])
+  productionRun ProductionRun?     @relation(fields: [productionRunId], references: [id])
+  votes         ExpertVote[]
+  endorsements  ExpertEndorsement[]
+
+  @@index([tcg, status, publishedAt])
+  @@index([cardId, status])
+  @@index([setId, status])
+  @@index([authorId, status])
+  @@index([productionRunId])
+  @@map("expert_posts")
+}
+
+model ExpertVote {
+  id       String   @id @default(cuid())
+  postId   String
+  userId   String
+  value    Int      // +1 upvote, -1 downvote
+  helpful  Boolean  @default(false) // separate "this was helpful" flag
+
+  createdAt DateTime @default(now())
+
+  post ExpertPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, userId])
+  @@map("expert_votes")
+}
+
+model ExpertEndorsement {
+  id           String   @id @default(cuid())
+  postId       String
+  endorserId   String
+  endorserType String   // "authenticator" | "admin"
+  note         String?
+
+  createdAt DateTime @default(now())
+
+  post ExpertPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, endorserId])
+  @@map("expert_endorsements")
 }

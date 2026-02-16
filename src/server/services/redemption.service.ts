@@ -1,9 +1,6 @@
 import { db } from "@/lib/db";
-import {
-  REDEMPTION_BASE_FEE_CENTS,
-  CROSS_ZONE_SURCHARGE_CENTS,
-  isSameCustomsZone,
-} from "@/lib/constants";
+import { isSameCustomsZone } from "@/lib/constants";
+import { getConfigs } from "@/server/services/config.service";
 import { REDEMPTION_TRANSITIONS } from "@/types/domain";
 import type { Redemption, RedemptionStatus } from "@/generated/prisma/client";
 
@@ -98,8 +95,12 @@ export async function requestRedemption(
 
     const vaultCountry = selectedItem.authenticator.regionRef?.country ?? "";
     const crossZone = !isSameCustomsZone(input.redeemerCountry, vaultCountry);
-    const surcharge = crossZone ? CROSS_ZONE_SURCHARGE_CENTS : 0;
-    const totalFee = REDEMPTION_BASE_FEE_CENTS + surcharge;
+    const {
+      "digital.redemption_base_fee_cents": baseFee,
+      "digital.cross_zone_surcharge_cents": surchargeConfig,
+    } = await getConfigs(["digital.redemption_base_fee_cents", "digital.cross_zone_surcharge_cents"]);
+    const surcharge = crossZone ? surchargeConfig : 0;
+    const totalFee = baseFee + surcharge;
 
     // Set token status
     await tx.digitalToken.update({
@@ -149,7 +150,7 @@ export async function requestRedemption(
         vaultCountry,
         redeemerCountry: input.redeemerCountry,
         isCrossZone: crossZone,
-        redemptionFeeCents: REDEMPTION_BASE_FEE_CENTS,
+        redemptionFeeCents: baseFee,
         crossZoneSurcharge: surcharge,
       },
     });

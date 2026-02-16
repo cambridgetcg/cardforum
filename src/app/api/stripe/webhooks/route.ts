@@ -11,6 +11,10 @@ import {
   handleTransferFailed,
   handleTransferReversed,
 } from "@/server/services/payout.service";
+import {
+  handlePaymentAuthorized,
+  handlePaymentFailed,
+} from "@/server/services/marketplace-escrow.service";
 import type Stripe from "stripe";
 
 export async function POST(req: NextRequest) {
@@ -31,6 +35,16 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     const message = err instanceof Error ? err.message : "Invalid signature";
     return NextResponse.json({ error: message }, { status: 400 });
+  }
+
+  // ─── Event-level idempotency ──────────────────────────
+  // Stripe may deliver the same event multiple times. Dedup by event ID
+  // to prevent duplicate notifications, state transitions, etc.
+  const existing = await db.processedStripeEvent.findUnique({
+    where: { id: event.id },
+  });
+  if (existing) {
+    return NextResponse.json({ received: true, deduplicated: true });
   }
 
   const eventType = event.type as string;
@@ -79,7 +93,7 @@ export async function POST(req: NextRequest) {
         const type = session.metadata?.type;
 
         if (userId && type === "deposit" && session.amount_total) {
-          // Credit the wallet (idempotent via stripePaymentIntentId)
+          // Credit the wallet (also idempotent via stripePaymentIntentId)
           await deposit(userId, session.amount_total, session.payment_intent as string);
 
           // Mark PendingDeposit as settled
@@ -126,10 +140,55 @@ export async function POST(req: NextRequest) {
         break;
       }
 
+      // ─── Inline Deposits (PaymentIntent via Stripe Elements) ──
+      case "payment_intent.succeeded": {
+        const pi = event.data.object as Stripe.PaymentIntent;
+        const userId = pi.metadata?.userId;
+        const type = pi.metadata?.type;
+
+        if (type === "deposit" && userId && pi.amount) {
+          // Wallet deposit — credit balance
+          await deposit(userId, pi.amount, pi.id);
+        } else if (type === "trade_escrow") {
+          // Trade escrow — PaymentIntent captured (authorized or settled)
+          await handlePaymentAuthorized(pi.id);
+        }
+        break;
+      }
+
+      // PaymentIntent authorized (manual capture) — trade escrow hold confirmed
+      case "payment_intent.amount_capturable_updated": {
+        const pi = event.data.object as Stripe.PaymentIntent;
+        const type = pi.metadata?.type;
+
+        if (type === "trade_escrow") {
+          await handlePaymentAuthorized(pi.id);
+        }
+        break;
+      }
+
       case "payment_intent.payment_failed": {
         const pi = event.data.object as Stripe.PaymentIntent;
         const userId = pi.metadata?.userId;
-        if (userId) {
+        const type = pi.metadata?.type;
+
+        if (type === "trade_escrow") {
+          // Trade escrow payment failed — mark failed + notify
+          await handlePaymentFailed(pi.id);
+          if (userId) {
+            const tradeId = pi.metadata?.tradeId;
+            await db.notification.create({
+              data: {
+                userId,
+                type: "TRADE_PAYMENT_FAILED",
+                title: "Trade Payment Failed",
+                message: `Payment authorization for trade #${tradeId?.slice(-6) ?? "unknown"} failed. The trade may be cancelled.`,
+                link: tradeId ? `/trades/${tradeId}` : "/trades",
+              },
+            });
+          }
+        } else if (userId) {
+          // Wallet deposit failed
           const message = pi.last_payment_error?.message ?? "Payment failed";
           await db.notification.create({
             data: {
@@ -139,6 +198,20 @@ export async function POST(req: NextRequest) {
               message: `Your deposit of $${((pi.amount ?? 0) / 100).toFixed(2)} failed: ${message}`,
               link: "/wallet",
             },
+          });
+        }
+        break;
+      }
+
+      case "payment_intent.canceled": {
+        const pi = event.data.object as Stripe.PaymentIntent;
+        const type = pi.metadata?.type;
+
+        if (type === "trade_escrow") {
+          // Trade escrow cancelled — release hold record
+          await db.tradePayment.updateMany({
+            where: { stripePaymentIntentId: pi.id },
+            data: { status: "CANCELLED", cancelledAt: new Date() },
           });
         }
         break;
@@ -310,8 +383,12 @@ export async function POST(req: NextRequest) {
         break;
       }
     }
+
+    // Mark event as processed AFTER successful handling
+    await db.processedStripeEvent.create({
+      data: { id: event.id, type: eventType },
+    });
   } catch (err) {
-    // Now that deposit is idempotent, we can safely return 500 for Stripe to retry
     console.error(`Webhook handler failed for ${eventType}:`, err);
     return NextResponse.json(
       { error: "Webhook handler failed" },

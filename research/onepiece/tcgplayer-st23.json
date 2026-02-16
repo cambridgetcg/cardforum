@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 23: RED Shanks",
+  "groupId": 24282,
+  "setCode": "ST23",
+  "totalProducts": 18,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:48.490Z",
+  "durationMs": 72,
+  "cards": [
+    {
+      "productId": 633760,
+      "cardId": "OP09-001",
+      "name": "Shanks (Reprint)",
+      "cleanName": "Shanks Reprint",
+      "url": "https://www.tcgplayer.com/product/633760/one-piece-card-game-starter-deck-23-red-shanks-shanks-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633760_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards 1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 1,
+          "highPrice": 10,
+          "marketPrice": 0.9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634269,
+      "cardId": "OP09-006",
+      "name": "Howling Gab (Reprint)",
+      "cleanName": "Howling Gab Reprint",
+      "url": "https://www.tcgplayer.com/product/634269/one-piece-card-game-starter-deck-23-red-shanks-howling-gab-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634269_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Special",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634270,
+      "cardId": "OP09-010",
+      "name": "Bonk Punch (Reprint)",
+      "cleanName": "Bonk Punch Reprint",
+      "url": "https://www.tcgplayer.com/product/634270/one-piece-card-game-starter-deck-23-red-shanks-bonk-punch-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634270_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] Play up to 1 [Monster] from your hand.<br>\r\n[DON!! x1] [When Attacking] This Character gains +2000 power during this turn.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634272,
+      "cardId": "OP09-011",
+      "name": "Hongo (Reprint)",
+      "cleanName": "Hongo Reprint",
+      "url": "https://www.tcgplayer.com/product/634272/one-piece-card-game-starter-deck-23-red-shanks-hongo-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634272_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may rest this Character</strong>: If your Leader has the \"Red-Haired Pirates\" type, give up to 1 of your opponent's Characters 2000 power during this turn.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.41,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634274,
+      "cardId": "OP09-012",
+      "name": "Monster (Reprint)",
+      "cleanName": "Monster Reprint",
+      "url": "https://www.tcgplayer.com/product/634274/one-piece-card-game-starter-deck-23-red-shanks-monster-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634274_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "If your Character [Bonk Punch] would be K.O.'d by an effect, you may trash this Character instead.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634276,
+      "cardId": "OP09-013",
+      "name": "Yasopp (Reprint)",
+      "cleanName": "Yasopp Reprint",
+      "url": "https://www.tcgplayer.com/product/634276/one-piece-card-game-starter-deck-23-red-shanks-yasopp-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634276_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Up to 1 of your Leader gains +1000 power until the end of your opponent's next turn.<br>\r\n[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters 1000 power during this turn.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.32,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634278,
+      "cardId": "OP09-014",
+      "name": "Limejuice (Reprint)",
+      "cleanName": "Limejuice Reprint",
+      "url": "https://www.tcgplayer.com/product/634278/one-piece-card-game-starter-deck-23-red-shanks-limejuice-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634278_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.33,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634277,
+      "cardId": "OP09-015",
+      "name": "Lucky.Roux (Reprint)",
+      "cleanName": "LuckyRoux Reprint",
+      "url": "https://www.tcgplayer.com/product/634277/one-piece-card-game-starter-deck-23-red-shanks-luckyroux-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634277_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On K.O.] If your Leader has the \"Red-Haired Pirates\" type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.37,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634280,
+      "cardId": "OP09-016",
+      "name": "Rockstar (Reprint)",
+      "cleanName": "Rockstar Reprint",
+      "url": "https://www.tcgplayer.com/product/634280/one-piece-card-game-starter-deck-23-red-shanks-rockstar-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634280_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2.75,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634282,
+      "cardId": "OP09-020",
+      "name": "Come On!! We'll Fight You!! (Reprint)",
+      "cleanName": "Come On Well Fight You Reprint",
+      "url": "https://www.tcgplayer.com/product/634282/one-piece-card-game-starter-deck-23-red-shanks-come-on-well-fight-you-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634282_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Red-Haired Pirates\" type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Draw 1 card.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.33,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 633761,
+      "cardId": "ST23-001",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/633761/one-piece-card-game-starter-deck-23-red-shanks-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633761_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "If you have a Character with 10000 power or more, give this card in your hand -4 cost.\r\n<br>[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.99,
+          "midPrice": 7.99,
+          "highPrice": 50,
+          "marketPrice": 6.9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 633762,
+      "cardId": "ST23-002",
+      "name": "Shanks (002)",
+      "cleanName": "Shanks 002",
+      "url": "https://www.tcgplayer.com/product/633762/one-piece-card-game-starter-deck-23-red-shanks-shanks-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633762_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "If your opponent has a Character with 8000 base power or more, give this card in your hand -3 cost.\r\n<br>[On Play] If your Leader has the \"Red-Haired Pirates\" type or is [Uta], your Leader gains +2000 power until the end of your opponent's next End Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.13,
+          "midPrice": 0.93,
+          "highPrice": 10,
+          "marketPrice": 0.61,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 633763,
+      "cardId": "ST23-003",
+      "name": "Benn.Beckman",
+      "cleanName": "BennBeckman",
+      "url": "https://www.tcgplayer.com/product/633763/one-piece-card-game-starter-deck-23-red-shanks-bennbeckman",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633763_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand:</strong> If your Leader has the \"Red-Haired Pirates\" type, K.O. up to 1 of your opponent's Characters with 4000 base power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 633764,
+      "cardId": "ST23-004",
+      "name": "Monkey.D.Luffy",
+      "cleanName": "MonkeyDLuffy",
+      "url": "https://www.tcgplayer.com/product/633764/one-piece-card-game-starter-deck-23-red-shanks-monkeydluffy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633764_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may rest 1 of your DON!! cards and this Character:</strong> Give up to 1 of your opponent's Characters-1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 633943,
+      "cardId": "ST23-005",
+      "name": "Yasopp",
+      "cleanName": "Yasopp",
+      "url": "https://www.tcgplayer.com/product/633943/one-piece-card-game-starter-deck-23-red-shanks-yasopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633943_200w.jpg",
+      "groupId": 24282,
+      "setCode": "ST23",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[Activate:Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

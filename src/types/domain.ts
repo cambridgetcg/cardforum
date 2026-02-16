@@ -19,6 +19,21 @@ export const TCG_LABELS: Record<TCG, string> = {
   MTG: "Magic: The Gathering",
 };
 
+export const TCG_FILTERS: { value: TCG | ""; label: string }[] = [
+  { value: "", label: "All TCGs" },
+  { value: "POKEMON", label: "Pokemon" },
+  { value: "ONEPIECE", label: "One Piece" },
+  { value: "YUGIOH", label: "Yu-Gi-Oh!" },
+  { value: "MTG", label: "Magic" },
+];
+
+export const TCG_BADGE_COLORS: Record<TCG, "default" | "success" | "warning" | "error" | "info"> = {
+  POKEMON: "warning",
+  ONEPIECE: "error",
+  YUGIOH: "info",
+  MTG: "success",
+};
+
 export const Condition = {
   NM: "NM",
   LP: "LP",
@@ -416,8 +431,8 @@ export type DigitisationStatus =
 
 export const DIGITISATION_TRANSITIONS: Record<DigitisationStatus, DigitisationStatus[]> = {
   SUBMITTED: ["RECEIVED", "CANCELLED"],
-  RECEIVED: ["VERIFYING", "CANCELLED"],
-  VERIFYING: ["VERIFIED", "REJECTED"],
+  RECEIVED: ["VERIFYING", "VERIFIED", "MINTED", "CANCELLED", "REJECTED"],
+  VERIFYING: ["VERIFIED", "MINTED", "REJECTED"],
   VERIFIED: ["MINTED"],
   MINTED: [],
   REJECTED: [],
@@ -479,6 +494,48 @@ export const REDEMPTION_TRANSITIONS: Record<RedemptionStatus, RedemptionStatus[]
 export function canTransitionRedemption(from: RedemptionStatus, to: RedemptionStatus): boolean {
   return REDEMPTION_TRANSITIONS[from].includes(to);
 }
+
+// ─── Expert Knowledge Hub ────────────────────────────
+
+export const ExpertPostCategory = {
+  PRICE_ANALYSIS: "PRICE_ANALYSIS",
+  COMBO_GUIDE: "COMBO_GUIDE",
+  SET_REVIEW: "SET_REVIEW",
+  CONDITION_GUIDE: "CONDITION_GUIDE",
+  META_ANALYSIS: "META_ANALYSIS",
+  FACTORY_DEFECT: "FACTORY_DEFECT",
+  GRADING_TIPS: "GRADING_TIPS",
+  STORAGE_TIPS: "STORAGE_TIPS",
+  INVESTMENT_OUTLOOK: "INVESTMENT_OUTLOOK",
+  MARKET_TRENDS: "MARKET_TRENDS",
+} as const;
+export type ExpertPostCategory =
+  (typeof ExpertPostCategory)[keyof typeof ExpertPostCategory];
+export const EXPERT_POST_CATEGORY_VALUES = Object.values(ExpertPostCategory) as [ExpertPostCategory, ...ExpertPostCategory[]];
+
+export const EXPERT_POST_CATEGORY_LABELS: Record<ExpertPostCategory, string> = {
+  PRICE_ANALYSIS: "Price Analysis",
+  COMBO_GUIDE: "Combo Guide",
+  SET_REVIEW: "Set Review",
+  CONDITION_GUIDE: "Condition Guide",
+  META_ANALYSIS: "Meta Analysis",
+  FACTORY_DEFECT: "Factory Defect",
+  GRADING_TIPS: "Grading Tips",
+  STORAGE_TIPS: "Storage Tips",
+  INVESTMENT_OUTLOOK: "Investment Outlook",
+  MARKET_TRENDS: "Market Trends",
+};
+
+export const ExpertPostStatus = {
+  DRAFT: "DRAFT",
+  PENDING: "PENDING",
+  PUBLISHED: "PUBLISHED",
+  FLAGGED: "FLAGGED",
+  REMOVED: "REMOVED",
+} as const;
+export type ExpertPostStatus =
+  (typeof ExpertPostStatus)[keyof typeof ExpertPostStatus];
+export const EXPERT_POST_STATUS_VALUES = Object.values(ExpertPostStatus) as [ExpertPostStatus, ...ExpertPostStatus[]];
 
 export const KYCDocumentType = {
   GOVERNMENT_ID: "GOVERNMENT_ID",

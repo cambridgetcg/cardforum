@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 24: GREEN Jewelry Bonney",
+  "groupId": 24283,
+  "setCode": "ST24",
+  "totalProducts": 17,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:49.573Z",
+  "durationMs": 81,
+  "cards": [
+    {
+      "productId": 634598,
+      "cardId": "EB01-015",
+      "name": "Scratchmen Apoo (Reprint)",
+      "cleanName": "Scratchmen Apoo Reprint",
+      "url": "https://www.tcgplayer.com/product/634598/one-piece-card-game-starter-deck-24-green-jewelry-bonney-scratchmen-apoo-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634598_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "On-Air Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 2 or less.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the EB01 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.13,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634599,
+      "cardId": "OP07-019",
+      "name": "Jewelry Bonney (OP07-019)",
+      "cleanName": "Jewelry Bonney OP07 019",
+      "url": "https://www.tcgplayer.com/product/634599/one-piece-card-game-starter-deck-24-green-jewelry-bonney-jewelry-bonney-op07-019",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634599_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Rest up to 1 of your opponent's Leader or Character cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 10,
+          "marketPrice": 0.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634600,
+      "cardId": "OP07-021",
+      "name": "Urouge (Reprint)",
+      "cleanName": "Urouge Reprint",
+      "url": "https://www.tcgplayer.com/product/634600/one-piece-card-game-starter-deck-24-green-jewelry-bonney-urouge-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634600_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fallen Monk Pirates;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[End of Your Turn] Set up to 1 of your DON!! cards as active.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.34,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634601,
+      "cardId": "OP07-023",
+      "name": "Caribou (Reprint)",
+      "cleanName": "Caribou Reprint",
+      "url": "https://www.tcgplayer.com/product/634601/one-piece-card-game-starter-deck-24-green-jewelry-bonney-caribou-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634601_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Caribou Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "If you have 6 or more rested DON!! cards, this Character gains +1000 power.\r\n<br>[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.43,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634602,
+      "cardId": "OP07-025",
+      "name": "Coribou (Reprint)",
+      "cleanName": "Coribou Reprint",
+      "url": "https://www.tcgplayer.com/product/634602/one-piece-card-game-starter-deck-24-green-jewelry-bonney-coribou-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634602_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Caribou Pirates;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[On Play] Play up to 1 [Caribou] with a cost of 4 or less from your hand rested.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.43,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634603,
+      "cardId": "OP07-031",
+      "name": "Bartolomeo (Reprint)",
+      "cleanName": "Bartolomeo Reprint",
+      "url": "https://www.tcgplayer.com/product/634603/one-piece-card-game-starter-deck-24-green-jewelry-bonney-bartolomeo-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634603_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Supernovas;Barto Club",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[Your Turn] [Once Per Turn] If a Character is rested by your effect, draw 1 card and trash 1 card from your hand.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.58,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634605,
+      "cardId": "OP07-033",
+      "name": "Monkey.D.Luffy (Reprint)",
+      "cleanName": "MonkeyDLuffy Reprint",
+      "url": "https://www.tcgplayer.com/product/634605/one-piece-card-game-starter-deck-24-green-jewelry-bonney-monkeydluffy-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634605_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "If you have 3 or more Characters, your Characters with a cost of 3 or less other than [Monkey.D.Luffy] cannot be K.O.'d by your opponent's effects.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.46,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634608,
+      "cardId": "OP07-034",
+      "name": "Roronoa Zoro (Reprint)",
+      "cleanName": "Roronoa Zoro Reprint",
+      "url": "https://www.tcgplayer.com/product/634608/one-piece-card-game-starter-deck-24-green-jewelry-bonney-roronoa-zoro-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634608_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 3 or more Characters, this Character gains +2000 power during this turn.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 10.06,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634610,
+      "cardId": "OP07-036",
+      "name": "Demonic Aura Nine-Sword Style Asura Demon Nine Flash (Reprint)",
+      "cleanName": "Demonic Aura Nine Sword Style Asura Demon Nine Flash Reprint",
+      "url": "https://www.tcgplayer.com/product/634610/one-piece-card-game-starter-deck-24-green-jewelry-bonney-demonic-aura-nine-sword-style-asura-demon-nine-flash-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634610_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, you may rest 1 of your Characters with a cost of 3 or more. If you do, rest up to 1 of your opponent's Characters with a cost of 5 or less.\r\n<br>[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 10,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634612,
+      "cardId": "OP07-037",
+      "name": "More Pizza!! (Reprint)",
+      "cleanName": "More Pizza Reprint",
+      "url": "https://www.tcgplayer.com/product/634612/one-piece-card-game-starter-deck-24-green-jewelry-bonney-more-pizza-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634612_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 [Supernovas] type card other than [More Pizza!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>[Trigger] Draw 1 card.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP07 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.49,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634615,
+      "cardId": "ST24-001",
+      "name": "Capone\"Gang\"Bege",
+      "cleanName": "CaponeGangBege",
+      "url": "https://www.tcgplayer.com/product/634615/one-piece-card-game-starter-deck-24-green-jewelry-bonney-caponegangbege",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634615_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Firetank Pirates;Supernovas",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[On Play] If you have 6 or more rested cards, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.19,
+          "highPrice": 5,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634617,
+      "cardId": "ST24-002",
+      "name": "Kid & Killer",
+      "cleanName": "Kid and Killer",
+      "url": "https://www.tcgplayer.com/product/634617/one-piece-card-game-starter-deck-24-green-jewelry-bonney-kid-and-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634617_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Slash;Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Supernovas\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>[On Your Opponent's Attack] <strong>You may trash this Character:</strong> Set up to 1 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 1.99,
+          "highPrice": 25,
+          "marketPrice": 1.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634619,
+      "cardId": "ST24-003",
+      "name": "Basil Hawkins",
+      "cleanName": "Basil Hawkins",
+      "url": "https://www.tcgplayer.com/product/634619/one-piece-card-game-starter-deck-24-green-jewelry-bonney-basil-hawkins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634619_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Hawkins Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[End of Your Turn] Set up to 1 of your DON!! cards as active.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.3,
+          "highPrice": 5,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634621,
+      "cardId": "ST24-004",
+      "name": "Law & Bepo",
+      "cleanName": "Law and Bepo",
+      "url": "https://www.tcgplayer.com/product/634621/one-piece-card-game-starter-deck-24-green-jewelry-bonney-law-and-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634621_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "11000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Heart Pirates;Minks;Supernovas",
+      "attribute": "Slash;Strike",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters and that Character will not become active in your opponent's next Refresh Phase. Then, if your opponent has 2 or more rested Characters, your Leader gains +2000 power until the end of your opponent's next End Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.5,
+          "midPrice": 4,
+          "highPrice": 10,
+          "marketPrice": 3.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634622,
+      "cardId": "ST24-005",
+      "name": "X.Drake",
+      "cleanName": "XDrake",
+      "url": "https://www.tcgplayer.com/product/634622/one-piece-card-game-starter-deck-24-green-jewelry-bonney-xdrake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634622_200w.jpg",
+      "groupId": 24283,
+      "setCode": "ST24",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Drake Pirates;Navy;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"Supernovas\" type, rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, set up to 1 of your DON!! cards as active at the end of this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.13,
+          "midPrice": 0.35,
+          "highPrice": 25,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

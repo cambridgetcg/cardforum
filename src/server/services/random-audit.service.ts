@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { RANDOM_AUDIT_FREQUENCY } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import type { AuthenticatorTier } from "@/types/domain";
 
 /**
@@ -26,7 +26,8 @@ export async function maybeAssignRandomAudit(assignmentId: string) {
   if (!assignment) return null;
 
   const tier = assignment.authenticator.tier as AuthenticatorTier;
-  const frequency = RANDOM_AUDIT_FREQUENCY[tier];
+  const auditFrequency = await getConfig("authenticator.random_audit_frequency");
+  const frequency = auditFrequency[tier];
 
   // Probabilistic selection: 1 in N chance
   if (Math.random() >= 1 / frequency) return null;

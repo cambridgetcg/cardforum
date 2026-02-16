@@ -1,0 +1,976 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck EX: Gear 5",
+  "groupId": 23991,
+  "setCode": "ST21",
+  "totalProducts": 36,
+  "totalCards": 32,
+  "scrapedAt": "2026-02-15T22:54:46.343Z",
+  "durationMs": 70,
+  "cards": [
+    {
+      "productId": 615564,
+      "cardId": "ST21-001",
+      "name": "Monkey.D.Luffy (001)",
+      "cleanName": "MonkeyDLuffy 001",
+      "url": "https://www.tcgplayer.com/product/615564/one-piece-card-game-starter-deck-ex-gear-5-monkeydluffy-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615564_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] Give up to 2 rested DON!! cards to 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.79,
+          "midPrice": 13.33,
+          "highPrice": 89.99,
+          "marketPrice": 10.96,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615565,
+      "cardId": "ST21-001",
+      "name": "Monkey.D.Luffy (001) (Parallel)",
+      "cleanName": "MonkeyDLuffy 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/615565/one-piece-card-game-starter-deck-ex-gear-5-monkeydluffy-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615565_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] Give up to 2 rested DON!! cards to 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 72,
+          "midPrice": 92.35,
+          "highPrice": 350,
+          "marketPrice": 87.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615566,
+      "cardId": "ST21-002",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/615566/one-piece-card-game-starter-deck-ex-gear-5-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615566_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x2] [Opponent's Turn] This Character gains +2000 power.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 1,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615567,
+      "cardId": "ST21-002",
+      "name": "Usopp (Parallel)",
+      "cleanName": "Usopp Parallel",
+      "url": "https://www.tcgplayer.com/product/615567/one-piece-card-game-starter-deck-ex-gear-5-usopp-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615567_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x2] [Opponent's Turn] This Character gains +2000 power.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4,
+          "midPrice": 10,
+          "highPrice": 50,
+          "marketPrice": 5.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615568,
+      "cardId": "ST21-003",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/615568/one-piece-card-game-starter-deck-ex-gear-5-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615568_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Select up to 1 of your {Straw Hat Crew} type Characters with 6000 power or more. If the selected Character attacks during this turn, your opponent cannot activate [Blocker].",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 2.31,
+          "highPrice": 4,
+          "marketPrice": 2.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615569,
+      "cardId": "ST21-003",
+      "name": "Sanji (Parallel)",
+      "cleanName": "Sanji Parallel",
+      "url": "https://www.tcgplayer.com/product/615569/one-piece-card-game-starter-deck-ex-gear-5-sanji-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615569_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Select up to 1 of your {Straw Hat Crew} type Characters with 6000 power or more. If the selected Character attacks during this turn, your opponent cannot activate [Blocker].",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14.46,
+          "midPrice": 19.98,
+          "highPrice": 30,
+          "marketPrice": 17.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615570,
+      "cardId": "ST21-004",
+      "name": "Jewelry Bonney",
+      "cleanName": "Jewelry Bonney",
+      "url": "https://www.tcgplayer.com/product/615570/one-piece-card-game-starter-deck-ex-gear-5-jewelry-bonney",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615570_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [On K.O.] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 1,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615571,
+      "cardId": "ST21-004",
+      "name": "Jewelry Bonney (Parallel)",
+      "cleanName": "Jewelry Bonney Parallel",
+      "url": "https://www.tcgplayer.com/product/615571/one-piece-card-game-starter-deck-ex-gear-5-jewelry-bonney-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615571_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Bonney Pirates;Egghead",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [On K.O.] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.68,
+          "midPrice": 7.95,
+          "highPrice": 50,
+          "marketPrice": 6.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615572,
+      "cardId": "ST21-005",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/615572/one-piece-card-game-starter-deck-ex-gear-5-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615572_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615573,
+      "cardId": "ST21-005",
+      "name": "Jinbe (Parallel)",
+      "cleanName": "Jinbe Parallel",
+      "url": "https://www.tcgplayer.com/product/615573/one-piece-card-game-starter-deck-ex-gear-5-jinbe-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615573_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.67,
+          "midPrice": 1.99,
+          "highPrice": 50,
+          "marketPrice": 1.52,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615574,
+      "cardId": "ST21-006",
+      "name": "Stussy",
+      "cleanName": "Stussy",
+      "url": "https://www.tcgplayer.com/product/615574/one-piece-card-game-starter-deck-ex-gear-5-stussy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615574_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Egghead",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.27,
+          "highPrice": 1,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615575,
+      "cardId": "ST21-006",
+      "name": "Stussy (Parallel)",
+      "cleanName": "Stussy Parallel",
+      "url": "https://www.tcgplayer.com/product/615575/one-piece-card-game-starter-deck-ex-gear-5-stussy-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615575_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Egghead",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.69,
+          "midPrice": 4.99,
+          "highPrice": 19.99,
+          "marketPrice": 4.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615576,
+      "cardId": "ST21-007",
+      "name": "Sentomaru",
+      "cleanName": "Sentomaru",
+      "url": "https://www.tcgplayer.com/product/615576/one-piece-card-game-starter-deck-ex-gear-5-sentomaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615576_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 0.79,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615577,
+      "cardId": "ST21-007",
+      "name": "Sentomaru (Parallel)",
+      "cleanName": "Sentomaru Parallel",
+      "url": "https://www.tcgplayer.com/product/615577/one-piece-card-game-starter-deck-ex-gear-5-sentomaru-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615577_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.35,
+          "midPrice": 0.99,
+          "highPrice": 8.89,
+          "marketPrice": 0.86,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615578,
+      "cardId": "ST21-008",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/615578/one-piece-card-game-starter-deck-ex-gear-5-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615578_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.18,
+          "midPrice": 0.49,
+          "highPrice": 2,
+          "marketPrice": 0.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615579,
+      "cardId": "ST21-008",
+      "name": "Tony Tony.Chopper (Parallel)",
+      "cleanName": "Tony TonyChopper Parallel",
+      "url": "https://www.tcgplayer.com/product/615579/one-piece-card-game-starter-deck-ex-gear-5-tony-tonychopper-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615579_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.49,
+          "midPrice": 10,
+          "highPrice": 25,
+          "marketPrice": 8.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615580,
+      "cardId": "ST21-009",
+      "name": "Nami",
+      "cleanName": "Nami",
+      "url": "https://www.tcgplayer.com/product/615580/one-piece-card-game-starter-deck-ex-gear-5-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615580_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 2 rested DON!! cards to 1 of your {Straw Hat Crew} type Leader or Character cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.5,
+          "highPrice": 2,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615581,
+      "cardId": "ST21-009",
+      "name": "Nami (Parallel)",
+      "cleanName": "Nami Parallel",
+      "url": "https://www.tcgplayer.com/product/615581/one-piece-card-game-starter-deck-ex-gear-5-nami-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615581_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 2 rested DON!! cards to 1 of your {Straw Hat Crew} type Leader or Character cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14.11,
+          "midPrice": 17.3,
+          "highPrice": 50,
+          "marketPrice": 14.96,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615582,
+      "cardId": "ST21-010",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/615582/one-piece-card-game-starter-deck-ex-gear-5-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615582_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.79,
+          "highPrice": 2.99,
+          "marketPrice": 0.62,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615583,
+      "cardId": "ST21-010",
+      "name": "Nico Robin (Parallel)",
+      "cleanName": "Nico Robin Parallel",
+      "url": "https://www.tcgplayer.com/product/615583/one-piece-card-game-starter-deck-ex-gear-5-nico-robin-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615583_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8,
+          "midPrice": 13,
+          "highPrice": 44.99,
+          "marketPrice": 9.46,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615584,
+      "cardId": "ST21-011",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/615584/one-piece-card-game-starter-deck-ex-gear-5-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615584_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [Opponent's Turn] All of your {Straw Hat Crew} type Characters with 4000 base power or less gain +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 1,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615585,
+      "cardId": "ST21-011",
+      "name": "Franky (Parallel)",
+      "cleanName": "Franky Parallel",
+      "url": "https://www.tcgplayer.com/product/615585/one-piece-card-game-starter-deck-ex-gear-5-franky-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615585_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [Opponent's Turn] All of your {Straw Hat Crew} type Characters with 4000 base power or less gain +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 2.28,
+          "highPrice": 50,
+          "marketPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615586,
+      "cardId": "ST21-012",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/615586/one-piece-card-game-starter-deck-ex-gear-5-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615586_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.5,
+          "highPrice": 2,
+          "marketPrice": 0.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615587,
+      "cardId": "ST21-012",
+      "name": "Brook (Parallel)",
+      "cleanName": "Brook Parallel",
+      "url": "https://www.tcgplayer.com/product/615587/one-piece-card-game-starter-deck-ex-gear-5-brook-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615587_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.71,
+          "midPrice": 4.8,
+          "highPrice": 50,
+          "marketPrice": 3.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615588,
+      "cardId": "ST21-013",
+      "name": "Vegapunk",
+      "cleanName": "Vegapunk",
+      "url": "https://www.tcgplayer.com/product/615588/one-piece-card-game-starter-deck-ex-gear-5-vegapunk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615588_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 1.03,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615589,
+      "cardId": "ST21-013",
+      "name": "Vegapunk (Parallel)",
+      "cleanName": "Vegapunk Parallel",
+      "url": "https://www.tcgplayer.com/product/615589/one-piece-card-game-starter-deck-ex-gear-5-vegapunk-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615589_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Scientist;Egghead",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 7,
+          "marketPrice": 0.71,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615590,
+      "cardId": "ST21-014",
+      "name": "Monkey.D.Luffy (014)",
+      "cleanName": "MonkeyDLuffy 014",
+      "url": "https://www.tcgplayer.com/product/615590/one-piece-card-game-starter-deck-ex-gear-5-monkeydluffy-014",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615590_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\n[When Attacking] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.89,
+          "midPrice": 2,
+          "highPrice": 25,
+          "marketPrice": 1.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615591,
+      "cardId": "ST21-014",
+      "name": "Monkey.D.Luffy (014) (Parallel)",
+      "cleanName": "MonkeyDLuffy 014 Parallel",
+      "url": "https://www.tcgplayer.com/product/615591/one-piece-card-game-starter-deck-ex-gear-5-monkeydluffy-014-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615591_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\n[When Attacking] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15.7,
+          "midPrice": 21.1,
+          "highPrice": 49,
+          "marketPrice": 20.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615592,
+      "cardId": "ST21-015",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/615592/one-piece-card-game-starter-deck-ex-gear-5-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615592_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[DON!! x2] This Character gains [Rush].<br>\r\n[On K.O.] Play up to 1 red Character card with 6000 power or less other than [Roronoa Zoro] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.25,
+          "highPrice": 25,
+          "marketPrice": 1.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615593,
+      "cardId": "ST21-015",
+      "name": "Roronoa Zoro (Parallel)",
+      "cleanName": "Roronoa Zoro Parallel",
+      "url": "https://www.tcgplayer.com/product/615593/one-piece-card-game-starter-deck-ex-gear-5-roronoa-zoro-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615593_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[DON!! x2] This Character gains [Rush].<br>\r\n[On K.O.] Play up to 1 red Character card with 6000 power or less other than [Roronoa Zoro] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 18.01,
+          "midPrice": 21.5,
+          "highPrice": 35,
+          "marketPrice": 18.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615594,
+      "cardId": "ST21-016",
+      "name": "Gum-Gum Dawn Whip",
+      "cleanName": "Gum Gum Dawn Whip",
+      "url": "https://www.tcgplayer.com/product/615594/one-piece-card-game-starter-deck-ex-gear-5-gum-gum-dawn-whip",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615594_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +1000 power during this turn. Then, up to 1 of your opponent's Characters with 4000 power or less cannot activate [Blocker] during this turn.<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 10,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 615595,
+      "cardId": "ST21-017",
+      "name": "Gum-Gum Mole Pistol",
+      "cleanName": "Gum Gum Mole Pistol",
+      "url": "https://www.tcgplayer.com/product/615595/one-piece-card-game-starter-deck-ex-gear-5-gum-gum-mole-pistol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/615595_200w.jpg",
+      "groupId": 23991,
+      "setCode": "ST21",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters 5000 power during this turn. Then, if you have a Character with 6000 power or more, K.O. up to 1 of your opponent's Characters with 2000 power or less.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.84,
+          "midPrice": 1.98,
+          "highPrice": 25,
+          "marketPrice": 1.05,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": [
+    "Product 624351 (DON!! Card) has no Number in extendedData"
+  ]
+}

@@ -1,15 +1,6 @@
 import { db } from "@/lib/db";
 import type { TxClient } from "./wallet.service";
-import {
-  AUTO_COMPLETE_DELIVERY_DAYS,
-  AUTHENTICATOR_SHIP_SLA_HOURS,
-  AUTHENTICATOR_SHIP_WARNING_HOURS,
-  AUTHENTICATOR_SHIP_ESCALATION_HOURS,
-  DEAD_LETTER_RETENTION_DAYS,
-  INTERNATIONAL_BASE_COST_CENTS,
-  INTERNATIONAL_INSURANCE_RATE,
-  INTERNATIONAL_INSURANCE_MIN_CENTS,
-} from "@/lib/constants";
+import { getConfig, getConfigs } from "@/server/services/config.service";
 
 // ─── Address Management ─────────────────────────────────
 
@@ -22,7 +13,7 @@ export async function lockShippingAddresses(tradeId: string, tx?: TxClient) {
   const client = tx ?? db;
   const legs = await client.tradeLeg.findMany({
     where: { tradeId },
-    select: { id: true, toUserId: true },
+    select: { id: true, fromUserId: true, toUserId: true, region: true },
   });
 
   for (const leg of legs) {
@@ -37,9 +28,35 @@ export async function lockShippingAddresses(tradeId: string, tx?: TxClient) {
       );
     }
 
+    // Validate address completeness to prevent misdirects
+    if (!defaultAddress.line1 || defaultAddress.line1.length < 3) {
+      throw new Error(`Shipping address for user ${leg.toUserId} is missing a street address.`);
+    }
+    if (!defaultAddress.city) {
+      throw new Error(`Shipping address for user ${leg.toUserId} is missing a city.`);
+    }
+    if (!defaultAddress.postalCode) {
+      throw new Error(`Shipping address for user ${leg.toUserId} is missing a postal code.`);
+    }
+    if (!defaultAddress.country || defaultAddress.country.length !== 2) {
+      throw new Error(`Shipping address for user ${leg.toUserId} is missing a valid country code.`);
+    }
+
+    // Detect international legs by comparing sender and recipient countries
+    const senderAddress = await client.shippingAddress.findFirst({
+      where: { userId: leg.fromUserId, isDefault: true },
+      select: { country: true },
+    });
+    const isInternational =
+      senderAddress?.country != null &&
+      senderAddress.country !== defaultAddress.country;
+
     await client.tradeLeg.update({
       where: { id: leg.id },
-      data: { shippingAddressId: defaultAddress.id },
+      data: {
+        shippingAddressId: defaultAddress.id,
+        isInternational,
+      },
     });
   }
 }
@@ -260,8 +277,9 @@ export async function areAllLegsDelivered(tradeId: string): Promise<boolean> {
  * Called by cron job. Returns IDs of auto-completed legs.
  */
 export async function autoCompleteDeliveries(): Promise<string[]> {
+  const autoCompleteDays = await getConfig("shipping.auto_complete_days");
   const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - AUTO_COMPLETE_DELIVERY_DAYS);
+  cutoff.setDate(cutoff.getDate() - autoCompleteDays);
 
   const staleLegs = await db.tradeLeg.findMany({
     where: {
@@ -320,6 +338,16 @@ interface SLAViolation {
  * - ESCALATION (72h): Support intervention needed
  */
 export async function checkShippingSLA(): Promise<SLAViolation[]> {
+  const {
+    "authenticator.ship_sla_hours": slaHours,
+    "authenticator.ship_warning_hours": warningHours,
+    "authenticator.ship_escalation_hours": escalationHours,
+  } = await getConfigs([
+    "authenticator.ship_sla_hours",
+    "authenticator.ship_warning_hours",
+    "authenticator.ship_escalation_hours",
+  ]);
+
   // Find legs in VERIFIED status (authenticated) where trade is DELIVERING
   // These are legs where authenticator should have shipped but hasn't
   const deliveringTrades = await db.trade.findMany({
@@ -346,7 +374,7 @@ export async function checkShippingSLA(): Promise<SLAViolation[]> {
     for (const leg of trade.legs) {
       const hoursElapsed = (now - leg.updatedAt.getTime()) / (1000 * 60 * 60);
 
-      if (hoursElapsed >= AUTHENTICATOR_SHIP_ESCALATION_HOURS) {
+      if (hoursElapsed >= escalationHours) {
         violations.push({
           tradeLegId: leg.id,
           tradeId: trade.id,
@@ -354,7 +382,7 @@ export async function checkShippingSLA(): Promise<SLAViolation[]> {
           hoursOverdue: hoursElapsed,
           severity: "ESCALATION",
         });
-      } else if (hoursElapsed >= AUTHENTICATOR_SHIP_SLA_HOURS) {
+      } else if (hoursElapsed >= slaHours) {
         violations.push({
           tradeLegId: leg.id,
           tradeId: trade.id,
@@ -362,7 +390,7 @@ export async function checkShippingSLA(): Promise<SLAViolation[]> {
           hoursOverdue: hoursElapsed,
           severity: "OVERDUE",
         });
-      } else if (hoursElapsed >= AUTHENTICATOR_SHIP_WARNING_HOURS) {
+      } else if (hoursElapsed >= warningHours) {
         violations.push({
           tradeLegId: leg.id,
           tradeId: trade.id,
@@ -427,6 +455,7 @@ export async function checkShippingSLA(): Promise<SLAViolation[]> {
  * Creates return tracking entries and starts the dead letter timer.
  */
 export async function initiateCardReturns(tradeId: string, tx?: TxClient) {
+  const deadLetterDays = await getConfig("shipping.dead_letter_retention_days");
   const client = tx ?? db;
   const legs = await client.tradeLeg.findMany({
     where: {
@@ -465,7 +494,7 @@ export async function initiateCardReturns(tradeId: string, tx?: TxClient) {
             userId: authenticator.userId,
             type: "CARD_RETURN",
             title: "Card return required",
-            message: `Trade cancelled. Please arrange return of the card to the sender or hold for pickup. Card must be returned within ${DEAD_LETTER_RETENTION_DAYS} days.`,
+            message: `Trade cancelled. Please arrange return of the card to the sender or hold for pickup. Card must be returned within ${deadLetterDays} days.`,
             link: `/trades`,
           },
         });
@@ -478,7 +507,7 @@ export async function initiateCardReturns(tradeId: string, tx?: TxClient) {
         userId: leg.fromUserId,
         type: "CARD_RETURN",
         title: "Retrieve your card",
-        message: `Trade cancelled. Contact the authenticator to arrange pickup or return shipping. You have ${DEAD_LETTER_RETENTION_DAYS} days to retrieve your card.`,
+        message: `Trade cancelled. Contact the authenticator to arrange pickup or return shipping. You have ${deadLetterDays} days to retrieve your card.`,
         link: `/trades`,
       },
     });
@@ -584,13 +613,21 @@ export async function recordPreShipPhotos(
  * Estimate international shipping cost for a trade leg.
  * Used to quote users before they accept a trade with international legs.
  */
-export function estimateInternationalCost(
+export async function estimateInternationalCost(
   cardValueCents: number,
-): { baseCost: number; insuranceCost: number; totalCost: number } {
-  const baseCost = INTERNATIONAL_BASE_COST_CENTS;
+): Promise<{ baseCost: number; insuranceCost: number; totalCost: number }> {
+  const {
+    "shipping.international_base_cost_cents": baseCost,
+    "shipping.international_insurance_rate": insuranceRate,
+    "shipping.international_insurance_min_cents": insuranceMin,
+  } = await getConfigs([
+    "shipping.international_base_cost_cents",
+    "shipping.international_insurance_rate",
+    "shipping.international_insurance_min_cents",
+  ]);
   const insuranceCost = Math.max(
-    Math.ceil(cardValueCents * INTERNATIONAL_INSURANCE_RATE),
-    INTERNATIONAL_INSURANCE_MIN_CENTS,
+    Math.ceil(cardValueCents * insuranceRate),
+    insuranceMin,
   );
   return {
     baseCost,

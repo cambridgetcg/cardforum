@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
+import { requireRole } from "@/server/middleware/rbac";
 import { getOpenDisputes, createShippingDispute } from "@/server/services/dispute.service";
 import { z } from "zod";
 
@@ -18,12 +19,10 @@ const createDisputeSchema = z.object({
   evidence: z.array(z.string()).default([]),
 });
 
-// GET /api/disputes — List open disputes
+// GET /api/disputes — List open disputes (admin only)
 export async function GET() {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
+  const ctx = await requireRole("ADMIN");
+  if (ctx instanceof NextResponse) return ctx;
 
   try {
     const disputes = await getOpenDisputes();

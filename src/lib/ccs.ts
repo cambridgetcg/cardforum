@@ -11,12 +11,7 @@
  */
 
 import type { CCS, CCSInput, Condition } from "@/types/domain";
-import {
-  CCS_DIMENSION_WEIGHTS,
-  CCS_MIN_CAP_THRESHOLD,
-  CCS_TIER_BOUNDARIES,
-  CCS_SUB_TIER_BOUNDARIES,
-} from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 
 /** Round a number to the nearest 0.5 increment. */
 function roundToHalf(value: number): number {
@@ -32,8 +27,12 @@ function roundToHalf(value: number): number {
  * 3. Round to 0.5 increments.
  * 4. Derive condition tier and sub-tier.
  */
-export function calculateCCS(input: CCSInput): CCS {
-  const w = CCS_DIMENSION_WEIGHTS;
+export async function calculateCCS(input: CCSInput): Promise<CCS> {
+  const [w, minCapThreshold, tierBoundaries] = await Promise.all([
+    getConfig("ccs.dimension_weights"),
+    getConfig("ccs.min_cap_threshold"),
+    getConfig("ccs.tier_boundaries"),
+  ]);
 
   let composite =
     input.surface * w.surface +
@@ -48,15 +47,15 @@ export function calculateCCS(input: CCSInput): CCS {
     input.edges,
     input.centering,
   );
-  if (minDimension < composite - CCS_MIN_CAP_THRESHOLD) {
-    composite = minDimension + CCS_MIN_CAP_THRESHOLD;
+  if (minDimension < composite - minCapThreshold) {
+    composite = minDimension + minCapThreshold;
   }
 
   // Clamp to [1.0, 10.0] and round to 0.5
   composite = Math.max(1.0, Math.min(10.0, roundToHalf(composite)));
 
-  const tier = ccsToTier(composite);
-  const subTier = ccsToSubTier(composite);
+  const tier = ccsToTierFromBoundaries(composite, tierBoundaries);
+  const subTier = await ccsToSubTier(composite);
 
   return {
     surface: input.surface,
@@ -69,18 +68,28 @@ export function calculateCCS(input: CCSInput): CCS {
   };
 }
 
-/** Map CCS composite to a condition tier. */
-export function ccsToTier(composite: number): Condition {
-  if (composite >= CCS_TIER_BOUNDARIES.NM.min) return "NM";
-  if (composite >= CCS_TIER_BOUNDARIES.LP.min) return "LP";
-  if (composite >= CCS_TIER_BOUNDARIES.MP.min) return "MP";
-  if (composite >= CCS_TIER_BOUNDARIES.HP.min) return "HP";
+/** Map CCS composite to a condition tier using provided boundaries. */
+function ccsToTierFromBoundaries(
+  composite: number,
+  boundaries: Record<string, { min: number }>,
+): Condition {
+  if (composite >= boundaries.NM.min) return "NM";
+  if (composite >= boundaries.LP.min) return "LP";
+  if (composite >= boundaries.MP.min) return "MP";
+  if (composite >= boundaries.HP.min) return "HP";
   return "DMG";
 }
 
+/** Map CCS composite to a condition tier (reads config). */
+export async function ccsToTier(composite: number): Promise<Condition> {
+  const boundaries = await getConfig("ccs.tier_boundaries");
+  return ccsToTierFromBoundaries(composite, boundaries);
+}
+
 /** Map CCS composite to a sub-tier string (NM+, NM, NM-, LP+, …). */
-export function ccsToSubTier(composite: number): string {
-  for (const [subTier, bounds] of Object.entries(CCS_SUB_TIER_BOUNDARIES)) {
+export async function ccsToSubTier(composite: number): Promise<string> {
+  const boundaries = await getConfig("ccs.sub_tier_boundaries");
+  for (const [subTier, bounds] of Object.entries(boundaries)) {
     if (composite >= bounds.min && composite <= bounds.max) {
       return subTier;
     }

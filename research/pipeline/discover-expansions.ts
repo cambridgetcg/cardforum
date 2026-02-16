@@ -12,6 +12,7 @@
 
 import "dotenv/config";
 import { BrightDataClient, loadBrightDataConfig } from "./brightdata";
+import { inferSetCode as inferSetCodeFromMappings, getMapping } from "./set-code-mappings";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -20,71 +21,42 @@ export interface ExpansionEntry {
   name: string;         // Cardmarket expansion name: "Romance Dawn"
   cardmarketId: number; // Cardmarket expansion ID for URL params
   productType: string;  // "booster" | "starter" | "extra" | "premium" | "promo" | "other"
+  language: string;     // "EN" | "JP" | "NEL" (Non-English) | "AL" (Asia Legal) | "PE" (Pre-Errata)
+}
+
+/**
+ * Infer language from Cardmarket expansion name suffix.
+ * "(Japanese)" → "JP", "(Non-English)" → "NEL", "(Asia Region Legal)" → "AL", "(Pre-Errata)" → "PE"
+ */
+function inferLanguage(name: string): string {
+  if (name.includes("(Japanese)")) return "JP";
+  if (name.includes("(Non-English)") || name.includes("(Non English)")) return "NEL";
+  if (name.includes("(Asia Region Legal)")) return "AL";
+  if (name.includes("(Pre-Errata)")) return "PE";
+  return "EN";
 }
 
 /**
  * Infer set code from Cardmarket expansion name.
- * Examples:
- *   "Romance Dawn" → "OP01"
- *   "Starter Deck: Straw Hat Crew" → "ST01"
- *   "Memorial Collection" → "EB01"
+ * Delegates to set-code-mappings.ts (56 authoritative mappings).
+ * Normalizes "OP-01" → "OP01" (strips dashes for internal use).
  */
 function inferSetCode(name: string): string | null {
-  // Booster sets: "Romance Dawn" etc. — matched by known name-to-code map
-  const boosterMap: Record<string, string> = {
-    "Romance Dawn": "OP01",
-    "Paramount War": "OP02",
-    "Pillars of Strength": "OP03",
-    "Kingdoms of Intrigue": "OP04",
-    "Awakening of the New Era": "OP05",
-    "Wings of the Captain": "OP06",
-    "500 Years in the Future": "OP07",
-    "500 Years into the Future": "OP07",
-    "Two Legends": "OP08",
-    "Emperors in the New World": "OP09",
-    "Royal Blood": "OP10",
-  };
-
-  if (boosterMap[name]) return boosterMap[name];
-
-  // Direct code extraction from names containing codes
-  // e.g., "OP-11 ..." or "[OP11]" patterns
-  const directCode = name.match(/\b(OP|ST|EB|PRB|DF|P)-?(\d{1,2})\b/i);
-  if (directCode) {
-    const prefix = directCode[1].toUpperCase();
-    const num = directCode[2].padStart(2, "0");
-    return `${prefix}${num}`;
+  const officialCode = inferSetCodeFromMappings(name);
+  if (officialCode) {
+    return officialCode.replace(/-/g, "");
   }
-
-  // Starter Deck pattern: "Starter Deck: ..." → look for ST number
-  if (/starter\s*deck/i.test(name)) {
-    const stMatch = name.match(/ST-?(\d{1,2})/i);
-    if (stMatch) return `ST${stMatch[1].padStart(2, "0")}`;
-  }
-
-  // Extra Booster pattern
-  if (/memorial\s*collection/i.test(name)) return "EB01";
-  if (/extra\s*booster/i.test(name)) {
-    const ebMatch = name.match(/EB-?(\d{1,2})/i);
-    if (ebMatch) return `EB${ebMatch[1].padStart(2, "0")}`;
-  }
-
-  // Premium Booster
-  if (/premium\s*booster|the\s*best/i.test(name)) {
-    const prbMatch = name.match(/PRB-?(\d{1,2})/i);
-    if (prbMatch) return `PRB${prbMatch[1].padStart(2, "0")}`;
-  }
-
-  // Promo cards
-  if (/promo/i.test(name)) return "PROMO";
-
   return null;
 }
 
 /**
  * Classify product type from expansion name.
+ * Prefers set-code-mappings lookup, falls back to code-based inference.
  */
 function inferProductType(name: string, code: string): string {
+  const mapping = getMapping(name);
+  if (mapping) return mapping.productType;
+
   if (code.startsWith("OP")) return "booster";
   if (code.startsWith("ST")) return "starter";
   if (code.startsWith("EB")) return "extra";
@@ -115,12 +87,14 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
     if (id > 0 && !seen.has(id) && name.length > 0) {
       seen.add(id);
       const code = inferSetCode(name);
+      const language = inferLanguage(name);
       if (code) {
         expansions.push({
           code,
           name,
           cardmarketId: id,
           productType: inferProductType(name, code),
+          language,
         });
       } else {
         // Still record it with name-based code
@@ -130,6 +104,7 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
           name,
           cardmarketId: id,
           productType: "other",
+          language,
         });
       }
     }
@@ -149,6 +124,7 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
         name,
         cardmarketId: id,
         productType: inferProductType(name, code),
+        language: inferLanguage(name),
       });
     }
   }
@@ -167,6 +143,7 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
         name,
         cardmarketId: id,
         productType: inferProductType(name, code),
+        language: inferLanguage(name),
       });
     }
   }
@@ -178,16 +155,16 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
 // If scraping fails, use this manually-maintained list
 const KNOWN_EXPANSIONS: ExpansionEntry[] = [
   // Booster Packs — verified working IDs as of 2026-02-15
-  { code: "OP01",  name: "Romance Dawn",               cardmarketId: 5229, productType: "booster" },
-  { code: "OP02",  name: "Paramount War",              cardmarketId: 5263, productType: "booster" },
-  { code: "OP03",  name: "Pillars of Strength",        cardmarketId: 5364, productType: "booster" },
-  { code: "OP04",  name: "Kingdoms of Intrigue",       cardmarketId: 5365, productType: "booster" },
-  { code: "OP05",  name: "Awakening of the New Era",   cardmarketId: 5426, productType: "booster" },
-  { code: "OP06",  name: "Wings of the Captain",       cardmarketId: 5524, productType: "booster" },
-  { code: "OP07",  name: "500 Years into the Future",  cardmarketId: 5586, productType: "booster" },
-  { code: "OP08",  name: "Two Legends",                cardmarketId: 5610, productType: "booster" },
-  { code: "OP09",  name: "Emperors in the New World",  cardmarketId: 5755, productType: "booster" },
-  { code: "OP10",  name: "Royal Blood",                cardmarketId: 5974, productType: "booster" },
+  { code: "OP01",  name: "Romance Dawn",               cardmarketId: 5229, productType: "booster", language: "EN" },
+  { code: "OP02",  name: "Paramount War",              cardmarketId: 5263, productType: "booster", language: "EN" },
+  { code: "OP03",  name: "Pillars of Strength",        cardmarketId: 5364, productType: "booster", language: "EN" },
+  { code: "OP04",  name: "Kingdoms of Intrigue",       cardmarketId: 5365, productType: "booster", language: "EN" },
+  { code: "OP05",  name: "Awakening of the New Era",   cardmarketId: 5426, productType: "booster", language: "EN" },
+  { code: "OP06",  name: "Wings of the Captain",       cardmarketId: 5524, productType: "booster", language: "EN" },
+  { code: "OP07",  name: "500 Years into the Future",  cardmarketId: 5586, productType: "booster", language: "EN" },
+  { code: "OP08",  name: "Two Legends",                cardmarketId: 5610, productType: "booster", language: "EN" },
+  { code: "OP09",  name: "Emperors in the New World",  cardmarketId: 5755, productType: "booster", language: "EN" },
+  { code: "OP10",  name: "Royal Blood",                cardmarketId: 5974, productType: "booster", language: "EN" },
 ];
 
 async function main() {

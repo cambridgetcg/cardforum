@@ -43,7 +43,7 @@ export interface BridgeLeg {
  * Build bridge proposals from detected cycles.
  * Prioritizes fully-local cycles, then scores and ranks.
  */
-export function buildBridges(cycles: Cycle[]): BridgeProposal[] {
+export async function buildBridges(cycles: Cycle[]): Promise<BridgeProposal[]> {
   const proposals: BridgeProposal[] = [];
 
   for (const cycle of cycles) {
@@ -69,7 +69,7 @@ export function buildBridges(cycles: Cycle[]): BridgeProposal[] {
       regionalBalance,
       tradeMode: cycle.isFullyLocal ? "DIRECT" : "AUTHENTICATED",
     };
-    proposal.score = scoreProposal(proposal);
+    proposal.score = await scoreProposal(proposal);
     proposals.push(proposal);
   }
 

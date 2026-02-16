@@ -1,8 +1,13 @@
 "use client";
 
 import { SessionProvider } from "next-auth/react";
+import { QueryProvider } from "@/lib/query-client";
 import type { ReactNode } from "react";
 
 export function Providers({ children }: { children: ReactNode }) {
-  return <SessionProvider>{children}</SessionProvider>;
+  return (
+    <SessionProvider>
+      <QueryProvider>{children}</QueryProvider>
+    </SessionProvider>
+  );
 }

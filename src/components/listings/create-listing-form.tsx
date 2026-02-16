@@ -15,7 +15,19 @@ import {
   toMinorUnits,
   type SupportedCurrency,
 } from "@/lib/currency";
-import { X } from "lucide-react";
+import { X, TrendingUp, ChevronDown, ChevronUp } from "lucide-react";
+import { fromMinorUnits } from "@/lib/currency";
+
+interface PriceSuggestion {
+  suggestedAsk: number | null;
+  suggestedBid: number | null;
+  market: {
+    bestAsk: number | null;
+    bestBid: number | null;
+    askCount: number;
+    bidCount: number;
+  };
+}
 
 interface SelectedCard {
   id: string;
@@ -53,6 +65,16 @@ export function CreateListingForm({
   const [aiResult, setAiResult] = useState<AIGradingResult | null>(null);
   const [aiSuggestedCondition, setAiSuggestedCondition] = useState<Condition | null>(null);
 
+  // Auto-accept
+  const [showAutoAccept, setShowAutoAccept] = useState(false);
+  const [autoAccept, setAutoAccept] = useState(false);
+  const [autoAcceptMaxGap, setAutoAcceptMaxGap] = useState("");
+  const [autoAcceptMaxCycleLength, setAutoAcceptMaxCycleLength] = useState("");
+  const [autoAcceptRegions, setAutoAcceptRegions] = useState("");
+
+  // Price suggestion
+  const [priceSuggestion, setPriceSuggestion] = useState<PriceSuggestion | null>(null);
+
   // Fetch user's preferred currency from session
   useEffect(() => {
     fetch("/api/auth/session")
@@ -68,6 +90,16 @@ export function CreateListingForm({
   const currencyInfo = CURRENCY_INFO[currency];
   const currencyExp = getCurrencyExponent(currency);
   const isZeroDecimal = currencyExp === 0;
+
+  // Fetch price suggestion when card + condition are selected
+  useEffect(() => {
+    if (!selectedCard || step !== "details") return;
+    setPriceSuggestion(null);
+    fetch(`/api/marketplace/price-suggestion?cardId=${selectedCard.id}&condition=${condition}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (data) setPriceSuggestion(data); })
+      .catch(() => {});
+  }, [selectedCard, condition, step]);
 
   function handleCardSelect(card: SelectedCard) {
     setSelectedCard(card);
@@ -139,6 +171,14 @@ export function CreateListingForm({
           }
         : { minCondition: condition, maxQuantity: quantity, bidPrice: priceInMinorUnits }),
       ...(notes && { notes }),
+      ...(autoAccept && {
+        autoAccept: true,
+        ...(autoAcceptMaxGap && { autoAcceptMaxGap: parseInt(autoAcceptMaxGap, 10) }),
+        ...(autoAcceptMaxCycleLength && { autoAcceptMaxCycleLength: parseInt(autoAcceptMaxCycleLength, 10) }),
+        ...(autoAcceptRegions.trim() && {
+          autoAcceptRegions: autoAcceptRegions.split(",").map((r) => r.trim()).filter(Boolean),
+        }),
+      }),
     };
 
     try {
@@ -271,6 +311,41 @@ export function CreateListingForm({
                     ? "Minimum value you want for this card"
                     : "Maximum you'll pay for this card"}
                 </p>
+
+                {/* Price suggestion */}
+                {priceSuggestion && (priceSuggestion.suggestedAsk ?? priceSuggestion.suggestedBid) && (
+                  <div className="mt-1.5 flex items-center gap-2 rounded-md bg-emerald-50 px-3 py-1.5 text-xs text-emerald-800">
+                    <TrendingUp className="h-3.5 w-3.5" />
+                    <span>
+                      Suggested:{" "}
+                      <button
+                        type="button"
+                        className="font-semibold underline decoration-dotted hover:text-emerald-900"
+                        onClick={() => {
+                          const cents = type === "have"
+                            ? priceSuggestion.suggestedAsk
+                            : priceSuggestion.suggestedBid;
+                          if (cents != null) {
+                            setPrice(fromMinorUnits(cents, currency).toString());
+                          }
+                        }}
+                      >
+                        {currencyInfo?.symbol ?? currency}
+                        {fromMinorUnits(
+                          (type === "have"
+                            ? priceSuggestion.suggestedAsk
+                            : priceSuggestion.suggestedBid) ?? 0,
+                          currency
+                        ).toFixed(isZeroDecimal ? 0 : 2)}
+                      </button>
+                    </span>
+                    {priceSuggestion.market.askCount > 0 && (
+                      <span className="text-emerald-600">
+                        ({priceSuggestion.market.askCount} ask{priceSuggestion.market.askCount !== 1 ? "s" : ""}, {priceSuggestion.market.bidCount} bid{priceSuggestion.market.bidCount !== 1 ? "s" : ""})
+                      </span>
+                    )}
+                  </div>
+                )}
                 <div className="mt-1 flex items-center gap-2">
                   <div className="relative">
                     <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-500">
@@ -313,6 +388,83 @@ export function CreateListingForm({
                   className="mt-1"
                   maxLength={500}
                 />
+              </div>
+
+              {/* Auto-Accept */}
+              <div className="rounded-lg border border-gray-200">
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  onClick={() => setShowAutoAccept(!showAutoAccept)}
+                >
+                  <span>Auto-Accept Settings</span>
+                  {showAutoAccept ? (
+                    <ChevronUp className="h-4 w-4 text-gray-400" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4 text-gray-400" />
+                  )}
+                </button>
+                {showAutoAccept && (
+                  <div className="space-y-4 border-t border-gray-100 px-4 py-4">
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={autoAccept}
+                        onChange={(e) => setAutoAccept(e.target.checked)}
+                        className="h-4 w-4 rounded border-gray-300 text-indigo-600"
+                      />
+                      <span className="text-sm text-gray-700">
+                        Auto-accept matching trades
+                      </span>
+                    </label>
+                    <p className="text-xs text-gray-500">
+                      When enabled, the matching engine will automatically accept trades
+                      that meet your constraints without waiting for manual approval.
+                    </p>
+                    {autoAccept && (
+                      <div className="space-y-3 pl-6">
+                        <div>
+                          <label className="block text-xs font-medium text-gray-600">
+                            Max price gap (cents)
+                          </label>
+                          <Input
+                            type="number"
+                            min={0}
+                            value={autoAcceptMaxGap}
+                            onChange={(e) => setAutoAcceptMaxGap(e.target.value)}
+                            placeholder="No limit"
+                            className="mt-1 w-32"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-gray-600">
+                            Max cycle length
+                          </label>
+                          <Input
+                            type="number"
+                            min={2}
+                            max={6}
+                            value={autoAcceptMaxCycleLength}
+                            onChange={(e) => setAutoAcceptMaxCycleLength(e.target.value)}
+                            placeholder="Any (2-6)"
+                            className="mt-1 w-32"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-gray-600">
+                            Allowed regions (comma-separated)
+                          </label>
+                          <Input
+                            value={autoAcceptRegions}
+                            onChange={(e) => setAutoAcceptRegions(e.target.value)}
+                            placeholder="Any region"
+                            className="mt-1"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
 
               <div className="flex justify-end gap-3">

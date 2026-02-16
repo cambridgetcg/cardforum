@@ -8,6 +8,8 @@ export const PHOTO_APPROVAL_THRESHOLD_CENTS = 5000; // $50.00
 export const MAX_PHOTO_COUNT = 4;
 export const MAX_PHOTO_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB
 export const MAX_PHOTO_ATTEMPTS = 2;
+export const PHOTO_TRUST_MIN_AGREEMENT_RATE = 0.9;   // 90%+ AI agreement = trusted
+export const PHOTO_TRUST_MIN_COMPARISONS = 5;         // need ≥5 data points
 
 // ─── Authenticator Tier Promotion Thresholds ──────────
 export const TIER_PROMOTION_THRESHOLDS = {

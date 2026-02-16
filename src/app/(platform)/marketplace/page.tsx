@@ -6,7 +6,7 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TCG_LABELS, formatPrice, type TCG } from "@/types/domain";
+import { TCG_LABELS, TCG_FILTERS, TCG_BADGE_COLORS, formatPrice, type TCG } from "@/types/domain";
 
 interface MarketCard {
   id: string;
@@ -42,21 +42,6 @@ interface CardSetOption {
   tcg: TCG;
   _count: { cards: number };
 }
-
-const TCG_FILTERS: { value: TCG | ""; label: string }[] = [
-  { value: "", label: "All TCGs" },
-  { value: "POKEMON", label: "Pokemon" },
-  { value: "ONEPIECE", label: "One Piece" },
-  { value: "YUGIOH", label: "Yu-Gi-Oh!" },
-  { value: "MTG", label: "Magic" },
-];
-
-const TCG_BADGE_COLORS: Record<TCG, "default" | "success" | "warning" | "error" | "info"> = {
-  POKEMON: "warning",
-  ONEPIECE: "error",
-  YUGIOH: "info",
-  MTG: "success",
-};
 
 export default function MarketplacePage() {
   const [query, setQuery] = useState("");

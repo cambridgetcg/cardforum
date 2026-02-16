@@ -12,6 +12,9 @@ export function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+  const verified = searchParams.get("verified");
+  const resetDone = searchParams.get("reset");
+  const linkError = searchParams.get("error");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -74,6 +77,26 @@ export function LoginForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {verified && (
+            <p className="rounded-lg bg-green-50 p-3 text-sm text-green-600">
+              Email verified! You can now sign in.
+            </p>
+          )}
+          {resetDone && (
+            <p className="rounded-lg bg-green-50 p-3 text-sm text-green-600">
+              Password reset successfully. Sign in with your new password.
+            </p>
+          )}
+          {linkError === "expired-link" && (
+            <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-700">
+              Verification link expired. Sign in and request a new one from Settings.
+            </p>
+          )}
+          {linkError === "invalid-link" && (
+            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
+              Invalid verification link.
+            </p>
+          )}
           {error && (
             <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
               {error}
@@ -86,13 +109,20 @@ export function LoginForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div>
+            <Input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <div className="mt-1 text-right">
+              <Link href="/forgot-password" className="text-xs text-indigo-600 hover:text-indigo-500">
+                Forgot password?
+              </Link>
+            </div>
+          </div>
           <Button type="submit" disabled={loading} className="w-full">
             {loading ? "Signing in..." : "Sign In"}
           </Button>

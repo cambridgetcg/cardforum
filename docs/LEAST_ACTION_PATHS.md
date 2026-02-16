@@ -764,21 +764,21 @@ Total: 3 user + 1 authenticator = 4 actions
 | ~~**P0**~~ | ~~Disputes~~ | ~~POST /api/disputes route~~ | ~~Unblocks user protection~~ | ✅ Done |
 | ~~**P0**~~ | ~~Auth Onboarding~~ | ~~Activation route~~ | ~~Unblocks authenticator flow~~ | ✅ Done |
 | ~~**P0**~~ | ~~Deposit~~ | ~~ACH payment method (Stripe `us_bank_account`)~~ | ~~Turns margin-negative → positive~~ | ✅ Done |
-| **P1** | Trade | Auto-transitions (ACCEPTED→ESCROWED, etc.) | -4 user actions per trade | 3 days |
-| **P1** | Trade | Wrap transitionTrade in $transaction | Prevents inconsistent state | 2 days |
-| **P1** | KYC | Build KYC UI page | Unblocks KYC flow | 2 days |
-| **P1** | Photo | Trust-based exemption | -1 action per trusted trade | 1 day |
-| **P1** | Shipping | Address validation at lock | Prevents misdirects | 1 day |
-| **P2** | Listings | Background AI, price suggestion | -2 actions per listing | 2 days |
-| **P2** | Deposit | Stripe Elements inline | -2 actions per deposit | 1 day |
-| **P2** | Withdrawal | Merged onboarding flow | -2 actions first time | 1 day |
-| **P2** | Digitisation | Merge verify+mint steps | -1 authenticator action | 1 day |
-| **P2** | Redemption | Auto-detect country, carrier tracking | -2 actions per redemption | 2 days |
-| **P2** | Shipping | Carrier tracking integration | -2 user actions per trade | 3 days |
+| ~~**P1**~~ | ~~Trade~~ | ~~Auto-transitions (ACCEPTED→ESCROWED, etc.)~~ | ~~-4 user actions per trade~~ | ✅ Done |
+| ~~**P1**~~ | ~~Trade~~ | ~~Wrap transitionTrade in $transaction~~ | ~~Prevents inconsistent state~~ | ✅ Already done |
+| ~~**P1**~~ | ~~KYC~~ | ~~Build KYC UI page~~ | ~~Unblocks KYC flow~~ | ✅ Done |
+| ~~**P1**~~ | ~~Photo~~ | ~~Trust-based exemption~~ | ~~-1 action per trusted trade~~ | ✅ Done |
+| ~~**P1**~~ | ~~Shipping~~ | ~~Address validation at lock~~ | ~~Prevents misdirects~~ | ✅ Done |
+| ~~**P2**~~ | ~~Listings~~ | ~~Background AI, price suggestion~~ | ~~-2 actions per listing~~ | ✅ Done |
+| ~~**P2**~~ | ~~Deposit~~ | ~~Stripe Elements inline~~ | ~~-2 actions per deposit~~ | ✅ Done |
+| ~~**P2**~~ | ~~Withdrawal~~ | ~~Merged onboarding flow~~ | ~~-2 actions first time~~ | ✅ Done |
+| ~~**P2**~~ | ~~Digitisation~~ | ~~Merge verify+mint steps~~ | ~~-1 authenticator action~~ | ✅ Done |
+| ~~**P2**~~ | ~~Redemption~~ | ~~Auto-detect country, carrier tracking~~ | ~~-2 actions per redemption~~ | ✅ Done |
+| ~~**P2**~~ | ~~Shipping~~ | ~~Carrier tracking integration~~ | ~~-2 user actions per trade~~ | ✅ Done |
 
-**Total P0**: 5.5 days — unblocks the platform
-**Total P1**: 9 days — removes 6+ user actions per trade
-**Total P2**: 10 days — polishes every module
+**Total P0**: 5.5 days — ✅ All done
+**Total P1**: 9 days — ✅ All done
+**Total P2**: 10 days — ✅ All done
 
 ---
 

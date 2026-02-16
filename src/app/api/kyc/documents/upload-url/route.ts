@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { z } from "zod";
 import { randomUUID } from "crypto";
+import { getPresignedUploadUrl } from "@/server/services/s3.service";
 
 const uploadUrlSchema = z.object({
   fileName: z.string().min(1).max(255),
@@ -28,12 +29,18 @@ export async function POST(req: NextRequest) {
   const docId = randomUUID();
   const storageKey = `kyc/${session.user.id}/${docId}/${parsed.data.fileName}`;
 
-  // TODO: Generate presigned S3 PUT URL using AWS SDK
-  // For now, return the storage key so the client knows where the file will go.
-  // In production, this would call S3.getSignedUrl('putObject', { ... })
-  return NextResponse.json({
-    storageKey,
-    uploadUrl: `https://s3.placeholder.local/${storageKey}`,
-    expiresIn: 300,
-  });
+  try {
+    const { uploadUrl, expiresIn } = await getPresignedUploadUrl(
+      storageKey,
+      parsed.data.mimeType,
+    );
+
+    return NextResponse.json({ storageKey, uploadUrl, expiresIn });
+  } catch (error) {
+    console.error("[kyc/upload-url] S3 presign failed:", error);
+    return NextResponse.json(
+      { error: "Failed to generate upload URL" },
+      { status: 500 },
+    );
+  }
 }

@@ -1,0 +1,59 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP02",
+  "language": "EN",
+  "productType": "op_booster",
+  "sources": [],
+  "results": [
+    {
+      "rarity": "C",
+      "theoreticalRate": 129.60000000000002,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "UC",
+      "theoreticalRate": 81.6,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "R",
+      "theoreticalRate": 71.52,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "SR",
+      "theoreticalRate": 3.96,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "SEC",
+      "theoreticalRate": 0.9119999999999999,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    },
+    {
+      "rarity": "L",
+      "theoreticalRate": 0.40800000000000003,
+      "observedRate": null,
+      "deviation": null,
+      "pValue": null,
+      "significant": false
+    }
+  ],
+  "overallAssessment": "insufficient_data",
+  "generatedAt": "2026-02-15T23:14:41.530Z"
+}

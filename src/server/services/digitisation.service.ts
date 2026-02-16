@@ -116,11 +116,12 @@ export async function startVerification(
 export async function completeVerification(
   requestId: string,
   result: VerificationResult,
-): Promise<DigitisationRequest> {
+  autoMint: boolean = true,
+): Promise<{ request: DigitisationRequest; token?: DigitalToken }> {
   const request = await getRequestOrThrow(requestId);
   assertTransition(request.status, "VERIFIED");
 
-  return db.digitisationRequest.update({
+  const verified = await db.digitisationRequest.update({
     where: { id: requestId },
     data: {
       status: "VERIFIED",
@@ -129,6 +130,48 @@ export async function completeVerification(
       verifiedAt: new Date(),
     },
   });
+
+  // Auto-mint: eliminate the separate mint step
+  if (autoMint) {
+    return mintToken(requestId);
+  }
+
+  return { request: verified };
+}
+
+/**
+ * Receive + verify in a single authenticator action.
+ * Merges receive → verify → auto-mint into one step.
+ */
+export async function receiveAndVerify(
+  requestId: string,
+  authenticatorUserId: string,
+  result: VerificationResult,
+): Promise<{ request: DigitisationRequest; token: DigitalToken }> {
+  const request = await getRequestOrThrow(requestId);
+
+  // Verify the caller is the assigned authenticator
+  const auth = await db.authenticator.findUnique({
+    where: { userId: authenticatorUserId },
+    select: { id: true },
+  });
+  if (!auth || auth.id !== request.authenticatorId) {
+    throw new Error("Only the assigned authenticator can process this request");
+  }
+
+  // Must be in SUBMITTED or RECEIVED state
+  if (request.status !== "SUBMITTED" && request.status !== "RECEIVED") {
+    throw new Error(`Cannot receive-and-verify from status: ${request.status}`);
+  }
+
+  // Mark received
+  await db.digitisationRequest.update({
+    where: { id: requestId },
+    data: { status: "RECEIVED", receivedAt: new Date() },
+  });
+
+  // Complete verification (auto-mints)
+  return completeVerification(requestId, result, true) as Promise<{ request: DigitisationRequest; token: DigitalToken }>;
 }
 
 export async function mintToken(

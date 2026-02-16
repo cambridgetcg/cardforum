@@ -1,0 +1,2349 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP01",
+  "source": "tcgcsv",
+  "snapshotAt": "2026-02-15T23:36:43.919Z",
+  "cards": [
+    {
+      "cardId": "OP01-001",
+      "name": "Roronoa Zoro 001",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 2.5,
+          "lowPrice": 1,
+          "midPrice": 2.98,
+          "highPrice": 9.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-001",
+      "name": "Roronoa Zoro 001 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 504.78,
+          "lowPrice": 527.99,
+          "midPrice": 597,
+          "highPrice": 1500,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-002",
+      "name": "Trafalgar Law 002",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.89,
+          "lowPrice": 0.28,
+          "midPrice": 0.99,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-002",
+      "name": "Trafalgar Law 002 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 414.19,
+          "lowPrice": 450,
+          "midPrice": 500,
+          "highPrice": 3000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-003",
+      "name": "MonkeyDLuffy 003 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 795.5,
+          "lowPrice": 1897.69,
+          "midPrice": 2500,
+          "highPrice": 3000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-003",
+      "name": "MonkeyDLuffy 003",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 2.99,
+          "lowPrice": 1,
+          "midPrice": 5,
+          "highPrice": 30,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-004",
+      "name": "Usopp",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.19,
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-005",
+      "name": "Uta",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.26,
+          "lowPrice": 0.15,
+          "midPrice": 0.26,
+          "highPrice": 1.98,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.41,
+          "lowPrice": 0.17,
+          "midPrice": 0.41,
+          "highPrice": 9.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-006",
+      "name": "Otama",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.37,
+          "lowPrice": 0.24,
+          "midPrice": 0.96,
+          "highPrice": 9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-007",
+      "name": "Caribou",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-008",
+      "name": "Cavendish Box Topper",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 5.74,
+          "lowPrice": 2.58,
+          "midPrice": 8,
+          "highPrice": 50,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-008",
+      "name": "Cavendish",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-009",
+      "name": "Carrot",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.13,
+          "lowPrice": 0.03,
+          "midPrice": 0.16,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-010",
+      "name": "Komachiyo",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-011",
+      "name": "Gordon",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.17,
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-012",
+      "name": "Sai",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-013",
+      "name": "Sanji",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 1.62,
+          "lowPrice": 0.95,
+          "midPrice": 2.22,
+          "highPrice": 14.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-013",
+      "name": "Sanji Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 58.54,
+          "lowPrice": 51.71,
+          "midPrice": 60.62,
+          "highPrice": 168.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-014",
+      "name": "Jinbe 014",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.11,
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-015",
+      "name": "Tony TonyChopper",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.29,
+          "lowPrice": 0.1,
+          "midPrice": 0.33,
+          "highPrice": 3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-016",
+      "name": "Nami",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 2.82,
+          "lowPrice": 2.3,
+          "midPrice": 3.75,
+          "highPrice": 20,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-016",
+      "name": "Nami Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 457.18,
+          "lowPrice": 399.99,
+          "midPrice": 580,
+          "highPrice": 3000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-017",
+      "name": "Nico Robin",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.39,
+          "lowPrice": 0.2,
+          "midPrice": 0.41,
+          "highPrice": 9.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-018",
+      "name": "Hajrudin",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.05,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-019",
+      "name": "Bartolomeo",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.11,
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-020",
+      "name": "Hyogoro",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-021",
+      "name": "Franky",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.11,
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-022",
+      "name": "Brook",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.25,
+          "lowPrice": 0.08,
+          "midPrice": 0.27,
+          "highPrice": 4.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-023",
+      "name": "Marco",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.05,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-024",
+      "name": "MonkeyDLuffy 024",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 2.35,
+          "lowPrice": 1,
+          "midPrice": 4,
+          "highPrice": 99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-024",
+      "name": "MonkeyDLuffy 024 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 155.22,
+          "lowPrice": 128,
+          "midPrice": 179.97,
+          "highPrice": 1000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-025",
+      "name": "Roronoa Zoro 025",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 7.37,
+          "lowPrice": 5.38,
+          "midPrice": 8.13,
+          "highPrice": 39.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-025",
+      "name": "Roronoa Zoro 025 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 185.49,
+          "lowPrice": 160.99,
+          "midPrice": 193.19,
+          "highPrice": 1200,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-026",
+      "name": "Gum Gum Fire Fist Pistol Red Hawk",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.98,
+          "lowPrice": 0.59,
+          "midPrice": 1.61,
+          "highPrice": 10,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-027",
+      "name": "Round Table",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.8,
+          "lowPrice": 0.12,
+          "midPrice": 0.85,
+          "highPrice": 24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-028",
+      "name": "Green Star Rafflesia",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-029",
+      "name": "Radical Beam",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.43,
+          "lowPrice": 0.24,
+          "midPrice": 0.5,
+          "highPrice": 7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-030",
+      "name": "In Two Years At the Sabaody Archipelago",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 2.86,
+          "lowPrice": 0.25,
+          "midPrice": 3,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-031",
+      "name": "Kouzuki Oden",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.25,
+          "lowPrice": 0.15,
+          "midPrice": 0.27,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-031",
+      "name": "Kouzuki Oden Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 122.24,
+          "lowPrice": 108,
+          "midPrice": 149.98,
+          "highPrice": 420.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-032",
+      "name": "Ashura Doji",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.14,
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-033",
+      "name": "Izo",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.36,
+          "lowPrice": 0.25,
+          "midPrice": 0.43,
+          "highPrice": 10,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-034",
+      "name": "Inuarashi Box Topper",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 3.15,
+          "lowPrice": 2.4,
+          "midPrice": 4.01,
+          "highPrice": 19.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-034",
+      "name": "Inuarashi",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-035",
+      "name": "Okiku",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.27,
+          "lowPrice": 0.14,
+          "midPrice": 0.28,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-036",
+      "name": "Otsuru",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.04,
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-037",
+      "name": "Kawamatsu",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.11,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-038",
+      "name": "Kanjuro",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.05,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-039",
+      "name": "Killer",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.22,
+          "lowPrice": 0.05,
+          "midPrice": 0.3,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-040",
+      "name": "Kinemon",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.65,
+          "lowPrice": 0.2,
+          "midPrice": 1,
+          "highPrice": 14.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-040",
+      "name": "Kinemon Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 11.2,
+          "lowPrice": 10.99,
+          "midPrice": 18.85,
+          "highPrice": 64.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-041",
+      "name": "Kouzuki Momonosuke",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.31,
+          "lowPrice": 0.05,
+          "midPrice": 0.34,
+          "highPrice": 19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-042",
+      "name": "Komurasaki",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.13,
+          "lowPrice": 0.03,
+          "midPrice": 0.16,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-043",
+      "name": "Shinobu",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-044",
+      "name": "Shachi",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.09,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-045",
+      "name": "Jean Bart",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.05,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-046",
+      "name": "Denjiro",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.33,
+          "lowPrice": 0.14,
+          "midPrice": 0.41,
+          "highPrice": 25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-047",
+      "name": "Trafalgar Law 047 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 46.99,
+          "lowPrice": 34.99,
+          "midPrice": 53.18,
+          "highPrice": 99.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-047",
+      "name": "Trafalgar Law 047",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 1.26,
+          "lowPrice": 0.49,
+          "midPrice": 1.49,
+          "highPrice": 38.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-048",
+      "name": "Nekomamushi Box Topper",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 3.3,
+          "lowPrice": 2.96,
+          "midPrice": 4,
+          "highPrice": 24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-048",
+      "name": "Nekomamushi",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.09,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-049",
+      "name": "Bepo",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.29,
+          "lowPrice": 0.11,
+          "midPrice": 0.26,
+          "highPrice": 2.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-050",
+      "name": "Penguin",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-051",
+      "name": "EustassCaptainKid",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 1.71,
+          "lowPrice": 0.95,
+          "midPrice": 2.01,
+          "highPrice": 25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-051",
+      "name": "EustassCaptainKid Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 25.99,
+          "lowPrice": 22.99,
+          "midPrice": 28,
+          "highPrice": 145,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-052",
+      "name": "Raizo",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-053",
+      "name": "Wire",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-054",
+      "name": "XDrake 054",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.32,
+          "lowPrice": 0.18,
+          "midPrice": 0.35,
+          "highPrice": 6.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-055",
+      "name": "You Can Be My Samurai",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.26,
+          "lowPrice": 0.02,
+          "midPrice": 0.25,
+          "highPrice": 4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-056",
+      "name": "Demon Face",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.12,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-057",
+      "name": "Paradise Waterfall",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 1.58,
+          "lowPrice": 1.1,
+          "midPrice": 2,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-058",
+      "name": "Punk Gibson",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.61,
+          "lowPrice": 0.45,
+          "midPrice": 0.86,
+          "highPrice": 9.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-059",
+      "name": "BE BENG",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-060",
+      "name": "Donquixote Doflamingo 060",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.39,
+          "lowPrice": 0.15,
+          "midPrice": 0.45,
+          "highPrice": 5.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-060",
+      "name": "Donquixote Doflamingo 060 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 295.07,
+          "lowPrice": 275,
+          "midPrice": 347,
+          "highPrice": 3000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-061",
+      "name": "Kaido 061",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.29,
+          "lowPrice": 0.15,
+          "midPrice": 0.34,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-061",
+      "name": "Kaido 061 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 152.16,
+          "lowPrice": 137.09,
+          "midPrice": 160.99,
+          "highPrice": 699.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-062",
+      "name": "Crocodile 062",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.32,
+          "lowPrice": 0.03,
+          "midPrice": 0.31,
+          "highPrice": 69.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-062",
+      "name": "Crocodile 062 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 146.11,
+          "lowPrice": 144.99,
+          "midPrice": 162.74,
+          "highPrice": 399.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-063",
+      "name": "Arlong",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.17,
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-064",
+      "name": "Alvida Box Topper",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 9.97,
+          "lowPrice": 5.96,
+          "midPrice": 12.99,
+          "highPrice": 99.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-064",
+      "name": "Alvida",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.16,
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-065",
+      "name": "Vergo",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-066",
+      "name": "Krieg",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-067",
+      "name": "Crocodile 067",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.59,
+          "lowPrice": 0.4,
+          "midPrice": 0.99,
+          "highPrice": 7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-067",
+      "name": "Crocodile 067 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 17.4,
+          "lowPrice": 16.99,
+          "midPrice": 19.92,
+          "highPrice": 100,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-068",
+      "name": "Gecko Moria",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.34,
+          "lowPrice": 0.19,
+          "midPrice": 0.35,
+          "highPrice": 2,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.2,
+          "lowPrice": 0.12,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-069",
+      "name": "Caesar Clown",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.27,
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-070",
+      "name": "Dracule Mihawk",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 2.26,
+          "lowPrice": 1.85,
+          "midPrice": 2.62,
+          "highPrice": 28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-070",
+      "name": "Dracule Mihawk Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 51.53,
+          "lowPrice": 49.99,
+          "midPrice": 66.24,
+          "highPrice": 150,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-071",
+      "name": "Jinbe 071",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.23,
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-072",
+      "name": "Smiley",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.09,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-073",
+      "name": "Donquixote Doflamingo 073",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.36,
+          "lowPrice": 0.24,
+          "midPrice": 0.52,
+          "highPrice": 7.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-073",
+      "name": "Donquixote Doflamingo 073 Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 28.46,
+          "lowPrice": 25.99,
+          "midPrice": 30.02,
+          "highPrice": 100,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-074",
+      "name": "Bartholomew Kuma",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.22,
+          "lowPrice": 0.04,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-075",
+      "name": "Pacifista",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.19,
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-076",
+      "name": "Bellamy",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-077",
+      "name": "Perona Box Topper",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 42.49,
+          "lowPrice": 29.9,
+          "midPrice": 46.24,
+          "highPrice": 200,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-077",
+      "name": "Perona",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.83,
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-078",
+      "name": "Boa Hancock",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 2.9,
+          "lowPrice": 1,
+          "midPrice": 3.2,
+          "highPrice": 21.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-078",
+      "name": "Boa Hancock Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 153.27,
+          "lowPrice": 145,
+          "midPrice": 169.99,
+          "highPrice": 3000,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-079",
+      "name": "Ms All Sunday",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.75,
+          "lowPrice": 0.24,
+          "midPrice": 0.75,
+          "highPrice": 95,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-080",
+      "name": "Miss DoublefingerZala",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-081",
+      "name": "Mocha",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.04,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-082",
+      "name": "Monet",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.13,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-083",
+      "name": "Mr1 DazBonez",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.11,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-084",
+      "name": "Mr2BonKurei Bentham",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.14,
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-085",
+      "name": "Mr3 Galdino",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.14,
+          "lowPrice": 0.03,
+          "midPrice": 0.17,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-086",
+      "name": "Overheat",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.18,
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.28,
+          "lowPrice": 0.09,
+          "midPrice": 0.31,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-087",
+      "name": "Officer Agents",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-088",
+      "name": "Desert Spada",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.53,
+          "lowPrice": 0.29,
+          "midPrice": 0.64,
+          "highPrice": 3.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-089",
+      "name": "Crescent Cutlass",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.09,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-090",
+      "name": "Baroque Works",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.12,
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-091",
+      "name": "King 091",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.26,
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-091",
+      "name": "King 091 Parallel",
+      "rarity": "L",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 144.32,
+          "lowPrice": 120.68,
+          "midPrice": 145.86,
+          "highPrice": 499.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-092",
+      "name": "Urashima",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-093",
+      "name": "Ulti",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.36,
+          "lowPrice": 0.05,
+          "midPrice": 0.35,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-093",
+      "name": "Ulti Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 21.51,
+          "lowPrice": 16.68,
+          "midPrice": 21.99,
+          "highPrice": 99.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-094",
+      "name": "Kaido 094",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 7.46,
+          "lowPrice": 6.8,
+          "midPrice": 8.85,
+          "highPrice": 50,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-094",
+      "name": "Kaido 094 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 54.82,
+          "lowPrice": 36.99,
+          "midPrice": 57.99,
+          "highPrice": 160,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-095",
+      "name": "Kyoshirou",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-096",
+      "name": "King 096",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.67,
+          "lowPrice": 0.25,
+          "midPrice": 0.99,
+          "highPrice": 10,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-096",
+      "name": "King 096 Parallel",
+      "rarity": "SR",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 12.81,
+          "lowPrice": 11.57,
+          "midPrice": 14,
+          "highPrice": 100,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-097",
+      "name": "Queen",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.26,
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-097",
+      "name": "Queen Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 9.02,
+          "lowPrice": 6.35,
+          "midPrice": 9.99,
+          "highPrice": 75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-098",
+      "name": "Kurozumi Orochi",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.2,
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 2.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-099",
+      "name": "Kurozumi Semimaru",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-100",
+      "name": "Kurozumi Higurashi",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-101",
+      "name": "Sasaki",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.47,
+          "lowPrice": 0.2,
+          "midPrice": 0.47,
+          "highPrice": 4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-102",
+      "name": "Jack",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.24,
+          "lowPrice": 0.06,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-102",
+      "name": "Jack Parallel",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 7.6,
+          "lowPrice": 6.26,
+          "midPrice": 8.49,
+          "highPrice": 48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-103",
+      "name": "Scratchmen Apoo",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.08,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-104",
+      "name": "Speed",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-105",
+      "name": "Bao Huang",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.09,
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-106",
+      "name": "Basil Hawkins",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.34,
+          "lowPrice": 0.1,
+          "midPrice": 0.36,
+          "highPrice": 5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-107",
+      "name": "Babanuki",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-108",
+      "name": "Hitokiri Kamazo",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.13,
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-109",
+      "name": "WhosWho Box Topper",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 3.53,
+          "lowPrice": 2.02,
+          "midPrice": 4.5,
+          "highPrice": 35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-109",
+      "name": "WhosWho",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.06,
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-110",
+      "name": "Fukurokuju",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-111",
+      "name": "Black Maria",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.2,
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 6.67,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-112",
+      "name": "Page One",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.25,
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-113",
+      "name": "Holedem",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.07,
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-114",
+      "name": "XDrake 114",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 0.27,
+          "lowPrice": 0.2,
+          "midPrice": 0.4,
+          "highPrice": 6.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-115",
+      "name": "Elephants Marchoo",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-116",
+      "name": "Artificial Devil Fruit SMILE",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.13,
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-117",
+      "name": "Sheeps Horn",
+      "rarity": "C",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.1,
+          "lowPrice": 0.04,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-118",
+      "name": "Ulti Mortar",
+      "rarity": "UC",
+      "variants": [
+        {
+          "subTypeName": "Normal",
+          "marketPrice": 0.14,
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-119",
+      "name": "Thunder Bagua",
+      "rarity": "R",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 2.6,
+          "lowPrice": 1.99,
+          "midPrice": 3.51,
+          "highPrice": 13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-120",
+      "name": "Shanks",
+      "rarity": "SEC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 9,
+          "lowPrice": 6.99,
+          "midPrice": 11.5,
+          "highPrice": 130,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-120",
+      "name": "Shanks Parallel",
+      "rarity": "SEC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 112.88,
+          "lowPrice": 90,
+          "midPrice": 125,
+          "highPrice": 500,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-120",
+      "name": "Shanks Parallel Manga Alternate Art",
+      "rarity": "SEC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 1571.49,
+          "lowPrice": 4049.99,
+          "midPrice": 4225,
+          "highPrice": 9999.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-121",
+      "name": "Yamato",
+      "rarity": "SEC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 7.92,
+          "lowPrice": 7.5,
+          "midPrice": 10.99,
+          "highPrice": 150,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "cardId": "OP01-121",
+      "name": "Yamato Parallel",
+      "rarity": "SEC",
+      "variants": [
+        {
+          "subTypeName": "Foil",
+          "marketPrice": 107.89,
+          "lowPrice": 105,
+          "midPrice": 132.5,
+          "highPrice": 699.99,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "totalCards": 154,
+    "cardsWithPrices": 157,
+    "avgMarketPrice": 37.03891719745224,
+    "medianMarketPrice": 0.27,
+    "totalSetValue": 5815.110000000002
+  }
+}

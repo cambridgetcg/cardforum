@@ -13,6 +13,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
-  const ccs = calculateCCS(parsed.data);
+  const ccs = await calculateCCS(parsed.data);
   return NextResponse.json(ccs);
 }

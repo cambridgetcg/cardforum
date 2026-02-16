@@ -1,0 +1,23 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP04",
+  "completedStages": {
+    "distribution": {
+      "completedAt": "2026-02-15T23:14:46.539Z"
+    },
+    "compute": {
+      "completedAt": "2026-02-15T23:14:47.147Z"
+    },
+    "validate": {
+      "completedAt": "2026-02-15T23:14:47.736Z"
+    },
+    "ev": {
+      "completedAt": "2026-02-15T23:14:48.322Z"
+    },
+    "report": {
+      "completedAt": "2026-02-15T23:14:48.937Z"
+    }
+  },
+  "lastUpdated": "2026-02-15T23:14:48.937Z",
+  "errors": []
+}

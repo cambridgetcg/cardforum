@@ -36,7 +36,7 @@ export async function holdVerificationFees(tradeId: string, tx?: TxClient) {
     if (!leg.verification?.authenticator) continue;
 
     const tier = leg.verification.authenticator.tier as AuthenticatorTier;
-    const fee = calculateVerificationFee(tier);
+    const fee = await calculateVerificationFee(tier);
 
     feeEntries.push({
       escrowId: trade.escrow.id,
@@ -83,7 +83,7 @@ export async function debitVerificationFees(tradeId: string, tx?: TxClient) {
     if (!leg.verification?.authenticator) continue;
 
     const tier = leg.verification.authenticator.tier as AuthenticatorTier;
-    const fee = calculateVerificationFee(tier);
+    const fee = await calculateVerificationFee(tier);
 
     // Sender pays verification fee for their card being verified
     await debitVerificationFee(leg.fromUserId, tradeId, fee.baseFee, tx);
@@ -162,7 +162,7 @@ export async function releaseFeesToAuthenticators(tradeId: string, tx?: TxClient
     if (!leg.verification?.authenticator) continue;
 
     const tier = leg.verification.authenticator.tier as AuthenticatorTier;
-    const fee = calculateVerificationFee(tier);
+    const fee = await calculateVerificationFee(tier);
     const authenticatorUserId = leg.verification.authenticator.userId;
 
     await creditAuthenticatorEarning(authenticatorUserId, tradeId, fee.authenticatorShare, tx);

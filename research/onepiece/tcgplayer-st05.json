@@ -1,0 +1,524 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 5: Film Edition",
+  "groupId": 17687,
+  "setCode": "ST05",
+  "totalProducts": 20,
+  "totalCards": 17,
+  "scrapedAt": "2026-02-15T22:54:28.966Z",
+  "durationMs": 67,
+  "cards": [
+    {
+      "productId": 477316,
+      "cardId": "ST05-001",
+      "name": "Shanks",
+      "cleanName": "Shanks",
+      "url": "https://www.tcgplayer.com/product/477316/one-piece-card-game-starter-deck-5-film-edition-shanks",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477316_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Film;The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] DON!! -3 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.): All of your \"FILM\" type Characters gain +2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2,
+          "midPrice": 4,
+          "highPrice": 50,
+          "marketPrice": 2.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479844,
+      "cardId": "ST05-002",
+      "name": "Ain",
+      "cleanName": "Ain",
+      "url": "https://www.tcgplayer.com/product/479844/one-piece-card-game-starter-deck-5-film-edition-ain",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479844_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Film;Neo Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479845,
+      "cardId": "ST05-003",
+      "name": "Ann",
+      "cleanName": "Ann",
+      "url": "https://www.tcgplayer.com/product/479845/one-piece-card-game-starter-deck-5-film-edition-ann",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479845_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;The Pirates Fest",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477317,
+      "cardId": "ST05-004",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/477317/one-piece-card-game-starter-deck-5-film-edition-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477317_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Film",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.49,
+          "midPrice": 1.49,
+          "highPrice": 32,
+          "marketPrice": 1.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477318,
+      "cardId": "ST05-005",
+      "name": "Carina",
+      "cleanName": "Carina",
+      "url": "https://www.tcgplayer.com/product/477318/one-piece-card-game-starter-deck-5-film-edition-carina",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477318_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;Grantesoro",
+      "attribute": "Wisdom",
+      "effectText": "[Activate:Main] [Once Per Turn] <strong>You may rest this Character and trash 1 \"FILM\" type card from your hand</strong>: If your opponent has more DON!! cards on their field than you, add 2 DON!! cards from your DON!! deck and rest them.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.42,
+          "highPrice": 10,
+          "marketPrice": 0.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477320,
+      "cardId": "ST05-006",
+      "name": "Gild Tesoro",
+      "cleanName": "Gild Tesoro",
+      "url": "https://www.tcgplayer.com/product/477320/one-piece-card-game-starter-deck-5-film-edition-gild-tesoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477320_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Film;Grantesoro",
+      "attribute": "Special",
+      "effectText": "[When Attacking] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.): Draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.6,
+          "midPrice": 0.94,
+          "highPrice": 25,
+          "marketPrice": 0.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479846,
+      "cardId": "ST05-007",
+      "name": "Gordon",
+      "cleanName": "Gordon",
+      "url": "https://www.tcgplayer.com/product/479846/one-piece-card-game-starter-deck-5-film-edition-gordon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479846_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Film",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477321,
+      "cardId": "ST05-008",
+      "name": "Shiki",
+      "cleanName": "Shiki",
+      "url": "https://www.tcgplayer.com/product/477321/one-piece-card-game-starter-deck-5-film-edition-shiki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477321_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Film;Golden Lion Pirates",
+      "attribute": "Slash",
+      "effectText": "If you have 8 or more DON!! cards on your field, this Character cannot be K.O.'d in battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479847,
+      "cardId": "ST05-009",
+      "name": "Scarlet",
+      "cleanName": "Scarlet",
+      "url": "https://www.tcgplayer.com/product/479847/one-piece-card-game-starter-deck-5-film-edition-scarlet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479847_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Film;Golden Lion Pirates",
+      "attribute": "Strike",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.19,
+          "highPrice": 1.31,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477323,
+      "cardId": "ST05-010",
+      "name": "Zephyr",
+      "cleanName": "Zephyr",
+      "url": "https://www.tcgplayer.com/product/477323/one-piece-card-game-starter-deck-5-film-edition-zephyr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477323_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Film;Neo Navy",
+      "attribute": "Strike",
+      "effectText": "When this Character battles \"Strike\" attribute Characters, this Character gains +3000 power during this turn.\r\n<br>\r\n[Activate:Main] [Once Per Turn] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character gains +2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477324,
+      "cardId": "ST05-011",
+      "name": "Douglas Bullet",
+      "cleanName": "Douglas Bullet",
+      "url": "https://www.tcgplayer.com/product/477324/one-piece-card-game-starter-deck-5-film-edition-douglas-bullet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477324_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Film;The Pirates Fest",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] [Once Per Turn] DON!! -4 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 2 of your opponent's Characters with a cost of 6 or less. Then, this Character gains [Double Attack] during this turn. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.4,
+          "midPrice": 3.42,
+          "highPrice": 50,
+          "marketPrice": 2.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479848,
+      "cardId": "ST05-012",
+      "name": "Baccarat",
+      "cleanName": "Baccarat",
+      "url": "https://www.tcgplayer.com/product/479848/one-piece-card-game-starter-deck-5-film-edition-baccarat",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479848_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Grantesoro",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479849,
+      "cardId": "ST05-013",
+      "name": "Bins",
+      "cleanName": "Bins",
+      "url": "https://www.tcgplayer.com/product/479849/one-piece-card-game-starter-deck-5-film-edition-bins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479849_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Film;Neo Navy",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477325,
+      "cardId": "ST05-014",
+      "name": "Buena Festa",
+      "cleanName": "Buena Festa",
+      "url": "https://www.tcgplayer.com/product/477325/one-piece-card-game-starter-deck-5-film-edition-buena-festa",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477325_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Film;The Pirates Fest",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"FILM\" type card other than [Buena Festa] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.82,
+          "midPrice": 2.4,
+          "highPrice": 10,
+          "marketPrice": 1.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479850,
+      "cardId": "ST05-015",
+      "name": "Dr. Indigo",
+      "cleanName": "Dr Indigo",
+      "url": "https://www.tcgplayer.com/product/479850/one-piece-card-game-starter-deck-5-film-edition-dr-indigo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479850_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;Scientist;Golden Lion Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 10,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 479851,
+      "cardId": "ST05-016",
+      "name": "Lion's Threat Imperial Earth Bind",
+      "cleanName": "Lions Threat Imperial Earth Bind",
+      "url": "https://www.tcgplayer.com/product/479851/one-piece-card-game-starter-deck-5-film-edition-lions-threat-imperial-earth-bind",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/479851_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Golden Lion Pirates",
+      "attribute": null,
+      "effectText": "[Main] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.53,
+          "highPrice": 25,
+          "marketPrice": 0.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 477326,
+      "cardId": "ST05-017",
+      "name": "Union Armada",
+      "cleanName": "Union Armada",
+      "url": "https://www.tcgplayer.com/product/477326/one-piece-card-game-starter-deck-5-film-edition-union-armada",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/477326_200w.jpg",
+      "groupId": 17687,
+      "setCode": "ST05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;The Pirates Fest",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your \"FILM\" type Leader or Character cards gains +4000 power during this battle. If that card is a Character, that Character cannot be K.O.'d during this turn.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

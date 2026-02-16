@@ -13,6 +13,10 @@ import { db } from "@/lib/db";
 import { ccsDelta } from "@/lib/ccs";
 import { recalculateUserAIAgreement, isWithinAgreement } from "./condition-trust.service";
 import type { AuthenticatorTier } from "@/types/domain";
+import type { TCG } from "@/generated/prisma/enums";
+
+// NOTE: Subscribers are registered via side-effect import in server entry points.
+// Do NOT import "@/server/events/subscribers" here — it would create a circular dependency.
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -54,7 +58,9 @@ export async function createConditionComparison(
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: {
-      haveListing: true,
+      haveListing: {
+        include: { card: { select: { tcg: true } } },
+      },
       verification: {
         include: {
           authenticator: { select: { tier: true } },
@@ -82,7 +88,7 @@ export async function createConditionComparison(
   const authCCS = result?.ccs as CCSData | undefined;
   if (!authCCS) return null; // Authenticator didn't include CCS — skip
 
-  // Compute deltas
+  // Compute absolute deltas
   const deltas = {
     surface: ccsDelta(listing.aiCCSSurface, authCCS.surface),
     corners: ccsDelta(listing.aiCCSCorners, authCCS.corners),
@@ -91,7 +97,16 @@ export async function createConditionComparison(
     composite: ccsDelta(listing.aiCCSComposite, authCCS.composite),
   };
 
-  const agreed = isWithinAgreement(listing.aiCCSComposite, authCCS.composite);
+  // Compute signed deltas: AI - Auth (positive = AI grades higher)
+  const signedDeltas = {
+    surface: listing.aiCCSSurface - authCCS.surface,
+    corners: listing.aiCCSCorners - authCCS.corners,
+    edges: listing.aiCCSEdges - authCCS.edges,
+    centering: listing.aiCCSCentering - authCCS.centering,
+    composite: listing.aiCCSComposite - authCCS.composite,
+  };
+
+  const agreed = await isWithinAgreement(listing.aiCCSComposite, authCCS.composite);
 
   // Create comparison record
   const comparison = await db.conditionComparison.create({
@@ -113,6 +128,12 @@ export async function createConditionComparison(
       deltaEdges: deltas.edges,
       deltaCentering: deltas.centering,
       deltaComposite: deltas.composite,
+      signedDeltaSurface: signedDeltas.surface,
+      signedDeltaCorners: signedDeltas.corners,
+      signedDeltaEdges: signedDeltas.edges,
+      signedDeltaCentering: signedDeltas.centering,
+      signedDeltaComposite: signedDeltas.composite,
+      tcg: listing.card.tcg as TCG,
       agreed,
       authenticatorId: leg.verification.authenticatorId,
       authenticatorTier: leg.verification.authenticator.tier as AuthenticatorTier,

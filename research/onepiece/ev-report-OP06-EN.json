@@ -1,0 +1,70 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP06",
+  "language": "EN",
+  "productType": "op_booster",
+  "priceCurrency": "USD",
+  "priceSource": "tcgplayer",
+  "boxPriceCents": null,
+  "totalEVCents": 77138,
+  "evRatio": null,
+  "breakdown": [
+    {
+      "rarity": "C",
+      "expectedPerBox": 129.60000000000002,
+      "avgCardPrice": 6.2444444444444445,
+      "medianCardPrice": 6,
+      "evContribution": 809.2800000000002,
+      "evShare": 0.010491280022899417
+    },
+    {
+      "rarity": "UC",
+      "expectedPerBox": 81.6,
+      "avgCardPrice": 640.5806451612904,
+      "medianCardPrice": 10,
+      "evContribution": 52271.38064516129,
+      "evShare": 0.6776315879942069
+    },
+    {
+      "rarity": "R",
+      "expectedPerBox": 71.52,
+      "avgCardPrice": 69.92307692307692,
+      "medianCardPrice": 20.5,
+      "evContribution": 5000.898461538461,
+      "evShare": 0.06483025173745412
+    },
+    {
+      "rarity": "SR",
+      "expectedPerBox": 3.96,
+      "avgCardPrice": 4567.8,
+      "medianCardPrice": 262,
+      "evContribution": 18088.488,
+      "evShare": 0.23449410933033782
+    },
+    {
+      "rarity": "SEC",
+      "expectedPerBox": 0.9119999999999999,
+      "avgCardPrice": 1054.5,
+      "medianCardPrice": 1054.5,
+      "evContribution": 961.704,
+      "evShare": 0.012467262212265788
+    },
+    {
+      "rarity": "L",
+      "expectedPerBox": 0.40800000000000003,
+      "avgCardPrice": 16.166666666666668,
+      "medianCardPrice": 16,
+      "evContribution": 6.596000000000001,
+      "evShare": 0.00008550870283590914
+    },
+    {
+      "rarity": "TR",
+      "expectedPerBox": 0,
+      "avgCardPrice": 0,
+      "medianCardPrice": 0,
+      "evContribution": 0,
+      "evShare": 0
+    }
+  ],
+  "generatedAt": "2026-02-15T23:14:55.140Z"
+}

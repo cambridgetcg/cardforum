@@ -1,0 +1,34 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP01",
+  "generatedAt": "2026-02-15T23:36:48.950Z",
+  "topMovers": [
+    {
+      "period": "1d",
+      "gainers": [],
+      "losers": []
+    },
+    {
+      "period": "7d",
+      "gainers": [],
+      "losers": []
+    },
+    {
+      "period": "30d",
+      "gainers": [],
+      "losers": []
+    }
+  ],
+  "signals": [],
+  "alerts": [],
+  "correlations": [],
+  "anomalies": [],
+  "summary": {
+    "totalCards": 154,
+    "cardsWithTrends": 0,
+    "avgDelta7d": null,
+    "avgDelta30d": null,
+    "setValueTrend": null,
+    "dominantSignal": "emerging"
+  }
+}

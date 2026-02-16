@@ -1,0 +1,524 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 6: Absolute Justice",
+  "groupId": 17699,
+  "setCode": "ST06",
+  "totalProducts": 20,
+  "totalCards": 17,
+  "scrapedAt": "2026-02-15T22:54:30.036Z",
+  "durationMs": 68,
+  "cards": [
+    {
+      "productId": 485247,
+      "cardId": "ST06-001",
+      "name": "Sakazuki",
+      "cleanName": "Sakazuki",
+      "url": "https://www.tcgplayer.com/product/485247/one-piece-card-game-starter-deck-6-absolute-justice-sakazuki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485247_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] [Once Per Turn] (3) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.86,
+          "midPrice": 2,
+          "highPrice": 25,
+          "marketPrice": 1.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485248,
+      "cardId": "ST06-002",
+      "name": "Koby",
+      "cleanName": "Koby",
+      "url": "https://www.tcgplayer.com/product/485248/one-piece-card-game-starter-deck-6-absolute-justice-koby",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485248_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486320,
+      "cardId": "ST06-003",
+      "name": "Jango",
+      "cleanName": "Jango",
+      "url": "https://www.tcgplayer.com/product/486320/one-piece-card-game-starter-deck-6-absolute-justice-jango",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486320_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.31,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485250,
+      "cardId": "ST06-004",
+      "name": "Smoker",
+      "cleanName": "Smoker",
+      "url": "https://www.tcgplayer.com/product/485250/one-piece-card-game-starter-deck-6-absolute-justice-smoker",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485250_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "This Character cannot be K.O.'d by effects.\r\n<br>\r\n[DON!! x1] If there is a Character with a cost of 0, this Character gains [Double Attack]. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.75,
+          "midPrice": 1.33,
+          "highPrice": 25,
+          "marketPrice": 1.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486321,
+      "cardId": "ST06-005",
+      "name": "Sengoku",
+      "cleanName": "Sengoku",
+      "url": "https://www.tcgplayer.com/product/486321/one-piece-card-game-starter-deck-6-absolute-justice-sengoku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486321_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[When Attacking] Give up to 1 of your opponent's Characters -4 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 1.5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485252,
+      "cardId": "ST06-006",
+      "name": "Tashigi",
+      "cleanName": "Tashigi",
+      "url": "https://www.tcgplayer.com/product/485252/one-piece-card-game-starter-deck-6-absolute-justice-tashigi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485252_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.75,
+          "midPrice": 1,
+          "highPrice": 501.5,
+          "marketPrice": 0.88,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486322,
+      "cardId": "ST06-007",
+      "name": "Tsuru",
+      "cleanName": "Tsuru",
+      "url": "https://www.tcgplayer.com/product/486322/one-piece-card-game-starter-deck-6-absolute-justice-tsuru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486322_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 1.35,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486323,
+      "cardId": "ST06-008",
+      "name": "Hina",
+      "cleanName": "Hina",
+      "url": "https://www.tcgplayer.com/product/486323/one-piece-card-game-starter-deck-6-absolute-justice-hina",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486323_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -4 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 1.15,
+          "highPrice": 39.99,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486324,
+      "cardId": "ST06-009",
+      "name": "Fullbody",
+      "cleanName": "Fullbody",
+      "url": "https://www.tcgplayer.com/product/486324/one-piece-card-game-starter-deck-6-absolute-justice-fullbody",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486324_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.31,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485251,
+      "cardId": "ST06-010",
+      "name": "Helmeppo",
+      "cleanName": "Helmeppo",
+      "url": "https://www.tcgplayer.com/product/485251/one-piece-card-game-starter-deck-6-absolute-justice-helmeppo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485251_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -3 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.21,
+          "highPrice": 3.99,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486326,
+      "cardId": "ST06-011",
+      "name": "Momonga",
+      "cleanName": "Momonga",
+      "url": "https://www.tcgplayer.com/product/486326/one-piece-card-game-starter-deck-6-absolute-justice-momonga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486326_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.31,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485253,
+      "cardId": "ST06-012",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/485253/one-piece-card-game-starter-deck-6-absolute-justice-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485253_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may trash 1 card from your hand and rest this Character</strong>: K.O. up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.45,
+          "midPrice": 1,
+          "highPrice": 10,
+          "marketPrice": 0.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486328,
+      "cardId": "ST06-013",
+      "name": "T-Bone",
+      "cleanName": "T Bone",
+      "url": "https://www.tcgplayer.com/product/486328/one-piece-card-game-starter-deck-6-absolute-justice-t-bone",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486328_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.31,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486329,
+      "cardId": "ST06-014",
+      "name": "Shockwave",
+      "cleanName": "Shockwave",
+      "url": "https://www.tcgplayer.com/product/486329/one-piece-card-game-starter-deck-6-absolute-justice-shockwave",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486329_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, K.O. up to 1 of your opponent's active Characters with a cost of 3 or less.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 10,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485254,
+      "cardId": "ST06-015",
+      "name": "Great Eruption",
+      "cleanName": "Great Eruption",
+      "url": "https://www.tcgplayer.com/product/485254/one-piece-card-game-starter-deck-6-absolute-justice-great-eruption",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485254_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] Draw 1 card. Then, give up to 1 of your opponent's Characters -2 cost during this turn.\r\n<br>\r\n[Trigger] Your opponent chooses 1 card from their hand and trashes it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2,
+          "midPrice": 5,
+          "highPrice": 27.99,
+          "marketPrice": 5.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486330,
+      "cardId": "ST06-016",
+      "name": "White Out",
+      "cleanName": "White Out",
+      "url": "https://www.tcgplayer.com/product/486330/one-piece-card-game-starter-deck-6-absolute-justice-white-out",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486330_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle.\r\n<br>\r\n[Trigger] Draw 1 card and none of your Characters can be K.O.'d during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.21,
+          "highPrice": 1.12,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486331,
+      "cardId": "ST06-017",
+      "name": "Navy HQ",
+      "cleanName": "Navy HQ",
+      "url": "https://www.tcgplayer.com/product/486331/one-piece-card-game-starter-deck-6-absolute-justice-navy-hq",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486331_200w.jpg",
+      "groupId": 17699,
+      "setCode": "ST06",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -1 cost during this turn.\r\n<br>\r\n[Activate:Main] <strong>You may rest this Stage</strong>: If your Leader has the [Navy] type, give up to 1 of your opponent's Characters -1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.15,
+          "midPrice": 2.23,
+          "highPrice": 25,
+          "marketPrice": 1.55,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

@@ -1,0 +1,2264 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "A Fist of Divine Speed Release Event Cards",
+  "groupId": 24242,
+  "setCode": "OP11 RE",
+  "totalProducts": 76,
+  "totalCards": 75,
+  "scrapedAt": "2026-02-15T22:54:13.664Z",
+  "durationMs": 78,
+  "cards": [
+    {
+      "productId": 634447,
+      "cardId": "OP11-002",
+      "name": "Ain",
+      "cleanName": "Ain",
+      "url": "https://www.tcgplayer.com/product/634447/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-ain",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634447_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "FILM;Neo Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters 1000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 0 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.19,
+          "midPrice": 0.42,
+          "highPrice": 1,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634448,
+      "cardId": "OP11-003",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/634448/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634448_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.45,
+          "midPrice": 0.87,
+          "highPrice": 4.4,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634449,
+      "cardId": "OP11-005",
+      "name": "Smoker",
+      "cleanName": "Smoker",
+      "url": "https://www.tcgplayer.com/product/634449/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-smoker",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634449_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n<br>\r\n[DON!! x1] This Character cannot be K.O.'d by effects of Characters without the (Special) attribute.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.76,
+          "highPrice": 10,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634450,
+      "cardId": "OP11-006",
+      "name": "Zephyr",
+      "cleanName": "Zephyr",
+      "url": "https://www.tcgplayer.com/product/634450/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-zephyr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634450_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Neo Navy",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's (Special) attribute Characters 5000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.46,
+          "highPrice": 2.49,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634451,
+      "cardId": "OP11-007",
+      "name": "Tashigi",
+      "cleanName": "Tashigi",
+      "url": "https://www.tcgplayer.com/product/634451/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-tashigi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634451_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> If your Leader has the \"Navy\" type, up to 1 of your \"Navy\" type Characters gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.49,
+          "midPrice": 0.94,
+          "highPrice": 2,
+          "marketPrice": 0.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634452,
+      "cardId": "OP11-009",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/634452/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634452_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] Give up to 1 of your opponent's Characters 2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 11,
+          "midPrice": 19.9,
+          "highPrice": 98.69,
+          "marketPrice": 17.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634453,
+      "cardId": "OP11-011",
+      "name": "Bins",
+      "cleanName": "Bins",
+      "url": "https://www.tcgplayer.com/product/634453/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-bins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634453_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;Neo Navy",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.46,
+          "highPrice": 2.99,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634454,
+      "cardId": "OP11-012",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/634454/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634454_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy;SWORD",
+      "attribute": "Strike",
+      "effectText": "[Your Turn] [Once Per Turn] When your opponent activates an Event, all of your Characters gain +2000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 6.69,
+          "midPrice": 6.69,
+          "highPrice": 6.69,
+          "marketPrice": 3.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634455,
+      "cardId": "OP11-015",
+      "name": "Mocha",
+      "cleanName": "Mocha",
+      "url": "https://www.tcgplayer.com/product/634455/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-mocha",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634455_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.65,
+          "highPrice": 2.99,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634456,
+      "cardId": "OP11-016",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/634456/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634456_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 6.58,
+          "midPrice": 7.99,
+          "highPrice": 20,
+          "marketPrice": 2.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634457,
+      "cardId": "OP11-017",
+      "name": "X.Drake",
+      "cleanName": "XDrake",
+      "url": "https://www.tcgplayer.com/product/634457/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-xdrake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634457_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Drake Pirates;Navy;SWORD",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2.95,
+          "midPrice": 4.52,
+          "highPrice": 5.79,
+          "marketPrice": 4.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634458,
+      "cardId": "OP11-019",
+      "name": "Glorp Web!!",
+      "cleanName": "Glorp Web",
+      "url": "https://www.tcgplayer.com/product/634458/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-glorp-web",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634458_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy;SWORD",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if your opponent has a Character with 6000 power or more, up to 1 of your Leader or Character cards gains +1000 power during this turn.<br>\r\n<br>\r\n[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.6,
+          "highPrice": 11.3,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634459,
+      "cardId": "OP11-020",
+      "name": "X Calibur",
+      "cleanName": "X Calibur",
+      "url": "https://www.tcgplayer.com/product/634459/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-x-calibur",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634459_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Drake Pirates;Navy;SWORD",
+      "attribute": null,
+      "effectText": "[Main] Give up to 2 of your opponent's Characters 2000 power during this turn. Then, up to 1 of your \"Navy\" type Characters gains +1000 power during this turn.<br>\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1,
+          "midPrice": 1.51,
+          "highPrice": 9.99,
+          "marketPrice": 1.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634460,
+      "cardId": "OP11-024",
+      "name": "Aladine",
+      "cleanName": "Aladine",
+      "url": "https://www.tcgplayer.com/product/634460/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-aladine",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634460_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Sun Pirates;Merfolk;Fish-Man Island",
+      "attribute": "Slash",
+      "effectText": "When this Character is K.O.'d by your opponent's effect, you may trash 1 card from your hand and rest 1 of your DON!! cards. If you do, play up to 1 \"Fish-Man\" or \"Merfolk\" type Character card with a cost of 6 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.44,
+          "highPrice": 15.49,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634461,
+      "cardId": "OP11-025",
+      "name": "Ishilly",
+      "cleanName": "Ishilly",
+      "url": "https://www.tcgplayer.com/product/634461/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-ishilly",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634461_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 1 of your DON!! cards and this Character:</strong> Up to 1 of your Leader or Character cards gains +1000 power during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.35,
+          "midPrice": 1.12,
+          "highPrice": 55,
+          "marketPrice": 0.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634462,
+      "cardId": "OP11-026",
+      "name": "Scaled Neptunian",
+      "cleanName": "Scaled Neptunian",
+      "url": "https://www.tcgplayer.com/product/634462/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-scaled-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634462_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.71,
+          "midPrice": 1,
+          "highPrice": 3.99,
+          "marketPrice": 0.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634463,
+      "cardId": "OP11-027",
+      "name": "Bulge-Eyed Neptunian",
+      "cleanName": "Bulge Eyed Neptunian",
+      "url": "https://www.tcgplayer.com/product/634463/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-bulge-eyed-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634463_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": "If your Leader is [Shirahoshi], this Character can attack Characters on the turn in which it is played.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.5,
+          "highPrice": 3.99,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634464,
+      "cardId": "OP11-029",
+      "name": "Charlotte Praline",
+      "cleanName": "Charlotte Praline",
+      "url": "https://www.tcgplayer.com/product/634464/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-praline",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634464_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "The Sun Pirates;Merfolk;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n<br>\r\n[On Play] Rest up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.8,
+          "midPrice": 1.06,
+          "highPrice": 80,
+          "marketPrice": 0.96,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634465,
+      "cardId": "OP11-032",
+      "name": "Surume",
+      "cleanName": "Surume",
+      "url": "https://www.tcgplayer.com/product/634465/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-surume",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634465_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.5,
+          "midPrice": 1,
+          "highPrice": 3.99,
+          "marketPrice": 0.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634466,
+      "cardId": "OP11-033",
+      "name": "Bird Neptunian",
+      "cleanName": "Bird Neptunian",
+      "url": "https://www.tcgplayer.com/product/634466/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-bird-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634466_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 5.99,
+          "midPrice": 7.99,
+          "highPrice": 15.49,
+          "marketPrice": 4.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634467,
+      "cardId": "OP11-034",
+      "name": "Hatchan",
+      "cleanName": "Hatchan",
+      "url": "https://www.tcgplayer.com/product/634467/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-hatchan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634467_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Former Arlong Pirates;Fish-Man Island",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> If your Leader has the \"Fish-Man\" or \"Merfolk\" type, up to 1 of your opponent's Characters with a cost of 3 or less cannot be rested until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.49,
+          "highPrice": 2.5,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634468,
+      "cardId": "OP11-035",
+      "name": "Fisher Tiger",
+      "cleanName": "Fisher Tiger",
+      "url": "https://www.tcgplayer.com/product/634468/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-fisher-tiger",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634468_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Fish-Man;The Sun Pirates;Fish-Man Island",
+      "attribute": "Strike",
+      "effectText": "When this Character is K.O.'d by your opponent's effect, you may rest 1 of your DON!! cards. If you do, play up to 1 \"Fish-Man\" or \"Merfolk\" type Character card with a cost of 4 or less from your hand.<br>\r\n<br>\r\n[On Play] Rest up to 1 of your opponent's Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.24,
+          "midPrice": 0.5,
+          "highPrice": 5,
+          "marketPrice": 0.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634469,
+      "cardId": "OP11-036",
+      "name": "Spotted Neptunian",
+      "cleanName": "Spotted Neptunian",
+      "url": "https://www.tcgplayer.com/product/634469/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-spotted-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634469_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is \"Shirahoshi\", look at 5 cards from the top of your deck; reveal up to 1 \"Neptunian\" type card or \"Shirahoshi\" and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2,
+          "midPrice": 2.86,
+          "highPrice": 9.49,
+          "marketPrice": 2.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634470,
+      "cardId": "OP11-037",
+      "name": "Ancient Weapon Poseidon",
+      "cleanName": "Ancient Weapon Poseidon",
+      "url": "https://www.tcgplayer.com/product/634470/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-ancient-weapon-poseidon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634470_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 \"Neptunian\" or \"Fish-Man Island\" type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 5,
+          "midPrice": 6.39,
+          "highPrice": 9.99,
+          "marketPrice": 5.64,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634471,
+      "cardId": "OP11-039",
+      "name": "Vagabond Drill",
+      "cleanName": "Vagabond Drill",
+      "url": "https://www.tcgplayer.com/product/634471/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vagabond-drill",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634471_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Fish-Man;The Sun Pirates;Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your \"Fish-Man\" or \"Merfolk\" type Leader or Character cards gains +3000 power during this battle. Then, rest up to 1 of your opponent's Characters with a cost of 3 or less.<br>\r\n<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.42,
+          "midPrice": 0.7,
+          "highPrice": 10.99,
+          "marketPrice": 0.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634472,
+      "cardId": "OP11-042",
+      "name": "Vito",
+      "cleanName": "Vito",
+      "url": "https://www.tcgplayer.com/product/634472/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vito",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634472_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Firetank Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>You may trash 1 \"Firetank Pirates\" type card from your hand:</strong> This Character gains [Rush] during this turn.<br>\r\n<br>\r\n<em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.46,
+          "highPrice": 10.99,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634473,
+      "cardId": "OP11-043",
+      "name": "Vinsmoke Ichiji",
+      "cleanName": "Vinsmoke Ichiji",
+      "url": "https://www.tcgplayer.com/product/634473/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vinsmoke-ichiji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634473_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n<br>\r\n[On Your Opponent's Attack] [Once Per Turn] This effect can be activated when you only have Characters with a type including \"GERMA\". Up to 1 of your Leader or Character cards gains +1000 power during this battle. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.74,
+          "midPrice": 1.02,
+          "highPrice": 2.99,
+          "marketPrice": 0.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634474,
+      "cardId": "OP11-044",
+      "name": "Vinsmoke Judge",
+      "cleanName": "Vinsmoke Judge",
+      "url": "https://www.tcgplayer.com/product/634474/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vinsmoke-judge",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634474_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may trash 1 card from your hand:</strong> All of your \"GERMA 66\" type Characters gain +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.5,
+          "highPrice": 1.99,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634475,
+      "cardId": "OP11-045",
+      "name": "Vinsmoke Niji",
+      "cleanName": "Vinsmoke Niji",
+      "url": "https://www.tcgplayer.com/product/634475/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vinsmoke-niji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634475_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2.49,
+          "midPrice": 4,
+          "highPrice": 6.73,
+          "marketPrice": 4.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634476,
+      "cardId": "OP11-046",
+      "name": "Vinsmoke Yonji",
+      "cleanName": "Vinsmoke Yonji",
+      "url": "https://www.tcgplayer.com/product/634476/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-vinsmoke-yonji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634476_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;GERMA 66",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n<br>\r\nIf you only have Characters with a type including \"GERMA\", this Character cannot be K.O.'d or rested by your opponent's effects.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.19,
+          "midPrice": 0.49,
+          "highPrice": 4.99,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634477,
+      "cardId": "OP11-050",
+      "name": "Gotti",
+      "cleanName": "Gotti",
+      "url": "https://www.tcgplayer.com/product/634477/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-gotti",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634477_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Firetank Pirates",
+      "attribute": "Ranged",
+      "effectText": "[When Attacking] <strong>You may trash 1 \"Firetank Pirates\" type card from your hand:</strong> Return up to 1 Character with a cost of 1 or less to the owner's hand or place it at the bottom of their deck.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.49,
+          "highPrice": 18.99,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634478,
+      "cardId": "OP11-052",
+      "name": "Charlotte Lola",
+      "cleanName": "Charlotte Lola",
+      "url": "https://www.tcgplayer.com/product/634478/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-lola",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634478_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Firetank Pirates;Former Rolling Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.4,
+          "highPrice": 3,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634479,
+      "cardId": "OP11-053",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/634479/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634479_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 8.34,
+          "midPrice": 9,
+          "highPrice": 18.49,
+          "marketPrice": 4.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634480,
+      "cardId": "OP11-055",
+      "name": "Bartolomeo",
+      "cleanName": "Bartolomeo",
+      "url": "https://www.tcgplayer.com/product/634480/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-bartolomeo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634480_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Supernovas;Dressrosa",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.6,
+          "midPrice": 0.73,
+          "highPrice": 1.97,
+          "marketPrice": 0.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634481,
+      "cardId": "OP11-057",
+      "name": "Pedro",
+      "cleanName": "Pedro",
+      "url": "https://www.tcgplayer.com/product/634481/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-pedro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634481_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Slash",
+      "effectText": "If you have 4 or less cards in your hand, this Character gains [Blocker].<br>\r\n<br>\r\n<em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.39,
+          "highPrice": 2.99,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634482,
+      "cardId": "OP11-058",
+      "name": "Monkey.D.Luffy (058)",
+      "cleanName": "MonkeyDLuffy 058",
+      "url": "https://www.tcgplayer.com/product/634482/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-monkeydluffy-058",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634482_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "If you have 5 or more cards in your hand, this Character cannot attack.<br>\r\n<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 17.99,
+          "midPrice": 21,
+          "highPrice": 100,
+          "marketPrice": 6.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634483,
+      "cardId": "OP11-059",
+      "name": "Gum-Gum King Cobra",
+      "cleanName": "Gum Gum King Cobra",
+      "url": "https://www.tcgplayer.com/product/634483/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-gum-gum-king-cobra",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634483_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 4 or less cards in your hand, that card gains an additional +2000 power during this battle.<br>\r\n<br>\r\n[Trigger] Return up to 1 Character with a cost of 2 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.24,
+          "midPrice": 0.5,
+          "highPrice": 11.3,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634484,
+      "cardId": "OP11-061",
+      "name": "Gum-Gum Jet Culverin",
+      "cleanName": "Gum Gum Jet Culverin",
+      "url": "https://www.tcgplayer.com/product/634484/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-gum-gum-jet-culverin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634484_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] Place up to 1 of your opponent's Characters with a base cost of 4 or less at the bottom of the owner's deck.<br>\r\n<br>\r\n[Trigger] Place up to 1 Character with a cost of 1 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 3.53,
+          "midPrice": 3.96,
+          "highPrice": 4.99,
+          "marketPrice": 3.68,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634485,
+      "cardId": "OP11-063",
+      "name": "Little Sadi",
+      "cleanName": "Little Sadi",
+      "url": "https://www.tcgplayer.com/product/634485/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-little-sadi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634485_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> If your Leader has the \"Impel Down\" type, rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.24,
+          "midPrice": 0.47,
+          "highPrice": 4.99,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634486,
+      "cardId": "OP11-064",
+      "name": "Saldeath",
+      "cleanName": "Saldeath",
+      "url": "https://www.tcgplayer.com/product/634486/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-saldeath",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634486_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.39,
+          "highPrice": 2,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634487,
+      "cardId": "OP11-065",
+      "name": "Charlotte Anana",
+      "cleanName": "Charlotte Anana",
+      "url": "https://www.tcgplayer.com/product/634487/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-anana",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634487_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "If you have a purple \"Big Mom Pirates\" type Character other than [Charlotte Anana], this Character gains [Blocker].<br>\r\n<br>\r\n<em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 3.38,
+          "midPrice": 3.99,
+          "highPrice": 5.35,
+          "marketPrice": 4.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634488,
+      "cardId": "OP11-068",
+      "name": "Charlotte Daifuku",
+      "cleanName": "Charlotte Daifuku",
+      "url": "https://www.tcgplayer.com/product/634488/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-daifuku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634488_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.43,
+          "midPrice": 0.99,
+          "highPrice": 20,
+          "marketPrice": 1.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634489,
+      "cardId": "OP11-072",
+      "name": "Charlotte Mont-d'or",
+      "cleanName": "Charlotte Mont dor",
+      "url": "https://www.tcgplayer.com/product/634489/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-mont-dor",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634489_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>DON!! 1, You may rest this Character:</strong> Your opponent places 2 cards from their trash at the bottom of their deck in any order. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.74,
+          "midPrice": 2.18,
+          "highPrice": 11.99,
+          "marketPrice": 2.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634490,
+      "cardId": "OP11-074",
+      "name": "Streusen",
+      "cleanName": "Streusen",
+      "url": "https://www.tcgplayer.com/product/634490/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-streusen",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634490_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>DON!! 1, You may rest this Character:</strong> Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.59,
+          "midPrice": 1.39,
+          "highPrice": 11.3,
+          "marketPrice": 1.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634491,
+      "cardId": "OP11-075",
+      "name": "Jaguar.D.Saul",
+      "cleanName": "JaguarDSaul",
+      "url": "https://www.tcgplayer.com/product/634491/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-jaguardsaul",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634491_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Giant;Former Navy;Ohara",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is [Nico Robin] and you have 7 or more DON!! cards on your field, draw 2 cards.<br>\r\n<br>\r\n[Trigger] Activate this card's [On Play] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.35,
+          "midPrice": 0.99,
+          "highPrice": 18.99,
+          "marketPrice": 0.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634492,
+      "cardId": "OP11-076",
+      "name": "Hannyabal",
+      "cleanName": "Hannyabal",
+      "url": "https://www.tcgplayer.com/product/634492/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-hannyabal",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634492_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Slash",
+      "effectText": "[Blocker]<br>\r\n<br>\r\n[On Play] If your Leader has the \"Impel Down\" type, play up to 1 \"Impel Down\" type Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.35,
+          "highPrice": 11.3,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634493,
+      "cardId": "OP11-077",
+      "name": "Randolph",
+      "cleanName": "Randolph",
+      "url": "https://www.tcgplayer.com/product/634493/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-randolph",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634493_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Big Mom Pirates;Homies",
+      "attribute": "Slash",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, up to 1 of your \"Big Mom Pirates\" type Characters gains +2 cost until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.49,
+          "highPrice": 11.3,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634494,
+      "cardId": "OP11-078",
+      "name": "Decuplets",
+      "cleanName": "Decuplets",
+      "url": "https://www.tcgplayer.com/product/634494/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-decuplets",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634494_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.39,
+          "midPrice": 0.65,
+          "highPrice": 3.5,
+          "marketPrice": 0.62,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634495,
+      "cardId": "OP11-079",
+      "name": "When Two Men Are Fighting the Last Thing I Need Is Some Half-Hearted Assistance!!!!",
+      "cleanName": "When Two Men Are Fighting the Last Thing I Need Is Some Half Hearted Assistance",
+      "url": "https://www.tcgplayer.com/product/634495/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-when-two-men-are-fighting-the-last-thing-i-need-is-some-half-hearted-assistance",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634495_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, up to 1 of your Leader or Character cards gains +5000 power during this battle.<br>\r\n<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.2,
+          "midPrice": 1.62,
+          "highPrice": 8.99,
+          "marketPrice": 1.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634496,
+      "cardId": "OP11-081",
+      "name": "Cognac Mama-Mash",
+      "cleanName": "Cognac Mama Mash",
+      "url": "https://www.tcgplayer.com/product/634496/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-cognac-mama-mash",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634496_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Four Emperors;Big Mom Pirates",
+      "attribute": null,
+      "effectText": "[Main] Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, K.O. up to 1 of your opponent's Characters with a base cost of 8 or less.<br>\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.43,
+          "highPrice": 1.49,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634497,
+      "cardId": "OP11-085",
+      "name": "Kurozumi Orochi",
+      "cleanName": "Kurozumi Orochi",
+      "url": "https://www.tcgplayer.com/product/634497/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-kurozumi-orochi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634497_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Kurozumi Clan",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Add up to 1 \"SMILE\" type card with a cost of 5 or less from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.5,
+          "highPrice": 2.49,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634498,
+      "cardId": "OP11-086",
+      "name": "Coribou",
+      "cleanName": "Coribou",
+      "url": "https://www.tcgplayer.com/product/634498/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-coribou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634498_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Caribou Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] Trash 1 card from your hand.<br>\r\n<br>\r\n[Activate: Main] <strong>You may trash this Character:</strong> Play up to 1 [Caribou] with a cost of 4 or less from your trash.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 1.99,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634499,
+      "cardId": "OP11-087",
+      "name": "Miss Sarahebi",
+      "cleanName": "Miss Sarahebi",
+      "url": "https://www.tcgplayer.com/product/634499/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-miss-sarahebi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634499_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.99,
+          "highPrice": 65,
+          "marketPrice": 0.38,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634500,
+      "cardId": "OP11-088",
+      "name": "Shu",
+      "cleanName": "Shu",
+      "url": "https://www.tcgplayer.com/product/634500/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-shu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634500_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n<br>\r\n[Once Per Turn] This effect can be activated when your opponent's Character attacks. If that Character has the (Slash) attribute, this Character gains +5000 power during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.49,
+          "highPrice": 11.3,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634501,
+      "cardId": "OP11-089",
+      "name": "Black Maria",
+      "cleanName": "Black Maria",
+      "url": "https://www.tcgplayer.com/product/634501/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-black-maria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634501_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.42,
+          "midPrice": 2.3,
+          "highPrice": 40,
+          "marketPrice": 0.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634502,
+      "cardId": "OP11-090",
+      "name": "Briscola",
+      "cleanName": "Briscola",
+      "url": "https://www.tcgplayer.com/product/634502/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-briscola",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634502_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.35,
+          "highPrice": 15,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634503,
+      "cardId": "OP11-091",
+      "name": "Berry Good",
+      "cleanName": "Berry Good",
+      "url": "https://www.tcgplayer.com/product/634503/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-berry-good",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634503_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Your opponent places 3 Events from their trash at the bottom of their deck in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2.94,
+          "midPrice": 4.33,
+          "highPrice": 11,
+          "marketPrice": 4.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634504,
+      "cardId": "OP11-093",
+      "name": "Bogard",
+      "cleanName": "Bogard",
+      "url": "https://www.tcgplayer.com/product/634504/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-bogard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634504_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.9,
+          "midPrice": 1.2,
+          "highPrice": 3.99,
+          "marketPrice": 1.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634505,
+      "cardId": "OP11-094",
+      "name": "Morgan",
+      "cleanName": "Morgan",
+      "url": "https://www.tcgplayer.com/product/634505/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-morgan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634505_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.5,
+          "highPrice": 11.3,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634506,
+      "cardId": "OP11-096",
+      "name": "Ripper",
+      "cleanName": "Ripper",
+      "url": "https://www.tcgplayer.com/product/634506/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-ripper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634506_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy;East Blue",
+      "attribute": "Wisdom",
+      "effectText": "If you have a black \"Navy\" type Character other than [Ripper], this Character gains [Blocker].<br>\r\n<br>\r\n<em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 6.99,
+          "midPrice": 11,
+          "highPrice": 15.54,
+          "marketPrice": 6.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634507,
+      "cardId": "OP11-097",
+      "name": "After All These Years I'm Losing My Edge!!!",
+      "cleanName": "After All These Years Im Losing My Edge",
+      "url": "https://www.tcgplayer.com/product/634507/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-after-all-these-years-im-losing-my-edge",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634507_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +1000 power during this battle. Then, if you have 10 or more cards in your trash, add up to 1 black Character card with a cost of 3 or less from your trash to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 21.99,
+          "midPrice": 29.63,
+          "highPrice": 85,
+          "marketPrice": 20.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634508,
+      "cardId": "OP11-098",
+      "name": "Blue Hole",
+      "cleanName": "Blue Hole",
+      "url": "https://www.tcgplayer.com/product/634508/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-blue-hole",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634508_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may trash 3 cards from the top of your deck:</strong> K.O. up to 1 of your opponent's Characters with a cost of 2 or less.<br>\r\n<br>\r\n[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.47,
+          "highPrice": 3.99,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634509,
+      "cardId": "OP11-100",
+      "name": "Otohime",
+      "cleanName": "Otohime",
+      "url": "https://www.tcgplayer.com/product/634509/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-otohime",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634509_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-down:</strong> Draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.99,
+          "midPrice": 30.5,
+          "highPrice": 60,
+          "marketPrice": 1.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634510,
+      "cardId": "OP11-102",
+      "name": "Camie",
+      "cleanName": "Camie",
+      "url": "https://www.tcgplayer.com/product/634510/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-camie",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634510_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[Your Turn] [Once Per Turn] This effect can be activated when your opponent activates an Event or [Trigger]. If your opponent has 2 or more Life cards, trash 1 card from the top of each of your and your opponent's Life cards.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 9.9,
+          "midPrice": 11.48,
+          "highPrice": 12.38,
+          "marketPrice": 2.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634511,
+      "cardId": "OP11-103",
+      "name": "Long-Jaw Neptunian",
+      "cleanName": "Long Jaw Neptunian",
+      "url": "https://www.tcgplayer.com/product/634511/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-long-jaw-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634511_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>If your Leader is [Shirahoshi], you may rest this Character and turn 1 card from the top of your Life cards face-down:</strong> K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.48,
+          "midPrice": 0.99,
+          "highPrice": 3.49,
+          "marketPrice": 0.56,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634512,
+      "cardId": "OP11-105",
+      "name": "Charlotte Chiffon",
+      "cleanName": "Charlotte Chiffon",
+      "url": "https://www.tcgplayer.com/product/634512/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-charlotte-chiffon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634512_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Firetank Pirates;Former Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.5,
+          "midPrice": 0.99,
+          "highPrice": 9.89,
+          "marketPrice": 0.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634513,
+      "cardId": "OP11-107",
+      "name": "Topknot Neptunian",
+      "cleanName": "Topknot Neptunian",
+      "url": "https://www.tcgplayer.com/product/634513/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-topknot-neptunian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634513_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Neptunian",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n<br>\r\n[Activate: Main] [Once Per Turn] <strong>If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-down:</strong> Set this Character as active at the end of this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.4,
+          "midPrice": 1.48,
+          "highPrice": 7.99,
+          "marketPrice": 1.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634514,
+      "cardId": "OP11-109",
+      "name": "Pappag",
+      "cleanName": "Pappag",
+      "url": "https://www.tcgplayer.com/product/634514/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-pappag",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634514_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have [Camie], draw 2 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.23,
+          "midPrice": 0.5,
+          "highPrice": 11.3,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634515,
+      "cardId": "OP11-110",
+      "name": "Fukaboshi",
+      "cleanName": "Fukaboshi",
+      "url": "https://www.tcgplayer.com/product/634515/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-fukaboshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634515_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Slash",
+      "effectText": "If this Character would be K.O.'d, you may rest 1 of your [Fish-Man Island] or your [Shirahoshi] Leader instead.<br>\r\n<br>\r\n[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.46,
+          "highPrice": 8.99,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634516,
+      "cardId": "OP11-111",
+      "name": "Mamboshi",
+      "cleanName": "Mamboshi",
+      "url": "https://www.tcgplayer.com/product/634516/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-mamboshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634516_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.36,
+          "midPrice": 0.55,
+          "highPrice": 4.99,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634517,
+      "cardId": "OP11-112",
+      "name": "Megalo",
+      "cleanName": "Megalo",
+      "url": "https://www.tcgplayer.com/product/634517/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-megalo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634517_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Fish-Man Island",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n<br>\r\n[Opponent's Turn] If your Leader is [Shirahoshi], this Character gains +4000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2.21,
+          "midPrice": 2.44,
+          "highPrice": 2.99,
+          "marketPrice": 2.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634519,
+      "cardId": "OP11-113",
+      "name": "Ryuboshi",
+      "cleanName": "Ryuboshi",
+      "url": "https://www.tcgplayer.com/product/634519/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-ryuboshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634519_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.34,
+          "highPrice": 3.49,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634520,
+      "cardId": "OP11-115",
+      "name": "You're Just Not My Type!",
+      "cleanName": "Youre Just Not My Type",
+      "url": "https://www.tcgplayer.com/product/634520/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-youre-just-not-my-type",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634520_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Counter] If your Leader is [Shirahoshi], up to 1 of your Leader or Character cards gains +4000 power during this battle.<br>\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 3.86,
+          "midPrice": 5.21,
+          "highPrice": 18.49,
+          "marketPrice": 5.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634521,
+      "cardId": "OP11-116",
+      "name": "Merman Combat Ultramarine",
+      "cleanName": "Merman Combat Ultramarine",
+      "url": "https://www.tcgplayer.com/product/634521/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-merman-combat-ultramarine",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634521_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "6",
+      "life": null,
+      "subtypes": "Merfolk;Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Main] Add up to 1 Character with a cost of 6 or less to the top or bottom of the owner's Life cards face-up.<br>\r\n<br>\r\n[Trigger] Add up to 1 of your opponent's Characters with a cost of 4 or less to the top or bottom of the owner's Life cards face-up.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.75,
+          "midPrice": 1.26,
+          "highPrice": 11.3,
+          "marketPrice": 1.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634522,
+      "cardId": "OP11-117",
+      "name": "Fish-Man Island",
+      "cleanName": "Fish Man Island",
+      "url": "https://www.tcgplayer.com/product/634522/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-fish-man-island",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634522_200w.jpg",
+      "groupId": 24242,
+      "setCode": "OP11 RE",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man Island",
+      "attribute": null,
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-up:</strong> Up to 1 of your \"Neptunian\", \"Fish-Man\", or \"Merfolk\" type Characters gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.6,
+          "highPrice": 7.99,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 1,
+  "errors": []
+}

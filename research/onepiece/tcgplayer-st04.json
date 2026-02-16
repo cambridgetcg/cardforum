@@ -1,0 +1,532 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 4: Animal Kingdom Pirates",
+  "groupId": 3190,
+  "setCode": "ST04",
+  "totalProducts": 19,
+  "totalCards": 17,
+  "scrapedAt": "2026-02-15T22:54:27.899Z",
+  "durationMs": 111,
+  "cards": [
+    {
+      "productId": 288269,
+      "cardId": "ST04-001",
+      "name": "Kaido (001)",
+      "cleanName": "Kaido 001",
+      "url": "https://www.tcgplayer.com/product/288269/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-kaido-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288269_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] [Once Per Turn] DON!! -7 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Trash <span style=\"color:red\">up to</span> 1 of your opponent's Life cards.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.99,
+          "midPrice": 7.46,
+          "highPrice": 20,
+          "marketPrice": 7.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288271,
+      "cardId": "ST04-002",
+      "name": "Ulti",
+      "cleanName": "Ulti",
+      "url": "https://www.tcgplayer.com/product/288271/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-ulti",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288271_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play <span style=\"color:red\">up to</span> 1 [Page One] card with a cost of 4 or less from your hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.14,
+          "midPrice": 0.3,
+          "highPrice": 3.94,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288274,
+      "cardId": "ST04-003",
+      "name": "Kaido (003)",
+      "cleanName": "Kaido 003",
+      "url": "https://www.tcgplayer.com/product/288274/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-kaido-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288274_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -5 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. <span style=\"color:red\">up to</span> 1 of your opponent's Characters with a cost of 6 or less. \r\n<br>This Character gains [Rush] during this turn. \r\n<br>(This card can attack on the turn in which it is played.)\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 12,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.35,
+          "highPrice": 3.99,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288276,
+      "cardId": "ST04-004",
+      "name": "King",
+      "cleanName": "King",
+      "url": "https://www.tcgplayer.com/product/288276/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-king",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288276_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. <span style=\"color:red\">up to</span> 1 of your opponent's Characters with a cost of 4 or less.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.5,
+          "highPrice": 25,
+          "marketPrice": 0.38,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288278,
+      "cardId": "ST04-005",
+      "name": "Queen",
+      "cleanName": "Queen",
+      "url": "https://www.tcgplayer.com/product/288278/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-queen",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288278_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em> \r\n<br>[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.31,
+          "highPrice": 20,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288281,
+      "cardId": "ST04-006",
+      "name": "Sasaki",
+      "cleanName": "Sasaki",
+      "url": "https://www.tcgplayer.com/product/288281/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-sasaki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288281_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.17,
+          "highPrice": 1.35,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288283,
+      "cardId": "ST04-007",
+      "name": "Sheepshead",
+      "cleanName": "Sheepshead",
+      "url": "https://www.tcgplayer.com/product/288283/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-sheepshead",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288283_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288285,
+      "cardId": "ST04-008",
+      "name": "Jack",
+      "cleanName": "Jack",
+      "url": "https://www.tcgplayer.com/product/288285/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-jack",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288285_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] You may trash 1 card from your hand: Add <span style=\"color:red\">up to</span> 1 <span style=\"color:red\">DON!!</span> card from your DON!! deck and set it as active.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.24,
+          "highPrice": 2,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288287,
+      "cardId": "ST04-009",
+      "name": "Ginrummy",
+      "cleanName": "Ginrummy",
+      "url": "https://www.tcgplayer.com/product/288287/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-ginrummy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288287_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288292,
+      "cardId": "ST04-010",
+      "name": "Who's.Who",
+      "cleanName": "WhosWho",
+      "url": "https://www.tcgplayer.com/product/288292/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-whoswho",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288292_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. <span style=\"color:red\">up to</span> 1 of your opponent's Characters with a cost of 3 or less. \r\n<br>[Trigger] Play this card.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 1.5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288293,
+      "cardId": "ST04-011",
+      "name": "Black Maria",
+      "cleanName": "Black Maria",
+      "url": "https://www.tcgplayer.com/product/288293/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-black-maria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288293_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 2.45,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288294,
+      "cardId": "ST04-012",
+      "name": "Page One",
+      "cleanName": "Page One",
+      "url": "https://www.tcgplayer.com/product/288294/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-page-one",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288294_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 3.5,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288295,
+      "cardId": "ST04-013",
+      "name": "X.Drake",
+      "cleanName": "XDrake",
+      "url": "https://www.tcgplayer.com/product/288295/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-xdrake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288295_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Drake Pirates;Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.19,
+          "highPrice": 1.35,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288296,
+      "cardId": "ST04-014",
+      "name": "Lead Performer \"Disaster\"",
+      "cleanName": "Lead Performer Disaster",
+      "url": "https://www.tcgplayer.com/product/288296/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-lead-performer-disaster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288296_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": null,
+      "effectText": "[Main] Draw 1 card, then add <span style=\"color:red\">up to</span> 1 <span style=\"color:red\">DON!!</span> card from your DON!! deck and set it as active. [Trigger] <br>Activate this card's [Main] effect.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.31,
+          "midPrice": 0.65,
+          "highPrice": 7.65,
+          "marketPrice": 0.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288297,
+      "cardId": "ST04-015",
+      "name": "Brachio Bomber",
+      "cleanName": "Brachio Bomber",
+      "url": "https://www.tcgplayer.com/product/288297/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-brachio-bomber",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288297_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": null,
+      "effectText": "[Main] K.O. <span style=\"color:red\">up to</span> 1 of your opponent's Characters with a cost <span style=\"color:red\">of</span> 6 or less, then add <span style=\"color:red\">up to</span> 1 DON!! card from your DON!! <span style=\"color:red\">deck</span> and set it as active. \r\n<br>[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 1.41,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288298,
+      "cardId": "ST04-016",
+      "name": "Blast Breath",
+      "cleanName": "Blast Breath",
+      "url": "https://www.tcgplayer.com/product/288298/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-blast-breath",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288298_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Counter] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: <span style=\"color:red\">Up to 1 of your</span> Leader or <span style=\"color:red\">Character cards</span> gains +4000 power during this battle.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 8.4,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288299,
+      "cardId": "ST04-017",
+      "name": "Onigashima Island",
+      "cleanName": "Onigashima Island",
+      "url": "https://www.tcgplayer.com/product/288299/one-piece-card-game-starter-deck-4-animal-kingdom-pirates-onigashima-island",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288299_200w.jpg",
+      "groupId": 3190,
+      "setCode": "ST04",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Purple",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage</strong>: If your Leader has the {Animal Kingdom Pirates} type, add <span style=\"color:red\">up to</span> 1 DON!! card from your DON!! deck and rest it.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 0.44,
+          "highPrice": 1.95,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

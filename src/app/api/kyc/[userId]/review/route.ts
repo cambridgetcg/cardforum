@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
+import { resolveRole, hasRole } from "@/server/middleware/rbac";
 import { reviewKYC, suspendKYC, revokeKYC, reinstateKYC } from "@/server/services/kyc.service";
 import { z } from "zod";
 
@@ -19,10 +20,10 @@ export async function POST(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // TODO: Add proper admin role check
-  // if (!session.user.isAdmin) {
-  //   return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-  // }
+  const role = await resolveRole(session.user.id);
+  if (!hasRole(role, "ADMIN")) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
 
   const { userId } = await params;
   const body = await req.json();

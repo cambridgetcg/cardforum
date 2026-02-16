@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { createRedemptionSchema } from "@/lib/validators";
 import {
   requestRedemption,
@@ -34,10 +35,26 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    // Auto-detect country from default shipping address if not provided
+    let redeemerCountry = parsed.data.redeemerCountry;
+    if (!redeemerCountry) {
+      const defaultAddress = await db.shippingAddress.findFirst({
+        where: { userId: session.user.id, isDefault: true },
+        select: { country: true },
+      });
+      if (!defaultAddress?.country) {
+        return NextResponse.json(
+          { error: "No shipping address found. Add an address or provide redeemerCountry." },
+          { status: 400 },
+        );
+      }
+      redeemerCountry = defaultAddress.country;
+    }
+
     const redemption = await requestRedemption({
       tokenId: parsed.data.tokenId,
       userId: session.user.id,
-      redeemerCountry: parsed.data.redeemerCountry,
+      redeemerCountry,
       preferredVaultId: parsed.data.preferredVaultId,
     });
     return NextResponse.json(redemption, { status: 201 });

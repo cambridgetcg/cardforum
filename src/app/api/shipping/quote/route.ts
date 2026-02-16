@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const quote = estimateInternationalCost(cardValueCents);
+  const quote = await estimateInternationalCost(cardValueCents);
 
   return NextResponse.json({
     isInternational: true,

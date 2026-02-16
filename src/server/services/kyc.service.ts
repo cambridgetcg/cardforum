@@ -5,10 +5,7 @@ import {
   getKYCLevel,
   kycLevelMeetsMinimum,
 } from "@/types/domain";
-import {
-  KYC_BASIC_LISTING_CAP_CENTS,
-  KYC_BASIC_TRADE_CAP_CENTS,
-} from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import type { SubmitBasicKYCInput, SubmitEnhancedKYCInput, ReviewKYCInput } from "@/lib/validators";
 
 // ─── User-Facing ─────────────────────────────────────
@@ -414,9 +411,10 @@ export async function assertCanCreateListing(
     throw new Error("KYC verification required to create listings. Please complete Basic KYC.");
   }
 
-  if (askPriceCents > KYC_BASIC_LISTING_CAP_CENTS && !kycLevelMeetsMinimum(level, "ENHANCED")) {
+  const listingCap = await getConfig("kyc.basic_listing_cap_cents");
+  if (askPriceCents > listingCap && !kycLevelMeetsMinimum(level, "ENHANCED")) {
     throw new Error(
-      `Listings over $${KYC_BASIC_LISTING_CAP_CENTS / 100} require Enhanced KYC verification.`,
+      `Listings over $${listingCap / 100} require Enhanced KYC verification.`,
     );
   }
 }
@@ -435,9 +433,10 @@ export async function assertCanTrade(
     throw new Error("KYC verification required to trade. Please complete Basic KYC.");
   }
 
-  if (tradeValueCents > KYC_BASIC_TRADE_CAP_CENTS && !kycLevelMeetsMinimum(level, "ENHANCED")) {
+  const tradeCap = await getConfig("kyc.basic_trade_cap_cents");
+  if (tradeValueCents > tradeCap && !kycLevelMeetsMinimum(level, "ENHANCED")) {
     throw new Error(
-      `Trades over $${KYC_BASIC_TRADE_CAP_CENTS / 100} require Enhanced KYC verification.`,
+      `Trades over $${tradeCap / 100} require Enhanced KYC verification.`,
     );
   }
 }

@@ -1,0 +1,1064 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Ultra Deck: The Three Brothers",
+  "groupId": 23349,
+  "setCode": "ST13",
+  "totalProducts": 38,
+  "totalCards": 35,
+  "scrapedAt": "2026-02-15T22:54:37.607Z",
+  "durationMs": 140,
+  "cards": [
+    {
+      "productId": 543603,
+      "cardId": "ST13-001",
+      "name": "Sabo (001)",
+      "cleanName": "Sabo 001",
+      "url": "https://www.tcgplayer.com/product/543603/one-piece-card-game-ultra-deck-the-three-brothers-sabo-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543603_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[DON!! x1][Activate: Main][Once Per Turn] <strong>You may add 1 of your Characters with a cost of 3 or more and 7000 power or more to the top of your Life cards face-up</strong>: Up to 1 of your Characters gains +2000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 5,
+          "highPrice": 25,
+          "marketPrice": 2.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543622,
+      "cardId": "ST13-001",
+      "name": "Sabo (001) (Parallel)",
+      "cleanName": "Sabo 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/543622/one-piece-card-game-ultra-deck-the-three-brothers-sabo-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543622_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[DON!! x1][Activate: Main][Once Per Turn] <strong>You may add 1 of your Characters with a cost of 3 or more and 7000 power or more to the top of your Life cards face-up</strong>: Up to 1 of your Characters gains +2000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 13.93,
+          "midPrice": 21.96,
+          "highPrice": 75,
+          "marketPrice": 16.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543604,
+      "cardId": "ST13-002",
+      "name": "Portgas.D.Ace (002)",
+      "cleanName": "PortgasDAce 002",
+      "url": "https://www.tcgplayer.com/product/543604/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543604_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[DON!! x2][Activate: Main][Once Per Turn] Look at 5 cards from the top of your deck and add up to 1 Character card with a cost of 5 to the top of your Life cards face-up. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[End of Your Turn] Trash all your face-up Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.75,
+          "midPrice": 2.43,
+          "highPrice": 25,
+          "marketPrice": 2.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543623,
+      "cardId": "ST13-002",
+      "name": "Portgas.D.Ace (002) (Parallel)",
+      "cleanName": "PortgasDAce 002 Parallel",
+      "url": "https://www.tcgplayer.com/product/543623/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-002-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543623_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[DON!! x2][Activate: Main][Once Per Turn] Look at 5 cards from the top of your deck and add up to 1 Character card with a cost of 5 to the top of your Life cards face-up. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[End of Your Turn] Trash all your face-up Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 24,
+          "midPrice": 30,
+          "highPrice": 100,
+          "marketPrice": 26.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543605,
+      "cardId": "ST13-003",
+      "name": "Monkey.D.Luffy (003)",
+      "cleanName": "MonkeyDLuffy 003",
+      "url": "https://www.tcgplayer.com/product/543605/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543605_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "Your face-up Life cards are placed at the bottom of your deck instead of being added to your hand, according to the rules.\r\n<br>\r\n[DON!! x2][Activate: Main][Once Per Turn]<strong>You may trash 1 card from your hand</strong>: If you have 0 Life cards, add up to 2 Character cards with a cost of 5 from your hand or trash to the top of your Life cards face-up.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.75,
+          "midPrice": 7.27,
+          "highPrice": 50,
+          "marketPrice": 5.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543624,
+      "cardId": "ST13-003",
+      "name": "Monkey.D.Luffy (003) (Parallel)",
+      "cleanName": "MonkeyDLuffy 003 Parallel",
+      "url": "https://www.tcgplayer.com/product/543624/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-003-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543624_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "Your face-up Life cards are placed at the bottom of your deck instead of being added to your hand, according to the rules.\r\n<br>\r\n[DON!! x2][Activate: Main][Once Per Turn]<strong>You may trash 1 card from your hand</strong>: If you have 0 Life cards, add up to 2 Character cards with a cost of 5 from your hand or trash to the top of your Life cards face-up.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 48,
+          "midPrice": 59.99,
+          "highPrice": 255,
+          "marketPrice": 51.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543606,
+      "cardId": "ST13-004",
+      "name": "Edward.Newgate",
+      "cleanName": "EdwardNewgate",
+      "url": "https://www.tcgplayer.com/product/543606/one-piece-card-game-ultra-deck-the-three-brothers-edwardnewgate",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543606_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Add 1 card from the top of your deck to the top of your Life cards. Then, look at all your Life cards; place 1 card at the top of your deck and place the rest back in your Life area in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543625,
+      "cardId": "ST13-004",
+      "name": "Edward.Newgate (Parallel)",
+      "cleanName": "EdwardNewgate Parallel",
+      "url": "https://www.tcgplayer.com/product/543625/one-piece-card-game-ultra-deck-the-three-brothers-edwardnewgate-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543625_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Add 1 card from the top of your deck to the top of your Life cards. Then, look at all your Life cards; place 1 card at the top of your deck and place the rest back in your Life area in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.25,
+          "midPrice": 4.16,
+          "highPrice": 15,
+          "marketPrice": 2.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543607,
+      "cardId": "ST13-005",
+      "name": "Emporio.Ivankov",
+      "cleanName": "EmporioIvankov",
+      "url": "https://www.tcgplayer.com/product/543607/one-piece-card-game-ultra-deck-the-three-brothers-emporioivankov",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543607_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] <strong>You may trash 1 card from the top or bottom of your Life cards</strong>: Reveal up to 1 Character card with a cost of 5 from your hand and add it to the top of your Life cards face-down.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.33,
+          "highPrice": 5,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543626,
+      "cardId": "ST13-005",
+      "name": "Emporio.Ivankov (Parallel)",
+      "cleanName": "EmporioIvankov Parallel",
+      "url": "https://www.tcgplayer.com/product/543626/one-piece-card-game-ultra-deck-the-three-brothers-emporioivankov-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543626_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] <strong>You may trash 1 card from the top or bottom of your Life cards</strong>: Reveal up to 1 Character card with a cost of 5 from your hand and add it to the top of your Life cards face-down.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.46,
+          "midPrice": 2,
+          "highPrice": 50,
+          "marketPrice": 1.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543608,
+      "cardId": "ST13-006",
+      "name": "Curly.Dadan",
+      "cleanName": "CurlyDadan",
+      "url": "https://www.tcgplayer.com/product/543608/one-piece-card-game-ultra-deck-the-three-brothers-curlydadan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543608_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Play up to 1 each of [Sabo], [Portgas.D.Ace], and [Monkey.D.Luffy] with a cost of 2 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 1.98,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543627,
+      "cardId": "ST13-006",
+      "name": "Curly.Dadan (Parallel)",
+      "cleanName": "CurlyDadan Parallel",
+      "url": "https://www.tcgplayer.com/product/543627/one-piece-card-game-ultra-deck-the-three-brothers-curlydadan-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543627_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Play up to 1 each of [Sabo], [Portgas.D.Ace], and [Monkey.D.Luffy] with a cost of 2 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.51,
+          "highPrice": 50,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543609,
+      "cardId": "ST13-007",
+      "name": "Sabo (007)",
+      "cleanName": "Sabo 007",
+      "url": "https://www.tcgplayer.com/product/543609/one-piece-card-game-ultra-deck-the-three-brothers-sabo-007",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543609_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Sabo] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543628,
+      "cardId": "ST13-007",
+      "name": "Sabo (007) (Parallel)",
+      "cleanName": "Sabo 007 Parallel",
+      "url": "https://www.tcgplayer.com/product/543628/one-piece-card-game-ultra-deck-the-three-brothers-sabo-007-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543628_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Sabo] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.75,
+          "midPrice": 4.31,
+          "highPrice": 21,
+          "marketPrice": 3.7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543610,
+      "cardId": "ST13-008",
+      "name": "Sabo (008)",
+      "cleanName": "Sabo 008",
+      "url": "https://www.tcgplayer.com/product/543610/one-piece-card-game-ultra-deck-the-three-brothers-sabo-008",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543610_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[On Play]<strong>You may trash 1 card from the top or bottom of your Life cards</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.4,
+          "midPrice": 0.89,
+          "highPrice": 10,
+          "marketPrice": 0.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543629,
+      "cardId": "ST13-008",
+      "name": "Sabo (008) (Parallel)",
+      "cleanName": "Sabo 008 Parallel",
+      "url": "https://www.tcgplayer.com/product/543629/one-piece-card-game-ultra-deck-the-three-brothers-sabo-008-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543629_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[On Play]<strong>You may trash 1 card from the top or bottom of your Life cards</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.32,
+          "midPrice": 5.59,
+          "highPrice": 21.88,
+          "marketPrice": 4.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543611,
+      "cardId": "ST13-009",
+      "name": "Shanks",
+      "cleanName": "Shanks",
+      "url": "https://www.tcgplayer.com/product/543611/one-piece-card-game-ultra-deck-the-three-brothers-shanks",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543611_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may turn 1 of your face-up Life cards face-down</strong>: If your opponent has 7 or more cards in their hand, trash up to 1 card from the top of your opponent's Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543630,
+      "cardId": "ST13-009",
+      "name": "Shanks (Parallel)",
+      "cleanName": "Shanks Parallel",
+      "url": "https://www.tcgplayer.com/product/543630/one-piece-card-game-ultra-deck-the-three-brothers-shanks-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543630_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may turn 1 of your face-up Life cards face-down</strong>: If your opponent has 7 or more cards in their hand, trash up to 1 card from the top of your opponent's Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 4.25,
+          "highPrice": 16.5,
+          "marketPrice": 3.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543612,
+      "cardId": "ST13-010",
+      "name": "Portgas.D.Ace (010)",
+      "cleanName": "PortgasDAce 010",
+      "url": "https://www.tcgplayer.com/product/543612/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-010",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543612_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Portgas.D.Ace] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.28,
+          "highPrice": 2.25,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543631,
+      "cardId": "ST13-010",
+      "name": "Portgas.D.Ace (010) (Parallel)",
+      "cleanName": "PortgasDAce 010 Parallel",
+      "url": "https://www.tcgplayer.com/product/543631/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-010-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543631_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Portgas.D.Ace] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.64,
+          "midPrice": 7.5,
+          "highPrice": 26.25,
+          "marketPrice": 5.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543613,
+      "cardId": "ST13-011",
+      "name": "Portgas.D.Ace (011)",
+      "cleanName": "PortgasDAce 011",
+      "url": "https://www.tcgplayer.com/product/543613/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-011",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543613_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or less Life cards, this Character gains [Rush].\r\n<br>\r\n<em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.24,
+          "midPrice": 2.98,
+          "highPrice": 50,
+          "marketPrice": 2.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543632,
+      "cardId": "ST13-011",
+      "name": "Portgas.D.Ace (011) (Parallel)",
+      "cleanName": "PortgasDAce 011 Parallel",
+      "url": "https://www.tcgplayer.com/product/543632/one-piece-card-game-ultra-deck-the-three-brothers-portgasdace-011-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543632_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or less Life cards, this Character gains [Rush].\r\n<br>\r\n<em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.5,
+          "midPrice": 11.58,
+          "highPrice": 39.99,
+          "marketPrice": 10.61,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543614,
+      "cardId": "ST13-012",
+      "name": "Makino",
+      "cleanName": "Makino",
+      "url": "https://www.tcgplayer.com/product/543614/one-piece-card-game-ultra-deck-the-three-brothers-makino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543614_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Look at all of your Life cards and place them back in your Life area in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543633,
+      "cardId": "ST13-012",
+      "name": "Makino (Parallel)",
+      "cleanName": "Makino Parallel",
+      "url": "https://www.tcgplayer.com/product/543633/one-piece-card-game-ultra-deck-the-three-brothers-makino-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543633_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Look at all of your Life cards and place them back in your Life area in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.21,
+          "midPrice": 4.11,
+          "highPrice": 8,
+          "marketPrice": 3.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543615,
+      "cardId": "ST13-013",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/543615/one-piece-card-game-ultra-deck-the-three-brothers-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543615_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Sabo], [Portgas.D.Ace], or [Monkey.D.Luffy] with a cost of 5 or less and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.89,
+          "midPrice": 1.5,
+          "highPrice": 50,
+          "marketPrice": 1.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543634,
+      "cardId": "ST13-013",
+      "name": "Monkey.D.Garp (Parallel)",
+      "cleanName": "MonkeyDGarp Parallel",
+      "url": "https://www.tcgplayer.com/product/543634/one-piece-card-game-ultra-deck-the-three-brothers-monkeydgarp-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543634_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Sabo], [Portgas.D.Ace], or [Monkey.D.Luffy] with a cost of 5 or less and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.79,
+          "midPrice": 7.99,
+          "highPrice": 18.6,
+          "marketPrice": 7.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543616,
+      "cardId": "ST13-014",
+      "name": "Monkey.D.Luffy (014)",
+      "cleanName": "MonkeyDLuffy 014",
+      "url": "https://www.tcgplayer.com/product/543616/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-014",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543616_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Monkey.D.Luffy] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.18,
+          "midPrice": 0.3,
+          "highPrice": 5,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543635,
+      "cardId": "ST13-014",
+      "name": "Monkey.D.Luffy (014) (Parallel)",
+      "cleanName": "MonkeyDLuffy 014 Parallel",
+      "url": "https://www.tcgplayer.com/product/543635/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-014-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543635_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may trash this Character</strong>: Reveal 1 card from the top of your Life cards. If that card is a [Monkey.D.Luffy] with a cost of 5, you may play that card. If you do, up to 1 of your Leader gains +2000 power until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8.1,
+          "midPrice": 10.19,
+          "highPrice": 30,
+          "marketPrice": 9.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543617,
+      "cardId": "ST13-015",
+      "name": "Monkey.D.Luffy (015)",
+      "cleanName": "MonkeyDLuffy 015",
+      "url": "https://www.tcgplayer.com/product/543617/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-015",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543617_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main][Once Per Turn]This Character gains +2000 power until the start of your next turn. Then, if you have 1 or more Life cards, draw 1 card and trash 1 card from the top of your Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.3,
+          "midPrice": 2.48,
+          "highPrice": 50,
+          "marketPrice": 2.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543636,
+      "cardId": "ST13-015",
+      "name": "Monkey.D.Luffy (015) (Parallel)",
+      "cleanName": "MonkeyDLuffy 015 Parallel",
+      "url": "https://www.tcgplayer.com/product/543636/one-piece-card-game-ultra-deck-the-three-brothers-monkeydluffy-015-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543636_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main][Once Per Turn]This Character gains +2000 power until the start of your next turn. Then, if you have 1 or more Life cards, draw 1 card and trash 1 card from the top of your Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 18.48,
+          "midPrice": 29.56,
+          "highPrice": 145,
+          "marketPrice": 24.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543618,
+      "cardId": "ST13-016",
+      "name": "Yamato",
+      "cleanName": "Yamato",
+      "url": "https://www.tcgplayer.com/product/543618/one-piece-card-game-ultra-deck-the-three-brothers-yamato",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543618_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[On Play] Look at all your Life cards; place 1 at the top of your deck and place the rest back in your Life area in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.3,
+          "highPrice": 11.05,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543637,
+      "cardId": "ST13-016",
+      "name": "Yamato (Parallel)",
+      "cleanName": "Yamato Parallel",
+      "url": "https://www.tcgplayer.com/product/543637/one-piece-card-game-ultra-deck-the-three-brothers-yamato-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543637_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[On Play] Look at all your Life cards; place 1 at the top of your deck and place the rest back in your Life area in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.58,
+          "midPrice": 14.5,
+          "highPrice": 1000,
+          "marketPrice": 12.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543619,
+      "cardId": "ST13-017",
+      "name": "Flame Dragon King",
+      "cleanName": "Flame Dragon King",
+      "url": "https://www.tcgplayer.com/product/543619/one-piece-card-game-ultra-deck-the-three-brothers-flame-dragon-king",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543619_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, look at all your Life cards and place them back in your Life area in any order.\r\n<br>\r\n[Trigger] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from your hand to the top of your Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12.94,
+          "midPrice": 15.18,
+          "highPrice": 25,
+          "marketPrice": 14.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543620,
+      "cardId": "ST13-018",
+      "name": "Gum-Gum Jet Spear",
+      "cleanName": "Gum Gum Jet Spear",
+      "url": "https://www.tcgplayer.com/product/543620/one-piece-card-game-ultra-deck-the-three-brothers-gum-gum-jet-spear",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543620_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 0 Life cards, draw 1 card.\r\n<br>\r\n[Trigger] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from your hand to the top of your Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.24,
+          "highPrice": 10,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 543621,
+      "cardId": "ST13-019",
+      "name": "The Three Brothers' Bond",
+      "cleanName": "The Three Brothers Bond",
+      "url": "https://www.tcgplayer.com/product/543621/one-piece-card-game-ultra-deck-the-three-brothers-the-three-brothers-bond",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/543621_200w.jpg",
+      "groupId": 23349,
+      "setCode": "ST13",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 [Sabo], [Portgas.D.Ace], or [Monkey.D.Luffy] with a cost of 5 or less and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.28,
+          "highPrice": 5,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

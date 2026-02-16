@@ -6,6 +6,7 @@ import {
   receiveCard,
   startVerification,
   completeVerification,
+  receiveAndVerify,
   mintToken,
   rejectDigitisation,
   cancelDigitisation,
@@ -58,10 +59,24 @@ export async function POST(req: NextRequest, { params }: Params) {
             { status: 400 },
           );
         }
+        // Auto-mints on verification completion
         const result = await completeVerification(requestId, parsed.data);
-        return NextResponse.json(result);
+        return NextResponse.json(result, { status: result.token ? 201 : 200 });
+      }
+      case "receive_and_verify": {
+        // Single-step: receive + verify + auto-mint
+        const parsed = digitisationVerificationSchema.safeParse(body);
+        if (!parsed.success) {
+          return NextResponse.json(
+            { error: parsed.error.flatten().fieldErrors },
+            { status: 400 },
+          );
+        }
+        const result = await receiveAndVerify(requestId, session.user.id, parsed.data);
+        return NextResponse.json(result, { status: 201 });
       }
       case "mint": {
+        // Still available for manual mint if autoMint was disabled
         const result = await mintToken(requestId);
         return NextResponse.json(result, { status: 201 });
       }
@@ -82,7 +97,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       }
       default:
         return NextResponse.json(
-          { error: "Invalid action. Use: receive, start_verification, verify, mint, reject, cancel" },
+          { error: "Invalid action. Use: receive, start_verification, verify, receive_and_verify, mint, reject, cancel" },
           { status: 400 },
         );
     }

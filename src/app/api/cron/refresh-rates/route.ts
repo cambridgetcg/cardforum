@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { refreshRates } from "@/server/services/exchange-rate.service";
 
 /**
- * POST /api/cron/refresh-rates
+ * GET /api/cron/refresh-rates
  *
  * Refreshes the exchange rate cache from external sources.
  * Designed to run every hour via Vercel Cron.
@@ -10,7 +10,7 @@ import { refreshRates } from "@/server/services/exchange-rate.service";
  * Vercel Cron config: see vercel.json
  *   { "path": "/api/cron/refresh-rates", "schedule": "0 * * * *" }
  */
-export async function POST(req: NextRequest) {
+export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

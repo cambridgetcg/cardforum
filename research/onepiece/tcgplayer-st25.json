@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 25: BLUE Buggy",
+  "groupId": 24284,
+  "setCode": "ST25",
+  "totalProducts": 17,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:50.714Z",
+  "durationMs": 140,
+  "cards": [
+    {
+      "productId": 633944,
+      "cardId": "OP09-042",
+      "name": "Buggy (OP09-042)",
+      "cleanName": "Buggy OP09 042",
+      "url": "https://www.tcgplayer.com/product/633944/one-piece-card-game-starter-deck-25-blue-buggy-buggy-op09-042",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/633944_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest 5 of your DON!! cards and trash 1 card from your hand</strong>: Play up to 1 \"Cross Guild\" type Character card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 2,
+          "highPrice": 10,
+          "marketPrice": 1.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634289,
+      "cardId": "OP09-043",
+      "name": "Alvida (Reprint)",
+      "cleanName": "Alvida Reprint",
+      "url": "https://www.tcgplayer.com/product/634289/one-piece-card-game-starter-deck-25-blue-buggy-alvida-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634289_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] If your Leader has the \"Cross Guild\" type, play up to 1 Character card with a cost of 5 or less other than [Alvida] from your hand.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634291,
+      "cardId": "OP09-045",
+      "name": "Cabaji (Reprint)",
+      "cleanName": "Cabaji Reprint",
+      "url": "https://www.tcgplayer.com/product/634291/one-piece-card-game-starter-deck-25-blue-buggy-cabaji-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634291_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Slash",
+      "effectText": "If you have a [Buggy] or [Mohji] Character, this Character cannot be K.O.'d in battle.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634296,
+      "cardId": "OP09-051",
+      "name": "Buggy (Reprint)",
+      "cleanName": "Buggy Reprint",
+      "url": "https://www.tcgplayer.com/product/634296/one-piece-card-game-starter-deck-25-blue-buggy-buggy-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634296_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634298,
+      "cardId": "OP09-053",
+      "name": "Mohji (Reprint)",
+      "cleanName": "Mohji Reprint",
+      "url": "https://www.tcgplayer.com/product/634298/one-piece-card-game-starter-deck-25-blue-buggy-mohji-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634298_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Richie] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Richie] from your hand.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.11,
+          "highPrice": 1.33,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634300,
+      "cardId": "OP09-054",
+      "name": "Richie (Reprint)",
+      "cleanName": "Richie Reprint",
+      "url": "https://www.tcgplayer.com/product/634300/one-piece-card-game-starter-deck-25-blue-buggy-richie-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634300_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Cross Guild",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634301,
+      "cardId": "OP09-055",
+      "name": "Mr.1(Daz.Bonez) (Reprint)",
+      "cleanName": "Mr1DazBonez Reprint",
+      "url": "https://www.tcgplayer.com/product/634301/one-piece-card-game-starter-deck-25-blue-buggy-mr1dazbonez-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634301_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634302,
+      "cardId": "OP09-056",
+      "name": "Mr.3(Galdino) (Reprint)",
+      "cleanName": "Mr3Galdino Reprint",
+      "url": "https://www.tcgplayer.com/product/634302/one-piece-card-game-starter-deck-25-blue-buggy-mr3galdino-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634302_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Cross Guild\" type card or card with a type including \"Baroque Works\" other than [Mr.3(Galdino)] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 1.33,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634303,
+      "cardId": "OP09-057",
+      "name": "Cross Guild (Reprint)",
+      "cleanName": "Cross Guild Reprint",
+      "url": "https://www.tcgplayer.com/product/634303/one-piece-card-game-starter-deck-25-blue-buggy-cross-guild-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634303_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 \"Cross Guild\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634597,
+      "cardId": "P-084",
+      "name": "Buggy (Promo Reprint)",
+      "cleanName": "Buggy Promo Reprint",
+      "url": "https://www.tcgplayer.com/product/634597/one-piece-card-game-starter-deck-25-blue-buggy-buggy-promo-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634597_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": null,
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": null,
+      "attribute": null,
+      "effectText": "This Character cannot attack.\r\n<br>If your Leader is [Buggy], all Characters with a cost of 3 or 4 cannot attack.\r\n<br>[On Play] Play up to 1 \"Cross Guild\" type Character card with a cost of 6 or less from your hand.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the exclusion of \"NOT FOR SALE\" on the right side, by the copyright information, and the missing gold winner stamp.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.18,
+          "midPrice": 0.42,
+          "highPrice": 1.99,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634305,
+      "cardId": "ST25-001",
+      "name": "Alvida",
+      "cleanName": "Alvida",
+      "url": "https://www.tcgplayer.com/product/634305/one-piece-card-game-starter-deck-25-blue-buggy-alvida",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634305_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Strike",
+      "effectText": "If you have 2 or more Characters with a base cost of 5 or more, this Character gains +1 cost.\r\n<br>[On Play] If your Leader is [Buggy], draw 3 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.5,
+          "midPrice": 0.99,
+          "highPrice": 3.25,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634307,
+      "cardId": "ST25-002",
+      "name": "Cabaji",
+      "cleanName": "Cabaji",
+      "url": "https://www.tcgplayer.com/product/634307/one-piece-card-game-starter-deck-25-blue-buggy-cabaji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634307_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Slash",
+      "effectText": "If you have 2 or more Characters with a base cost of 5 or more, this Character gains [Blocker] and +1 cost.\r\n<br><em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[Opponent's Turn] This Character gains +5000 power.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.19,
+          "highPrice": 2.99,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634230,
+      "cardId": "ST25-003",
+      "name": "Crocodile & Mihawk",
+      "cleanName": "Crocodile and Mihawk",
+      "url": "https://www.tcgplayer.com/product/634230/one-piece-card-game-starter-deck-25-blue-buggy-crocodile-and-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634230_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Slash;Special",
+      "effectText": "[On Play] Draw 2 cards and trash 1 card from your hand. Then, play up to 1 \"Cross Guild\" type Character card with a cost of 4 or less from your hand.\r\n<br>[Once Per Turn] If your \"Cross Guild\" type Character would be removed from the field by your opponent's effect, you may trash 1 card from your hand instead.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.88,
+          "midPrice": 1.71,
+          "highPrice": 14,
+          "marketPrice": 1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634232,
+      "cardId": "ST25-004",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/634232/one-piece-card-game-starter-deck-25-blue-buggy-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634232_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] <strong>You may trash 1 card from your hand and trash this Character:</strong> If your Leader is [Buggy], play up to 1 \"Cross Guild\" type Character card with a cost of 6 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.28,
+          "midPrice": 0.92,
+          "highPrice": 95,
+          "marketPrice": 0.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634309,
+      "cardId": "ST25-005",
+      "name": "Mohji",
+      "cleanName": "Mohji",
+      "url": "https://www.tcgplayer.com/product/634309/one-piece-card-game-starter-deck-25-blue-buggy-mohji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634309_200w.jpg",
+      "groupId": 24284,
+      "setCode": "ST25",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Wisdom",
+      "effectText": "If you have 2 or more Characters with a base cost of 5 or more, this Character gains [Blocker] and +1 cost.\r\n<br><em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[On K.O.] If your Leader is [Buggy] and you have 3 or less cards in your hand, draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.18,
+          "highPrice": 1.32,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

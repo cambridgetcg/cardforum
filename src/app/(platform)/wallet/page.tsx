@@ -109,10 +109,11 @@ function WalletContent() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2">
-          <DepositButton />
+          <DepositButton onDeposited={fetchData} />
           <WithdrawForm
             balance={balance}
             connectReady={connectStatus.onboardingComplete}
+            hasConnectAccount={connectStatus.hasConnectAccount}
             onSuccess={fetchData}
           />
         </div>

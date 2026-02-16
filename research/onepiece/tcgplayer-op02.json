@@ -1,0 +1,4653 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Paramount War",
+  "groupId": 17698,
+  "setCode": "OP02",
+  "totalProducts": 162,
+  "totalCards": 154,
+  "scrapedAt": "2026-02-15T22:54:01.559Z",
+  "durationMs": 86,
+  "cards": [
+    {
+      "productId": 482424,
+      "cardId": "OP02-001",
+      "name": "Edward.Newgate (001)",
+      "cleanName": "EdwardNewgate 001",
+      "url": "https://www.tcgplayer.com/product/482424/one-piece-card-game-paramount-war-edwardnewgate-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482424_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "6000",
+      "cost": null,
+      "life": "6",
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] Add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.18,
+          "midPrice": 0.35,
+          "highPrice": 10,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483470,
+      "cardId": "OP02-001",
+      "name": "Edward.Newgate (001) (Alternate Art)",
+      "cleanName": "EdwardNewgate 001 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483470/one-piece-card-game-paramount-war-edwardnewgate-001-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483470_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "6000",
+      "cost": null,
+      "life": "6",
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] Add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 142.95,
+          "midPrice": 158.96,
+          "highPrice": 249,
+          "marketPrice": 131.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482705,
+      "cardId": "OP02-002",
+      "name": "Monkey.D.Garp (002)",
+      "cleanName": "MonkeyDGarp 002",
+      "url": "https://www.tcgplayer.com/product/482705/one-piece-card-game-paramount-war-monkeydgarp-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482705_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[Your Turn] When this Leader or 1 of your Characters is given a DON!! card, give up to 1 of your opponent's Characters with a cost of 7 or less -1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.33,
+          "highPrice": 5,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483627,
+      "cardId": "OP02-002",
+      "name": "Monkey.D.Garp (002) (Alternate Art)",
+      "cleanName": "MonkeyDGarp 002 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483627/one-piece-card-game-paramount-war-monkeydgarp-002-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483627_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[Your Turn] When this Leader or 1 of your Characters is given a DON!! card, give up to 1 of your opponent's Characters with a cost of 7 or less -1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 165,
+          "midPrice": 194.99,
+          "highPrice": 225,
+          "marketPrice": 152.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482426,
+      "cardId": "OP02-003",
+      "name": "Atmos",
+      "cleanName": "Atmos",
+      "url": "https://www.tcgplayer.com/product/482426/one-piece-card-game-paramount-war-atmos",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482426_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482423,
+      "cardId": "OP02-004",
+      "name": "Edward.Newgate (004)",
+      "cleanName": "EdwardNewgate 004",
+      "url": "https://www.tcgplayer.com/product/482423/one-piece-card-game-paramount-war-edwardnewgate-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482423_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your Leader gains +2000 power until the start of your next turn. Then, you cannot add Life cards to your hand using your own effects during this turn.\r\n<br>\r\n[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.95,
+          "midPrice": 3.56,
+          "highPrice": 50,
+          "marketPrice": 2.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485861,
+      "cardId": "OP02-004",
+      "name": "Edward.Newgate (004) (Alternate Art)",
+      "cleanName": "EdwardNewgate 004 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485861/one-piece-card-game-paramount-war-edwardnewgate-004-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485861_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your Leader gains +2000 power until the start of your next turn. Then, you cannot add Life cards to your hand using your own effects during this turn.\r\n<br>\r\n[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 28.89,
+          "midPrice": 36.41,
+          "highPrice": 150,
+          "marketPrice": 31.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482425,
+      "cardId": "OP02-005",
+      "name": "Curly.Dadan",
+      "cleanName": "CurlyDadan",
+      "url": "https://www.tcgplayer.com/product/482425/one-piece-card-game-paramount-war-curlydadan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482425_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at up to 5 cards from the top of your deck; reveal up to 1 red Character with a cost of 1 and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482706,
+      "cardId": "OP02-006",
+      "name": "Kingdew",
+      "cleanName": "Kingdew",
+      "url": "https://www.tcgplayer.com/product/482706/one-piece-card-game-paramount-war-kingdew",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482706_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482707,
+      "cardId": "OP02-007",
+      "name": "Thatch",
+      "cleanName": "Thatch",
+      "url": "https://www.tcgplayer.com/product/482707/one-piece-card-game-paramount-war-thatch",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482707_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482704,
+      "cardId": "OP02-008",
+      "name": "Jozu",
+      "cleanName": "Jozu",
+      "url": "https://www.tcgplayer.com/product/482704/one-piece-card-game-paramount-war-jozu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482704_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 2 or less Life cards and your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush]. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.46,
+          "midPrice": 0.98,
+          "highPrice": 99,
+          "marketPrice": 0.81,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483096,
+      "cardId": "OP02-009",
+      "name": "Squard (Box Topper)",
+      "cleanName": "Squard Box Topper",
+      "url": "https://www.tcgplayer.com/product/483096/one-piece-card-game-paramount-war-squard-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483096_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates Allies",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", give up to 1 of your opponent's Characters -4000 power during this turn and add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.34,
+          "highPrice": 29.99,
+          "marketPrice": 1.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486332,
+      "cardId": "OP02-009",
+      "name": "Squard",
+      "cleanName": "Squard",
+      "url": "https://www.tcgplayer.com/product/486332/one-piece-card-game-paramount-war-squard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486332_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates Allies",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", give up to 1 of your opponent's Characters -4000 power during this turn and add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483093,
+      "cardId": "OP02-010",
+      "name": "Dogura",
+      "cleanName": "Dogura",
+      "url": "https://www.tcgplayer.com/product/483093/one-piece-card-game-paramount-war-dogura",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483093_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: Play up to 1 red Character other than [Dogura] with a cost of 1 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483095,
+      "cardId": "OP02-011",
+      "name": "Vista",
+      "cleanName": "Vista",
+      "url": "https://www.tcgplayer.com/product/483095/one-piece-card-game-paramount-war-vista",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483095_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.37,
+          "highPrice": 13.89,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483094,
+      "cardId": "OP02-012",
+      "name": "Blenheim",
+      "cleanName": "Blenheim",
+      "url": "https://www.tcgplayer.com/product/483094/one-piece-card-game-paramount-war-blenheim",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483094_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485235,
+      "cardId": "OP02-013",
+      "name": "Portgas.D.Ace",
+      "cleanName": "PortgasDAce",
+      "url": "https://www.tcgplayer.com/product/485235/one-piece-card-game-paramount-war-portgasdace",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485235_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 2 of your opponent's Characters -3000 power during this turn. Then, if your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.78,
+          "midPrice": 3.75,
+          "highPrice": 50,
+          "marketPrice": 2.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485862,
+      "cardId": "OP02-013",
+      "name": "Portgas.D.Ace (Parallel) (Manga) (Alternate Art)",
+      "cleanName": "PortgasDAce Parallel Manga Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485862/one-piece-card-game-paramount-war-portgasdace-parallel-manga-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485862_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 2 of your opponent's Characters -3000 power during this turn. Then, if your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2250,
+          "midPrice": 2994.99,
+          "highPrice": 5000,
+          "marketPrice": 1204.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486333,
+      "cardId": "OP02-013",
+      "name": "Portgas.D.Ace (Parallel)",
+      "cleanName": "PortgasDAce Parallel",
+      "url": "https://www.tcgplayer.com/product/486333/one-piece-card-game-paramount-war-portgasdace-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486333_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 2 of your opponent's Characters -3000 power during this turn. Then, if your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 65,
+          "midPrice": 73.19,
+          "highPrice": 199.99,
+          "marketPrice": 72.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486334,
+      "cardId": "OP02-014",
+      "name": "Whitey Bay",
+      "cleanName": "Whitey Bay",
+      "url": "https://www.tcgplayer.com/product/486334/one-piece-card-game-paramount-war-whitey-bay",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486334_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Whitebeard Pirates Allies",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486335,
+      "cardId": "OP02-015",
+      "name": "Makino",
+      "cleanName": "Makino",
+      "url": "https://www.tcgplayer.com/product/486335/one-piece-card-game-paramount-war-makino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486335_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: Up to 1 of your red Characters with a cost of 1 gains +3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486336,
+      "cardId": "OP02-016",
+      "name": "Magura",
+      "cleanName": "Magura",
+      "url": "https://www.tcgplayer.com/product/486336/one-piece-card-game-paramount-war-magura",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486336_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[On Play] Up to 1 of your red Characters with a cost of 1 gains +3000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485864,
+      "cardId": "OP02-017",
+      "name": "Masked Deuce (Alternate Art)",
+      "cleanName": "Masked Deuce Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485864/one-piece-card-game-paramount-war-masked-deuce-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485864_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Spade Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 2000 power or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.5,
+          "midPrice": 3.99,
+          "highPrice": 39.99,
+          "marketPrice": 2.96,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486337,
+      "cardId": "OP02-017",
+      "name": "Masked Deuce",
+      "cleanName": "Masked Deuce",
+      "url": "https://www.tcgplayer.com/product/486337/one-piece-card-game-paramount-war-masked-deuce",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486337_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Spade Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 2000 power or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485863,
+      "cardId": "OP02-018",
+      "name": "Marco (Alternate Art)",
+      "cleanName": "Marco Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485863/one-piece-card-game-paramount-war-marco-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485863_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] <strong>You may trash 1 card with a type including \"Whitebeard Pirates\" from your hand</strong>: If you have 2 or less Life cards, play this Character card from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.5,
+          "midPrice": 9.24,
+          "highPrice": 44.99,
+          "marketPrice": 7.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486338,
+      "cardId": "OP02-018",
+      "name": "Marco",
+      "cleanName": "Marco",
+      "url": "https://www.tcgplayer.com/product/486338/one-piece-card-game-paramount-war-marco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486338_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] <strong>You may trash 1 card with a type including \"Whitebeard Pirates\" from your hand</strong>: If you have 2 or less Life cards, play this Character card from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486339,
+      "cardId": "OP02-019",
+      "name": "Rakuyo",
+      "cleanName": "Rakuyo",
+      "url": "https://www.tcgplayer.com/product/486339/one-piece-card-game-paramount-war-rakuyo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486339_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Your Turn] All of your Characters with a type including \"Whitebeard Pirates\" gain +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486340,
+      "cardId": "OP02-020",
+      "name": "LittleOars Jr.",
+      "cleanName": "LittleOars Jr",
+      "url": "https://www.tcgplayer.com/product/486340/one-piece-card-game-paramount-war-littleoars-jr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486340_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Giant;Whitebeard Pirates Allies",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486341,
+      "cardId": "OP02-021",
+      "name": "Seaquake",
+      "cleanName": "Seaquake",
+      "url": "https://www.tcgplayer.com/product/486341/one-piece-card-game-paramount-war-seaquake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486341_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] If your Leader's type includes \"Whitebeard Pirates\", K.O. up to 1 of your opponent's Characters with 3000 power or less.\r\n<br>\r\n[Trigger] Give up to 1 of your opponent's Leader or Character cards -3000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.35,
+          "highPrice": 25,
+          "marketPrice": 0.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486342,
+      "cardId": "OP02-022",
+      "name": "Whitebeard Pirates",
+      "cleanName": "Whitebeard Pirates",
+      "url": "https://www.tcgplayer.com/product/486342/one-piece-card-game-paramount-war-whitebeard-pirates",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486342_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 Character card with a type including \"Whitebeard Pirates\" and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486343,
+      "cardId": "OP02-023",
+      "name": "You May Be a Fool...but I Still Love You",
+      "cleanName": "You May Be a Foolbut I Still Love You",
+      "url": "https://www.tcgplayer.com/product/486343/one-piece-card-game-paramount-war-you-may-be-a-foolbut-i-still-love-you",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486343_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] If you have 3 or less Life cards, you cannot add Life cards to your hand using your own effects during this turn.\r\n<br>\r\n[Trigger] Up to 1 of your Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 10,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486344,
+      "cardId": "OP02-024",
+      "name": "Moby Dick",
+      "cleanName": "Moby Dick",
+      "url": "https://www.tcgplayer.com/product/486344/one-piece-card-game-paramount-war-moby-dick",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486344_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": null,
+      "effectText": "[Your Turn] If you have 1 or less Life cards, your [Edward.Newgate] and all your Characters with a type including \"Whitebeard Pirates\" gain +2000 power.\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483629,
+      "cardId": "OP02-025",
+      "name": "Kin'emon (Alternate Art)",
+      "cleanName": "Kinemon Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483629/one-piece-card-game-paramount-war-kinemon-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483629_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] If you have 1 or less Characters, the next time you play a [Land of Wano] type Character card with a cost of 3 or more from your hand during this turn, the cost will be reduced by 1.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 46.5,
+          "midPrice": 51,
+          "highPrice": 250,
+          "marketPrice": 50.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486345,
+      "cardId": "OP02-025",
+      "name": "Kin'emon",
+      "cleanName": "Kinemon",
+      "url": "https://www.tcgplayer.com/product/486345/one-piece-card-game-paramount-war-kinemon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486345_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] If you have 1 or less Characters, the next time you play a [Land of Wano] type Character card with a cost of 3 or more from your hand during this turn, the cost will be reduced by 1.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483628,
+      "cardId": "OP02-026",
+      "name": "Sanji (Alternate Art)",
+      "cleanName": "Sanji Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483628/one-piece-card-game-paramount-war-sanji-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483628_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Green",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Once Per Turn] When you play a Character with no base effect from your hand, if you have 3 or less Characters, set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 200,
+          "midPrice": 231.5,
+          "highPrice": 399,
+          "marketPrice": 170.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486346,
+      "cardId": "OP02-026",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/486346/one-piece-card-game-paramount-war-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486346_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Green",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Once Per Turn] When you play a Character with no base effect from your hand, if you have 3 or less Characters, set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.17,
+          "midPrice": 0.31,
+          "highPrice": 10,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486347,
+      "cardId": "OP02-027",
+      "name": "Inuarashi",
+      "cleanName": "Inuarashi",
+      "url": "https://www.tcgplayer.com/product/486347/one-piece-card-game-paramount-war-inuarashi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486347_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "If all of your DON!! cards are rested, this Character cannot be removed from the field by your opponent's effects.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486348,
+      "cardId": "OP02-028",
+      "name": "Usopp",
+      "cleanName": "Usopp",
+      "url": "https://www.tcgplayer.com/product/486348/one-piece-card-game-paramount-war-usopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486348_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486349,
+      "cardId": "OP02-029",
+      "name": "Carrot",
+      "cleanName": "Carrot",
+      "url": "https://www.tcgplayer.com/product/486349/one-piece-card-game-paramount-war-carrot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486349_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] Set up to 1 of your DON!! cards as active.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.66,
+          "highPrice": 10,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 484627,
+      "cardId": "OP02-030",
+      "name": "Kouzuki Oden (Alternate Art)",
+      "cleanName": "Kouzuki Oden Alternate Art",
+      "url": "https://www.tcgplayer.com/product/484627/one-piece-card-game-paramount-war-kouzuki-oden-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/484627_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] (3) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Set this Character as active.\r\n<br>\r\n[On K.O.] Play up to 1 green \"Land of Wano\" type Character card with a cost of 3 from your deck. Then, shuffle your deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11.99,
+          "midPrice": 14.8,
+          "highPrice": 99.99,
+          "marketPrice": 14.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486350,
+      "cardId": "OP02-030",
+      "name": "Kouzuki Oden",
+      "cleanName": "Kouzuki Oden",
+      "url": "https://www.tcgplayer.com/product/486350/one-piece-card-game-paramount-war-kouzuki-oden",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486350_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] (3) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Set this Character as active.\r\n<br>\r\n[On K.O.] Play up to 1 green \"Land of Wano\" type Character card with a cost of 3 from your deck. Then, shuffle your deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.79,
+          "midPrice": 1.35,
+          "highPrice": 15,
+          "marketPrice": 1.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485236,
+      "cardId": "OP02-031",
+      "name": "Kouzuki Toki (Box Topper)",
+      "cleanName": "Kouzuki Toki Box Topper",
+      "url": "https://www.tcgplayer.com/product/485236/one-piece-card-game-paramount-war-kouzuki-toki-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485236_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Wisdom",
+      "effectText": "If you have a [Kouzuki Oden] Character, this Character gains [Blocker]. <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.33,
+          "midPrice": 8,
+          "highPrice": 50,
+          "marketPrice": 7.52,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486351,
+      "cardId": "OP02-031",
+      "name": "Kouzuki Toki",
+      "cleanName": "Kouzuki Toki",
+      "url": "https://www.tcgplayer.com/product/486351/one-piece-card-game-paramount-war-kouzuki-toki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486351_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Wisdom",
+      "effectText": "If you have a [Kouzuki Oden] Character, this Character gains [Blocker]. <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486352,
+      "cardId": "OP02-032",
+      "name": "Shishilian",
+      "cleanName": "Shishilian",
+      "url": "https://www.tcgplayer.com/product/486352/one-piece-card-game-paramount-war-shishilian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486352_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Slash",
+      "effectText": "[On Play] (2) <em>(You may rest the specified number of DON!! cards in your cost area.): Set up to 1 of your [Minks] type Characters with a cost of 5 or less as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.22,
+          "highPrice": 10,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486353,
+      "cardId": "OP02-033",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/486353/one-piece-card-game-paramount-war-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486353_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486354,
+      "cardId": "OP02-034",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/486354/one-piece-card-game-paramount-war-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486354_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Film;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[DON!! x1] [When Attacking] Rest up to 1 of your opponent's Characters with a cost of 2 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.19,
+          "midPrice": 0.36,
+          "highPrice": 25,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486355,
+      "cardId": "OP02-035",
+      "name": "Trafalgar Law",
+      "cleanName": "Trafalgar Law",
+      "url": "https://www.tcgplayer.com/product/486355/one-piece-card-game-paramount-war-trafalgar-law",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486355_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;Heart Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may return this Character to the owner's hand</strong>: Play up to 1 Character with a cost of 3 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482429,
+      "cardId": "OP02-036",
+      "name": "Nami (Alternate Art)",
+      "cleanName": "Nami Alternate Art",
+      "url": "https://www.tcgplayer.com/product/482429/one-piece-card-game-paramount-war-nami-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482429_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play]/[When Attacking] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Look at 3 cards from the top of your deck; reveal up to 1 \"FILM\" type card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 75,
+          "midPrice": 86.9,
+          "highPrice": 274.95,
+          "marketPrice": 87.99,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486356,
+      "cardId": "OP02-036",
+      "name": "Nami",
+      "cleanName": "Nami",
+      "url": "https://www.tcgplayer.com/product/486356/one-piece-card-game-paramount-war-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486356_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play]/[When Attacking] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Look at 3 cards from the top of your deck; reveal up to 1 \"FILM\" type card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.19,
+          "midPrice": 7.91,
+          "highPrice": 805,
+          "marketPrice": 6.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486357,
+      "cardId": "OP02-037",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/486357/one-piece-card-game-paramount-war-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486357_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Play up to 1 [FILM] or [Straw Hat Crew] type Character card with a cost of 2 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486359,
+      "cardId": "OP02-038",
+      "name": "Nekomamushi",
+      "cleanName": "Nekomamushi",
+      "url": "https://www.tcgplayer.com/product/486359/one-piece-card-game-paramount-war-nekomamushi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486359_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486361,
+      "cardId": "OP02-039",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/486361/one-piece-card-game-paramount-war-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486361_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486363,
+      "cardId": "OP02-040",
+      "name": "Brook",
+      "cleanName": "Brook",
+      "url": "https://www.tcgplayer.com/product/486363/one-piece-card-game-paramount-war-brook",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486363_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] Play up to 1 [FILM] or [Straw Hat Crew] type Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.37,
+          "highPrice": 5,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.29,
+          "highPrice": 5,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482337,
+      "cardId": "OP02-041",
+      "name": "Monkey.D.Luffy (041) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 041 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/482337/one-piece-card-game-paramount-war-monkeydluffy-041-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482337_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Play up to 1 \"FILM\" or \"Straw Hat Crew\" type Character card with a cost of 4 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 39.46,
+          "midPrice": 48.8,
+          "highPrice": 178.95,
+          "marketPrice": 46.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486367,
+      "cardId": "OP02-041",
+      "name": "Monkey.D.Luffy (041)",
+      "cleanName": "MonkeyDLuffy 041",
+      "url": "https://www.tcgplayer.com/product/486367/one-piece-card-game-paramount-war-monkeydluffy-041",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486367_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Play up to 1 \"FILM\" or \"Straw Hat Crew\" type Character card with a cost of 4 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.59,
+          "highPrice": 14.88,
+          "marketPrice": 0.49,
+          "directLowPrice": null
+        },
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.22,
+          "midPrice": 0.4,
+          "highPrice": 14,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486369,
+      "cardId": "OP02-042",
+      "name": "Yamato",
+      "cleanName": "Yamato",
+      "url": "https://www.tcgplayer.com/product/486369/one-piece-card-game-paramount-war-yamato",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486369_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "Also treat this card's name as [Kouzuki Oden] according to the rules.\r\n<br>\r\n[On Play] Rest up to 1 of your opponent's Characters with a cost of 6 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.47,
+          "highPrice": 25,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486371,
+      "cardId": "OP02-043",
+      "name": "Roronoa Zoro",
+      "cleanName": "Roronoa Zoro",
+      "url": "https://www.tcgplayer.com/product/486371/one-piece-card-game-paramount-war-roronoa-zoro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486371_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486374,
+      "cardId": "OP02-044",
+      "name": "Wanda",
+      "cleanName": "Wanda",
+      "url": "https://www.tcgplayer.com/product/486374/one-piece-card-game-paramount-war-wanda",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486374_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Minks",
+      "attribute": "Slash",
+      "effectText": "[On Play] Play up to 1 [Minks] type Character card other than [Wanda] with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486375,
+      "cardId": "OP02-045",
+      "name": "Three Sword Style Oni Giri",
+      "cleanName": "Three Sword Style Oni Giri",
+      "url": "https://www.tcgplayer.com/product/486375/one-piece-card-game-paramount-war-three-sword-style-oni-giri",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486375_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew;Supernovas",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +6000 power during this battle. Then, play up to 1 Character card with a cost of 3 or less and no base effect from your hand.\r\n<br>\r\n[Trigger] Rest up to 1 of your opponent's Leader or Character cards with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486378,
+      "cardId": "OP02-046",
+      "name": "Diable Jambe Venaison Shoot",
+      "cleanName": "Diable Jambe Venaison Shoot",
+      "url": "https://www.tcgplayer.com/product/486378/one-piece-card-game-paramount-war-diable-jambe-venaison-shoot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486378_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Film;Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.\r\n<br>\r\n[Trigger] Play up to 1 Character card with a cost of 4 or less and no base effect from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486380,
+      "cardId": "OP02-047",
+      "name": "Paradise Totsuka",
+      "cleanName": "Paradise Totsuka",
+      "url": "https://www.tcgplayer.com/product/486380/one-piece-card-game-paramount-war-paradise-totsuka",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486380_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": null,
+      "effectText": "[Main] Rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486382,
+      "cardId": "OP02-048",
+      "name": "Land of Wano",
+      "cleanName": "Land of Wano",
+      "url": "https://www.tcgplayer.com/product/486382/one-piece-card-game-paramount-war-land-of-wano",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486382_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": null,
+      "effectText": "[Activate:Main] <strong>You may trash 1 [Land of Wano] type card from your hand and rest this Stage</strong>: Set up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 5,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483949,
+      "cardId": "OP02-049",
+      "name": "Emporio.Ivankov (049) (Alternate Art)",
+      "cleanName": "EmporioIvankov 049 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483949/one-piece-card-game-paramount-war-emporioivankov-049-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483949_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] If you have 0 cards in your hand, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 49.99,
+          "midPrice": 70,
+          "highPrice": 199.99,
+          "marketPrice": 63.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486387,
+      "cardId": "OP02-049",
+      "name": "Emporio.Ivankov (049)",
+      "cleanName": "EmporioIvankov 049",
+      "url": "https://www.tcgplayer.com/product/486387/one-piece-card-game-paramount-war-emporioivankov-049",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486387_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] If you have 0 cards in your hand, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486389,
+      "cardId": "OP02-050",
+      "name": "Inazuma",
+      "cleanName": "Inazuma",
+      "url": "https://www.tcgplayer.com/product/486389/one-piece-card-game-paramount-war-inazuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486389_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": "Slash",
+      "effectText": "If you have 1 or less cards in your hand, this Character gains +2000 power.\r\n<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.04,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485812,
+      "cardId": "OP02-051",
+      "name": "Emporio.Ivankov (051) (Alternate Art)",
+      "cleanName": "EmporioIvankov 051 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485812/one-piece-card-game-paramount-war-emporioivankov-051-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485812_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw card(s) so that you have 3 cards in your hand and then play up to 1 blue [Impel Down] type Character card with a cost of 6 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6.21,
+          "midPrice": 8,
+          "highPrice": 50,
+          "marketPrice": 7.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486390,
+      "cardId": "OP02-051",
+      "name": "Emporio.Ivankov (051)",
+      "cleanName": "EmporioIvankov 051",
+      "url": "https://www.tcgplayer.com/product/486390/one-piece-card-game-paramount-war-emporioivankov-051",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486390_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw card(s) so that you have 3 cards in your hand and then play up to 1 blue [Impel Down] type Character card with a cost of 6 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.3,
+          "midPrice": 0.93,
+          "highPrice": 50,
+          "marketPrice": 0.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486391,
+      "cardId": "OP02-052",
+      "name": "Cabaji",
+      "cleanName": "Cabaji",
+      "url": "https://www.tcgplayer.com/product/486391/one-piece-card-game-paramount-war-cabaji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486391_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have [Mohji], draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486392,
+      "cardId": "OP02-053",
+      "name": "Crocodile",
+      "cleanName": "Crocodile",
+      "url": "https://www.tcgplayer.com/product/486392/one-piece-card-game-paramount-war-crocodile",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486392_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Impel Down;Former Baroque Works",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486393,
+      "cardId": "OP02-054",
+      "name": "Gecko Moria",
+      "cleanName": "Gecko Moria",
+      "url": "https://www.tcgplayer.com/product/486393/one-piece-card-game-paramount-war-gecko-moria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486393_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea;Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486394,
+      "cardId": "OP02-055",
+      "name": "Dracule Mihawk",
+      "cleanName": "Dracule Mihawk",
+      "url": "https://www.tcgplayer.com/product/486394/one-piece-card-game-paramount-war-dracule-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486394_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486395,
+      "cardId": "OP02-056",
+      "name": "Donquixote Doflamingo",
+      "cleanName": "Donquixote Doflamingo",
+      "url": "https://www.tcgplayer.com/product/486395/one-piece-card-game-paramount-war-donquixote-doflamingo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486395_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 3 cards from the top of your deck and place them at the top or bottom of the deck in any order.\r\n<br>\r\n[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand</strong>: Place up to 1 of your opponent's Characters with a cost of 1 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486396,
+      "cardId": "OP02-057",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/486396/one-piece-card-game-paramount-war-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486396_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 2 cards from the top of your deck; reveal up to 1 [The Seven Warlords of the Sea] type card and add it to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485813,
+      "cardId": "OP02-058",
+      "name": "Buggy (Alternate Art)",
+      "cleanName": "Buggy Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485813/one-piece-card-game-paramount-war-buggy-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485813_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Buggy Pirates;Impel Down",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 blue [Impel Down] type card other than [Buggy] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15,
+          "midPrice": 18.86,
+          "highPrice": 100,
+          "marketPrice": 18.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486397,
+      "cardId": "OP02-058",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/486397/one-piece-card-game-paramount-war-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486397_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Buggy Pirates;Impel Down",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 blue [Impel Down] type card other than [Buggy] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.32,
+          "highPrice": 5,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485237,
+      "cardId": "OP02-059",
+      "name": "Boa Hancock (Box Topper)",
+      "cleanName": "Boa Hancock Box Topper",
+      "url": "https://www.tcgplayer.com/product/485237/one-piece-card-game-paramount-war-boa-hancock-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485237_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea;Impel Down",
+      "attribute": "Special",
+      "effectText": "[When Attacking] Draw 1 card and trash 1 card from your hand. Then, trash up to 3 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 29.99,
+          "midPrice": 38.84,
+          "highPrice": 300,
+          "marketPrice": 38.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486398,
+      "cardId": "OP02-059",
+      "name": "Boa Hancock",
+      "cleanName": "Boa Hancock",
+      "url": "https://www.tcgplayer.com/product/486398/one-piece-card-game-paramount-war-boa-hancock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486398_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea;Impel Down",
+      "attribute": "Special",
+      "effectText": "[When Attacking] Draw 1 card and trash 1 card from your hand. Then, trash up to 3 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.13,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486399,
+      "cardId": "OP02-060",
+      "name": "Mohji",
+      "cleanName": "Mohji",
+      "url": "https://www.tcgplayer.com/product/486399/one-piece-card-game-paramount-war-mohji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486399_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 501.5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486400,
+      "cardId": "OP02-061",
+      "name": "Morley",
+      "cleanName": "Morley",
+      "url": "https://www.tcgplayer.com/product/486400/one-piece-card-game-paramount-war-morley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486400_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Giant;Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[When Attacking] If you have 1 or less cards in your hand, your opponent cannot activate the [Blocker] of any Character with a cost of 5 or less during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485238,
+      "cardId": "OP02-062",
+      "name": "Monkey.D.Luffy (062)",
+      "cleanName": "MonkeyDLuffy 062",
+      "url": "https://www.tcgplayer.com/product/485238/one-piece-card-game-paramount-war-monkeydluffy-062",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485238_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Impel Down",
+      "attribute": "Strike",
+      "effectText": "[On Play] / [When Attacking] <strong>You may trash 2 cards from your hand</strong>: Return up to 1 Character with a cost of 4 or less to the owner's hand. Then, this Character gains [Double Attack] during this turn. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.81,
+          "midPrice": 2.5,
+          "highPrice": 9999,
+          "marketPrice": 2.61,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485814,
+      "cardId": "OP02-062",
+      "name": "Monkey.D.Luffy (062) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 062 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485814/one-piece-card-game-paramount-war-monkeydluffy-062-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485814_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Impel Down",
+      "attribute": "Strike",
+      "effectText": "[On Play] / [When Attacking] <strong>You may trash 2 cards from your hand</strong>: Return up to 1 Character with a cost of 4 or less to the owner's hand. Then, this Character gains [Double Attack] during this turn. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 59.64,
+          "midPrice": 70,
+          "highPrice": 300,
+          "marketPrice": 59.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486401,
+      "cardId": "OP02-063",
+      "name": "Mr.1 (Daz.Bonez)",
+      "cleanName": "Mr1 DazBonez",
+      "url": "https://www.tcgplayer.com/product/486401/one-piece-card-game-paramount-war-mr1-dazbonez",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486401_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down;Former Baroque Works",
+      "attribute": "Slash",
+      "effectText": "[On Play] Add up to 1 blue Event card with a cost of 1 from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.27,
+          "highPrice": 10,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486402,
+      "cardId": "OP02-064",
+      "name": "Mr.2.Bon.Kurei (Bentham)",
+      "cleanName": "Mr2BonKurei Bentham",
+      "url": "https://www.tcgplayer.com/product/486402/one-piece-card-game-paramount-war-mr2bonkurei-bentham",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486402_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Impel Down;Former Baroque Works",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 1 card from your hand</strong>: Place up to 1 Character with a cost of 2 or less at the bottom of the owner's deck. Then, at the end of this battle, place this Character at the bottom of the owner's deck.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.38,
+          "highPrice": 9999,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486403,
+      "cardId": "OP02-065",
+      "name": "Mr.3 (Galdino)",
+      "cleanName": "Mr3 Galdino",
+      "url": "https://www.tcgplayer.com/product/486403/one-piece-card-game-paramount-war-mr3-galdino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486403_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Impel Down;Former Baroque Works",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[End of Your Turn] <strong>You may trash 1 card from your hand</strong>: Set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486404,
+      "cardId": "OP02-066",
+      "name": "Impel Down All Stars",
+      "cleanName": "Impel Down All Stars",
+      "url": "https://www.tcgplayer.com/product/486404/one-piece-card-game-paramount-war-impel-down-all-stars",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486404_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may trash 2 cards from your hand</strong>: If your Leader has the [Impel Down] type, draw up to 2 cards.\r\n<br>\r\n[Trigger] Draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 501.5,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486405,
+      "cardId": "OP02-067",
+      "name": "Arabesque Brick Fist",
+      "cleanName": "Arabesque Brick Fist",
+      "url": "https://www.tcgplayer.com/product/486405/one-piece-card-game-paramount-war-arabesque-brick-fist",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486405_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Impel Down",
+      "attribute": null,
+      "effectText": "[Main] Return up to 1 Character with a cost of 4 or less to the owner's hand.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 5,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486406,
+      "cardId": "OP02-068",
+      "name": "Gum-Gum Rain",
+      "cleanName": "Gum Gum Rain",
+      "url": "https://www.tcgplayer.com/product/486406/one-piece-card-game-paramount-war-gum-gum-rain",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486406_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "0",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Impel Down",
+      "attribute": null,
+      "effectText": "[Counter] <strong>You may trash 1 card from your hand</strong>: Up to 1 of your Leader or Character cards gains +3000 power during this battle.\r\n<br>\r\n[Trigger] Return up to 1 Character with a cost of 2 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.5,
+          "highPrice": 25,
+          "marketPrice": 0.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486407,
+      "cardId": "OP02-069",
+      "name": "DEATH WINK",
+      "cleanName": "DEATH WINK",
+      "url": "https://www.tcgplayer.com/product/486407/one-piece-card-game-paramount-war-death-wink",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486407_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army;Impel Down",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +6000 power during this battle. Then, draw cards so that you have 2 cards in your hand.\r\n<br>\r\n[Trigger] Return up to 1 Character with a cost of 7 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 501.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486408,
+      "cardId": "OP02-070",
+      "name": "New Kama Land",
+      "cleanName": "New Kama Land",
+      "url": "https://www.tcgplayer.com/product/486408/one-piece-card-game-paramount-war-new-kama-land",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486408_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Activate:Main] <strong>You may rest this Stage</strong>: If your Leader is [Emporio.Ivankov], draw 1 card and trash 1 card from your hand. Then, trash up to 3 cards from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 484134,
+      "cardId": "OP02-071",
+      "name": "Magellan (071) (Alternate Art)",
+      "cleanName": "Magellan 071 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/484134/one-piece-card-game-paramount-war-magellan-071-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/484134_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "6000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Impel Down",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 55,
+          "midPrice": 100.66,
+          "highPrice": 199.99,
+          "marketPrice": 51.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486410,
+      "cardId": "OP02-071",
+      "name": "Magellan (071)",
+      "cleanName": "Magellan 071",
+      "url": "https://www.tcgplayer.com/product/486410/one-piece-card-game-paramount-war-magellan-071",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486410_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "6000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Impel Down",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 484314,
+      "cardId": "OP02-072",
+      "name": "Zephyr (Alternate Art)",
+      "cleanName": "Zephyr Alternate Art",
+      "url": "https://www.tcgplayer.com/product/484314/one-piece-card-game-paramount-war-zephyr-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/484314_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Film;Neo Navy",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] DON!! -4 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. up to 1 of your opponent's Characters with a cost of 3 or less. Then, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 44.94,
+          "midPrice": 50,
+          "highPrice": 124.99,
+          "marketPrice": 44.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485239,
+      "cardId": "OP02-072",
+      "name": "Zephyr",
+      "cleanName": "Zephyr",
+      "url": "https://www.tcgplayer.com/product/485239/one-piece-card-game-paramount-war-zephyr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485239_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Film;Neo Navy",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] DON!! -4 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: K.O. up to 1 of your opponent's Characters with a cost of 3 or less. Then, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485457,
+      "cardId": "OP02-073",
+      "name": "Little Sadi (Alternate Art)",
+      "cleanName": "Little Sadi Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485457/one-piece-card-game-paramount-war-little-sadi-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485457_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Play up to 1 [Jailer Beast] type Character card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.93,
+          "midPrice": 10.19,
+          "highPrice": 72.94,
+          "marketPrice": 9.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486413,
+      "cardId": "OP02-073",
+      "name": "Little Sadi",
+      "cleanName": "Little Sadi",
+      "url": "https://www.tcgplayer.com/product/486413/one-piece-card-game-paramount-war-little-sadi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486413_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Play up to 1 [Jailer Beast] type Character card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486416,
+      "cardId": "OP02-074",
+      "name": "Saldeath",
+      "cleanName": "Saldeath",
+      "url": "https://www.tcgplayer.com/product/486416/one-piece-card-game-paramount-war-saldeath",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486416_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": "Your [Blugori] gains [Blocker]. <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486419,
+      "cardId": "OP02-075",
+      "name": "Shiki",
+      "cleanName": "Shiki",
+      "url": "https://www.tcgplayer.com/product/486419/one-piece-card-game-paramount-war-shiki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486419_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "FILM;Golden Lion Pirates",
+      "attribute": "Slash",
+      "effectText": "[Trigger] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.06,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486422,
+      "cardId": "OP02-076",
+      "name": "Shiryu",
+      "cleanName": "Shiryu",
+      "url": "https://www.tcgplayer.com/product/486422/one-piece-card-game-paramount-war-shiryu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486422_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Slash",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 9999,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486425,
+      "cardId": "OP02-077",
+      "name": "Solitaire",
+      "cleanName": "Solitaire",
+      "url": "https://www.tcgplayer.com/product/486425/one-piece-card-game-paramount-war-solitaire",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486425_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486433,
+      "cardId": "OP02-078",
+      "name": "Daifugo",
+      "cleanName": "Daifugo",
+      "url": "https://www.tcgplayer.com/product/486433/one-piece-card-game-paramount-war-daifugo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486433_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Ranged",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play up to 1 [SMILE] type Character card other than [Daifugo] with a cost of 3 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486436,
+      "cardId": "OP02-079",
+      "name": "Douglas Bullet",
+      "cleanName": "Douglas Bullet",
+      "url": "https://www.tcgplayer.com/product/486436/one-piece-card-game-paramount-war-douglas-bullet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486436_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "FILM;The Pirates Fest",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486438,
+      "cardId": "OP02-080",
+      "name": "Dobon",
+      "cleanName": "Dobon",
+      "url": "https://www.tcgplayer.com/product/486438/one-piece-card-game-paramount-war-dobon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486438_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;SMILE",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486441,
+      "cardId": "OP02-081",
+      "name": "Domino",
+      "cleanName": "Domino",
+      "url": "https://www.tcgplayer.com/product/486441/one-piece-card-game-paramount-war-domino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486441_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486445,
+      "cardId": "OP02-082",
+      "name": "Byrnndi World",
+      "cleanName": "Byrnndi World",
+      "url": "https://www.tcgplayer.com/product/486445/one-piece-card-game-paramount-war-byrnndi-world",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486445_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "World Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] DON!! -8 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Character gains +792000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486448,
+      "cardId": "OP02-083",
+      "name": "Hannyabal",
+      "cleanName": "Hannyabal",
+      "url": "https://www.tcgplayer.com/product/486448/one-piece-card-game-paramount-war-hannyabal",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486448_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 purple [Impel Down] type card other than [Hannyabal] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 50,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486451,
+      "cardId": "OP02-084",
+      "name": "Blugori",
+      "cleanName": "Blugori",
+      "url": "https://www.tcgplayer.com/product/486451/one-piece-card-game-paramount-war-blugori",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486451_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal;Impel Down",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 47.54,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485459,
+      "cardId": "OP02-085",
+      "name": "Magellan (085) (Alternate Art)",
+      "cleanName": "Magellan 085 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485459/one-piece-card-game-paramount-war-magellan-085-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485459_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your opponent returns 1 DON!! card from their field to their DON!! deck.\r\n<br>\r\n[Opponent's Turn] When this Character is K.O.'d, your opponent returns 2 DON!! cards from their field to their DON!! deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 13,
+          "midPrice": 18.79,
+          "highPrice": 124,
+          "marketPrice": 16.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486452,
+      "cardId": "OP02-085",
+      "name": "Magellan (085)",
+      "cleanName": "Magellan 085",
+      "url": "https://www.tcgplayer.com/product/486452/one-piece-card-game-paramount-war-magellan-085",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486452_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your opponent returns 1 DON!! card from their field to their DON!! deck.\r\n<br>\r\n[Opponent's Turn] When this Character is K.O.'d, your opponent returns 2 DON!! cards from their field to their DON!! deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.99,
+          "midPrice": 6.2,
+          "highPrice": 9999,
+          "marketPrice": 4.84,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485241,
+      "cardId": "OP02-086",
+      "name": "Minokoala (Box Topper)",
+      "cleanName": "Minokoala Box Topper",
+      "url": "https://www.tcgplayer.com/product/485241/one-piece-card-game-paramount-war-minokoala-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485241_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Impel Down;Jailer Beast",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] If your Leader has the [Impel Down] type, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.24,
+          "midPrice": 2.26,
+          "highPrice": 12,
+          "marketPrice": 1.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486453,
+      "cardId": "OP02-086",
+      "name": "Minokoala",
+      "cleanName": "Minokoala",
+      "url": "https://www.tcgplayer.com/product/486453/one-piece-card-game-paramount-war-minokoala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486453_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Impel Down;Jailer Beast",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] If your Leader has the [Impel Down] type, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486454,
+      "cardId": "OP02-087",
+      "name": "Minotaur",
+      "cleanName": "Minotaur",
+      "url": "https://www.tcgplayer.com/product/486454/one-piece-card-game-paramount-war-minotaur",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486454_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Impel Down;Jailer Beast",
+      "attribute": "Strike",
+      "effectText": "[Double Attack] <em>(This card deals 2 damage.)</em>\r\n<br>\r\n[On K.O.] If your Leader has the [Impel Down] type, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486455,
+      "cardId": "OP02-088",
+      "name": "Sphinx",
+      "cleanName": "Sphinx",
+      "url": "https://www.tcgplayer.com/product/486455/one-piece-card-game-paramount-war-sphinx",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486455_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Impel Down",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486456,
+      "cardId": "OP02-089",
+      "name": "Judgment of Hell",
+      "cleanName": "Judgment of Hell",
+      "url": "https://www.tcgplayer.com/product/486456/one-piece-card-game-paramount-war-judgment-of-hell",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486456_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Counter] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Give up to a total of 2 of your opponent's Leader or Character cards -3000 power during this turn.\r\n<br>\r\n[Trigger] If your opponent has 6 or more DON!! cards on their field, your opponent returns 1 DON!! card from their field to their DON!! deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.22,
+          "midPrice": 0.82,
+          "highPrice": 10,
+          "marketPrice": 0.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486457,
+      "cardId": "OP02-090",
+      "name": "Hydra",
+      "cleanName": "Hydra",
+      "url": "https://www.tcgplayer.com/product/486457/one-piece-card-game-paramount-war-hydra",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486457_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Main] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Give up to 1 of your opponent's Characters -3000 power during this turn.\r\n<br>\r\n[Trigger] If your opponent has 6 or more DON!! cards on their field, your opponent returns 1 DON!! card from their field to their DON!! deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486458,
+      "cardId": "OP02-091",
+      "name": "Venom Road",
+      "cleanName": "Venom Road",
+      "url": "https://www.tcgplayer.com/product/486458/one-piece-card-game-paramount-war-venom-road",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486458_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Main] Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br>\r\n[Trigger] If your opponent has 6 or more DON!! cards on their field, your opponent returns 1 DON!! card from their field to their DON!! deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486460,
+      "cardId": "OP02-092",
+      "name": "Impel Down",
+      "cleanName": "Impel Down",
+      "url": "https://www.tcgplayer.com/product/486460/one-piece-card-game-paramount-war-impel-down",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486460_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Impel Down",
+      "attribute": null,
+      "effectText": "[Activate:Main] <strong>You may trash 1 card from your hand and rest this Stage</strong>: Look at 3 cards from the top of your deck; reveal up to 1 [Impel Down] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 484476,
+      "cardId": "OP02-093",
+      "name": "Smoker (093) (Alternate Art)",
+      "cleanName": "Smoker 093 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/484476/one-piece-card-game-paramount-war-smoker-093-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/484476_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Activate:Main] [Once Per Turn] Give up to 1o of your opponent's Characters -1 cost during this turn. Then, if there is a Character with a cost of 0, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 105,
+          "midPrice": 131.49,
+          "highPrice": 450,
+          "marketPrice": 109.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486462,
+      "cardId": "OP02-093",
+      "name": "Smoker (093)",
+      "cleanName": "Smoker 093",
+      "url": "https://www.tcgplayer.com/product/486462/one-piece-card-game-paramount-war-smoker-093",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486462_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] [Activate:Main] [Once Per Turn] Give up to 1o of your opponent's Characters -1 cost during this turn. Then, if there is a Character with a cost of 0, this Leader gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486464,
+      "cardId": "OP02-094",
+      "name": "Isuka",
+      "cleanName": "Isuka",
+      "url": "https://www.tcgplayer.com/product/486464/one-piece-card-game-paramount-war-isuka",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486464_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Once Per Turn] When this Character battles and K.O.'s your opponent's Character, set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 10,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486467,
+      "cardId": "OP02-095",
+      "name": "Onigumo",
+      "cleanName": "Onigumo",
+      "url": "https://www.tcgplayer.com/product/486467/one-piece-card-game-paramount-war-onigumo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486467_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "If there is a Character with a cost of 0, this Character gains [Banish]. <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 10,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485162,
+      "cardId": "OP02-096",
+      "name": "Kuzan (096) (Alternate Art)",
+      "cleanName": "Kuzan 096 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485162/one-piece-card-game-paramount-war-kuzan-096-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485162_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw 1 card.\r\n<br>\r\n[When Attacking] Give up to 1 of your opponent's Characters -4 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15,
+          "midPrice": 18.34,
+          "highPrice": 199.99,
+          "marketPrice": 17.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486468,
+      "cardId": "OP02-096",
+      "name": "Kuzan (096)",
+      "cleanName": "Kuzan 096",
+      "url": "https://www.tcgplayer.com/product/486468/one-piece-card-game-paramount-war-kuzan-096",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486468_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw 1 card.\r\n<br>\r\n[When Attacking] Give up to 1 of your opponent's Characters -4 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 1.25,
+          "highPrice": 50,
+          "marketPrice": 0.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486471,
+      "cardId": "OP02-097",
+      "name": "Komille",
+      "cleanName": "Komille",
+      "url": "https://www.tcgplayer.com/product/486471/one-piece-card-game-paramount-war-komille",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486471_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486474,
+      "cardId": "OP02-098",
+      "name": "Koby",
+      "cleanName": "Koby",
+      "url": "https://www.tcgplayer.com/product/486474/one-piece-card-game-paramount-war-koby",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486474_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.28,
+          "highPrice": 50,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485242,
+      "cardId": "OP02-099",
+      "name": "Sakazuki",
+      "cleanName": "Sakazuki",
+      "url": "https://www.tcgplayer.com/product/485242/one-piece-card-game-paramount-war-sakazuki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485242_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.5,
+          "highPrice": 50,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485255,
+      "cardId": "OP02-099",
+      "name": "Sakazuki (Alternate Art)",
+      "cleanName": "Sakazuki Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485255/one-piece-card-game-paramount-war-sakazuki-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485255_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.14,
+          "midPrice": 11.97,
+          "highPrice": 75,
+          "marketPrice": 10.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486477,
+      "cardId": "OP02-100",
+      "name": "Jango",
+      "cleanName": "Jango",
+      "url": "https://www.tcgplayer.com/product/486477/one-piece-card-game-paramount-war-jango",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486477_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "If you have [Fullbody], this Character cannot be K.O.'d in battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486480,
+      "cardId": "OP02-101",
+      "name": "Strawberry",
+      "cleanName": "Strawberry",
+      "url": "https://www.tcgplayer.com/product/486480/one-piece-card-game-paramount-war-strawberry",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486480_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If there is a Character with a cost of 0, your opponent cannot activate the [Blocker] of any Character with a cost of 5 or less during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486481,
+      "cardId": "OP02-102",
+      "name": "Smoker (102)",
+      "cleanName": "Smoker 102",
+      "url": "https://www.tcgplayer.com/product/486481/one-piece-card-game-paramount-war-smoker-102",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486481_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "This Character cannot be K.O.'d by effects.\r\n<br>\r\n[When Attacking] If there is a Character with a cost of 0, this Character gains +2000 power during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486482,
+      "cardId": "OP02-103",
+      "name": "Sengoku",
+      "cleanName": "Sengoku",
+      "url": "https://www.tcgplayer.com/product/486482/one-piece-card-game-paramount-war-sengoku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486482_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 9999,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486483,
+      "cardId": "OP02-104",
+      "name": "Sentomaru",
+      "cleanName": "Sentomaru",
+      "url": "https://www.tcgplayer.com/product/486483/one-piece-card-game-paramount-war-sentomaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486483_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485243,
+      "cardId": "OP02-105",
+      "name": "Tashigi",
+      "cleanName": "Tashigi",
+      "url": "https://www.tcgplayer.com/product/485243/one-piece-card-game-paramount-war-tashigi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485243_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters -3 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485244,
+      "cardId": "OP02-105",
+      "name": "Tashigi (Box Topper)",
+      "cleanName": "Tashigi Box Topper",
+      "url": "https://www.tcgplayer.com/product/485244/one-piece-card-game-paramount-war-tashigi-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485244_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters -3 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.5,
+          "midPrice": 6.29,
+          "highPrice": 32,
+          "marketPrice": 5.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486484,
+      "cardId": "OP02-106",
+      "name": "Tsuru",
+      "cleanName": "Tsuru",
+      "url": "https://www.tcgplayer.com/product/486484/one-piece-card-game-paramount-war-tsuru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486484_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486485,
+      "cardId": "OP02-107",
+      "name": "Doberman",
+      "cleanName": "Doberman",
+      "url": "https://www.tcgplayer.com/product/486485/one-piece-card-game-paramount-war-doberman",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486485_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485245,
+      "cardId": "OP02-108",
+      "name": "Donquixote Rosinante (Box Topper)",
+      "cleanName": "Donquixote Rosinante Box Topper",
+      "url": "https://www.tcgplayer.com/product/485245/one-piece-card-game-paramount-war-donquixote-rosinante-box-topper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485245_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.54,
+          "midPrice": 8.95,
+          "highPrice": 20,
+          "marketPrice": 7.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486486,
+      "cardId": "OP02-108",
+      "name": "Donquixote Rosinante",
+      "cleanName": "Donquixote Rosinante",
+      "url": "https://www.tcgplayer.com/product/486486/one-piece-card-game-paramount-war-donquixote-rosinante",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486486_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486487,
+      "cardId": "OP02-109",
+      "name": "Jaguar.D.Saul",
+      "cleanName": "JaguarDSaul",
+      "url": "https://www.tcgplayer.com/product/486487/one-piece-card-game-paramount-war-jaguardsaul",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486487_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Giant;Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486488,
+      "cardId": "OP02-110",
+      "name": "Hina",
+      "cleanName": "Hina",
+      "url": "https://www.tcgplayer.com/product/486488/one-piece-card-game-paramount-war-hina",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486488_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] Select up to 1 of your opponent's Characters with a cost of 6 or less. The selected Character cannot attack during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.17,
+          "midPrice": 0.4,
+          "highPrice": 25,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486489,
+      "cardId": "OP02-111",
+      "name": "Fullbody",
+      "cleanName": "Fullbody",
+      "url": "https://www.tcgplayer.com/product/486489/one-piece-card-game-paramount-war-fullbody",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486489_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If you have [Jango], this card gains +3000 power during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486490,
+      "cardId": "OP02-112",
+      "name": "Bell-mere",
+      "cleanName": "Bell mere",
+      "url": "https://www.tcgplayer.com/product/486490/one-piece-card-game-paramount-war-bell-mere",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486490_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Ranged",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: Give up to 1 of your opponent's Characters -1 cost during this turn. Then, up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.06,
+          "midPrice": 0.24,
+          "highPrice": 5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486491,
+      "cardId": "OP02-113",
+      "name": "Helmeppo",
+      "cleanName": "Helmeppo",
+      "url": "https://www.tcgplayer.com/product/486491/one-piece-card-game-paramount-war-helmeppo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486491_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] Give up to 1 of your opponent's Characters -2 cost during this turn. Then, if there is a Character with a cost of 0, this Character gains +2000 power during this battle.\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485087,
+      "cardId": "OP02-114",
+      "name": "Borsalino (Alternate Art)",
+      "cleanName": "Borsalino Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485087/one-piece-card-game-paramount-war-borsalino-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485087_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] This Character gains +1000 power and cannot be K.O.'d by effects.\r\n<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11.48,
+          "midPrice": 17.57,
+          "highPrice": 125,
+          "marketPrice": 13.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485246,
+      "cardId": "OP02-114",
+      "name": "Borsalino",
+      "cleanName": "Borsalino",
+      "url": "https://www.tcgplayer.com/product/485246/one-piece-card-game-paramount-war-borsalino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485246_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] This Character gains +1000 power and cannot be K.O.'d by effects.\r\n<br>\r\n[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.85,
+          "highPrice": 54,
+          "marketPrice": 0.52,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 484822,
+      "cardId": "OP02-115",
+      "name": "Monkey.D.Garp (115) (Alternate Art)",
+      "cleanName": "MonkeyDGarp 115 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/484822/one-piece-card-game-paramount-war-monkeydgarp-115-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/484822_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9,
+          "midPrice": 19.99,
+          "highPrice": 48,
+          "marketPrice": 10.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486492,
+      "cardId": "OP02-115",
+      "name": "Monkey.D.Garp (115)",
+      "cleanName": "MonkeyDGarp 115",
+      "url": "https://www.tcgplayer.com/product/486492/one-piece-card-game-paramount-war-monkeydgarp-115",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486492_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.33,
+          "highPrice": 25,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486493,
+      "cardId": "OP02-116",
+      "name": "Yamakaji",
+      "cleanName": "Yamakaji",
+      "url": "https://www.tcgplayer.com/product/486493/one-piece-card-game-paramount-war-yamakaji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486493_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486494,
+      "cardId": "OP02-117",
+      "name": "Ice Age",
+      "cleanName": "Ice Age",
+      "url": "https://www.tcgplayer.com/product/486494/one-piece-card-game-paramount-war-ice-age",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486494_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters -5 cost during this turn.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 6.98,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486546,
+      "cardId": "OP02-118",
+      "name": "Yasakani Sacred Jewel",
+      "cleanName": "Yasakani Sacred Jewel",
+      "url": "https://www.tcgplayer.com/product/486546/one-piece-card-game-paramount-war-yasakani-sacred-jewel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486546_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Counter] <strong>You may trash 1 card from your hand</strong>: Select up to 1 of your Characters. The selected Character cannot be K.O.'d during this battle.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Stages with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 10,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 486547,
+      "cardId": "OP02-119",
+      "name": "Meteor Volcano",
+      "cleanName": "Meteor Volcano",
+      "url": "https://www.tcgplayer.com/product/486547/one-piece-card-game-paramount-war-meteor-volcano",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/486547_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 1 or less.\r\n<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 482718,
+      "cardId": "OP02-120",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/482718/one-piece-card-game-paramount-war-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/482718_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": null,
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your Leader and all of your Characters gain +1000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8,
+          "midPrice": 10.59,
+          "highPrice": 100.98,
+          "marketPrice": 8.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 483360,
+      "cardId": "OP02-120",
+      "name": "Uta (Alternate Art)",
+      "cleanName": "Uta Alternate Art",
+      "url": "https://www.tcgplayer.com/product/483360/one-piece-card-game-paramount-war-uta-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/483360_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": null,
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your Leader and all of your Characters gain +1000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 28,
+          "midPrice": 34.95,
+          "highPrice": 320,
+          "marketPrice": 34.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485397,
+      "cardId": "OP02-121",
+      "name": "Kuzan (121)",
+      "cleanName": "Kuzan 121",
+      "url": "https://www.tcgplayer.com/product/485397/one-piece-card-game-paramount-war-kuzan-121",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485397_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "10000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Former Navy",
+      "attribute": "Special",
+      "effectText": "[Your Turn] Give all of your opponent's Characters -5 cost.\r\n<br>\r\n[On Play] K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.06,
+          "midPrice": 5,
+          "highPrice": 99,
+          "marketPrice": 3.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 485456,
+      "cardId": "OP02-121",
+      "name": "Kuzan (121) (Alternate Art)",
+      "cleanName": "Kuzan 121 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/485456/one-piece-card-game-paramount-war-kuzan-121-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/485456_200w.jpg",
+      "groupId": 17698,
+      "setCode": "OP02",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "10000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Former Navy",
+      "attribute": "Special",
+      "effectText": "[Your Turn] Give all of your opponent's Characters -5 cost.\r\n<br>\r\n[On Play] K.O. up to 1 of your opponent's Characters with a cost of 0.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12,
+          "midPrice": 17.3,
+          "highPrice": 200,
+          "marketPrice": 16.06,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 6,
+  "errors": [
+    "Product 482273 (DON!! Card (Manga)) has no Number in extendedData",
+    "Product 549342 (DON!! Card) has no Number in extendedData"
+  ]
+}

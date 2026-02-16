@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ListingCard } from "@/components/listings/listing-card";
 import { GradedListingCard } from "@/components/listings/graded-listing-card";
-import { CreateListingForm } from "@/components/listings/create-listing-form";
+import { IntentPanel } from "@/components/listings/intent-panel";
 import { CreateGradedListingForm } from "@/components/listings/create-graded-listing-form";
 import type { TCG, Condition, GradingCompany } from "@/types/domain";
 
@@ -23,10 +23,11 @@ interface HaveListing {
   quantity: number;
   language: string;
   askPrice: number;
+  currency: string;
+  isActive: boolean;
   notes: string | null;
   createdAt: string;
   card: CardData;
-  // AI condition trust fields
   aiCCSComposite: number | null;
   sellerOverrodeAI: boolean;
 }
@@ -36,6 +37,8 @@ interface WantListing {
   minCondition: Condition;
   maxQuantity: number;
   bidPrice: number;
+  currency: string;
+  isActive: boolean;
   notes: string | null;
   createdAt: string;
   card: CardData;
@@ -66,6 +69,7 @@ interface GradedWantListing {
 
 type Tab = "raw" | "graded";
 type FormMode = "have" | "want" | "graded-have" | "graded-want" | null;
+type ViewFilter = "all" | "active" | "paused";
 
 export default function ListingsPage() {
   const [tab, setTab] = useState<Tab>("raw");
@@ -75,6 +79,7 @@ export default function ListingsPage() {
   const [gradedWantListings, setGradedWantListings] = useState<GradedWantListing[]>([]);
   const [showForm, setShowForm] = useState<FormMode>(null);
   const [loading, setLoading] = useState(true);
+  const [viewFilter, setViewFilter] = useState<ViewFilter>("all");
 
   const fetchListings = useCallback(async () => {
     try {
@@ -106,6 +111,17 @@ export default function ListingsPage() {
     fetchListings();
   }
 
+  async function handleUpdate(id: string, type: "have" | "want", data: Record<string, unknown>) {
+    const res = await fetch(`/api/listings/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type, ...data }),
+    });
+    if (res.ok) {
+      fetchListings();
+    }
+  }
+
   async function handleGradedDelete(id: string, type: "have" | "want") {
     await fetch(`/api/graded-listings?id=${id}&type=${type}`, { method: "DELETE" });
     fetchListings();
@@ -115,6 +131,14 @@ export default function ListingsPage() {
     setShowForm(null);
     fetchListings();
   }
+
+  // Filter listings
+  const filteredHave = haveListings.filter((l) =>
+    viewFilter === "all" ? true : viewFilter === "active" ? l.isActive : !l.isActive,
+  );
+  const filteredWant = wantListings.filter((l) =>
+    viewFilter === "all" ? true : viewFilter === "active" ? l.isActive : !l.isActive,
+  );
 
   if (loading) {
     return (
@@ -126,6 +150,7 @@ export default function ListingsPage() {
 
   const rawCount = haveListings.length + wantListings.length;
   const gradedCount = gradedHaveListings.length + gradedWantListings.length;
+  const pausedCount = haveListings.filter((l) => !l.isActive).length + wantListings.filter((l) => !l.isActive).length;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -134,6 +159,9 @@ export default function ListingsPage() {
           <h1 className="text-2xl font-bold text-gray-900">My Listings</h1>
           <p className="mt-1 text-sm text-gray-600">
             Manage your have and want listings
+            {pausedCount > 0 && (
+              <span className="ml-2 text-amber-600">({pausedCount} paused)</span>
+            )}
           </p>
         </div>
         <div className="flex gap-2">
@@ -159,28 +187,48 @@ export default function ListingsPage() {
         </div>
       </div>
 
-      {/* Tab toggle */}
-      <div className="mt-6 flex gap-1 rounded-lg bg-gray-100 p-1 w-fit">
-        <button
-          onClick={() => setTab("raw")}
-          className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-            tab === "raw"
-              ? "bg-white text-gray-900 shadow-sm"
-              : "text-gray-600 hover:text-gray-900"
-          }`}
-        >
-          Raw Cards ({rawCount})
-        </button>
-        <button
-          onClick={() => setTab("graded")}
-          className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-            tab === "graded"
-              ? "bg-white text-gray-900 shadow-sm"
-              : "text-gray-600 hover:text-gray-900"
-          }`}
-        >
-          Graded Slabs ({gradedCount})
-        </button>
+      {/* Tab toggle + filter */}
+      <div className="mt-6 flex items-center gap-4">
+        <div className="flex gap-1 rounded-lg bg-gray-100 p-1">
+          <button
+            onClick={() => setTab("raw")}
+            className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+              tab === "raw"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Raw Cards ({rawCount})
+          </button>
+          <button
+            onClick={() => setTab("graded")}
+            className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+              tab === "graded"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
+            }`}
+          >
+            Graded Slabs ({gradedCount})
+          </button>
+        </div>
+
+        {tab === "raw" && (
+          <div className="flex gap-1 text-xs">
+            {(["all", "active", "paused"] as const).map((f) => (
+              <button
+                key={f}
+                onClick={() => setViewFilter(f)}
+                className={`rounded-full px-3 py-1 capitalize transition-colors ${
+                  viewFilter === f
+                    ? "bg-indigo-100 text-indigo-700"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Raw card listings */}
@@ -188,21 +236,25 @@ export default function ListingsPage() {
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Cards I Have ({haveListings.length})
+              Cards I Have ({filteredHave.length})
             </h2>
-            {haveListings.length === 0 ? (
+            {filteredHave.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">
-                <p className="text-gray-500">No have listings yet.</p>
-                <button
-                  onClick={() => setShowForm("have")}
-                  className="mt-2 text-sm text-indigo-600 hover:text-indigo-500"
-                >
-                  Add a card you want to trade
-                </button>
+                <p className="text-gray-500">
+                  {viewFilter !== "all" ? `No ${viewFilter} have listings.` : "No have listings yet."}
+                </p>
+                {viewFilter === "all" && (
+                  <button
+                    onClick={() => setShowForm("have")}
+                    className="mt-2 text-sm text-indigo-600 hover:text-indigo-500"
+                  >
+                    Add a card you want to trade
+                  </button>
+                )}
               </div>
             ) : (
               <div className="space-y-3">
-                {haveListings.map((listing) => (
+                {filteredHave.map((listing) => (
                   <ListingCard
                     key={listing.id}
                     id={listing.id}
@@ -211,9 +263,12 @@ export default function ListingsPage() {
                     condition={listing.condition}
                     quantity={listing.quantity}
                     price={listing.askPrice}
+                    currency={listing.currency}
                     notes={listing.notes}
+                    isActive={listing.isActive}
                     createdAt={listing.createdAt}
                     onDelete={handleDelete}
+                    onUpdate={handleUpdate}
                     aiCCSComposite={listing.aiCCSComposite}
                     sellerOverrodeAI={listing.sellerOverrodeAI}
                   />
@@ -224,21 +279,25 @@ export default function ListingsPage() {
 
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Cards I Want ({wantListings.length})
+              Cards I Want ({filteredWant.length})
             </h2>
-            {wantListings.length === 0 ? (
+            {filteredWant.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">
-                <p className="text-gray-500">No want listings yet.</p>
-                <button
-                  onClick={() => setShowForm("want")}
-                  className="mt-2 text-sm text-indigo-600 hover:text-indigo-500"
-                >
-                  Add a card you&apos;re looking for
-                </button>
+                <p className="text-gray-500">
+                  {viewFilter !== "all" ? `No ${viewFilter} want listings.` : "No want listings yet."}
+                </p>
+                {viewFilter === "all" && (
+                  <button
+                    onClick={() => setShowForm("want")}
+                    className="mt-2 text-sm text-indigo-600 hover:text-indigo-500"
+                  >
+                    Add a card you&apos;re looking for
+                  </button>
+                )}
               </div>
             ) : (
               <div className="space-y-3">
-                {wantListings.map((listing) => (
+                {filteredWant.map((listing) => (
                   <ListingCard
                     key={listing.id}
                     id={listing.id}
@@ -247,9 +306,12 @@ export default function ListingsPage() {
                     condition={listing.minCondition}
                     quantity={listing.maxQuantity}
                     price={listing.bidPrice}
+                    currency={listing.currency}
                     notes={listing.notes}
+                    isActive={listing.isActive}
                     createdAt={listing.createdAt}
                     onDelete={handleDelete}
+                    onUpdate={handleUpdate}
                   />
                 ))}
               </div>
@@ -333,9 +395,11 @@ export default function ListingsPage() {
         </div>
       )}
 
-      {/* Create Listing Modals */}
+      {/* Create Listing Panels */}
       {(showForm === "have" || showForm === "want") && (
-        <CreateListingForm
+        <IntentPanel
+          open={true}
+          card={null}
           type={showForm}
           onClose={() => setShowForm(null)}
           onCreated={handleCreated}

@@ -437,6 +437,10 @@ export class WisePayoutAdapter implements IPayoutProvider {
 
     return { transferId: String(transfer.id) };
   }
+
+  async createTransferFromPayment(_params: import("../ports/payment.port").MarketplaceTransferParams): Promise<import("../ports/payment.port").TransferResult> {
+    throw new Error("Wise does not support marketplace transfers from payment intents. Use Stripe for marketplace settlement.");
+  }
 }
 
 // ─── Recipient Detail Builders ───────────────────────

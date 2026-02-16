@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy",
+  "groupId": 24285,
+  "setCode": "ST26",
+  "totalProducts": 17,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:51.824Z",
+  "durationMs": 109,
+  "cards": [
+    {
+      "productId": 634310,
+      "cardId": "OP05-065",
+      "name": "San-Gorou (Reprint)",
+      "cleanName": "San Gorou Reprint",
+      "url": "https://www.tcgplayer.com/product/634310/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-san-gorou-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634310_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP05 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.3,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634311,
+      "cardId": "OP05-066",
+      "name": "Jinbe (Reprint)",
+      "cleanName": "Jinbe Reprint",
+      "url": "https://www.tcgplayer.com/product/634311/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-jinbe-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634311_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Opponent's Turn] If you have 10 DON!! cards on your field, this Character gains +1000 power.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP05 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.3,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634312,
+      "cardId": "OP05-070",
+      "name": "Fra-Nosuke (Reprint)",
+      "cleanName": "Fra Nosuke Reprint",
+      "url": "https://www.tcgplayer.com/product/634312/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-fra-nosuke-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634312_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 8 or more DON!! cards on your field, this Character gains [Rush]. <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP05 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 1.31,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632776,
+      "cardId": "OP09-061",
+      "name": "Monkey.D.Luffy (OP09-061)",
+      "cleanName": "MonkeyDLuffy OP09 061",
+      "url": "https://www.tcgplayer.com/product/632776/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-monkeydluffy-op09-061",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632776_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] All of your Characters gain +1 cost.<br>\r\n[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 9.49,
+          "highPrice": 50,
+          "marketPrice": 7.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634313,
+      "cardId": "OP09-063",
+      "name": "Usopp (Reprint)",
+      "cleanName": "Usopp Reprint",
+      "url": "https://www.tcgplayer.com/product/634313/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-usopp-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634313_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634314,
+      "cardId": "OP09-070",
+      "name": "Nami (Reprint)",
+      "cleanName": "Nami Reprint",
+      "url": "https://www.tcgplayer.com/product/634314/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-nami-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634314_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 1.36,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634315,
+      "cardId": "OP09-076",
+      "name": "Roronoa Zoro (Reprint)",
+      "cleanName": "Roronoa Zoro Reprint",
+      "url": "https://www.tcgplayer.com/product/634315/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-roronoa-zoro-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634315_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.98,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634316,
+      "cardId": "OP09-077",
+      "name": "Gum-Gum Lightning (Reprint)",
+      "cleanName": "Gum Gum Lightning Reprint",
+      "url": "https://www.tcgplayer.com/product/634316/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-gum-gum-lightning-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634316_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] <strong>DON!! 2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em></strong>: K.O. up to 1 of your opponent's Characters with 6000 power or less.<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.11,
+          "highPrice": 1.33,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634317,
+      "cardId": "OP09-078",
+      "name": "Gum-Gum Giant (Reprint)",
+      "cleanName": "Gum Gum Giant Reprint",
+      "url": "https://www.tcgplayer.com/product/634317/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-gum-gum-giant-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634317_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Counter] <strong>DON!! 2, You may trash 1 card from your hand</strong>: If your Leader has the \"Straw Hat Crew\" type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.\r\n<br>\r\n<br><span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the OP09 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.28,
+          "highPrice": 1.41,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 634318,
+      "cardId": "ST14-010",
+      "name": "Brook (Reprint)",
+      "cleanName": "Brook Reprint",
+      "url": "https://www.tcgplayer.com/product/634318/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-brook-reprint",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/634318_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "<span style=\"color:red\">DISCLAIMER: This card is a reprint of the pre-existing card in the ST14 set. The main difference between this card and the original print is the inclusion of \"EN\" on the right side, by the copyright information.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.32,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632779,
+      "cardId": "ST26-001",
+      "name": "Soba Mask",
+      "cleanName": "Soba Mask",
+      "url": "https://www.tcgplayer.com/product/632779/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-soba-mask",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632779_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "If you have a [San-Gorou] or [Sanji] Character with 7000 base power or more, give this card in your hand -5 cost. \r\n<br>[On Play] Return all of your [San-Gorou] and [Sanji] Characters to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 2.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632780,
+      "cardId": "ST26-002",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/632780/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632780_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>[On Play] <strong>DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 1 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 2.99,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632777,
+      "cardId": "ST26-003",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/632777/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632777_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 1.75,
+          "highPrice": 7.5,
+          "marketPrice": 1.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632781,
+      "cardId": "ST26-004",
+      "name": "General Franky",
+      "cleanName": "General Franky",
+      "url": "https://www.tcgplayer.com/product/632781/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-general-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632781_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Give up to 2 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 632778,
+      "cardId": "ST26-005",
+      "name": "Monkey.D.Luffy (ST26-005)",
+      "cleanName": "MonkeyDLuffy ST26 005",
+      "url": "https://www.tcgplayer.com/product/632778/one-piece-card-game-starter-deck-26-purple-black-monkeydluffy-monkeydluffy-st26-005",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/632778_200w.jpg",
+      "groupId": 24285,
+      "setCode": "ST26",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] / [When Attacking] <strong>DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> If your Leader is multicolored and your opponent has 5 or more DON!! cards on their field, your \"Straw Hat Crew\" type Leader's base power becomes 7000 until the end of your opponent's next End Phase.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.5,
+          "midPrice": 4,
+          "highPrice": 15,
+          "marketPrice": 3.29,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

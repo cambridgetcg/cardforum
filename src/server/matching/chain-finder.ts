@@ -155,7 +155,7 @@ function collectChainRegions(anchor: ChainAnchor, edges: ListingEdge[]): string[
  * The anchor leg (authenticator → first recipient) is synthesized as leg 0.
  * Subsequent legs come from the chain's edges.
  */
-export function chainToProposal(chain: Chain): BridgeProposal {
+export async function chainToProposal(chain: Chain): Promise<BridgeProposal> {
   const firstEdge = chain.edges[0];
 
   // Leg 0: authenticator provides the anchor card
@@ -214,7 +214,7 @@ export function chainToProposal(chain: Chain): BridgeProposal {
     regionalBalance,
     isChain: true,
   };
-  proposal.score = scoreProposal(proposal);
+  proposal.score = await scoreProposal(proposal);
 
   return proposal;
 }

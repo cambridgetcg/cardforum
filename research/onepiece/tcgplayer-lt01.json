@@ -1,0 +1,1544 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Learn Together Deck Set",
+  "groupId": 24306,
+  "setCode": "LT01",
+  "totalProducts": 53,
+  "totalCards": 51,
+  "scrapedAt": "2026-02-15T22:54:00.470Z",
+  "durationMs": 74,
+  "cards": [
+    {
+      "productId": 659236,
+      "cardId": "EB01-003",
+      "name": "Kid & Killer - EB01-003",
+      "cleanName": "Kid and Killer EB01 003",
+      "url": "https://www.tcgplayer.com/product/659236/one-piece-card-game-learn-together-deck-set-kid-and-killer-eb01-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/659236_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Slash;Special",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[When Attacking] If your opponent has 2 or less Life cards, this Character gains +2000 power during this turn.\r\n\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.48,
+          "midPrice": 2.15,
+          "highPrice": 8.98,
+          "marketPrice": 2.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656644,
+      "cardId": "EB01-012",
+      "name": "Cavendish (Zoro Deck)",
+      "cleanName": "Cavendish Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656644/one-piece-card-game-learn-together-deck-set-cavendish-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656644_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On Play]/[When Attacking] If your Leader has the [Supernovas] type and you have no other [Cavendish] Characters, set up to 2 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.48,
+          "midPrice": 2.58,
+          "highPrice": 18.99,
+          "marketPrice": 2.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656641,
+      "cardId": "EB02-019",
+      "name": "Roronoa Zoro - EB02-019 (Zoro Deck)",
+      "cleanName": "Roronoa Zoro EB02 019 Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656641/one-piece-card-game-learn-together-deck-set-roronoa-zoro-eb02-019-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656641_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Slash",
+      "effectText": "If your opponent has 2 or more Characters, this Character can attack Characters on the turn in which it is played.<br>\r\n[On Play] If your Leader has the \"Straw Hat Crew\" type, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656692,
+      "cardId": "EB02-022",
+      "name": "Usopp - EB02-022 (Nami Deck)",
+      "cleanName": "Usopp EB02 022 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656692/one-piece-card-game-learn-together-deck-set-usopp-eb02-022-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656692_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;East Blue",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 2 or less Characters with 5000 power or more, play up to 1 Character card with 6000 power or less and no base effect from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.14,
+          "highPrice": 1.99,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656656,
+      "cardId": "OP01-016",
+      "name": "Nami - OP01-016 (Luffy Deck)",
+      "cleanName": "Nami OP01 016 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656656/one-piece-card-game-learn-together-deck-set-nami-op01-016-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656656_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Straw Hat Crew] type Character card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.3,
+          "midPrice": 0.5,
+          "highPrice": 2.99,
+          "marketPrice": 0.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656676,
+      "cardId": "OP06-018",
+      "name": "Gum-Gum King Kong Gatling (Luffy Deck)",
+      "cleanName": "Gum Gum King Kong Gatling Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656676/one-piece-card-game-learn-together-deck-set-gum-gum-king-kong-gatling-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656676_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "FILM;Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, if your opponent has a Character with 7000 power or more, up to 1 of your Leader or Character cards gains +1000 power during this turn.\r\n<br>[Trigger] K.O. up to 1 of your opponent's Characters with 5000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.15,
+          "highPrice": 0.99,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 659234,
+      "cardId": "OP06-023",
+      "name": "Arlong - OP06-023",
+      "cleanName": "Arlong OP06 023",
+      "url": "https://www.tcgplayer.com/product/659234/one-piece-card-game-learn-together-deck-set-arlong-op06-023",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/659234_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Arlong Pirates;East Blue",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand:</strong> Up to 1 of your opponent's rested Leader cannot attack until the end of your opponent's next turn.\r\n<br>[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.23,
+          "highPrice": 3.99,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656642,
+      "cardId": "OP06-036",
+      "name": "Ryuma (Zoro Deck)",
+      "cleanName": "Ryuma Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656642/one-piece-card-game-learn-together-deck-set-ryuma-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656642_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Land of Wano;Thriller Bark Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] / [On K.O.] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656650,
+      "cardId": "OP06-038",
+      "name": "The Billion-fold World Trichiliocosm (Zoro Deck)",
+      "cleanName": "The Billion fold World Trichiliocosm Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656650/one-piece-card-game-learn-together-deck-set-the-billion-fold-world-trichiliocosm-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656650_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if you have 8 or more rested cards, that card gains an additional +2000 power during this battle.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.18,
+          "highPrice": 1.37,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 659235,
+      "cardId": "OP07-015",
+      "name": "Monkey.D.Dragon - OP07-015",
+      "cleanName": "MonkeyDDragon OP07 015",
+      "url": "https://www.tcgplayer.com/product/659235/one-piece-card-game-learn-together-deck-set-monkeyddragon-op07-015",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/659235_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Rush]<em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[On Play] Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.\r\n\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.15,
+          "midPrice": 0.4,
+          "highPrice": 2.9,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 664050,
+      "cardId": "OP07-044",
+      "name": "Dracule Mihawk - OP07-044",
+      "cleanName": "Dracule Mihawk OP07 044",
+      "url": "https://www.tcgplayer.com/product/664050/one-piece-card-game-learn-together-deck-set-dracule-mihawk-op07-044",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/664050_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "10000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[On Play] Draw 1 card.\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.19,
+          "highPrice": 0.44,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 664053,
+      "cardId": "OP08-028",
+      "name": "Nekomamushi - OP08-028",
+      "cleanName": "Nekomamushi OP08 028",
+      "url": "https://www.tcgplayer.com/product/664053/one-piece-card-game-learn-together-deck-set-nekomamushi-op08-028",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/664053_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your opponent has 7 or more rested cards, this Character gains [Rush] during this turn.<br>\r\n(This card can attack on the turn in which it is played.)\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.24,
+          "highPrice": 0.44,
+          "marketPrice": null,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656666,
+      "cardId": "OP09-005",
+      "name": "Silvers Rayleigh (Luffy Deck)",
+      "cleanName": "Silvers Rayleigh Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656666/one-piece-card-game-learn-together-deck-set-silvers-rayleigh-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656666_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If your opponent has 2 or more Characters with a base power of 5000 or more, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 0.79,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656699,
+      "cardId": "OP09-107",
+      "name": "Nico Robin - OP09-107 (Nami Deck)",
+      "cleanName": "Nico Robin OP09 107 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656699/one-piece-card-game-learn-together-deck-set-nico-robin-op09-107-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656699_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has 3 or more Life cards, trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[Trigger] Play up to 1 yellow Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.25,
+          "midPrice": 1.07,
+          "highPrice": 3.99,
+          "marketPrice": 0.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656660,
+      "cardId": "OP10-011",
+      "name": "Tony Tony.Chopper - OP10-011 (Luffy Deck)",
+      "cleanName": "Tony TonyChopper OP10 011 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656660/one-piece-card-game-learn-together-deck-set-tony-tonychopper-op10-011-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656660_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[Opponent's Turn] This Character gains +2000 power.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 1.3,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656669,
+      "cardId": "OP10-013",
+      "name": "Nami - OP10-013 (Luffy Deck)",
+      "cleanName": "Nami OP10 013 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656669/one-piece-card-game-learn-together-deck-set-nami-op10-013-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656669_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 0.99,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656674,
+      "cardId": "OP10-019",
+      "name": "Divine Departure (Luffy Deck)",
+      "cleanName": "Divine Departure Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656674/one-piece-card-game-learn-together-deck-set-divine-departure-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656674_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> K.O. up to 1 of your opponent's Characters with 8000 power or less.<br>\r\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.06,
+          "midPrice": 0.25,
+          "highPrice": 1.3,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 664052,
+      "cardId": "OP10-020",
+      "name": "Gum-Gum UFO - OP10-020",
+      "cleanName": "Gum Gum UFO OP10 020",
+      "url": "https://www.tcgplayer.com/product/664052/one-piece-card-game-learn-together-deck-set-gum-gum-ufo-op10-020",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/664052_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters 4000 power during this turn. Then, if you have 2 or less Life cards, up to 1 of your Leader or Character cards gains +1000 power during this turn.<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with 3000 power or less.\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 0.5,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656645,
+      "cardId": "OP10-030",
+      "name": "Smoker (Zoro Deck)",
+      "cleanName": "Smoker Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656645/one-piece-card-game-learn-together-deck-set-smoker-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656645_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[Activate: Main] Set up to 1 of your DON!! cards as active. Then, you cannot set DON!! cards as active using Character effects during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.49,
+          "highPrice": 3.29,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656670,
+      "cardId": "OP11-003",
+      "name": "Usopp - OP11-003 (Luffy Deck)",
+      "cleanName": "Usopp OP11 003 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656670/one-piece-card-game-learn-together-deck-set-usopp-op11-003-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656670_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.12,
+          "highPrice": 0.69,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656671,
+      "cardId": "OP11-016",
+      "name": "Roronoa Zoro - OP11-016 (Luffy Deck)",
+      "cleanName": "Roronoa Zoro OP11 016 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656671/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op11-016-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656671_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.11,
+          "highPrice": 0.69,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656678,
+      "cardId": "OP11-041",
+      "name": "Nami - OP11-041 (Nami Deck)",
+      "cleanName": "Nami OP11 041 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656678/one-piece-card-game-learn-together-deck-set-nami-op11-041-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656678_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] This effect can be activated when a card is removed from your or your opponent's Life cards. If you have 7 or less cards in your hand, draw 1 card.<br>\r\n[DON!! x1] [On Your Opponent's Attack] [Once Per Turn] <strong>You may trash 1 card from your hand:</strong> This Leader gains +2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 6,
+          "midPrice": 10,
+          "highPrice": 39.99,
+          "marketPrice": 8.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656688,
+      "cardId": "OP11-048",
+      "name": "Capone\"Gang\"Bege (Nami Deck)",
+      "cleanName": "CaponeGangBege Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656688/one-piece-card-game-learn-together-deck-set-caponegangbege-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656688_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Firetank Pirates;Supernovas",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Firetank Pirates\" or \"Straw Hat Crew\" type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.15,
+          "highPrice": 2.99,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656700,
+      "cardId": "OP11-051",
+      "name": "Sanji - OP11-051 (Nami Deck)",
+      "cleanName": "Sanji OP11 051 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656700/one-piece-card-game-learn-together-deck-set-sanji-op11-051-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656700_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Vinsmoke Family",
+      "attribute": "Strike",
+      "effectText": "When this Character is K.O.'d by your opponent's effect, look at 5 cards from the top of your deck and play up to 1 \"Straw Hat Crew\" type Character card with a cost of 5 or less. Then, place the rest at the bottom of your deck in any order.<br>\r\n[On Play] Return up to 1 Character with 5000 base power or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 1.99,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656695,
+      "cardId": "OP11-054",
+      "name": "Nami - OP11-054",
+      "cleanName": "Nami OP11 054",
+      "url": "https://www.tcgplayer.com/product/656695/one-piece-card-game-learn-together-deck-set-nami-op11-054",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656695_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If your Leader is multicolored, draw 3 cards and place 2 cards from your hand at the top or bottom of your deck in any order.\r\n\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the card's border.</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.99,
+          "midPrice": 1.94,
+          "highPrice": 9.99,
+          "marketPrice": 1.56,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656693,
+      "cardId": "OP11-056",
+      "name": "Brook (Nami Deck)",
+      "cleanName": "Brook Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656693/one-piece-card-game-learn-together-deck-set-brook-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656693_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Place up to 1 Character with a base cost of 1 at the bottom of the owner's deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 1.99,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656704,
+      "cardId": "OP11-060",
+      "name": "Let's Crash This Wedding!!! (Nami Deck)",
+      "cleanName": "Lets Crash This Wedding Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656704/one-piece-card-game-learn-together-deck-set-lets-crash-this-wedding-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656704_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] If your Leader is multicolored, look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type card other than [Let's Crash This Wedding!!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.17,
+          "highPrice": 1.99,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656702,
+      "cardId": "OP11-114",
+      "name": "Gum-Gum Fire-Fist Pistol Red Hawk (Nami Deck)",
+      "cleanName": "Gum Gum Fire Fist Pistol Red Hawk Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656702/one-piece-card-game-learn-together-deck-set-gum-gum-fire-fist-pistol-red-hawk-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656702_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 3 of your DON!! cards:</strong> If you and your opponent have a total of 5 or more Life cards, K.O. up to 1 of your opponent's Characters with a base cost of 5 or less.<br>\r\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.11,
+          "highPrice": 1.99,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656701,
+      "cardId": "OP11-118",
+      "name": "Monkey.D.Luffy - OP11-118 (Nami Deck)",
+      "cleanName": "MonkeyDLuffy OP11 118 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656701/one-piece-card-game-learn-together-deck-set-monkeydluffy-op11-118-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656701_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Rush]<br>\r\n[When Attacking] <strong>You may trash 1 card from your hand:</strong> Return up to 1 Character with a cost of 4 or less to the owner's hand. Then, give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.44,
+          "midPrice": 1.36,
+          "highPrice": 5,
+          "marketPrice": 0.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656631,
+      "cardId": "OP12-020",
+      "name": "Roronoa Zoro - OP12-020 (Zoro Deck)",
+      "cleanName": "Roronoa Zoro OP12 020 Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656631/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op12-020-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656631_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[DON!! x3] [Activate: Main] [Once Per Turn] If this Leader battles your opponent's Character during this turn, set this Leader as active. Then, this Leader cannot attack your opponent's Characters with a base cost of 7 or less during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4,
+          "midPrice": 6.3,
+          "highPrice": 23.99,
+          "marketPrice": 5.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656638,
+      "cardId": "OP12-023",
+      "name": "Kawamatsu (Zoro Deck)",
+      "cleanName": "Kawamatsu Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656638/one-piece-card-game-learn-together-deck-set-kawamatsu-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656638_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Fish-Man;Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 1.99,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656648,
+      "cardId": "OP12-025",
+      "name": "Kin'emon (Zoro Deck)",
+      "cleanName": "Kinemon Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656648/one-piece-card-game-learn-together-deck-set-kinemon-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656648_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.99,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656639,
+      "cardId": "OP12-027",
+      "name": "Koushirou (Zoro Deck)",
+      "cleanName": "Koushirou Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656639/one-piece-card-game-learn-together-deck-set-koushirou-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656639_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "East Blue;Frost Moon Village",
+      "attribute": "Slash",
+      "effectText": "If your (Slash) attribute Character with a cost of 5 or less other than this Character would be K.O.'d by your opponent's effect, you may rest this Character instead.<br>\r\n[Blocker]",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.14,
+          "midPrice": 0.32,
+          "highPrice": 1.5,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656637,
+      "cardId": "OP12-028",
+      "name": "Kouzuki Hiyori (Zoro Deck)",
+      "cleanName": "Kouzuki Hiyori Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656637/one-piece-card-game-learn-together-deck-set-kouzuki-hiyori-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656637_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] <strong>You may rest 1 of your DON!! cards and this Character:</strong> If your Leader is [Roronoa Zoro], look at 5 cards from the top of your deck; reveal up to 1 (Slash) attribute card or green Event and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 1.99,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656640,
+      "cardId": "OP12-029",
+      "name": "Shimotsuki Kouzaburou (Zoro Deck)",
+      "cleanName": "Shimotsuki Kouzaburou Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656640/one-piece-card-game-learn-together-deck-set-shimotsuki-kouzaburou-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656640_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;East Blue;Frost Moon Village",
+      "attribute": "Slash",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 2 or less. Then, K.O. up to 1 of your opponent's rested Characters with a base cost of 1 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.3,
+          "highPrice": 1.99,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656646,
+      "cardId": "OP12-031",
+      "name": "Tashigi (Zoro Deck)",
+      "cleanName": "Tashigi Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656646/one-piece-card-game-learn-together-deck-set-tashigi-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656646_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;East Blue",
+      "attribute": "Slash",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a base cost of 6 or less. Then, give up to 3 rested DON!! cards to your [Roronoa Zoro] Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656649,
+      "cardId": "OP12-032",
+      "name": "Nekomamushi (Zoro Deck)",
+      "cleanName": "Nekomamushi Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656649/one-piece-card-game-learn-together-deck-set-nekomamushi-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656649_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Land of Wano;Minks;The Akazaya Nine",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656643,
+      "cardId": "OP12-036",
+      "name": "Roronoa Zoro - OP12-036 (Zoro Deck)",
+      "cleanName": "Roronoa Zoro OP12 036 Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656643/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op12-036-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656643_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "This card in your hand cannot be played by effects.<br>\r\nIf your Leader has the (Slash) attribute, this Character cannot be K.O.'d in battle by (Slash) attribute cards and gains +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.19,
+          "highPrice": 1.99,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656651,
+      "cardId": "OP12-039",
+      "name": "Luffy Is the Man Who Will Become the King of Pirates!!! (Zoro Deck)",
+      "cleanName": "Luffy Is the Man Who Will Become the King of Pirates Zoro Deck",
+      "url": "https://www.tcgplayer.com/product/656651/one-piece-card-game-learn-together-deck-set-luffy-is-the-man-who-will-become-the-king-of-pirates-zoro-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656651_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] Set your [Roronoa Zoro] Leader as active.<br>\r\n[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.19,
+          "highPrice": 1.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656694,
+      "cardId": "P-053",
+      "name": "Nami - P-053 (Nami Deck)",
+      "cleanName": "Nami P 053 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656694/one-piece-card-game-learn-together-deck-set-nami-p-053-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656694_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have 3 or less cards in your hand, return up to 1 of your opponent's Characters with a cost of 3 or less to the owner's hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656691,
+      "cardId": "P-056",
+      "name": "Roronoa Zoro - P-056 (Nami Deck)",
+      "cleanName": "Roronoa Zoro P 056 Nami Deck",
+      "url": "https://www.tcgplayer.com/product/656691/one-piece-card-game-learn-together-deck-set-roronoa-zoro-p-056-nami-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656691_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] (2) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Return up to 1 Character with a cost of 5 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.2,
+          "midPrice": 0.45,
+          "highPrice": 2.87,
+          "marketPrice": 0.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656654,
+      "cardId": "P-069",
+      "name": "Koala (Luffy Deck)",
+      "cleanName": "Koala Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656654/one-piece-card-game-learn-together-deck-set-koala-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656654_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "PR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.22,
+          "highPrice": 2.8,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 659233,
+      "cardId": "ST10-004",
+      "name": "Sanji - ST10-004",
+      "cleanName": "Sanji ST10 004",
+      "url": "https://www.tcgplayer.com/product/659233/one-piece-card-game-learn-together-deck-set-sanji-st10-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/659233_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has a Character with 5000 or more power, this Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 2.99,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 664049,
+      "cardId": "ST12-008",
+      "name": "Roronoa Zoro - ST12-008",
+      "cleanName": "Roronoa Zoro ST12 008",
+      "url": "https://www.tcgplayer.com/product/664049/one-piece-card-game-learn-together-deck-set-roronoa-zoro-st12-008",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/664049_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][When Attacking] Rest up to 1 of your opponent's Characters with a cost of 6 or less.\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 0.44,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656655,
+      "cardId": "ST21-001",
+      "name": "Monkey.D.Luffy - ST21-001 (Luffy Deck)",
+      "cleanName": "MonkeyDLuffy ST21 001 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656655/one-piece-card-game-learn-together-deck-set-monkeydluffy-st21-001-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656655_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] Give up to 2 rested DON!! cards to 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.46,
+          "midPrice": 14.66,
+          "highPrice": 84.99,
+          "marketPrice": 9.67,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656657,
+      "cardId": "ST21-003",
+      "name": "Sanji - ST21-003 (Luffy Deck)",
+      "cleanName": "Sanji ST21 003 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656657/one-piece-card-game-learn-together-deck-set-sanji-st21-003-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656657_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] Select up to 1 of your {Straw Hat Crew} type Characters with 6000 power or more. If the selected Character attacks during this turn, your opponent cannot activate [Blocker].\r\n<br>\r\n<br><span style=\"color: red;\">Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright).</span>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 1.34,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656662,
+      "cardId": "ST21-008",
+      "name": "Tony Tony.Chopper - ST21-008 (Luffy Deck)",
+      "cleanName": "Tony TonyChopper ST21 008 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656662/one-piece-card-game-learn-together-deck-set-tony-tonychopper-st21-008-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656662_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.12,
+          "highPrice": 7.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656659,
+      "cardId": "ST21-010",
+      "name": "Nico Robin - ST21-010 (Luffy Deck)",
+      "cleanName": "Nico Robin ST21 010 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656659/one-piece-card-game-learn-together-deck-set-nico-robin-st21-010-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656659_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x2] [When Attacking] K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.17,
+          "highPrice": 0.99,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656673,
+      "cardId": "ST21-014",
+      "name": "Monkey.D.Luffy - ST21-014 (Luffy Deck)",
+      "cleanName": "MonkeyDLuffy ST21 014 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656673/one-piece-card-game-learn-together-deck-set-monkeydluffy-st21-014-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656673_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\n[When Attacking] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.42,
+          "midPrice": 0.99,
+          "highPrice": 4.01,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656665,
+      "cardId": "ST21-015",
+      "name": "Roronoa Zoro - ST21-015 (Luffy Deck)",
+      "cleanName": "Roronoa Zoro ST21 015 Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656665/one-piece-card-game-learn-together-deck-set-roronoa-zoro-st21-015-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656665_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[DON!! x2] This Character gains [Rush].<br>\r\n[On K.O.] Play up to 1 red Character card with 6000 power or less other than [Roronoa Zoro] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.35,
+          "midPrice": 0.75,
+          "highPrice": 3.11,
+          "marketPrice": 0.55,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 656677,
+      "cardId": "ST21-017",
+      "name": "Gum-Gum Mole Pistol (Luffy Deck)",
+      "cleanName": "Gum Gum Mole Pistol Luffy Deck",
+      "url": "https://www.tcgplayer.com/product/656677/one-piece-card-game-learn-together-deck-set-gum-gum-mole-pistol-luffy-deck",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/656677_200w.jpg",
+      "groupId": 24306,
+      "setCode": "LT01",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters 5000 power during this turn. Then, if you have a Character with 6000 power or more, K.O. up to 1 of your opponent's Characters with 2000 power or less.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.44,
+          "midPrice": 0.97,
+          "highPrice": 4.99,
+          "marketPrice": 0.82,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

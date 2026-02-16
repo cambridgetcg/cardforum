@@ -1,0 +1,289 @@
+{
+  "keyword": "op01 cards",
+  "tcg": "onepiece",
+  "setCode": "OP01",
+  "source": "mock",
+  "geo": "US",
+  "timeRange": "today 12-m",
+  "fetchedAt": "2026-02-15T23:36:48.135Z",
+  "dataPoints": [
+    {
+      "date": "2025-02-15",
+      "value": 35,
+      "isPartial": false
+    },
+    {
+      "date": "2025-02-22",
+      "value": 33,
+      "isPartial": false
+    },
+    {
+      "date": "2025-03-01",
+      "value": 40,
+      "isPartial": false
+    },
+    {
+      "date": "2025-03-08",
+      "value": 39,
+      "isPartial": false
+    },
+    {
+      "date": "2025-03-15",
+      "value": 27,
+      "isPartial": false
+    },
+    {
+      "date": "2025-03-22",
+      "value": 26,
+      "isPartial": false
+    },
+    {
+      "date": "2025-03-29",
+      "value": 21,
+      "isPartial": false
+    },
+    {
+      "date": "2025-04-05",
+      "value": 23,
+      "isPartial": false
+    },
+    {
+      "date": "2025-04-12",
+      "value": 25,
+      "isPartial": false
+    },
+    {
+      "date": "2025-04-19",
+      "value": 29,
+      "isPartial": false
+    },
+    {
+      "date": "2025-04-26",
+      "value": 15,
+      "isPartial": false
+    },
+    {
+      "date": "2025-05-03",
+      "value": 28,
+      "isPartial": false
+    },
+    {
+      "date": "2025-05-10",
+      "value": 18,
+      "isPartial": false
+    },
+    {
+      "date": "2025-05-17",
+      "value": 23,
+      "isPartial": false
+    },
+    {
+      "date": "2025-05-24",
+      "value": 25,
+      "isPartial": false
+    },
+    {
+      "date": "2025-05-31",
+      "value": 20,
+      "isPartial": false
+    },
+    {
+      "date": "2025-06-07",
+      "value": 28,
+      "isPartial": false
+    },
+    {
+      "date": "2025-06-14",
+      "value": 16,
+      "isPartial": false
+    },
+    {
+      "date": "2025-06-21",
+      "value": 22,
+      "isPartial": false
+    },
+    {
+      "date": "2025-06-28",
+      "value": 24,
+      "isPartial": false
+    },
+    {
+      "date": "2025-07-05",
+      "value": 20,
+      "isPartial": false
+    },
+    {
+      "date": "2025-07-12",
+      "value": 24,
+      "isPartial": false
+    },
+    {
+      "date": "2025-07-19",
+      "value": 26,
+      "isPartial": false
+    },
+    {
+      "date": "2025-07-26",
+      "value": 27,
+      "isPartial": false
+    },
+    {
+      "date": "2025-08-02",
+      "value": 39,
+      "isPartial": false
+    },
+    {
+      "date": "2025-08-09",
+      "value": 33,
+      "isPartial": false
+    },
+    {
+      "date": "2025-08-16",
+      "value": 46,
+      "isPartial": false
+    },
+    {
+      "date": "2025-08-23",
+      "value": 35,
+      "isPartial": false
+    },
+    {
+      "date": "2025-08-30",
+      "value": 43,
+      "isPartial": false
+    },
+    {
+      "date": "2025-09-06",
+      "value": 42,
+      "isPartial": false
+    },
+    {
+      "date": "2025-09-13",
+      "value": 54,
+      "isPartial": false
+    },
+    {
+      "date": "2025-09-20",
+      "value": 45,
+      "isPartial": false
+    },
+    {
+      "date": "2025-09-27",
+      "value": 48,
+      "isPartial": false
+    },
+    {
+      "date": "2025-10-04",
+      "value": 47,
+      "isPartial": false
+    },
+    {
+      "date": "2025-10-11",
+      "value": 62,
+      "isPartial": false
+    },
+    {
+      "date": "2025-10-18",
+      "value": 63,
+      "isPartial": false
+    },
+    {
+      "date": "2025-10-25",
+      "value": 62,
+      "isPartial": false
+    },
+    {
+      "date": "2025-11-01",
+      "value": 65,
+      "isPartial": false
+    },
+    {
+      "date": "2025-11-08",
+      "value": 66,
+      "isPartial": false
+    },
+    {
+      "date": "2025-11-15",
+      "value": 53,
+      "isPartial": false
+    },
+    {
+      "date": "2025-11-22",
+      "value": 53,
+      "isPartial": false
+    },
+    {
+      "date": "2025-11-29",
+      "value": 57,
+      "isPartial": false
+    },
+    {
+      "date": "2025-12-06",
+      "value": 66,
+      "isPartial": false
+    },
+    {
+      "date": "2025-12-13",
+      "value": 65,
+      "isPartial": false
+    },
+    {
+      "date": "2025-12-20",
+      "value": 54,
+      "isPartial": false
+    },
+    {
+      "date": "2025-12-27",
+      "value": 51,
+      "isPartial": false
+    },
+    {
+      "date": "2026-01-03",
+      "value": 56,
+      "isPartial": false
+    },
+    {
+      "date": "2026-01-10",
+      "value": 51,
+      "isPartial": false
+    },
+    {
+      "date": "2026-01-17",
+      "value": 49,
+      "isPartial": false
+    },
+    {
+      "date": "2026-01-24",
+      "value": 54,
+      "isPartial": false
+    },
+    {
+      "date": "2026-01-31",
+      "value": 38,
+      "isPartial": false
+    },
+    {
+      "date": "2026-02-07",
+      "value": 46,
+      "isPartial": false
+    },
+    {
+      "date": "2026-02-14",
+      "value": 46,
+      "isPartial": true
+    }
+  ],
+  "relatedQueries": {
+    "rising": [],
+    "top": []
+  },
+  "trend": {
+    "current": 46,
+    "delta1d": null,
+    "delta7d": 0,
+    "delta30d": -0.061224489795918366,
+    "delta90d": -0.1320754716981132,
+    "abs7d": 0,
+    "abs30d": -3
+  }
+}

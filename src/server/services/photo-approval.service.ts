@@ -1,11 +1,6 @@
 import { db } from "@/lib/db";
 import type { TxClient } from "./wallet.service";
-import {
-  PHOTO_APPROVAL_THRESHOLD_CENTS,
-  MAX_PHOTO_COUNT,
-  MAX_PHOTO_SIZE_BYTES,
-  MAX_PHOTO_ATTEMPTS,
-} from "@/lib/constants";
+import { getConfig, getConfigs } from "@/server/services/config.service";
 
 /**
  * Creates a PhotoApproval record and transitions the leg to PHOTO_REVIEW
@@ -25,8 +20,29 @@ export async function createPhotoApprovalIfNeeded(tradeLegId: string, tx?: TxCli
   // Photo approval only applies to raw card legs (graded legs use slab verification)
   if (!leg.haveListing) return null;
 
-  if (leg.haveListing.askPrice < PHOTO_APPROVAL_THRESHOLD_CENTS) {
+  const threshold = await getConfig("thresholds.photo_approval_cents");
+  if (leg.haveListing.askPrice < threshold) {
     return null; // Below threshold — no photo gate
+  }
+
+  // Trust-based exemption: skip photo approval for senders with a strong
+  // track record of accurate condition descriptions (AI agreement rate ≥90%
+  // with ≥5 comparisons). These users have proven reliability.
+  const {
+    "thresholds.photo_trust_min_agreement_rate": trustMinRate,
+    "thresholds.photo_trust_min_comparisons": trustMinComparisons,
+  } = await getConfigs(["thresholds.photo_trust_min_agreement_rate", "thresholds.photo_trust_min_comparisons"]);
+
+  const sender = await client.user.findUnique({
+    where: { id: leg.fromUserId },
+    select: { aiAgreementRate: true, aiAgreementCount: true },
+  });
+  if (
+    sender?.aiAgreementRate != null &&
+    sender.aiAgreementRate >= trustMinRate &&
+    sender.aiAgreementCount >= trustMinComparisons
+  ) {
+    return null; // Trusted sender — exempt from photo gate
   }
 
   const photoApproval = await client.photoApproval.create({
@@ -65,15 +81,17 @@ export async function submitPhotos(
     throw new Error(`Cannot submit photos in status ${leg.photoApproval.status}`);
   }
 
-  if (photos.length === 0 || photos.length > MAX_PHOTO_COUNT) {
-    throw new Error(`Must provide 1-${MAX_PHOTO_COUNT} photos`);
+  const maxPhotoCount = await getConfig("thresholds.max_photo_count");
+  const maxPhotoSize = await getConfig("thresholds.max_photo_size_bytes");
+  if (photos.length === 0 || photos.length > maxPhotoCount) {
+    throw new Error(`Must provide 1-${maxPhotoCount} photos`);
   }
 
   for (const photo of photos) {
     // Rough size check on base64 data URL
     const sizeBytes = Math.ceil((photo.length * 3) / 4);
-    if (sizeBytes > MAX_PHOTO_SIZE_BYTES) {
-      throw new Error(`Each photo must be under ${MAX_PHOTO_SIZE_BYTES / (1024 * 1024)}MB`);
+    if (sizeBytes > maxPhotoSize) {
+      throw new Error(`Each photo must be under ${maxPhotoSize / (1024 * 1024)}MB`);
     }
   }
 
@@ -127,7 +145,8 @@ export async function reviewPhotos(
   }
 
   // Rejected
-  if (leg.photoApproval.attempts >= MAX_PHOTO_ATTEMPTS) {
+  const maxAttempts = await getConfig("thresholds.max_photo_attempts");
+  if (leg.photoApproval.attempts >= maxAttempts) {
     // Max attempts exhausted — fail the leg and dispute the trade
     await db.$transaction([
       db.photoApproval.update({

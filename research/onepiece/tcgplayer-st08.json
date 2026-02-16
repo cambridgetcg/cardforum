@@ -1,0 +1,464 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 8: Monkey.D.Luffy",
+  "groupId": 22956,
+  "setCode": "ST08",
+  "totalProducts": 18,
+  "totalCards": 15,
+  "scrapedAt": "2026-02-15T22:54:32.179Z",
+  "durationMs": 68,
+  "cards": [
+    {
+      "productId": 503233,
+      "cardId": "ST08-001",
+      "name": "Monkey.D.Luffy (001)",
+      "cleanName": "MonkeyDLuffy 001",
+      "url": "https://www.tcgplayer.com/product/503233/one-piece-card-game-starter-deck-8-monkeydluffy-monkeydluffy-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503233_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Your Turn] When a Character is K.O.'d, give up to 1 rested DON!! card to this Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.71,
+          "midPrice": 5.63,
+          "highPrice": 25,
+          "marketPrice": 4.8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503230,
+      "cardId": "ST08-002",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/503230/one-piece-card-game-starter-deck-8-monkeydluffy-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503230_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "This Character cannot be K.O.'d in battle by Leaders.\r\n<br>\r\n[Activate:Main] <strong>You may rest this Character</strong>: Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.92,
+          "midPrice": 2.05,
+          "highPrice": 50,
+          "marketPrice": 1.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503240,
+      "cardId": "ST08-003",
+      "name": "Gaimon",
+      "cleanName": "Gaimon",
+      "url": "https://www.tcgplayer.com/product/503240/one-piece-card-game-starter-deck-8-monkeydluffy-gaimon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503240_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "East Blue",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503229,
+      "cardId": "ST08-004",
+      "name": "Koby",
+      "cleanName": "Koby",
+      "url": "https://www.tcgplayer.com/product/503229/one-piece-card-game-starter-deck-8-monkeydluffy-koby",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503229_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: K.O. up to 1 of your opponent's Characters with a cost of 2 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.25,
+          "highPrice": 10,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503224,
+      "cardId": "ST08-005",
+      "name": "Shanks",
+      "cleanName": "Shanks",
+      "url": "https://www.tcgplayer.com/product/503224/one-piece-card-game-starter-deck-8-monkeydluffy-shanks",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503224_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: K.O. all Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.24,
+          "midPrice": 0.76,
+          "highPrice": 25,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503234,
+      "cardId": "ST08-006",
+      "name": "Shirahoshi",
+      "cleanName": "Shirahoshi",
+      "url": "https://www.tcgplayer.com/product/503234/one-piece-card-game-starter-deck-8-monkeydluffy-shirahoshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503234_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Merfolk",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Give up to 1 of your opponent's Characters -4 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.9,
+          "midPrice": 1.25,
+          "highPrice": 25,
+          "marketPrice": 1.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503232,
+      "cardId": "ST08-007",
+      "name": "Nefeltari Vivi",
+      "cleanName": "Nefeltari Vivi",
+      "url": "https://www.tcgplayer.com/product/503232/one-piece-card-game-starter-deck-8-monkeydluffy-nefeltari-vivi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503232_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.29,
+          "highPrice": 10,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503228,
+      "cardId": "ST08-008",
+      "name": "Higuma",
+      "cleanName": "Higuma",
+      "url": "https://www.tcgplayer.com/product/503228/one-piece-card-game-starter-deck-8-monkeydluffy-higuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503228_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mountain Bandits",
+      "attribute": "Slash",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503237,
+      "cardId": "ST08-009",
+      "name": "Makino",
+      "cleanName": "Makino",
+      "url": "https://www.tcgplayer.com/product/503237/one-piece-card-game-starter-deck-8-monkeydluffy-makino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503237_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Windmill Village",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If there is a Character with a cost of 0, draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503241,
+      "cardId": "ST08-010",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/503241/one-piece-card-game-starter-deck-8-monkeydluffy-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503241_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.98,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503236,
+      "cardId": "ST08-011",
+      "name": "Monkey.D.Luffy (011)",
+      "cleanName": "MonkeyDLuffy 011",
+      "url": "https://www.tcgplayer.com/product/503236/one-piece-card-game-starter-deck-8-monkeydluffy-monkeydluffy-011",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503236_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 1.53,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503239,
+      "cardId": "ST08-012",
+      "name": "Laboon",
+      "cleanName": "Laboon",
+      "url": "https://www.tcgplayer.com/product/503239/one-piece-card-game-starter-deck-8-monkeydluffy-laboon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503239_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.07,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503238,
+      "cardId": "ST08-013",
+      "name": "Mr.2.Bon.Kurei (Bentham)",
+      "cleanName": "Mr2BonKurei Bentham",
+      "url": "https://www.tcgplayer.com/product/503238/one-piece-card-game-starter-deck-8-monkeydluffy-mr2bonkurei-bentham",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503238_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Former Baroque Works",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] At the end of a battle in which this Character battles your opponent's Character, you may K.O. the opponent's Character you battled with. If you do, K.O. this Character.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 1,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503231,
+      "cardId": "ST08-014",
+      "name": "Gum-Gum Bell",
+      "cleanName": "Gum Gum Bell",
+      "url": "https://www.tcgplayer.com/product/503231/one-piece-card-game-starter-deck-8-monkeydluffy-gum-gum-bell",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503231_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may add 1 card from the top of your Life cards to your hand</strong>: Give up to 1 of your opponent's Characters -7 cost during this turn.\r\n<br>\r\n[Trigger] Add up to 1 black Character card with a cost of 2 or less from your trash to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.14,
+          "midPrice": 0.35,
+          "highPrice": 10,
+          "marketPrice": 0.33,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 503235,
+      "cardId": "ST08-015",
+      "name": "Gum-Gum Pistol",
+      "cleanName": "Gum Gum Pistol",
+      "url": "https://www.tcgplayer.com/product/503235/one-piece-card-game-starter-deck-8-monkeydluffy-gum-gum-pistol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/503235_200w.jpg",
+      "groupId": 22956,
+      "setCode": "ST08",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 2 or less.\r\n<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.27,
+          "highPrice": 30,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

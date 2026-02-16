@@ -56,6 +56,10 @@ function put<T>(url: string, data: unknown) {
   return fetchApi<T>(url, { method: "PUT", body: JSON.stringify(data) });
 }
 
+function patch<T>(url: string, data: unknown) {
+  return fetchApi<T>(url, { method: "PATCH", body: JSON.stringify(data) });
+}
+
 function del<T>(url: string) {
   return fetchApi<T>(url, { method: "DELETE" });
 }
@@ -142,8 +146,22 @@ const marketplace = {
 
 // ─── Dashboard ───────────────────────────────────────
 
+export interface DashboardStats {
+  listings: number;
+  haveCount: number;
+  wantCount: number;
+  gradedHaveCount: number;
+  gradedWantCount: number;
+  activeTrades: number;
+  completedTrades: number;
+  pendingProposals: number;
+  expertPostCount: number;
+  collectionCards: number;
+  collectionEntries: number;
+}
+
 const dashboard = {
-  get: () => get<unknown>("/api/dashboard"),
+  get: () => get<DashboardStats>("/api/dashboard"),
 };
 
 // ─── Connect ─────────────────────────────────────────
@@ -175,6 +193,159 @@ const authenticator = {
   tierStatus: () => get<unknown>("/api/authenticator/tier-status"),
 };
 
+// ─── Expert Hub ─────────────────────────────────────
+
+export interface ExpertPostSummary {
+  id: string;
+  title: string;
+  excerpt: string | null;
+  category: string;
+  tcg: string | null;
+  language: string | null;
+  upvotes: number;
+  downvotes: number;
+  helpfulCount: number;
+  publishedAt: string | null;
+  author: { id: string; name: string | null; image: string | null };
+  card: { id: string; name: string; number: string | null; imageUrl: string | null } | null;
+  set: { id: string; name: string; code: string } | null;
+  endorsements: { id: string; endorserType: string }[];
+  _count: { votes: number; endorsements: number };
+}
+
+export interface ExpertPostDetail extends ExpertPostSummary {
+  authorId: string;
+  content: string;
+  tags: string[];
+  status: string;
+  createdAt: string;
+  card: { id: string; name: string; number: string | null; imageUrl: string | null; tcg: string } | null;
+  set: { id: string; name: string; code: string; tcg: string } | null;
+  endorsements: { id: string; endorserType: string; endorserId: string; note: string | null }[];
+}
+
+export interface ExpertPostListParams {
+  tcg?: string;
+  category?: string;
+  sort?: string;
+  language?: string;
+  cardId?: string;
+  setId?: string;
+  status?: string;
+  page?: number;
+  limit?: number;
+}
+
+export interface ExpertPostListResponse {
+  posts: ExpertPostSummary[];
+  total: number;
+  page: number;
+  totalPages: number;
+}
+
+const expert = {
+  list: (params?: ExpertPostListParams) => {
+    const sp = new URLSearchParams();
+    if (params?.tcg) sp.set("tcg", params.tcg);
+    if (params?.category) sp.set("category", params.category);
+    if (params?.sort) sp.set("sort", params.sort);
+    if (params?.language) sp.set("language", params.language);
+    if (params?.cardId) sp.set("cardId", params.cardId);
+    if (params?.setId) sp.set("setId", params.setId);
+    if (params?.status) sp.set("status", params.status);
+    if (params?.page) sp.set("page", String(params.page));
+    if (params?.limit) sp.set("limit", String(params.limit));
+    const qs = sp.toString();
+    return get<ExpertPostListResponse>(`/api/expert/posts${qs ? `?${qs}` : ""}`);
+  },
+  get: (postId: string) => get<{ post: ExpertPostDetail }>(`/api/expert/posts/${postId}`),
+  create: (data: unknown) => post<{ post: ExpertPostDetail }>("/api/expert/posts", data),
+  update: (postId: string, data: unknown) => patch<{ post: ExpertPostDetail }>(`/api/expert/posts/${postId}`, data),
+  delete: (postId: string) => del<{ success: boolean }>(`/api/expert/posts/${postId}`),
+  vote: (postId: string, value: 1 | -1, helpful: boolean) =>
+    post<unknown>(`/api/expert/posts/${postId}/vote`, { value, helpful }),
+  endorse: (postId: string, note?: string) =>
+    post<unknown>(`/api/expert/posts/${postId}/endorse`, { note }),
+};
+
+// ─── Collection ─────────────────────────────────────
+
+export interface CollectionEntry {
+  id: string;
+  cardId: string;
+  quantity: number;
+  condition: string | null;
+  acquiredAt: string;
+  pricePaid: number | null;
+  notes: string | null;
+  card: {
+    id: string;
+    name: string;
+    tcg: string;
+    setName: string;
+    setCode: string | null;
+    number: string | null;
+    rarity: string | null;
+    imageUrl: string | null;
+  };
+}
+
+export interface CollectionStats {
+  totalCards: number;
+  uniqueCards: number;
+  totalValue: number;
+  setCompletion: {
+    setCode: string;
+    setName: string;
+    tcg: string;
+    owned: number;
+    total: number;
+    pct: number;
+  }[];
+}
+
+export interface PullRateData {
+  tcg: string;
+  setCode: string;
+  language: string;
+  productType: string;
+  packsPerBox: number;
+  rates: {
+    rarity: string;
+    perPack: number;
+    perBox: number;
+    packProbability: number;
+    boxProbability: number;
+    perSpecificCardPerBox: number;
+    uniqueCards: number;
+  }[];
+}
+
+const collection = {
+  list: (params?: { tcg?: string; set?: string; rarity?: string }) => {
+    const sp = new URLSearchParams();
+    if (params?.tcg) sp.set("tcg", params.tcg);
+    if (params?.set) sp.set("set", params.set);
+    if (params?.rarity) sp.set("rarity", params.rarity);
+    const qs = sp.toString();
+    return get<{ entries: CollectionEntry[] }>(`/api/collection${qs ? `?${qs}` : ""}`);
+  },
+  add: (data: { cardId: string; quantity?: number; condition?: string; pricePaid?: number; notes?: string }) =>
+    post<{ entry: unknown }>("/api/collection", data),
+  update: (entryId: string, data: { quantity?: number; notes?: string; pricePaid?: number | null }) =>
+    patch<{ success: boolean }>(`/api/collection/${entryId}`, data),
+  remove: (entryId: string) => del<{ success: boolean }>(`/api/collection/${entryId}`),
+  stats: () => get<CollectionStats>("/api/collection/stats"),
+  check: (cardIds: string[]) =>
+    get<{ owned: string[] }>(`/api/collection/check?cardIds=${cardIds.join(",")}`),
+};
+
+// ─── Pull Rates ─────────────────────────────────────
+
+const pullRates = {
+  get: (setCode: string) => get<PullRateData>(`/api/pull-rates/${setCode}`),
+};
+
 // ─── Export ──────────────────────────────────────────
 
 export const api = {
@@ -189,4 +360,7 @@ export const api = {
   kyc,
   aiGrading,
   authenticator,
+  expert,
+  collection,
+  pullRates,
 } as const;

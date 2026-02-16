@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 // GET /api/dashboard — Dashboard stats for current user
 export const GET = withAuth(async (_req, { userId }) => {
 
-  const [haveCount, wantCount, gradedHaveCount, gradedWantCount, activeTrades, completedTrades, proposals] =
+  const [haveCount, wantCount, gradedHaveCount, gradedWantCount, activeTrades, completedTrades, proposals, expertPostCount, collectionCount] =
     await Promise.all([
       db.haveListing.count({ where: { userId, isActive: true } }),
       db.wantListing.count({ where: { userId, isActive: true } }),
@@ -37,6 +37,12 @@ export const GET = withAuth(async (_req, { userId }) => {
           },
         },
       }),
+      db.expertPost.count({ where: { authorId: userId, status: "PUBLISHED" } }),
+      db.collectionEntry.aggregate({
+        where: { userId },
+        _sum: { quantity: true },
+        _count: { _all: true },
+      }),
     ]);
 
   return NextResponse.json({
@@ -48,5 +54,8 @@ export const GET = withAuth(async (_req, { userId }) => {
     activeTrades,
     completedTrades,
     pendingProposals: proposals,
+    expertPostCount,
+    collectionCards: collectionCount._sum.quantity ?? 0,
+    collectionEntries: collectionCount._count._all,
   });
 });

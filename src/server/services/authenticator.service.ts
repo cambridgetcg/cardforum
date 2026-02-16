@@ -10,7 +10,10 @@ import {
 import { checkTierPromotion } from "./tier-promotion.service";
 import { maybeAssignRandomAudit } from "./random-audit.service";
 import { forfeitAuthenticatorFee } from "./fee.service";
+import { createConditionComparison } from "./condition-comparison.service";
 import { assignReserveAuthenticator } from "./reserve-assignment.service";
+import { verifySlabForTradeLeg } from "./slab-verification.service";
+import { eventBus } from "@/server/events/event-bus";
 import type {
   AuthenticatorApplicationInput,
   ApplicationReviewInput,
@@ -507,10 +510,41 @@ export async function submitVerificationResult(
   // Phase 2: Probabilistic random audit
   await maybeAssignRandomAudit(assignmentId);
 
+  // Phase 2: AI vs Authenticator condition comparison
+  await createConditionComparison(assignment.tradeLegId);
+
+  // Phase 2: Slab verification for graded cards
+  if (assignment.tradeLeg.haveListing === null) {
+    // No raw haveListing means this is a graded card leg — run slab verification
+    try {
+      const slabResult = await verifySlabForTradeLeg(assignment.tradeLegId);
+      // Merge slab result into the verification assignment result
+      const existingResult = (result.result ?? {}) as Record<string, unknown>;
+      const mergedResult = JSON.parse(JSON.stringify({
+        ...existingResult,
+        slabVerification: slabResult,
+      }));
+      await db.verificationAssignment.update({
+        where: { id: assignmentId },
+        data: { result: mergedResult },
+      });
+    } catch (err) {
+      console.error("[authenticator] Slab verification failed (non-blocking):", err);
+    }
+  }
+
   // Phase 3: Forfeit authenticator fee on verification failure
   if (!input.authentic || !input.conditionMatchesListing) {
     await forfeitAuthenticatorFee(assignmentId, "Verification failed");
   }
+
+  // Emit event for observability
+  eventBus.emitAsync("authenticator.verified", {
+    tradeLegId: assignment.tradeLegId,
+    tradeId: assignment.tradeLeg.tradeId,
+    authentic: input.authentic,
+    conditionMatches: input.conditionMatchesListing,
+  });
 
   return result;
 }

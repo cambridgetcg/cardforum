@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { RESERVE_ACCEPTANCE_TIMEOUT_HOURS } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import type { AuthenticatorTier } from "@/types/domain";
 import { AUTHENTICATOR_TIER_VALUE_CAPS } from "@/types/domain";
 
@@ -84,8 +84,9 @@ export async function acceptAssignment(
  * Designed to be called from a Vercel Cron route.
  */
 export async function checkAcceptanceTimeouts() {
+  const timeoutHours = await getConfig("authenticator.reserve_timeout_hours");
   const cutoff = new Date(
-    Date.now() - RESERVE_ACCEPTANCE_TIMEOUT_HOURS * 60 * 60 * 1000
+    Date.now() - timeoutHours * 60 * 60 * 1000
   );
 
   // Find assignments that are overdue and haven't been accepted
@@ -142,7 +143,7 @@ export async function checkAcceptanceTimeouts() {
             assignmentId: assignment.id,
             reassignedTo: assignment.reserveAuthenticatorId,
             assignedAt: assignment.assignedAt.toISOString(),
-            timeoutHours: RESERVE_ACCEPTANCE_TIMEOUT_HOURS,
+            timeoutHours,
           },
         },
       }),

@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { photoReviewSchema } from "@/lib/validators";
-import { MAX_PHOTO_COUNT, MAX_PHOTO_SIZE_BYTES } from "@/lib/constants";
+import { getConfigs } from "@/server/services/config.service";
 import { submitPhotos, reviewPhotos } from "@/server/services/photo-approval.service";
 
 type RouteContext = { params: Promise<{ tradeId: string; legId: string }> };
@@ -47,13 +47,16 @@ export async function POST(req: NextRequest, context: RouteContext) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
+  const { "thresholds.max_photo_count": maxPhotoCount, "thresholds.max_photo_size_bytes": maxPhotoSize } =
+    await getConfigs(["thresholds.max_photo_count", "thresholds.max_photo_size_bytes"]);
+
   let photos: string[];
   try {
     const body = await req.json();
     photos = body.photos;
-    if (!Array.isArray(photos) || photos.length === 0 || photos.length > MAX_PHOTO_COUNT) {
+    if (!Array.isArray(photos) || photos.length === 0 || photos.length > maxPhotoCount) {
       return NextResponse.json(
-        { error: `Provide 1-${MAX_PHOTO_COUNT} photos` },
+        { error: `Provide 1-${maxPhotoCount} photos` },
         { status: 400 }
       );
     }
@@ -65,9 +68,9 @@ export async function POST(req: NextRequest, context: RouteContext) {
         );
       }
       const sizeBytes = Math.ceil((p.length * 3) / 4);
-      if (sizeBytes > MAX_PHOTO_SIZE_BYTES) {
+      if (sizeBytes > maxPhotoSize) {
         return NextResponse.json(
-          { error: `Each photo must be under ${MAX_PHOTO_SIZE_BYTES / (1024 * 1024)}MB` },
+          { error: `Each photo must be under ${maxPhotoSize / (1024 * 1024)}MB` },
           { status: 400 }
         );
       }

@@ -5,7 +5,10 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { formatPrice, CONDITION_LABELS, TCG_LABELS, type TCG, type Condition } from "@/types/domain";
+import { Button } from "@/components/ui/button";
+import { IntentPanel } from "@/components/listings/intent-panel";
+import { CardInsights } from "@/components/expert/card-insights";
+import { formatPrice, CONDITION_LABELS, TCG_LABELS, TCG_BADGE_COLORS, type TCG, type Condition } from "@/types/domain";
 
 interface AskLevel {
   price: number;
@@ -46,18 +49,12 @@ interface OrderBookData {
   };
 }
 
-const TCG_BADGE_COLORS: Record<TCG, "default" | "success" | "warning" | "error" | "info"> = {
-  POKEMON: "warning",
-  ONEPIECE: "error",
-  YUGIOH: "info",
-  MTG: "success",
-};
-
 export default function OrderBookPage() {
   const { cardId } = useParams<{ cardId: string }>();
   const [data, setData] = useState<OrderBookData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [intentType, setIntentType] = useState<"have" | "want" | null>(null);
 
   useEffect(() => {
     if (!cardId) return;
@@ -152,6 +149,16 @@ export default function OrderBookPage() {
         <SummaryStat label="Total Asks" value={String(summary.totalAsks)} color="text-amber-600" />
       </div>
 
+      {/* Listing actions */}
+      <div className="mt-4 flex gap-3">
+        <Button variant="primary" size="sm" onClick={() => setIntentType("have")}>
+          I Have This Card
+        </Button>
+        <Button variant="outline" size="sm" onClick={() => setIntentType("want")}>
+          I Want This Card
+        </Button>
+      </div>
+
       {/* Order Book Depth Table */}
       <div className="mt-6 overflow-hidden rounded-xl border border-gray-200 bg-white">
         <h2 className="border-b border-gray-100 px-5 py-3 text-sm font-semibold text-gray-900">
@@ -228,6 +235,37 @@ export default function OrderBookPage() {
           </div>
         )}
       </div>
+
+      {/* Expert Insights */}
+      <div className="mt-6">
+        <CardInsights cardId={cardId} />
+      </div>
+
+      {/* Intent Panel */}
+      {data && (
+        <IntentPanel
+          open={intentType !== null}
+          card={{
+            id: card.id,
+            tcg: card.tcg,
+            name: card.name,
+            setName: card.setName,
+            setCode: card.setCode,
+            number: card.number,
+            imageUrl: card.imageUrl,
+          }}
+          type={intentType ?? "have"}
+          onClose={() => setIntentType(null)}
+          onCreated={() => {
+            setIntentType(null);
+            // Refetch order book
+            fetch(`/api/orderbook?cardId=${cardId}`)
+              .then((res) => res.json())
+              .then((d: OrderBookData) => setData(d))
+              .catch(() => {});
+          }}
+        />
+      )}
     </div>
   );
 }

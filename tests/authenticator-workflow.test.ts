@@ -105,30 +105,33 @@ describe("Authenticator Workflow", () => {
 
   // ─── Pure Rating Computation ───────────────────────
 
-  describe("Rating computation (pure functions)", () => {
-    it("computes weighted score from 4 components", () => {
-      const score = computeWeightedScore({
+  describe("Rating computation", () => {
+    it("computes weighted score from 4 components", async () => {
+      const score = await computeWeightedScore({
+        score: 4.65,
         accuracyScore: 5.0,
         speedScore: 4.0,
         satisfactionScore: 5.0,
         communicationScore: 4.0,
+        createdAt: new Date(),
       });
       // 5*0.4 + 4*0.2 + 5*0.25 + 4*0.15 = 2.0 + 0.8 + 1.25 + 0.6 = 4.65
       expect(score).toBeCloseTo(4.65, 2);
     });
 
-    it("returns simple average when components are null", () => {
-      const score = computeWeightedScore({
+    it("returns simple average when components are null", async () => {
+      const score = await computeWeightedScore({
         accuracyScore: null,
         speedScore: null,
         satisfactionScore: null,
         communicationScore: null,
         score: 4.0,
+        createdAt: new Date(),
       });
       expect(score).toBeCloseTo(4.0, 2);
     });
 
-    it("computes time-weighted rating with recency bias", () => {
+    it("computes time-weighted rating with recency bias", async () => {
       const now = new Date();
       const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
       const oneHundredDaysAgo = new Date(now.getTime() - 100 * 24 * 60 * 60 * 1000);
@@ -140,44 +143,44 @@ describe("Authenticator Workflow", () => {
         { score: 1.0, accuracyScore: 1.0, speedScore: 1.0, satisfactionScore: 1.0, communicationScore: 1.0, createdAt: twoHundredDaysAgo },
       ];
 
-      const result = computeTimeWeightedRating(ratings);
+      const result = await computeTimeWeightedRating(ratings);
       // Recent (5.0) gets 60% weight, mid (3.0) gets 30%, old (1.0) gets 10%
       // Expected: 5.0*0.6 + 3.0*0.3 + 1.0*0.1 = 3.0 + 0.9 + 0.1 = 4.0
       expect(result).toBeCloseTo(4.0, 1);
     });
 
-    it("returns default 5.0 for empty ratings (new authenticator)", () => {
-      const result = computeTimeWeightedRating([]);
+    it("returns default 5.0 for empty ratings (new authenticator)", async () => {
+      const result = await computeTimeWeightedRating([]);
       expect(result).toBe(5.0);
     });
   });
 
   // ─── Fee Calculation ───────────────────────────────
 
-  describe("Fee calculation (pure functions)", () => {
-    it("calculates STANDARD tier fee", () => {
-      const fee = calculateVerificationFee("STANDARD");
+  describe("Fee calculation", () => {
+    it("calculates STANDARD tier fee", async () => {
+      const fee = await calculateVerificationFee("STANDARD");
       expect(fee.baseFee).toBe(300);
       expect(fee.platformShare).toBe(90); // 30%
       expect(fee.authenticatorShare).toBe(210);
     });
 
-    it("calculates VERIFIED tier fee", () => {
-      const fee = calculateVerificationFee("VERIFIED");
+    it("calculates VERIFIED tier fee", async () => {
+      const fee = await calculateVerificationFee("VERIFIED");
       expect(fee.baseFee).toBe(400);
       expect(fee.platformShare).toBe(100); // 25%
       expect(fee.authenticatorShare).toBe(300);
     });
 
-    it("calculates PREMIUM tier fee", () => {
-      const fee = calculateVerificationFee("PREMIUM");
+    it("calculates PREMIUM tier fee", async () => {
+      const fee = await calculateVerificationFee("PREMIUM");
       expect(fee.baseFee).toBe(500);
       expect(fee.platformShare).toBe(100); // 20%
       expect(fee.authenticatorShare).toBe(400);
     });
 
-    it("calculates trade fees across multiple legs", () => {
-      const result = calculateTradeFees([
+    it("calculates trade fees across multiple legs", async () => {
+      const result = await calculateTradeFees([
         { tier: "STANDARD" },
         { tier: "VERIFIED" },
       ]);
@@ -280,6 +283,7 @@ describe("Authenticator Workflow", () => {
         photos: ["https://img1.com", "https://img2.com", "https://img3.com", "https://img4.com"],
         defects: [],
         confidenceLevel: "HIGH",
+        ccs: { surface: 9.0, corners: 9.0, edges: 9.0, centering: 9.0 },
       });
 
       expect(result.completedAt).toBeTruthy();
@@ -321,6 +325,7 @@ describe("Authenticator Workflow", () => {
         photos: ["https://img1.com", "https://img2.com", "https://img3.com", "https://img4.com"],
         defects: ["Print quality mismatch", "Wrong card stock"],
         confidenceLevel: "HIGH",
+        ccs: { surface: 9.0, corners: 9.0, edges: 9.0, centering: 9.0 },
       });
 
       // Trade should be DISPUTED
@@ -363,6 +368,7 @@ describe("Authenticator Workflow", () => {
           photos: ["https://1.com", "https://2.com", "https://3.com", "https://4.com"],
           defects: [],
           confidenceLevel: "HIGH",
+          ccs: { surface: 9.0, corners: 9.0, edges: 9.0, centering: 9.0 },
         })
       ).rejects.toThrow("Not authorized");
     });

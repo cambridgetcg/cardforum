@@ -1,0 +1,526 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Ultra Deck: The Three Captains",
+  "groupId": 23243,
+  "setCode": "ST10",
+  "totalProducts": 21,
+  "totalCards": 17,
+  "scrapedAt": "2026-02-15T22:54:34.320Z",
+  "durationMs": 68,
+  "cards": [
+    {
+      "productId": 525044,
+      "cardId": "ST10-001",
+      "name": "Trafalgar Law (001)",
+      "cleanName": "Trafalgar Law 001",
+      "url": "https://www.tcgplayer.com/product/525044/one-piece-card-game-ultra-deck-the-three-captains-trafalgar-law-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525044_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] [Once Per Turn] DON!! -3 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Place up to 1 of your opponent's Characters with 3000 power or less at the bottom of the owner's deck, and play up to 1 Character card with a cost of 4 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.74,
+          "midPrice": 4,
+          "highPrice": 45,
+          "marketPrice": 3.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525045,
+      "cardId": "ST10-002",
+      "name": "Monkey.D.Luffy (002)",
+      "cleanName": "MonkeyDLuffy 002",
+      "url": "https://www.tcgplayer.com/product/525045/one-piece-card-game-ultra-deck-the-three-captains-monkeydluffy-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525045_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "6000",
+      "cost": null,
+      "life": "3",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] [Once Per Turn] If you have 0 DON!! cards on your field or 8 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.99,
+          "midPrice": 14.94,
+          "highPrice": 149.95,
+          "marketPrice": 10.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525046,
+      "cardId": "ST10-003",
+      "name": "Eustass\"Captain\"Kid (003)",
+      "cleanName": "EustassCaptainKid 003",
+      "url": "https://www.tcgplayer.com/product/525046/one-piece-card-game-ultra-deck-the-three-captains-eustasscaptainkid-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525046_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Your Turn] If you have 4 or more Life cards, give this Leader -1000 power.\r\n<br>\r\n[When Attacking] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: This Leader gains +2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1,
+          "midPrice": 3.13,
+          "highPrice": 25,
+          "marketPrice": 3.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525047,
+      "cardId": "ST10-004",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/525047/one-piece-card-game-ultra-deck-the-three-captains-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525047_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has a Character with 5000 or more power, this Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.35,
+          "highPrice": 5,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525048,
+      "cardId": "ST10-005",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/525048/one-piece-card-game-ultra-deck-the-three-captains-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525048_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.23,
+          "midPrice": 0.63,
+          "highPrice": 10,
+          "marketPrice": 0.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525049,
+      "cardId": "ST10-006",
+      "name": "Monkey.D.Luffy (006)",
+      "cleanName": "MonkeyDLuffy 006",
+      "url": "https://www.tcgplayer.com/product/525049/one-piece-card-game-ultra-deck-the-three-captains-monkeydluffy-006",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525049_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "11000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[Once Per Turn] When your opponent activates a [Blocker], K.O. up to 1 of your opponent's Characters with 8000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.09,
+          "midPrice": 2.22,
+          "highPrice": 50,
+          "marketPrice": 1.42,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525050,
+      "cardId": "ST10-007",
+      "name": "Killer",
+      "cleanName": "Killer",
+      "url": "https://www.tcgplayer.com/product/525050/one-piece-card-game-ultra-deck-the-three-captains-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525050_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525051,
+      "cardId": "ST10-008",
+      "name": "Shachi & Penguin",
+      "cleanName": "Shachi and Penguin",
+      "url": "https://www.tcgplayer.com/product/525051/one-piece-card-game-ultra-deck-the-three-captains-shachi-and-penguin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525051_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 3 or less DON!! cards on your field, add up to 2 DON!! cards from your DON!! deck and rest them.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 20,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525052,
+      "cardId": "ST10-009",
+      "name": "Jean Bart",
+      "cleanName": "Jean Bart",
+      "url": "https://www.tcgplayer.com/product/525052/one-piece-card-game-ultra-deck-the-three-captains-jean-bart",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525052_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.07,
+          "midPrice": 0.22,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525053,
+      "cardId": "ST10-010",
+      "name": "Trafalgar Law (010)",
+      "cleanName": "Trafalgar Law 010",
+      "url": "https://www.tcgplayer.com/product/525053/one-piece-card-game-ultra-deck-the-three-captains-trafalgar-law-010",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525053_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] DON!! -1 </em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: If your opponent has 7 or more cards in their hand, trash 2 cards from your opponent's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.33,
+          "midPrice": 7.5,
+          "highPrice": 50,
+          "marketPrice": 5.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525054,
+      "cardId": "ST10-011",
+      "name": "Heat",
+      "cleanName": "Heat",
+      "url": "https://www.tcgplayer.com/product/525054/one-piece-card-game-ultra-deck-the-three-captains-heat",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525054_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, this Character gains +2000 power until the start of your next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525055,
+      "cardId": "ST10-012",
+      "name": "Bepo",
+      "cleanName": "Bepo",
+      "url": "https://www.tcgplayer.com/product/525055/one-piece-card-game-ultra-deck-the-three-captains-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525055_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates;Minks",
+      "attribute": "Strike",
+      "effectText": "[On Play] / [When Attacking] If your opponent has more DON!! cards on their field than you, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 2,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525057,
+      "cardId": "ST10-013",
+      "name": "Eustass\"Captain\"Kid (013)",
+      "cleanName": "EustassCaptainKid 013",
+      "url": "https://www.tcgplayer.com/product/525057/one-piece-card-game-ultra-deck-the-three-captains-eustasscaptainkid-013",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525057_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] / [When Attacking] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Up to 1 of your Leader gains +1000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.6,
+          "midPrice": 1.34,
+          "highPrice": 25,
+          "marketPrice": 1.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525058,
+      "cardId": "ST10-014",
+      "name": "Wire",
+      "cleanName": "Wire",
+      "url": "https://www.tcgplayer.com/product/525058/one-piece-card-game-ultra-deck-the-three-captains-wire",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525058_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.22,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525059,
+      "cardId": "ST10-015",
+      "name": "Gum-Gum Giant Sumo Slap",
+      "cleanName": "Gum Gum Giant Sumo Slap",
+      "url": "https://www.tcgplayer.com/product/525059/one-piece-card-game-ultra-deck-the-three-captains-gum-gum-giant-sumo-slap",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525059_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle, and K.O. up to 1 of your opponent's Characters with 2000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.11,
+          "midPrice": 0.24,
+          "highPrice": 10,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525061,
+      "cardId": "ST10-016",
+      "name": "Gum-Gum Kong Gatling",
+      "cleanName": "Gum Gum Kong Gatling",
+      "url": "https://www.tcgplayer.com/product/525061/one-piece-card-game-ultra-deck-the-three-captains-gum-gum-kong-gatling",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525061_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with 7000 power or less.\r\n<br>\r\n[Trigger] Up to 1 of your Leader gains +1000 power until the end of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 525064,
+      "cardId": "ST10-017",
+      "name": "Punk Vise",
+      "cleanName": "Punk Vise",
+      "url": "https://www.tcgplayer.com/product/525064/one-piece-card-game-ultra-deck-the-three-captains-punk-vise",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/525064_200w.jpg",
+      "groupId": 23243,
+      "setCode": "ST10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": null,
+      "effectText": "[Main] Rest up to 1 of your opponent's Characters with a cost of 2 or less, and add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": [
+    "Product 527633 (DON!! Card) has no Number in extendedData"
+  ]
+}

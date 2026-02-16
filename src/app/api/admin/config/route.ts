@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { auth } from "@/lib/auth";
+import { withRole } from "@/server/middleware/rbac";
 import {
   getConfig,
   setConfig,
@@ -9,17 +9,7 @@ import {
 } from "@/server/services/config.service";
 
 // GET /api/admin/config?category=fees — List all config values
-export async function GET(req: NextRequest) {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  // TODO: Add admin role check when RBAC is implemented
-  // if (!session.user.roles?.includes("ADMIN")) {
-  //   return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-  // }
-
+export const GET = withRole("ADMIN")(async (req) => {
   const category = req.nextUrl.searchParams.get("category") as Parameters<typeof listConfigs>[0];
   const key = req.nextUrl.searchParams.get("key") as ConfigKey | null;
 
@@ -30,17 +20,10 @@ export async function GET(req: NextRequest) {
 
   const configs = await listConfigs(category ?? undefined);
   return NextResponse.json({ configs });
-}
+});
 
 // PUT /api/admin/config — Set a config value
-export async function PUT(req: NextRequest) {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  // TODO: Add admin role check when RBAC is implemented
-
+export const PUT = withRole("ADMIN")(async (req, { userId }) => {
   const body = await req.json();
   const { key, value } = body;
 
@@ -51,19 +34,12 @@ export async function PUT(req: NextRequest) {
     );
   }
 
-  const result = await setConfig(key as ConfigKey, value, session.user.id);
+  const result = await setConfig(key as ConfigKey, value, userId);
   return NextResponse.json(result);
-}
+});
 
 // DELETE /api/admin/config?key=... — Revert to default
-export async function DELETE(req: NextRequest) {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  // TODO: Add admin role check when RBAC is implemented
-
+export const DELETE = withRole("ADMIN")(async (req) => {
   const key = req.nextUrl.searchParams.get("key") as ConfigKey | null;
   if (!key) {
     return NextResponse.json({ error: "key is required" }, { status: 400 });
@@ -71,4 +47,4 @@ export async function DELETE(req: NextRequest) {
 
   await deleteConfig(key);
   return NextResponse.json({ success: true, message: `Reverted ${key} to default` });
-}
+});

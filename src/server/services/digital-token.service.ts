@@ -1,8 +1,5 @@
 import { db } from "@/lib/db";
-import {
-  DIGITAL_TRADE_PLATFORM_FEE_RATE,
-  DIGITISER_ROYALTY_RATE,
-} from "@/lib/constants";
+import { getConfigs } from "@/server/services/config.service";
 import type {
   DigitalToken,
   DigitalTokenTransfer,
@@ -88,11 +85,15 @@ export async function transferToken(
     }
 
     // Fee calculations
-    const platformFeeCents = Math.floor(priceCents * DIGITAL_TRADE_PLATFORM_FEE_RATE);
+    const {
+      "fees.digital_platform_rate": digitalPlatformRate,
+      "fees.digitiser_royalty_rate": digitiserRoyaltyRate,
+    } = await getConfigs(["fees.digital_platform_rate", "fees.digitiser_royalty_rate"]);
+    const platformFeeCents = Math.floor(priceCents * digitalPlatformRate);
     // Self-trade guard: no royalty if digitiser is the seller
     const royaltyCents = token.digitiserId === fromUserId
       ? 0
-      : Math.floor(priceCents * DIGITISER_ROYALTY_RATE);
+      : Math.floor(priceCents * digitiserRoyaltyRate);
     const sellerNetCents = priceCents - platformFeeCents - royaltyCents;
 
     // Debit buyer

@@ -1,0 +1,404 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 15: RED Edward.Newgate",
+  "groupId": 23490,
+  "setCode": "ST15",
+  "totalProducts": 17,
+  "totalCards": 13,
+  "scrapedAt": "2026-02-15T22:54:39.797Z",
+  "durationMs": 71,
+  "cards": [
+    {
+      "productId": 580976,
+      "cardId": "OP02-001",
+      "name": "Edward.Newgate (OP02-001)",
+      "cleanName": "EdwardNewgate OP02 001",
+      "url": "https://www.tcgplayer.com/product/580976/one-piece-card-game-starter-deck-15-red-edwardnewgate-edwardnewgate-op02-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580976_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "6000",
+      "cost": null,
+      "life": "6",
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] Add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.44,
+          "midPrice": 1,
+          "highPrice": 25,
+          "marketPrice": 0.82,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580977,
+      "cardId": "OP02-008",
+      "name": "Jozu",
+      "cleanName": "Jozu",
+      "url": "https://www.tcgplayer.com/product/580977/one-piece-card-game-starter-deck-15-red-edwardnewgate-jozu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580977_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 2 or less Life cards and your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush].<br><br>\r\n<em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.26,
+          "midPrice": 0.39,
+          "highPrice": 10,
+          "marketPrice": 0.3,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580978,
+      "cardId": "OP02-018",
+      "name": "Marco",
+      "cleanName": "Marco",
+      "url": "https://www.tcgplayer.com/product/580978/one-piece-card-game-starter-deck-15-red-edwardnewgate-marco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580978_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "<em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[On K.O.] You may trash 1 card with a type including \"Whitebeard Pirates\" from your hand: If you have 2 or less Life cards, play this Character card from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 1.34,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580979,
+      "cardId": "OP02-019",
+      "name": "Rakuyo",
+      "cleanName": "Rakuyo",
+      "url": "https://www.tcgplayer.com/product/580979/one-piece-card-game-starter-deck-15-red-edwardnewgate-rakuyo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580979_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [Your Turn] All of your Characters with a type including \"Whitebeard Pirates\" gain +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.41,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580981,
+      "cardId": "OP03-003",
+      "name": "Izo",
+      "cleanName": "Izo",
+      "url": "https://www.tcgplayer.com/product/580981/one-piece-card-game-starter-deck-15-red-edwardnewgate-izo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580981_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Whitebeard Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"Whitebeard Pirates\" other than [Izo] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 1.32,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580982,
+      "cardId": "OP03-006",
+      "name": "Speed Jil",
+      "cleanName": "Speed Jil",
+      "url": "https://www.tcgplayer.com/product/580982/one-piece-card-game-starter-deck-15-red-edwardnewgate-speed-jil",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580982_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580983,
+      "cardId": "OP03-007",
+      "name": "Namule",
+      "cleanName": "Namule",
+      "url": "https://www.tcgplayer.com/product/580983/one-piece-card-game-starter-deck-15-red-edwardnewgate-namule",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580983_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Fish-Man;Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580985,
+      "cardId": "OP03-010",
+      "name": "Fossa",
+      "cleanName": "Fossa",
+      "url": "https://www.tcgplayer.com/product/580985/one-piece-card-game-starter-deck-15-red-edwardnewgate-fossa",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580985_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.29,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580986,
+      "cardId": "ST15-001",
+      "name": "Atmos",
+      "cleanName": "Atmos",
+      "url": "https://www.tcgplayer.com/product/580986/one-piece-card-game-starter-deck-15-red-edwardnewgate-atmos",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580986_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If your Leader is [Edward.Newgate], you cannot add Life cards to your hand using your own effects during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580987,
+      "cardId": "ST15-002",
+      "name": "Edward.Newgate (ST15-002)",
+      "cleanName": "EdwardNewgate ST15 002",
+      "url": "https://www.tcgplayer.com/product/580987/one-piece-card-game-starter-deck-15-red-edwardnewgate-edwardnewgate-st15-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580987_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.<br>\r\n<br>\r\n[Activate: Main] <strong>You may rest this Character</strong>: K.O. up to 1 of your opponent's Characters with 5000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.34,
+          "midPrice": 0.99,
+          "highPrice": 25,
+          "marketPrice": 0.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580988,
+      "cardId": "ST15-003",
+      "name": "Kingdew",
+      "cleanName": "Kingdew",
+      "url": "https://www.tcgplayer.com/product/580988/one-piece-card-game-starter-deck-15-red-edwardnewgate-kingdew",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580988_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[Opponent's Turn] When this Character is K.O.'d by an effect, up to 1 of your Leader gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 1.39,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580989,
+      "cardId": "ST15-004",
+      "name": "Thatch",
+      "cleanName": "Thatch",
+      "url": "https://www.tcgplayer.com/product/580989/one-piece-card-game-starter-deck-15-red-edwardnewgate-thatch",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580989_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader's type includes \"Whitebeard Pirates\", give up to 1 of your opponent's Characters 2000 power during this turn. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.12,
+          "midPrice": 3,
+          "highPrice": 25,
+          "marketPrice": 1.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 580990,
+      "cardId": "ST15-005",
+      "name": "Portgas.D.Ace",
+      "cleanName": "PortgasDAce",
+      "url": "https://www.tcgplayer.com/product/580990/one-piece-card-game-starter-deck-15-red-edwardnewgate-portgasdace",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/580990_200w.jpg",
+      "groupId": 23490,
+      "setCode": "ST15",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "If your Leader's type includes \"Whitebeard Pirates\", this Character gains [Rush].<br><br>\r\n<em>(This card can attack on the turn in which it is played.)</em><br><br>\r\n[Once Per Turn] If this Character would be removed from the field by your opponent's effect, you may give this Character 2000 power during this turn instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.85,
+          "midPrice": 1.19,
+          "highPrice": 50,
+          "marketPrice": 1,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 4,
+  "errors": []
+}

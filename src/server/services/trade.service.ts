@@ -17,12 +17,19 @@ import {
   calculateHoldAmounts,
   type TxClient,
 } from "./wallet.service";
+import {
+  createTradeHolds,
+  captureAndSettle,
+  cancelTradeHolds,
+} from "./marketplace-escrow.service";
 import { assertCanTrade } from "./kyc.service";
-import { PHOTO_APPROVAL_THRESHOLD_CENTS } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import {
   lockShippingAddresses,
   initiateCardReturns,
 } from "./shipping.service";
+import { eventBus } from "@/server/events/event-bus";
+import "@/server/events/subscribers";
 
 export async function getUserTrades(userId: string) {
   return db.trade.findMany({
@@ -93,6 +100,16 @@ export async function transitionTrade(
     }
   }
 
+  // For DIRECT trades, ensure all Stripe payments are authorized before completion
+  if (newStatus === "COMPLETED" && mode === "DIRECT") {
+    const pendingPayments = await db.tradePayment.findMany({
+      where: { tradeId, status: { notIn: ["AUTHORIZED", "CAPTURED"] } },
+    });
+    if (pendingPayments.length > 0) {
+      throw new Error("Not all trade payments are authorized — cannot complete trade");
+    }
+  }
+
   // ─── All mutations in a single transaction ────────
   let autoNextStatus: TradeStatus | null = null;
 
@@ -122,11 +139,18 @@ export async function transitionTrade(
       if (gradedWantIds.length > 0) await tx.gradedWantListing.updateMany({ where: { id: { in: gradedWantIds } }, data: { isActive: false } });
     }
 
-    // ─── ESCROWED: lock addresses + hold funds + create escrow ───
+    // ─── ESCROWED: lock addresses + hold funds ───
     if (newStatus === "ESCROWED") {
       await lockShippingAddresses(tradeId, tx);
-      const totalHold = await holdWalletFunds(tradeId, tx);
-      await createEscrow(tradeId, totalHold, "USD", tx);
+
+      if (mode === "DIRECT") {
+        // Marketplace model: Stripe PaymentIntents (outside transaction — Stripe calls)
+        // Hold creation happens after the DB transaction commits (see below).
+      } else {
+        // AUTHENTICATED mode: wallet-based holds (legacy, until BaaS integration)
+        const totalHold = await holdWalletFunds(tradeId, tx);
+        await createEscrow(tradeId, totalHold, "USD", tx);
+      }
     }
 
     // ─── Status update ───
@@ -168,32 +192,40 @@ export async function transitionTrade(
 
     // ─── COMPLETED: settle funds + release fees + release escrow ───
     if (newStatus === "COMPLETED") {
-      await settleWalletFunds(tradeId, tx);
-      if (mode === "AUTHENTICATED") {
+      if (mode === "DIRECT") {
+        // Marketplace model: Stripe capture + transfer (outside transaction — Stripe calls)
+        // Settlement happens after the DB transaction commits (see below).
+      } else {
+        // AUTHENTICATED mode: wallet-based settlement (legacy)
+        await settleWalletFunds(tradeId, tx);
         await releaseFeesToAuthenticators(tradeId, tx);
-      }
-      const tradeWithEscrow = await tx.trade.findUnique({
-        where: { id: tradeId },
-        select: { escrow: { select: { id: true } } },
-      });
-      if (tradeWithEscrow?.escrow) {
-        await releaseEscrow(tradeWithEscrow.escrow.id, tx);
+        const tradeWithEscrow = await tx.trade.findUnique({
+          where: { id: tradeId },
+          select: { escrow: { select: { id: true } } },
+        });
+        if (tradeWithEscrow?.escrow) {
+          await releaseEscrow(tradeWithEscrow.escrow.id, tx);
+        }
       }
     }
 
     // ─── CANCELLED: refund holds + refund fees + return cards + refund escrow ───
     if (newStatus === "CANCELLED") {
-      await refundWalletHolds(tradeId, tx);
-      if (mode === "AUTHENTICATED") {
+      if (mode === "DIRECT") {
+        // Marketplace model: cancel PaymentIntents (outside transaction — Stripe calls)
+        // Cancellation happens after the DB transaction commits (see below).
+      } else {
+        // AUTHENTICATED mode: wallet-based refunds (legacy)
+        await refundWalletHolds(tradeId, tx);
         await refundVerificationFees(tradeId, tx);
         await initiateCardReturns(tradeId, tx);
-      }
-      const tradeWithEscrow = await tx.trade.findUnique({
-        where: { id: tradeId },
-        select: { escrow: { select: { id: true } } },
-      });
-      if (tradeWithEscrow?.escrow) {
-        await refundEscrow(tradeWithEscrow.escrow.id, "Trade cancelled", tx);
+        const tradeWithEscrow = await tx.trade.findUnique({
+          where: { id: tradeId },
+          select: { escrow: { select: { id: true } } },
+        });
+        if (tradeWithEscrow?.escrow) {
+          await refundEscrow(tradeWithEscrow.escrow.id, "Trade cancelled", tx);
+        }
       }
     }
 
@@ -212,10 +244,11 @@ export async function transitionTrade(
           haveListing: { select: { askPrice: true } },
         },
       });
+      const photoThreshold = await getConfig("thresholds.photo_approval_cents");
       const allCleared = legs.every(
         (leg) =>
           !leg.haveListing ||
-          leg.haveListing.askPrice < PHOTO_APPROVAL_THRESHOLD_CENTS ||
+          leg.haveListing.askPrice < photoThreshold ||
           leg.photoApproval?.status === "APPROVED"
       );
       if (allCleared && mode === "AUTHENTICATED") {
@@ -225,6 +258,92 @@ export async function transitionTrade(
 
     return result;
   });
+
+  // ─── Stripe marketplace operations (outside DB transaction) ───
+  // These call external Stripe APIs and must happen after DB commit.
+  // On failure, we compensate by reverting the DB state.
+  if (mode === "DIRECT") {
+    if (newStatus === "ESCROWED") {
+      try {
+        await createTradeHolds(tradeId);
+      } catch (stripeErr) {
+        // Stripe hold creation failed — revert trade back to ACCEPTED
+        const revertHistory = (updated.statusHistory as Array<{ status: string; at: string }>) ?? [];
+        revertHistory.push({
+          status: "ACCEPTED",
+          at: new Date().toISOString(),
+          // @ts-expect-error — extra metadata for audit trail
+          revertReason: `Stripe hold creation failed: ${stripeErr instanceof Error ? stripeErr.message : "unknown"}`,
+        });
+        await db.trade.update({
+          where: { id: tradeId },
+          data: { status: "ACCEPTED", statusHistory: revertHistory },
+        });
+        throw new Error(
+          `Trade payment hold failed. Trade reverted to ACCEPTED. ${stripeErr instanceof Error ? stripeErr.message : ""}`,
+        );
+      }
+    }
+    if (newStatus === "COMPLETED") {
+      try {
+        await captureAndSettle(tradeId);
+      } catch (stripeErr) {
+        // Capture/settle failed — mark trade for manual reconciliation
+        // Do NOT revert to a previous state (funds may be partially captured)
+        await db.trade.update({
+          where: { id: tradeId },
+          data: {
+            statusHistory: [
+              ...((updated.statusHistory as Array<{ status: string; at: string }>) ?? []),
+              {
+                status: "SETTLEMENT_FAILED",
+                at: new Date().toISOString(),
+                error: stripeErr instanceof Error ? stripeErr.message : "unknown",
+              },
+            ],
+          },
+        });
+        throw new Error(
+          `Trade settlement failed and requires manual reconciliation. ${stripeErr instanceof Error ? stripeErr.message : ""}`,
+        );
+      }
+    }
+    if (newStatus === "CANCELLED") {
+      try {
+        await cancelTradeHolds(tradeId);
+      } catch (stripeErr) {
+        // Cancel failed — log but don't block (holds will auto-expire)
+        console.error(
+          `[trade] Failed to cancel Stripe holds for trade ${tradeId}:`,
+          stripeErr,
+        );
+      }
+    }
+  }
+
+  // ─── Event emissions (fire-and-forget, after all mutations) ───
+  const previousStatus = trade.status as string;
+  eventBus.emitAsync("trade.status_changed", {
+    tradeId,
+    from: previousStatus,
+    to: newStatus,
+    userId,
+  });
+
+  if (newStatus === "COMPLETED") {
+    eventBus.emitAsync("trade.completed", {
+      tradeId,
+      participantIds: trade.participantIds as string[],
+    });
+  }
+
+  if (newStatus === "CANCELLED") {
+    eventBus.emitAsync("trade.cancelled", {
+      tradeId,
+      reason: "Trade cancelled by participant",
+      cancelledBy: userId,
+    });
+  }
 
   // ─── Cascading auto-transitions (outside transaction) ───
   // These re-enter transitionTrade recursively for the next state.
@@ -292,7 +411,7 @@ async function holdWalletFunds(tradeId: string, tx?: TxClient): Promise<number> 
   const legs = await loadTradeLegs(tradeId, client);
   const bridgeLegs = toBridgeLegs(legs);
   const settlements = computeSettlements(bridgeLegs);
-  const holds = calculateHoldAmounts(legs, settlements);
+  const holds = await calculateHoldAmounts(legs, settlements);
 
   const execute = async (innerTx: TxClient) => {
     let totalHeld = 0;

@@ -1,29 +1,37 @@
 # Rigidness Audit
 
-> Every compile-time constant is a decision frozen in code. This document catalogs each rigidity point,
-> assesses its risk, and maps a concrete upgrade path from static constant → configurable parameter →
-> self-tuning system.
+> Every constant is a decision frozen in code. This document catalogs every rigidity point in CardForum,
+> assesses its risk, and provides a concrete upgrade path from compile-time constant to runtime-configurable,
+> data-driven, and eventually self-tuning parameter.
 >
 > Last updated: 2026-02-15
 
-## Path of Least Action — Why Rigidity Matters
-
-A rigid constant forces the system onto a single path regardless of conditions. When that path happens to be the least-action path, rigidity is harmless. When conditions change and a lower-action path exists, rigidity forces the system to take unnecessary action — a deploy where a config change would suffice, a flat fee where a tiered fee would reduce churn, a fixed weight where a calibrated weight would improve match quality.
-
-Each rigidity point below is scored not just by risk, but by **action cost**: how much unnecessary effort (user, operator, or developer) does this frozen decision impose when conditions change? The upgrade paths are ordered by how much action they eliminate: Phase 1 eliminates deploy-per-change, Phase 2 eliminates one-size-fits-all, Phase 3 eliminates human-in-the-loop entirely.
+---
 
 ## Reading Guide
 
-**Severity levels:**
-- **HIGH** — Blocks platform growth. Changing requires a deploy. No experimentation possible.
-- **MEDIUM** — Limits adaptation. Works for launch but becomes a bottleneck at scale.
+**Severity Levels:**
+- **HIGH** — Blocks growth, prevents experimentation, or creates operational risk. Must resolve before scale.
+- **MEDIUM** — Limits adaptation. System works but can't tune itself. Resolve during Phase 2.7.
+- **LOW** — Minor rigidity. Acceptable for now, resolve opportunistically.
 
-**Upgrade path phases:**
-- **Phase 1** — Move to database config (runtime-changeable, audit-logged)
-- **Phase 2** — Multi-variant support (per-user, per-region, per-tier overrides)
-- **Phase 3** — Self-tuning (feedback loop closes, system adjusts automatically)
+**Per-Item Format:**
+Each item documents the current state (with `file:line` citations), who uses it, what breaks if you change it,
+and the upgrade path from constant → config → self-tuning.
 
-**Pattern key:** Strategy | Adapter | Factory | Configuration-driven | Dependency Injection
+**Target Architecture:**
+All HIGH and MEDIUM items converge on a single pattern: the **Configuration Service** (Phase 2.7 deliverable #1).
+```
+constants.ts (compile-time defaults)
+  ↓ fallback for
+config.service.ts (runtime, 5-min cache)
+  ↓ reads from
+PlatformConfig model (key, value:Json, updatedBy, updatedAt)
+  ↓ controlled by
+Admin API (/api/admin/config)
+  ↓ audited by
+ConfigAudit (every change logged with old→new values)
+```
 
 ---
 
@@ -37,68 +45,58 @@ export const PLATFORM_FEE_RATE = 0.022; // 2.2% seller fee per card sent
 ```
 
 **Risk:** HIGH
-- Cannot A/B test fee rates to optimize revenue vs. churn
+- Cannot A/B test fee levels to find revenue-maximizing rate
 - Cannot offer promotional rates to new users or high-volume traders
-- Cannot adjust per-region (EU regulatory caps, emerging market pricing)
-- Every fee change requires a code deploy
+- Cannot adjust per-region (Japan market may tolerate different rates than US)
+- Changing requires code deploy — fee experiments take days instead of minutes
 
 **Used By:**
-- `wallet.service.ts:2` — import, `:171` — hold amount calculation
-- `trades/[tradeId]/page.tsx:22` — import, `:152` — fee display
-- `trade-card.tsx:14` — import, `:71, :169` — fee calculation in trade cards
+- `wallet.service.ts` — hold calculation (`max(net, 0) + sellerFees`)
+- `fee.service.ts` — fee computation for trade settlement
+- `marketplace-escrow.service.ts` — marketplace fee deduction
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (2 days): Add `platform_fee_rate` to PlatformConfig model. `config.service.ts` reads with 5-min cache, falls back to 0.022. Replace all `PLATFORM_FEE_RATE` imports with `getConfig('platform_fee_rate')`.
-2. **Phase 2 — Multi-Variant** (3 days): `FeeSchedule` model with `userId`, `region`, `tier` overrides. Evaluation order: user override → region → tier → default.
-3. **Phase 3 — Self-Tuning** (5 days): Monthly cron correlates fee level with churn rate. Proposes adjustments. A/B tests via experiment framework. Auto-applies winner after significance threshold.
+1. **Phase 2.7 Week 1** — Move to `PlatformConfig` key `platform.fee.rate`. `config.service.ts` reads with 5-min cache, falls back to `0.022`.
+2. **Phase 2.7 Week 5** — Add per-tier override: `platform.fee.rate.verified`, `platform.fee.rate.premium`. Service reads user tier → tier rate → global rate (cascade).
+3. **Phase 2.7 Week 7** — A/B test fee levels via experiment framework. 10% of users get variant rate, track deposit→trade→withdraw funnel conversion.
 
-**Pattern:** Strategy — `BaseFeeCalculator` (flat rate), `TieredFeeCalculator` (by volume), `DynamicFeeCalculator` (ML-driven)
+**Pattern:** Strategy — `BaseFeeCalculator` (current global rate), `TieredFeeCalculator` (per-user-tier), `DynamicFeeCalculator` (experiment-driven).
 
-**When:** Phase 2.7 (pre-launch)
+**When:** Phase 2.7 P0 (Week 1-2). Must resolve before any fee experimentation.
 
 ---
 
-### 2. Payment Provider Lock-in — Stripe (`stripe.ts`, 6 files)
+### 2. Payment Provider Lock-in — Stripe (`stripe.ts`, 5 services)
 
 **Current State:**
 ```typescript
-// stripe.ts:1-24
-import Stripe from "stripe";
-export function getStripe(): Stripe { ... }
+// src/lib/stripe.ts — hard-pinned API version
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: "2026-01-28.clover",
+});
 ```
-
-Stripe SDK is directly imported and used across 6 files with no abstraction layer.
 
 **Risk:** HIGH
-- Cannot add alternative payment rails (USDC/Circle, regional providers, crypto)
-- Stripe fee structure (2.9% + 30¢) is non-negotiable without volume leverage
-- Regional payment methods (Alipay, LINE Pay, PIX) require Stripe-specific integration
-- Blockchain settlement (Phase 3B) requires a second payment adapter regardless
+- Hard-pinned API version — upgrades require manual code change across 5 files
+- 5 files directly import Stripe SDK: `stripe.service.ts`, `connect.service.ts`, `payout.service.ts`, `webhooks/route.ts`, `create-payment-intent/route.ts`
+- No abstraction layer — switching to Circle (USDC), Wise, or adding a second provider requires rewriting all consumers
+- Connect Express accounts lock user payout rails to Stripe — no stablecoin payout path
 
 **Used By:**
-- `stripe.ts:1-24` — client singleton
-- `stripe.service.ts:1` — checkout sessions, customer creation
-- `connect.service.ts:1` — Express account management, onboarding
-- `payout.service.ts:1` — transfers, payout processing
-- `api/stripe/webhooks/route.ts:2` — webhook event construction
-- `api/connect/` — 3 routes (onboard, status, dashboard)
+- `stripe.service.ts` — deposit checkout sessions
+- `connect.service.ts` — Express account creation, onboarding, dashboard links
+- `payout.service.ts` — withdrawal transfers
+- `webhooks/route.ts` — event processing (checkout.session.completed, payment_intent.succeeded, transfer.*)
+- `create-payment-intent/route.ts` — inline card deposits
 
 **Upgrade Path:**
-1. **Phase 1 — Adapter Interface** (3 days): Define `PaymentAdapter` interface (`createCheckout`, `createPayout`, `handleWebhook`). Wrap current Stripe logic in `StripeAdapter`.
-2. **Phase 2 — Factory Routing** (4 days): `PaymentAdapterFactory` selects adapter by user preference or region. Add `CircleAdapter` for USDC settlement.
-3. **Phase 3 — Multi-Rail** (8 days): Users choose payment method at deposit. System routes to cheapest/fastest rail. Fee comparison displayed.
+1. **Phase 2.7** — Extract `PaymentAdapter` interface: `createCheckout()`, `createPaymentIntent()`, `createTransfer()`, `verifyWebhook()`. Current code becomes `StripeAdapter`.
+2. **Phase 3B** — Add `CircleAdapter` for USDC settlement. Factory selects adapter by user preference or region.
+3. **Phase 3B** — Add `WiseAdapter` for international bank payouts (partially implemented in `src/server/adapters/wise.adapter.ts`).
 
-**Pattern:** Adapter + Factory
+**Pattern:** Adapter + Factory — `PaymentAdapterFactory.getAdapter(user)` returns the right provider.
 
-```typescript
-interface PaymentAdapter {
-  createCheckout(userId: string, amountCents: number): Promise<CheckoutSession>;
-  createPayout(userId: string, amountCents: number): Promise<PayoutResult>;
-  handleWebhook(payload: Buffer, signature: string): Promise<WebhookEvent>;
-}
-```
-
-**When:** Phase 3B (blockchain settlement makes this mandatory)
+**When:** Phase 3B (blockchain settlement). Current Stripe coupling is acceptable pre-blockchain.
 
 ---
 
@@ -106,75 +104,69 @@ interface PaymentAdapter {
 
 **Current State:**
 ```typescript
-// auth.ts:1-7
-import NextAuth from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import Credentials from "next-auth/providers/credentials";
-import Google from "next-auth/providers/google";
-import Discord from "next-auth/providers/discord";
+// src/lib/auth.ts:9-11
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  adapter: PrismaAdapter(db),
+  session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
 ```
 
-Auth.js v5 with PrismaAdapter. Session strategy, providers, and callbacks all in one 70-line file.
-
-**Risk:** HIGH (but low urgency)
-- Auth.js breaking changes (v4→v5 migration was painful industry-wide)
-- PrismaAdapter couples auth to ORM choice
-- Adding enterprise SSO (SAML, OIDC) requires Auth.js support
-- Wallet-based auth (Phase 3) needs custom provider not yet supported
+**Risk:** MEDIUM (downgraded — Auth.js is stable and unlikely to be replaced)
+- PrismaAdapter couples auth to Prisma schema (User, Account, Session, VerificationToken)
+- JWT maxAge hardcoded to 30 days — no per-user session policy
+- Provider list (Google, Discord, Credentials) hardcoded — adding Apple/GitHub requires code change
+- `session.user.id = token.sub` callback assumes JWT structure
 
 **Used By:**
-- `auth.ts:1-70` — full config
-- `middleware.ts` — route protection via `auth()`
-- Every API route — `auth()` session check
-- `login-form.tsx`, `register-form.tsx` — `signIn()` calls
+- Every API route via `auth()` — 61+ routes
+- `middleware.ts` — cookie name check (`authjs.session-token`)
+- `providers.tsx` — `SessionProvider` wrapper
+- All client components via `useSession()`
 
 **Upgrade Path:**
-1. **Phase 1 — Interface Extraction** (1 day): Define `AuthProvider` interface (`getSession`, `signIn`, `signOut`). Current code already effectively implements this.
-2. **Phase 2 — Adapter Pattern** (2 days): `AuthJsAdapter` wraps current implementation. `ClerkAdapter` or `LuciaAdapter` as alternatives if needed.
-3. **Phase 3 — Wallet Auth** (3 days): Add SIWE (Sign-In with Ethereum) provider for Phase 3 embedded wallets.
+1. **Low priority** — Extract `AuthAdapter` interface only if Auth.js becomes a blocker.
+2. **Phase 3A** — If embedded wallets (Dynamic SDK) replace Auth.js for Web3 users, the adapter pattern isolates the change.
 
-**Pattern:** Adapter
+**Pattern:** Adapter (only if needed).
 
-**When:** Only if Auth.js becomes a blocker. Low priority — current implementation works well.
+**When:** Only if Auth.js becomes a blocker. Current coupling is acceptable.
 
 ---
 
-### 4. Trade State Machines (`domain.ts:119-151`)
+### 4. Trade State Machines (`domain.ts:138-170`)
 
 **Current State:**
 ```typescript
-// domain.ts:119-133
+// domain.ts:138
 const AUTHENTICATED_TRANSITIONS: Record<TradeStatus, TradeStatus[]> = {
   PROPOSED: ["ACCEPTED", "REJECTED", "CANCELLED"],
   ACCEPTED: ["ESCROWED", "CANCELLED", "DISPUTED"],
-  // ... 12 states, 2 modes
+  // ... 12 more states
 };
 
-// domain.ts:136-151
+// domain.ts:155
 const DIRECT_TRANSITIONS: Record<TradeStatus, TradeStatus[]> = { ... };
 ```
 
-Two hardcoded transition maps. Adding a new trade mode (e.g., graded-only, escrow-free, auction) requires editing TypeScript.
-
 **Risk:** HIGH
-- New trade modes require code changes + deploy
-- Cannot experiment with simplified flows for low-value trades
-- Cannot add conditional transitions (e.g., skip photo approval for PREMIUM authenticators)
-- Regulatory-required flow changes (e.g., mandatory cooling-off period) need deploys
+- Adding a new trade mode (e.g., GRADED_ONLY, ESCROW_FREE) requires adding a new hardcoded transition map + deploy
+- Cannot add/remove states without code change — every new workflow is a deploy
+- Two transition maps must be kept manually in sync — divergence bugs are invisible until runtime
+- `canTransition()` has no validation that the map is consistent (no dead states, no unreachable states)
 
 **Used By:**
-- `domain.ts:156-166` — `getTradeTransitions()`, `canTransition()`
-- `trade.service.ts` — every `transitionTrade()` call validates against these maps
-- `trade-status-badge.tsx` — UI status display logic
+- `domain.ts:173-177` — `getTradeTransitions(mode)` selects map
+- `trade.service.ts:2` — imports `canTransition`
+- `trades/route.ts` — `ACTION_STATUS_MAP` duplicates transition knowledge
+- Trade detail page — UI renders based on allowed transitions
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (3 days): Store transition maps as JSON in PlatformConfig. `getTradeTransitions()` reads from config with fallback to current hardcoded maps.
-2. **Phase 2 — Multi-Mode** (5 days): `TradeWorkflow` model with named workflows. Each trade references a workflow ID. Admin UI to create/edit workflows.
-3. **Phase 3 — Conditional Transitions** (4 days): Transition rules include predicates (card value, user tier, authenticator tier). Evaluated at runtime.
+1. **Phase 2.7 Week 1** — Store transition maps as JSON in `PlatformConfig`. `getTradeTransitions()` reads from config, falls back to current hardcoded maps.
+2. **Phase 2.7 Week 3** — Add state machine validator: on config change, verify no dead states, no unreachable states, terminal states have no outbound edges.
+3. **Future** — Admin UI for workflow variants. Create new trade mode by cloning + editing a transition map, no deploy needed.
 
-**Pattern:** Configuration-driven state machine
+**Pattern:** Configuration-driven state machine.
 
-**When:** Phase 2.7 (enables new trade modes without deploys)
+**When:** Phase 2.7 P0 (enables new trade modes without deploys).
 
 ---
 
@@ -195,193 +187,178 @@ const WEIGHTS = {
 };
 ```
 
-Nine weight parameters chosen by intuition, never validated against real match outcomes.
-
 **Risk:** HIGH
-- Weights may not reflect actual user preferences (e.g., users might prefer shorter cycles over local trades)
-- No way to test whether different weights improve match acceptance rate
-- Weights are globally uniform — Japan and Germany may have different locality preferences
-- The single highest-ROI feedback loop is blocked by this rigidity
+- The scorer IS the bridge's quality function — wrong weights = bad matches = user churn
+- No data to know if current weights are optimal (no match outcome tracking)
+- `conditionBonus` keys must stay in sync with `Condition` enum in `domain.ts:37-43` — no compile-time check
+- Cannot experiment with alternative weight sets without deploy
+- The packer selects proposals ranked by these weights — a 10% change in `fullyLocalBonus` could shift which proposals win, affecting user experience globally
 
 **Used By:**
-- `scorer.ts:28-77` — `scoreProposal()` uses all 9 weights
-- `scorer.ts:83-87` — `rankProposals()` sorts by score
-- `matching.service.ts` — invokes `rankProposals()` on cycle/chain results
+- `scorer.ts:27` — `scoreProposal()` — called for every proposal
+- `packer.ts` — sorts proposals by score before selection
+- `matching.service.ts` — orchestrates scoring in matching pipeline
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (2 days): Move WEIGHTS to PlatformConfig. `scorer.ts` reads from config with current values as defaults.
-2. **Phase 2 — Outcome Tracking** (4 days): `MatchOutcome` model tracks proposal score components → acceptance → completion. Weekly cron correlates each weight with completion rate.
-3. **Phase 3 — Auto-Calibration** (6 days): Bayesian optimization over weight space. Cron proposes new weights. A/B test against current. Auto-apply winners.
+1. **Phase 2.7 Week 1** — Move `WEIGHTS` to `PlatformConfig` key `matching.scorer.weights`. `scorer.ts` reads from config, falls back to current values.
+2. **Phase 2.7 Week 3-4** — `MatchOutcome` model tracks score + components + accepted + completed. Data accumulates.
+3. **Phase 2.7 Week 5-6** — `/api/cron/scorer-calibration` correlates score components with completion rate. Proposes weight updates. Admin approval for first 3 months, then auto-apply within bounds.
+4. **Phase 2.7 Week 7** — A/B test weight variants: 50% of matches use current weights, 50% use proposed. Compare acceptance + completion rates.
 
-**Pattern:** Strategy + Feedback Loop
+**Pattern:** Strategy + Feedback Loop — `ScorerWeightProvider` interface, `StaticWeightProvider` (config), `CalibratedWeightProvider` (data-driven).
 
-**When:** Phase 2.7 — first feedback loop to implement. Highest signal-to-noise ratio.
+**When:** Phase 2.7 P1 (first feedback loop to implement — highest ROI).
 
 ---
 
-### 6. Service Coupling — trade.service.ts (7+ direct imports)
+### 6. Service Coupling — `trade.service.ts` (12 imports, lines 1-30)
 
 **Current State:**
 ```typescript
-// trade.service.ts:1-24
+import { db } from "@/lib/db";
+import { canTransition } from "@/types/domain";
 import { computeSettlements } from "@/server/matching/bridge-builder";
 import { areAllLegsPhotoCleared, createPhotoApprovalIfNeeded } from "./photo-approval.service";
 import { assignForLegs } from "./authenticator.service";
-import { holdVerificationFees, releaseFeesToAuthenticators, debitVerificationFees, refundVerificationFees } from "./fee.service";
+import { holdVerificationFees, releaseFeesToAuthenticators, ... } from "./fee.service";
 import { createEscrow, releaseEscrow, refundEscrow } from "./escrow.service";
-import { holdForTrade, releaseFromTrade, refundTradeHold, calculateHoldAmounts, type TxClient } from "./wallet.service";
+import { holdForTrade, releaseFromTrade, ... } from "./wallet.service";
+import { createTradeHolds, captureAndSettle, cancelTradeHolds } from "./marketplace-escrow.service";
 import { assertCanTrade } from "./kyc.service";
+import { PHOTO_APPROVAL_THRESHOLD_CENTS } from "@/lib/constants";
 import { lockShippingAddresses, initiateCardReturns } from "./shipping.service";
 ```
 
-`trade.service.ts` directly imports 8 services. It's the god object of the system — every trade state transition triggers side effects across all these services.
-
-**Risk:** HIGH
-- Cannot swap any service implementation without editing trade.service.ts
-- Cannot test trade transitions in isolation (requires all 8 services or complex mocks)
-- Adding a new trade mode means touching the same 200-line `transitionTrade` function
-- `transitionTrade` runs multi-step operations outside `$transaction` — partial failure leaves inconsistent state
+**Risk:** MEDIUM (downgraded — coupling is real but manageable at current scale)
+- 12 direct service imports + 1 constant import = 13 dependencies in one function
+- `transitionTrade()` is a ~140-line orchestrator that touches wallet, escrow, fees, photos, authenticators, shipping, and KYC
+- Testing requires mocking 12 services — integration tests are the only viable strategy
+- Adding a new transition side-effect (e.g., notify users) requires modifying this file
 
 **Used By:**
-- `trade.service.ts:60-187` — `transitionTrade()` orchestrates all services
-- Every trade API route depends on this function
+- `trades/route.ts` — trade action handler
+- `trades/[tradeId]/legs/[legId]/deliver/route.ts` — delivery confirmation
 
 **Upgrade Path:**
-1. **Phase 1 — Constructor Injection** (3 days): Pass services as parameters to `transitionTrade()` instead of importing at module level. Enables test doubles.
-2. **Phase 2 — Event-Driven** (5 days): Trade transitions emit domain events (`TradeEscrowed`, `TradeCompleted`). Services subscribe to events. Decouples orchestration.
-3. **Phase 3 — Saga Pattern** (8 days): Each transition is a saga with explicit compensating actions. Handles partial failure. Enables distributed execution.
+1. **Post-validation** — Extract transition side-effects into an event system: `tradeEvents.emit("ESCROWED", tradeId)` → listeners handle escrow, shipping lock, etc.
+2. **Phase 3** — Full service registry with constructor injection. Each transition handler is a separate class.
 
-**Pattern:** Dependency Injection (lightweight — constructor params, not a DI container)
+**Pattern:** Event-driven side effects (lightweight — no DI container).
 
-**When:** Post-validation (refactor when adding second trade mode or wrapping in `$transaction`)
+**When:** Post-validation (refactor when adding second trade mode).
 
 ---
 
 ### 7. No Feature Flags (zero infrastructure)
 
 **Current State:**
-
-No feature flag system exists. Every feature is either fully deployed or not deployed. No gradual rollout, no per-user toggles, no kill switches.
+No feature flag system exists. Every feature is either deployed for all users or not deployed at all.
 
 **Risk:** HIGH
-- Cannot do gradual rollouts (deploy to 5% → 25% → 100%)
-- Cannot run A/B tests on any feature
-- Cannot kill a broken feature without a deploy
-- Cannot enable features per-user for beta testing
-- Cannot gate features by KYC tier or region
+- Cannot do gradual rollouts — new features go to 100% or 0%
+- Cannot kill a broken feature without a rollback deploy
+- Cannot beta-test with specific users
+- Cannot run experiments (fee variants, scorer weights, UI changes)
+- Every deploy is all-or-nothing — blast radius is always 100%
 
-**Used By:** N/A — nothing uses feature flags because none exist.
+**Used By:** Nothing (doesn't exist).
 
 **Upgrade Path:**
-1. **Phase 1 — Database Flags** (2 days): `FeatureFlag` model (`name`, `enabled`, `rolloutPercent`, `userWhitelist`). Evaluation service with consistent user assignment via hash.
-2. **Phase 2 — Admin UI** (2 days): `/admin/flags` page for toggling. Per-user override for testing. Audit log.
-3. **Phase 3 — Experimentation** (5 days): Integrate with A/B testing framework. Feature flags become experiment variants. Statistical significance tracking.
+1. **Phase 2.7 Week 1-2** — `FeatureFlag` model + evaluation service with consistent user hashing.
+2. **Phase 2.7 Week 2** — Admin API + UI for toggling flags.
+3. **Phase 2.7 Week 7** — Integration with experiment framework for A/B testing.
 
-**Pattern:** Configuration-driven evaluation
+**Pattern:** Feature flag service with deterministic user assignment.
 
-```typescript
-interface FeatureFlagService {
-  isEnabled(flagName: string, userId?: string): Promise<boolean>;
-  getVariant(flagName: string, userId: string): Promise<string>;
-}
-```
-
-**When:** Phase 2.7 P0 — foundation for all other self-improvement work.
+**When:** Phase 2.7 P0. Foundation for all experimentation.
 
 ---
 
 ### 8. No Observability (zero telemetry)
 
 **Current State:**
-
-No error tracking (no Sentry), no structured logging (uses `console.log`), no business metrics, no performance monitoring. The platform is flying blind.
+- No error tracking (no Sentry, no Bugsnag)
+- No structured logging (bare `console.log` / `console.error`)
+- No business metrics (no counters, no gauges, no histograms)
+- No alerting (issues are discovered by users, not by the system)
 
 **Risk:** HIGH
 - Cannot detect errors before users report them
-- Cannot identify performance bottlenecks
-- Cannot measure business KPIs (trade completion rate, match acceptance rate, deposit→trade funnel)
-- Cannot set alerts for anomalous behavior (fraud, system degradation)
-- Every other self-improvement mechanism depends on observability
+- Cannot measure trade completion rate, match acceptance rate, or wallet health
+- Cannot identify performance regressions
+- Cannot feed any data into feedback loops (Phase 2.7 crons require metrics)
+- Flying blind in production
 
-**Used By:** N/A — no observability infrastructure exists.
+**Used By:** Nothing (doesn't exist).
 
 **Upgrade Path:**
-1. **Phase 1 — Error Tracking + Logging** (3 days): Sentry (client + server + edge). Pino structured logger replacing all `console.log` calls. Source maps for production stack traces.
-2. **Phase 2 — Business Metrics** (3 days): Custom metric counters/gauges/histograms for trade lifecycle, wallet operations, authenticator performance. Dashboard (Vercel Analytics or Grafana).
-3. **Phase 3 — Alerting + Anomaly Detection** (4 days): Alert rules on key metrics. Anomaly detection for fraud patterns. Auto-flag suspicious accounts.
+1. **Phase 2.7 Week 3** — Sentry for error tracking (client + server + edge).
+2. **Phase 2.7 Week 3** — Pino structured logger replacing all `console.log`.
+3. **Phase 2.7 Week 4** — Custom business metrics (see ROADMAP Phase 2.7 deliverable #3 for the full metrics table).
 
-**Pattern:** Layered observability (errors → logs → metrics → alerts)
+**Pattern:** Structured logging + metric counters + error tracking.
 
-**Key Metrics:**
-
-| Metric | Type | Alert Threshold |
-|--------|------|-----------------|
-| `trade.completion_rate` | Gauge | <60% |
-| `match.acceptance_rate` | Gauge | <40% |
-| `wallet.failed_txns` | Counter | >5/hour |
-| `authenticator.avg_verification_hours` | Histogram | >48h |
-| `api.p99_latency` | Histogram | >2s |
-
-**When:** Phase 2.7 P0 — prerequisite for all feedback loops.
+**When:** Phase 2.7 P0. Prerequisite for all feedback loops.
 
 ---
 
 ## MEDIUM Severity — Limits Adaptation
 
-### 9. Authenticator Fee Tiers (`constants.ts:31-35`)
+### 9. Authenticator Fee Tiers (`constants.ts:33-37`)
 
 **Current State:**
 ```typescript
 export const AUTHENTICATOR_FEE_STRUCTURE = {
-  STANDARD: { baseFee: 300, platformPercent: 30 }, // $3, 30% to platform
-  VERIFIED: { baseFee: 400, platformPercent: 25 }, // $4, 25% to platform
-  PREMIUM: { baseFee: 500, platformPercent: 20 },  // $5, 20% to platform
+  STANDARD: { baseFee: 300, platformPercent: 30 },  // $3, 30% to platform
+  VERIFIED: { baseFee: 400, platformPercent: 25 },  // $4, 25% to platform
+  PREMIUM:  { baseFee: 500, platformPercent: 20 },   // $5, 20% to platform
 } as const;
 ```
 
 **Risk:** MEDIUM
-- Cannot adjust fees based on market demand or authenticator supply/demand balance
-- Cannot offer promotional rates for new authenticators in underserved regions
-- Cannot experiment with fee structures (flat vs. percentage-based)
+- Cannot adjust fees without deploy
+- Cannot run fee experiments per region or tier
+- No market mechanism — authenticators can't set their own rates within bounds
 
 **Used By:**
-- `authenticator-fees.ts:1` — import, `:19` — `calculateVerificationFee()`
+- `authenticator-fees.ts` — `getAuthenticatorFee(tier)`
+- `fee.service.ts` — `holdVerificationFees`, `debitVerificationFees`
+- `digitisation/fee-estimate/route.ts` — fee estimate API
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (1 day): Move to PlatformConfig. Admin-adjustable per tier.
-2. **Phase 2 — Regional Overrides** (2 days): Per-region fee structures. Japan authenticators may command different rates than EU.
-3. **Phase 3 — Dynamic Pricing** (4 days): Supply/demand ratio per region adjusts fees. More authenticators = lower fees. Scarcity = higher fees.
+1. **Phase 2.7** — Move to `PlatformConfig` key `authenticator.fees`. Service reads from config.
+2. **Phase 3B** — Authenticator fee markets: authenticators set own rates within platform floor/ceiling. Config stores the bounds.
 
-**Pattern:** Configuration-driven + Strategy
+**Pattern:** Configuration → Market (Platform sets bounds, authenticators set rates within).
 
-**When:** Phase 2.7
+**When:** Phase 2.7 (config), Phase 3B (market).
 
 ---
 
-### 10. KYC Thresholds (`constants.ts:142-143`)
+### 10. KYC Thresholds (`constants.ts:144-145`)
 
 **Current State:**
 ```typescript
-export const KYC_BASIC_LISTING_CAP_CENTS = 50_000;  // $500
-export const KYC_BASIC_TRADE_CAP_CENTS = 100_000;    // $1,000
+export const KYC_BASIC_LISTING_CAP_CENTS = 50_000;   // $500
+export const KYC_BASIC_TRADE_CAP_CENTS = 100_000;     // $1,000
 ```
 
 **Risk:** MEDIUM
-- Cannot adjust thresholds per-region (EU MiCA vs. US state regulations)
-- Cannot lower thresholds for suspicious accounts without code change
-- Cannot raise thresholds for trusted long-term users
+- Thresholds are regulatory-driven — different jurisdictions require different limits
+- Cannot adjust for specific countries (Japan PSA Category 1 may require lower thresholds)
+- Changing requires deploy — compliance updates should be immediate
 
 **Used By:**
-- `kyc.service.ts:9-10` — import, `:417, :419` — `assertCanCreateListing()`, `:438, :440` — `assertCanTrade()`
+- `kyc.service.ts` — `assertCanTrade()`, `assertCanCreateListing()`
+- `tests/kyc-gates.test.ts` — test assertions
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (1 day): Move to PlatformConfig with region-aware defaults.
-2. **Phase 2 — Per-User Overrides** (2 days): Trust score adjusts effective thresholds. Verified users get higher caps.
-3. **Phase 3 — Regulatory Auto-Compliance** (5 days): Region-specific threshold lookup. Auto-adjust when regulations change.
+1. **Phase 2.7** — Move to `PlatformConfig` with per-country override: `kyc.basic.listing.cap.US`, `kyc.basic.listing.cap.JP`.
+2. **Compliance phase** — Admin UI for compliance team to adjust thresholds per jurisdiction without engineering involvement.
 
-**Pattern:** Configuration-driven
+**Pattern:** Configuration with regional override cascade.
 
-**When:** Pre-launch (regulatory compliance is launch-blocking in some jurisdictions)
+**When:** Phase 2.7 (pre-launch for compliance readiness).
 
 ---
 
@@ -393,26 +370,28 @@ export const PHOTO_APPROVAL_THRESHOLD_CENTS = 5000; // $50.00
 ```
 
 **Risk:** MEDIUM
-- Cannot adjust based on dispute rate (if $30 cards have high dispute rates, threshold should drop)
-- Cannot exempt trusted sellers with history of accurate descriptions
-- Cannot raise threshold for authenticators with high accuracy ratings
+- The $50 threshold is a guess — no data to validate it's the optimal friction/fraud trade-off
+- Cannot adjust per-TCG (Pokemon high-value cards may need lower threshold than One Piece)
+- Trusted sellers (high AI agreement rate) should skip photos entirely — threshold is binary, not per-user
 
 **Used By:**
-- `domain.ts:190` — import, `:194` — `legRequiresPhotoApproval()`
-- `photo-approval.service.ts:4` — import, `:28` — threshold check
+- `trade.service.ts:26` — imported as constant
+- `photo-approval.service.ts` — `createPhotoApprovalIfNeeded()`
+- `domain.ts:209` — referenced in type definitions
+- `trades/[tradeId]/page.tsx` — UI conditional rendering
+- `photo-review.tsx`, `photo-upload.tsx` — UI components
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (1 day): Move to PlatformConfig.
-2. **Phase 2 — User Trust Modifier** (3 days): Threshold = base × (1 - trustScore). Trusted sellers skip photo approval for mid-value cards.
-3. **Phase 3 — Data-Driven** (3 days): Monthly cron analyzes dispute rate by card value. Proposes threshold adjustment. Admin approves.
+1. **Phase 2.7** — Move to `PlatformConfig`. Already partially resolved: photo trust exemption (`PHOTO_TRUST_MIN_AGREEMENT_RATE >= 0.9`) skips the gate for trusted sellers. Combine threshold + trust into a scoring function.
+2. **Phase 2.7 Week 5** — Track photo rejection rate by threshold → find the break-even point where photo cost equals dispute cost.
 
-**Pattern:** Configuration-driven + Feedback Loop
+**Pattern:** Configuration + data-driven threshold optimization.
 
-**When:** Phase 2.7
+**When:** Phase 2.7 P1.
 
 ---
 
-### 12. CCS Scoring Weights (`constants.ts:76-81`)
+### 12. CCS Scoring Weights (`constants.ts:78-83`)
 
 **Current State:**
 ```typescript
@@ -425,253 +404,214 @@ export const CCS_DIMENSION_WEIGHTS = {
 ```
 
 **Risk:** MEDIUM
-- Different TCGs may value dimensions differently (centering matters more for Pokemon than MTG)
-- Cannot calibrate based on AI vs. authenticator disagreement patterns
-- Grading company standards differ (PSA vs. BGS weight centering differently)
+- Weights are a guess — no data on which dimensions correlate most with market value
+- Cannot adjust per-TCG (Pokemon centering may matter more than Yu-Gi-Oh centering)
+- `CCS_TIER_BOUNDARIES` (`constants.ts:89-95`) and `CCS_SUB_TIER_BOUNDARIES` (`constants.ts:98-112`) are also hardcoded
 
 **Used By:**
-- `ccs.ts:15` — import, `:36` — `calculateCCS()`
+- `ccs.ts` — `computeComposite()` — the CCS scoring engine
+- `condition-comparison.service.ts` — AI vs authenticator delta analysis
+- Feeds into scorer via condition tier → `conditionBonus` in `scorer.ts:17`
 
 **Upgrade Path:**
-1. **Phase 1 — Database Config** (1 day): Move to PlatformConfig, keyed by TCG.
-2. **Phase 2 — Per-TCG Weights** (2 days): Different weight profiles per TCG. PSA/BGS alignment profiles.
-3. **Phase 3 — AI Calibration** (5 days): Weekly cron compares AI CCS vs. authenticator CCS. Adjusts weights to minimize systematic bias per dimension.
+1. **Phase 2.7** — Move to `PlatformConfig` key `ccs.weights`.
+2. **Phase 2.7 Week 5-6** — `/api/cron/ai-calibration` aggregates AI vs authenticator deltas per dimension → proposes weight adjustments.
+3. **Phase 3B** — Secondary market price data by CCS tier → recalibrate weights against what the market values.
 
-**Pattern:** Configuration-driven + Feedback Loop
+**Pattern:** Configuration + Feedback Loop (AI calibration cron).
 
-**When:** Phase 2.7 (AI calibration loop)
+**When:** Phase 2.7 P1.
 
 ---
 
-### 13. Prisma Enums — TCG, Condition, GradingCompany
+### 13. Prisma Enums (`schema.prisma:12-71`, `domain.ts:6-62`)
+
+**Current State:**
+```prisma
+// prisma/schema.prisma:12-17
+enum TCG { POKEMON  ONEPIECE  YUGIOH  MTG }
+
+// prisma/schema.prisma:19-25
+enum Condition { NM  LP  MP  HP  DMG }
+
+// prisma/schema.prisma:66-71
+enum GradingCompany { PSA  BGS  CGC  SGC }
+```
+
+Mirrored in TypeScript at `domain.ts:6-62` as objects + types + value arrays + label records.
+
+**Risk:** MEDIUM
+- Adding a new TCG (e.g., Dragon Ball Super, Digimon) requires: Prisma schema change → migration → domain.ts update → validator update → UI filter update → badge color update. Six files minimum.
+- Adding a new condition tier (e.g., "GEM" above NM) requires: schema change → domain.ts → constants.ts (CCS boundaries) → scorer.ts (conditionBonus) → validators. Five files.
+- Prisma enums are database-level constraints — cannot add values without migration.
+
+**Used By:**
+- `prisma/schema.prisma` — column types on 10+ models
+- `domain.ts:6-62` — TypeScript mirrors + labels + badge colors
+- `validators.ts:27-29` — zod enum schemas
+- `scorer.ts:17` — condition bonus lookup
+- `card-search.tsx` — TCG filter UI
+- `constants.ts:89-95` — CCS tier boundaries keyed by condition
+
+**Upgrade Path:**
+1. **Phase 2.7** — Add a `SupportedTCG` model (id, name, displayName, badgeColor, isActive). Replace Prisma enum with String + runtime validation. Migration: Prisma supports additive enum changes without data loss.
+2. **Long-term** — String-typed columns + runtime validation from config. No schema change needed for new TCGs.
+
+**Pattern:** Database-backed enum registry.
+
+**When:** When the 5th TCG is needed (current 4 is fine).
+
+---
+
+### 14. Validator Duplication (`validators.ts:27-29`)
 
 **Current State:**
 ```typescript
-// domain.ts:6-11
-export const TCG = {
-  POKEMON: "POKEMON", ONEPIECE: "ONEPIECE", YUGIOH: "YUGIOH", MTG: "MTG",
-} as const;
-
-// domain.ts:21-27
-export const Condition = { NM: "NM", LP: "LP", MP: "MP", HP: "HP", DMG: "DMG" } as const;
-
-// domain.ts:40-45
-export const GradingCompany = { PSA: "PSA", BGS: "BGS", CGC: "CGC", SGC: "SGC" } as const;
+const tcgValues = TCG_VALUES;             // re-imported from domain.ts
+const conditionValues = CONDITION_VALUES;  // re-imported from domain.ts
 ```
 
-Mirrored in Prisma schema as enums + in `validators.ts:19-20, :62` as zod enum arrays.
-
-**Risk:** MEDIUM
-- Adding a new TCG (e.g., Lorcana, Flesh and Blood) requires schema migration + code change in 3 places
-- Adding a grading company (e.g., ACE, TAG) requires the same triple-edit
-- Adding a condition grade (e.g., GEM MINT) requires migration + code + validator changes
+**Risk:** LOW
+- Not actual duplication — validators import from domain.ts (single source of truth)
+- The `as unknown as [string, ...string[]]` cast on currency values is fragile
+- If domain.ts and validators.ts ever diverge, zod schemas accept values the database rejects
 
 **Used By:**
-- `domain.ts:6-47` — type definitions
-- `validators.ts:19-20` — `tcgValues`, `conditionValues` (duplicated)
-- `validators.ts:62` — `gradingCompanyValues` (duplicated)
-- `prisma/schema.prisma` — Prisma enum definitions
-- `card-search.tsx` — `TCG_FILTERS`, `TCG_BADGE_COLORS`
+- All form validators (createHaveListingSchema, createWantListingSchema, etc.)
 
 **Upgrade Path:**
-1. **Phase 1 — Single Source** (2 days): Generate TypeScript enums from Prisma schema. Eliminate manual duplication in `domain.ts` and `validators.ts`.
-2. **Phase 2 — Database-Driven** (4 days): Move enum values to a reference table (`SupportedTCG`, `SupportedCondition`). Schema uses `String` instead of `enum`. Validators read from DB.
-3. **Phase 3 — Admin-Managed** (2 days): Admin UI to add/remove supported TCGs, conditions, grading companies. No deploys needed.
+1. Already acceptable — the import chain is `schema → domain.ts → validators.ts`.
+2. If Phase 2.7 moves enums to database, validators would read from config instead of domain.ts.
 
-**Pattern:** Database-driven reference data
+**Pattern:** Single source of truth (already implemented via imports).
 
-**When:** When adding 5th TCG (currently 4 — stable for launch)
+**When:** Resolves automatically with RIGIDNESS #13.
 
 ---
 
-### 14. Validator Duplication (`validators.ts` ↔ `domain.ts`)
+### 15. Region Free-text (no normalization)
 
 **Current State:**
-```typescript
-// validators.ts:19-20 — duplicates domain.ts:6-27
-const tcgValues = ["POKEMON", "ONEPIECE", "YUGIOH", "MTG"] as const;
-const conditionValues = ["NM", "LP", "MP", "HP", "DMG"] as const;
-
-// validators.ts:62 — duplicates domain.ts:40-45
-const gradingCompanyValues = ["PSA", "BGS", "CGC", "SGC"] as const;
-```
-
-These arrays duplicate the enum objects in `domain.ts`. If a value is added to one but not the other, validation silently diverges from the type system.
+`User.region` is `String?` — free-text. Users type "Tokyo", "tokyo", "東京", "Greater Tokyo Area" — all different strings, all the same region.
 
 **Risk:** MEDIUM
-- Adding a TCG/condition/company to `domain.ts` but forgetting `validators.ts` means the API rejects valid values
-- Adding to `validators.ts` but forgetting `domain.ts` means the type system doesn't know about the value
-- Three-way sync (Prisma enum + domain.ts + validators.ts) is error-prone
+- Matching engine uses region strings for locality scoring — "Tokyo" !== "tokyo" breaks `fullyLocalBonus`
+- Authenticator assignment by region is unreliable
+- Cannot aggregate metrics by region (analytics shows 50 "regions" that are 10 real regions)
+- `Region` model exists in schema (`prisma/schema.prisma`) but is not wired to User or listings
 
 **Used By:**
-- `validators.ts:19-20, :62` — zod enum sources for all listing/trade validators
-- Every `POST /api/listings` and `POST /api/graded-listings` request validates against these
+- `scorer.ts` — region locality checks
+- `authenticator.service.ts` — `findBestAuthenticator(region)`
+- `matching.service.ts` — region grouping for bridge construction
+- `reserve-assignment.service.ts` — reserve authenticator by region
 
 **Upgrade Path:**
-1. **Phase 1 — Derive from Domain** (1 day): `validators.ts` imports values from `domain.ts` instead of redeclaring. `const tcgValues = Object.values(TCG) as [string, ...string[]]`.
-2. **Phase 2 — Generate from Prisma** (2 days): Prisma generates enum types. Both `domain.ts` and `validators.ts` derive from generated types. Single source of truth.
+1. **Pre-launch** — Wire `Region` model to `User.regionId` (FK). Add `regionId` to Listing and Authenticator models.
+2. **Pre-launch** — Region picker in listing form and settings page (dropdown, not free-text).
+3. **Phase 2.7** — Region normalization migration: fuzzy-match existing free-text strings → closest Region record.
 
-**Pattern:** DRY — single source derivation
+**Pattern:** Normalized reference data.
 
-**When:** Next code change touching either file (low effort, high safety)
-
----
-
-### 15. Region Free-Text (no normalization)
-
-**Current State:**
-```typescript
-// validators.ts:161
-region: z.string().min(1).max(100).optional(),
-
-// authenticatorApplicationSchema — validators.ts:182
-region: z.string().min(1, "Region is required"),
-```
-
-Regions are free-text strings. "Tokyo", "tokyo", "東京", "Kanto", "JP-13" all represent the same region but won't match.
-
-**Risk:** MEDIUM
-- Matching engine uses region for locality bonus — misspelled regions break local matching
-- Authenticator assignment by region fails on inconsistent naming
-- Analytics by region are meaningless without normalization
-- Cannot build region-based features (regional pricing, regulatory compliance)
-
-**Used By:**
-- `authenticator.service.ts` — `assignForLegs()` matches by region
-- `scorer.ts:34-38` — locality bonus calculation
-- `listing.service.ts` — stored on listings
-- User profile — stored as-is
-
-**Upgrade Path:**
-1. **Phase 1 — Reference Table** (3 days): `Region` model (id, name, country, parentRegion). Dropdown in UI instead of free-text. Migrate existing data with fuzzy matching.
-2. **Phase 2 — Hierarchy** (2 days): Region → Country → Customs Zone hierarchy. Matching engine uses hierarchy for graduated locality scores.
-3. **Phase 3 — Auto-Detection** (2 days): IP-based region suggestion on signup. Shipping address → region inference.
-
-**Pattern:** Reference data + hierarchy
-
-**When:** Pre-launch (P1 — region consistency is critical for matching quality)
+**When:** Pre-launch. Critical for matching quality.
 
 ---
 
-## Configuration Service Architecture
+## Configuration Service Architecture (Target State)
 
-The target state that resolves items 1, 4, 5, 9-12 and enables all feedback loops:
+All HIGH and MEDIUM items (except #2, #3, #6, #13, #15) converge on this architecture:
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  PlatformConfig Model                               │
-│  ─────────────────                                  │
-│  key: String @id                                    │
-│  value: Json                                        │
-│  category: String (fees, thresholds, weights, ...)  │
-│  updatedBy: String                                  │
-│  updatedAt: DateTime                                │
-│  version: Int (optimistic concurrency)              │
-└────────────────────┬────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  config.service.ts                                  │
-│  ─────────────────                                  │
-│  get<T>(key, defaultValue): T                       │
-│  set(key, value, updatedBy): void                   │
-│  getAll(category?): ConfigEntry[]                   │
-│  ─────────────────                                  │
-│  5-min in-memory cache                              │
-│  Typed defaults for every key (fallback guarantee)  │
-│  Audit log on every write                           │
-└────────────────────┬────────────────────────────────┘
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-    ┌──────────┐ ┌────────┐ ┌──────────┐
-    │ Services │ │ Scorer │ │ CCS calc │
-    │ read     │ │ reads  │ │ reads    │
-    │ fee rate │ │ weights│ │ weights  │
-    └──────────┘ └────────┘ └──────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────┐
-│  Admin UI — /admin/config                           │
-│  ─────────────────────                              │
-│  Category-grouped config editor                     │
-│  Change history with diff view                      │
-│  "Revert to default" per key                        │
-│  Requires ADMIN role                                │
-└─────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│           PlatformConfig Model              │
+│  key: String @id                            │
+│  value: Json                                │
+│  category: String (fee, matching, kyc, ...) │
+│  description: String                        │
+│  updatedBy: String                          │
+│  updatedAt: DateTime                        │
+│  version: Int @default(1)                   │
+└──────────────────┬──────────────────────────┘
+                   │
+          ┌────────▼─────────┐
+          │  config.service  │
+          │  5-min cache     │
+          │  typed defaults  │
+          │  cascade: key →  │
+          │  tier → global   │
+          └────────┬─────────┘
+                   │
+     ┌─────────────┼─────────────┐
+     │             │             │
+     ▼             ▼             ▼
+  Services     Cron Jobs     Admin API
+  read via     propose       writes via
+  getConfig()  changes       setConfig()
 ```
 
-**Migration strategy:**
-1. Add PlatformConfig model to schema
-2. Seed with current `constants.ts` values
-3. Add `config.service.ts` with cache
-4. Replace imports one-by-one (each is a safe, independent PR)
-5. Keep `constants.ts` as default fallback values (never delete, just stop importing directly)
+**Keys managed by config service (Phase 2.7):**
+
+| Key | Current Location | Default |
+|-----|-----------------|---------|
+| `platform.fee.rate` | `constants.ts:2` | `0.022` |
+| `matching.scorer.weights` | `scorer.ts:12-22` | `{baseScore:100,...}` |
+| `trade.transitions.authenticated` | `domain.ts:138` | `{PROPOSED:[...],ACCEPTED:[...],...}` |
+| `trade.transitions.direct` | `domain.ts:155` | `{PROPOSED:[...],ACCEPTED:[...],...}` |
+| `authenticator.fees` | `constants.ts:33-37` | `{STANDARD:{baseFee:300,...},...}` |
+| `kyc.basic.listing.cap` | `constants.ts:144` | `50000` |
+| `kyc.basic.trade.cap` | `constants.ts:145` | `100000` |
+| `photo.approval.threshold` | `constants.ts:7` | `5000` |
+| `ccs.dimension.weights` | `constants.ts:78-83` | `{surface:0.30,...}` |
+| `ccs.tier.boundaries` | `constants.ts:89-95` | `{NM:{min:9.0},...}` |
 
 ---
 
-## Growth Hooks Appendix
+## Growth Hooks (Observe → Analyze → Decide → Act → Verify)
 
-Each module gets a concrete Observe → Analyze → Decide → Act → Verify cycle.
+Each module's feedback cycle, enabled by resolving the rigidity points above:
 
 ### Listings
-- **Observe**: Track fill rate (listing created → matched → completed) by TCG, condition, region
-- **Analyze**: Weekly aggregation — which card/condition/region combos have lowest fill rates
-- **Decide**: Generate pricing suggestions for sellers with stale listings
-- **Act**: Notify sellers via in-app message: "Cards like yours in NM typically trade at $X"
-- **Verify**: Track fill rate change for listings that received suggestions vs. control group
+**Observe**: Fill rate by TCG/condition/region (how many listings get matched?)
+**Analyze**: Identify low-demand cards and overpriced listings
+**Decide**: Suggest pricing adjustments to sellers
+**Act**: Push price suggestion via `GET /api/marketplace/price-suggestion` (already built)
+**Verify**: Track fill rate change after suggestion acceptance
 
-### Matching Engine
-- **Observe**: Log proposal score components alongside acceptance/rejection/completion outcomes
-- **Analyze**: Weekly correlation — which score components predict completion? Which predict rejection?
-- **Decide**: Propose weight updates that maximize predicted completion rate
-- **Act**: Apply new weights via config service (feature-flagged to 10% → 50% → 100%)
-- **Verify**: Compare completion rates between old and new weights. Rollback if regression.
+### Matching
+**Observe**: Proposal outcomes — which proposals are accepted? Which complete?
+**Analyze**: Correlate score components (cycle length, locality, value balance) with completion rate
+**Decide**: Propose weight updates (increase weights for components that predict completion)
+**Act**: Update `matching.scorer.weights` in config service
+**Verify**: Compare acceptance + completion rates before/after weight change
 
 ### Authenticators
-- **Observe**: Track AI CCS vs. authenticator CCS per dimension, per authenticator
-- **Analyze**: Flag authenticators with systematic divergence (e.g., always rates corners 1.5 higher)
-- **Decide**: Reduce assignment priority for high-divergence authenticators
-- **Act**: Adjust authenticator priority score in assignment algorithm
-- **Verify**: Monitor divergence trends — improving authenticators get priority restored
+**Observe**: AI vs authenticator CCS divergence per dimension
+**Analyze**: Flag authenticators with systematic bias (always grades higher/lower)
+**Decide**: Reduce assignment priority for high-divergence authenticators
+**Act**: Adjust assignment weight in reserve assignment service
+**Verify**: Monitor divergence rate after priority change
 
-### Wallet / Fees
-- **Observe**: Track deposit → trade → withdraw funnel conversion rates
-- **Analyze**: Monthly cohort analysis — at what fee level do users stop trading?
-- **Decide**: Propose fee adjustment (lower fees if churn is high, raise if market tolerates)
-- **Act**: A/B test new fee rate on 5% of new users via experiment framework
-- **Verify**: Compare revenue per user (not just conversion rate) between variants
+### Wallet
+**Observe**: Deposit → trade → withdraw funnel per user cohort
+**Analyze**: Detect churn signals (deposit but never trade, trade but never withdraw)
+**Decide**: Trigger onboarding help or engagement nudges
+**Act**: Feature flag targeted onboarding flow
+**Verify**: Measure funnel conversion rate change
 
-### Photo Approval
-- **Observe**: Track rejection rate per user, per card value bracket
-- **Analyze**: Flag repeat offenders (>3 rejections in 30 days)
-- **Decide**: Lower photo approval threshold for flagged users (require photos for $20+ instead of $50+)
-- **Act**: Set per-user threshold override via config service
-- **Verify**: Track dispute rate for flagged users before and after threshold change
-
-### Disputes
-- **Observe**: Track dispute type, resolution outcome, time-to-resolution
-- **Analyze**: Identify systemic causes (e.g., 60% of disputes are CONDITION_MISMATCH from one region)
-- **Decide**: Flag region for enhanced verification requirements
-- **Act**: Require photo approval for all trades in flagged region (regardless of value)
-- **Verify**: Monitor dispute rate in flagged region over next 30 days
-
-### CCS / AI Grading
-- **Observe**: Aggregate AI vs. authenticator CCS deltas per dimension
-- **Analyze**: Detect systematic bias (e.g., AI consistently rates centering 0.5 higher)
-- **Decide**: Propose CCS weight adjustment to compensate for AI bias
-- **Act**: Apply via config service, feature-flagged
-- **Verify**: Re-run comparison on next batch — delta should shrink toward zero
+### Fees
+**Observe**: Churn rate vs fee level across user segments
+**Analyze**: Find the fee-churn elasticity curve
+**Decide**: A/B test lower rates for fee-sensitive segments
+**Act**: Apply winning variant via experiment framework
+**Verify**: Track revenue per user (not just rate) — lower rate × higher volume may win
 
 ---
 
 ## Verification Checklist
 
-- [x] All 15 rigidity points documented with file:line references
-- [x] Each item has: current state, risk, used by, upgrade path, pattern, timeline
-- [x] Upgrade paths are 3-phase (database config → multi-variant → self-tuning)
-- [x] Configuration Service Architecture described as unified target state
-- [x] Growth hooks documented for 7 modules (Observe → Analyze → Decide → Act → Verify)
-- [x] Cross-referenced with Phase 2.7 in ROADMAP.md
-- [x] Every pattern named and interface sketched where applicable
-- [x] Actionability: engineer can pick any item and know what to build, in what order
+- [x] All 15 items documented with `file:line` references
+- [x] Each item has: Current State, Risk, Used By, Upgrade Path, Pattern, When
+- [x] Configuration Service Architecture documented as target state
+- [x] All Phase 2.7 deliverables reference specific RIGIDNESS items
+- [x] Growth hooks documented per module (Observe → Analyze → Decide → Act → Verify)
+- [x] An engineer can pick any item and know exactly what to build, in what order, with what pattern

@@ -1,0 +1,4638 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Awakening of the New Era",
+  "groupId": 23213,
+  "setCode": "OP05",
+  "totalProducts": 165,
+  "totalCards": 154,
+  "scrapedAt": "2026-02-15T22:54:04.894Z",
+  "durationMs": 100,
+  "cards": [
+    {
+      "productId": 527035,
+      "cardId": "OP01-016",
+      "name": "Nami (SP)",
+      "cleanName": "Nami SP",
+      "url": "https://www.tcgplayer.com/product/527035/one-piece-card-game-awakening-of-the-new-era-nami-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527035_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Straw Hat Crew] type card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 700,
+          "midPrice": 800,
+          "highPrice": 2499,
+          "marketPrice": 567.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527036,
+      "cardId": "OP01-121",
+      "name": "Yamato (SP)",
+      "cleanName": "Yamato SP",
+      "url": "https://www.tcgplayer.com/product/527036/one-piece-card-game-awakening-of-the-new-era-yamato-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527036_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": "Strike",
+      "effectText": "Also treat this card's name as [Kouzuki Oden] according to the rules.\r\n<br>\r\n[Double Attack] <em>(This card deals 2 damage.)</em>\r\n<br>\r\n[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 246,
+          "midPrice": 310,
+          "highPrice": 1000,
+          "marketPrice": 242.91,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527038,
+      "cardId": "OP02-120",
+      "name": "Uta (SP)",
+      "cleanName": "Uta SP",
+      "url": "https://www.tcgplayer.com/product/527038/one-piece-card-game-awakening-of-the-new-era-uta-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527038_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[On Play] DON!! -2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Your Leader and all of your Characters gain +1000 power until the start of your next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 279.99,
+          "midPrice": 401,
+          "highPrice": 650,
+          "marketPrice": 283.73,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527040,
+      "cardId": "OP03-092",
+      "name": "Rob Lucci (092) (SP)",
+      "cleanName": "Rob Lucci 092 SP",
+      "url": "https://www.tcgplayer.com/product/527040/one-piece-card-game-awakening-of-the-new-era-rob-lucci-092-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527040_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "CP9",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may place 2 cards with a type including \"CP\" from your trash at the bottom of your deck in any order</strong>: This Character gains [Rush] during this turn. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 88.1,
+          "midPrice": 152.5,
+          "highPrice": 300,
+          "marketPrice": 94.7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527041,
+      "cardId": "OP04-044",
+      "name": "Kaido (044) (SP)",
+      "cleanName": "Kaido 044 SP",
+      "url": "https://www.tcgplayer.com/product/527041/one-piece-card-game-awakening-of-the-new-era-kaido-044-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527041_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] Return up to 1 Character with a cost of 8 or less and up to 1 Character with a cost of 3 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 51,
+          "midPrice": 264,
+          "highPrice": 500,
+          "marketPrice": 196.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527007,
+      "cardId": "OP05-001",
+      "name": "Sabo (001) (Alternate Art)",
+      "cleanName": "Sabo 001 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527007/one-piece-card-game-awakening-of-the-new-era-sabo-001-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527007_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[DON!! x1][Opponent's Turn][Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character -1000 power during this turn instead of that Character being K.O.'d",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20.69,
+          "midPrice": 30,
+          "highPrice": 224.99,
+          "marketPrice": 23.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528529,
+      "cardId": "OP05-001",
+      "name": "Sabo (001)",
+      "cleanName": "Sabo 001",
+      "url": "https://www.tcgplayer.com/product/528529/one-piece-card-game-awakening-of-the-new-era-sabo-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528529_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[DON!! x1][Opponent's Turn][Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character -1000 power during this turn instead of that Character being K.O.'d.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527008,
+      "cardId": "OP05-002",
+      "name": "Belo Betty (002) (Alternate Art)",
+      "cleanName": "Belo Betty 002 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527008/one-piece-card-game-awakening-of-the-new-era-belo-betty-002-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527008_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may trash 1 \"Revolutionary Army\" type card from your hand:</strong> Up to 3 of your \"Revolutionary Army\" type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 30,
+          "midPrice": 37.84,
+          "highPrice": 199.99,
+          "marketPrice": 31.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528531,
+      "cardId": "OP05-002",
+      "name": "Belo Betty (002)",
+      "cleanName": "Belo Betty 002",
+      "url": "https://www.tcgplayer.com/product/528531/one-piece-card-game-awakening-of-the-new-era-belo-betty-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528531_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may trash 1 [Revolutionary Army] type card from your hand</strong>: Up to 3 of your [Revolutionary Army] type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528532,
+      "cardId": "OP05-003",
+      "name": "Inazuma",
+      "cleanName": "Inazuma",
+      "url": "https://www.tcgplayer.com/product/528532/one-piece-card-game-awakening-of-the-new-era-inazuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528532_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Slash",
+      "effectText": "If you have a Character with 7000 power or more other than this Character, this Character gains [Rush]. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.19,
+          "midPrice": 0.38,
+          "highPrice": 5,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528533,
+      "cardId": "OP05-004",
+      "name": "Emporio.Ivankov",
+      "cleanName": "EmporioIvankov",
+      "url": "https://www.tcgplayer.com/product/528533/one-piece-card-game-awakening-of-the-new-era-emporioivankov",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528533_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate:Main][Once Per Turn] If this Character has 7000 power or more, play up to 1 [Revolutionary Army] type Character card with 5000 power or less other than [Emporio.Ivankov] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528536,
+      "cardId": "OP05-005",
+      "name": "Karasu",
+      "cleanName": "Karasu",
+      "url": "https://www.tcgplayer.com/product/528536/one-piece-card-game-awakening-of-the-new-era-karasu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528536_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the [Revolutionary Army] type, give up to 1 of your opponent's Leader or Character cards -1000 power during this turn.\r\n<br>\r\n[When Attacking] If this Character has 7000 power or more, give up to 1 of your opponent's Leader or Character cards -1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1.1,
+          "highPrice": 10,
+          "marketPrice": 0.85,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527663,
+      "cardId": "OP05-006",
+      "name": "Koala",
+      "cleanName": "Koala",
+      "url": "https://www.tcgplayer.com/product/527663/one-piece-card-game-awakening-of-the-new-era-koala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527663_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader has the [Revolutionary Army] type, give up to 1 of your opponent's Characters -3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.75,
+          "midPrice": 1.39,
+          "highPrice": 50,
+          "marketPrice": 1.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527664,
+      "cardId": "OP05-006",
+      "name": "Koala (Alternate Art)",
+      "cleanName": "Koala Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527664/one-piece-card-game-awakening-of-the-new-era-koala-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527664_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader has the [Revolutionary Army] type, give up to 1 of your opponent's Characters -3000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9,
+          "midPrice": 11.79,
+          "highPrice": 99,
+          "marketPrice": 9.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527009,
+      "cardId": "OP05-007",
+      "name": "Sabo (007)",
+      "cleanName": "Sabo 007",
+      "url": "https://www.tcgplayer.com/product/527009/one-piece-card-game-awakening-of-the-new-era-sabo-007",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527009_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] K.O. up to 2 of your opponent's Characters with a total power of 4000 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.4,
+          "highPrice": 25,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527659,
+      "cardId": "OP05-007",
+      "name": "Sabo (007) (Alternate Art)",
+      "cleanName": "Sabo 007 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527659/one-piece-card-game-awakening-of-the-new-era-sabo-007-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527659_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] K.O. up to 2 of your opponent's Characters with a total power of 4000 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4,
+          "midPrice": 5.9,
+          "highPrice": 70,
+          "marketPrice": 4.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528537,
+      "cardId": "OP05-008",
+      "name": "Chaka",
+      "cleanName": "Chaka",
+      "url": "https://www.tcgplayer.com/product/528537/one-piece-card-game-awakening-of-the-new-era-chaka",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528537_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][Activate:Main][Once Per Turn] Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528538,
+      "cardId": "OP05-009",
+      "name": "Toh-Toh",
+      "cleanName": "Toh Toh",
+      "url": "https://www.tcgplayer.com/product/528538/one-piece-card-game-awakening-of-the-new-era-toh-toh",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528538_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Draw 1 card if your Leader has 0 power or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528539,
+      "cardId": "OP05-010",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/528539/one-piece-card-game-awakening-of-the-new-era-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528539_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with 1000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528540,
+      "cardId": "OP05-011",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/528540/one-piece-card-game-awakening-of-the-new-era-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528540_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with 2000 power or less.\r\n<br>\r\n[Trigger] If your Leader is multicolored, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.09,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528541,
+      "cardId": "OP05-012",
+      "name": "Hack",
+      "cleanName": "Hack",
+      "url": "https://www.tcgplayer.com/product/528541/one-piece-card-game-awakening-of-the-new-era-hack",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528541_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Fish-Man;Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.56,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528542,
+      "cardId": "OP05-013",
+      "name": "Bunny Joe",
+      "cleanName": "Bunny Joe",
+      "url": "https://www.tcgplayer.com/product/528542/one-piece-card-game-awakening-of-the-new-era-bunny-joe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528542_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528543,
+      "cardId": "OP05-014",
+      "name": "Pell",
+      "cleanName": "Pell",
+      "url": "https://www.tcgplayer.com/product/528543/one-piece-card-game-awakening-of-the-new-era-pell",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528543_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][When Attacking] Give up to 1 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528168,
+      "cardId": "OP05-015",
+      "name": "Belo Betty (015) (Alternate Art)",
+      "cleanName": "Belo Betty 015 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528168/one-piece-card-game-awakening-of-the-new-era-belo-betty-015-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528168_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Revolutionary Army] type card other than [Belo Betty] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14.83,
+          "midPrice": 16.31,
+          "highPrice": 60,
+          "marketPrice": 15.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528545,
+      "cardId": "OP05-015",
+      "name": "Belo Betty (015)",
+      "cleanName": "Belo Betty 015",
+      "url": "https://www.tcgplayer.com/product/528545/one-piece-card-game-awakening-of-the-new-era-belo-betty-015",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528545_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Revolutionary Army] type card other than [Belo Betty] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.4,
+          "highPrice": 10,
+          "marketPrice": 0.38,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528547,
+      "cardId": "OP05-016",
+      "name": "Morley",
+      "cleanName": "Morley",
+      "url": "https://www.tcgplayer.com/product/528547/one-piece-card-game-awakening-of-the-new-era-morley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528547_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Giant;Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[When Attacking] If this Character has 7000 power or more, your opponent cannot activate [Blocker] during this battle.\r\n<br>\r\n[Trigger] <strong>You may trash 1 card from your hand</strong>: If your Leader is multicolored, play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528548,
+      "cardId": "OP05-017",
+      "name": "Lindbergh",
+      "cleanName": "Lindbergh",
+      "url": "https://www.tcgplayer.com/product/528548/one-piece-card-game-awakening-of-the-new-era-lindbergh",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528548_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Minks;Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[When Attacking] If this Character has 7000 power or more, K.O. up to 1 of your opponent's Characters with 3000 power or less.\r\n<br>\r\n[Trigger] <strong>You may trash 1 card from your hand</strong>: If your Leader is multicolored, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.81,
+          "highPrice": 25,
+          "marketPrice": 0.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528550,
+      "cardId": "OP05-018",
+      "name": "Emporio Energy Hormone",
+      "cleanName": "Emporio Energy Hormone",
+      "url": "https://www.tcgplayer.com/product/528550/one-piece-card-game-awakening-of-the-new-era-emporio-energy-hormone",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528550_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, play up to 1 [Revolutionary Army] type Character card with 5000 power or less from your hand.\r\n<br>\r\n[Trigger] Play up to 1 [Revolutionary Army] type Character card with 5000 power or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528551,
+      "cardId": "OP05-019",
+      "name": "Fire Fist",
+      "cleanName": "Fire Fist",
+      "url": "https://www.tcgplayer.com/product/528551/one-piece-card-game-awakening-of-the-new-era-fire-fist",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528551_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters -4000 power during this turn. Then, if you have 2 or less Life cards, K.O. up to 1 of your opponent's Characters with 0 power or less.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528553,
+      "cardId": "OP05-020",
+      "name": "Four Thousand-Brick Fist",
+      "cleanName": "Four Thousand Brick Fist",
+      "url": "https://www.tcgplayer.com/product/528553/one-piece-card-game-awakening-of-the-new-era-four-thousand-brick-fist",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528553_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;Revolutionary Army",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +2000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 2000 power or less.\r\n<br>\r\n[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528555,
+      "cardId": "OP05-021",
+      "name": "Revolutionary Army HQ",
+      "cleanName": "Revolutionary Army HQ",
+      "url": "https://www.tcgplayer.com/product/528555/one-piece-card-game-awakening-of-the-new-era-revolutionary-army-hq",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528555_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": null,
+      "effectText": "[Activate:Main] <strong>You may trash 1 card from your hand and rest this Stage</strong>: Look at 3 cards from the top of your deck; reveal up to 1 [Revolutionary Army] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.19,
+          "midPrice": 0.3,
+          "highPrice": 5,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527010,
+      "cardId": "OP05-022",
+      "name": "Donquixote Rosinante (022) (Alternate Art)",
+      "cleanName": "Donquixote Rosinante 022 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527010/one-piece-card-game-awakening-of-the-new-era-donquixote-rosinante-022-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527010_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Green",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 23.37,
+          "midPrice": 30,
+          "highPrice": 149.99,
+          "marketPrice": 27.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528557,
+      "cardId": "OP05-022",
+      "name": "Donquixote Rosinante (022)",
+      "cleanName": "Donquixote Rosinante 022",
+      "url": "https://www.tcgplayer.com/product/528557/one-piece-card-game-awakening-of-the-new-era-donquixote-rosinante-022",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528557_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Green",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528559,
+      "cardId": "OP05-023",
+      "name": "Vergo",
+      "cleanName": "Vergo",
+      "url": "https://www.tcgplayer.com/product/528559/one-piece-card-game-awakening-of-the-new-era-vergo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528559_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1][When Attacking] K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528560,
+      "cardId": "OP05-024",
+      "name": "Kuween",
+      "cleanName": "Kuween",
+      "url": "https://www.tcgplayer.com/product/528560/one-piece-card-game-awakening-of-the-new-era-kuween",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528560_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528562,
+      "cardId": "OP05-025",
+      "name": "Gladius",
+      "cleanName": "Gladius",
+      "url": "https://www.tcgplayer.com/product/528562/one-piece-card-game-awakening-of-the-new-era-gladius",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528562_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] <strong>You may rest this Character</strong>: Rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528564,
+      "cardId": "OP05-026",
+      "name": "Sarquiss",
+      "cleanName": "Sarquiss",
+      "url": "https://www.tcgplayer.com/product/528564/one-piece-card-game-awakening-of-the-new-era-sarquiss",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528564_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Bellamy Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][When Attacking][Once Per Turn] <strong>You may rest 1 of your Characters with a cost of 3 or more</strong>: Set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528566,
+      "cardId": "OP05-027",
+      "name": "Trafalgar Law (027)",
+      "cleanName": "Trafalgar Law 027",
+      "url": "https://www.tcgplayer.com/product/528566/one-piece-card-game-awakening-of-the-new-era-trafalgar-law-027",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528566_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[Activate:Main] <strong>You may trash this Character</strong>: Rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.52,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528568,
+      "cardId": "OP05-028",
+      "name": "Donquixote Doflamingo (028)",
+      "cleanName": "Donquixote Doflamingo 028",
+      "url": "https://www.tcgplayer.com/product/528568/one-piece-card-game-awakening-of-the-new-era-donquixote-doflamingo-028",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528568_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Ranged",
+      "effectText": "[Activate:Main] <strong>You may trash this Character</strong>: K.O. up to 1 of your opponent's rested Characters with a cost of 2 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.5,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528571,
+      "cardId": "OP05-029",
+      "name": "Donquixote Doflamingo (029)",
+      "cleanName": "Donquixote Doflamingo 029",
+      "url": "https://www.tcgplayer.com/product/528571/one-piece-card-game-awakening-of-the-new-era-donquixote-doflamingo-029",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528571_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack][Once Per Turn] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Rest up to 1 of your opponent's Characters with a cost of 6 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528574,
+      "cardId": "OP05-030",
+      "name": "Donquixote Rosinante (030)",
+      "cleanName": "Donquixote Rosinante 030",
+      "url": "https://www.tcgplayer.com/product/528574/one-piece-card-game-awakening-of-the-new-era-donquixote-rosinante-030",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528574_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Opponent's Turn] If your rested Character would be K.O.'d, you may trash this Character instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.55,
+          "highPrice": 14.89,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528575,
+      "cardId": "OP05-031",
+      "name": "Buffalo",
+      "cleanName": "Buffalo",
+      "url": "https://www.tcgplayer.com/product/528575/one-piece-card-game-awakening-of-the-new-era-buffalo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528575_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[When Attacking][Once Per Turn] If you have 2 or more rested Characters, set up to 1 of your rested Characters with a cost of 1 as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528577,
+      "cardId": "OP05-032",
+      "name": "Pica",
+      "cleanName": "Pica",
+      "url": "https://www.tcgplayer.com/product/528577/one-piece-card-game-awakening-of-the-new-era-pica",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528577_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[End of Your Turn] (1): Set this Character as active.\r\n<br>\r\n[Once Per Turn] If this Character would be K.O.'d, you may rest up to 1 of your Characters with a cost of 3 or more other than [Pica] instead.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.07,
+          "midPrice": 0.33,
+          "highPrice": 10,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528578,
+      "cardId": "OP05-032",
+      "name": "Pica (Alternate Art)",
+      "cleanName": "Pica Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528578/one-piece-card-game-awakening-of-the-new-era-pica-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528578_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[End of Your Turn] (1): Set this Character as active.\r\n<br>\r\n[Once Per Turn] If this Character would be K.O.'d, you may rest up to 1 of your Characters with a cost of 3 or more other than [Pica] instead.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2.95,
+          "midPrice": 6.38,
+          "highPrice": 60,
+          "marketPrice": 4.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528579,
+      "cardId": "OP05-033",
+      "name": "Baby 5 (033)",
+      "cleanName": "Baby 5 033",
+      "url": "https://www.tcgplayer.com/product/528579/one-piece-card-game-awakening-of-the-new-era-baby-5-033",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528579_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character</strong>: Play up to 1 [Donquixote Pirates] type Character card with a cost of 2 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527873,
+      "cardId": "OP05-034",
+      "name": "Baby 5 (034)",
+      "cleanName": "Baby 5 034",
+      "url": "https://www.tcgplayer.com/product/527873/one-piece-card-game-awakening-of-the-new-era-baby-5-034",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527873_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character</strong>: Look at 5 cards from the top of your deck; reveal up to 1 [Donquixote Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527874,
+      "cardId": "OP05-034",
+      "name": "Baby 5 (034) (Alternate Art)",
+      "cleanName": "Baby 5 034 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527874/one-piece-card-game-awakening-of-the-new-era-baby-5-034-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527874_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character</strong>: Look at 5 cards from the top of your deck; reveal up to 1 [Donquixote Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.99,
+          "midPrice": 6.75,
+          "highPrice": 99.99,
+          "marketPrice": 6.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528580,
+      "cardId": "OP05-035",
+      "name": "Bellamy",
+      "cleanName": "Bellamy",
+      "url": "https://www.tcgplayer.com/product/528580/one-piece-card-game-awakening-of-the-new-era-bellamy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528580_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528581,
+      "cardId": "OP05-036",
+      "name": "Monet",
+      "cleanName": "Monet",
+      "url": "https://www.tcgplayer.com/product/528581/one-piece-card-game-awakening-of-the-new-era-monet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528581_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528582,
+      "cardId": "OP05-037",
+      "name": "Because the Side of Justice Will Be Whichever Side Wins!!",
+      "cleanName": "Because the Side of Justice Will Be Whichever Side Wins",
+      "url": "https://www.tcgplayer.com/product/528582/one-piece-card-game-awakening-of-the-new-era-because-the-side-of-justice-will-be-whichever-side-wins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528582_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "0",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": null,
+      "effectText": "[Counter] <strong>You may trash 1 card from your hand</strong>: Up to 1 of your Leader or Character cards gains +3000 power during this battle.\r\n<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.42,
+          "highPrice": 5,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528583,
+      "cardId": "OP05-038",
+      "name": "Charlestone",
+      "cleanName": "Charlestone",
+      "url": "https://www.tcgplayer.com/product/528583/one-piece-card-game-awakening-of-the-new-era-charlestone",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528583_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, you may trash 1 card from your hand. If you do, set up to 3 of your DON!! cards as active.\r\n<br>\r\n[Trigger] Rest up to 1 of your opponent's Leader or Character cards with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.56,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528584,
+      "cardId": "OP05-039",
+      "name": "Stick-Stickem Meteora",
+      "cleanName": "Stick Stickem Meteora",
+      "url": "https://www.tcgplayer.com/product/528584/one-piece-card-game-awakening-of-the-new-era-stick-stickem-meteora",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528584_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528585,
+      "cardId": "OP05-040",
+      "name": "Birdcage",
+      "cleanName": "Birdcage",
+      "url": "https://www.tcgplayer.com/product/528585/one-piece-card-game-awakening-of-the-new-era-birdcage",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528585_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Green",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": null,
+      "attribute": null,
+      "effectText": "If your Leader is [Donquixote Doflamingo], all Characters with a cost of 5 or less do not become active in your and your opponent's Refresh Phases.\r\n<br>\r\n[End of Your Turn] If you have 10 DON!! cards on your field, K.O. all rested Characters with a cost of 5 or less. Then, trash this SAtage.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.98,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527011,
+      "cardId": "OP05-041",
+      "name": "Sakazuki (Alternate Art)",
+      "cleanName": "Sakazuki Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527011/one-piece-card-game-awakening-of-the-new-era-sakazuki-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527011_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may trash 1 card from your hand</strong>: Draw 1 card.\r\n<br>\r\n[When Attacking] Give up to 1 of your opponent's Characters -1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 28,
+          "midPrice": 35.2,
+          "highPrice": 299.99,
+          "marketPrice": 30.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528595,
+      "cardId": "OP05-041",
+      "name": "Sakazuki",
+      "cleanName": "Sakazuki",
+      "url": "https://www.tcgplayer.com/product/528595/one-piece-card-game-awakening-of-the-new-era-sakazuki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528595_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may trash 1 card from your hand</strong>: Draw 1 card.\r\n<br>\r\n[When Attacking] Give up to 1 of your opponent's Characters -1 cost during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528597,
+      "cardId": "OP05-042",
+      "name": "Issho",
+      "cleanName": "Issho",
+      "url": "https://www.tcgplayer.com/product/528597/one-piece-card-game-awakening-of-the-new-era-issho",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528597_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your opponent's Characters with a cost of 7 or less cannot attack until the start of your next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 10,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527793,
+      "cardId": "OP05-043",
+      "name": "Ulti",
+      "cleanName": "Ulti",
+      "url": "https://www.tcgplayer.com/product/527793/one-piece-card-game-awakening-of-the-new-era-ulti",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527793_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is multicolored, look at 3 cards from the top of your deck and add up to 1 card to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.41,
+          "highPrice": 50,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527794,
+      "cardId": "OP05-043",
+      "name": "Ulti (Alternate Art)",
+      "cleanName": "Ulti Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527794/one-piece-card-game-awakening-of-the-new-era-ulti-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527794_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader is multicolored, look at 3 cards from the top of your deck and add up to 1 card to your hand. Then, place the rest at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.5,
+          "midPrice": 8.31,
+          "highPrice": 45,
+          "marketPrice": 6.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528600,
+      "cardId": "OP05-044",
+      "name": "John Giant",
+      "cleanName": "John Giant",
+      "url": "https://www.tcgplayer.com/product/528600/one-piece-card-game-awakening-of-the-new-era-john-giant",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528600_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "10000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Giant;Navy",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528601,
+      "cardId": "OP05-045",
+      "name": "Stainless",
+      "cleanName": "Stainless",
+      "url": "https://www.tcgplayer.com/product/528601/one-piece-card-game-awakening-of-the-new-era-stainless",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528601_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[Activate:Main] <strong>You may trash 1 card from your hand and rest this Character</strong>: Place up to 1 Character with a cost of 2 or less at the bottom of the owner's deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528602,
+      "cardId": "OP05-046",
+      "name": "Dalmatian",
+      "cleanName": "Dalmatian",
+      "url": "https://www.tcgplayer.com/product/528602/one-piece-card-game-awakening-of-the-new-era-dalmatian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528602_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] Draw 1 card and place 1 card from your hand at the bottom of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528603,
+      "cardId": "OP05-047",
+      "name": "Basil Hawkins",
+      "cleanName": "Basil Hawkins",
+      "url": "https://www.tcgplayer.com/product/528603/one-piece-card-game-awakening-of-the-new-era-basil-hawkins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528603_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Hawkins Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Block] Draw 1 card if you have 3 or less cards in your hand. Then, this Character gains +1000 power during this battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528604,
+      "cardId": "OP05-048",
+      "name": "Bastille",
+      "cleanName": "Bastille",
+      "url": "https://www.tcgplayer.com/product/528604/one-piece-card-game-awakening-of-the-new-era-bastille",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528604_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][When Attacking] Place up to 1 Character with a cost of 2 or less at the bottom of the owner's deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528605,
+      "cardId": "OP05-049",
+      "name": "Haccha",
+      "cleanName": "Haccha",
+      "url": "https://www.tcgplayer.com/product/528605/one-piece-card-game-awakening-of-the-new-era-haccha",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528605_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Giant",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1][When Attacking] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528607,
+      "cardId": "OP05-050",
+      "name": "Hina",
+      "cleanName": "Hina",
+      "url": "https://www.tcgplayer.com/product/528607/one-piece-card-game-awakening-of-the-new-era-hina",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528607_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw 1 card if you have 5 or less cards in your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 10.17,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527842,
+      "cardId": "OP05-051",
+      "name": "Borsalino",
+      "cleanName": "Borsalino",
+      "url": "https://www.tcgplayer.com/product/527842/one-piece-card-game-awakening-of-the-new-era-borsalino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527842_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Place up to 1 Character with a cost of 4 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.14,
+          "midPrice": 0.5,
+          "highPrice": 40,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527843,
+      "cardId": "OP05-051",
+      "name": "Borsalino (Alternate Art)",
+      "cleanName": "Borsalino Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527843/one-piece-card-game-awakening-of-the-new-era-borsalino-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527843_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] Place up to 1 Character with a cost of 4 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.11,
+          "midPrice": 5.01,
+          "highPrice": 50,
+          "marketPrice": 3.95,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528608,
+      "cardId": "OP05-052",
+      "name": "Maynard",
+      "cleanName": "Maynard",
+      "url": "https://www.tcgplayer.com/product/528608/one-piece-card-game-awakening-of-the-new-era-maynard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528608_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528609,
+      "cardId": "OP05-053",
+      "name": "Mozambia",
+      "cleanName": "Mozambia",
+      "url": "https://www.tcgplayer.com/product/528609/one-piece-card-game-awakening-of-the-new-era-mozambia",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528609_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[Your Turn][Once Per Turn] When you draw a card outside of your Draw Phase, this Character gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528610,
+      "cardId": "OP05-054",
+      "name": "Monkey.D.Garp",
+      "cleanName": "MonkeyDGarp",
+      "url": "https://www.tcgplayer.com/product/528610/one-piece-card-game-awakening-of-the-new-era-monkeydgarp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528610_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] Draw 2 cards and place 2 cards from your hand at the bottom of your deck in any order.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528314,
+      "cardId": "OP05-055",
+      "name": "X.Drake (Alternate Art)",
+      "cleanName": "XDrake Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528314/one-piece-card-game-awakening-of-the-new-era-xdrake-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528314_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Drake Pirates;Navy",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.5,
+          "midPrice": 3.31,
+          "highPrice": 60,
+          "marketPrice": 2.43,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528611,
+      "cardId": "OP05-055",
+      "name": "X.Drake",
+      "cleanName": "XDrake",
+      "url": "https://www.tcgplayer.com/product/528611/one-piece-card-game-awakening-of-the-new-era-xdrake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528611_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;Drake Pirates;Navy",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528612,
+      "cardId": "OP05-056",
+      "name": "X.Barrels",
+      "cleanName": "XBarrels",
+      "url": "https://www.tcgplayer.com/product/528612/one-piece-card-game-awakening-of-the-new-era-xbarrels",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528612_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Former Navy",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may place 1 of your Characters other than this Character at the bottom of your deck</strong>: Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528613,
+      "cardId": "OP05-057",
+      "name": "Hound Blaze",
+      "cleanName": "Hound Blaze",
+      "url": "https://www.tcgplayer.com/product/528613/one-piece-card-game-awakening-of-the-new-era-hound-blaze",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528613_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, place up to 1 Character with a cost of 2 or less at the bottom of the owner's deck.\r\n<br>\r\n[Trigger] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528614,
+      "cardId": "OP05-058",
+      "name": "It's a Waste of Human Life!!",
+      "cleanName": "Its a Waste of Human Life",
+      "url": "https://www.tcgplayer.com/product/528614/one-piece-card-game-awakening-of-the-new-era-its-a-waste-of-human-life",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528614_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "8",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] Place all Characters with a cost of 3 or less at the bottom of the owner's deck. Then, you and your opponent trash cards from your hands until you each have 5 cards in your hands.\r\n<br>\r\n[Trigger] Place all Characters with a cost of 2 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.53,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528615,
+      "cardId": "OP05-059",
+      "name": "Let Us Begin the World of Violence!!",
+      "cleanName": "Let Us Begin the World of Violence",
+      "url": "https://www.tcgplayer.com/product/528615/one-piece-card-game-awakening-of-the-new-era-let-us-begin-the-world-of-violence",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528615_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] If your Leader is multicolored, draw 1 card. Then, return up to 1 Character with a cost of 5 or less to the owner's hand.\r\n<br>\r\n[Trigger] If your Leader is multicolored, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527014,
+      "cardId": "OP05-060",
+      "name": "Monkey.D.Luffy (060) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 060 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527014/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-060-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527014_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may add 1 card from the top of your Life cards to your hand</strong>: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 84.99,
+          "midPrice": 107.82,
+          "highPrice": 499,
+          "marketPrice": 104.68,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528616,
+      "cardId": "OP05-060",
+      "name": "Monkey.D.Luffy (060)",
+      "cleanName": "MonkeyDLuffy 060",
+      "url": "https://www.tcgplayer.com/product/528616/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-060",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528616_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main][Once Per Turn] <strong>You may add 1 card from the top of your Life cards to your hand</strong>: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.24,
+          "highPrice": 10,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528618,
+      "cardId": "OP05-061",
+      "name": "Uso-Hachi",
+      "cleanName": "Uso Hachi",
+      "url": "https://www.tcgplayer.com/product/528618/one-piece-card-game-awakening-of-the-new-era-uso-hachi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528618_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[DON!! x1][When Attacking] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.18,
+          "highPrice": 2.5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528619,
+      "cardId": "OP05-062",
+      "name": "O-Nami",
+      "cleanName": "O Nami",
+      "url": "https://www.tcgplayer.com/product/528619/one-piece-card-game-awakening-of-the-new-era-o-nami",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528619_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "If you have 10 DON!! cards on your field, this Character gains [Blocker]. <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.19,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528621,
+      "cardId": "OP05-063",
+      "name": "O-Robi",
+      "cleanName": "O Robi",
+      "url": "https://www.tcgplayer.com/product/528621/one-piece-card-game-awakening-of-the-new-era-o-robi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528621_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528623,
+      "cardId": "OP05-064",
+      "name": "Killer",
+      "cleanName": "Killer",
+      "url": "https://www.tcgplayer.com/product/528623/one-piece-card-game-awakening-of-the-new-era-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528623_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Kid Pirates] type card other than [Killer] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 10.09,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528624,
+      "cardId": "OP05-065",
+      "name": "San-Gorou",
+      "cleanName": "San Gorou",
+      "url": "https://www.tcgplayer.com/product/528624/one-piece-card-game-awakening-of-the-new-era-san-gorou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528624_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528625,
+      "cardId": "OP05-066",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/528625/one-piece-card-game-awakening-of-the-new-era-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528625_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Opponent's Turn] If you have 10 DON!! cards on your field, this Character gains +1000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527665,
+      "cardId": "OP05-067",
+      "name": "Zoro-Juurou (Alternate Art)",
+      "cleanName": "Zoro Juurou Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527665/one-piece-card-game-awakening-of-the-new-era-zoro-juurou-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527665_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 22.45,
+          "midPrice": 29.5,
+          "highPrice": 150,
+          "marketPrice": 26.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528626,
+      "cardId": "OP05-067",
+      "name": "Zoro-Juurou",
+      "cleanName": "Zoro Juurou",
+      "url": "https://www.tcgplayer.com/product/528626/one-piece-card-game-awakening-of-the-new-era-zoro-juurou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528626_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.5,
+          "highPrice": 25,
+          "marketPrice": 0.56,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528627,
+      "cardId": "OP05-068",
+      "name": "Chopa-Emon",
+      "cleanName": "Chopa Emon",
+      "url": "https://www.tcgplayer.com/product/528627/one-piece-card-game-awakening-of-the-new-era-chopa-emon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528627_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, set up to 1 of your purple [Straw Hat Crew] type Characters with 6000 power or less as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527019,
+      "cardId": "OP05-069",
+      "name": "Trafalgar Law (069) (Alternate Art) (Manga)",
+      "cleanName": "Trafalgar Law 069 Alternate Art Manga",
+      "url": "https://www.tcgplayer.com/product/527019/one-piece-card-game-awakening-of-the-new-era-trafalgar-law-069-alternate-art-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527019_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If your opponent has more DON!! cards on their field than you, look at 5 cards from the top of your deck; reveal up to 1 [Heart Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1700,
+          "midPrice": 4600,
+          "highPrice": 10000,
+          "marketPrice": 1077.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527662,
+      "cardId": "OP05-069",
+      "name": "Trafalgar Law (Alternate Art) (069)",
+      "cleanName": "Trafalgar Law Alternate Art 069",
+      "url": "https://www.tcgplayer.com/product/527662/one-piece-card-game-awakening-of-the-new-era-trafalgar-law-alternate-art-069",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527662_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If your opponent has more DON!! cards on their field than you, look at 5 cards from the top of your deck; reveal up to 1 [Heart Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 34,
+          "midPrice": 44.99,
+          "highPrice": 60,
+          "marketPrice": 32.81,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527875,
+      "cardId": "OP05-069",
+      "name": "Trafalgar Law (069)",
+      "cleanName": "Trafalgar Law 069",
+      "url": "https://www.tcgplayer.com/product/527875/one-piece-card-game-awakening-of-the-new-era-trafalgar-law-069",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527875_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If your opponent has more DON!! cards on their field than you, look at 5 cards from the top of your deck; reveal up to 1 [Heart Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1.03,
+          "highPrice": 25,
+          "marketPrice": 1.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528628,
+      "cardId": "OP05-070",
+      "name": "Fra-Nosuke",
+      "cleanName": "Fra Nosuke",
+      "url": "https://www.tcgplayer.com/product/528628/one-piece-card-game-awakening-of-the-new-era-fra-nosuke",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528628_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 8 or more DON!! cards on your field, this Character gains [Rush]. <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.17,
+          "highPrice": 2.99,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528630,
+      "cardId": "OP05-071",
+      "name": "Bepo",
+      "cleanName": "Bepo",
+      "url": "https://www.tcgplayer.com/product/528630/one-piece-card-game-awakening-of-the-new-era-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528630_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates;Minks",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] If your opponent has more DON!! cards on their field than you, give up to 1 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528631,
+      "cardId": "OP05-072",
+      "name": "Hone-Kichi",
+      "cleanName": "Hone Kichi",
+      "url": "https://www.tcgplayer.com/product/528631/one-piece-card-game-awakening-of-the-new-era-hone-kichi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528631_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, give up to 2 of your opponent's Characters -2000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 4,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528633,
+      "cardId": "OP05-073",
+      "name": "Miss Doublefinger(Zala)",
+      "cleanName": "Miss DoublefingerZala",
+      "url": "https://www.tcgplayer.com/product/528633/one-piece-card-game-awakening-of-the-new-era-miss-doublefingerzala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528633_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand</strong>: Add up to 1 DON!! card from your DON!! deck and rest it.\r\n<br>\r\n[Trigger] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 1.62,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527020,
+      "cardId": "OP05-074",
+      "name": "Eustass\"Captain\"Kid (Alternate Art) (Manga)",
+      "cleanName": "EustassCaptainKid Alternate Art Manga",
+      "url": "https://www.tcgplayer.com/product/527020/one-piece-card-game-awakening-of-the-new-era-eustasscaptainkid-alternate-art-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527020_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]\r\n<br>\r\n[Your Turn][Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1180,
+          "midPrice": 1299,
+          "highPrice": 1650,
+          "marketPrice": 620.75,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527660,
+      "cardId": "OP05-074",
+      "name": "Eustass\"Captain\"Kid (Alternate Art)",
+      "cleanName": "EustassCaptainKid Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527660/one-piece-card-game-awakening-of-the-new-era-eustasscaptainkid-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527660_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]\r\n<br>\r\n[Your Turn][Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.75,
+          "midPrice": 10.18,
+          "highPrice": 98,
+          "marketPrice": 8.62,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528634,
+      "cardId": "OP05-074",
+      "name": "Eustass\"Captain\"Kid",
+      "cleanName": "EustassCaptainKid",
+      "url": "https://www.tcgplayer.com/product/528634/one-piece-card-game-awakening-of-the-new-era-eustasscaptainkid",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528634_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]\r\n<br>\r\n[Your Turn][Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.94,
+          "highPrice": 90,
+          "marketPrice": 0.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528635,
+      "cardId": "OP05-075",
+      "name": "Mr.1 (Daz.Bonez)",
+      "cleanName": "Mr1 DazBonez",
+      "url": "https://www.tcgplayer.com/product/528635/one-piece-card-game-awakening-of-the-new-era-mr1-dazbonez",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528635_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Baroque Works",
+      "attribute": "Slash",
+      "effectText": "[On Your Opponent's Attack][Once Per Turn] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Play up to 1 [Baroque Works] type Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528636,
+      "cardId": "OP05-076",
+      "name": "When You're at Sea You Fight against Pirates!!",
+      "cleanName": "When Youre at Sea You Fight against Pirates",
+      "url": "https://www.tcgplayer.com/product/528636/one-piece-card-game-awakening-of-the-new-era-when-youre-at-sea-you-fight-against-pirates",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528636_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano",
+      "attribute": null,
+      "effectText": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 [Straw Hat Crew], [Kid Pirates], or [Heart Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.3,
+          "highPrice": 10,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528637,
+      "cardId": "OP05-077",
+      "name": "Gamma Knife",
+      "cleanName": "Gamma Knife",
+      "url": "https://www.tcgplayer.com/product/528637/one-piece-card-game-awakening-of-the-new-era-gamma-knife",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528637_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": null,
+      "effectText": "[Main] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Give up to 1 of your opponent's Characters -5000 power during this turn.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 1.98,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528638,
+      "cardId": "OP05-078",
+      "name": "Punk Rotten",
+      "cleanName": "Punk Rotten",
+      "url": "https://www.tcgplayer.com/product/528638/one-piece-card-game-awakening-of-the-new-era-punk-rotten",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528638_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": null,
+      "effectText": "[Main] DON!! -1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Up to 1 of your [Kid Pirates] type Leader or Character cards gains +5000 power during this turn.\r\n<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528639,
+      "cardId": "OP05-079",
+      "name": "Viola",
+      "cleanName": "Viola",
+      "url": "https://www.tcgplayer.com/product/528639/one-piece-card-game-awakening-of-the-new-era-viola",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528639_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Special",
+      "effectText": "[On Play] Your opponent places 3 cards from their trash at the bottom of their deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528640,
+      "cardId": "OP05-080",
+      "name": "Elizabello II",
+      "cleanName": "Elizabello II",
+      "url": "https://www.tcgplayer.com/product/528640/one-piece-card-game-awakening-of-the-new-era-elizabello-ii",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528640_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Dressrosa;Kingdom of Prodence",
+      "attribute": "Strike",
+      "effectText": "[When Attacking][Once Per Turn] <strong>You may return 20 cards from your trash to your deck and shuffle it: This Character gains               and +10000 power during this battle. <em>(This card deals 2 damage.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 1.55,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528641,
+      "cardId": "OP05-081",
+      "name": "One-Legged Toy Soldier",
+      "cleanName": "One Legged Toy Soldier",
+      "url": "https://www.tcgplayer.com/product/528641/one-piece-card-game-awakening-of-the-new-era-one-legged-toy-soldier",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528641_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[Activate:Main] <strong>You may trash this Character</strong>: Give up to 1 of your opponent's Characters -3 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 1.98,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528642,
+      "cardId": "OP05-082",
+      "name": "Shirahoshi",
+      "cleanName": "Shirahoshi",
+      "url": "https://www.tcgplayer.com/product/528642/one-piece-card-game-awakening-of-the-new-era-shirahoshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528642_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Merfolk",
+      "attribute": "Wisdom",
+      "effectText": "[Activate:Main] <strong>You may rest this Character and place 2 cards from your trash at the bottom of your deck in any order</strong>: If your opponent has 6 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.37,
+          "midPrice": 2.12,
+          "highPrice": 25,
+          "marketPrice": 1.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528643,
+      "cardId": "OP05-083",
+      "name": "Sterry",
+      "cleanName": "Sterry",
+      "url": "https://www.tcgplayer.com/product/528643/one-piece-card-game-awakening-of-the-new-era-sterry",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528643_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Goa Kingdom",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528645,
+      "cardId": "OP05-084",
+      "name": "Saint Charlos",
+      "cleanName": "Saint Charlos",
+      "url": "https://www.tcgplayer.com/product/528645/one-piece-card-game-awakening-of-the-new-era-saint-charlos",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528645_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": "[Your Turn] If the only Characters on your field are [Celestial Dragons] type Characters, give all of your opponent's Characters -4 cost.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528646,
+      "cardId": "OP05-085",
+      "name": "Nefeltari Cobra",
+      "cleanName": "Nefeltari Cobra",
+      "url": "https://www.tcgplayer.com/product/528646/one-piece-card-game-awakening-of-the-new-era-nefeltari-cobra",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528646_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] Trash 1 card from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528647,
+      "cardId": "OP05-086",
+      "name": "Nefeltari Vivi",
+      "cleanName": "Nefeltari Vivi",
+      "url": "https://www.tcgplayer.com/product/528647/one-piece-card-game-awakening-of-the-new-era-nefeltari-vivi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528647_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Alabasta",
+      "attribute": "Wisdom",
+      "effectText": "If you have 10 or more cards in your trash, this Character gains [Blocker]. <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.3,
+          "highPrice": 10,
+          "marketPrice": 0.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528650,
+      "cardId": "OP05-087",
+      "name": "Hakuba",
+      "cleanName": "Hakuba",
+      "url": "https://www.tcgplayer.com/product/528650/one-piece-card-game-awakening-of-the-new-era-hakuba",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528650_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1][When Attacking] <strong>You may K.O. 1 of your Characters other than this Character</strong>: Give up to 1 of your opponent's Characters -5 cost during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.52,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528036,
+      "cardId": "OP05-088",
+      "name": "Mansherry",
+      "cleanName": "Mansherry",
+      "url": "https://www.tcgplayer.com/product/528036/one-piece-card-game-awakening-of-the-new-era-mansherry",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528036_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character and place 2 cards from your trash at the bottom of your deck in any order</strong>: Add up to 1 black Character card with a cost of 3 to 5 from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.27,
+          "highPrice": 10.2,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528037,
+      "cardId": "OP05-088",
+      "name": "Mansherry (Alternate Art)",
+      "cleanName": "Mansherry Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528037/one-piece-card-game-awakening-of-the-new-era-mansherry-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528037_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Special",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character and place 2 cards from your trash at the bottom of your deck in any order</strong>: Add up to 1 black Character card with a cost of 3 to 5 from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 10,
+          "midPrice": 14.99,
+          "highPrice": 60,
+          "marketPrice": 13.32,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528651,
+      "cardId": "OP05-089",
+      "name": "Saint Mjosgard",
+      "cleanName": "Saint Mjosgard",
+      "url": "https://www.tcgplayer.com/product/528651/one-piece-card-game-awakening-of-the-new-era-saint-mjosgard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528651_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Wisdom",
+      "effectText": "[Activate:Main] (1) <em>(You may rest the specified number of DON!! cards in your cost area.)</em> <strong>You may rest this Character and 1 of your Characters</strong>: Add up to 1 black Character card with a cost of 1 from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528653,
+      "cardId": "OP05-090",
+      "name": "Riku Doldo III",
+      "cleanName": "Riku Doldo III",
+      "url": "https://www.tcgplayer.com/product/528653/one-piece-card-game-awakening-of-the-new-era-riku-doldo-iii",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528653_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On Play] / [On K.O.] Up to 1 of your [Dressrosa] type Characters gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.55,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528165,
+      "cardId": "OP05-091",
+      "name": "Rebecca",
+      "cleanName": "Rebecca",
+      "url": "https://www.tcgplayer.com/product/528165/one-piece-card-game-awakening-of-the-new-era-rebecca",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528165_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]\r\n<br>\r\n[On Play] Add up to 1 black Character card with a cost of 3 to 7 other than [Rebecca] from your trash to your hand. Then, play up to 1 black Character card with a cost of 3 or less from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1.09,
+          "highPrice": 50,
+          "marketPrice": 0.79,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528166,
+      "cardId": "OP05-091",
+      "name": "Rebecca (Alternate Art)",
+      "cleanName": "Rebecca Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528166/one-piece-card-game-awakening-of-the-new-era-rebecca-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528166_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker]\r\n<br>\r\n[On Play] Add up to 1 black Character card with a cost of 3 to 7 other than [Rebecca] from your trash to your hand. Then, play up to 1 black Character card with a cost of 3 or less from your hand rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15.74,
+          "midPrice": 34.97,
+          "highPrice": 150,
+          "marketPrice": 23.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528655,
+      "cardId": "OP05-092",
+      "name": "Saint Rosward",
+      "cleanName": "Saint Rosward",
+      "url": "https://www.tcgplayer.com/product/528655/one-piece-card-game-awakening-of-the-new-era-saint-rosward",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528655_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "0",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Ranged",
+      "effectText": "[Your Turn] If the only Characters on your field are [Celestial Dragons] type Characters, give all of your opponent's Characters -6 cost.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527666,
+      "cardId": "OP05-093",
+      "name": "Rob Lucci (093) (Alternate Art)",
+      "cleanName": "Rob Lucci 093 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527666/one-piece-card-game-awakening-of-the-new-era-rob-lucci-093-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527666_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP0",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may place 3 cards from your trash at the bottom of your deck in any order</strong>: K.O. up to 1 of your opponent's Characters with a cost of 2 or less and up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 7.59,
+          "midPrice": 10.47,
+          "highPrice": 88,
+          "marketPrice": 8.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528164,
+      "cardId": "OP05-093",
+      "name": "Rob Lucci (093)",
+      "cleanName": "Rob Lucci 093",
+      "url": "https://www.tcgplayer.com/product/528164/one-piece-card-game-awakening-of-the-new-era-rob-lucci-093",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528164_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP0",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may place 3 cards from your trash at the bottom of your deck in any order</strong>: K.O. up to 1 of your opponent's Characters with a cost of 2 or less and up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.75,
+          "highPrice": 25,
+          "marketPrice": 0.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528656,
+      "cardId": "OP05-094",
+      "name": "Haute Couture Patch Work",
+      "cleanName": "Haute Couture Patch Work",
+      "url": "https://www.tcgplayer.com/product/528656/one-piece-card-game-awakening-of-the-new-era-haute-couture-patch-work",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528656_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters -3 cost during this turn. Then, up to 1 of your opponent's Characters with a cost of 0 will not become active in the next Refresh Phase.\r\n<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.22,
+          "midPrice": 1.4,
+          "highPrice": 5,
+          "marketPrice": 1.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528657,
+      "cardId": "OP05-095",
+      "name": "Dragon Claw",
+      "cleanName": "Dragon Claw",
+      "url": "https://www.tcgplayer.com/product/528657/one-piece-card-game-awakening-of-the-new-era-dragon-claw",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528657_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 15 or more cards in your trash, K.O. up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528658,
+      "cardId": "OP05-096",
+      "name": "I Bid 500 Million!!",
+      "cleanName": "I Bid 500 Million",
+      "url": "https://www.tcgplayer.com/product/528658/one-piece-card-game-awakening-of-the-new-era-i-bid-500-million",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528658_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": null,
+      "effectText": "[Main] Choose one:\r\n<br>\r\n• K.O. up to 1 of your opponent's Characters with a cost of 1 or less.\r\n<br>\r\n• Return up to 1 of your opponent's Characters with a cost of 1 or less to the owner's hand.\r\n<br>\r\n• Place up to 1 of your opponent's Characters with a cost of 1 or less at the top or bottom of their Life cards face-up.\r\n<br>\r\nThen, if you have a [Celestial Dragons] type Character, draw 1 card.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost of 6 or less, or return it to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528659,
+      "cardId": "OP05-097",
+      "name": "Mary Geoise",
+      "cleanName": "Mary Geoise",
+      "url": "https://www.tcgplayer.com/product/528659/one-piece-card-game-awakening-of-the-new-era-mary-geoise",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528659_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Mary Geoise",
+      "attribute": null,
+      "effectText": "[Your Turn] The cost of playing [Celestial Dragons] type Character cards with a cost of 2 or more from your hand will be reduced by 1.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.19,
+          "highPrice": 25,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527021,
+      "cardId": "OP05-098",
+      "name": "Enel (098) (Alternate Art)",
+      "cleanName": "Enel 098 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527021/one-piece-card-game-awakening-of-the-new-era-enel-098-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527021_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn][Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 45,
+          "midPrice": 61.82,
+          "highPrice": 499.99,
+          "marketPrice": 58.93,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528660,
+      "cardId": "OP05-098",
+      "name": "Enel (098)",
+      "cleanName": "Enel 098",
+      "url": "https://www.tcgplayer.com/product/528660/one-piece-card-game-awakening-of-the-new-era-enel-098",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528660_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn][Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.22,
+          "highPrice": 5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528661,
+      "cardId": "OP05-099",
+      "name": "Amazon",
+      "cleanName": "Amazon",
+      "url": "https://www.tcgplayer.com/product/528661/one-piece-card-game-awakening-of-the-new-era-amazon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528661_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Wisdom",
+      "effectText": "[On Your Opponent's Attack] <strong>You may rest this Character</strong>: Your opponent may trash 1 card from the top of their Life cards. If they do not, give up to 1 of your opponent's Leader or Character cards -2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527022,
+      "cardId": "OP05-100",
+      "name": "Enel (100)",
+      "cleanName": "Enel 100",
+      "url": "https://www.tcgplayer.com/product/527022/one-piece-card-game-awakening-of-the-new-era-enel-100",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527022_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Rush]\r\n<br>\r\n[Once Per Turn] If this Character would leave the field, you may trash 1 card from the top of your Life cards instead. If there is a [Monkey.D.Luffy] Character, this effect is negated.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.99,
+          "highPrice": 25,
+          "marketPrice": 0.69,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527043,
+      "cardId": "OP05-100",
+      "name": "Enel (100) (SP)",
+      "cleanName": "Enel 100 SP",
+      "url": "https://www.tcgplayer.com/product/527043/one-piece-card-game-awakening-of-the-new-era-enel-100-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527043_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Rush]\r\n<br>\r\n[Once Per Turn] If this Character would leave the field, you may trash 1 card from the top of your Life cards instead. If there is a [Monkey.D.Luffy] Character, this effect is negated.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 200,
+          "midPrice": 235,
+          "highPrice": 450,
+          "marketPrice": 202.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527661,
+      "cardId": "OP05-100",
+      "name": "Enel (100) (Alternate Art)",
+      "cleanName": "Enel 100 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527661/one-piece-card-game-awakening-of-the-new-era-enel-100-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527661_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[Rush]\r\n<br>\r\n[Once Per Turn] If this Character would leave the field, you may trash 1 card from the top of your Life cards instead. If there is a [Monkey.D.Luffy] Character, this effect is negated.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.49,
+          "midPrice": 12.54,
+          "highPrice": 78,
+          "marketPrice": 10.85,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528663,
+      "cardId": "OP05-101",
+      "name": "Ohm",
+      "cleanName": "Ohm",
+      "url": "https://www.tcgplayer.com/product/528663/one-piece-card-game-awakening-of-the-new-era-ohm",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528663_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Sky Island;Vassals",
+      "attribute": "Slash",
+      "effectText": "If you have 2 or less Life cards, this Character gains +1000 power.\r\n<br>\r\n[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Holly] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Holly] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.26,
+          "highPrice": 5,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528169,
+      "cardId": "OP05-102",
+      "name": "Gedatsu (Alternate Art)",
+      "cleanName": "Gedatsu Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528169/one-piece-card-game-awakening-of-the-new-era-gedatsu-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528169_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Sky Island;Vassals",
+      "attribute": "Strike",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.3,
+          "midPrice": 5.07,
+          "highPrice": 60,
+          "marketPrice": 4.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528662,
+      "cardId": "OP05-102",
+      "name": "Gedatsu",
+      "cleanName": "Gedatsu",
+      "url": "https://www.tcgplayer.com/product/528662/one-piece-card-game-awakening-of-the-new-era-gedatsu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528662_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Sky Island;Vassals",
+      "attribute": "Strike",
+      "effectText": "[On Play] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.3,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528664,
+      "cardId": "OP05-103",
+      "name": "Kotori",
+      "cleanName": "Kotori",
+      "url": "https://www.tcgplayer.com/product/528664/one-piece-card-game-awakening-of-the-new-era-kotori",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528664_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have [Hotori], K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528665,
+      "cardId": "OP05-104",
+      "name": "Conis",
+      "cleanName": "Conis",
+      "url": "https://www.tcgplayer.com/product/528665/one-piece-card-game-awakening-of-the-new-era-conis",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528665_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "0",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] <strong>You may place 1 of your Stages at the bottom of your deck</strong>: Draw 1 card and trash 1 card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528666,
+      "cardId": "OP05-105",
+      "name": "Satori",
+      "cleanName": "Satori",
+      "url": "https://www.tcgplayer.com/product/528666/one-piece-card-game-awakening-of-the-new-era-satori",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528666_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Sky Island;Vassals",
+      "attribute": "Strike",
+      "effectText": "[Trigger] <strong>You may trash 1 card from your hand</strong>: Play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528667,
+      "cardId": "OP05-106",
+      "name": "Shura",
+      "cleanName": "Shura",
+      "url": "https://www.tcgplayer.com/product/528667/one-piece-card-game-awakening-of-the-new-era-shura",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528667_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Sky Island;Vassals",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Sky Island] type card other than [Shura] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528668,
+      "cardId": "OP05-107",
+      "name": "Lieutenant Spacey",
+      "cleanName": "Lieutenant Spacey",
+      "url": "https://www.tcgplayer.com/product/528668/one-piece-card-game-awakening-of-the-new-era-lieutenant-spacey",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528668_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "The Moon",
+      "attribute": "Ranged",
+      "effectText": "[Your Turn][Once Per Turn] When a card is added to your hand from your Life, this Character gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528669,
+      "cardId": "OP05-108",
+      "name": "Nola",
+      "cleanName": "Nola",
+      "url": "https://www.tcgplayer.com/product/528669/one-piece-card-game-awakening-of-the-new-era-nola",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528669_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Sky Island",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528670,
+      "cardId": "OP05-109",
+      "name": "Pagaya",
+      "cleanName": "Pagaya",
+      "url": "https://www.tcgplayer.com/product/528670/one-piece-card-game-awakening-of-the-new-era-pagaya",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528670_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Wisdom",
+      "effectText": "[Once Per Turn] When a [Trigger] activates, draw 2 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528672,
+      "cardId": "OP05-110",
+      "name": "Holly",
+      "cleanName": "Holly",
+      "url": "https://www.tcgplayer.com/product/528672/one-piece-card-game-awakening-of-the-new-era-holly",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528672_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Sky Island",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.53,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528673,
+      "cardId": "OP05-111",
+      "name": "Hotori",
+      "cleanName": "Hotori",
+      "url": "https://www.tcgplayer.com/product/528673/one-piece-card-game-awakening-of-the-new-era-hotori",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528673_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may play 1 [Kotori] from your hand</strong>: Add up to 1 of your opponent's Characters with a cost of 3 or less to the top or bottom of your opponent's Life cards face-up.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528674,
+      "cardId": "OP05-112",
+      "name": "Captain McKinley",
+      "cleanName": "Captain McKinley",
+      "url": "https://www.tcgplayer.com/product/528674/one-piece-card-game-awakening-of-the-new-era-captain-mckinley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528674_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Wisdom",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[On K.O.] Play up to 1 [Sky Island] type Character card with a cost of 1 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528675,
+      "cardId": "OP05-113",
+      "name": "Yama",
+      "cleanName": "Yama",
+      "url": "https://www.tcgplayer.com/product/528675/one-piece-card-game-awakening-of-the-new-era-yama",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528675_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.52,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528676,
+      "cardId": "OP05-114",
+      "name": "El Thor",
+      "cleanName": "El Thor",
+      "url": "https://www.tcgplayer.com/product/528676/one-piece-card-game-awakening-of-the-new-era-el-thor",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528676_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if your opponent has 2 or less Life cards, that card gains an additional +2000 power during this battle.\r\n<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life Cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.75,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528677,
+      "cardId": "OP05-115",
+      "name": "Two-Hundred Million Volts Amaru",
+      "cleanName": "Two Hundred Million Volts Amaru",
+      "url": "https://www.tcgplayer.com/product/528677/one-piece-card-game-awakening-of-the-new-era-two-hundred-million-volts-amaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528677_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your Leader or Character cards gains +3000 power during this turn. Then, if you have 1 or less Life cards, rest up to 1 of your opponent's Characters with a cost of 4 or less.\r\n<br>\r\n[Trigger] <strong>You may trash 2 cards from your hand</strong>: Add up to 1 card from the top of your deck to the top of your Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528678,
+      "cardId": "OP05-116",
+      "name": "Hino Bird Zap",
+      "cleanName": "Hino Bird Zap",
+      "url": "https://www.tcgplayer.com/product/528678/one-piece-card-game-awakening-of-the-new-era-hino-bird-zap",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528678_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 80.29,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528679,
+      "cardId": "OP05-117",
+      "name": "Upper Yard",
+      "cleanName": "Upper Yard",
+      "url": "https://www.tcgplayer.com/product/528679/one-piece-card-game-awakening-of-the-new-era-upper-yard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528679_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "UC",
+      "cardType": "Stage",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Sky Island",
+      "attribute": null,
+      "effectText": "[On Play] Look at the top 5 cards of your deck; reveal up to 1 [Sky Island] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527045,
+      "cardId": "OP05-118",
+      "name": "Kaido (118)",
+      "cleanName": "Kaido 118",
+      "url": "https://www.tcgplayer.com/product/527045/one-piece-card-game-awakening-of-the-new-era-kaido-118",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527045_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw 4 cards if your opponent has 3 or less Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2,
+          "midPrice": 5,
+          "highPrice": 100,
+          "marketPrice": 3.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 528315,
+      "cardId": "OP05-118",
+      "name": "Kaido (118) (Alternate Art)",
+      "cleanName": "Kaido 118 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/528315/one-piece-card-game-awakening-of-the-new-era-kaido-118-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/528315_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Animal Kingdom Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[On Play] Draw 4 cards if your opponent has 3 or less Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20,
+          "midPrice": 29.99,
+          "highPrice": 120,
+          "marketPrice": 20.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527024,
+      "cardId": "OP05-119",
+      "name": "Monkey.D.Luffy (119)",
+      "cleanName": "MonkeyDLuffy 119",
+      "url": "https://www.tcgplayer.com/product/527024/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-119",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527024_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -10: Place all of your Characters except this Character at the bottom of your deck in any order. Then, take an extra turn after this one.\r\n<br>\r\n[Activate:Main][Once Per Turn] (1): Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.69,
+          "midPrice": 16,
+          "highPrice": 100,
+          "marketPrice": 14.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527026,
+      "cardId": "OP05-119",
+      "name": "Monkey.D.Luffy (119) (Alternate Art) (Manga)",
+      "cleanName": "MonkeyDLuffy 119 Alternate Art Manga",
+      "url": "https://www.tcgplayer.com/product/527026/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-119-alternate-art-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527026_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -10: Place all of your Characters except this Character at the bottom of your deck in any order. Then, take an extra turn after this one.\r\n<br>\r\n[Activate:Main][Once Per Turn] (1): Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 50000,
+          "midPrice": 87500,
+          "highPrice": 125000,
+          "marketPrice": 4165.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 530122,
+      "cardId": "OP05-119",
+      "name": "Monkey.D.Luffy (119) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 119 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/530122/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-119-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/530122_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] DON!! -10: Place all of your Characters except this Character at the bottom of your deck in any order. Then, take an extra turn after this one.\r\n<br>\r\n[Activate:Main][Once Per Turn] (1): Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 170,
+          "midPrice": 269.25,
+          "highPrice": 1000,
+          "marketPrice": 252.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 527027,
+      "cardId": "ST01-012",
+      "name": "Monkey.D.Luffy (012) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 012 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/527027/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-012-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/527027_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[DON!! x2][When Attacking] Your opponent cannot activate [Blocker] during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 34.88,
+          "midPrice": 55.5,
+          "highPrice": 499.95,
+          "marketPrice": 36.97,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 529850,
+      "cardId": "ST01-012",
+      "name": "Monkey.D.Luffy (012) (Alternate Art) (Gold-Stamped Signature)",
+      "cleanName": "MonkeyDLuffy 012 Alternate Art Gold Stamped Signature",
+      "url": "https://www.tcgplayer.com/product/529850/one-piece-card-game-awakening-of-the-new-era-monkeydluffy-012-alternate-art-gold-stamped-signature",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/529850_200w.jpg",
+      "groupId": 23213,
+      "setCode": "OP05",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em>\r\n<br>\r\n[DON!! x2][When Attacking] Your opponent cannot activate [Blocker] during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 48000,
+          "midPrice": 49000,
+          "highPrice": 50000,
+          "marketPrice": 3572.99,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 8,
+  "errors": [
+    "Product 529792 (DON!! Card (Alternate Art)) has no Number in extendedData",
+    "Product 530119 (DON!! Card (Silhouette) (Double Pack Set Volume 2)) has no Number in extendedData",
+    "Product 530120 (DON!! Card (Manga) (Double Pack Set Volume 2)) has no Number in extendedData"
+  ]
+}

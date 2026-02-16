@@ -1,0 +1,524 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 3: The Seven Warlords of The Sea",
+  "groupId": 3192,
+  "setCode": "ST03",
+  "totalProducts": 19,
+  "totalCards": 17,
+  "scrapedAt": "2026-02-15T22:54:26.788Z",
+  "durationMs": 138,
+  "cards": [
+    {
+      "productId": 288266,
+      "cardId": "ST03-001",
+      "name": "Crocodile (001)",
+      "cleanName": "Crocodile 001",
+      "url": "https://www.tcgplayer.com/product/288266/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-crocodile-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288266_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] DON!! -4 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>: Return <span style=\"color:red\">up to</span> 1 Character with a cost of 5 or less to the owner's hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.49,
+          "midPrice": 5.5,
+          "highPrice": 19.99,
+          "marketPrice": 5.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288267,
+      "cardId": "ST03-002",
+      "name": "Edward Weevil",
+      "cleanName": "Edward Weevil",
+      "url": "https://www.tcgplayer.com/product/288267/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-edward-weevil",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288267_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288268,
+      "cardId": "ST03-003",
+      "name": "Crocodile (003)",
+      "cleanName": "Crocodile 003",
+      "url": "https://www.tcgplayer.com/product/288268/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-crocodile-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288268_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[DON!! x1] [On Block] Place <span style=\"color:red\">up to</span> 1 Character with a cost of 2 or less at the bottom of the owner's deck.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 5,
+          "marketPrice": 0.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288270,
+      "cardId": "ST03-004",
+      "name": "Gecko Moria",
+      "cleanName": "Gecko Moria",
+      "url": "https://www.tcgplayer.com/product/288270/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-gecko-moria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288270_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea;Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Add <span style=\"color:red\">up to</span> 1 \"The Seven Warlords of the Sea\" or \"Thriller Bark Pirates\" type Character with a cost of 4 or less than [Gecko Moria] from your trash to your hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.25,
+          "highPrice": 11.5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288272,
+      "cardId": "ST03-005",
+      "name": "Dracule Mihawk",
+      "cleanName": "Dracule Mihawk",
+      "url": "https://www.tcgplayer.com/product/288272/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-dracule-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288272_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Draw 2 cards and trash 2 cards from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.15,
+          "highPrice": 501.5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288273,
+      "cardId": "ST03-006",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/288273/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288273_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Fish-Man;The Seven Warlords of the Sea;The Sun Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.23,
+          "highPrice": 1.36,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288275,
+      "cardId": "ST03-007",
+      "name": "Sentomaru",
+      "cleanName": "Sentomaru",
+      "url": "https://www.tcgplayer.com/product/288275/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-sentomaru",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288275_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] (2) <em>(You may rest the specified number of DON!! cards in your cost area.)</em>: Play <span style=\"color:red\">up to</span> 1 [Pacifista] with a cost of 4 or less from your deck, then shuffle your deck.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.06,
+          "midPrice": 0.25,
+          "highPrice": 501.5,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288277,
+      "cardId": "ST03-008",
+      "name": "Trafalgar Law",
+      "cleanName": "Trafalgar Law",
+      "url": "https://www.tcgplayer.com/product/288277/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-trafalgar-law",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288277_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Heart Pirates;The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288279,
+      "cardId": "ST03-009",
+      "name": "Donquixote Doflamingo",
+      "cleanName": "Donquixote Doflamingo",
+      "url": "https://www.tcgplayer.com/product/288279/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-donquixote-doflamingo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288279_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] Return <span style=\"color:red\">up to</span> 1 Character with a cost of 7 or less to the owner's hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 4.99,
+          "highPrice": 10,
+          "marketPrice": 4.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288280,
+      "cardId": "ST03-010",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/288280/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288280_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 3 cards from the top of your deck and return them to the top or bottom of the deck in any order.\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 1.99,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288282,
+      "cardId": "ST03-011",
+      "name": "Buggy",
+      "cleanName": "Buggy",
+      "url": "https://www.tcgplayer.com/product/288282/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-buggy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288282_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Buggy's Delivery;The Seven Warlords of the Sea",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.21,
+          "highPrice": 1.54,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288284,
+      "cardId": "ST03-012",
+      "name": "Pacifista",
+      "cleanName": "Pacifista",
+      "url": "https://www.tcgplayer.com/product/288284/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-pacifista",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288284_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Biological Weapon;Navy",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.22,
+          "highPrice": 1.5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288286,
+      "cardId": "ST03-013",
+      "name": "Boa Hancock",
+      "cleanName": "Boa Hancock",
+      "url": "https://www.tcgplayer.com/product/288286/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-boa-hancock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288286_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>\r\n<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.21,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288288,
+      "cardId": "ST03-014",
+      "name": "Marshall.D.Teach",
+      "cleanName": "MarshallDTeach",
+      "url": "https://www.tcgplayer.com/product/288288/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-marshalldteach",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288288_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] Return <span style=\"color:red\">up to</span> 1 Character with a cost of 3 or less to the owner's hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 4.99,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288289,
+      "cardId": "ST03-015",
+      "name": "Sables",
+      "cleanName": "Sables",
+      "url": "https://www.tcgplayer.com/product/288289/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-sables",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288289_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Main] Return <span style=\"color:red\">up to</span> 1 Character with a cost of 7 or less to the owner's hand.\r\n<br>\r\n[Trigger] Activate this card's [Main] effect.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 1.5,
+          "midPrice": 3.36,
+          "highPrice": 5.71,
+          "marketPrice": 2.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288290,
+      "cardId": "ST03-016",
+      "name": "Thrust Pad Cannon",
+      "cleanName": "Thrust Pad Cannon",
+      "url": "https://www.tcgplayer.com/product/288290/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-thrust-pad-cannon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288290_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Counter] Return <span style=\"color:red\">up to</span> 1 Character with a cost of 3 or less to the owner's hand.\r\n<br>\r\n[Trigger] Activate this card's [Counter] effect.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 288291,
+      "cardId": "ST03-017",
+      "name": "Love-Love Mellow",
+      "cleanName": "Love Love Mellow",
+      "url": "https://www.tcgplayer.com/product/288291/one-piece-card-game-starter-deck-3-the-seven-warlords-of-the-sea-love-love-mellow",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/288291_200w.jpg",
+      "groupId": 3192,
+      "setCode": "ST03",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Counter] <span style=\"color:red\">Up to 1 of your</span> Leader or <span style=\"color:red\">Character cards</span> gains +4000 power during this battle. Then, draw 1 card if you have 3 or less cards in your hand.\r\n<br><strong><span style=\"color:red\">Disclaimer: This card has been re-printed with new errata'd text as part of the Revision Pack cards series. This product page is for the original, pre-errata print of this card.</span></strong>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 2.49,
+          "midPrice": 3.48,
+          "highPrice": 11,
+          "marketPrice": 2.93,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 2,
+  "errors": []
+}

@@ -2,7 +2,7 @@
 
 > Global development tracker. Tracks completed work, active phase, and future milestones.
 >
-> Last updated: 2026-02-15 (audit pass 4 — path of least action)
+> Last updated: 2026-02-15 (audit pass 5 — auth hardening + rigidness audit)
 
 ---
 
@@ -210,7 +210,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Wallet freeze/unfreeze (blocks debits, allows credits)
 - [x] Deposit idempotency (stripePaymentIntentId dedup)
 - [ ] Admin wallet freeze API route
-- [ ] Payout history route
+- [x] Payout history route (`GET /api/payouts/history`)
 
 ### Stripe Connect ✅
 > **Bridge Role**: Infrastructure. Generic payment plumbing — funds wallets and authenticator payouts, but is not bridge-specific. Would serve any marketplace identically.
@@ -293,7 +293,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Document upload (gov ID, selfie, proof of address)
 - [x] KYC gates on trade acceptance (value-based thresholds)
 - [x] Audit trail (KYCAudit model)
-- [ ] User-facing KYC UI (no pages for document upload or status)
+- [x] User-facing KYC UI (/kyc page with tier cards, document upload, status badge, rejection/pending banners)
 - [ ] Admin role enforcement on KYC review route
 
 ### Disputes ⚠️ (~60%)
@@ -327,6 +327,19 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] AUTHENTICATING → VERIFIED (auto-triggered by `submitVerificationResult`)
 - [x] VERIFIED → DELIVERING (via `action: deliver`)
 - [x] * → DISPUTED (via `action: dispute` + `POST /api/disputes`)
+
+### Auth Hardening ✅
+> **Bridge Role**: Infrastructure. Auth security is generic — not bridge-specific, but a prerequisite for production trust.
+>
+> **Least Action**: Each hardening measure addresses a specific attack surface at minimum user friction. Email verification is non-blocking (user trades immediately, verifies later). Rate limiting is invisible to legitimate users. Password reset is self-service (no support tickets). Sign-out is one click. Settings page saves in-place (no page navigation).
+
+- [x] Sign-out button in header (desktop + mobile, redirects to `/`)
+- [x] Settings page wired (`GET/PATCH /api/users/me`, profile fetch + save, verification resend)
+- [x] Email verification (token-based, auto-sends on register, resend from settings)
+- [x] Password reset (forgot-password → email → reset-password, token-based)
+- [x] Rate limiting (in-memory sliding window: register 3/15min, login 5/15min, reset 3/15min)
+- [x] Middleware protection for `/kyc` and `/marketplace` routes
+- [x] Email service (`src/lib/email.ts` — Resend API in production, console.log in dev)
 
 ### Growth Hooks (wired in Phase 2.7)
 - **Wallet**: Track deposit→trade→withdraw funnel → detect churn signals
@@ -632,13 +645,16 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
 **P1 — Blocks production readiness:**
 - [ ] Admin role enforcement on authenticator/KYC/dispute routes
 - [x] Authenticator activation route (`POST /api/authenticator/activate`)
-- [ ] KYC user-facing UI (document upload, status page)
+- [x] KYC user-facing UI (/kyc page with tier cards, document upload, status badge)
 - [ ] Dispute admin resolution UI
 
 **P2 — Quality gaps:**
-- [ ] Email verification flow (field exists, no logic)
-- [ ] Password reset / recovery
-- [ ] Rate limiting on registration endpoint
+- [x] Email verification flow (token-based, Resend API, auto-sends on register)
+- [x] Password reset / recovery (token-based, forgot-password + reset-password pages)
+- [x] Rate limiting on auth endpoints (in-memory sliding window: register 3/15min, login 5/15min, reset 3/15min)
+- [x] Sign-out button (wired in header, desktop + mobile)
+- [x] Settings page wired (GET/PATCH /api/users/me, profile fetch + save)
+- [x] Middleware protection gaps fixed (/kyc, /marketplace added)
 - [ ] Region normalization (currently free-text strings — see RIGIDNESS #15)
 - [ ] Connect onboarding timing edge case (webhook may arrive before user return)
 - [ ] Photo approval UI integration into trades page

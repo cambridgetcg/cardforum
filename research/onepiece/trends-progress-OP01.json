@@ -1,0 +1,20 @@
+{
+  "tcg": "onepiece",
+  "setCode": "OP01",
+  "completedStages": {
+    "fetch_prices": {
+      "completedAt": "2026-02-15T23:36:44.007Z"
+    },
+    "fetch_search": {
+      "completedAt": "2026-02-15T23:36:48.158Z"
+    },
+    "correlate": {
+      "completedAt": "2026-02-15T23:36:48.967Z"
+    },
+    "report": {
+      "completedAt": "2026-02-15T23:36:49.777Z"
+    }
+  },
+  "lastUpdated": "2026-02-15T23:36:49.777Z",
+  "errors": []
+}

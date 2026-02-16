@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { RegionSelect } from "@/components/ui/region-select";
 import { TCG_LABELS, type TCG } from "@/types/domain";
 
 const TCG_OPTIONS: TCG[] = ["POKEMON", "ONEPIECE", "YUGIOH", "MTG"];
@@ -16,12 +17,6 @@ interface AuthenticatorProfile {
   region: string;
   businessName: string | null;
   tcgExpertise: string[];
-}
-
-interface Region {
-  id: string;
-  country: string;
-  name: string;
 }
 
 const STATUS_LABELS: Record<string, { label: string; variant: "default" | "success" | "warning" | "error" | "info" }> = {
@@ -39,7 +34,6 @@ const STATUS_LABELS: Record<string, { label: string; variant: "default" | "succe
 
 export default function AuthenticatorApplyPage() {
   const [profile, setProfile] = useState<AuthenticatorProfile | null>(null);
-  const [regions, setRegions] = useState<Region[]>([]);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -54,17 +48,10 @@ export default function AuthenticatorApplyPage() {
 
   const fetchData = useCallback(async () => {
     try {
-      const [profileRes, regionsRes] = await Promise.all([
-        fetch("/api/authenticator/apply"),
-        fetch("/api/authenticator/regions"),
-      ]);
+      const profileRes = await fetch("/api/authenticator/apply");
       if (profileRes.ok) {
         const data = await profileRes.json();
         setProfile(data.authenticator);
-      }
-      if (regionsRes.ok) {
-        const data = await regionsRes.json();
-        setRegions(data.regions);
       }
     } finally {
       setLoading(false);
@@ -116,15 +103,13 @@ export default function AuthenticatorApplyPage() {
       return;
     }
 
-    const selectedRegion = regions.find((r) => r.id === regionId);
-
     try {
       const res = await fetch("/api/authenticator/apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           businessName: businessName || undefined,
-          region: selectedRegion?.name || region,
+          region: region || undefined,
           regionId: regionId || undefined,
           tcgExpertise,
           experienceDesc,
@@ -266,33 +251,16 @@ export default function AuthenticatorApplyPage() {
               <p className="mt-0.5 text-xs text-gray-500">
                 The area where you can physically verify and ship cards
               </p>
-              {regions.length > 0 ? (
-                <select
+              <div className="mt-1">
+                <RegionSelect
                   value={regionId}
-                  onChange={(e) => {
-                    setRegionId(e.target.value);
-                    const r = regions.find((r) => r.id === e.target.value);
-                    if (r) setRegion(r.name);
+                  onChange={(id, displayName) => {
+                    setRegionId(id);
+                    setRegion(displayName);
                   }}
-                  className="mt-1 flex h-10 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
-                  required
-                >
-                  <option value="">Select a region...</option>
-                  {regions.map((r) => (
-                    <option key={r.id} value={r.id}>
-                      {r.name} ({r.country})
-                    </option>
-                  ))}
-                </select>
-              ) : (
-                <Input
-                  value={region}
-                  onChange={(e) => setRegion(e.target.value)}
-                  placeholder="e.g. Tokyo, London, New York"
-                  className="mt-1"
-                  required
+                  placeholder="Select your region..."
                 />
-              )}
+              </div>
             </div>
 
             {/* TCG Expertise */}

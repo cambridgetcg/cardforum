@@ -8,7 +8,7 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, type WalletBalance } from "@/lib/api-client";
+import { api, type WalletBalance, type ExpertPostListParams, type CollectionStats, type CollectionEntry, type PullRateData } from "@/lib/api-client";
 
 // ─── Query Keys ──────────────────────────────────────
 // Centralized keys prevent typos and enable targeted invalidation.
@@ -38,6 +38,18 @@ export const queryKeys = {
   },
   cards: {
     search: (query: string, tcg?: string) => ["cards", query, tcg] as const,
+  },
+  expert: {
+    list: (params?: ExpertPostListParams) => ["expert", "posts", params] as const,
+    detail: (id: string) => ["expert", "posts", id] as const,
+  },
+  collection: {
+    list: (params?: { tcg?: string; set?: string }) => ["collection", params] as const,
+    stats: ["collection", "stats"] as const,
+    check: (cardIds: string[]) => ["collection", "check", cardIds] as const,
+  },
+  pullRates: {
+    get: (setCode: string) => ["pullRates", setCode] as const,
   },
 } as const;
 
@@ -190,5 +202,113 @@ export function useKYCStatus() {
   return useQuery({
     queryKey: queryKeys.kyc.status,
     queryFn: api.kyc.status,
+  });
+}
+
+// ─── Expert Hub Hooks ───────────────────────────────
+
+export function useExpertPosts(params?: ExpertPostListParams) {
+  return useQuery({
+    queryKey: queryKeys.expert.list(params),
+    queryFn: () => api.expert.list(params),
+  });
+}
+
+export function useExpertPost(postId: string) {
+  return useQuery({
+    queryKey: queryKeys.expert.detail(postId),
+    queryFn: () => api.expert.get(postId),
+    enabled: !!postId,
+  });
+}
+
+export function useCreateExpertPost() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (data: unknown) => api.expert.create(data),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["expert", "posts"] as const });
+      qc.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+export function useVoteExpertPost() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ postId, value, helpful }: { postId: string; value: 1 | -1; helpful: boolean }) =>
+      api.expert.vote(postId, value, helpful),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["expert", "posts"] as const });
+    },
+  });
+}
+
+export function useDeleteExpertPost() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (postId: string) => api.expert.delete(postId),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["expert", "posts"] as const });
+      qc.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+// ─── Collection Hooks ───────────────────────────────
+
+export function useCollection(params?: { tcg?: string; set?: string }) {
+  return useQuery({
+    queryKey: queryKeys.collection.list(params),
+    queryFn: () => api.collection.list(params),
+  });
+}
+
+export function useCollectionStats() {
+  return useQuery({
+    queryKey: queryKeys.collection.stats,
+    queryFn: api.collection.stats,
+  });
+}
+
+export function useCollectionCheck(cardIds: string[]) {
+  return useQuery({
+    queryKey: queryKeys.collection.check(cardIds),
+    queryFn: () => api.collection.check(cardIds),
+    enabled: cardIds.length > 0,
+  });
+}
+
+export function useAddToCollection() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (data: { cardId: string; quantity?: number; condition?: string; notes?: string }) =>
+      api.collection.add(data),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["collection"] });
+      qc.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+export function useRemoveFromCollection() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (entryId: string) => api.collection.remove(entryId),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["collection"] });
+      qc.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+// ─── Pull Rate Hooks ────────────────────────────────
+
+export function usePullRates(setCode: string) {
+  return useQuery({
+    queryKey: queryKeys.pullRates.get(setCode),
+    queryFn: () => api.pullRates.get(setCode),
+    enabled: !!setCode,
+    staleTime: 24 * 60 * 60 * 1000, // 24h — pull rates rarely change
   });
 }

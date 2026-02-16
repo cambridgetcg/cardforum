@@ -1,0 +1,4546 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Royal Blood",
+  "groupId": 23766,
+  "setCode": "OP10",
+  "totalProducts": 156,
+  "totalCards": 151,
+  "scrapedAt": "2026-02-15T22:54:10.415Z",
+  "durationMs": 144,
+  "cards": [
+    {
+      "productId": 617028,
+      "cardId": "EB01-056",
+      "name": "Charlotte Flampe (SP)",
+      "cleanName": "Charlotte Flampe SP",
+      "url": "https://www.tcgplayer.com/product/617028/one-piece-card-game-royal-blood-charlotte-flampe-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617028_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 49.12,
+          "midPrice": 59.97,
+          "highPrice": 249.99,
+          "marketPrice": 49.58,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617029,
+      "cardId": "OP07-021",
+      "name": "Urouge (SP)",
+      "cleanName": "Urouge SP",
+      "url": "https://www.tcgplayer.com/product/617029/one-piece-card-game-royal-blood-urouge-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617029_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fallen Monk Pirates;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[End of Your Turn] Set up to 1 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 42.68,
+          "midPrice": 47.38,
+          "highPrice": 149.99,
+          "marketPrice": 43.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 620135,
+      "cardId": "OP08-052",
+      "name": "Portgas.D.Ace (TR)",
+      "cleanName": "PortgasDAce TR",
+      "url": "https://www.tcgplayer.com/product/620135/one-piece-card-game-royal-blood-portgasdace-tr",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/620135_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "TR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Reveal 1 card from the top of your deck and play up to 1 Character card with a type including \"Whitebeard Pirates\" and a cost of 4 or less. Then, place the rest at the top or bottom of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 69,
+          "midPrice": 77.47,
+          "highPrice": 500,
+          "marketPrice": 80.78,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617030,
+      "cardId": "OP10-001",
+      "name": "Smoker (001)",
+      "cleanName": "Smoker 001",
+      "url": "https://www.tcgplayer.com/product/617030/one-piece-card-game-royal-blood-smoker-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617030_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Opponent's Turn] All of your {Navy} or {Punk Hazard} type Characters gain +1000 power.<br>\r\n[Activate: Main] [Once Per Turn] If you have a Character with 7000 power or more, set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 10.15,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617031,
+      "cardId": "OP10-001",
+      "name": "Smoker (001) (Parallel)",
+      "cleanName": "Smoker 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/617031/one-piece-card-game-royal-blood-smoker-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617031_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Opponent's Turn] All of your {Navy} or {Punk Hazard} type Characters gain +1000 power.<br>\r\n[Activate: Main] [Once Per Turn] If you have a Character with 7000 power or more, set up to 2 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 22.29,
+          "midPrice": 28.76,
+          "highPrice": 149.99,
+          "marketPrice": 22.29,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617032,
+      "cardId": "OP10-002",
+      "name": "Caesar Clown (002)",
+      "cleanName": "Caesar Clown 002",
+      "url": "https://www.tcgplayer.com/product/617032/one-piece-card-game-royal-blood-caesar-clown-002",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617032_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Punk Hazard;Scientist",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [When Attacking] <strong>You may return 1 of your {Punk Hazard} type Characters with a cost of 2 or more to the owner's hand</strong>: K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617033,
+      "cardId": "OP10-002",
+      "name": "Caesar Clown (002) (Parallel)",
+      "cleanName": "Caesar Clown 002 Parallel",
+      "url": "https://www.tcgplayer.com/product/617033/one-piece-card-game-royal-blood-caesar-clown-002-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617033_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Punk Hazard;Scientist",
+      "attribute": "Special",
+      "effectText": "[DON!! x2] [When Attacking] <strong>You may return 1 of your {Punk Hazard} type Characters with a cost of 2 or more to the owner's hand</strong>: K.O. up to 1 of your opponent's Characters with 4000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 10.27,
+          "midPrice": 18.38,
+          "highPrice": 110.75,
+          "marketPrice": 12.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617034,
+      "cardId": "OP10-003",
+      "name": "Sugar (003)",
+      "cleanName": "Sugar 003",
+      "url": "https://www.tcgplayer.com/product/617034/one-piece-card-game-royal-blood-sugar-003",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617034_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] If you have a {Donquixote Pirates} type Character with 6000 power or more, set up to 1 of your DON!! cards as active.<br>\r\n[Opponent's Turn] [Once Per Turn] When you activate an Event, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617035,
+      "cardId": "OP10-003",
+      "name": "Sugar (003) (Parallel)",
+      "cleanName": "Sugar 003 Parallel",
+      "url": "https://www.tcgplayer.com/product/617035/one-piece-card-game-royal-blood-sugar-003-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617035_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Red",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] If you have a {Donquixote Pirates} type Character with 6000 power or more, set up to 1 of your DON!! cards as active.<br>\r\n[Opponent's Turn] [Once Per Turn] When you activate an Event, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 18,
+          "midPrice": 23.5,
+          "highPrice": 125.99,
+          "marketPrice": 19.64,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617036,
+      "cardId": "OP10-004",
+      "name": "Vergo",
+      "cleanName": "Vergo",
+      "url": "https://www.tcgplayer.com/product/617036/one-piece-card-game-royal-blood-vergo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617036_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Punk Hazard} type card other than [Vergo] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 10.09,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617037,
+      "cardId": "OP10-005",
+      "name": "Sanji",
+      "cleanName": "Sanji",
+      "url": "https://www.tcgplayer.com/product/617037/one-piece-card-game-royal-blood-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617037_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Your Turn] This Character gains +3000 power.<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2,
+          "midPrice": 4.5,
+          "highPrice": 16.49,
+          "marketPrice": 3.44,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617038,
+      "cardId": "OP10-005",
+      "name": "Sanji (Parallel)",
+      "cleanName": "Sanji Parallel",
+      "url": "https://www.tcgplayer.com/product/617038/one-piece-card-game-royal-blood-sanji-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617038_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Your Turn] This Character gains +3000 power.<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 17.48,
+          "midPrice": 20.99,
+          "highPrice": 65,
+          "marketPrice": 18.62,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617039,
+      "cardId": "OP10-006",
+      "name": "Caesar Clown (006)",
+      "cleanName": "Caesar Clown 006",
+      "url": "https://www.tcgplayer.com/product/617039/one-piece-card-game-royal-blood-caesar-clown-006",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617039_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Punk Hazard;Scientist",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Smiley] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Smiley] from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 8,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617040,
+      "cardId": "OP10-007",
+      "name": "Ceaser Soldier",
+      "cleanName": "Ceaser Soldier",
+      "url": "https://www.tcgplayer.com/product/617040/one-piece-card-game-royal-blood-ceaser-soldier",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617040_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Play up to 1 \"Punk Hazard\" type Character card with a cost of 2 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2.17,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617041,
+      "cardId": "OP10-008",
+      "name": "Scotch",
+      "cleanName": "Scotch",
+      "url": "https://www.tcgplayer.com/product/617041/one-piece-card-game-royal-blood-scotch",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617041_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If you don't have [Rock], play up to 1 [Rock] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617042,
+      "cardId": "OP10-009",
+      "name": "Smiley",
+      "cleanName": "Smiley",
+      "url": "https://www.tcgplayer.com/product/617042/one-piece-card-game-royal-blood-smiley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617042_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Biological Weapon;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"Punk Hazard\" type, give up to 1 of your opponent's Characters 3000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 10.08,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617043,
+      "cardId": "OP10-010",
+      "name": "Chadros.Higelyges (Brownbeard)",
+      "cleanName": "ChadrosHigelyges Brownbeard",
+      "url": "https://www.tcgplayer.com/product/617043/one-piece-card-game-royal-blood-chadroshigelyges-brownbeard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617043_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Punk Hazard;Brownbeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 1 or less Characters with 6000 power or more, this Character gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617044,
+      "cardId": "OP10-011",
+      "name": "Tony Tony.Chopper (011)",
+      "cleanName": "Tony TonyChopper 011",
+      "url": "https://www.tcgplayer.com/product/617044/one-piece-card-game-royal-blood-tony-tonychopper-011",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617044_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[Opponent's Turn] This Character gains +2000 power.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.23,
+          "midPrice": 0.6,
+          "highPrice": 50,
+          "marketPrice": 0.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617045,
+      "cardId": "OP10-012",
+      "name": "Dragon Number Thirteen",
+      "cleanName": "Dragon Number Thirteen",
+      "url": "https://www.tcgplayer.com/product/617045/one-piece-card-game-royal-blood-dragon-number-thirteen",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617045_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Biological Weapon;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6.88,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617046,
+      "cardId": "OP10-013",
+      "name": "Nami (013)",
+      "cleanName": "Nami 013",
+      "url": "https://www.tcgplayer.com/product/617046/one-piece-card-game-royal-blood-nami-013",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617046_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5.99,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617047,
+      "cardId": "OP10-014",
+      "name": "Franky (014)",
+      "cleanName": "Franky 014",
+      "url": "https://www.tcgplayer.com/product/617047/one-piece-card-game-royal-blood-franky-014",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617047_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Punk Hazard",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 15.12,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617048,
+      "cardId": "OP10-015",
+      "name": "Mocha",
+      "cleanName": "Mocha",
+      "url": "https://www.tcgplayer.com/product/617048/one-piece-card-game-royal-blood-mocha",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617048_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Strike",
+      "effectText": "[On Play] Give up to 1 of your opponent's Characters 1000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6.88,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617049,
+      "cardId": "OP10-016",
+      "name": "Monet",
+      "cleanName": "Monet",
+      "url": "https://www.tcgplayer.com/product/617049/one-piece-card-game-royal-blood-monet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617049_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> Give up to 2 rested DON!! cards to your Leader or 1 of your Characters. Then, give up to 1 of your opponent's Characters 1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617050,
+      "cardId": "OP10-016",
+      "name": "Monet (Parallel)",
+      "cleanName": "Monet Parallel",
+      "url": "https://www.tcgplayer.com/product/617050/one-piece-card-game-royal-blood-monet-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617050_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> Give up to 2 rested DON!! cards to your Leader or 1 of your Characters. Then, give up to 1 of your opponent's Characters 1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.99,
+          "midPrice": 6,
+          "highPrice": 45.88,
+          "marketPrice": 5.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617051,
+      "cardId": "OP10-017",
+      "name": "Rock",
+      "cleanName": "Rock",
+      "url": "https://www.tcgplayer.com/product/617051/one-piece-card-game-royal-blood-rock",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617051_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you don't have [Scotch], play up to 1 [Scotch] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 4.99,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617052,
+      "cardId": "OP10-018",
+      "name": "Ten-Layer Igloo",
+      "cleanName": "Ten Layer Igloo",
+      "url": "https://www.tcgplayer.com/product/617052/one-piece-card-game-royal-blood-ten-layer-igloo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617052_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Punk Hazard",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, give up to 1 of your opponent's Leader or Character cards 2000 power during this turn.<br>\r\n[Trigger] Up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 6.88,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617053,
+      "cardId": "OP10-019",
+      "name": "Divine Departure",
+      "cleanName": "Divine Departure",
+      "url": "https://www.tcgplayer.com/product/617053/one-piece-card-game-royal-blood-divine-departure",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617053_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> K.O. up to 1 of your opponent's Characters with 8000 power or less.<br>\r\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 0.43,
+          "highPrice": 10.31,
+          "marketPrice": 0.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617054,
+      "cardId": "OP10-019",
+      "name": "Divine Departure (Parallel)",
+      "cleanName": "Divine Departure Parallel",
+      "url": "https://www.tcgplayer.com/product/617054/one-piece-card-game-royal-blood-divine-departure-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617054_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] <strong>You may rest 5 of your DON!! cards:</strong> K.O. up to 1 of your opponent's Characters with 8000 power or less.<br>\r\n[Counter] Up to 1 of your Leader gains +3000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 83.99,
+          "midPrice": 97.39,
+          "highPrice": 299.99,
+          "marketPrice": 93.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617055,
+      "cardId": "OP10-020",
+      "name": "Gum-Gum UFO",
+      "cleanName": "Gum Gum UFO",
+      "url": "https://www.tcgplayer.com/product/617055/one-piece-card-game-royal-blood-gum-gum-ufo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617055_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Punk Hazard",
+      "attribute": null,
+      "effectText": "[Main] Give up to 1 of your opponent's Characters 4000 power during this turn. Then, if you have 2 or less Life cards, up to 1 of your Leader or Character cards gains +1000 power during this turn.<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617056,
+      "cardId": "OP10-021",
+      "name": "Punk Hazard",
+      "cleanName": "Punk Hazard",
+      "url": "https://www.tcgplayer.com/product/617056/one-piece-card-game-royal-blood-punk-hazard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617056_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Punk Hazard",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage:</strong> If your Leader is [Caesar Clown], give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 4.99,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617057,
+      "cardId": "OP10-022",
+      "name": "Trafalgar Law (022)",
+      "cleanName": "Trafalgar Law 022",
+      "url": "https://www.tcgplayer.com/product/617057/one-piece-card-game-royal-blood-trafalgar-law-022",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617057_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] <strong>If the total cost of your Characters is 5 or more, you may return 1 of your Characters to the owner's hand:</strong> Reveal 1 card from the top of your Life cards. If that card is a \"Supernovas\" type Character card with a cost of 5 or less, you may play that card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617058,
+      "cardId": "OP10-022",
+      "name": "Trafalgar Law (022) (Parallel)",
+      "cleanName": "Trafalgar Law 022 Parallel",
+      "url": "https://www.tcgplayer.com/product/617058/one-piece-card-game-royal-blood-trafalgar-law-022-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617058_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [Activate: Main] [Once Per Turn] <strong>If the total cost of your Characters is 5 or more, you may return 1 of your Characters to the owner's hand:</strong> Reveal 1 card from the top of your Life cards. If that card is a \"Supernovas\" type Character card with a cost of 5 or less, you may play that card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25.89,
+          "midPrice": 37.66,
+          "highPrice": 250,
+          "marketPrice": 27.7,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617059,
+      "cardId": "OP10-023",
+      "name": "Issho",
+      "cleanName": "Issho",
+      "url": "https://www.tcgplayer.com/product/617059/one-piece-card-game-royal-blood-issho",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617059_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] If your Leader has the \"Navy\" type, rest up to 2 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617060,
+      "cardId": "OP10-024",
+      "name": "Edward.Newgate",
+      "cleanName": "EdwardNewgate",
+      "url": "https://www.tcgplayer.com/product/617060/one-piece-card-game-royal-blood-edwardnewgate",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617060_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or more rested Characters, rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, K.O. up to 1 of your opponent's rested Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 15.07,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617061,
+      "cardId": "OP10-025",
+      "name": "Enel",
+      "cleanName": "Enel",
+      "url": "https://www.tcgplayer.com/product/617061/one-piece-card-game-royal-blood-enel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617061_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "ODYSSEY;Sky Island",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or more rested Characters, draw 3 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.2,
+          "highPrice": 10.13,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617062,
+      "cardId": "OP10-026",
+      "name": "Kin'emon (026)",
+      "cleanName": "Kinemon 026",
+      "url": "https://www.tcgplayer.com/product/617062/one-piece-card-game-royal-blood-kinemon-026",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617062_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may place this Character and 1 [Kin'emon] with 0 power from your trash at the bottom of your deck in any order:</strong> Play up to 1 [Kin'emon] with a cost of 6 from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.04,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617063,
+      "cardId": "OP10-027",
+      "name": "Kin'emon (027)",
+      "cleanName": "Kinemon 027",
+      "url": "https://www.tcgplayer.com/product/617063/one-piece-card-game-royal-blood-kinemon-027",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617063_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;The Akazaya Nine;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may place this Character and 1 [Kin'emon] with 1000 power from your trash at the bottom of your deck in any order:</strong> Play up to 1 [Kin'emon] with a cost of 6 from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617064,
+      "cardId": "OP10-028",
+      "name": "Kouzuki Momonosuke (028)",
+      "cleanName": "Kouzuki Momonosuke 028",
+      "url": "https://www.tcgplayer.com/product/617064/one-piece-card-game-royal-blood-kouzuki-momonosuke-028",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617064_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest 2 of your DON!! cards and trash this Character:</strong> Look at 5 cards from the top of your deck; reveal up to 2 \"The Akazaya Nine\" type cards and add them to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617065,
+      "cardId": "OP10-029",
+      "name": "Dracule Mihawk",
+      "cleanName": "Dracule Mihawk",
+      "url": "https://www.tcgplayer.com/product/617065/one-piece-card-game-royal-blood-dracule-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617065_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "The Seven Warlords of the Sea;ODYSSEY",
+      "attribute": "Slash",
+      "effectText": "[On Play] If you have 2 or more rested Characters, set up to 1 of your rested \"ODYSSEY\" type Characters with a cost of 5 or less as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.22,
+          "highPrice": 5,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617066,
+      "cardId": "OP10-030",
+      "name": "Smoker (030)",
+      "cleanName": "Smoker 030",
+      "url": "https://www.tcgplayer.com/product/617066/one-piece-card-game-royal-blood-smoker-030",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617066_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[Activate: Main] Set up to 1 of your DON!! cards as active. Then, you cannot set DON!! cards as active using Character effects during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 1.25,
+          "highPrice": 25,
+          "marketPrice": 0.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617067,
+      "cardId": "OP10-030",
+      "name": "Smoker (030) (Parallel)",
+      "cleanName": "Smoker 030 Parallel",
+      "url": "https://www.tcgplayer.com/product/617067/one-piece-card-game-royal-blood-smoker-030-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617067_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Slash",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[Activate: Main] Set up to 1 of your DON!! cards as active. Then, you cannot set DON!! cards as active using Character effects during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 11.99,
+          "midPrice": 18,
+          "highPrice": 50,
+          "marketPrice": 14.64,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617068,
+      "cardId": "OP10-031",
+      "name": "Sengoku",
+      "cleanName": "Sengoku",
+      "url": "https://www.tcgplayer.com/product/617068/one-piece-card-game-royal-blood-sengoku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617068_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Navy;Dressrosa",
+      "attribute": "Wisdom",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617069,
+      "cardId": "OP10-032",
+      "name": "Tashigi",
+      "cleanName": "Tashigi",
+      "url": "https://www.tcgplayer.com/product/617069/one-piece-card-game-royal-blood-tashigi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617069_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "If you have a green Character other than [Tashigi] that would be removed from the field by your opponent's effect, you may rest this Character instead.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2,
+          "midPrice": 4.49,
+          "highPrice": 50,
+          "marketPrice": 3.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617070,
+      "cardId": "OP10-032",
+      "name": "Tashigi (Parallel)",
+      "cleanName": "Tashigi Parallel",
+      "url": "https://www.tcgplayer.com/product/617070/one-piece-card-game-royal-blood-tashigi-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617070_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Navy;Punk Hazard",
+      "attribute": "Special",
+      "effectText": "If you have a green Character other than [Tashigi] that would be removed from the field by your opponent's effect, you may rest this Character instead.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19.07,
+          "midPrice": 23,
+          "highPrice": 49.25,
+          "marketPrice": 20.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617071,
+      "cardId": "OP10-033",
+      "name": "Nami (033)",
+      "cleanName": "Nami 033",
+      "url": "https://www.tcgplayer.com/product/617071/one-piece-card-game-royal-blood-nami-033",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617071_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or more rested \"ODYSSEY\" type Characters, up to 1 of your opponent's rested DON!! cards will not become active in your opponent's next Refresh Phase.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 2,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617072,
+      "cardId": "OP10-034",
+      "name": "Franky (034)",
+      "cleanName": "Franky 034",
+      "url": "https://www.tcgplayer.com/product/617072/one-piece-card-game-royal-blood-franky-034",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617072_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": "[Once Per Turn] If this Character would be K.O.'d in battle, you may add 1 card from the top of your Life cards to your hand instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.08,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617073,
+      "cardId": "OP10-035",
+      "name": "Brook (035)",
+      "cleanName": "Brook 035",
+      "url": "https://www.tcgplayer.com/product/617073/one-piece-card-game-royal-blood-brook-035",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617073_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Slash",
+      "effectText": "[On K.O.] Rest up to 1 of your opponent's Leader or Character cards with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.04,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617074,
+      "cardId": "OP10-036",
+      "name": "Perona (036)",
+      "cleanName": "Perona 036",
+      "url": "https://www.tcgplayer.com/product/617074/one-piece-card-game-royal-blood-perona-036",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617074_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates;ODYSSEY;Muggy Kingdom",
+      "attribute": "Special",
+      "effectText": "[Your Turn] [Once Per Turn] If a Character is rested by your effect, set up to 1 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.35,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617075,
+      "cardId": "OP10-037",
+      "name": "Lim",
+      "cleanName": "Lim",
+      "url": "https://www.tcgplayer.com/product/617075/one-piece-card-game-royal-blood-lim",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617075_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "[Once Per Turn] If this Character would be removed from the field by your opponent's effect, you may rest 1 of your \"ODYSSEY\" type Characters instead.<br>\r\n[End of Your Turn] Set up to 1 of your \"ODYSSEY\" type Characters as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.23,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617076,
+      "cardId": "OP10-037",
+      "name": "Lim (Parallel)",
+      "cleanName": "Lim Parallel",
+      "url": "https://www.tcgplayer.com/product/617076/one-piece-card-game-royal-blood-lim-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617076_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "[Once Per Turn] If this Character would be removed from the field by your opponent's effect, you may rest 1 of your \"ODYSSEY\" type Characters instead.<br>\r\n[End of Your Turn] Set up to 1 of your \"ODYSSEY\" type Characters as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.9,
+          "midPrice": 6.99,
+          "highPrice": 30,
+          "marketPrice": 5.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617077,
+      "cardId": "OP10-038",
+      "name": "Roronoa Zoro (038)",
+      "cleanName": "Roronoa Zoro 038",
+      "url": "https://www.tcgplayer.com/product/617077/one-piece-card-game-royal-blood-roronoa-zoro-038",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617077_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;ODYSSEY",
+      "attribute": "Slash",
+      "effectText": "[Opponent's Turn] If you have 2 or more rested Characters, this Character gains +2000 power.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 15.11,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617078,
+      "cardId": "OP10-039",
+      "name": "Gum-Gum Dragon Fire Pistol Twister Star",
+      "cleanName": "Gum Gum Dragon Fire Pistol Twister Star",
+      "url": "https://www.tcgplayer.com/product/617078/one-piece-card-game-royal-blood-gum-gum-dragon-fire-pistol-twister-star",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617078_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;ODYSSEY",
+      "attribute": null,
+      "effectText": "[Main] If your Leader has the \"ODYSSEY\" type, look at 5 cards from the top of your deck; reveal up to 2 \"ODYSSEY\" type Character cards and add them to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617079,
+      "cardId": "OP10-040",
+      "name": "The Weak Do Not Have the Right to Choose How They Die",
+      "cleanName": "The Weak Do Not Have the Right to Choose How They Die",
+      "url": "https://www.tcgplayer.com/product/617079/one-piece-card-game-royal-blood-the-weak-do-not-have-the-right-to-choose-how-they-die",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617079_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Heart Pirates;The Seven Warlords of the Sea;Punk Hazard",
+      "attribute": null,
+      "effectText": "[Main]/[Counter] K.O. up to 1 of your opponent's rested Characters with a cost of 7 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.98,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617080,
+      "cardId": "OP10-041",
+      "name": "Radio Knife",
+      "cleanName": "Radio Knife",
+      "url": "https://www.tcgplayer.com/product/617080/one-piece-card-game-royal-blood-radio-knife",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617080_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": null,
+      "effectText": "[Main] Rest up to 1 of your opponent's Characters with a cost of 6 or less. Then, K.O. up to 1 of your opponent's rested Characters with a cost of 5 or less.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617081,
+      "cardId": "OP10-042",
+      "name": "Usopp (042)",
+      "cleanName": "Usopp 042",
+      "url": "https://www.tcgplayer.com/product/617081/one-piece-card-game-royal-blood-usopp-042",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617081_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Black",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Ranged",
+      "effectText": "All of your \"Dressrosa\" type Characters with a cost of 2 or more gain +1 cost.<br>\r\n[Opponent's Turn] [Once Per Turn] This effect can be activated when your \"Dressrosa\" type Character is removed from the field by your opponent's effect or K.O.'d. If you have 5 or less cards in your hand, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617082,
+      "cardId": "OP10-042",
+      "name": "Usopp (042) (Parallel)",
+      "cleanName": "Usopp 042 Parallel",
+      "url": "https://www.tcgplayer.com/product/617082/one-piece-card-game-royal-blood-usopp-042-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617082_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue;Black",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Ranged",
+      "effectText": "All of your \"Dressrosa\" type Characters with a cost of 2 or more gain +1 cost.<br>\r\n[Opponent's Turn] [Once Per Turn] This effect can be activated when your \"Dressrosa\" type Character is removed from the field by your opponent's effect or K.O.'d. If you have 5 or less cards in your hand, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 29.94,
+          "midPrice": 38,
+          "highPrice": 199.99,
+          "marketPrice": 32.92,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617083,
+      "cardId": "OP10-043",
+      "name": "Moocy",
+      "cleanName": "Moocy",
+      "url": "https://www.tcgplayer.com/product/617083/one-piece-card-game-royal-blood-moocy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617083_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> Up to 1 of your [Monkey.D.Luffy] Characters gains [Banish] during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6.88,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617084,
+      "cardId": "OP10-044",
+      "name": "Cub",
+      "cleanName": "Cub",
+      "url": "https://www.tcgplayer.com/product/617084/one-piece-card-game-royal-blood-cub",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617084_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> Return up to 1 of your opponent's Characters with a cost of 1 or less to the owner's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617085,
+      "cardId": "OP10-045",
+      "name": "Cavendish (045)",
+      "cleanName": "Cavendish 045",
+      "url": "https://www.tcgplayer.com/product/617085/one-piece-card-game-royal-blood-cavendish-045",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617085_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] [Once Per Turn] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.8,
+          "midPrice": 1.53,
+          "highPrice": 10,
+          "marketPrice": 1.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617086,
+      "cardId": "OP10-045",
+      "name": "Cavendish (045) (Parallel)",
+      "cleanName": "Cavendish 045 Parallel",
+      "url": "https://www.tcgplayer.com/product/617086/one-piece-card-game-royal-blood-cavendish-045-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617086_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] [Once Per Turn] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 13,
+          "midPrice": 34.99,
+          "highPrice": 100,
+          "marketPrice": 24.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617087,
+      "cardId": "OP10-046",
+      "name": "Kyros",
+      "cleanName": "Kyros",
+      "url": "https://www.tcgplayer.com/product/617087/one-piece-card-game-royal-blood-kyros",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617087_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] Return up to 1 Character with a cost of 5 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.45,
+          "highPrice": 10,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617088,
+      "cardId": "OP10-046",
+      "name": "Kyros (Parallel)",
+      "cleanName": "Kyros Parallel",
+      "url": "https://www.tcgplayer.com/product/617088/one-piece-card-game-royal-blood-kyros-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617088_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] Return up to 1 Character with a cost of 5 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.11,
+          "midPrice": 9.97,
+          "highPrice": 50,
+          "marketPrice": 8.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617089,
+      "cardId": "OP10-047",
+      "name": "Koala",
+      "cleanName": "Koala",
+      "url": "https://www.tcgplayer.com/product/617089/one-piece-card-game-royal-blood-koala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617089_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "3000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[When Attacking] <strong>You may return 1 of your \"Revolutionary Army\" type Characters with a cost of 3 or more to the owner's hand:</strong> This Character gains +3000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617090,
+      "cardId": "OP10-048",
+      "name": "Sai",
+      "cleanName": "Sai",
+      "url": "https://www.tcgplayer.com/product/617090/one-piece-card-game-royal-blood-sai",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617090_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Happosui Army;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> Return up to 1 of your opponent's Characters with a cost of 1 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617091,
+      "cardId": "OP10-049",
+      "name": "Sabo",
+      "cleanName": "Sabo",
+      "url": "https://www.tcgplayer.com/product/617091/one-piece-card-game-royal-blood-sabo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617091_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army;Dressrosa",
+      "attribute": "Special",
+      "effectText": "If your Character with a base cost of 7 or less other than [Sabo] would be removed from the field by your opponent's effect, you may return this Character to the owner's hand instead.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617092,
+      "cardId": "OP10-050",
+      "name": "Hajrudin",
+      "cleanName": "Hajrudin",
+      "url": "https://www.tcgplayer.com/product/617092/one-piece-card-game-royal-blood-hajrudin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617092_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Giant;Dressrosa;New Giant Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.05,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617093,
+      "cardId": "OP10-051",
+      "name": "Hack",
+      "cleanName": "Hack",
+      "url": "https://www.tcgplayer.com/product/617093/one-piece-card-game-royal-blood-hack",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617093_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Fish-Man;Revolutionary Army;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Look at 3 cards from the top of your deck; reveal up to 1 \"Revolutionary Army\" type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617094,
+      "cardId": "OP10-052",
+      "name": "Bartolomeo",
+      "cleanName": "Bartolomeo",
+      "url": "https://www.tcgplayer.com/product/617094/one-piece-card-game-royal-blood-bartolomeo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617094_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Dressrosa;Barto Club",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Place up to 1 Character with a cost of 1 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617095,
+      "cardId": "OP10-053",
+      "name": "Bian",
+      "cleanName": "Bian",
+      "url": "https://www.tcgplayer.com/product/617095/one-piece-card-game-royal-blood-bian",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617095_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Slash",
+      "effectText": "If you have a \"The Tontattas\" type Character other than [Bian], this Character gains [Blocker].",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617096,
+      "cardId": "OP10-054",
+      "name": "Blue Gilly",
+      "cleanName": "Blue Gilly",
+      "url": "https://www.tcgplayer.com/product/617096/one-piece-card-game-royal-blood-blue-gilly",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617096_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617097,
+      "cardId": "OP10-055",
+      "name": "Marco",
+      "cleanName": "Marco",
+      "url": "https://www.tcgplayer.com/product/617097/one-piece-card-game-royal-blood-marco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617097_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On K.O.] Return up to 1 of your opponent's Characters with a cost of 4 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 10.15,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617098,
+      "cardId": "OP10-056",
+      "name": "Mansherry",
+      "cleanName": "Mansherry",
+      "url": "https://www.tcgplayer.com/product/617098/one-piece-card-game-royal-blood-mansherry",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617098_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards, and return 1 of your \"Dressrosa\" type Characters with a cost of 4 or more to the owner's hand:</strong> Return up to 1 of your opponent's Characters with a cost of 4 or less to the owner's hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 8,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617099,
+      "cardId": "OP10-057",
+      "name": "Leo",
+      "cleanName": "Leo",
+      "url": "https://www.tcgplayer.com/product/617099/one-piece-card-game-royal-blood-leo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617099_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Dressrosa;The Tontattas",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may rest your Leader or 1 of your Stage cards:</strong> If your Leader is [Usopp], look at 5 cards from the top of your deck; reveal up to 2 \"Dressrosa\" type cards other than [Leo] and add them to your hand. Then, place the rest at the bottom of your deck in any order, and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617100,
+      "cardId": "OP10-058",
+      "name": "Rebecca",
+      "cleanName": "Rebecca",
+      "url": "https://www.tcgplayer.com/product/617100/one-piece-card-game-royal-blood-rebecca",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617100_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] If there is a Character with a cost of 8 or more, draw 1 card. Then, reveal up to 2 \"Dressrosa\" type Character cards with a cost of 7 or less other than [Rebecca] from your hand. Play 1 of the revealed cards and play the other card rested if it has a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.7,
+          "highPrice": 25,
+          "marketPrice": 0.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617101,
+      "cardId": "OP10-058",
+      "name": "Rebecca (Parallel)",
+      "cleanName": "Rebecca Parallel",
+      "url": "https://www.tcgplayer.com/product/617101/one-piece-card-game-royal-blood-rebecca-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617101_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] If there is a Character with a cost of 8 or more, draw 1 card. Then, reveal up to 2 \"Dressrosa\" type Character cards with a cost of 7 or less other than [Rebecca] from your hand. Play 1 of the revealed cards and play the other card rested if it has a cost of 4 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 16.98,
+          "midPrice": 23.53,
+          "highPrice": 99.99,
+          "marketPrice": 20.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617102,
+      "cardId": "OP10-059",
+      "name": "Fo...llow...Me...and...I...Will...Gui...de...You",
+      "cleanName": "FollowMeandIWillGuideYou",
+      "url": "https://www.tcgplayer.com/product/617102/one-piece-card-game-royal-blood-followmeandiwillguideyou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617102_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Dressrosa\" type Character card and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 6.88,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617103,
+      "cardId": "OP10-060",
+      "name": "Barrier-Barrier Pistol",
+      "cleanName": "Barrier Barrier Pistol",
+      "url": "https://www.tcgplayer.com/product/617103/one-piece-card-game-royal-blood-barrier-barrier-pistol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617103_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Dressrosa;Barto Club",
+      "attribute": null,
+      "effectText": "[Main] Place up to 1 of your opponent's Characters with 6000 power or less at the bottom of the owner's deck.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.06,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617104,
+      "cardId": "OP10-061",
+      "name": "Special Long-Range Attack!! Bagworm",
+      "cleanName": "Special Long Range Attack Bagworm",
+      "url": "https://www.tcgplayer.com/product/617104/one-piece-card-game-royal-blood-special-long-range-attack-bagworm",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617104_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": null,
+      "effectText": "[Main] Draw 1 card. Then, return up to 1 of your opponent's Characters with a cost of 2 or less to the owner's hand.<br>\r\n[Trigger] Return up to 1 Character with a cost of 2 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5.89,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617105,
+      "cardId": "OP10-062",
+      "name": "Violet",
+      "cleanName": "Violet",
+      "url": "https://www.tcgplayer.com/product/617105/one-piece-card-game-royal-blood-violet",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617105_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] DON!! 1: If your Leader has the \"Donquixote Pirates\" type, add up to 1 purple Event from your trash to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 10.17,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617106,
+      "cardId": "OP10-063",
+      "name": "Vinsmoke Sanji",
+      "cleanName": "Vinsmoke Sanji",
+      "url": "https://www.tcgplayer.com/product/617106/one-piece-card-game-royal-blood-vinsmoke-sanji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617106_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;Kingdom of GERMA",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your Leader's type includes \"GERMA\", look at 5 cards from the top of your deck; reveal up to 1 card with a type including \"GERMA\" and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.08,
+          "midPrice": 0.27,
+          "highPrice": 10.18,
+          "marketPrice": 0.28,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617107,
+      "cardId": "OP10-064",
+      "name": "Clone Soldier",
+      "cleanName": "Clone Soldier",
+      "url": "https://www.tcgplayer.com/product/617107/one-piece-card-game-royal-blood-clone-soldier",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617107_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "The Vinsmoke Family;Kingdom of GERMA",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.04,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617108,
+      "cardId": "OP10-065",
+      "name": "Sugar (065)",
+      "cleanName": "Sugar 065",
+      "url": "https://www.tcgplayer.com/product/617108/one-piece-card-game-royal-blood-sugar-065",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617108_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest 1 of your DON!! cards and this Character:</strong> Look at 5 cards from the top of your deck; reveal up to 1 \"Donquixote Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.83,
+          "highPrice": 5,
+          "marketPrice": 0.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617109,
+      "cardId": "OP10-066",
+      "name": "Giolla",
+      "cleanName": "Giolla",
+      "url": "https://www.tcgplayer.com/product/617109/one-piece-card-game-royal-blood-giolla",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617109_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 2 of your DON!! cards:</strong> Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 4.88,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617110,
+      "cardId": "OP10-067",
+      "name": "Senor Pink",
+      "cleanName": "Senor Pink",
+      "url": "https://www.tcgplayer.com/product/617110/one-piece-card-game-royal-blood-senor-pink",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617110_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Add up to 1 purple Event with a cost of 5 or less from your trash to your hand. Then, set up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617111,
+      "cardId": "OP10-067",
+      "name": "Senor Pink (Parallel)",
+      "cleanName": "Senor Pink Parallel",
+      "url": "https://www.tcgplayer.com/product/617111/one-piece-card-game-royal-blood-senor-pink-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617111_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> Add up to 1 purple Event with a cost of 5 or less from your trash to your hand. Then, set up to 1 of your DON!! cards as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.59,
+          "midPrice": 5.55,
+          "highPrice": 100,
+          "marketPrice": 5.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617112,
+      "cardId": "OP10-068",
+      "name": "Diamante",
+      "cleanName": "Diamante",
+      "url": "https://www.tcgplayer.com/product/617112/one-piece-card-game-royal-blood-diamante",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617112_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617113,
+      "cardId": "OP10-069",
+      "name": "Fighting Fish",
+      "cleanName": "Fighting Fish",
+      "url": "https://www.tcgplayer.com/product/617113/one-piece-card-game-royal-blood-fighting-fish",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617113_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Animal;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] <strong>DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em>:</strong> K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.02,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617114,
+      "cardId": "OP10-070",
+      "name": "Trebol",
+      "cleanName": "Trebol",
+      "url": "https://www.tcgplayer.com/product/617114/one-piece-card-game-royal-blood-trebol",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617114_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] All of your Characters with 1000 base power or less cannot be K.O.'d by your opponent's effects until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6.68,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617115,
+      "cardId": "OP10-071",
+      "name": "Donquixote Doflamingo",
+      "cleanName": "Donquixote Doflamingo",
+      "url": "https://www.tcgplayer.com/product/617115/one-piece-card-game-royal-blood-donquixote-doflamingo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617115_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>DON!! 1:</strong> Play up to 1 \"Donquixote Pirates\" type Character card with a cost of 5 or less from your hand.<br>\r\n[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 1 of your DON!! cards:</strong> Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 8,
+          "highPrice": 16.5,
+          "marketPrice": 5.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617116,
+      "cardId": "OP10-071",
+      "name": "Donquixote Doflamingo (Parallel)",
+      "cleanName": "Donquixote Doflamingo Parallel",
+      "url": "https://www.tcgplayer.com/product/617116/one-piece-card-game-royal-blood-donquixote-doflamingo-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617116_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>DON!! 1:</strong> Play up to 1 \"Donquixote Pirates\" type Character card with a cost of 5 or less from your hand.<br>\r\n[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 1 of your DON!! cards:</strong> Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25.99,
+          "midPrice": 36.12,
+          "highPrice": 100,
+          "marketPrice": 26.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617117,
+      "cardId": "OP10-072",
+      "name": "Donquixote Rosinante",
+      "cleanName": "Donquixote Rosinante",
+      "url": "https://www.tcgplayer.com/product/617117/one-piece-card-game-royal-blood-donquixote-rosinante",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617117_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 Event from your hand:</strong> Draw 2 cards.<br>\r\n[End of Your Turn] If you have 7 or more DON!! cards on your field, set up to 2 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2,
+          "midPrice": 7.5,
+          "highPrice": 50,
+          "marketPrice": 5.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617118,
+      "cardId": "OP10-072",
+      "name": "Donquixote Rosinante (Parallel)",
+      "cleanName": "Donquixote Rosinante Parallel",
+      "url": "https://www.tcgplayer.com/product/617118/one-piece-card-game-royal-blood-donquixote-rosinante-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617118_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 Event from your hand:</strong> Draw 2 cards.<br>\r\n[End of Your Turn] If you have 7 or more DON!! cards on your field, set up to 2 of your DON!! cards as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 26.68,
+          "midPrice": 32.99,
+          "highPrice": 55.99,
+          "marketPrice": 28.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617119,
+      "cardId": "OP10-073",
+      "name": "Buffalo",
+      "cleanName": "Buffalo",
+      "url": "https://www.tcgplayer.com/product/617119/one-piece-card-game-royal-blood-buffalo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617119_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617120,
+      "cardId": "OP10-074",
+      "name": "Pica",
+      "cleanName": "Pica",
+      "url": "https://www.tcgplayer.com/product/617120/one-piece-card-game-royal-blood-pica",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617120_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[Once Per Turn] If this Character would be K.O.'d by your opponent's effect, you may rest 2 of your active DON!! cards instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617121,
+      "cardId": "OP10-075",
+      "name": "Foxy",
+      "cleanName": "Foxy",
+      "url": "https://www.tcgplayer.com/product/617121/one-piece-card-game-royal-blood-foxy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617121_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Foxy Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may trash this Character:</strong> If the number of DON!! cards on your field is equal to or less than the number on your opponent's field, draw 1 card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.19,
+          "highPrice": 6,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617122,
+      "cardId": "OP10-076",
+      "name": "Baby 5",
+      "cleanName": "Baby 5",
+      "url": "https://www.tcgplayer.com/product/617122/one-piece-card-game-royal-blood-baby-5",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617122_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "1000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 card from your hand:</strong> If your Leader has the \"Donquixote Pirates\" type, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.06,
+          "midPrice": 0.2,
+          "highPrice": 6,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617123,
+      "cardId": "OP10-077",
+      "name": "Bellamy",
+      "cleanName": "Bellamy",
+      "url": "https://www.tcgplayer.com/product/617123/one-piece-card-game-royal-blood-bellamy",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617123_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Block] <strong>You may rest 2 of your DON!! cards:</strong> Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.04,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617124,
+      "cardId": "OP10-078",
+      "name": "I Do Not Forgive Those Who Laugh at My Family!!!",
+      "cleanName": "I Do Not Forgive Those Who Laugh at My Family",
+      "url": "https://www.tcgplayer.com/product/617124/one-piece-card-game-royal-blood-i-do-not-forgive-those-who-laugh-at-my-family",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617124_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Main]/[Counter] Look at 3 cards from the top of your deck; reveal up to 1 \"Donquixote Pirates\" type card other than [I Do Not Forgive Those Who Laugh at My Family!!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.49,
+          "highPrice": 5,
+          "marketPrice": 0.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617125,
+      "cardId": "OP10-079",
+      "name": "God Thread",
+      "cleanName": "God Thread",
+      "url": "https://www.tcgplayer.com/product/617125/one-piece-card-game-royal-blood-god-thread",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617125_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost 5 or less. Then, add up to 1 DON!! card from your DON!! deck and set it as active.<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5.58,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617126,
+      "cardId": "OP10-080",
+      "name": "Little Black Bears",
+      "cleanName": "Little Black Bears",
+      "url": "https://www.tcgplayer.com/product/617126/one-piece-card-game-royal-blood-little-black-bears",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617126_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 7 or more DON!! cards on your field and 5 or less cards in your hand, draw 1 card.<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617127,
+      "cardId": "OP10-081",
+      "name": "Usopp (081)",
+      "cleanName": "Usopp 081",
+      "url": "https://www.tcgplayer.com/product/617127/one-piece-card-game-royal-blood-usopp-081",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617127_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> K.O. up to 1 of your opponent's Characters with a cost of 2 or less. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.05,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617128,
+      "cardId": "OP10-082",
+      "name": "Kuzan",
+      "cleanName": "Kuzan",
+      "url": "https://www.tcgplayer.com/product/617128/one-piece-card-game-royal-blood-kuzan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617128_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;Former Navy",
+      "attribute": "Special",
+      "effectText": "This Character cannot be removed from the field by your opponent's effects.<br>\r\n[Activate: Main] <strong>You may trash this Character:</strong> Draw 1 card. Then, play up to 1 \"Blackbeard Pirates\" type Character card with a cost of 5 or less other than [Kuzan] from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.65,
+          "midPrice": 2.91,
+          "highPrice": 25,
+          "marketPrice": 2.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617129,
+      "cardId": "OP10-082",
+      "name": "Kuzan (Parallel)",
+      "cleanName": "Kuzan Parallel",
+      "url": "https://www.tcgplayer.com/product/617129/one-piece-card-game-royal-blood-kuzan-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617129_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;Former Navy",
+      "attribute": "Special",
+      "effectText": "This Character cannot be removed from the field by your opponent's effects.<br>\r\n[Activate: Main] <strong>You may trash this Character:</strong> Draw 1 card. Then, play up to 1 \"Blackbeard Pirates\" type Character card with a cost of 5 or less other than [Kuzan] from your trash.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 17,
+          "midPrice": 21.21,
+          "highPrice": 92.78,
+          "marketPrice": 18.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617130,
+      "cardId": "OP10-083",
+      "name": "Kouzuki Momonosuke (083)",
+      "cleanName": "Kouzuki Momonosuke 083",
+      "url": "https://www.tcgplayer.com/product/617130/one-piece-card-game-royal-blood-kouzuki-momonosuke-083",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617130_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Land of Wano;Kouzuki Clan;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character and 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> Give up to 1 of your opponent's Characters -2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617131,
+      "cardId": "OP10-084",
+      "name": "Sanjuan.Wolf",
+      "cleanName": "SanjuanWolf",
+      "url": "https://www.tcgplayer.com/product/617131/one-piece-card-game-royal-blood-sanjuanwolf",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617131_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;Giant",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.02,
+          "marketPrice": 0.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617132,
+      "cardId": "OP10-085",
+      "name": "Jesus Burgess",
+      "cleanName": "Jesus Burgess",
+      "url": "https://www.tcgplayer.com/product/617132/one-piece-card-game-royal-blood-jesus-burgess",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617132_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] If you have 8 or more cards in your trash, this Character gains [Rush].",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2.14,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617133,
+      "cardId": "OP10-086",
+      "name": "Shiryu",
+      "cleanName": "Shiryu",
+      "url": "https://www.tcgplayer.com/product/617133/one-piece-card-game-royal-blood-shiryu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617133_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Opponent's Turn] This Character gains +2000 power.<br>\r\n[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type, and this Character was played on this turn, K.O. up to 1 of your opponent's Characters with a base cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617134,
+      "cardId": "OP10-087",
+      "name": "Tony Tony.Chopper (087)",
+      "cleanName": "Tony TonyChopper 087",
+      "url": "https://www.tcgplayer.com/product/617134/one-piece-card-game-royal-blood-tony-tonychopper-087",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617134_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may rest this Character and 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 2,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617135,
+      "cardId": "OP10-088",
+      "name": "Nami (088)",
+      "cleanName": "Nami 088",
+      "url": "https://www.tcgplayer.com/product/617135/one-piece-card-game-royal-blood-nami-088",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617135_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest this Character and 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> Draw 1 card. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.13,
+          "highPrice": 9.99,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617136,
+      "cardId": "OP10-089",
+      "name": "Nico Robin",
+      "cleanName": "Nico Robin",
+      "url": "https://www.tcgplayer.com/product/617136/one-piece-card-game-royal-blood-nico-robin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617136_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 15.11,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617137,
+      "cardId": "OP10-090",
+      "name": "Franky (090)",
+      "cleanName": "Franky 090",
+      "url": "https://www.tcgplayer.com/product/617137/one-piece-card-game-royal-blood-franky-090",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617137_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] Play up to 1 \"Dressrosa\" type Character card with a cost of 3 or less from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.24,
+          "highPrice": 10.13,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617138,
+      "cardId": "OP10-090",
+      "name": "Franky (090) (Parallel)",
+      "cleanName": "Franky 090 Parallel",
+      "url": "https://www.tcgplayer.com/product/617138/one-piece-card-game-royal-blood-franky-090-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617138_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On K.O.] Play up to 1 \"Dressrosa\" type Character card with a cost of 3 or less from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 4.19,
+          "highPrice": 48,
+          "marketPrice": 3.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617139,
+      "cardId": "OP10-091",
+      "name": "Brook (091)",
+      "cleanName": "Brook 091",
+      "url": "https://www.tcgplayer.com/product/617139/one-piece-card-game-royal-blood-brook-091",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617139_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character and 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> K.O. up to 1 of your opponent's Characters with a cost of 1 or less. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617140,
+      "cardId": "OP10-092",
+      "name": "Perona (092)",
+      "cleanName": "Perona 092",
+      "url": "https://www.tcgplayer.com/product/617140/one-piece-card-game-royal-blood-perona-092",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617140_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] <strong>You may place 2 \"Thriller Bark Pirates\" type cards from your trash at the bottom of your deck in any order:</strong> Up to 1 of your Characters other than [Perona] gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 15.11,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617141,
+      "cardId": "OP10-093",
+      "name": "Saint Homing",
+      "cleanName": "Saint Homing",
+      "url": "https://www.tcgplayer.com/product/617141/one-piece-card-game-royal-blood-saint-homing",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617141_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Celestial Dragons",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] <strong>You may trash this Character:</strong> Up to 1 of your black Characters gains +3 cost until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.98,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617142,
+      "cardId": "OP10-094",
+      "name": "Ryuma",
+      "cleanName": "Ryuma",
+      "url": "https://www.tcgplayer.com/product/617142/one-piece-card-game-royal-blood-ryuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617142_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Land of Wano;Thriller Bark Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] This Character gains [Double Attack].",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617143,
+      "cardId": "OP10-095",
+      "name": "Roronoa Zoro (095)",
+      "cleanName": "Roronoa Zoro 095",
+      "url": "https://www.tcgplayer.com/product/617143/one-piece-card-game-royal-blood-roronoa-zoro-095",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617143_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may rest 1 of your \"Dressrosa\" type Leader or Stage cards:</strong> K.O. up to 1 of your opponent's Characters with a cost of 4 or less. Then, trash 2 cards from the top of your deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 69,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617144,
+      "cardId": "OP10-096",
+      "name": "There's No Longer Any Need for the Seven Warlords of the Sea!!!",
+      "cleanName": "Theres No Longer Any Need for the Seven Warlords of the Sea",
+      "url": "https://www.tcgplayer.com/product/617144/one-piece-card-game-royal-blood-theres-no-longer-any-need-for-the-seven-warlords-of-the-sea",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617144_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's \"The Seven Warlords of the Sea\" type Characters with a cost of 8 or less.<br>\r\n[Trigger] K.O. up to 1 of your opponent's \"The Seven Warlords of the Sea\" type Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617145,
+      "cardId": "OP10-097",
+      "name": "Gum-Gum Rhino Schneider",
+      "cleanName": "Gum Gum Rhino Schneider",
+      "url": "https://www.tcgplayer.com/product/617145/one-piece-card-game-royal-blood-gum-gum-rhino-schneider",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617145_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Dressrosa",
+      "attribute": null,
+      "effectText": "[Main] Up to 1 of your \"Dressrosa\" type Characters gains +2000 power during this turn. Then, if you have 10 or more cards in your trash, that card gains [Banish] during this turn.<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.04,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617146,
+      "cardId": "OP10-098",
+      "name": "Liberation",
+      "cleanName": "Liberation",
+      "url": "https://www.tcgplayer.com/product/617146/one-piece-card-game-royal-blood-liberation",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617146_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "6",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] If the number of your Characters is at least 2 less than the number of your opponent's Characters, K.O. up to 1 of your opponent's Characters with a base cost of 6 or less and up to 1 of your opponent's Characters with a base cost of 4 or less.<br>\r\n[Trigger] Negate the effect of up to 1 of each of your opponent's Leader and Character cards during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.25,
+          "highPrice": 10.17,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617147,
+      "cardId": "OP10-099",
+      "name": "Eustass\"Captain\"Kid (099)",
+      "cleanName": "EustassCaptainKid 099",
+      "url": "https://www.tcgplayer.com/product/617147/one-piece-card-game-royal-blood-eustasscaptainkid-099",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617147_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> Set up to 1 of your \"Supernovas\" type Characters with a cost of 3 to 8 as active. That Character gains [Blocker] until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617148,
+      "cardId": "OP10-099",
+      "name": "Eustass\"Captain\"Kid (099) (Parallel)",
+      "cleanName": "EustassCaptainKid 099 Parallel",
+      "url": "https://www.tcgplayer.com/product/617148/one-piece-card-game-royal-blood-eustasscaptainkid-099-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617148_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[End of Your Turn] <strong>You may turn 1 card from the top of your Life cards face-up:</strong> Set up to 1 of your \"Supernovas\" type Characters with a cost of 3 to 8 as active. That Character gains [Blocker] until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 67.67,
+          "midPrice": 74.49,
+          "highPrice": 149.99,
+          "marketPrice": 37.63,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617149,
+      "cardId": "OP10-100",
+      "name": "Inazuma",
+      "cleanName": "Inazuma",
+      "url": "https://www.tcgplayer.com/product/617149/one-piece-card-game-royal-blood-inazuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617149_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] Rest up to 1 of your opponent's Characters with a cost equal to or less than the total of your and your opponent's Life cards.<br>\r\n[Trigger] If your Leader has the \"Revolutionary Army\" type and you and your opponent have a total of 5 or less Life cards, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.08,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617150,
+      "cardId": "OP10-101",
+      "name": "Urouge",
+      "cleanName": "Urouge",
+      "url": "https://www.tcgplayer.com/product/617150/one-piece-card-game-royal-blood-urouge",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617150_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Fallen Monk Pirates;Supernovas",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.05,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617151,
+      "cardId": "OP10-102",
+      "name": "Emporio.Ivankov",
+      "cleanName": "EmporioIvankov",
+      "url": "https://www.tcgplayer.com/product/617151/one-piece-card-game-royal-blood-emporioivankov",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617151_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] Up to 3 of your \"Revolutionary Army\" type Characters gain +1000 power during this turn. Then, add 1 card from the top of your Life cards to your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617152,
+      "cardId": "OP10-103",
+      "name": "Capone\"Gang\"Bege",
+      "cleanName": "CaponeGangBege",
+      "url": "https://www.tcgplayer.com/product/617152/one-piece-card-game-royal-blood-caponegangbege",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617152_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Firetank Pirates;Supernovas",
+      "attribute": "Ranged",
+      "effectText": "[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> Add up to 1 \"Supernovas\" type Character card from your hand to the top of your Life cards face-up.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617153,
+      "cardId": "OP10-104",
+      "name": "Caribou",
+      "cleanName": "Caribou",
+      "url": "https://www.tcgplayer.com/product/617153/one-piece-card-game-royal-blood-caribou",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617153_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Caribou Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[DON!! x1] If your Leader has the \"Supernovas\" type and your opponent has 3 or more Life cards, this Character cannot be K.O.'d in battle.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617154,
+      "cardId": "OP10-105",
+      "name": "Cavendish (105)",
+      "cleanName": "Cavendish 105",
+      "url": "https://www.tcgplayer.com/product/617154/one-piece-card-game-royal-blood-cavendish-105",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617154_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Beautiful Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.98,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617155,
+      "cardId": "OP10-106",
+      "name": "Killer",
+      "cleanName": "Killer",
+      "url": "https://www.tcgplayer.com/product/617155/one-piece-card-game-royal-blood-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617155_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On K.O.] If your Leader has the \"Supernovas\" type, look at 3 cards from the top of your deck; reveal up to 1 \"Supernovas\" or \"Kid Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617156,
+      "cardId": "OP10-107",
+      "name": "Jewelry Bonney",
+      "cleanName": "Jewelry Bonney",
+      "url": "https://www.tcgplayer.com/product/617156/one-piece-card-game-royal-blood-jewelry-bonney",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617156_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Bonney Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand:</strong> Add up to 1 \"Supernovas\" type Character card with a cost of 5 from your hand to the top of your Life cards face-up.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 2,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617157,
+      "cardId": "OP10-108",
+      "name": "Scratchmen Apoo",
+      "cleanName": "Scratchmen Apoo",
+      "url": "https://www.tcgplayer.com/product/617157/one-piece-card-game-royal-blood-scratchmen-apoo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617157_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "On-Air Pirates;Supernovas",
+      "attribute": "Ranged",
+      "effectText": "If you have a yellow \"Supernovas\" type Character other than [Scratchmen Apoo], this Character gains [Blocker].",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.05,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617158,
+      "cardId": "OP10-109",
+      "name": "Basil Hawkins",
+      "cleanName": "Basil Hawkins",
+      "url": "https://www.tcgplayer.com/product/617158/one-piece-card-game-royal-blood-basil-hawkins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617158_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Hawkins Pirates;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[On K.O.] Trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.7,
+          "highPrice": 5,
+          "marketPrice": 0.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617159,
+      "cardId": "OP10-110",
+      "name": "Heat & Wire",
+      "cleanName": "Heat and Wire",
+      "url": "https://www.tcgplayer.com/product/617159/one-piece-card-game-royal-blood-heat-and-wire",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617159_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash;Special",
+      "effectText": "[On Play] Rest up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.<br>\r\n[Trigger] If you have 2 or less Life cards, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 15.03,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617160,
+      "cardId": "OP10-111",
+      "name": "Monkey.D.Luffy (111)",
+      "cleanName": "MonkeyDLuffy 111",
+      "url": "https://www.tcgplayer.com/product/617160/one-piece-card-game-royal-blood-monkeydluffy-111",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617160_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Supernovas\" type card other than [Monkey.D.Luffy] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.35,
+          "highPrice": 30,
+          "marketPrice": 0.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617161,
+      "cardId": "OP10-111",
+      "name": "Monkey.D.Luffy (111) (Parallel)",
+      "cleanName": "MonkeyDLuffy 111 Parallel",
+      "url": "https://www.tcgplayer.com/product/617161/one-piece-card-game-royal-blood-monkeydluffy-111-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617161_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Strike",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Supernovas\" type card other than [Monkey.D.Luffy] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12,
+          "midPrice": 17.39,
+          "highPrice": 99.99,
+          "marketPrice": 15.91,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617162,
+      "cardId": "OP10-112",
+      "name": "Eustass\"Captain\"Kid (112)",
+      "cleanName": "EustassCaptainKid 112",
+      "url": "https://www.tcgplayer.com/product/617162/one-piece-card-game-royal-blood-eustasscaptainkid-112",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617162_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may rest this Character:</strong> Trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[End of Your Turn] If your opponent has 2 or less Life cards, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.8,
+          "midPrice": 4.04,
+          "highPrice": 50,
+          "marketPrice": 3.4,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617163,
+      "cardId": "OP10-112",
+      "name": "Eustass\"Captain\"Kid (112) (Parallel)",
+      "cleanName": "EustassCaptainKid 112 Parallel",
+      "url": "https://www.tcgplayer.com/product/617163/one-piece-card-game-royal-blood-eustasscaptainkid-112-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617163_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may rest this Character:</strong> Trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[End of Your Turn] If your opponent has 2 or less Life cards, draw 1 card and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 19.99,
+          "midPrice": 26.02,
+          "highPrice": 85.99,
+          "marketPrice": 22.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617164,
+      "cardId": "OP10-113",
+      "name": "Roronoa Zoro (113)",
+      "cleanName": "Roronoa Zoro 113",
+      "url": "https://www.tcgplayer.com/product/617164/one-piece-card-game-royal-blood-roronoa-zoro-113",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617164_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas",
+      "attribute": "Slash",
+      "effectText": "If you have less Life cards than your opponent, this Character gains [Rush].<br>\r\n[Trigger] You may trash 1 card from your hand: If your Leader has the \"Supernovas\" type, play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617165,
+      "cardId": "OP10-114",
+      "name": "X.Drake",
+      "cleanName": "XDrake",
+      "url": "https://www.tcgplayer.com/product/617165/one-piece-card-game-royal-blood-xdrake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617165_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Drake Pirates;Navy;Supernovas",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> If the number of your Life cards is equal to or less than the number of your opponent's Life cards, rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617166,
+      "cardId": "OP10-115",
+      "name": "Let's Meet Again in the New World",
+      "cleanName": "Lets Meet Again in the New World",
+      "url": "https://www.tcgplayer.com/product/617166/one-piece-card-game-royal-blood-lets-meet-again-in-the-new-world",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617166_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, if you have 0 Life cards, draw 1 card.<br>\r\n[Trigger] K.O. up to 1 of your opponent's Characters with a cost equal to or less than the number of your opponent's Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 15.12,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617167,
+      "cardId": "OP10-116",
+      "name": "Damned Punk",
+      "cleanName": "Damned Punk",
+      "url": "https://www.tcgplayer.com/product/617167/one-piece-card-game-royal-blood-damned-punk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617167_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kid Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Main] Look at up to 1 card from the top of your or your opponent's Life cards and place it at the top or bottom of the Life cards. Then, K.O. up to 1 of your opponent's Characters with a cost of 5 or less.<br>\r\n[Trigger] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.23,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617168,
+      "cardId": "OP10-117",
+      "name": "ROOM",
+      "cleanName": "ROOM",
+      "url": "https://www.tcgplayer.com/product/617168/one-piece-card-game-royal-blood-room",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617168_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas",
+      "attribute": null,
+      "effectText": "[Counter] If you have 1 or less Life cards, up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, set up to 1 of your Characters with a cost of 5 or less as active.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617169,
+      "cardId": "OP10-118",
+      "name": "Monkey.D.Luffy (118)",
+      "cleanName": "MonkeyDLuffy 118",
+      "url": "https://www.tcgplayer.com/product/617169/one-piece-card-game-royal-blood-monkeydluffy-118",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617169_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "Once per turn, this Character cannot be K.O.'d by your opponent's effects.<br>\r\n[When Attacking] <strong>You may place 3 cards from your trash at the bottom of your deck in any order:</strong> If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8,
+          "midPrice": 10.68,
+          "highPrice": 50,
+          "marketPrice": 9.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617170,
+      "cardId": "OP10-118",
+      "name": "Monkey.D.Luffy (118) (Parallel)",
+      "cleanName": "MonkeyDLuffy 118 Parallel",
+      "url": "https://www.tcgplayer.com/product/617170/one-piece-card-game-royal-blood-monkeydluffy-118-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617170_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;Dressrosa",
+      "attribute": "Strike",
+      "effectText": "Once per turn, this Character cannot be K.O.'d by your opponent's effects.<br>\r\n[When Attacking] <strong>You may place 3 cards from your trash at the bottom of your deck in any order:</strong> If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 74,
+          "midPrice": 86.23,
+          "highPrice": 1000,
+          "marketPrice": 87.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617171,
+      "cardId": "OP10-119",
+      "name": "Trafalgar Law (119)",
+      "cleanName": "Trafalgar Law 119",
+      "url": "https://www.tcgplayer.com/product/617171/one-piece-card-game-royal-blood-trafalgar-law-119",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617171_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] Reveal up to 1 \"Supernovas\" type Character card from your hand and add it to the top of your Life cards face-down. Then, give up to 1 rested DON!! card to 1 of your \"Supernovas\" type Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3,
+          "midPrice": 5,
+          "highPrice": 50,
+          "marketPrice": 4.83,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617172,
+      "cardId": "OP10-119",
+      "name": "Trafalgar Law (119) (Parallel)",
+      "cleanName": "Trafalgar Law 119 Parallel",
+      "url": "https://www.tcgplayer.com/product/617172/one-piece-card-game-royal-blood-trafalgar-law-119-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617172_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] Reveal up to 1 \"Supernovas\" type Character card from your hand and add it to the top of your Life cards face-down. Then, give up to 1 rested DON!! card to 1 of your \"Supernovas\" type Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 32,
+          "midPrice": 42.36,
+          "highPrice": 99.99,
+          "marketPrice": 40.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617173,
+      "cardId": "OP10-119",
+      "name": "Trafalgar Law (119) (Manga)",
+      "cleanName": "Trafalgar Law 119 Manga",
+      "url": "https://www.tcgplayer.com/product/617173/one-piece-card-game-royal-blood-trafalgar-law-119-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617173_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;Dressrosa",
+      "attribute": "Slash",
+      "effectText": "[On Play] Reveal up to 1 \"Supernovas\" type Character card from your hand and add it to the top of your Life cards face-down. Then, give up to 1 rested DON!! card to 1 of your \"Supernovas\" type Leader.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 802.25,
+          "midPrice": 996.49,
+          "highPrice": 9999.98,
+          "marketPrice": 816.8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617174,
+      "cardId": "ST12-012",
+      "name": "Charlotte Pudding (SP)",
+      "cleanName": "Charlotte Pudding SP",
+      "url": "https://www.tcgplayer.com/product/617174/one-piece-card-game-royal-blood-charlotte-pudding-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617174_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] Return this Character to the owner's hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 65.99,
+          "midPrice": 77.48,
+          "highPrice": 144.95,
+          "marketPrice": 68.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617175,
+      "cardId": "ST14-003",
+      "name": "Sanji (SP)",
+      "cleanName": "Sanji SP",
+      "url": "https://www.tcgplayer.com/product/617175/one-piece-card-game-royal-blood-sanji-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617175_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have a Character with a cost of 6 or more, K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 135,
+          "midPrice": 164.4,
+          "highPrice": 249.99,
+          "marketPrice": 160.57,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617176,
+      "cardId": "ST15-002",
+      "name": "Edward.Newgate (SP)",
+      "cleanName": "EdwardNewgate SP",
+      "url": "https://www.tcgplayer.com/product/617176/one-piece-card-game-royal-blood-edwardnewgate-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617176_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "8000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "The Four Emperors;Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Give up to 1 rested DON!! card to your Leader or 1 of your Characters.<br>\r\n[Activate: Main] <strong>You may rest this Character:</strong> K.O. up to 1 of your opponent's Characters with 5000 power or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 216.8,
+          "midPrice": 225.97,
+          "highPrice": 499.99,
+          "marketPrice": 221.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 617177,
+      "cardId": "ST18-001",
+      "name": "Uso-Hachi (SP)",
+      "cleanName": "Uso Hachi SP",
+      "url": "https://www.tcgplayer.com/product/617177/one-piece-card-game-royal-blood-uso-hachi-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/617177_200w.jpg",
+      "groupId": 23766,
+      "setCode": "OP10",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 8 or more DON!! cards on your field, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 159.98,
+          "midPrice": 235,
+          "highPrice": 300,
+          "marketPrice": 156.51,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 4,
+  "errors": [
+    "Product 624357 (DON!! Card (Alternate Art)) has no Number in extendedData"
+  ]
+}

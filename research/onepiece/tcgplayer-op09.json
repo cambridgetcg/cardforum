@@ -1,0 +1,4788 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Emperors in the New World",
+  "groupId": 23589,
+  "setCode": "OP09",
+  "totalProducts": 169,
+  "totalCards": 159,
+  "scrapedAt": "2026-02-15T22:54:09.269Z",
+  "durationMs": 90,
+  "cards": [
+    {
+      "productId": 596912,
+      "cardId": "OP04-119",
+      "name": "Donquixote Rosinante (SP)",
+      "cleanName": "Donquixote Rosinante SP",
+      "url": "https://www.tcgplayer.com/product/596912/one-piece-card-game-emperors-in-the-new-world-donquixote-rosinante-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596912_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "8000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] If this Character is rested, your active Characters with a base cost of 5 cannot be K.O.'d by effects.<br>\r\n[On Play] <strong>You may rest this Character</strong>: Play up to 1 green Character card with a cost of 5 from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 201.99,
+          "midPrice": 224.99,
+          "highPrice": 400,
+          "marketPrice": 176.53,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596913,
+      "cardId": "OP05-067",
+      "name": "Zoro-Juurou (SP)",
+      "cleanName": "Zoro Juurou SP",
+      "url": "https://www.tcgplayer.com/product/596913/one-piece-card-game-emperors-in-the-new-world-zoro-juurou-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596913_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] If you have 3 or less Life cards, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 500,
+          "midPrice": 841,
+          "highPrice": 1300,
+          "marketPrice": 537.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596914,
+      "cardId": "OP05-093",
+      "name": "Rob Lucci (SP)",
+      "cleanName": "Rob Lucci SP",
+      "url": "https://www.tcgplayer.com/product/596914/one-piece-card-game-emperors-in-the-new-world-rob-lucci-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596914_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP0",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may place 3 cards from your trash at the bottom of your deck in any order</strong>: K.O. up to 1 of your opponent's Characters with a cost of 2 or less and up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 129,
+          "midPrice": 155,
+          "highPrice": 1000,
+          "marketPrice": 121.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596915,
+      "cardId": "OP05-119",
+      "name": "Monkey.D.Luffy (Wanted Poster)",
+      "cleanName": "MonkeyDLuffy Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/596915/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596915_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>DON!! 10</strong>: Place all of your Characters except this Character at the bottom of your deck in any order. Then, take an extra turn after this one.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may rest 1 of your DON!! cards</strong>: Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 800,
+          "midPrice": 900.49,
+          "highPrice": 6000,
+          "marketPrice": 729.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596916,
+      "cardId": "OP07-015",
+      "name": "Monkey.D.Dragon (SP)",
+      "cleanName": "MonkeyDDragon SP",
+      "url": "https://www.tcgplayer.com/product/596916/one-piece-card-game-emperors-in-the-new-world-monkeyddragon-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596916_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "9000",
+      "cost": "8",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\n[On Play] Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 250,
+          "midPrice": 328.77,
+          "highPrice": 1000,
+          "marketPrice": 204.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596917,
+      "cardId": "OP07-051",
+      "name": "Boa Hancock (SP)",
+      "cleanName": "Boa Hancock SP",
+      "url": "https://www.tcgplayer.com/product/596917/one-piece-card-game-emperors-in-the-new-world-boa-hancock-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596917_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "8000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Kuja Pirates;The Seven Warlords of the Sea",
+      "attribute": "Special",
+      "effectText": "[On Play] Up to 1 of your opponent's Characters other than [Monkey.D.Luffy] cannot attack until the end of your opponent's next turn. Then, place up to 1 Character with a cost of 1 or less at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 899,
+          "midPrice": 915,
+          "highPrice": 1999,
+          "marketPrice": 709.8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596918,
+      "cardId": "OP08-106",
+      "name": "Nami (SP)",
+      "cleanName": "Nami SP",
+      "url": "https://www.tcgplayer.com/product/596918/one-piece-card-game-emperors-in-the-new-world-nami-sp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596918_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may trash 1 card with a [Trigger] from your hand</strong>: K.O. up to 1 of your opponent's Characters with a cost of 5 or less. Then, if you have 3 or less cards in your hand, draw 1 card.<br>\r\n[Trigger] Activate this card's [On Play] effect.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 955,
+          "midPrice": 1199.95,
+          "highPrice": 5000,
+          "marketPrice": 877.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596919,
+      "cardId": "OP09-001",
+      "name": "Shanks (001)",
+      "cleanName": "Shanks 001",
+      "url": "https://www.tcgplayer.com/product/596919/one-piece-card-game-emperors-in-the-new-world-shanks-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596919_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards 1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.18,
+          "highPrice": 5,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596920,
+      "cardId": "OP09-001",
+      "name": "Shanks (001) (Parallel)",
+      "cleanName": "Shanks 001 Parallel",
+      "url": "https://www.tcgplayer.com/product/596920/one-piece-card-game-emperors-in-the-new-world-shanks-001-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596920_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Red",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards 1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 35.68,
+          "midPrice": 41.02,
+          "highPrice": 299.99,
+          "marketPrice": 38.94,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596921,
+      "cardId": "OP09-002",
+      "name": "Uta",
+      "cleanName": "Uta",
+      "url": "https://www.tcgplayer.com/product/596921/one-piece-card-game-emperors-in-the-new-world-uta",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596921_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Red-Haired Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.04,
+          "midPrice": 0.27,
+          "highPrice": 5,
+          "marketPrice": 0.26,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596922,
+      "cardId": "OP09-002",
+      "name": "Uta (Parallel)",
+      "cleanName": "Uta Parallel",
+      "url": "https://www.tcgplayer.com/product/596922/one-piece-card-game-emperors-in-the-new-world-uta-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596922_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "FILM",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Red-Haired Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.99,
+          "midPrice": 6.35,
+          "highPrice": 60,
+          "marketPrice": 5.02,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596923,
+      "cardId": "OP09-003",
+      "name": "Shachi & Penguin",
+      "cleanName": "Shachi and Penguin",
+      "url": "https://www.tcgplayer.com/product/596923/one-piece-card-game-emperors-in-the-new-world-shachi-and-penguin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596923_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Ranged",
+      "effectText": "[When Attacking] Give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596924,
+      "cardId": "OP09-004",
+      "name": "Shanks (004)",
+      "cleanName": "Shanks 004",
+      "url": "https://www.tcgplayer.com/product/596924/one-piece-card-game-emperors-in-the-new-world-shanks-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596924_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters 1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.15,
+          "midPrice": 1.4,
+          "highPrice": 85,
+          "marketPrice": 0.9,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596925,
+      "cardId": "OP09-004",
+      "name": "Shanks (004) (Manga)",
+      "cleanName": "Shanks 004 Manga",
+      "url": "https://www.tcgplayer.com/product/596925/one-piece-card-game-emperors-in-the-new-world-shanks-004-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596925_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters 1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2494,
+          "midPrice": 2750,
+          "highPrice": 10000,
+          "marketPrice": 1203.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596926,
+      "cardId": "OP09-004",
+      "name": "Shanks (004) (Alternate Art)",
+      "cleanName": "Shanks 004 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/596926/one-piece-card-game-emperors-in-the-new-world-shanks-004-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596926_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters -1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 25,
+          "midPrice": 29.81,
+          "highPrice": 99.99,
+          "marketPrice": 28.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596927,
+      "cardId": "OP09-004",
+      "name": "Shanks (004) (Wanted Poster)",
+      "cleanName": "Shanks 004 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/596927/one-piece-card-game-emperors-in-the-new-world-shanks-004-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596927_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "Give all of your opponent's Characters 1000 power.<br>\r\n[Rush] <em>(This card can attack on the turn in which it is played.)</em>",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 260,
+          "midPrice": 346.98,
+          "highPrice": 1500,
+          "marketPrice": 301.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596928,
+      "cardId": "OP09-005",
+      "name": "Silvers Rayleigh",
+      "cleanName": "Silvers Rayleigh",
+      "url": "https://www.tcgplayer.com/product/596928/one-piece-card-game-emperors-in-the-new-world-silvers-rayleigh",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596928_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Roger Pirates",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] If your opponent has 2 or more Characters with a base power of 5000 or more, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596929,
+      "cardId": "OP09-006",
+      "name": "Howling Gab",
+      "cleanName": "Howling Gab",
+      "url": "https://www.tcgplayer.com/product/596929/one-piece-card-game-emperors-in-the-new-world-howling-gab",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596929_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.36,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596930,
+      "cardId": "OP09-007",
+      "name": "Heat",
+      "cleanName": "Heat",
+      "url": "https://www.tcgplayer.com/product/596930/one-piece-card-game-emperors-in-the-new-world-heat",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596930_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Up to 1 of your Leader with 4000 power or less gains +1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.77,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596931,
+      "cardId": "OP09-008",
+      "name": "Building Snake",
+      "cleanName": "Building Snake",
+      "url": "https://www.tcgplayer.com/product/596931/one-piece-card-game-emperors-in-the-new-world-building-snake",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596931_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may place this Character at the bottom of the owner's deck</strong>: Give up to 1 of your opponent's Characters 3000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596932,
+      "cardId": "OP09-009",
+      "name": "Benn.Beckman",
+      "cleanName": "BennBeckman",
+      "url": "https://www.tcgplayer.com/product/596932/one-piece-card-game-emperors-in-the-new-world-bennbeckman",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596932_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.99,
+          "highPrice": 10,
+          "marketPrice": 0.65,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596933,
+      "cardId": "OP09-009",
+      "name": "Benn.Beckman (Parallel)",
+      "cleanName": "BennBeckman Parallel",
+      "url": "https://www.tcgplayer.com/product/596933/one-piece-card-game-emperors-in-the-new-world-bennbeckman-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596933_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 8,
+          "midPrice": 14.63,
+          "highPrice": 40,
+          "marketPrice": 9.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596934,
+      "cardId": "OP09-010",
+      "name": "Bonk Punch",
+      "cleanName": "Bonk Punch",
+      "url": "https://www.tcgplayer.com/product/596934/one-piece-card-game-emperors-in-the-new-world-bonk-punch",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596934_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] Play up to 1 [Monster] from your hand.<br>\r\n[DON!! x1] [When Attacking] This Character gains +2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596935,
+      "cardId": "OP09-011",
+      "name": "Hongo",
+      "cleanName": "Hongo",
+      "url": "https://www.tcgplayer.com/product/596935/one-piece-card-game-emperors-in-the-new-world-hongo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596935_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may rest this Character</strong>: If your Leader has the \"Red-Haired Pirates\" type, give up to 1 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 4.99,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596936,
+      "cardId": "OP09-012",
+      "name": "Monster",
+      "cleanName": "Monster",
+      "url": "https://www.tcgplayer.com/product/596936/one-piece-card-game-emperors-in-the-new-world-monster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596936_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Red-Haired Pirates",
+      "attribute": "Strike",
+      "effectText": "If your Character [Bonk Punch] would be K.O.'d by an effect, you may trash this Character instead.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.77,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596937,
+      "cardId": "OP09-013",
+      "name": "Yasopp",
+      "cleanName": "Yasopp",
+      "url": "https://www.tcgplayer.com/product/596937/one-piece-card-game-emperors-in-the-new-world-yasopp",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596937_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[On Play] Up to 1 of your Leader gains +1000 power until the end of your opponent's next turn.<br>\r\n[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters 1000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 30,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596938,
+      "cardId": "OP09-014",
+      "name": "Limejuice",
+      "cleanName": "Limejuice",
+      "url": "https://www.tcgplayer.com/product/596938/one-piece-card-game-emperors-in-the-new-world-limejuice",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596938_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 4.88,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596939,
+      "cardId": "OP09-015",
+      "name": "Lucky.Roux",
+      "cleanName": "LuckyRoux",
+      "url": "https://www.tcgplayer.com/product/596939/one-piece-card-game-emperors-in-the-new-world-luckyroux",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596939_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Ranged",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On K.O.] If your Leader has the \"Red-Haired Pirates\" type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 10,
+          "marketPrice": 0.12,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596940,
+      "cardId": "OP09-016",
+      "name": "Rockstar",
+      "cleanName": "Rockstar",
+      "url": "https://www.tcgplayer.com/product/596940/one-piece-card-game-emperors-in-the-new-world-rockstar",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596940_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.8,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596941,
+      "cardId": "OP09-017",
+      "name": "Wire",
+      "cleanName": "Wire",
+      "url": "https://www.tcgplayer.com/product/596941/one-piece-card-game-emperors-in-the-new-world-wire",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596941_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "4000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] If your Leader has 7000 power or more and the \"Kid Pirates\" type, this Character gains [Rush].",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.8,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596942,
+      "cardId": "OP09-018",
+      "name": "Get Out of Here!",
+      "cleanName": "Get Out of Here",
+      "url": "https://www.tcgplayer.com/product/596942/one-piece-card-game-emperors-in-the-new-world-get-out-of-here",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596942_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 2 of your opponent's Characters with a total power of 4000 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596943,
+      "cardId": "OP09-019",
+      "name": "Nobody Hurts a Friend of Mine!!!!",
+      "cleanName": "Nobody Hurts a Friend of Mine",
+      "url": "https://www.tcgplayer.com/product/596943/one-piece-card-game-emperors-in-the-new-world-nobody-hurts-a-friend-of-mine",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596943_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] If your Leader has the \"Red-Haired Pirates\" type, give up to 1 of your opponent's Characters -3000 power during this turn. Then, if your opponent has a Character with 5000 or more power, draw 1 card.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596944,
+      "cardId": "OP09-020",
+      "name": "Come On!! We'll Fight You!!",
+      "cleanName": "Come On Well Fight You",
+      "url": "https://www.tcgplayer.com/product/596944/one-piece-card-game-emperors-in-the-new-world-come-on-well-fight-you",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596944_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Red",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "The Four Emperors;Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Red-Haired Pirates\" type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596945,
+      "cardId": "OP09-021",
+      "name": "Red Force",
+      "cleanName": "Red Force",
+      "url": "https://www.tcgplayer.com/product/596945/one-piece-card-game-emperors-in-the-new-world-red-force",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596945_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Red",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Red-Haired Pirates",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may rest this Stage</strong>: If your Leader has the \"Red-Haired Pirates\" type, give up to 1 of your opponent's Characters 1000 power during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.84,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596946,
+      "cardId": "OP09-022",
+      "name": "Lim (022)",
+      "cleanName": "Lim 022",
+      "url": "https://www.tcgplayer.com/product/596946/one-piece-card-game-emperors-in-the-new-world-lim-022",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596946_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "Your Character cards are played rested.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may rest 3 of your DON!! cards</strong>: Add up to 1 DON!! card from your DON!! deck and rest it, and play up to 1 \"ODYSSEY\" type Character card with a cost of 5 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596947,
+      "cardId": "OP09-022",
+      "name": "Lim (022) (Parallel)",
+      "cleanName": "Lim 022 Parallel",
+      "url": "https://www.tcgplayer.com/product/596947/one-piece-card-game-emperors-in-the-new-world-lim-022-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596947_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Green;Purple",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "Your Character cards are played rested.<br>\r\n[Activate: Main] [Once Per Turn] <strong>You may rest 3 of your DON!! cards</strong>: Add up to 1 DON!! card from your DON!! deck and rest it, and play up to 1 \"ODYSSEY\" type Character card with a cost of 5 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 15,
+          "midPrice": 20,
+          "highPrice": 199.99,
+          "marketPrice": 17.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596948,
+      "cardId": "OP09-023",
+      "name": "Adio",
+      "cleanName": "Adio",
+      "url": "https://www.tcgplayer.com/product/596948/one-piece-card-game-emperors-in-the-new-world-adio",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596948_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "9000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"ODYSSEY\" type, set up to 3 of your DON!! cards as active.<br>\r\n[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 1 of your DON!! cards</strong>: Up to 1 of your Leader or Character cards gains +2000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.3,
+          "highPrice": 10,
+          "marketPrice": 0.25,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596949,
+      "cardId": "OP09-023",
+      "name": "Adio (Parallel)",
+      "cleanName": "Adio Parallel",
+      "url": "https://www.tcgplayer.com/product/596949/one-piece-card-game-emperors-in-the-new-world-adio-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596949_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "9000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If your Leader has the \"ODYSSEY\" type, set up to 3 of your DON!! cards as active.<br>\r\n[On Your Opponent's Attack] [Once Per Turn] <strong>You may rest 1 of your DON!! cards</strong>: Up to 1 of your Leader or Character cards gains +2000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.99,
+          "midPrice": 2.15,
+          "highPrice": 60,
+          "marketPrice": 1.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596950,
+      "cardId": "OP09-024",
+      "name": "Usopp (024)",
+      "cleanName": "Usopp 024",
+      "url": "https://www.tcgplayer.com/product/596950/one-piece-card-game-emperors-in-the-new-world-usopp-024",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596950_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Ranged",
+      "effectText": "[On Play] If you have 2 or more rested Characters, draw 2 cards and trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596951,
+      "cardId": "OP09-025",
+      "name": "Crocodile (025)",
+      "cleanName": "Crocodile 025",
+      "url": "https://www.tcgplayer.com/product/596951/one-piece-card-game-emperors-in-the-new-world-crocodile-025",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596951_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Baroque Works;The Seven Warlords of the Sea;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "If your Leader has the \"ODYSSEY\" type, this Character cannot be K.O.'d in battle by Leaders.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596952,
+      "cardId": "OP09-026",
+      "name": "Sakazuki",
+      "cleanName": "Sakazuki",
+      "url": "https://www.tcgplayer.com/product/596952/one-piece-card-game-emperors-in-the-new-world-sakazuki",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596952_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Navy;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or more rested Characters, K.O. up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.16,
+          "highPrice": 5,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596953,
+      "cardId": "OP09-027",
+      "name": "Sabo (027)",
+      "cleanName": "Sabo 027",
+      "url": "https://www.tcgplayer.com/product/596953/one-piece-card-game-emperors-in-the-new-world-sabo-027",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596953_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Revolutionary Army;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[When Attacking] [Once Per Turn] If you have 3 or more rested Characters, draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596954,
+      "cardId": "OP09-028",
+      "name": "Sanji (028)",
+      "cleanName": "Sanji 028",
+      "url": "https://www.tcgplayer.com/product/596954/one-piece-card-game-emperors-in-the-new-world-sanji-028",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596954_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Play up to 1 \"ODYSSEY\" or \"Straw Hat Crew\" type Character card with a cost of 4 or less from your trash rested.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2.06,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596955,
+      "cardId": "OP09-029",
+      "name": "Tony Tony.Chopper",
+      "cleanName": "Tony TonyChopper",
+      "url": "https://www.tcgplayer.com/product/596955/one-piece-card-game-emperors-in-the-new-world-tony-tonychopper",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596955_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": "[End of Your Turn] Set up to 1 of your \"ODYSSEY\" type Characters with a cost of 4 or less as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 1.32,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596956,
+      "cardId": "OP09-030",
+      "name": "Trafalgar Law",
+      "cleanName": "Trafalgar Law",
+      "url": "https://www.tcgplayer.com/product/596956/one-piece-card-game-emperors-in-the-new-world-trafalgar-law",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596956_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Heart Pirates;Supernovas;ODYSSEY",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may return 1 of your Characters to the owner's hand</strong>: Play up to 1 \"ODYSSEY\" type Character card with a cost of 3 or less other than [Trafalgar Law] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596957,
+      "cardId": "OP09-031",
+      "name": "Donquixote Doflamingo",
+      "cleanName": "Donquixote Doflamingo",
+      "url": "https://www.tcgplayer.com/product/596957/one-piece-card-game-emperors-in-the-new-world-donquixote-doflamingo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596957_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Donquixote Pirates;The Seven Warlords of the Sea;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[End of Your Turn] If you have 2 or more rested Characters, set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.24,
+          "highPrice": 5,
+          "marketPrice": 0.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596958,
+      "cardId": "OP09-032",
+      "name": "Donquixote Rosinante (032)",
+      "cleanName": "Donquixote Rosinante 032",
+      "url": "https://www.tcgplayer.com/product/596958/one-piece-card-game-emperors-in-the-new-world-donquixote-rosinante-032",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596958_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Donquixote Pirates;Navy;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Your Opponent's Attack] [Once Per Turn] Set this Character as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596959,
+      "cardId": "OP09-033",
+      "name": "Nico Robin (033)",
+      "cleanName": "Nico Robin 033",
+      "url": "https://www.tcgplayer.com/product/596959/one-piece-card-game-emperors-in-the-new-world-nico-robin-033",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596959_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 2 or more rested Characters, none of your \"ODYSSEY\" or \"Straw Hat Crew\" type Characters can be K.O.'d by effects until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 1.35,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596960,
+      "cardId": "OP09-034",
+      "name": "Perona",
+      "cleanName": "Perona",
+      "url": "https://www.tcgplayer.com/product/596960/one-piece-card-game-emperors-in-the-new-world-perona",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596960_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates;Muggy Kingdom",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Dracule Mihawk] or \"Thriller Bark Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order and trash 1 card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.23,
+          "highPrice": 5,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596961,
+      "cardId": "OP09-034",
+      "name": "Perona (Parallel)",
+      "cleanName": "Perona Parallel",
+      "url": "https://www.tcgplayer.com/product/596961/one-piece-card-game-emperors-in-the-new-world-perona-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596961_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates;Muggy Kingdom",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Dracule Mihawk] or \"Thriller Bark Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order and trash 1 card from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.38,
+          "midPrice": 7,
+          "highPrice": 420.69,
+          "marketPrice": 5.59,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596962,
+      "cardId": "OP09-035",
+      "name": "Portgas.D.Ace",
+      "cleanName": "PortgasDAce",
+      "url": "https://www.tcgplayer.com/product/596962/one-piece-card-game-emperors-in-the-new-world-portgasdace",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596962_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Whitebeard Pirates;ODYSSEY",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or more rested Characters, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596963,
+      "cardId": "OP09-036",
+      "name": "Monkey.D.Luffy (036)",
+      "cleanName": "MonkeyDLuffy 036",
+      "url": "https://www.tcgplayer.com/product/596963/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-036",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596963_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": "[On Play] If you have 2 or more rested Characters, rest up to 1 of your opponent's DON!! cards or Characters with a cost of 6 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.32,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596964,
+      "cardId": "OP09-037",
+      "name": "Lim (037)",
+      "cleanName": "Lim 037",
+      "url": "https://www.tcgplayer.com/product/596964/one-piece-card-game-emperors-in-the-new-world-lim-037",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596964_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"ODYSSEY\" type card other than [Lim] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[End of Your Turn] If you have 3 or more rested Characters, set this Character as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.37,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596965,
+      "cardId": "OP09-037",
+      "name": "Lim (037) (Parallel)",
+      "cleanName": "Lim 037 Parallel",
+      "url": "https://www.tcgplayer.com/product/596965/one-piece-card-game-emperors-in-the-new-world-lim-037-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596965_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "ODYSSEY",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"ODYSSEY\" type card other than [Lim] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[End of Your Turn] If you have 3 or more rested Characters, set this Character as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4,
+          "midPrice": 6,
+          "highPrice": 135,
+          "marketPrice": 5.27,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596966,
+      "cardId": "OP09-038",
+      "name": "Rob Lucci (038)",
+      "cleanName": "Rob Lucci 038",
+      "url": "https://www.tcgplayer.com/product/596966/one-piece-card-game-emperors-in-the-new-world-rob-lucci-038",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596966_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Green",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "CP9;ODYSSEY",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5.88,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596967,
+      "cardId": "OP09-039",
+      "name": "Gum-Gum Cuatro Jet Cross Shock Bazooka",
+      "cleanName": "Gum Gum Cuatro Jet Cross Shock Bazooka",
+      "url": "https://www.tcgplayer.com/product/596967/one-piece-card-game-emperors-in-the-new-world-gum-gum-cuatro-jet-cross-shock-bazooka",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596967_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;ODYSSEY",
+      "attribute": null,
+      "effectText": "[Counter] If your Leader has the \"ODYSSEY\" type and you have 2 or more rested Characters, up to 1 of your Leader or Character cards gains +2000 power during this turn.<br>\r\n[Trigger] K.O. up to 1 of your opponent's rested Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596968,
+      "cardId": "OP09-040",
+      "name": "Thunder Lance Flip Caliber Phoenix Shot",
+      "cleanName": "Thunder Lance Flip Caliber Phoenix Shot",
+      "url": "https://www.tcgplayer.com/product/596968/one-piece-card-game-emperors-in-the-new-world-thunder-lance-flip-caliber-phoenix-shot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596968_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Supernovas;ODYSSEY",
+      "attribute": null,
+      "effectText": "[Main] If you have 2 or more rested Characters, K.O. up to 1 of your opponent's Characters with a cost of 4 or less.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596969,
+      "cardId": "OP09-041",
+      "name": "Soul Franky Swing Arm Boxing Solid",
+      "cleanName": "Soul Franky Swing Arm Boxing Solid",
+      "url": "https://www.tcgplayer.com/product/596969/one-piece-card-game-emperors-in-the-new-world-soul-franky-swing-arm-boxing-solid",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596969_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Green",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;ODYSSEY",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle. Then, if your Leader has the \"ODYSSEY\" type and you have 2 or more rested Characters, set up to 2 of your Characters as active.<br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596970,
+      "cardId": "OP09-042",
+      "name": "Buggy (042)",
+      "cleanName": "Buggy 042",
+      "url": "https://www.tcgplayer.com/product/596970/one-piece-card-game-emperors-in-the-new-world-buggy-042",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596970_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest 5 of your DON!! cards and trash 1 card from your hand</strong>: Play up to 1 \"Cross Guild\" type Character card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.17,
+          "highPrice": 5,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596971,
+      "cardId": "OP09-042",
+      "name": "Buggy (042) (Parallel)",
+      "cleanName": "Buggy 042 Parallel",
+      "url": "https://www.tcgplayer.com/product/596971/one-piece-card-game-emperors-in-the-new-world-buggy-042-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596971_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Blue",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest 5 of your DON!! cards and trash 1 card from your hand</strong>: Play up to 1 \"Cross Guild\" type Character card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 36.34,
+          "midPrice": 40,
+          "highPrice": 300,
+          "marketPrice": 35.67,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596972,
+      "cardId": "OP09-043",
+      "name": "Alvida",
+      "cleanName": "Alvida",
+      "url": "https://www.tcgplayer.com/product/596972/one-piece-card-game-emperors-in-the-new-world-alvida",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596972_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Strike",
+      "effectText": "[On K.O.] If your Leader has the \"Cross Guild\" type, play up to 1 Character card with a cost of 5 or less other than [Alvida] from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 6.49,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596973,
+      "cardId": "OP09-044",
+      "name": "Izo",
+      "cleanName": "Izo",
+      "url": "https://www.tcgplayer.com/product/596973/one-piece-card-game-emperors-in-the-new-world-izo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596973_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Land of Wano;Whitebeard Pirates",
+      "attribute": "Ranged",
+      "effectText": "[When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 \"Land of Wano\" type card or card with a type including \"Whitebeard Pirates\" and add it to your hand. Then, place the rest at the bottom of your deck in any order and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.8,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596974,
+      "cardId": "OP09-045",
+      "name": "Cabaji",
+      "cleanName": "Cabaji",
+      "url": "https://www.tcgplayer.com/product/596974/one-piece-card-game-emperors-in-the-new-world-cabaji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596974_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Slash",
+      "effectText": "If you have a [Buggy] or [Mohji] Character, this Character cannot be K.O.'d in battle.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596975,
+      "cardId": "OP09-046",
+      "name": "Crocodile (046)",
+      "cleanName": "Crocodile 046",
+      "url": "https://www.tcgplayer.com/product/596975/one-piece-card-game-emperors-in-the-new-world-crocodile-046",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596975_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Special",
+      "effectText": "[On Play] Play up to 1 \"Cross Guild\" type Character card or Character card with a type including \"Baroque Works\" with a cost of 5 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.1,
+          "midPrice": 0.57,
+          "highPrice": 10,
+          "marketPrice": 0.39,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596976,
+      "cardId": "OP09-046",
+      "name": "Crocodile (046) (Parallel)",
+      "cleanName": "Crocodile 046 Parallel",
+      "url": "https://www.tcgplayer.com/product/596976/one-piece-card-game-emperors-in-the-new-world-crocodile-046-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596976_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Special",
+      "effectText": "[On Play] Play up to 1 \"Cross Guild\" type Character card or Character card with a type including \"Baroque Works\" with a cost of 5 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5.11,
+          "midPrice": 7.86,
+          "highPrice": 30,
+          "marketPrice": 6.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596977,
+      "cardId": "OP09-047",
+      "name": "Kouzuki Oden",
+      "cleanName": "Kouzuki Oden",
+      "url": "https://www.tcgplayer.com/product/596977/one-piece-card-game-emperors-in-the-new-world-kouzuki-oden",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596977_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Land of Wano;Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Double Attack] <em>(This card deals 2 damage.)</em><br>\r\n[On K.O.] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.77,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596978,
+      "cardId": "OP09-048",
+      "name": "Dracule Mihawk",
+      "cleanName": "Dracule Mihawk",
+      "url": "https://www.tcgplayer.com/product/596978/one-piece-card-game-emperors-in-the-new-world-dracule-mihawk",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596978_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.89,
+          "highPrice": 25,
+          "marketPrice": 0.49,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596979,
+      "cardId": "OP09-048",
+      "name": "Dracule Mihawk (Parallel)",
+      "cleanName": "Dracule Mihawk Parallel",
+      "url": "https://www.tcgplayer.com/product/596979/one-piece-card-game-emperors-in-the-new-world-dracule-mihawk-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596979_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] Draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 5,
+          "midPrice": 8.74,
+          "highPrice": 29.99,
+          "marketPrice": 7.35,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596980,
+      "cardId": "OP09-049",
+      "name": "Jozu",
+      "cleanName": "Jozu",
+      "url": "https://www.tcgplayer.com/product/596980/one-piece-card-game-emperors-in-the-new-world-jozu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596980_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.36,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596981,
+      "cardId": "OP09-050",
+      "name": "Nami (050)",
+      "cleanName": "Nami 050",
+      "url": "https://www.tcgplayer.com/product/596981/one-piece-card-game-emperors-in-the-new-world-nami-050",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596981_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "East Blue",
+      "attribute": "Wisdom",
+      "effectText": "[When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 blue Event and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596982,
+      "cardId": "OP09-050",
+      "name": "Nami (050) (Parallel)",
+      "cleanName": "Nami 050 Parallel",
+      "url": "https://www.tcgplayer.com/product/596982/one-piece-card-game-emperors-in-the-new-world-nami-050-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596982_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "East Blue",
+      "attribute": "Wisdom",
+      "effectText": "[When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 blue Event and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 14,
+          "midPrice": 18,
+          "highPrice": 100,
+          "marketPrice": 14.86,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596983,
+      "cardId": "OP09-051",
+      "name": "Buggy (051)",
+      "cleanName": "Buggy 051",
+      "url": "https://www.tcgplayer.com/product/596983/one-piece-card-game-emperors-in-the-new-world-buggy-051",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596983_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596984,
+      "cardId": "OP09-051",
+      "name": "Buggy (051) (Manga)",
+      "cleanName": "Buggy 051 Manga",
+      "url": "https://www.tcgplayer.com/product/596984/one-piece-card-game-emperors-in-the-new-world-buggy-051-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596984_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1869,
+          "midPrice": 1870.51,
+          "highPrice": 1888.88,
+          "marketPrice": 938.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596985,
+      "cardId": "OP09-051",
+      "name": "Buggy (051) (Alternate Art)",
+      "cleanName": "Buggy 051 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/596985/one-piece-card-game-emperors-in-the-new-world-buggy-051-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596985_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 18.44,
+          "midPrice": 21,
+          "highPrice": 49.99,
+          "marketPrice": 20.18,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596986,
+      "cardId": "OP09-051",
+      "name": "Buggy (051) (Wanted Poster)",
+      "cleanName": "Buggy 051 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/596986/one-piece-card-game-emperors-in-the-new-world-buggy-051-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596986_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "The Four Emperors;Cross Guild",
+      "attribute": "Slash",
+      "effectText": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 199.99,
+          "midPrice": 222.45,
+          "highPrice": 400,
+          "marketPrice": 218.76,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596987,
+      "cardId": "OP09-052",
+      "name": "Marco",
+      "cleanName": "Marco",
+      "url": "https://www.tcgplayer.com/product/596987/one-piece-card-game-emperors-in-the-new-world-marco",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596987_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Opponent's Turn] <strong>You may trash 1 card from your hand:</strong> When this Character is K.O.'d by your opponent's effect, play this Character card from your trash rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.78,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596988,
+      "cardId": "OP09-053",
+      "name": "Mohji",
+      "cleanName": "Mohji",
+      "url": "https://www.tcgplayer.com/product/596988/one-piece-card-game-emperors-in-the-new-world-mohji",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596988_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Richie] and add it to your hand. Then, place the rest at the bottom of your deck in any order and play up to 1 [Richie] from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596989,
+      "cardId": "OP09-054",
+      "name": "Richie",
+      "cleanName": "Richie",
+      "url": "https://www.tcgplayer.com/product/596989/one-piece-card-game-emperors-in-the-new-world-richie",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596989_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Cross Guild",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596990,
+      "cardId": "OP09-055",
+      "name": "Mr.1(Daz.Bonez)",
+      "cleanName": "Mr1DazBonez",
+      "url": "https://www.tcgplayer.com/product/596990/one-piece-card-game-emperors-in-the-new-world-mr1dazbonez",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596990_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "7000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.77,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596991,
+      "cardId": "OP09-056",
+      "name": "Mr.3(Galdino)",
+      "cleanName": "Mr3Galdino",
+      "url": "https://www.tcgplayer.com/product/596991/one-piece-card-game-emperors-in-the-new-world-mr3galdino",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596991_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Blue",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Former Baroque Works;Cross Guild",
+      "attribute": "Special",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Cross Guild\" type card or card with a type including \"Baroque Works\" other than [Mr.3(Galdino)] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.18,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596992,
+      "cardId": "OP09-057",
+      "name": "Cross Guild",
+      "cleanName": "Cross Guild",
+      "url": "https://www.tcgplayer.com/product/596992/one-piece-card-game-emperors-in-the-new-world-cross-guild",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596992_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": null,
+      "effectText": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 \"Cross Guild\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596993,
+      "cardId": "OP09-058",
+      "name": "Special Muggy Ball",
+      "cleanName": "Special Muggy Ball",
+      "url": "https://www.tcgplayer.com/product/596993/one-piece-card-game-emperors-in-the-new-world-special-muggy-ball",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596993_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": null,
+      "effectText": "[Main] Your opponent chooses 1 of their Character with a cost of 6 or less and return to the owner's hand.<br>\r\n[Trigger] Return up to 1 Character with a cost of 3 or less to the owner's hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596994,
+      "cardId": "OP09-059",
+      "name": "Murder at the Steam Bath",
+      "cleanName": "Murder at the Steam Bath",
+      "url": "https://www.tcgplayer.com/product/596994/one-piece-card-game-emperors-in-the-new-world-murder-at-the-steam-bath",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596994_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Blue",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Buggy Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +3000 power during this battle. Then, trash up to 2 cards from your hand. Trash the same number of cards from the top of your deck as you did from your hand.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596995,
+      "cardId": "OP09-060",
+      "name": "Emptee Bluffs Island",
+      "cleanName": "Emptee Bluffs Island",
+      "url": "https://www.tcgplayer.com/product/596995/one-piece-card-game-emperors-in-the-new-world-emptee-bluffs-island",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596995_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Blue",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Cross Guild",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may place 2 cards from your hand at the bottom of your deck in any order and rest this Stage</strong>: If your Leader has the \"Cross Guild\" type, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.33,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596996,
+      "cardId": "OP09-061",
+      "name": "Monkey.D.Luffy (061)",
+      "cleanName": "MonkeyDLuffy 061",
+      "url": "https://www.tcgplayer.com/product/596996/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-061",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596996_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] All of your Characters gain +1 cost.<br>\r\n[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.08,
+          "midPrice": 0.2,
+          "highPrice": 13.69,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596997,
+      "cardId": "OP09-061",
+      "name": "Monkey.D.Luffy (061) (Parallel)",
+      "cleanName": "MonkeyDLuffy 061 Parallel",
+      "url": "https://www.tcgplayer.com/product/596997/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-061-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596997_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Black",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] All of your Characters gain +1 cost.<br>\r\n[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 104.99,
+          "midPrice": 137.99,
+          "highPrice": 800,
+          "marketPrice": 118.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596998,
+      "cardId": "OP09-062",
+      "name": "Nico Robin (062)",
+      "cleanName": "Nico Robin 062",
+      "url": "https://www.tcgplayer.com/product/596998/one-piece-card-game-emperors-in-the-new-world-nico-robin-062",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596998_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[When Attacking] <strong>You may trash 1 card with a [Trigger] from your hand</strong>: Add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.13,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 596999,
+      "cardId": "OP09-062",
+      "name": "Nico Robin (062) (Parallel)",
+      "cleanName": "Nico Robin 062 Parallel",
+      "url": "https://www.tcgplayer.com/product/596999/one-piece-card-game-emperors-in-the-new-world-nico-robin-062-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/596999_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Purple;Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "4",
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Banish] <em>(When this card deals damage, the target card is trashed without activating its Trigger.)</em><br>\r\n[When Attacking] <strong>You may trash 1 card with a [Trigger] from your hand</strong>: Add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 62.45,
+          "midPrice": 70.91,
+          "highPrice": 699.99,
+          "marketPrice": 69.41,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597000,
+      "cardId": "OP09-063",
+      "name": "Usopp (063)",
+      "cleanName": "Usopp 063",
+      "url": "https://www.tcgplayer.com/product/597000/one-piece-card-game-emperors-in-the-new-world-usopp-063",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597000_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Ranged",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 4.99,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597001,
+      "cardId": "OP09-064",
+      "name": "Killer",
+      "cleanName": "Killer",
+      "url": "https://www.tcgplayer.com/product/597001/one-piece-card-game-emperors-in-the-new-world-killer",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597001_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>DON!! 1 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em></strong>: Set up to 1 of your \"Kid Pirates\" type Leader as active.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597002,
+      "cardId": "OP09-065",
+      "name": "Sanji (065)",
+      "cleanName": "Sanji 065",
+      "url": "https://www.tcgplayer.com/product/597002/one-piece-card-game-emperors-in-the-new-world-sanji-065",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597002_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: This Character gains [Rush] during this turn. Then, rest up to 1 of your opponent's Characters with a cost of 6 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 1.15,
+          "highPrice": 75,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597003,
+      "cardId": "OP09-065",
+      "name": "Sanji (065) (Parallel)",
+      "cleanName": "Sanji 065 Parallel",
+      "url": "https://www.tcgplayer.com/product/597003/one-piece-card-game-emperors-in-the-new-world-sanji-065-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597003_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: This Character gains [Rush] during this turn. Then, rest up to 1 of your opponent's Characters with a cost of 6 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.98,
+          "midPrice": 17.91,
+          "highPrice": 49.99,
+          "marketPrice": 13.71,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597004,
+      "cardId": "OP09-066",
+      "name": "Jean Bart",
+      "cleanName": "Jean Bart",
+      "url": "https://www.tcgplayer.com/product/597004/one-piece-card-game-emperors-in-the-new-world-jean-bart",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597004_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has more DON!! cards on their field than you, K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597005,
+      "cardId": "OP09-067",
+      "name": "Jinbe",
+      "cleanName": "Jinbe",
+      "url": "https://www.tcgplayer.com/product/597005/one-piece-card-game-emperors-in-the-new-world-jinbe",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597005_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "9000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Fish-Man;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597006,
+      "cardId": "OP09-068",
+      "name": "Tony Tony.Chopper (068)",
+      "cleanName": "Tony TonyChopper 068",
+      "url": "https://www.tcgplayer.com/product/597006/one-piece-card-game-emperors-in-the-new-world-tony-tonychopper-068",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597006_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Animal;Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[End of Your Turn] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Set this Character as active. Then, this Character gains [Blocker] until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.14,
+          "highPrice": 2,
+          "marketPrice": 0.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597007,
+      "cardId": "OP09-069",
+      "name": "Trafalgar Law (069)",
+      "cleanName": "Trafalgar Law 069",
+      "url": "https://www.tcgplayer.com/product/597007/one-piece-card-game-emperors-in-the-new-world-trafalgar-law-069",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597007_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" or \"Heart Pirates\" type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.03,
+          "midPrice": 0.57,
+          "highPrice": 5,
+          "marketPrice": 0.48,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597008,
+      "cardId": "OP09-069",
+      "name": "Trafalgar Law (069) (Parallel)",
+      "cleanName": "Trafalgar Law 069 Parallel",
+      "url": "https://www.tcgplayer.com/product/597008/one-piece-card-game-emperors-in-the-new-world-trafalgar-law-069-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597008_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Heart Pirates",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" or \"Heart Pirates\" type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 20,
+          "midPrice": 24.92,
+          "highPrice": 100,
+          "marketPrice": 20.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597009,
+      "cardId": "OP09-070",
+      "name": "Nami (070)",
+      "cleanName": "Nami 070",
+      "url": "https://www.tcgplayer.com/product/597009/one-piece-card-game-emperors-in-the-new-world-nami-070",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597009_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 20,
+          "marketPrice": 0.17,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597010,
+      "cardId": "OP09-071",
+      "name": "Nico Robin (071)",
+      "cleanName": "Nico Robin 071",
+      "url": "https://www.tcgplayer.com/product/597010/one-piece-card-game-emperors-in-the-new-world-nico-robin-071",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597010_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597011,
+      "cardId": "OP09-072",
+      "name": "Franky",
+      "cleanName": "Franky",
+      "url": "https://www.tcgplayer.com/product/597011/one-piece-card-game-emperors-in-the-new-world-franky",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597011_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] <strong>DON!! 2, You may trash 1 card from your hand</strong>: Draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.05,
+          "midPrice": 0.5,
+          "highPrice": 10,
+          "marketPrice": 0.34,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597012,
+      "cardId": "OP09-072",
+      "name": "Franky (Parallel)",
+      "cleanName": "Franky Parallel",
+      "url": "https://www.tcgplayer.com/product/597012/one-piece-card-game-emperors-in-the-new-world-franky-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597012_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[On Play] <strong>DON!! 2, You may trash 1 card from your hand</strong>: Draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 4.93,
+          "midPrice": 7.49,
+          "highPrice": 34.99,
+          "marketPrice": 6.8,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597013,
+      "cardId": "OP09-073",
+      "name": "Brook (073)",
+      "cleanName": "Brook 073",
+      "url": "https://www.tcgplayer.com/product/597013/one-piece-card-game-emperors-in-the-new-world-brook-073",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597013_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[When Attacking] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Give up to 2 of your opponent's Characters 2000 power during this turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.38,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597014,
+      "cardId": "OP09-074",
+      "name": "Bepo",
+      "cleanName": "Bepo",
+      "url": "https://www.tcgplayer.com/product/597014/one-piece-card-game-emperors-in-the-new-world-bepo",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597014_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Heart Pirates;Minks",
+      "attribute": "Strike",
+      "effectText": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, up to 1 of your Leader or Character cards gains +1000 power during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597015,
+      "cardId": "OP09-075",
+      "name": "Eustass\"Captain\"Kid",
+      "cleanName": "EustassCaptainKid",
+      "url": "https://www.tcgplayer.com/product/597015/one-piece-card-game-emperors-in-the-new-world-eustasscaptainkid",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597015_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Kid Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>You may add 1 card from the top of your Life cards to your hand</strong>: If your Leader has the \"Kid Pirates\" type, add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597016,
+      "cardId": "OP09-076",
+      "name": "Roronoa Zoro (076)",
+      "cleanName": "Roronoa Zoro 076",
+      "url": "https://www.tcgplayer.com/product/597016/one-piece-card-game-emperors-in-the-new-world-roronoa-zoro-076",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597016_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.15,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597017,
+      "cardId": "OP09-077",
+      "name": "Gum-Gum Lightning",
+      "cleanName": "Gum Gum Lightning",
+      "url": "https://www.tcgplayer.com/product/597017/one-piece-card-game-emperors-in-the-new-world-gum-gum-lightning",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597017_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] <strong>DON!! 2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em></strong>: K.O. up to 1 of your opponent's Characters with 6000 power or less.<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5.07,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597018,
+      "cardId": "OP09-078",
+      "name": "Gum-Gum Giant",
+      "cleanName": "Gum Gum Giant",
+      "url": "https://www.tcgplayer.com/product/597018/one-piece-card-game-emperors-in-the-new-world-gum-gum-giant",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597018_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Counter] <strong>DON!! 2, You may trash 1 card from your hand</strong>: If your Leader has the \"Straw Hat Crew\" type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 0.81,
+          "highPrice": 7,
+          "marketPrice": 0.72,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597019,
+      "cardId": "OP09-079",
+      "name": "Gum-Gum Jump Rope",
+      "cleanName": "Gum Gum Jump Rope",
+      "url": "https://www.tcgplayer.com/product/597019/one-piece-card-game-emperors-in-the-new-world-gum-gum-jump-rope",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597019_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Purple",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Straw Hat Crew;The Four Emperors",
+      "attribute": null,
+      "effectText": "[Main] <strong>DON!! 2 <em>(You may return the specified number of DON!! cards from your field to your DON!! deck.)</em></strong>: Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card.<br>\r\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597020,
+      "cardId": "OP09-080",
+      "name": "Thousand Sunny",
+      "cleanName": "Thousand Sunny",
+      "url": "https://www.tcgplayer.com/product/597020/one-piece-card-game-emperors-in-the-new-world-thousand-sunny",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597020_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Purple",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": null,
+      "effectText": "[Opponent's Turn] <strong>You may rest this Stage</strong>: When your \"Straw Hat Crew\" type Character is removed from the field by your opponent's effect, add up to 1 DON!! card from your DON!! deck and rest it.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597021,
+      "cardId": "OP09-081",
+      "name": "Marshall.D.Teach (081)",
+      "cleanName": "MarshallDTeach 081",
+      "url": "https://www.tcgplayer.com/product/597021/one-piece-card-game-emperors-in-the-new-world-marshalldteach-081",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597021_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "Your [On Play] effects are negated.<br>\r\n[Activate: Main] <strong>You may trash 1 card from your hand</strong>: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597022,
+      "cardId": "OP09-081",
+      "name": "Marshall.D.Teach (081) (Parallel)",
+      "cleanName": "MarshallDTeach 081 Parallel",
+      "url": "https://www.tcgplayer.com/product/597022/one-piece-card-game-emperors-in-the-new-world-marshalldteach-081-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597022_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Black",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "Your [On Play] effects are negated.<br>\r\n[Activate: Main] <strong>You may trash 1 card from your hand</strong>: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 34.98,
+          "midPrice": 39.99,
+          "highPrice": 299.99,
+          "marketPrice": 35.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597023,
+      "cardId": "OP09-082",
+      "name": "Avalo Pizarro",
+      "cleanName": "Avalo Pizarro",
+      "url": "https://www.tcgplayer.com/product/597023/one-piece-card-game-emperors-in-the-new-world-avalo-pizarro",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597023_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597024,
+      "cardId": "OP09-083",
+      "name": "Van Augur",
+      "cleanName": "Van Augur",
+      "url": "https://www.tcgplayer.com/product/597024/one-piece-card-game-emperors-in-the-new-world-van-augur",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597024_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Ranged",
+      "effectText": "[Activate: Main] <strong>You may rest this Character</strong>: If your Leader has the \"Blackbeard Pirates\" type, give up to 1 of your opponent's Characters 3 cost during this turn.<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597025,
+      "cardId": "OP09-084",
+      "name": "Catarina Devon",
+      "cleanName": "Catarina Devon",
+      "url": "https://www.tcgplayer.com/product/597025/one-piece-card-game-emperors-in-the-new-world-catarina-devon",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597025_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.04,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597026,
+      "cardId": "OP09-085",
+      "name": "Gecko Moria",
+      "cleanName": "Gecko Moria",
+      "url": "https://www.tcgplayer.com/product/597026/one-piece-card-game-emperors-in-the-new-world-gecko-moria",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597026_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Thriller Bark Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] Play up to 1 \"Thriller Bark Pirates\" type Character card with a cost of 2 or less from your trash rested.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.4,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597027,
+      "cardId": "OP09-086",
+      "name": "Jesus Burgess",
+      "cleanName": "Jesus Burgess",
+      "url": "https://www.tcgplayer.com/product/597027/one-piece-card-game-emperors-in-the-new-world-jesus-burgess",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597027_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Strike",
+      "effectText": "This Character cannot be K.O.'d by your opponent's effects.<br>\r\nIf your Leader has the \"Blackbeard Pirates\" type, this Character gains +1000 power for every 4 cards in your trash.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597028,
+      "cardId": "OP09-087",
+      "name": "Charlotte Pudding",
+      "cleanName": "Charlotte Pudding",
+      "url": "https://www.tcgplayer.com/product/597028/one-piece-card-game-emperors-in-the-new-world-charlotte-pudding",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597028_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If your opponent has 5 or more cards in their hand, your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.98,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597029,
+      "cardId": "OP09-088",
+      "name": "Shiryu",
+      "cleanName": "Shiryu",
+      "url": "https://www.tcgplayer.com/product/597029/one-piece-card-game-emperors-in-the-new-world-shiryu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597029_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] <strong>You may trash 2 cards from your hand</strong>: Draw 2 cards.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 2,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597030,
+      "cardId": "OP09-089",
+      "name": "Stronger",
+      "cleanName": "Stronger",
+      "url": "https://www.tcgplayer.com/product/597030/one-piece-card-game-emperors-in-the-new-world-stronger",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597030_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Animal;Blackbeard Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[Activate: Main] <strong>You may trash 1 card from your hand and trash this Character</strong>: If your Leader has the \"Blackbeard Pirates\" type, draw 1 card. Then, give up to 1 of your opponent's Characters –2 cost during this turn.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.19,
+          "highPrice": 6.99,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597031,
+      "cardId": "OP09-090",
+      "name": "Doc Q",
+      "cleanName": "Doc Q",
+      "url": "https://www.tcgplayer.com/product/597031/one-piece-card-game-emperors-in-the-new-world-doc-q",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597031_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Activate: Main] <strong>You may rest this Character</strong>: If your Leader has the \"Blackbeard Pirates\" type, K.O. up to 1 of your opponent's Characters with a cost of 1 or less.<br>\r\n[On K.O.] Draw 1 card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597032,
+      "cardId": "OP09-091",
+      "name": "Vasco Shot",
+      "cleanName": "Vasco Shot",
+      "url": "https://www.tcgplayer.com/product/597032/one-piece-card-game-emperors-in-the-new-world-vasco-shot",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597032_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597033,
+      "cardId": "OP09-092",
+      "name": "Marshall.D.Teach (092)",
+      "cleanName": "MarshallDTeach 092",
+      "url": "https://www.tcgplayer.com/product/597033/one-piece-card-game-emperors-in-the-new-world-marshalldteach-092",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597033_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Whitebeard Pirates",
+      "attribute": "Slash",
+      "effectText": "[Activate: Main] <strong>You may rest this Character:</strong> If the number of cards in your hand is at least 3 less than the number in your opponent's hand, draw 2 cards and trash 1 card from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.96,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597034,
+      "cardId": "OP09-093",
+      "name": "Marshall.D.Teach (093)",
+      "cleanName": "MarshallDTeach 093",
+      "url": "https://www.tcgplayer.com/product/597034/one-piece-card-game-emperors-in-the-new-world-marshalldteach-093",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597034_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.19,
+          "midPrice": 0.99,
+          "highPrice": 10,
+          "marketPrice": 0.51,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597035,
+      "cardId": "OP09-093",
+      "name": "Marshall.D.Teach (093) (Manga)",
+      "cleanName": "MarshallDTeach 093 Manga",
+      "url": "https://www.tcgplayer.com/product/597035/one-piece-card-game-emperors-in-the-new-world-marshalldteach-093-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597035_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1500,
+          "midPrice": 1825,
+          "highPrice": 2400,
+          "marketPrice": 944.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597036,
+      "cardId": "OP09-093",
+      "name": "Marshall.D.Teach (093) (Alternate Art)",
+      "cleanName": "MarshallDTeach 093 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/597036/one-piece-card-game-emperors-in-the-new-world-marshalldteach-093-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597036_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 12.99,
+          "midPrice": 15,
+          "highPrice": 50,
+          "marketPrice": 13.31,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597037,
+      "cardId": "OP09-093",
+      "name": "Marshall.D.Teach (093) (Wanted Poster)",
+      "cleanName": "MarshallDTeach 093 Wanted Poster",
+      "url": "https://www.tcgplayer.com/product/597037/one-piece-card-game-emperors-in-the-new-world-marshalldteach-093-wanted-poster",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597037_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "12000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Blackbeard Pirates;The Four Emperors",
+      "attribute": "Special",
+      "effectText": "[Blocker]<br>\r\n[Activate: Main] [Once Per Turn] If your Leader has the \"Blackbeard Pirates\" type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 179,
+          "midPrice": 277.97,
+          "highPrice": 800,
+          "marketPrice": 180.74,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597038,
+      "cardId": "OP09-094",
+      "name": "Peachbeard",
+      "cleanName": "Peachbeard",
+      "url": "https://www.tcgplayer.com/product/597038/one-piece-card-game-emperors-in-the-new-world-peachbeard",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597038_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Peachbeard Pirates;Blackbeard Pirates Allies",
+      "attribute": "Slash",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 6.99,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597039,
+      "cardId": "OP09-095",
+      "name": "Laffitte",
+      "cleanName": "Laffitte",
+      "url": "https://www.tcgplayer.com/product/597039/one-piece-card-game-emperors-in-the-new-world-laffitte",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597039_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Black",
+      "power": "1000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": "Strike",
+      "effectText": "[Activate: Main] <strong>You may rest 1 of your DON!! cards and this Character</strong>: Look at 5 cards from the top of your deck; reveal up to 1 \"Blackbeard Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.02,
+          "midPrice": 0.25,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597040,
+      "cardId": "OP09-096",
+      "name": "My Era...Begins!!",
+      "cleanName": "My EraBegins",
+      "url": "https://www.tcgplayer.com/product/597040/one-piece-card-game-emperors-in-the-new-world-my-erabegins",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597040_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 \"Blackbeard Pirates\" type card other than [My Era...Begins!!] and add it to your hand. Then, trash the rest.<br>\r\n[Trigger] Activate this card's [Main] effect.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.45,
+          "highPrice": 5,
+          "marketPrice": 0.36,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597041,
+      "cardId": "OP09-097",
+      "name": "Black Vortex",
+      "cleanName": "Black Vortex",
+      "url": "https://www.tcgplayer.com/product/597041/one-piece-card-game-emperors-in-the-new-world-black-vortex",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597041_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "2",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": null,
+      "effectText": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card 4000 power during this turn.<br>\r\n[Trigger] Negate the effect of up to 1 of your opponent's Leader or Character cards during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.15,
+          "highPrice": 5.07,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597042,
+      "cardId": "OP09-098",
+      "name": "Black Hole",
+      "cleanName": "Black Hole",
+      "url": "https://www.tcgplayer.com/product/597042/one-piece-card-game-emperors-in-the-new-world-black-hole",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597042_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Black",
+      "power": null,
+      "cost": "4",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": null,
+      "effectText": "[Main] If your Leader has the \"Blackbeard Pirates\" type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it.<br>\r\n[Trigger] Negate the effect of up to 1 of your opponent's Leader or Character cards during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.23,
+          "highPrice": 2,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597043,
+      "cardId": "OP09-099",
+      "name": "Fullalead",
+      "cleanName": "Fullalead",
+      "url": "https://www.tcgplayer.com/product/597043/one-piece-card-game-emperors-in-the-new-world-fullalead",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597043_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Stage",
+      "color": "Black",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Blackbeard Pirates",
+      "attribute": null,
+      "effectText": "[Activate: Main] <strong>You may trash 1 card from your hand and rest this Stage</strong>: Look at 3 cards from the top of your deck; reveal up to 1 \"Blackbeard Pirates\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597044,
+      "cardId": "OP09-100",
+      "name": "Karasu",
+      "cleanName": "Karasu",
+      "url": "https://www.tcgplayer.com/product/597044/one-piece-card-game-emperors-in-the-new-world-karasu",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597044_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[Trigger] If your Leader has the \"Revolutionary Army\" type and you and your opponent have a total of 5 or less Life cards, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.25,
+          "highPrice": 25,
+          "marketPrice": 0.23,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597045,
+      "cardId": "OP09-101",
+      "name": "Kuzan",
+      "cleanName": "Kuzan",
+      "url": "https://www.tcgplayer.com/product/597045/one-piece-card-game-emperors-in-the-new-world-kuzan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597045_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": "Special",
+      "effectText": "[On Play] <strong>Place 1 of your opponent's Characters with a cost of 3 or less at the top or bottom of your opponent's Life cards face-up</strong>: Your opponent trashes 1 card from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.2,
+          "highPrice": 7,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597046,
+      "cardId": "OP09-102",
+      "name": "Professor Clover",
+      "cleanName": "Professor Clover",
+      "url": "https://www.tcgplayer.com/product/597046/one-piece-card-game-emperors-in-the-new-world-professor-clover",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597046_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Ohara",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] If your Leader is [Nico Robin], look at 3 cards from the top of your deck; reveal up to 1 card with a [Trigger] and add it to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Activate this card's [On Play] effect.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597047,
+      "cardId": "OP09-103",
+      "name": "Koala",
+      "cleanName": "Koala",
+      "url": "https://www.tcgplayer.com/product/597047/one-piece-card-game-emperors-in-the-new-world-koala",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597047_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Play up to 1 \"Revolutionary Army\" type Character card with a cost of 4 or less from your hand. If you do, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.2,
+          "midPrice": 0.6,
+          "highPrice": 10,
+          "marketPrice": 0.47,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597048,
+      "cardId": "OP09-103",
+      "name": "Koala (Parallel)",
+      "cleanName": "Koala Parallel",
+      "url": "https://www.tcgplayer.com/product/597048/one-piece-card-game-emperors-in-the-new-world-koala-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597048_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Strike",
+      "effectText": "[Blocker]<br>\r\n[On Play] <strong>You may add 1 card from the top or bottom of your Life cards to your hand</strong>: Play up to 1 \"Revolutionary Army\" type Character card with a cost of 4 or less from your hand. If you do, draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 3.8,
+          "midPrice": 5.35,
+          "highPrice": 29.99,
+          "marketPrice": 4.79,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597049,
+      "cardId": "OP09-104",
+      "name": "Sabo (104)",
+      "cleanName": "Sabo 104",
+      "url": "https://www.tcgplayer.com/product/597049/one-piece-card-game-emperors-in-the-new-world-sabo-104",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597049_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "7",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] Add up to 1 \"Revolutionary Army\" type Character card from your hand to the top of your Life cards face-up. Then, if you have 2 or more Life cards, add 1 card from the top or bottom of your Life cards to your hand.<br>\r\n[Trigger] If your Leader is multicolored, draw 2 cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.01,
+          "midPrice": 0.24,
+          "highPrice": 9.98,
+          "marketPrice": 0.19,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597050,
+      "cardId": "OP09-105",
+      "name": "Sanji (105)",
+      "cleanName": "Sanji 105",
+      "url": "https://www.tcgplayer.com/product/597050/one-piece-card-game-emperors-in-the-new-world-sanji-105",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597050_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Strike",
+      "effectText": "[Trigger] If your Leader has the \"Egghead\" type, add up to 1 card from the top of your deck to the top of your Life cards. Then, trash 2 cards from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.35,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597051,
+      "cardId": "OP09-106",
+      "name": "Nico Olvia",
+      "cleanName": "Nico Olvia",
+      "url": "https://www.tcgplayer.com/product/597051/one-piece-card-game-emperors-in-the-new-world-nico-olvia",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597051_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Ohara",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Up to 1 of your [Nico Robin] Leader gains +3000 power during this turn.<br>\r\n[Trigger] If your Leader is [Nico Robin], draw 3 cards and trash 2 cards from your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.12,
+          "highPrice": 3.82,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597052,
+      "cardId": "OP09-107",
+      "name": "Nico Robin (107)",
+      "cleanName": "Nico Robin 107",
+      "url": "https://www.tcgplayer.com/product/597052/one-piece-card-game-emperors-in-the-new-world-nico-robin-107",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597052_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has 3 or more Life cards, trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[Trigger] Play up to 1 yellow Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 1.25,
+          "midPrice": 3,
+          "highPrice": 10,
+          "marketPrice": 2.14,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597053,
+      "cardId": "OP09-107",
+      "name": "Nico Robin (107) (Parallel)",
+      "cleanName": "Nico Robin 107 Parallel",
+      "url": "https://www.tcgplayer.com/product/597053/one-piece-card-game-emperors-in-the-new-world-nico-robin-107-parallel",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597053_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] If your opponent has 3 or more Life cards, trash up to 1 card from the top of your opponent's Life cards.<br>\r\n[Trigger] Play up to 1 yellow Character card with a cost of 3 or less from your hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 50,
+          "midPrice": 59.49,
+          "highPrice": 420.69,
+          "marketPrice": 54.89,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597054,
+      "cardId": "OP09-108",
+      "name": "Bartholomew Kuma",
+      "cleanName": "Bartholomew Kuma",
+      "url": "https://www.tcgplayer.com/product/597054/one-piece-card-game-emperors-in-the-new-world-bartholomew-kuma",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597054_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Revolutionary Army;The Seven Warlords of the Sea",
+      "attribute": "Strike",
+      "effectText": "[Trigger] If your Leader has the \"Revolutionary Army\" type and you and your opponent have a total of 5 or less Life cards, play this card.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.26,
+          "highPrice": 25,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597055,
+      "cardId": "OP09-109",
+      "name": "Jaguar.D.Saul",
+      "cleanName": "JaguarDSaul",
+      "url": "https://www.tcgplayer.com/product/597055/one-piece-card-game-emperors-in-the-new-world-jaguardsaul",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597055_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Giant;Navy;Ohara",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br>\r\n[Trigger] If your Leader is [Nico Robin], play this card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.15,
+          "highPrice": 2,
+          "marketPrice": 0.09,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597056,
+      "cardId": "OP09-110",
+      "name": "Pierre",
+      "cleanName": "Pierre",
+      "url": "https://www.tcgplayer.com/product/597056/one-piece-card-game-emperors-in-the-new-world-pierre",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597056_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Animal;Sky Island",
+      "attribute": "Strike",
+      "effectText": "[On Play] Draw 2 cards and trash 2 cards from your hand.<br>\r\n[Trigger] Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.32,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597057,
+      "cardId": "OP09-111",
+      "name": "Brook (111)",
+      "cleanName": "Brook 111",
+      "url": "https://www.tcgplayer.com/product/597057/one-piece-card-game-emperors-in-the-new-world-brook-111",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597057_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Straw Hat Crew;Egghead",
+      "attribute": "Slash",
+      "effectText": "[Trigger] If your Leader has the \"Egghead\" type and your opponent has 6 or more cards in their hand, your opponent trashes 2 cards from their hand.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.38,
+          "marketPrice": 0.06,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597058,
+      "cardId": "OP09-112",
+      "name": "Belo Betty",
+      "cleanName": "Belo Betty",
+      "url": "https://www.tcgplayer.com/product/597058/one-piece-card-game-emperors-in-the-new-world-belo-betty",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597058_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] If you have 2 or less Life cards, draw 1 card.<br>\r\n[Trigger] If your Leader has the \"Revolutionary Army\" type and you and your opponent have a total of 5 or less Life cards, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.11,
+          "highPrice": 1.4,
+          "marketPrice": 0.1,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597059,
+      "cardId": "OP09-113",
+      "name": "Morley",
+      "cleanName": "Morley",
+      "url": "https://www.tcgplayer.com/product/597059/one-piece-card-game-emperors-in-the-new-world-morley",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597059_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Giant;Revolutionary Army",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.36,
+          "marketPrice": 0.04,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597060,
+      "cardId": "OP09-114",
+      "name": "Lindbergh",
+      "cleanName": "Lindbergh",
+      "url": "https://www.tcgplayer.com/product/597060/one-piece-card-game-emperors-in-the-new-world-lindbergh",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597060_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "4000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Minks;Revolutionary Army",
+      "attribute": "Special",
+      "effectText": "[On Play] If you and your opponent have a total of 5 or less Life cards, K.O. up to 1 of your opponent's Characters with 2000 power or less.<br>\r\n[Trigger] If you and your opponent have a total of 5 or less Life cards, play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 5.99,
+          "marketPrice": 0.05,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597061,
+      "cardId": "OP09-115",
+      "name": "Ice Block Partisan",
+      "cleanName": "Ice Block Partisan",
+      "url": "https://www.tcgplayer.com/product/597061/one-piece-card-game-emperors-in-the-new-world-ice-block-partisan",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597061_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "UC",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Navy",
+      "attribute": null,
+      "effectText": "[Main] K.O. up to 1 of your opponent's Characters with a cost of 3 or less and a [Trigger].<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 2.5,
+          "marketPrice": 0.03,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597062,
+      "cardId": "OP09-116",
+      "name": "Never Underestimate the Power of Miracles!!",
+      "cleanName": "Never Underestimate the Power of Miracles",
+      "url": "https://www.tcgplayer.com/product/597062/one-piece-card-game-emperors-in-the-new-world-never-underestimate-the-power-of-miracles",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597062_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "C",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "1",
+      "life": null,
+      "subtypes": "Revolutionary Army",
+      "attribute": null,
+      "effectText": "[Counter] Up to 1 of your Leader or Character cards gains +2000 power during this battle.<br>\r\n[Trigger] Play up to 1 \"Revolutionary Army\" type Character card with a cost of 4 or less from your hand.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 3.77,
+          "marketPrice": 0.08,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597063,
+      "cardId": "OP09-117",
+      "name": "Dereshi!",
+      "cleanName": "Dereshi",
+      "url": "https://www.tcgplayer.com/product/597063/one-piece-card-game-emperors-in-the-new-world-dereshi",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597063_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "R",
+      "cardType": "Event",
+      "color": "Yellow",
+      "power": null,
+      "cost": "3",
+      "life": null,
+      "subtypes": "Ohara",
+      "attribute": null,
+      "effectText": "[Main] Look at 5 cards from the top of your deck; reveal up to 2 cards with a [Trigger] other than [Dereshi!] and add them to your hand. Then, place the rest at the bottom of your deck in any order.<br>\r\n[Trigger] Draw 1 card.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.09,
+          "midPrice": 0.26,
+          "highPrice": 5,
+          "marketPrice": 0.24,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597064,
+      "cardId": "OP09-118",
+      "name": "Gol.D.Roger",
+      "cleanName": "GolDRoger",
+      "url": "https://www.tcgplayer.com/product/597064/one-piece-card-game-emperors-in-the-new-world-goldroger",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597064_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\nWhen your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 24.86,
+          "midPrice": 29.25,
+          "highPrice": 64.97,
+          "marketPrice": 25.61,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597065,
+      "cardId": "OP09-118",
+      "name": "Gol.D.Roger (Manga)",
+      "cleanName": "GolDRoger Manga",
+      "url": "https://www.tcgplayer.com/product/597065/one-piece-card-game-emperors-in-the-new-world-goldroger-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597065_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\nWhen your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 29994.99,
+          "midPrice": 29995,
+          "highPrice": 29995,
+          "marketPrice": 3573.98,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597066,
+      "cardId": "OP09-118",
+      "name": "Gol.D.Roger (Alternate Art)",
+      "cleanName": "GolDRoger Alternate Art",
+      "url": "https://www.tcgplayer.com/product/597066/one-piece-card-game-emperors-in-the-new-world-goldroger-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597066_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Red",
+      "power": "13000",
+      "cost": "10",
+      "life": null,
+      "subtypes": "Roger Pirates;King of the Pirates",
+      "attribute": "Slash",
+      "effectText": "[Rush] <em>(This card can attack on the turn in which it is played.)</em><br>\r\nWhen your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 70,
+          "midPrice": 100,
+          "highPrice": 300,
+          "marketPrice": 86.45,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597067,
+      "cardId": "OP09-119",
+      "name": "Monkey.D.Luffy (119)",
+      "cleanName": "MonkeyDLuffy 119",
+      "url": "https://www.tcgplayer.com/product/597067/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-119",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597067_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Draw 1 card and this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 9.5,
+          "midPrice": 13.49,
+          "highPrice": 50,
+          "marketPrice": 10.6,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597068,
+      "cardId": "OP09-119",
+      "name": "Monkey.D.Luffy (119) (Manga)",
+      "cleanName": "MonkeyDLuffy 119 Manga",
+      "url": "https://www.tcgplayer.com/product/597068/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-119-manga",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597068_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Draw 1 card and this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 2699,
+          "midPrice": 4849.5,
+          "highPrice": 30000,
+          "marketPrice": 1440.54,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 597069,
+      "cardId": "OP09-119",
+      "name": "Monkey.D.Luffy (119) (Alternate Art)",
+      "cleanName": "MonkeyDLuffy 119 Alternate Art",
+      "url": "https://www.tcgplayer.com/product/597069/one-piece-card-game-emperors-in-the-new-world-monkeydluffy-119-alternate-art",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/597069_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "SEC",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "10000",
+      "cost": "9",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Strike",
+      "effectText": "[On Play] <strong>You may return 1 or more DON!! cards from your field to your DON!! deck</strong>: Draw 1 card and this Character gains [Rush] during this turn.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 42,
+          "midPrice": 52.19,
+          "highPrice": 299,
+          "marketPrice": 51.87,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 600658,
+      "cardId": "ST18-004",
+      "name": "Zoro-Juurou (ST18-004)",
+      "cleanName": "Zoro Juurou ST18 004",
+      "url": "https://www.tcgplayer.com/product/600658/one-piece-card-game-emperors-in-the-new-world-zoro-juurou-st18-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/600658_200w.jpg",
+      "groupId": 23589,
+      "setCode": "OP09",
+      "rarity": "TR",
+      "cardType": "Character",
+      "color": "Purple",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Straw Hat Crew",
+      "attribute": "Slash",
+      "effectText": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 purple \"Straw Hat Crew\" type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 79.99,
+          "midPrice": 110,
+          "highPrice": 599.99,
+          "marketPrice": 92.01,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 7,
+  "errors": [
+    "Product 604246 (DON!! Card (Alternate Art)) has no Number in extendedData",
+    "Product 605125 (DON!! Card (Buggy) (Double Pack Set Vol. 6)) has no Number in extendedData",
+    "Product 605126 (DON!! Card (Blackbeard) (Double Pack Set Vol. 6)) has no Number in extendedData"
+  ]
+}

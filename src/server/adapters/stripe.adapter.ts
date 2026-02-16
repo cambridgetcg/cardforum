@@ -13,12 +13,15 @@ import type {
   CheckoutSessionParams,
   CheckoutSessionResult,
   CustomerCreateParams,
+  PaymentIntentParams,
+  PaymentIntentResult,
   ConnectAccountParams,
   ConnectAccountResult,
   OnboardingLinkParams,
   ConnectAccountStatus,
   TransferParams,
   TransferResult,
+  MarketplaceTransferParams,
   PaymentWebhookEvent,
 } from "@/server/ports/payment.port";
 
@@ -78,6 +81,38 @@ export class StripePaymentAdapter implements IPaymentProvider {
 
     return mapStripeEvent(event);
   }
+
+  async createPaymentIntent(params: PaymentIntentParams): Promise<PaymentIntentResult> {
+    const pi = await this.stripe.paymentIntents.create({
+      customer: params.customerId,
+      amount: params.amountCents,
+      currency: params.currency,
+      capture_method: params.captureMethod,
+      metadata: params.metadata,
+      ...(params.paymentMethodId ? {
+        payment_method: params.paymentMethodId,
+        confirm: true,
+      } : {}),
+    });
+
+    return {
+      paymentIntentId: pi.id,
+      clientSecret: pi.client_secret ?? "",
+      status: pi.status,
+    };
+  }
+
+  async capturePaymentIntent(paymentIntentId: string): Promise<{ chargeId: string }> {
+    const pi = await this.stripe.paymentIntents.capture(paymentIntentId);
+    const chargeId = typeof pi.latest_charge === "string"
+      ? pi.latest_charge
+      : pi.latest_charge?.id ?? "";
+    return { chargeId };
+  }
+
+  async cancelPaymentIntent(paymentIntentId: string): Promise<void> {
+    await this.stripe.paymentIntents.cancel(paymentIntentId);
+  }
 }
 
 export class StripePayoutAdapter implements IPayoutProvider {
@@ -127,6 +162,17 @@ export class StripePayoutAdapter implements IPayoutProvider {
     });
     return { transferId: transfer.id };
   }
+
+  async createTransferFromPayment(params: MarketplaceTransferParams): Promise<TransferResult> {
+    const transfer = await this.stripe.transfers.create({
+      amount: params.amountCents,
+      currency: params.currency,
+      destination: params.destinationAccountId,
+      source_transaction: params.sourceChargeId,
+      metadata: params.metadata,
+    });
+    return { transferId: transfer.id };
+  }
 }
 
 // ─── Event Mapping ───────────────────────────────────
@@ -142,6 +188,32 @@ function mapStripeEvent(event: Stripe.Event): PaymentWebhookEvent {
         sessionId: session.id,
         metadata: (session.metadata ?? {}) as Record<string, string>,
         amountCents: session.amount_total ?? 0,
+      };
+    }
+    case "payment_intent.succeeded": {
+      const pi = event.data.object as Stripe.PaymentIntent;
+      return {
+        type: "payment_intent.succeeded",
+        paymentIntentId: pi.id,
+        metadata: (pi.metadata ?? {}) as Record<string, string>,
+        amountCents: pi.amount,
+      };
+    }
+    case "payment_intent.payment_failed": {
+      const pi = event.data.object as Stripe.PaymentIntent;
+      return {
+        type: "payment_intent.payment_failed",
+        paymentIntentId: pi.id,
+        metadata: (pi.metadata ?? {}) as Record<string, string>,
+        reason: pi.last_payment_error?.message ?? "Payment failed",
+      };
+    }
+    case "payment_intent.canceled": {
+      const pi = event.data.object as Stripe.PaymentIntent;
+      return {
+        type: "payment_intent.canceled",
+        paymentIntentId: pi.id,
+        metadata: (pi.metadata ?? {}) as Record<string, string>,
       };
     }
     case "transfer.paid": {

@@ -1,4 +1,4 @@
-import { RATING_COMPONENT_WEIGHTS } from "@/lib/constants";
+import { getConfig } from "@/server/services/config.service";
 import {
   RATING_DECAY_WEIGHTS,
   RATING_MIN_ACCOUNT_AGE_DAYS,
@@ -22,8 +22,8 @@ interface RaterInfo {
  * Compute the weighted composite score from individual component scores.
  * Falls back to the overall score when components are null (legacy ratings).
  */
-export function computeWeightedScore(rating: RatingRecord): number {
-  const w = RATING_COMPONENT_WEIGHTS;
+export async function computeWeightedScore(rating: RatingRecord): Promise<number> {
+  const w = await getConfig("rating.component_weights");
   if (
     rating.accuracyScore != null &&
     rating.speedScore != null &&
@@ -31,10 +31,10 @@ export function computeWeightedScore(rating: RatingRecord): number {
     rating.communicationScore != null
   ) {
     return (
-      rating.accuracyScore * w.accuracy +
-      rating.speedScore * w.speed +
-      rating.satisfactionScore * w.satisfaction +
-      rating.communicationScore * w.communication
+      rating.accuracyScore * (w.accuracy ?? 0.4) +
+      rating.speedScore * (w.speed ?? 0.2) +
+      rating.satisfactionScore * (w.satisfaction ?? 0.25) +
+      rating.communicationScore * (w.communication ?? 0.15)
     );
   }
   return rating.score;
@@ -46,7 +46,7 @@ export function computeWeightedScore(rating: RatingRecord): number {
  * effective_rating =
  *   (last_90_days × 0.6) + (91-180_days × 0.3) + (lifetime × 0.1)
  */
-export function computeTimeWeightedRating(ratings: RatingRecord[]): number {
+export async function computeTimeWeightedRating(ratings: RatingRecord[]): Promise<number> {
   if (ratings.length === 0) return 5.0; // default for new authenticators
 
   const now = Date.now();
@@ -56,7 +56,7 @@ export function computeTimeWeightedRating(ratings: RatingRecord[]): number {
 
   for (const r of ratings) {
     const age = (now - r.createdAt.getTime()) / day;
-    const score = computeWeightedScore(r);
+    const score = await computeWeightedScore(r);
     if (age <= 90) buckets.last90.push(score);
     else if (age <= 180) buckets.mid.push(score);
     else buckets.lifetime.push(score);

@@ -9,6 +9,13 @@ import type { ListingEdge } from "./cycle-finder";
 import { gradeMatchesWant } from "@/lib/grading";
 import type { GradingCompany } from "@/types/domain";
 
+interface UserWithRegion {
+  id: string;
+  region: string | null;
+  regionId?: string | null;
+  regionRef?: { name: string; country: string } | null;
+}
+
 /** A graded have listing loaded from DB with user region. */
 export interface GradedHaveRow {
   id: string;
@@ -19,7 +26,7 @@ export interface GradedHaveRow {
   certNumber: string;
   language: string;
   askPrice: number;
-  user: { id: string; region: string | null };
+  user: UserWithRegion;
 }
 
 /** A graded want listing loaded from DB with user region. */
@@ -31,7 +38,13 @@ export interface GradedWantRow {
   minGrade: number;
   maxGrade: number | null;
   bidPrice: number;
-  user: { id: string; region: string | null };
+  user: UserWithRegion;
+}
+
+/** Resolve a user's effective region string, preferring the normalized Region FK */
+function resolveRegion(user: UserWithRegion): string {
+  if (user.regionRef) return `${user.regionRef.name}, ${user.regionRef.country}`;
+  return user.region ?? "unknown";
 }
 
 /**
@@ -84,8 +97,8 @@ export function buildGradedEdges(
         cardId: have.cardId,
         haveUserId: have.userId,
         wantUserId: want.userId,
-        haveRegion: have.user.region ?? "unknown",
-        wantRegion: want.user.region ?? "unknown",
+        haveRegion: resolveRegion(have.user),
+        wantRegion: resolveRegion(want.user),
         condition: `${have.gradingCompany}-${have.grade}`,
         askPrice: have.askPrice,
         bidPrice: want.bidPrice,

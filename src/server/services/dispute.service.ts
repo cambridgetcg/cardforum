@@ -1,9 +1,11 @@
 import { db } from "@/lib/db";
 import type { DisputeStatus } from "@/types/domain";
+import type { DisputeStatus as PrismaDisputeStatus } from "@/generated/prisma/client";
 import { refundTradeHold } from "./wallet.service";
 import { refundVerificationFees } from "./fee.service";
 import { refundEscrow } from "./escrow.service";
 import { initiateCardReturns } from "./shipping.service";
+import { cancelTradeHolds } from "./marketplace-escrow.service";
 
 /**
  * Resolve a dispute and handle the financial consequences.
@@ -38,6 +40,7 @@ export async function resolveDispute(
 
   const trade = dispute.trade;
   const tradeId = trade.id;
+  const tradeMode = (trade.mode ?? "AUTHENTICATED") as string;
 
   // Update dispute status
   await db.dispute.update({
@@ -47,21 +50,31 @@ export async function resolveDispute(
 
   // RESOLVED_BUYER or CLOSED: refund everything, cancel the trade
   if (newStatus === "RESOLVED_BUYER" || newStatus === "CLOSED") {
-    // Refund wallet holds
-    const holdTxns = await db.walletTransaction.findMany({
-      where: { tradeId, type: "TRADE_HOLD" },
-    });
-    for (const txn of holdTxns) {
-      await refundTradeHold(txn.userId, tradeId, Math.abs(txn.amount));
+    if (tradeMode === "DIRECT") {
+      // DIRECT mode: cancel Stripe PaymentIntents (releases auth holds)
+      try {
+        await cancelTradeHolds(tradeId);
+      } catch (err) {
+        console.error(`[dispute] Failed to cancel Stripe holds for trade ${tradeId}:`, err);
+        // Continue — holds auto-expire after 7 days even if cancel fails
+      }
+    } else {
+      // AUTHENTICATED mode: refund wallet holds
+      const holdTxns = await db.walletTransaction.findMany({
+        where: { tradeId, type: "TRADE_HOLD" },
+      });
+      for (const txn of holdTxns) {
+        await refundTradeHold(txn.userId, tradeId, Math.abs(txn.amount));
+      }
+
+      // Refund escrow
+      if (trade.escrow && trade.escrow.status === "HELD") {
+        await refundEscrow(trade.escrow.id, `Dispute resolved: ${resolution}`);
+      }
     }
 
-    // Refund verification fees
+    // Refund verification fees (both modes — AUTHENTICATED has wallet fees, DIRECT skips gracefully)
     await refundVerificationFees(tradeId);
-
-    // Refund escrow
-    if (trade.escrow && trade.escrow.status === "HELD") {
-      await refundEscrow(trade.escrow.id, `Dispute resolved: ${resolution}`);
-    }
 
     // Initiate card returns for cards at authenticators
     await initiateCardReturns(tradeId);
@@ -181,6 +194,30 @@ export async function getOpenDisputes(tradeId?: string) {
       status: { in: ["OPEN", "INVESTIGATING", "ESCALATED"] },
     },
     include: {
+      raisedBy: { select: { name: true, email: true } },
+      trade: {
+        select: {
+          id: true,
+          status: true,
+          userAId: true,
+          userBId: true,
+        },
+      },
+    },
+    orderBy: { createdAt: "desc" },
+  });
+}
+
+/**
+ * Get all disputes, optionally filtered by status.
+ */
+export async function getAllDisputes(statusFilter?: string) {
+  return db.dispute.findMany({
+    where: statusFilter
+      ? { status: statusFilter as PrismaDisputeStatus }
+      : {},
+    include: {
+      raisedBy: { select: { name: true, email: true } },
       trade: {
         select: {
           id: true,

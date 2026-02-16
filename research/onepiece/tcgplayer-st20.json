@@ -1,0 +1,344 @@
+{
+  "tcg": "ONEPIECE",
+  "groupName": "Starter Deck 20: YELLOW Charlotte Katakuri",
+  "groupId": 23495,
+  "setCode": "ST20",
+  "totalProducts": 14,
+  "totalCards": 11,
+  "scrapedAt": "2026-02-15T22:54:45.271Z",
+  "durationMs": 70,
+  "cards": [
+    {
+      "productId": 581051,
+      "cardId": "OP03-099",
+      "name": "Charlotte Katakuri (OP03-099)",
+      "cleanName": "Charlotte Katakuri OP03 099",
+      "url": "https://www.tcgplayer.com/product/581051/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-katakuri-op03-099",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581051_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "L",
+      "cardType": "Leader",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": null,
+      "life": "5",
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Strike",
+      "effectText": "[DON!! x1] [When Attacking] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, this Leader gains +1000 power during this battle.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.39,
+          "midPrice": 1,
+          "highPrice": 25,
+          "marketPrice": 0.77,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581052,
+      "cardId": "OP03-106",
+      "name": "Charlotte Opera",
+      "cleanName": "Charlotte Opera",
+      "url": "https://www.tcgplayer.com/product/581052/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-opera",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581052_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": null,
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.1,
+          "highPrice": 1.99,
+          "marketPrice": 0.07,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581053,
+      "cardId": "OP03-107",
+      "name": "Charlotte Galette",
+      "cleanName": "Charlotte Galette",
+      "url": "https://www.tcgplayer.com/product/581053/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-galette",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581053_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "2",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em>",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.03,
+          "midPrice": 0.19,
+          "highPrice": 5,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581054,
+      "cardId": "OP03-110",
+      "name": "Charlotte Smoothie",
+      "cleanName": "Charlotte Smoothie",
+      "url": "https://www.tcgplayer.com/product/581054/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-smoothie",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581054_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: This Character gains +2000 power during this battle.<br><br>\r\n[Trigger] You may trash 1 card from your hand: Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.15,
+          "highPrice": 1.33,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581055,
+      "cardId": "OP03-112",
+      "name": "Charlotte Pudding (OP03-112)",
+      "cleanName": "Charlotte Pudding OP03 112",
+      "url": "https://www.tcgplayer.com/product/581055/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-pudding-op03-112",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581055_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "R",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "1",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 [Sanji] or \"Big Mom Pirates\" type card other than [Charlotte Pudding] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.22,
+          "highPrice": 1.3,
+          "marketPrice": 0.22,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581059,
+      "cardId": "ST07-005",
+      "name": "Charlotte Daifuku",
+      "cleanName": "Charlotte Daifuku",
+      "url": "https://www.tcgplayer.com/product/581059/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-daifuku",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581059_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Slash",
+      "effectText": "[DON!! x1] [When Attacking] You may add 1 card from the top or bottom of your Life cards to your hand: Add up to 1 card from the top of your deck to the top of your Life cards.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.02,
+          "midPrice": 0.13,
+          "highPrice": 4.99,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581061,
+      "cardId": "ST20-001",
+      "name": "Charlotte Katakuri (ST20-001)",
+      "cleanName": "Charlotte Katakuri ST20 001",
+      "url": "https://www.tcgplayer.com/product/581061/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-katakuri-st20-001",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581061_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "6000",
+      "cost": "5",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Strike",
+      "effectText": "[Blocker] <em>(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)</em><br><br>\r\n[Activate: Main] [Once Per Turn] You may turn 1 card from the top of your Life cards face-up: Give up to 1 rested DON!! card to your Leader or 1 of your Characters.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.25,
+          "midPrice": 1,
+          "highPrice": 10,
+          "marketPrice": 0.5,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581062,
+      "cardId": "ST20-002",
+      "name": "Charlotte Cracker",
+      "cleanName": "Charlotte Cracker",
+      "url": "https://www.tcgplayer.com/product/581062/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-cracker",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581062_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "5000",
+      "cost": "4",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Slash",
+      "effectText": "[Once Per Turn] If this Character would be K.O.'d by an effect, you may trash 1 card from the top of your Life cards instead.<br><br>\r\n[Trigger] You may trash 1 card from your hand: Play this card.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.05,
+          "midPrice": 0.2,
+          "highPrice": 2.45,
+          "marketPrice": 0.16,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581063,
+      "cardId": "ST20-003",
+      "name": "Charlotte Brulee",
+      "cleanName": "Charlotte Brulee",
+      "url": "https://www.tcgplayer.com/product/581063/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-brulee",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581063_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "3000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[Trigger] Look at up to 1 card from the top of your or your opponent's Life cards, and place it at the top or bottom of the Life cards. Then, add this card to your hand.",
+      "counterPlus": "2000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.01,
+          "midPrice": 0.23,
+          "highPrice": 3.45,
+          "marketPrice": 0.11,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581064,
+      "cardId": "ST20-004",
+      "name": "Charlotte Pudding (ST20-004)",
+      "cleanName": "Charlotte Pudding ST20 004",
+      "url": "https://www.tcgplayer.com/product/581064/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-pudding-st20-004",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581064_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "C",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "2000",
+      "cost": "3",
+      "life": null,
+      "subtypes": "Big Mom Pirates",
+      "attribute": "Wisdom",
+      "effectText": "[On Play] You may add 1 card from the top of your Life cards to your hand: Set up to 1 of your \"Big Mom Pirates\" type Characters with a cost of 3 or less as active.<br><br>\r\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "counterPlus": "1000",
+      "prices": [
+        {
+          "subTypeName": "Normal",
+          "lowPrice": 0.1,
+          "midPrice": 0.22,
+          "highPrice": 2,
+          "marketPrice": 0.2,
+          "directLowPrice": null
+        }
+      ]
+    },
+    {
+      "productId": 581065,
+      "cardId": "ST20-005",
+      "name": "Charlotte Linlin",
+      "cleanName": "Charlotte Linlin",
+      "url": "https://www.tcgplayer.com/product/581065/one-piece-card-game-starter-deck-20-yellow-charlotte-katakuri-charlotte-linlin",
+      "imageUrl": "https://tcgplayer-cdn.tcgplayer.com/product/581065_200w.jpg",
+      "groupId": 23495,
+      "setCode": "ST20",
+      "rarity": "SR",
+      "cardType": "Character",
+      "color": "Yellow",
+      "power": "7000",
+      "cost": "6",
+      "life": null,
+      "subtypes": "The Four Emperors;Big Mom Pirates",
+      "attribute": "Special",
+      "effectText": "[On Play] You may trash 1 card from your hand: Your opponent chooses one:<br><br>\r\n• Your opponent trashes 2 cards from their hand.<br><br>\r\n• Trash 1 card from the top of your opponent's Life cards.",
+      "counterPlus": null,
+      "prices": [
+        {
+          "subTypeName": "Foil",
+          "lowPrice": 0.5,
+          "midPrice": 1.25,
+          "highPrice": 25,
+          "marketPrice": 0.89,
+          "directLowPrice": null
+        }
+      ]
+    }
+  ],
+  "sealedProducts": 3,
+  "errors": []
+}

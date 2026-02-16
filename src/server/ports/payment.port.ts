@@ -37,6 +37,33 @@ export interface IPaymentProvider {
 
   /** Construct and verify a webhook event from raw payload + signature */
   constructWebhookEvent(payload: string | Buffer, signature: string): Promise<PaymentWebhookEvent>;
+
+  /** Create a PaymentIntent with manual capture (for trade escrow holds) */
+  createPaymentIntent(params: PaymentIntentParams): Promise<PaymentIntentResult>;
+
+  /** Capture a previously authorized PaymentIntent. Returns the resulting Charge ID. */
+  capturePaymentIntent(paymentIntentId: string): Promise<{ chargeId: string }>;
+
+  /** Cancel/void a PaymentIntent (release auth hold) */
+  cancelPaymentIntent(paymentIntentId: string): Promise<void>;
+}
+
+// ─── PaymentIntent (Marketplace Escrow) ──────────────
+
+export interface PaymentIntentParams {
+  customerId: string;
+  amountCents: number;
+  currency: string;
+  captureMethod: "manual" | "automatic";
+  metadata: Record<string, string>;
+  /** Optional: saved payment method to charge (skips checkout) */
+  paymentMethodId?: string;
+}
+
+export interface PaymentIntentResult {
+  paymentIntentId: string;
+  clientSecret: string;
+  status: string;
 }
 
 // ─── Connect / Payouts ───────────────────────────────
@@ -89,12 +116,35 @@ export interface IPayoutProvider {
 
   /** Transfer funds to a connected account */
   createTransfer(params: TransferParams): Promise<TransferResult>;
+
+  /**
+   * Transfer funds to a connected account from a specific charge/PaymentIntent.
+   * Used in marketplace model: capture buyer payment → transfer to seller.
+   * The application fee is kept by the platform.
+   */
+  createTransferFromPayment(params: MarketplaceTransferParams): Promise<TransferResult>;
+}
+
+// ─── Marketplace Transfer ────────────────────────────
+
+export interface MarketplaceTransferParams {
+  /** Amount to transfer to the seller (cents) */
+  amountCents: number;
+  currency: string;
+  /** Seller's Connect account ID */
+  destinationAccountId: string;
+  /** The Charge ID (ch_xxx) that funded this transfer — NOT a PaymentIntent ID */
+  sourceChargeId: string;
+  metadata?: Record<string, string>;
 }
 
 // ─── Webhook Events ──────────────────────────────────
 
 export type PaymentWebhookEvent =
   | { type: "checkout.session.completed"; sessionId: string; metadata: Record<string, string>; amountCents: number }
+  | { type: "payment_intent.succeeded"; paymentIntentId: string; metadata: Record<string, string>; amountCents: number }
+  | { type: "payment_intent.payment_failed"; paymentIntentId: string; metadata: Record<string, string>; reason: string }
+  | { type: "payment_intent.canceled"; paymentIntentId: string; metadata: Record<string, string> }
   | { type: "transfer.paid"; transferId: string }
   | { type: "transfer.failed"; transferId: string; reason: string }
   | { type: "transfer.reversed"; transferId: string; reason: string }

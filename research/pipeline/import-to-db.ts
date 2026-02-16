@@ -18,8 +18,25 @@ import "dotenv/config";
 import { PrismaClient } from "../../src/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import type { ScrapeResult, CardmarketCard } from "./scrape-cardmarket";
+import { getMapping } from "./set-code-mappings";
 import * as fs from "fs";
 import * as path from "path";
+
+/** Enriched card extends CardmarketCard with metadata from individual card pages */
+interface EnrichedCard extends CardmarketCard {
+  rarity?: string;
+  cardType?: string;
+  effectText?: string;
+  cost?: number;
+  power?: number;
+  releaseDate?: string;
+  language?: string;
+}
+
+/** ScrapeResult extended with optional language field */
+interface ScrapeResultWithLanguage extends ScrapeResult {
+  language?: string;
+}
 
 const DATA_DIR = path.join(process.cwd(), "research", "onepiece");
 
@@ -39,27 +56,74 @@ interface SetImportResult {
   errors: string[];
 }
 
+/** Language suffixes used in filenames */
+const LANG_SUFFIXES = ["-jp", "-nel", "-al", "-pe"] as const;
+const LANG_MAP: Record<string, string> = { "-jp": "JP", "-nel": "NEL", "-al": "AL", "-pe": "PE" };
+
+interface ScrapedFileEntry {
+  code: string;
+  filePath: string;
+  enriched: boolean;
+  language: string;  // "EN" | "JP" | "NEL" | "AL" | "PE"
+}
+
 /**
  * Find all scraped JSON files in the data directory.
+ * Prefers enriched files (cardmarket-{code}-enriched.json) over base files.
+ * Recognizes language suffixes: cardmarket-op01-jp.json → JP variant.
  */
-function findScrapedFiles(setFilter?: string[]): { code: string; filePath: string }[] {
-  const files = fs.readdirSync(DATA_DIR)
-    .filter((f) => f.startsWith("cardmarket-") && f.endsWith(".json") && !f.includes("summary"))
-    .map((f) => {
-      // Extract set code from filename: "cardmarket-op01.json" → "OP01"
-      const match = f.match(/^cardmarket-(.+)\.json$/);
-      if (!match) return null;
-      const code = match[1].toUpperCase();
-      return { code, filePath: path.join(DATA_DIR, f) };
-    })
-    .filter((x): x is { code: string; filePath: string } => x !== null);
+function findScrapedFiles(setFilter?: string[]): ScrapedFileEntry[] {
+  const allFiles = fs.readdirSync(DATA_DIR);
+
+  // Build map of code:language → best file (prefer enriched)
+  const byKey = new Map<string, ScrapedFileEntry>();
+
+  for (const f of allFiles) {
+    if (!f.startsWith("cardmarket-") || !f.endsWith(".json") || f.includes("summary")) continue;
+
+    // Parse filename to extract code, language, and enriched status
+    // Examples:
+    //   cardmarket-op01.json                → code=OP01, lang=EN, enriched=false
+    //   cardmarket-op01-enriched.json       → code=OP01, lang=EN, enriched=true
+    //   cardmarket-op01-jp.json             → code=OP01, lang=JP, enriched=false
+    //   cardmarket-op01-jp-enriched.json    → code=OP01, lang=JP, enriched=true
+    const basename = f.replace(/\.json$/, "").replace(/^cardmarket-/, "");
+    const enriched = basename.endsWith("-enriched");
+    const withoutEnriched = enriched ? basename.replace(/-enriched$/, "") : basename;
+
+    // Check for language suffix
+    let language = "EN";
+    let codeStr = withoutEnriched;
+    for (const suffix of LANG_SUFFIXES) {
+      if (withoutEnriched.endsWith(suffix)) {
+        language = LANG_MAP[suffix];
+        codeStr = withoutEnriched.slice(0, -suffix.length);
+        break;
+      }
+    }
+
+    const code = codeStr.toUpperCase();
+    const key = `${code}:${language}`;
+
+    // Prefer enriched over base
+    const existing = byKey.get(key);
+    if (!existing || (enriched && !existing.enriched)) {
+      byKey.set(key, { code, filePath: path.join(DATA_DIR, f), enriched, language });
+    }
+  }
+
+  let files = Array.from(byKey.values());
 
   if (setFilter) {
     const filterSet = new Set(setFilter.map((s) => s.toUpperCase()));
-    return files.filter((f) => filterSet.has(f.code));
+    files = files.filter((f) => filterSet.has(f.code));
   }
 
-  return files.sort((a, b) => a.code.localeCompare(b.code));
+  return files.sort((a, b) => {
+    const codeCompare = a.code.localeCompare(b.code);
+    if (codeCompare !== 0) return codeCompare;
+    return a.language.localeCompare(b.language);
+  });
 }
 
 /**
@@ -76,11 +140,13 @@ function inferProductType(code: string): string | null {
 
 /**
  * Import a single scraped set into the database.
+ * @param language - Language code for CardVariant records ("EN", "JP", "NEL", "AL", "PE")
  */
 async function importSet(
   db: PrismaClient,
   scrapeData: ScrapeResult,
   dryRun: boolean,
+  language: string = "EN",
 ): Promise<SetImportResult> {
   const stats: ImportStats = {
     setsCreated: 0,
@@ -94,11 +160,15 @@ async function importSet(
 
   const { setCode, expansion: expansionName, expansionId, cards } = scrapeData;
 
+  // Resolve releaseDate from set-code-mappings
+  const mapping = getMapping(expansionName);
+  const releaseDate = mapping?.releaseDate ? new Date(mapping.releaseDate) : null;
+
   // 1. Upsert CardSet
   const uniqueCardIds = new Set(cards.map((c) => c.cardId));
 
   if (dryRun) {
-    console.log(`  [DRY RUN] Would upsert CardSet: ${setCode} - ${expansionName} (${uniqueCardIds.size} unique cards)`);
+    console.log(`  [DRY RUN] Would upsert CardSet: ${setCode} - ${expansionName} (${uniqueCardIds.size} unique cards)${releaseDate ? ` [release: ${mapping!.releaseDate}]` : ""}`);
     stats.setsCreated = 1;
   } else {
     const existing = await db.cardSet.findUnique({
@@ -113,11 +183,13 @@ async function importSet(
         productType: inferProductType(setCode),
         totalCards: uniqueCardIds.size,
         cardmarketId: expansionId,
+        releaseDate,
       },
       update: {
         name: expansionName,
         totalCards: uniqueCardIds.size,
         cardmarketId: expansionId,
+        releaseDate: releaseDate ?? undefined,
       },
     });
     if (existing) stats.setsUpdated = 1;
@@ -150,14 +222,17 @@ async function importSet(
     const number = cardId;
 
     if (dryRun) {
-      console.log(`  [DRY RUN] Would upsert Card: ${cardId} - ${firstVariant.name} (${variants.length} variant(s))`);
+      console.log(`  [DRY RUN] Would upsert Card: ${cardId} - ${firstVariant.name} (${variants.length} variant(s)) [${language}]`);
       stats.cardsCreated++;
       stats.variantsCreated += variants.length;
       continue;
     }
 
     try {
-      // Upsert the Card record
+      // Cast to enriched type (extra fields are optional)
+      const enriched = firstVariant as EnrichedCard;
+
+      // Upsert the Card record (with enrichment fields if available)
       const existingCard = await db.card.findUnique({
         where: { tcg_setName_number: { tcg: "ONEPIECE", setName: expansionName, number } },
       });
@@ -172,27 +247,36 @@ async function importSet(
           number,
           imageUrl: firstVariant.imageUrl,
           setId: cardSetId,
+          cardType: enriched.cardType ?? null,
+          effectText: enriched.effectText ?? null,
+          cost: enriched.cost ?? null,
+          power: enriched.power ?? null,
         },
         update: {
           name: firstVariant.name,
           setCode,
           imageUrl: firstVariant.imageUrl || undefined,
           setId: cardSetId,
+          cardType: enriched.cardType ?? undefined,
+          effectText: enriched.effectText ?? undefined,
+          cost: enriched.cost ?? undefined,
+          power: enriched.power ?? undefined,
         },
       });
 
       if (existingCard) stats.cardsUpdated++;
       else stats.cardsCreated++;
 
-      // Upsert variants
+      // Upsert variants (with price + rarity if available)
       for (const v of variants) {
         const version = v.version || "";
+        const ev = v as EnrichedCard;
 
         const existingVariant = await db.cardVariant.findUnique({
           where: {
             cardId_language_edition_version: {
               cardId: card.id,
-              language: "EN",
+              language,
               edition: "",
               version,
             },
@@ -203,23 +287,29 @@ async function importSet(
           where: {
             cardId_language_edition_version: {
               cardId: card.id,
-              language: "EN",
+              language,
               edition: "",
               version,
             },
           },
           create: {
             cardId: card.id,
-            language: "EN",
+            language,
             version,
             treatment: v.treatment,
             sourceUrl: v.sourceUrl,
             imageUrl: v.imageUrl,
+            rarity: ev.rarity ?? null,
+            priceEur: v.priceEur > 0 ? v.priceEur : null,
+            priceUpdatedAt: v.priceEur > 0 ? new Date() : null,
           },
           update: {
             treatment: v.treatment,
             sourceUrl: v.sourceUrl,
             imageUrl: v.imageUrl || undefined,
+            rarity: ev.rarity ?? undefined,
+            priceEur: v.priceEur > 0 ? v.priceEur : undefined,
+            priceUpdatedAt: v.priceEur > 0 ? new Date() : undefined,
           },
         });
 
@@ -295,13 +385,17 @@ async function main() {
   const totalStart = Date.now();
 
   for (const file of files) {
-    console.log(`\nImporting ${file.code} from ${path.basename(file.filePath)}...`);
+    const langLabel = file.language !== "EN" ? ` [${file.language}]` : "";
+    console.log(`\nImporting ${file.code}${langLabel} from ${path.basename(file.filePath)}${file.enriched ? " (enriched)" : ""}...`);
 
     // Load scraped data
     const raw = fs.readFileSync(file.filePath, "utf-8");
-    const scrapeData: ScrapeResult = JSON.parse(raw);
+    const scrapeData: ScrapeResultWithLanguage = JSON.parse(raw);
 
-    const result = await importSet(db, scrapeData, dryRun);
+    // Language priority: file metadata > JSON field > filename inference
+    const language = file.language || scrapeData.language || "EN";
+
+    const result = await importSet(db, scrapeData, dryRun, language);
     allResults.push(result);
 
     // Per-set summary
