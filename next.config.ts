@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "product-images.s3.cardmarket.com",
       },
+      {
+        protocol: "https",
+        hostname: "tcgplayer-cdn.tcgplayer.com",
+      },
     ],
   },
 };

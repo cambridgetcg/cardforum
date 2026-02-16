@@ -16,7 +16,7 @@
  */
 
 import "dotenv/config";
-import { PrismaClient } from "../../src/generated/prisma/client";
+import { PrismaClient, TCG } from "../../src/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import * as fs from "fs";
 import * as path from "path";
@@ -26,7 +26,7 @@ import {
   type TcgplayerScrapeResult,
   type TcgplayerCard,
 } from "./tcgplayer-types";
-import { buildOfficialCodeMap } from "./set-code-mappings";
+import { buildNormalizedCodeMap } from "./set-code-mappings";
 
 const TCG_DIR_MAP: Record<string, string> = {
   ONEPIECE: "onepiece",
@@ -36,11 +36,11 @@ const TCG_DIR_MAP: Record<string, string> = {
 };
 
 /** Map TCG string to Prisma enum value */
-const TCG_ENUM_MAP: Record<string, string> = {
-  ONEPIECE: "ONEPIECE",
-  POKEMON: "POKEMON",
-  YUGIOH: "YUGIOH",
-  MTG: "MTG",
+const TCG_ENUM_MAP: Record<string, TCG> = {
+  ONEPIECE: TCG.ONEPIECE,
+  POKEMON: TCG.POKEMON,
+  YUGIOH: TCG.YUGIOH,
+  MTG: TCG.MTG,
 };
 
 interface ImportStats {
@@ -63,7 +63,10 @@ interface SetImportResult {
 /**
  * Find all TCGPlayer JSON files for a given TCG.
  */
-function findTcgplayerFiles(tcg: string, setFilter?: string[]): { code: string; filePath: string }[] {
+function findTcgplayerFiles(
+  tcg: string,
+  setFilter?: string[],
+): { code: string; filePath: string }[] {
   const dirName = TCG_DIR_MAP[tcg] || tcg.toLowerCase();
   const dataDir = path.join(process.cwd(), "research", dirName);
 
@@ -75,10 +78,20 @@ function findTcgplayerFiles(tcg: string, setFilter?: string[]): { code: string; 
   let entries: { code: string; filePath: string }[] = [];
 
   for (const f of allFiles) {
-    if (!f.startsWith("tcgplayer-") || !f.endsWith(".json") || f.includes("summary") || f.includes("groups") || f.includes("progress")) continue;
+    if (
+      !f.startsWith("tcgplayer-") ||
+      !f.endsWith(".json") ||
+      f.includes("summary") ||
+      f.includes("groups") ||
+      f.includes("progress")
+    )
+      continue;
 
     // Extract code: tcgplayer-op01.json → OP01
-    const code = f.replace(/^tcgplayer-/, "").replace(/\.json$/, "").toUpperCase();
+    const code = f
+      .replace(/^tcgplayer-/, "")
+      .replace(/\.json$/, "")
+      .toUpperCase();
     entries.push({ code, filePath: path.join(dataDir, f) });
   }
 
@@ -94,13 +107,14 @@ function findTcgplayerFiles(tcg: string, setFilter?: string[]): { code: string; 
  * Resolve set name for Card.setName from TCGPlayer group name.
  * For One Piece, cross-references set-code-mappings to use the same setName
  * as the Cardmarket import (the Cardmarket expansion name).
+ *
+ * Uses buildNormalizedCodeMap() which handles ALL prefixes automatically —
+ * no hardcoded prefix regex needed.
  */
 function resolveSetName(groupName: string, setCode: string, tcg: string): string {
   if (tcg === "ONEPIECE") {
-    const codeMap = buildOfficialCodeMap();
-    // Find by official code (with dash, e.g., "OP-01")
-    const dashCode = setCode.replace(/^(OP|ST|EB|PRB)(\d)/, "$1-$2");
-    const mapping = codeMap.get(dashCode);
+    const normalizedMap = buildNormalizedCodeMap();
+    const mapping = normalizedMap.get(setCode.toUpperCase());
     if (mapping) return mapping.cardmarketName;
   }
   // Fallback: use TCGPlayer group name
@@ -109,12 +123,12 @@ function resolveSetName(groupName: string, setCode: string, tcg: string): string
 
 /**
  * Resolve release date from set-code-mappings or TCGPlayer publishedOn.
+ * Uses normalized code lookup — handles all prefixes without regex.
  */
 function resolveReleaseDate(setCode: string, tcg: string): Date | null {
   if (tcg === "ONEPIECE") {
-    const codeMap = buildOfficialCodeMap();
-    const dashCode = setCode.replace(/^(OP|ST|EB|PRB)(\d)/, "$1-$2");
-    const mapping = codeMap.get(dashCode);
+    const normalizedMap = buildNormalizedCodeMap();
+    const mapping = normalizedMap.get(setCode.toUpperCase());
     if (mapping?.releaseDate) return new Date(mapping.releaseDate);
   }
   return null;
@@ -141,7 +155,7 @@ async function importSet(
   const errors: string[] = [];
 
   const { setCode, groupName, groupId, cards } = scrapeData;
-  const tcgEnum = TCG_ENUM_MAP[tcg] as any;
+  const tcgEnum = TCG_ENUM_MAP[tcg];
   const setName = resolveSetName(groupName, setCode, tcg);
   const releaseDate = resolveReleaseDate(setCode, tcg);
 
@@ -150,7 +164,9 @@ async function importSet(
 
   // 1. Upsert CardSet
   if (dryRun) {
-    console.log(`  [DRY RUN] Would upsert CardSet: ${setCode} - ${setName} (${uniqueCardIds.size} unique cards, groupId: ${groupId})`);
+    console.log(
+      `  [DRY RUN] Would upsert CardSet: ${setCode} - ${setName} (${uniqueCardIds.size} unique cards, groupId: ${groupId})`,
+    );
     stats.setsCreated = 1;
   } else {
     const existing = await db.cardSet.findUnique({
@@ -200,7 +216,9 @@ async function importSet(
 
     if (dryRun) {
       const priceCount = firstCard.prices.length;
-      console.log(`  [DRY RUN] Would upsert Card: ${cardId} - ${firstCard.name} (${priceCount} price entries)`);
+      console.log(
+        `  [DRY RUN] Would upsert Card: ${cardId} - ${firstCard.name} (${priceCount} price entries)`,
+      );
       stats.cardsCreated++;
       stats.variantsCreated += priceCount;
       continue;
@@ -232,10 +250,18 @@ async function importSet(
           // Fill missing metadata without overwriting existing Cardmarket data
           cardType: existingCard?.cardType || firstCard.cardType || undefined,
           effectText: existingCard?.effectText || firstCard.effectText || undefined,
-          cost: existingCard?.cost ?? (firstCard.cost ? parseInt(firstCard.cost, 10) || undefined : undefined),
-          power: existingCard?.power ?? (firstCard.power ? parseInt(firstCard.power, 10) || undefined : undefined),
+          cost:
+            existingCard?.cost ??
+            (firstCard.cost ? parseInt(firstCard.cost, 10) || undefined : undefined),
+          power:
+            existingCard?.power ??
+            (firstCard.power ? parseInt(firstCard.power, 10) || undefined : undefined),
           rarity: existingCard?.rarity || firstCard.rarity || undefined,
-          imageUrl: existingCard?.imageUrl || firstCard.imageUrl || undefined,
+          // Replace Cardmarket URLs (hotlink-protected, returns 403) with TCGPlayer URLs
+          imageUrl:
+            existingCard?.imageUrl?.includes("cardmarket.com") && firstCard.imageUrl
+              ? firstCard.imageUrl
+              : existingCard?.imageUrl || firstCard.imageUrl || undefined,
           setId: cardSetId ?? undefined,
         },
       });
@@ -289,7 +315,7 @@ async function importSet(
             priceUsdLow: priceEntry.lowPrice,
             priceUsdMid: priceEntry.midPrice,
             priceUsdHigh: priceEntry.highPrice,
-            priceUpdatedAt: new Date(),
+            priceUsdUpdatedAt: new Date(),
           },
           update: {
             // Add USD prices without overwriting EUR data
@@ -299,7 +325,7 @@ async function importSet(
             priceUsdLow: priceEntry.lowPrice,
             priceUsdMid: priceEntry.midPrice,
             priceUsdHigh: priceEntry.highPrice,
-            priceUpdatedAt: new Date(),
+            priceUsdUpdatedAt: new Date(),
             // Fill missing fields only
             treatment: existingVariant?.treatment || treatment,
             rarity: existingVariant?.rarity || firstCard.rarity || undefined,
@@ -384,7 +410,10 @@ async function main() {
       i++;
     }
     if (args[i] === "--sets" && args[i + 1]) {
-      setFilter = args[i + 1].toUpperCase().split(",").map((s) => s.trim());
+      setFilter = args[i + 1]
+        .toUpperCase()
+        .split(",")
+        .map((s) => s.trim());
       i++;
     }
   }
@@ -392,8 +421,12 @@ async function main() {
   if (!tcg || (!importAll && !setFilter)) {
     console.error("Usage:");
     console.error("  npx tsx research/pipeline/tcgplayer-import-to-db.ts --tcg onepiece --all");
-    console.error("  npx tsx research/pipeline/tcgplayer-import-to-db.ts --tcg onepiece --set OP01");
-    console.error("  npx tsx research/pipeline/tcgplayer-import-to-db.ts --tcg onepiece --all --dry-run");
+    console.error(
+      "  npx tsx research/pipeline/tcgplayer-import-to-db.ts --tcg onepiece --set OP01",
+    );
+    console.error(
+      "  npx tsx research/pipeline/tcgplayer-import-to-db.ts --tcg onepiece --all --dry-run",
+    );
     process.exit(1);
   }
 
@@ -401,11 +434,15 @@ async function main() {
   if (files.length === 0) {
     console.error(`No TCGPlayer JSON files found for ${tcg}.`);
     console.error("Run the fetcher first:");
-    console.error(`  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg ${tcg.toLowerCase()} --all`);
+    console.error(
+      `  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg ${tcg.toLowerCase()} --all`,
+    );
     process.exit(1);
   }
 
-  console.log(`=== Importing ${files.length} TCGPlayer set(s) for ${tcg} ${dryRun ? "(DRY RUN)" : ""} ===\n`);
+  console.log(
+    `=== Importing ${files.length} TCGPlayer set(s) for ${tcg} ${dryRun ? "(DRY RUN)" : ""} ===\n`,
+  );
 
   // Initialize database
   let db: PrismaClient;
@@ -431,11 +468,11 @@ async function main() {
     const s = result.stats;
     console.log(
       `  ${result.code}: ` +
-      `sets=${s.setsCreated}+${s.setsUpdated}, ` +
-      `cards=${s.cardsCreated}+${s.cardsUpdated}, ` +
-      `variants=${s.variantsCreated}+${s.variantsUpdated}` +
-      (s.crossMatched > 0 ? `, cross-matched=${s.crossMatched}` : "") +
-      (result.errors.length > 0 ? `, errors=${result.errors.length}` : ""),
+        `sets=${s.setsCreated}+${s.setsUpdated}, ` +
+        `cards=${s.cardsCreated}+${s.cardsUpdated}, ` +
+        `variants=${s.variantsCreated}+${s.variantsUpdated}` +
+        (s.crossMatched > 0 ? `, cross-matched=${s.crossMatched}` : "") +
+        (result.errors.length > 0 ? `, errors=${result.errors.length}` : ""),
     );
   }
 
@@ -453,7 +490,16 @@ async function main() {
       crossMatched: acc.crossMatched + r.stats.crossMatched,
       errors: acc.errors + r.errors.length,
     }),
-    { setsCreated: 0, setsUpdated: 0, cardsCreated: 0, cardsUpdated: 0, variantsCreated: 0, variantsUpdated: 0, crossMatched: 0, errors: 0 },
+    {
+      setsCreated: 0,
+      setsUpdated: 0,
+      cardsCreated: 0,
+      cardsUpdated: 0,
+      variantsCreated: 0,
+      variantsUpdated: 0,
+      crossMatched: 0,
+      errors: 0,
+    },
   );
 
   console.log(`\n=== Import Complete ${dryRun ? "(DRY RUN)" : ""} ===`);
