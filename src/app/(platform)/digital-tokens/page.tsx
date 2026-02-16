@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import { useSession } from "next-auth/react";
 import { DigitalTokenCard } from "@/components/digitisation/digital-token-card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -25,12 +26,12 @@ interface Token {
 }
 
 export default function DigitalTokensPage() {
+  const { data: session } = useSession();
   const [tokens, setTokens] = useState<Token[]>([]);
   const [loading, setLoading] = useState(true);
   const [listingTokenId, setListingTokenId] = useState<string | null>(null);
   const [askPrice, setAskPrice] = useState("");
   const [listingError, setListingError] = useState("");
-  const [userId, setUserId] = useState("");
 
   const fetchTokens = useCallback(async () => {
     try {
@@ -38,12 +39,6 @@ export default function DigitalTokensPage() {
       if (res.ok) {
         const data = await res.json();
         setTokens(data);
-      }
-      // Get current user ID from session
-      const sessionRes = await fetch("/api/auth/session");
-      if (sessionRes.ok) {
-        const session = await sessionRes.json();
-        setUserId(session?.user?.id ?? "");
       }
     } finally {
       setLoading(false);
@@ -112,7 +107,7 @@ export default function DigitalTokensPage() {
               <label className="block text-sm font-medium text-gray-700">Ask Price ($)</label>
               <div className="mt-1 flex gap-2">
                 <div className="relative flex-1">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
+                  <span className="absolute top-1/2 left-3 -translate-y-1/2 text-sm text-gray-400">
                     $
                   </span>
                   <Input
@@ -126,12 +121,8 @@ export default function DigitalTokensPage() {
                   />
                 </div>
               </div>
-              {listingError && (
-                <p className="mt-2 text-sm text-red-600">{listingError}</p>
-              )}
-              <p className="mt-2 text-xs text-gray-400">
-                Platform fee: 5% — Digitiser royalty: 2%
-              </p>
+              {listingError && <p className="mt-2 text-sm text-red-600">{listingError}</p>}
+              <p className="mt-2 text-xs text-gray-400">Platform fee: 5% — Digitiser royalty: 2%</p>
             </div>
             <div className="mt-4 flex justify-end gap-3">
               <Button variant="outline" onClick={() => setListingTokenId(null)}>
@@ -159,7 +150,7 @@ export default function DigitalTokensPage() {
             </p>
           </div>
         ) : (
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {tokens.map((token) => (
               <DigitalTokenCard
                 key={token.id}

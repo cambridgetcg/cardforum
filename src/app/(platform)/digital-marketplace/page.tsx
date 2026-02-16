@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useSession } from "next-auth/react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -44,12 +45,13 @@ const CONDITION_FILTERS: { value: Condition | ""; label: string }[] = [
 ];
 
 export default function DigitalMarketplacePage() {
+  const { data: session } = useSession();
   const [listings, setListings] = useState<DigitalListing[]>([]);
   const [loading, setLoading] = useState(true);
   const [tcgFilter, setTcgFilter] = useState<TCG | "">("");
   const [conditionFilter, setConditionFilter] = useState<Condition | "">("");
-  const [currentUserId, setCurrentUserId] = useState("");
   const [buyingId, setBuyingId] = useState<string | null>(null);
+  const currentUserId = session?.user?.id ?? "";
 
   const fetchListings = useCallback(async () => {
     setLoading(true);
@@ -71,13 +73,6 @@ export default function DigitalMarketplacePage() {
   useEffect(() => {
     fetchListings();
   }, [fetchListings]);
-
-  useEffect(() => {
-    fetch("/api/auth/session")
-      .then((res) => res.json())
-      .then((session) => setCurrentUserId(session?.user?.id ?? ""))
-      .catch(() => {});
-  }, []);
 
   async function handleBuy(listingId: string) {
     if (buyingId) return;
@@ -154,7 +149,7 @@ export default function DigitalMarketplacePage() {
             <p className="text-sm text-gray-500">
               {listings.length} listing{listings.length !== 1 ? "s" : ""}
             </p>
-            <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {listings.map((listing) => (
                 <DigitalListingCard
                   key={listing.id}

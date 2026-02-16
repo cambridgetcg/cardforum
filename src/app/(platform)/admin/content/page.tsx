@@ -5,7 +5,14 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 import { EXPERT_POST_CATEGORY_LABELS } from "@/types/domain";
 
 interface ExpertPost {
@@ -58,7 +65,7 @@ export default function AdminContentPage() {
       if (status) params.set("status", status);
       params.set("page", String(p));
       params.set("limit", "20");
-      const res = await fetch(`/api/expert/posts?${params}`);
+      const res = await fetch(`/api/admin/content/posts?${params}`);
       if (!res.ok) throw new Error("Failed to load");
       const data: PostsResponse = await res.json();
       setPosts(data.posts);
@@ -83,7 +90,7 @@ export default function AdminContentPage() {
   async function handleModerate(postId: string, action: "approve" | "flag" | "remove") {
     setModerating(postId);
     try {
-      const res = await fetch(`/api/expert/posts/${postId}`, {
+      const res = await fetch(`/api/admin/content/posts/${postId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ action }),
@@ -146,25 +153,20 @@ export default function AdminContentPage() {
                 {posts.map((p) => (
                   <TableRow key={p.id}>
                     <TableCell className="max-w-xs truncate">
-                      <Link
-                        href={`/expert/${p.id}`}
-                        className="text-indigo-600 hover:underline"
-                      >
+                      <Link href={`/expert/${p.id}`} className="text-indigo-600 hover:underline">
                         {p.title}
                       </Link>
                     </TableCell>
-                    <TableCell>
-                      {p.author.name ?? "Anonymous"}
-                    </TableCell>
+                    <TableCell>{p.author.name ?? "Anonymous"}</TableCell>
                     <TableCell>
                       <Badge variant="default" className="text-[10px]">
-                        {EXPERT_POST_CATEGORY_LABELS[p.category as keyof typeof EXPERT_POST_CATEGORY_LABELS] ?? p.category}
+                        {EXPERT_POST_CATEGORY_LABELS[
+                          p.category as keyof typeof EXPERT_POST_CATEGORY_LABELS
+                        ] ?? p.category}
                       </Badge>
                     </TableCell>
                     <TableCell>
-                      <Badge variant={STATUS_BADGE[p.status] ?? "default"}>
-                        {p.status}
-                      </Badge>
+                      <Badge variant={STATUS_BADGE[p.status] ?? "default"}>{p.status}</Badge>
                     </TableCell>
                     <TableCell className="text-gray-500">
                       {p.publishedAt
