@@ -220,13 +220,14 @@ export async function getCollectionStats(userId: string): Promise<CollectionStat
 
   // Get total cards per set
   const setCodes = [...ownedBySet.keys()];
-  const setTotals = setCodes.length > 0
-    ? await db.card.groupBy({
-        by: ["setCode"],
-        where: { setCode: { in: setCodes } },
-        _count: true,
-      })
-    : [];
+  const setTotals =
+    setCodes.length > 0
+      ? await db.card.groupBy({
+          by: ["setCode"],
+          where: { setCode: { in: setCodes } },
+          _count: true,
+        })
+      : [];
 
   const totalBySet = new Map(setTotals.map((s) => [s.setCode!, s._count]));
 

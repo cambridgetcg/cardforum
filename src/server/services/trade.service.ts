@@ -17,17 +17,10 @@ import {
   calculateHoldAmounts,
   type TxClient,
 } from "./wallet.service";
-import {
-  createTradeHolds,
-  captureAndSettle,
-  cancelTradeHolds,
-} from "./marketplace-escrow.service";
+import { createTradeHolds, captureAndSettle, cancelTradeHolds } from "./marketplace-escrow.service";
 import { assertCanTrade } from "./kyc.service";
 import { getConfig } from "@/server/services/config.service";
-import {
-  lockShippingAddresses,
-  initiateCardReturns,
-} from "./shipping.service";
+import { lockShippingAddresses, initiateCardReturns } from "./shipping.service";
 import { eventBus } from "@/server/events/event-bus";
 import "@/server/events/subscribers";
 
@@ -65,11 +58,7 @@ export async function getUserTrades(userId: string) {
   });
 }
 
-export async function transitionTrade(
-  tradeId: string,
-  userId: string,
-  newStatus: TradeStatus
-) {
+export async function transitionTrade(tradeId: string, userId: string, newStatus: TradeStatus) {
   const trade = await db.trade.findUnique({ where: { id: tradeId } });
 
   if (!trade) throw new Error("Trade not found");
@@ -119,24 +108,7 @@ export async function transitionTrade(
 
     // ─── ACCEPTED: deactivate consumed listings ───
     if (newStatus === "ACCEPTED") {
-      const legs = await tx.tradeLeg.findMany({
-        where: { tradeId },
-        select: {
-          haveListingId: true,
-          wantListingId: true,
-          gradedHaveListingId: true,
-          gradedWantListingId: true,
-        },
-      });
-      const haveIds = legs.map(l => l.haveListingId).filter(Boolean) as string[];
-      const wantIds = legs.map(l => l.wantListingId).filter(Boolean) as string[];
-      const gradedHaveIds = legs.map(l => l.gradedHaveListingId).filter(Boolean) as string[];
-      const gradedWantIds = legs.map(l => l.gradedWantListingId).filter(Boolean) as string[];
-
-      if (haveIds.length > 0) await tx.haveListing.updateMany({ where: { id: { in: haveIds } }, data: { isActive: false } });
-      if (wantIds.length > 0) await tx.wantListing.updateMany({ where: { id: { in: wantIds } }, data: { isActive: false } });
-      if (gradedHaveIds.length > 0) await tx.gradedHaveListing.updateMany({ where: { id: { in: gradedHaveIds } }, data: { isActive: false } });
-      if (gradedWantIds.length > 0) await tx.gradedWantListing.updateMany({ where: { id: { in: gradedWantIds } }, data: { isActive: false } });
+      await deactivateConsumedListings(tradeId, tx);
     }
 
     // ─── ESCROWED: lock addresses + hold funds ───
@@ -249,7 +221,7 @@ export async function transitionTrade(
         (leg) =>
           !leg.haveListing ||
           leg.haveListing.askPrice < photoThreshold ||
-          leg.photoApproval?.status === "APPROVED"
+          leg.photoApproval?.status === "APPROVED",
       );
       if (allCleared && mode === "AUTHENTICATED") {
         autoNextStatus = "AUTHENTICATING";
@@ -268,7 +240,8 @@ export async function transitionTrade(
         await createTradeHolds(tradeId);
       } catch (stripeErr) {
         // Stripe hold creation failed — revert trade back to ACCEPTED
-        const revertHistory = (updated.statusHistory as Array<{ status: string; at: string }>) ?? [];
+        const revertHistory =
+          (updated.statusHistory as Array<{ status: string; at: string }>) ?? [];
         revertHistory.push({
           status: "ACCEPTED",
           at: new Date().toISOString(),
@@ -313,10 +286,7 @@ export async function transitionTrade(
         await cancelTradeHolds(tradeId);
       } catch (stripeErr) {
         // Cancel failed — log but don't block (holds will auto-expire)
-        console.error(
-          `[trade] Failed to cancel Stripe holds for trade ${tradeId}:`,
-          stripeErr,
-        );
+        console.error(`[trade] Failed to cancel Stripe holds for trade ${tradeId}:`, stripeErr);
       }
     }
   }
@@ -368,20 +338,95 @@ interface TradeLegForWallet {
   askPrice: number;
 }
 
-async function loadTradeLegs(tradeId: string, client: TxClient | typeof db = db): Promise<TradeLegForWallet[]> {
+async function loadTradeLegs(
+  tradeId: string,
+  client: TxClient | typeof db = db,
+): Promise<TradeLegForWallet[]> {
   const legs = await client.tradeLeg.findMany({
     where: { tradeId },
     include: {
       haveListing: { select: { askPrice: true } },
       gradedHaveListing: { select: { askPrice: true } },
+      sealedHaveListing: { select: { askPrice: true } },
     },
   });
 
   return legs.map((leg) => ({
     fromUserId: leg.fromUserId,
     toUserId: leg.toUserId,
-    askPrice: leg.haveListing?.askPrice ?? leg.gradedHaveListing?.askPrice ?? 0,
+    askPrice:
+      leg.haveListing?.askPrice ??
+      leg.gradedHaveListing?.askPrice ??
+      leg.sealedHaveListing?.askPrice ??
+      0,
   }));
+}
+
+/**
+ * Deactivate all listings consumed by a trade's legs.
+ * Handles raw, graded, and sealed listing types.
+ * Used by both manual ACCEPTED transition and auto-accept in matching.service.
+ */
+export async function deactivateConsumedListings(tradeId: string, tx: TxClient) {
+  const legs = await tx.tradeLeg.findMany({
+    where: { tradeId },
+    select: {
+      haveListingId: true,
+      wantListingId: true,
+      gradedHaveListingId: true,
+      gradedWantListingId: true,
+      sealedHaveListingId: true,
+      sealedWantListingId: true,
+    },
+  });
+
+  const rawHaveIds = legs.map((l) => l.haveListingId).filter(Boolean) as string[];
+  const rawWantIds = legs.map((l) => l.wantListingId).filter(Boolean) as string[];
+  const gradedHaveIds = legs.map((l) => l.gradedHaveListingId).filter(Boolean) as string[];
+  const gradedWantIds = legs.map((l) => l.gradedWantListingId).filter(Boolean) as string[];
+  const sealedHaveIds = legs.map((l) => l.sealedHaveListingId).filter(Boolean) as string[];
+  const sealedWantIds = legs.map((l) => l.sealedWantListingId).filter(Boolean) as string[];
+
+  const ops: Promise<unknown>[] = [];
+
+  if (rawHaveIds.length > 0)
+    ops.push(
+      tx.haveListing.updateMany({ where: { id: { in: rawHaveIds } }, data: { isActive: false } }),
+    );
+  if (rawWantIds.length > 0)
+    ops.push(
+      tx.wantListing.updateMany({ where: { id: { in: rawWantIds } }, data: { isActive: false } }),
+    );
+  if (gradedHaveIds.length > 0)
+    ops.push(
+      tx.gradedHaveListing.updateMany({
+        where: { id: { in: gradedHaveIds } },
+        data: { isActive: false },
+      }),
+    );
+  if (gradedWantIds.length > 0)
+    ops.push(
+      tx.gradedWantListing.updateMany({
+        where: { id: { in: gradedWantIds } },
+        data: { isActive: false },
+      }),
+    );
+  if (sealedHaveIds.length > 0)
+    ops.push(
+      tx.sealedHaveListing.updateMany({
+        where: { id: { in: sealedHaveIds } },
+        data: { isActive: false },
+      }),
+    );
+  if (sealedWantIds.length > 0)
+    ops.push(
+      tx.sealedWantListing.updateMany({
+        where: { id: { in: sealedWantIds } },
+        data: { isActive: false },
+      }),
+    );
+
+  await Promise.all(ops);
 }
 
 function toBridgeLegs(legs: TradeLegForWallet[]) {
@@ -393,6 +438,7 @@ function toBridgeLegs(legs: TradeLegForWallet[]) {
     haveListingId: "",
     wantListingId: "",
     condition: "",
+    language: "",
     askPrice: l.askPrice,
     sequence: i,
   }));

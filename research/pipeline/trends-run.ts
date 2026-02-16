@@ -102,11 +102,7 @@ const STAGES: StageConfig[] = [
   },
 ];
 
-function runStage(
-  stageConfig: StageConfig,
-  tcg: TCG,
-  setCode: string,
-): boolean {
+function runStage(stageConfig: StageConfig, tcg: TCG, setCode: string): boolean {
   const scriptPath = path.join(PIPELINE_DIR, stageConfig.script);
   const cmd = `npx tsx ${scriptPath} --tcg ${tcg} --set ${setCode}`;
   console.log(`\n  Running: ${cmd}`);
@@ -126,12 +122,7 @@ function runStage(
 
 // ── Main Orchestrator ─────────────────────────────────────────
 
-function runPipeline(
-  tcg: TCG,
-  setCode: string,
-  resume: boolean,
-  dryRun: boolean,
-): boolean {
+function runPipeline(tcg: TCG, setCode: string, resume: boolean, dryRun: boolean): boolean {
   console.log(`\n${"=".repeat(60)}`);
   console.log(`Trend Pipeline: ${tcg} / ${setCode}`);
   console.log(`${"=".repeat(60)}`);
@@ -142,14 +133,14 @@ function runPipeline(
   for (const stageConfig of STAGES) {
     // Resume: skip completed stages
     if (resume && progress.completedStages[stageConfig.stage]) {
-      console.log(`\n  [skip] "${stageConfig.stage}" already completed at ${progress.completedStages[stageConfig.stage]!.completedAt}`);
+      console.log(
+        `\n  [skip] "${stageConfig.stage}" already completed at ${progress.completedStages[stageConfig.stage]!.completedAt}`,
+      );
       continue;
     }
 
     // Check dependencies
-    const unmetDeps = stageConfig.dependsOn.filter(
-      (dep) => !progress.completedStages[dep],
-    );
+    const unmetDeps = stageConfig.dependsOn.filter((dep) => !progress.completedStages[dep]);
     if (unmetDeps.length > 0) {
       console.error(`\n  [skip] "${stageConfig.stage}" — unmet deps: ${unmetDeps.join(", ")}`);
       if (stageConfig.required) allSuccess = false;
@@ -225,11 +216,7 @@ async function main() {
   const isResume = args.includes("--resume");
   const isDryRun = args.includes("--dry-run");
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all [--resume] [--dry-run]");

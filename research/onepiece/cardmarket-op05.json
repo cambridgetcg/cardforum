@@ -4,8 +4,8 @@
   "setCode": "OP05",
   "totalPages": 6,
   "totalCards": 154,
-  "scrapedAt": "2026-02-15T14:55:16.582Z",
-  "durationMs": 48166,
+  "scrapedAt": "2026-02-16T14:38:24.311Z",
+  "durationMs": 46799,
   "cards": [
     {
       "cardId": "OP05-094",
@@ -18,7 +18,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Haute-Couture-PatchWork-OP05-094"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Haute-Couture-PatchWork-OP05-094",
+      "language": "EN"
     },
     {
       "cardId": "OP05-082",
@@ -31,7 +32,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Shirahoshi-OP05-082"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Shirahoshi-OP05-082",
+      "language": "EN"
     },
     {
       "cardId": "OP05-038",
@@ -44,7 +46,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Charlestone-OP05-038"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Charlestone-OP05-038",
+      "language": "EN"
     },
     {
       "cardId": "OP05-069",
@@ -57,7 +60,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-080",
@@ -70,7 +74,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Elizabello-II-OP05-080"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Elizabello-II-OP05-080",
+      "language": "EN"
     },
     {
       "cardId": "OP05-086",
@@ -83,7 +88,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nefeltari-Vivi-OP05-086"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nefeltari-Vivi-OP05-086",
+      "language": "EN"
     },
     {
       "cardId": "OP05-119",
@@ -91,12 +97,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747876/747876.png",
-      "priceFrom": "3,80 €",
-      "priceEur": 3.8,
+      "priceFrom": "3,75 €",
+      "priceEur": 3.75,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-076",
@@ -109,7 +116,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/When-Youre-at-Sea-You-Fight-against-Pirates-OP05-076"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/When-Youre-at-Sea-You-Fight-against-Pirates-OP05-076",
+      "language": "EN"
     },
     {
       "cardId": "OP05-100",
@@ -122,7 +130,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-067",
@@ -135,7 +144,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Zoro-Juurou-OP05-067-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Zoro-Juurou-OP05-067-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-109",
@@ -148,7 +158,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pagaya-OP05-109"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pagaya-OP05-109",
+      "language": "EN"
     },
     {
       "cardId": "OP05-118",
@@ -161,7 +172,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP05-118-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP05-118-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-064",
@@ -174,7 +186,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Killer-OP05-064"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Killer-OP05-064",
+      "language": "EN"
     },
     {
       "cardId": "OP05-097",
@@ -187,7 +200,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mary-Geoise-OP05-097"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mary-Geoise-OP05-097",
+      "language": "EN"
     },
     {
       "cardId": "OP05-074",
@@ -200,7 +214,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-015",
@@ -213,7 +228,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-015-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-015-V1",
+      "language": "EN"
     },
     {
       "cardId": "ST01-012",
@@ -221,12 +237,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-ST01-012-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747879/747879.png",
-      "priceFrom": "29,00 €",
-      "priceEur": 29,
+      "priceFrom": "27,00 €",
+      "priceEur": 27,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-ST01-012-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-ST01-012-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-091",
@@ -239,7 +256,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rebecca-OP05-091-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rebecca-OP05-091-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-006",
@@ -252,7 +270,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Koala-OP05-006-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Koala-OP05-006-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-077",
@@ -265,7 +284,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gamma-Knife-OP05-077"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gamma-Knife-OP05-077",
+      "language": "EN"
     },
     {
       "cardId": "OP05-078",
@@ -278,7 +298,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Punk-Rotten-OP05-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Punk-Rotten-OP05-078",
+      "language": "EN"
     },
     {
       "cardId": "OP05-007",
@@ -291,7 +312,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-007-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-007-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-043",
@@ -304,7 +326,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ulti-OP05-043-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ulti-OP05-043-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-093",
@@ -317,7 +340,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP05-093-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP05-093-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-037",
@@ -330,7 +354,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Because-the-Side-of-Justice-Will-Be-Whichever-Side-Wins-OP05-037"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Because-the-Side-of-Justice-Will-Be-Whichever-Side-Wins-OP05-037",
+      "language": "EN"
     },
     {
       "cardId": "OP05-087",
@@ -343,7 +368,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hakuba-OP05-087"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hakuba-OP05-087",
+      "language": "EN"
     },
     {
       "cardId": "OP05-114",
@@ -356,7 +382,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/El-Thor-OP05-114"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/El-Thor-OP05-114",
+      "language": "EN"
     },
     {
       "cardId": "OP05-105",
@@ -369,7 +396,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Satori-OP05-105"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Satori-OP05-105",
+      "language": "EN"
     },
     {
       "cardId": "OP05-115",
@@ -382,7 +410,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Two-Hundred-Million-Volts-Amaru-OP05-115"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Two-Hundred-Million-Volts-Amaru-OP05-115",
+      "language": "EN"
     },
     {
       "cardId": "OP05-005",
@@ -395,7 +424,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Karasu-OP05-005"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Karasu-OP05-005",
+      "language": "EN"
     },
     {
       "cardId": "OP05-021",
@@ -408,7 +438,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Revolutionary-Army-HQ-OP05-021"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Revolutionary-Army-HQ-OP05-021",
+      "language": "EN"
     },
     {
       "cardId": "OP05-051",
@@ -421,7 +452,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Borsalino-OP05-051-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Borsalino-OP05-051-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-032",
@@ -434,7 +466,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pica-OP05-032-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pica-OP05-032-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-069",
@@ -447,7 +480,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-030",
@@ -460,7 +494,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-030"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-030",
+      "language": "EN"
     },
     {
       "cardId": "OP05-057",
@@ -473,7 +508,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hound-Blaze-OP05-057"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hound-Blaze-OP05-057",
+      "language": "EN"
     },
     {
       "cardId": "OP05-017",
@@ -486,7 +522,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Lindbergh-OP05-017"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Lindbergh-OP05-017",
+      "language": "EN"
     },
     {
       "cardId": "OP05-119",
@@ -494,12 +531,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747877/747877.png",
-      "priceFrom": "115,90 €",
-      "priceEur": 115.9,
+      "priceFrom": "90,00 €",
+      "priceEur": 90,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-011",
@@ -512,7 +550,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bartholomew-Kuma-OP05-011"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bartholomew-Kuma-OP05-011",
+      "language": "EN"
     },
     {
       "cardId": "OP05-101",
@@ -525,7 +564,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ohm-OP05-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ohm-OP05-101",
+      "language": "EN"
     },
     {
       "cardId": "OP05-088",
@@ -538,7 +578,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mansherry-OP05-088-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mansherry-OP05-088-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-016",
@@ -551,7 +592,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Morley-OP05-016"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Morley-OP05-016",
+      "language": "EN"
     },
     {
       "cardId": "OP05-061",
@@ -564,7 +606,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Uso-Hachi-OP05-061"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Uso-Hachi-OP05-061",
+      "language": "EN"
     },
     {
       "cardId": "OP05-019",
@@ -577,7 +620,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Fire-Fist-OP05-019"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Fire-Fist-OP05-019",
+      "language": "EN"
     },
     {
       "cardId": "OP05-003",
@@ -590,7 +634,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Inazuma-OP05-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Inazuma-OP05-003",
+      "language": "EN"
     },
     {
       "cardId": "OP05-027",
@@ -603,7 +648,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-027"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-027",
+      "language": "EN"
     },
     {
       "cardId": "OP05-098",
@@ -616,7 +662,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-098-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-098-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-091",
@@ -629,7 +676,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rebecca-OP05-091-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rebecca-OP05-091-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-088",
@@ -642,7 +690,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mansherry-OP05-088-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mansherry-OP05-088-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-054",
@@ -655,7 +704,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDGarp-OP05-054"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDGarp-OP05-054",
+      "language": "EN"
     },
     {
       "cardId": "OP05-041",
@@ -668,7 +718,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sakazuki-OP05-041-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sakazuki-OP05-041-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-060",
@@ -681,7 +732,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-060-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-060-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-050",
@@ -694,7 +746,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hina-OP05-050"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hina-OP05-050",
+      "language": "EN"
     },
     {
       "cardId": "OP05-022",
@@ -707,7 +760,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-022-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-022-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-102",
@@ -720,7 +774,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gedatsu-OP05-102-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gedatsu-OP05-102-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-001",
@@ -733,7 +788,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-001-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-001-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-110",
@@ -746,7 +802,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Holly-OP05-110"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Holly-OP05-110",
+      "language": "EN"
     },
     {
       "cardId": "OP05-062",
@@ -759,7 +816,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/O-Nami-OP05-062"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/O-Nami-OP05-062",
+      "language": "EN"
     },
     {
       "cardId": "OP05-102",
@@ -772,7 +830,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gedatsu-OP05-102-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gedatsu-OP05-102-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-117",
@@ -785,7 +844,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Upper-Yard-OP05-117"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Upper-Yard-OP05-117",
+      "language": "EN"
     },
     {
       "cardId": "OP05-106",
@@ -798,7 +858,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Shura-OP05-106"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Shura-OP05-106",
+      "language": "EN"
     },
     {
       "cardId": "OP05-002",
@@ -811,7 +872,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-002-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-002-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-006",
@@ -819,12 +881,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Koala-OP05-006-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747445/747445.png",
-      "priceFrom": "4,90 €",
-      "priceEur": 4.9,
+      "priceFrom": "4,99 €",
+      "priceEur": 4.99,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Koala-OP05-006-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Koala-OP05-006-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-015",
@@ -832,12 +895,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-015-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747456/747456.png",
-      "priceFrom": "6,50 €",
-      "priceEur": 6.5,
+      "priceFrom": "5,95 €",
+      "priceEur": 5.95,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-015-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-015-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-074",
@@ -850,7 +914,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-093",
@@ -863,7 +928,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP05-093-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP05-093-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-043",
@@ -876,7 +942,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ulti-OP05-043-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Ulti-OP05-043-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-067",
@@ -884,12 +951,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Zoro-Juurou-OP05-067-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747526/747526.png",
-      "priceFrom": "17,49 €",
-      "priceEur": 17.49,
+      "priceFrom": "17,00 €",
+      "priceEur": 17,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Zoro-Juurou-OP05-067-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Zoro-Juurou-OP05-067-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-100",
@@ -902,7 +970,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-018",
@@ -915,7 +984,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Emporio-Energy-Hormone-OP05-018"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Emporio-Energy-Hormone-OP05-018",
+      "language": "EN"
     },
     {
       "cardId": "OP05-071",
@@ -928,7 +998,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bepo-OP05-071"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bepo-OP05-071",
+      "language": "EN"
     },
     {
       "cardId": "OP05-009",
@@ -941,7 +1012,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Toh-Toh-OP05-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Toh-Toh-OP05-009",
+      "language": "EN"
     },
     {
       "cardId": "OP05-029",
@@ -954,7 +1026,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Doflamingo-OP05-029"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Doflamingo-OP05-029",
+      "language": "EN"
     },
     {
       "cardId": "OP05-073",
@@ -967,7 +1040,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Miss-DoublefingerZala-OP05-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Miss-DoublefingerZala-OP05-073",
+      "language": "EN"
     },
     {
       "cardId": "OP05-055",
@@ -980,7 +1054,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XDrake-OP05-055-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XDrake-OP05-055-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-104",
@@ -993,7 +1068,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Conis-OP05-104"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Conis-OP05-104",
+      "language": "EN"
     },
     {
       "cardId": "OP05-081",
@@ -1006,7 +1082,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/One-Legged-Toy-Soldier-OP05-081"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/One-Legged-Toy-Soldier-OP05-081",
+      "language": "EN"
     },
     {
       "cardId": "OP05-023",
@@ -1019,7 +1096,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Vergo-OP05-023"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Vergo-OP05-023",
+      "language": "EN"
     },
     {
       "cardId": "OP05-032",
@@ -1032,7 +1110,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pica-OP05-032-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pica-OP05-032-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-004",
@@ -1045,7 +1124,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EmporioIvankov-OP05-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EmporioIvankov-OP05-004",
+      "language": "EN"
     },
     {
       "cardId": "OP05-008",
@@ -1058,7 +1138,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Chaka-OP05-008"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Chaka-OP05-008",
+      "language": "EN"
     },
     {
       "cardId": "OP05-010",
@@ -1071,7 +1152,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nico-Robin-OP05-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nico-Robin-OP05-010",
+      "language": "EN"
     },
     {
       "cardId": "OP05-051",
@@ -1084,7 +1166,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Borsalino-OP05-051-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Borsalino-OP05-051-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-103",
@@ -1097,7 +1180,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kotori-OP05-103"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kotori-OP05-103",
+      "language": "EN"
     },
     {
       "cardId": "OP05-042",
@@ -1110,7 +1194,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Issho-OP05-042"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Issho-OP05-042",
+      "language": "EN"
     },
     {
       "cardId": "OP05-055",
@@ -1123,7 +1208,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XDrake-OP05-055-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XDrake-OP05-055-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-098",
@@ -1131,12 +1217,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-098-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747800/747800.png",
-      "priceFrom": "54,99 €",
-      "priceEur": 54.99,
+      "priceFrom": "50,00 €",
+      "priceEur": 50,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-098-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-098-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-007",
@@ -1149,7 +1236,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-007-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-007-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-034",
@@ -1162,7 +1250,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-034-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-034-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-112",
@@ -1175,7 +1264,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Captain-McKinley-OP05-112"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Captain-McKinley-OP05-112",
+      "language": "EN"
     },
     {
       "cardId": "OP05-118",
@@ -1188,7 +1278,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP05-118-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP05-118-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-095",
@@ -1201,7 +1292,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Dragon-Claw-OP05-095"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Dragon-Claw-OP05-095",
+      "language": "EN"
     },
     {
       "cardId": "OP05-113",
@@ -1214,7 +1306,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Yama-OP05-113"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Yama-OP05-113",
+      "language": "EN"
     },
     {
       "cardId": "OP05-116",
@@ -1227,7 +1320,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hino-Bird-Zap-OP05-116"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hino-Bird-Zap-OP05-116",
+      "language": "EN"
     },
     {
       "cardId": "OP05-099",
@@ -1240,7 +1334,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Amazon-OP05-099"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Amazon-OP05-099",
+      "language": "EN"
     },
     {
       "cardId": "OP02-120",
@@ -1253,7 +1348,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Uta-OP02-120"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Uta-OP02-120",
+      "language": "EN"
     },
     {
       "cardId": "OP05-085",
@@ -1266,7 +1362,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nefeltari-Cobra-OP05-085"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nefeltari-Cobra-OP05-085",
+      "language": "EN"
     },
     {
       "cardId": "OP05-020",
@@ -1279,7 +1376,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Four-Thousand-Brick-Fist-OP05-020"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Four-Thousand-Brick-Fist-OP05-020",
+      "language": "EN"
     },
     {
       "cardId": "OP05-059",
@@ -1292,7 +1390,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Let-Us-Begin-the-World-of-Violence-OP05-059"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Let-Us-Begin-the-World-of-Violence-OP05-059",
+      "language": "EN"
     },
     {
       "cardId": "OP05-089",
@@ -1305,7 +1404,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Mjosgard-OP05-089"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Mjosgard-OP05-089",
+      "language": "EN"
     },
     {
       "cardId": "OP05-012",
@@ -1318,7 +1418,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hack-OP05-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hack-OP05-012",
+      "language": "EN"
     },
     {
       "cardId": "OP05-039",
@@ -1331,7 +1432,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Stick-Stickem-Meteora-OP05-039"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Stick-Stickem-Meteora-OP05-039",
+      "language": "EN"
     },
     {
       "cardId": "OP05-079",
@@ -1344,7 +1446,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Viola-OP05-079"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Viola-OP05-079",
+      "language": "EN"
     },
     {
       "cardId": "OP05-108",
@@ -1357,7 +1460,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nola-OP05-108"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nola-OP05-108",
+      "language": "EN"
     },
     {
       "cardId": "OP05-111",
@@ -1370,7 +1474,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hotori-OP05-111"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hotori-OP05-111",
+      "language": "EN"
     },
     {
       "cardId": "OP03-092",
@@ -1383,7 +1488,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP03-092"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Rob-Lucci-OP03-092",
+      "language": "EN"
     },
     {
       "cardId": "OP05-070",
@@ -1396,7 +1502,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Fra-Nosuke-OP05-070"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Fra-Nosuke-OP05-070",
+      "language": "EN"
     },
     {
       "cardId": "OP05-022",
@@ -1409,7 +1516,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-022-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Rosinante-OP05-022-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-028",
@@ -1422,7 +1530,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Doflamingo-OP05-028"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Donquixote-Doflamingo-OP05-028",
+      "language": "EN"
     },
     {
       "cardId": "OP05-034",
@@ -1435,7 +1544,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-034-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-034-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP05-060",
@@ -1443,12 +1553,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-060-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747518/747518.png",
-      "priceFrom": "54,00 €",
-      "priceEur": 54,
+      "priceFrom": "50,00 €",
+      "priceEur": 50,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-060-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-060-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-033",
@@ -1461,7 +1572,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-033"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Baby-5-OP05-033",
+      "language": "EN"
     },
     {
       "cardId": "OP05-107",
@@ -1474,7 +1586,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Lieutenant-Spacey-OP05-107"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Lieutenant-Spacey-OP05-107",
+      "language": "EN"
     },
     {
       "cardId": "OP05-002",
@@ -1487,7 +1600,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-002-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Belo-Betty-OP05-002-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-013",
@@ -1500,7 +1614,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bunny-Joe-OP05-013"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bunny-Joe-OP05-013",
+      "language": "EN"
     },
     {
       "cardId": "OP01-121",
@@ -1513,7 +1628,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Yamato-OP01-121"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Yamato-OP01-121",
+      "language": "EN"
     },
     {
       "cardId": "OP05-052",
@@ -1526,7 +1642,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Maynard-OP05-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Maynard-OP05-052",
+      "language": "EN"
     },
     {
       "cardId": "OP05-092",
@@ -1539,7 +1656,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Rosward-OP05-092"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Rosward-OP05-092",
+      "language": "EN"
     },
     {
       "cardId": "OP05-100",
@@ -1547,12 +1665,13 @@
       "version": "V.3",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V3",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747817/747817.png",
-      "priceFrom": "200,00 €",
-      "priceEur": 200,
+      "priceFrom": "169,00 €",
+      "priceEur": 169,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Enel-OP05-100-V3",
+      "language": "EN"
     },
     {
       "cardId": "OP01-016",
@@ -1560,12 +1679,13 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nami-OP01-016",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747881/747881.png",
-      "priceFrom": "420,00 €",
-      "priceEur": 420,
+      "priceFrom": "419,00 €",
+      "priceEur": 419,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nami-OP01-016"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Nami-OP01-016",
+      "language": "EN"
     },
     {
       "cardId": "OP05-063",
@@ -1578,7 +1698,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/O-Robi-OP05-063"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/O-Robi-OP05-063",
+      "language": "EN"
     },
     {
       "cardId": "OP05-014",
@@ -1591,7 +1712,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pell-OP05-014"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Pell-OP05-014",
+      "language": "EN"
     },
     {
       "cardId": "OP05-045",
@@ -1604,7 +1726,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Stainless-OP05-045"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Stainless-OP05-045",
+      "language": "EN"
     },
     {
       "cardId": "OP05-041",
@@ -1612,12 +1735,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sakazuki-OP05-041-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP05/747495/747495.png",
-      "priceFrom": "27,00 €",
-      "priceEur": 27,
+      "priceFrom": "25,50 €",
+      "priceEur": 25.5,
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sakazuki-OP05-041-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sakazuki-OP05-041-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-044",
@@ -1630,7 +1754,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/John-Giant-OP05-044"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/John-Giant-OP05-044",
+      "language": "EN"
     },
     {
       "cardId": "OP05-001",
@@ -1643,7 +1768,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-001-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sabo-OP05-001-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-075",
@@ -1656,7 +1782,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mr1DazBonez-OP05-075"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mr1DazBonez-OP05-075",
+      "language": "EN"
     },
     {
       "cardId": "OP04-044",
@@ -1669,7 +1796,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP04-044"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kaido-OP04-044",
+      "language": "EN"
     },
     {
       "cardId": "OP05-058",
@@ -1682,7 +1810,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Its-a-Waste-of-Human-Life-OP05-058"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Its-a-Waste-of-Human-Life-OP05-058",
+      "language": "EN"
     },
     {
       "cardId": "OP05-084",
@@ -1695,7 +1824,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Charlos-OP05-084"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Saint-Charlos-OP05-084",
+      "language": "EN"
     },
     {
       "cardId": "OP05-040",
@@ -1708,7 +1838,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Birdcage-OP05-040"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Birdcage-OP05-040",
+      "language": "EN"
     },
     {
       "cardId": "OP05-048",
@@ -1721,7 +1852,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bastille-OP05-048"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bastille-OP05-048",
+      "language": "EN"
     },
     {
       "cardId": "OP05-096",
@@ -1734,7 +1866,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/I-Bid-500-Million-OP05-096"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/I-Bid-500-Million-OP05-096",
+      "language": "EN"
     },
     {
       "cardId": "OP05-024",
@@ -1747,7 +1880,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kuween-OP05-024"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Kuween-OP05-024",
+      "language": "EN"
     },
     {
       "cardId": "OP05-035",
@@ -1760,7 +1894,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bellamy-OP05-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Bellamy-OP05-035",
+      "language": "EN"
     },
     {
       "cardId": "OP05-049",
@@ -1773,7 +1908,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Haccha-OP05-049"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Haccha-OP05-049",
+      "language": "EN"
     },
     {
       "cardId": "OP05-047",
@@ -1786,7 +1922,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Basil-Hawkins-OP05-047"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Basil-Hawkins-OP05-047",
+      "language": "EN"
     },
     {
       "cardId": "OP05-031",
@@ -1799,7 +1936,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Buffalo-OP05-031"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Buffalo-OP05-031",
+      "language": "EN"
     },
     {
       "cardId": "OP05-065",
@@ -1812,7 +1950,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/San-Gorou-OP05-065"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/San-Gorou-OP05-065",
+      "language": "EN"
     },
     {
       "cardId": "OP05-068",
@@ -1825,7 +1964,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Chopa-Emon-OP05-068"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Chopa-Emon-OP05-068",
+      "language": "EN"
     },
     {
       "cardId": "OP05-025",
@@ -1838,7 +1978,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gladius-OP05-025"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Gladius-OP05-025",
+      "language": "EN"
     },
     {
       "cardId": "OP05-053",
@@ -1851,7 +1992,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mozambia-OP05-053"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Mozambia-OP05-053",
+      "language": "EN"
     },
     {
       "cardId": "OP05-056",
@@ -1864,7 +2006,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XBarrels-OP05-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/XBarrels-OP05-056",
+      "language": "EN"
     },
     {
       "cardId": "OP05-090",
@@ -1877,7 +2020,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Riku-Doldo-III-OP05-090"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Riku-Doldo-III-OP05-090",
+      "language": "EN"
     },
     {
       "cardId": "OP05-026",
@@ -1890,7 +2034,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sarquiss-OP05-026"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sarquiss-OP05-026",
+      "language": "EN"
     },
     {
       "cardId": "OP05-036",
@@ -1903,7 +2048,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Monet-OP05-036"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Monet-OP05-036",
+      "language": "EN"
     },
     {
       "cardId": "OP05-072",
@@ -1916,7 +2062,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hone-Kichi-OP05-072"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Hone-Kichi-OP05-072",
+      "language": "EN"
     },
     {
       "cardId": "OP05-046",
@@ -1929,7 +2076,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Dalmatian-OP05-046"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Dalmatian-OP05-046",
+      "language": "EN"
     },
     {
       "cardId": "OP05-083",
@@ -1942,7 +2090,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sterry-OP05-083"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Sterry-OP05-083",
+      "language": "EN"
     },
     {
       "cardId": "OP05-066",
@@ -1955,7 +2104,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Jinbe-OP05-066"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Jinbe-OP05-066",
+      "language": "EN"
     },
     {
       "cardId": "OP05-074",
@@ -1968,7 +2118,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/EustassCaptainKid-OP05-074-V3",
+      "language": "EN"
     },
     {
       "cardId": "ST01-012",
@@ -1981,7 +2132,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-ST01-012-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-ST01-012-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP05-119",
@@ -1994,7 +2146,8 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/MonkeyDLuffy-OP05-119-V3",
+      "language": "EN"
     },
     {
       "cardId": "OP05-069",
@@ -2007,8 +2160,10 @@
       "expansion": "Awakening of the New Era",
       "setCode": "OP05",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Awakening-of-the-New-Era/Trafalgar-Law-OP05-069-V3",
+      "language": "EN"
     }
   ],
-  "errors": []
+  "errors": [],
+  "language": "EN"
 }

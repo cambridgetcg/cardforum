@@ -36,7 +36,12 @@ const TCG_DIR_MAP: Record<TCG, string> = {
 };
 
 function getProgressPath(tcg: TCG, setCode: string): string {
-  return path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `pullrates-progress-${setCode}.json`);
+  return path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `pullrates-progress-${setCode}.json`,
+  );
 }
 
 function loadProgress(tcg: TCG, setCode: string): PipelineProgress {
@@ -119,12 +124,7 @@ function runStage(
   extraArgs: string[],
 ): boolean {
   const scriptPath = path.join(PIPELINE_DIR, stageConfig.script);
-  const args = [
-    "--tcg", tcg,
-    "--set", setCode,
-    "--language", language,
-    ...extraArgs,
-  ].join(" ");
+  const args = ["--tcg", tcg, "--set", setCode, "--language", language, ...extraArgs].join(" ");
 
   const cmd = `npx tsx ${scriptPath} ${args}`;
   console.log(`\n  Running: ${cmd}`);
@@ -163,16 +163,18 @@ async function runPipeline(
   for (const stageConfig of STAGES) {
     // Check if already completed (resume mode)
     if (resume && progress.completedStages[stageConfig.stage]) {
-      console.log(`\n  [skip] Stage "${stageConfig.stage}" already completed at ${progress.completedStages[stageConfig.stage]!.completedAt}`);
+      console.log(
+        `\n  [skip] Stage "${stageConfig.stage}" already completed at ${progress.completedStages[stageConfig.stage]!.completedAt}`,
+      );
       continue;
     }
 
     // Check dependencies
-    const unmetDeps = stageConfig.dependsOn.filter(
-      (dep) => !progress.completedStages[dep],
-    );
+    const unmetDeps = stageConfig.dependsOn.filter((dep) => !progress.completedStages[dep]);
     if (unmetDeps.length > 0) {
-      console.error(`\n  [skip] Stage "${stageConfig.stage}" — unmet dependencies: ${unmetDeps.join(", ")}`);
+      console.error(
+        `\n  [skip] Stage "${stageConfig.stage}" — unmet dependencies: ${unmetDeps.join(", ")}`,
+      );
       if (stageConfig.required) allSuccess = false;
       continue;
     }
@@ -220,11 +222,7 @@ async function main() {
   const extraArgs: string[] = [];
   if (priceSource) extraArgs.push("--price-source", priceSource);
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all [--resume] [--dry-run]");

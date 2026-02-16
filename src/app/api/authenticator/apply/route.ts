@@ -27,18 +27,14 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = authenticatorApplicationSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {
     const authenticator = await submitApplication(session.user.id, parsed.data);
     return NextResponse.json({ authenticator }, { status: 201 });
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to submit application";
+    const message = err instanceof Error ? err.message : "Failed to submit application";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

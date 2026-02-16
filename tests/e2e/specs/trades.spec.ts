@@ -17,10 +17,9 @@ test.describe("Trades", () => {
     const trades = new TradesPage(authedPage);
     await trades.navigate();
 
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/trades") && r.status() === 200,
-      { timeout: 10_000 },
-    );
+    await authedPage.waitForResponse((r) => r.url().includes("/api/trades") && r.status() === 200, {
+      timeout: 10_000,
+    });
 
     await trades.assertActiveSection();
   });
@@ -29,10 +28,9 @@ test.describe("Trades", () => {
     const trades = new TradesPage(authedPage);
     await trades.navigate();
 
-    await authedPage.waitForResponse(
-      (r) => r.url().includes("/api/trades") && r.status() === 200,
-      { timeout: 10_000 },
-    );
+    await authedPage.waitForResponse((r) => r.url().includes("/api/trades") && r.status() === 200, {
+      timeout: 10_000,
+    });
 
     // Click Direct filter
     await authedPage.getByRole("button", { name: "Direct" }).click();

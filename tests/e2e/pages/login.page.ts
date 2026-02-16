@@ -26,7 +26,7 @@ export class LoginPage extends BasePage {
   /** Assert redirect to login with callbackUrl. */
   async assertRedirectedFrom(originalPath: string) {
     await expect(this.page).toHaveURL(
-      new RegExp(`/login\\?callbackUrl=${encodeURIComponent(originalPath)}`)
+      new RegExp(`/login\\?callbackUrl=${encodeURIComponent(originalPath)}`),
     );
   }
 

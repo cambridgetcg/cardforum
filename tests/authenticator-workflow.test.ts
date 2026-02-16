@@ -138,9 +138,30 @@ describe("Authenticator Workflow", () => {
       const twoHundredDaysAgo = new Date(now.getTime() - 200 * 24 * 60 * 60 * 1000);
 
       const ratings = [
-        { score: 5.0, accuracyScore: 5.0, speedScore: 5.0, satisfactionScore: 5.0, communicationScore: 5.0, createdAt: thirtyDaysAgo },
-        { score: 3.0, accuracyScore: 3.0, speedScore: 3.0, satisfactionScore: 3.0, communicationScore: 3.0, createdAt: oneHundredDaysAgo },
-        { score: 1.0, accuracyScore: 1.0, speedScore: 1.0, satisfactionScore: 1.0, communicationScore: 1.0, createdAt: twoHundredDaysAgo },
+        {
+          score: 5.0,
+          accuracyScore: 5.0,
+          speedScore: 5.0,
+          satisfactionScore: 5.0,
+          communicationScore: 5.0,
+          createdAt: thirtyDaysAgo,
+        },
+        {
+          score: 3.0,
+          accuracyScore: 3.0,
+          speedScore: 3.0,
+          satisfactionScore: 3.0,
+          communicationScore: 3.0,
+          createdAt: oneHundredDaysAgo,
+        },
+        {
+          score: 1.0,
+          accuracyScore: 1.0,
+          speedScore: 1.0,
+          satisfactionScore: 1.0,
+          communicationScore: 1.0,
+          createdAt: twoHundredDaysAgo,
+        },
       ];
 
       const result = await computeTimeWeightedRating(ratings);
@@ -180,10 +201,7 @@ describe("Authenticator Workflow", () => {
     });
 
     it("calculates trade fees across multiple legs", async () => {
-      const result = await calculateTradeFees([
-        { tier: "STANDARD" },
-        { tier: "VERIFIED" },
-      ]);
+      const result = await calculateTradeFees([{ tier: "STANDARD" }, { tier: "VERIFIED" }]);
       expect(result.totalFees).toBe(700); // 300 + 400
       expect(result.totalPlatformShare).toBe(190); // 90 + 100
       expect(result.totalAuthenticatorShare).toBe(510); // 210 + 300
@@ -225,9 +243,7 @@ describe("Authenticator Workflow", () => {
         askPrice: 5000,
       });
 
-      await expect(assignForLegs(trade.id)).rejects.toThrow(
-        /No eligible authenticator available/
-      );
+      await expect(assignForLegs(trade.id)).rejects.toThrow(/No eligible authenticator available/);
     });
 
     it("excludes trade participants from assignment", async () => {
@@ -244,9 +260,7 @@ describe("Authenticator Workflow", () => {
       });
 
       // Only the sender is an authenticator, and they're excluded
-      await expect(assignForLegs(trade.id)).rejects.toThrow(
-        /No eligible authenticator available/
-      );
+      await expect(assignForLegs(trade.id)).rejects.toThrow(/No eligible authenticator available/);
     });
   });
 
@@ -369,7 +383,7 @@ describe("Authenticator Workflow", () => {
           defects: [],
           confidenceLevel: "HIGH",
           ccs: { surface: 9.0, corners: 9.0, edges: 9.0, centering: 9.0 },
-        })
+        }),
       ).rejects.toThrow("Not authorized");
     });
   });

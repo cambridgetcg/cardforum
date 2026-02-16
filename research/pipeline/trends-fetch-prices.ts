@@ -19,13 +19,9 @@
 import * as fs from "fs";
 import * as path from "path";
 import type { TCG } from "./types";
-import type {
-  TcgcsvResponse,
-  TcgcsvPrice,
-  TcgcsvProduct,
-  TcgplayerDiscoveryResult,
-} from "./tcgplayer-types";
-import { TCGCSV_BASE_URL, getExtendedDataValue, isSealed } from "./tcgplayer-types";
+import type { TcgcsvPrice, TcgcsvProduct, TcgplayerDiscoveryResult } from "./tcgplayer-types";
+import { getExtendedDataValue, isSealed } from "./tcgplayer-types";
+import { fetchProductsFromTcgcsv, fetchPricesFromTcgcsv } from "./tcgcsv-client";
 import { TCGCSV_CATEGORIES } from "./trends-sources";
 import type {
   SetPriceSnapshot,
@@ -72,40 +68,6 @@ function today(): string {
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// ── TCGCSV Fetching ──────────────────────────────────────────
-
-async function fetchProductsFromTcgcsv(
-  categoryId: number,
-  groupId: number,
-): Promise<TcgcsvProduct[]> {
-  const url = `${TCGCSV_BASE_URL}/tcgplayer/${categoryId}/${groupId}/products`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`TCGCSV products error: ${res.status} ${res.statusText}`);
-  }
-  const data: TcgcsvResponse<TcgcsvProduct> = await res.json();
-  if (!data.success) {
-    throw new Error(`TCGCSV products API error: ${data.errors.join(", ")}`);
-  }
-  return data.results;
-}
-
-async function fetchPricesFromTcgcsv(
-  categoryId: number,
-  groupId: number,
-): Promise<TcgcsvPrice[]> {
-  const url = `${TCGCSV_BASE_URL}/tcgplayer/${categoryId}/${groupId}/prices`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`TCGCSV prices error: ${res.status} ${res.statusText}`);
-  }
-  const data: TcgcsvResponse<TcgcsvPrice> = await res.json();
-  if (!data.success) {
-    throw new Error(`TCGCSV prices API error: ${data.errors.join(", ")}`);
-  }
-  return data.results;
 }
 
 // ── Snapshot Building ─────────────────────────────────────────
@@ -159,15 +121,10 @@ function buildSnapshot(
     .filter((p): p is number => p !== null && p > 0);
 
   const sortedPrices = [...marketPrices].sort((a, b) => a - b);
-  const median = sortedPrices.length > 0
-    ? sortedPrices[Math.floor(sortedPrices.length / 2)]
-    : null;
-  const avg = marketPrices.length > 0
-    ? marketPrices.reduce((a, b) => a + b, 0) / marketPrices.length
-    : null;
-  const totalValue = marketPrices.length > 0
-    ? marketPrices.reduce((a, b) => a + b, 0)
-    : null;
+  const median = sortedPrices.length > 0 ? sortedPrices[Math.floor(sortedPrices.length / 2)] : null;
+  const avg =
+    marketPrices.length > 0 ? marketPrices.reduce((a, b) => a + b, 0) / marketPrices.length : null;
+  const totalValue = marketPrices.length > 0 ? marketPrices.reduce((a, b) => a + b, 0) : null;
 
   return {
     tcg,
@@ -195,12 +152,13 @@ function loadPreviousSnapshots(tcg: TCG, setCode: string): SetPriceSnapshot[] {
   if (!fs.existsSync(dir)) return [];
 
   const prefix = `${setCode}-`;
-  const files = fs.readdirSync(dir)
+  const files = fs
+    .readdirSync(dir)
     .filter((f) => f.startsWith(prefix) && f.endsWith(".json"))
     .sort(); // Lexicographic sort = date sort for YYYY-MM-DD format
 
-  return files.map((f) =>
-    JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8")) as SetPriceSnapshot,
+  return files.map(
+    (f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8")) as SetPriceSnapshot,
   );
 }
 
@@ -210,10 +168,7 @@ function loadPreviousSnapshots(tcg: TCG, setCode: string): SetPriceSnapshot[] {
  * Compute percentage deltas from a series of timestamped values.
  * Returns null for a delta if insufficient data.
  */
-function computeDeltas(
-  currentValue: number,
-  history: TrendDataPoint[],
-): TrendDeltas {
+function computeDeltas(currentValue: number, history: TrendDataPoint[]): TrendDeltas {
   const now = Date.now();
   const DAY_MS = 86_400_000;
 
@@ -276,8 +231,8 @@ function buildCardHistory(
     if (!card) continue;
 
     // Try preferred variant first, then fall back to first available
-    const variant = card.variants.find((v) => v.subTypeName === preferredVariant)
-      ?? card.variants[0];
+    const variant =
+      card.variants.find((v) => v.subTypeName === preferredVariant) ?? card.variants[0];
 
     if (variant?.marketPrice !== null && variant?.marketPrice !== undefined) {
       points.push({
@@ -323,8 +278,8 @@ function computeSetTrends(
     const history = buildCardHistory(card.cardId, allSnapshots);
 
     // Primary variant trend
-    const primaryVariant = card.variants.find((v) => v.subTypeName === "Normal")
-      ?? card.variants[0];
+    const primaryVariant =
+      card.variants.find((v) => v.subTypeName === "Normal") ?? card.variants[0];
     const primaryPrice = primaryVariant?.marketPrice;
 
     let trend: TrendDeltas | null = null;
@@ -363,10 +318,7 @@ function computeSetTrends(
   const setHistory = buildSetHistory(allSnapshots);
   let setTrend: TrendDeltas | null = null;
   if (currentSnapshot.stats.totalSetValue !== null && setHistory.length >= 2) {
-    setTrend = computeDeltas(
-      currentSnapshot.stats.totalSetValue,
-      setHistory.slice(0, -1),
-    );
+    setTrend = computeDeltas(currentSnapshot.stats.totalSetValue, setHistory.slice(0, -1));
   }
 
   // Date range
@@ -403,9 +355,7 @@ function loadGroupsForTcg(tcg: TCG): GroupInfo[] {
     return [];
   }
 
-  const discovery: TcgplayerDiscoveryResult = JSON.parse(
-    fs.readFileSync(groupsPath, "utf-8"),
-  );
+  const discovery: TcgplayerDiscoveryResult = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
 
   return discovery.groups.map((g) => ({
     groupId: g.groupId,
@@ -423,18 +373,22 @@ function getAvailableSetCodesFromFiles(tcg: TCG): string[] {
   if (!fs.existsSync(dir)) return [];
 
   const prefix = "tcgplayer-";
-  return fs.readdirSync(dir)
-    .filter((f) => f.startsWith(prefix) && f.endsWith(".json") && !f.includes("groups") && !f.includes("progress") && !f.includes("summary"))
+  return fs
+    .readdirSync(dir)
+    .filter(
+      (f) =>
+        f.startsWith(prefix) &&
+        f.endsWith(".json") &&
+        !f.includes("groups") &&
+        !f.includes("progress") &&
+        !f.includes("summary"),
+    )
     .map((f) => f.replace(prefix, "").replace(".json", "").toUpperCase());
 }
 
 // ── Main Entry ────────────────────────────────────────────────
 
-async function fetchSetPrices(
-  tcg: TCG,
-  setCode: string,
-  isDryRun: boolean,
-): Promise<boolean> {
+async function fetchSetPrices(tcg: TCG, setCode: string, isDryRun: boolean): Promise<boolean> {
   const categoryId = TCGCSV_CATEGORIES[tcg];
   const groups = loadGroupsForTcg(tcg);
   const group = groups.find((g) => g.setCode.toUpperCase() === setCode.toUpperCase());
@@ -448,7 +402,9 @@ async function fetchSetPrices(
   console.log(`  Fetching prices: ${tcg}/${setCode} (groupId: ${group.groupId})`);
 
   if (isDryRun) {
-    console.log(`  [dry-run] Would fetch and save snapshot to ${getSnapshotPath(tcg, setCode, today())}`);
+    console.log(
+      `  [dry-run] Would fetch and save snapshot to ${getSnapshotPath(tcg, setCode, today())}`,
+    );
     return true;
   }
 
@@ -462,7 +418,9 @@ async function fetchSetPrices(
 
   // Build snapshot
   const snapshot = buildSnapshot(tcg, setCode, products, prices);
-  console.log(`    Cards: ${snapshot.stats.totalCards}, With prices: ${snapshot.stats.cardsWithPrices}`);
+  console.log(
+    `    Cards: ${snapshot.stats.totalCards}, With prices: ${snapshot.stats.cardsWithPrices}`,
+  );
 
   if (snapshot.stats.avgMarketPrice !== null) {
     console.log(`    Avg market price: $${snapshot.stats.avgMarketPrice.toFixed(2)}`);
@@ -479,14 +437,17 @@ async function fetchSetPrices(
   console.log(`    -> Snapshot: ${path.relative(process.cwd(), snapshotPath)}`);
 
   // Load previous snapshots and compute trends
-  const previousSnapshots = loadPreviousSnapshots(tcg, setCode)
-    .filter((s) => s.snapshotAt !== snapshot.snapshotAt); // Exclude current
+  const previousSnapshots = loadPreviousSnapshots(tcg, setCode).filter(
+    (s) => s.snapshotAt !== snapshot.snapshotAt,
+  ); // Exclude current
   const trends = computeSetTrends(tcg, setCode, snapshot, previousSnapshots);
 
   // Save trends
   const trendsPath = getTrendsPath(tcg, setCode);
   fs.writeFileSync(trendsPath, JSON.stringify(trends, null, 2));
-  console.log(`    -> Trends: ${path.relative(process.cwd(), trendsPath)} (${trends.snapshotCount} snapshots)`);
+  console.log(
+    `    -> Trends: ${path.relative(process.cwd(), trendsPath)} (${trends.snapshotCount} snapshots)`,
+  );
 
   // Report notable movements
   const movers = trends.cards
@@ -538,9 +499,8 @@ Options:
   let setCodes: string[] = [];
   if (isAll) {
     const groups = loadGroupsForTcg(tcg);
-    setCodes = groups.length > 0
-      ? groups.map((g) => g.setCode)
-      : getAvailableSetCodesFromFiles(tcg);
+    setCodes =
+      groups.length > 0 ? groups.map((g) => g.setCode) : getAvailableSetCodesFromFiles(tcg);
   } else if (setArg) {
     setCodes = [setArg.toUpperCase()];
   }

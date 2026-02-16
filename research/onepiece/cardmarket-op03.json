@@ -4,8 +4,8 @@
   "setCode": "OP03",
   "totalPages": 6,
   "totalCards": 154,
-  "scrapedAt": "2026-02-15T14:53:38.708Z",
-  "durationMs": 50420,
+  "scrapedAt": "2026-02-16T14:36:48.645Z",
+  "durationMs": 44737,
   "cards": [
     {
       "cardId": "OP03-025",
@@ -18,7 +18,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Krieg-OP03-025-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Krieg-OP03-025-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-026",
@@ -31,7 +32,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuroobi-OP03-026"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuroobi-OP03-026",
+      "language": "EN"
     },
     {
       "cardId": "OP03-044",
@@ -44,7 +46,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaya-OP03-044"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaya-OP03-044",
+      "language": "EN"
     },
     {
       "cardId": "OP03-030",
@@ -57,7 +60,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-030"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-030",
+      "language": "EN"
     },
     {
       "cardId": "OP03-050",
@@ -70,7 +74,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Boodle-OP03-050"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Boodle-OP03-050",
+      "language": "EN"
     },
     {
       "cardId": "OP03-047",
@@ -83,7 +88,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zeff-OP03-047-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zeff-OP03-047-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-054",
@@ -96,7 +102,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopps-Rubber-Band-of-Doom-OP03-054"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopps-Rubber-Band-of-Doom-OP03-054",
+      "language": "EN"
     },
     {
       "cardId": "OP03-013",
@@ -104,12 +111,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Marco-OP03-013-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719383/719383.png",
-      "priceFrom": "1,49 €",
-      "priceEur": 1.49,
+      "priceFrom": "1,40 €",
+      "priceEur": 1.4,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Marco-OP03-013-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Marco-OP03-013-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-114",
@@ -122,7 +130,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-114-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-114-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-070",
@@ -135,7 +144,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDLuffy-OP03-070"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDLuffy-OP03-070",
+      "language": "EN"
     },
     {
       "cardId": "OP03-122",
@@ -148,7 +158,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-056",
@@ -161,7 +172,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sanjis-Pilaf-OP03-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sanjis-Pilaf-OP03-056",
+      "language": "EN"
     },
     {
       "cardId": "OP03-055",
@@ -174,7 +186,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gum-Gum-Giant-Gavel-OP03-055"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gum-Gum-Giant-Gavel-OP03-055",
+      "language": "EN"
     },
     {
       "cardId": "OP03-057",
@@ -187,7 +200,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Three-Thousand-Worlds-OP03-057"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Three-Thousand-Worlds-OP03-057",
+      "language": "EN"
     },
     {
       "cardId": "OP03-024",
@@ -200,7 +214,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gin-OP03-024-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gin-OP03-024-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-051",
@@ -213,7 +228,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Bell-mere-OP03-051"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Bell-mere-OP03-051",
+      "language": "EN"
     },
     {
       "cardId": "OP03-041",
@@ -226,7 +242,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopp-OP03-041-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopp-OP03-041-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-072",
@@ -239,7 +256,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gum-Gum-Jet-Gatling-OP03-072"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gum-Gum-Jet-Gatling-OP03-072",
+      "language": "EN"
     },
     {
       "cardId": "OP03-003",
@@ -252,7 +270,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Izo-OP03-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Izo-OP03-003",
+      "language": "EN"
     },
     {
       "cardId": "OP03-113",
@@ -265,7 +284,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Perospero-OP03-113-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Perospero-OP03-113-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-098",
@@ -278,7 +298,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Enies-Lobby-OP03-098"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Enies-Lobby-OP03-098",
+      "language": "EN"
     },
     {
       "cardId": "OP03-108",
@@ -286,12 +307,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719406/719406.png",
-      "priceFrom": "0,09 €",
-      "priceEur": 0.09,
+      "priceFrom": "0,08 €",
+      "priceEur": 0.08,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-080",
@@ -304,7 +326,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-080-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-080-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-025",
@@ -312,12 +335,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Krieg-OP03-025-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719398/719398.png",
-      "priceFrom": "4,20 €",
-      "priceEur": 4.2,
+      "priceFrom": "4,00 €",
+      "priceEur": 4,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Krieg-OP03-025-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Krieg-OP03-025-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-018",
@@ -330,7 +354,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fire-Fist-OP03-018-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fire-Fist-OP03-018-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-123",
@@ -343,7 +368,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-123-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-123-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-028",
@@ -356,7 +382,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jango-OP03-028"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jango-OP03-028",
+      "language": "EN"
     },
     {
       "cardId": "OP03-090",
@@ -369,7 +396,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Blueno-OP03-090"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Blueno-OP03-090",
+      "language": "EN"
     },
     {
       "cardId": "OP03-001",
@@ -382,7 +410,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/PortgasDAce-OP03-001-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/PortgasDAce-OP03-001-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-089",
@@ -395,7 +424,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Brannew-OP03-089"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Brannew-OP03-089",
+      "language": "EN"
     },
     {
       "cardId": "OP03-078",
@@ -403,12 +433,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Issho-OP03-078-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719407/719407.png",
-      "priceFrom": "0,44 €",
-      "priceEur": 0.44,
+      "priceFrom": "0,45 €",
+      "priceEur": 0.45,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Issho-OP03-078-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Issho-OP03-078-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-092",
@@ -421,7 +452,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-092-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-092-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-038",
@@ -434,7 +466,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Deathly-Poison-Gas-Bomb-MH5-OP03-038"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Deathly-Poison-Gas-Bomb-MH5-OP03-038",
+      "language": "EN"
     },
     {
       "cardId": "OP03-066",
@@ -442,12 +475,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Paulie-OP03-066-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719402/719402.png",
-      "priceFrom": "0,17 €",
-      "priceEur": 0.17,
+      "priceFrom": "0,16 €",
+      "priceEur": 0.16,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Paulie-OP03-066-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Paulie-OP03-066-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-024",
@@ -460,7 +494,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gin-OP03-024-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gin-OP03-024-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-016",
@@ -473,7 +508,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Flame-Emperor-OP03-016"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Flame-Emperor-OP03-016",
+      "language": "EN"
     },
     {
       "cardId": "OP03-031",
@@ -486,7 +522,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Pearl-OP03-031"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Pearl-OP03-031",
+      "language": "EN"
     },
     {
       "cardId": "OP03-048",
@@ -499,7 +536,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nojiko-OP03-048"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nojiko-OP03-048",
+      "language": "EN"
     },
     {
       "cardId": "OP03-077",
@@ -512,7 +550,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-077-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-077-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-017",
@@ -525,7 +564,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Cross-Fire-OP03-017"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Cross-Fire-OP03-017",
+      "language": "EN"
     },
     {
       "cardId": "OP03-112",
@@ -538,7 +578,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Pudding-OP03-112-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Pudding-OP03-112-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-102",
@@ -551,7 +592,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sanji-OP03-102"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sanji-OP03-102",
+      "language": "EN"
     },
     {
       "cardId": "OP03-110",
@@ -564,7 +606,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Smoothie-OP03-110"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Smoothie-OP03-110",
+      "language": "EN"
     },
     {
       "cardId": "OP03-058",
@@ -577,7 +620,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Iceburg-OP03-058-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Iceburg-OP03-058-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-014",
@@ -590,7 +634,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDGarp-OP03-014"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDGarp-OP03-014",
+      "language": "EN"
     },
     {
       "cardId": "OP03-022",
@@ -603,7 +648,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Arlong-OP03-022-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Arlong-OP03-022-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-076",
@@ -616,7 +662,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-076-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-076-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-045",
@@ -629,7 +676,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Carne-OP03-045"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Carne-OP03-045",
+      "language": "EN"
     },
     {
       "cardId": "OP03-086",
@@ -642,7 +690,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Spandam-OP03-086-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Spandam-OP03-086-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-081",
@@ -655,7 +704,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-081-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-081-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-033",
@@ -668,7 +718,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Hatchan-OP03-033"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Hatchan-OP03-033",
+      "language": "EN"
     },
     {
       "cardId": "OP03-097",
@@ -681,7 +732,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Six-King-Pistol-OP03-097"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Six-King-Pistol-OP03-097",
+      "language": "EN"
     },
     {
       "cardId": "OP03-021",
@@ -694,7 +746,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuro-OP03-021-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuro-OP03-021-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-035",
@@ -707,7 +760,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Momoo-OP03-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Momoo-OP03-035",
+      "language": "EN"
     },
     {
       "cardId": "OP03-060",
@@ -720,7 +774,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-060"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-060",
+      "language": "EN"
     },
     {
       "cardId": "OP03-099",
@@ -733,7 +788,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-099-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-099-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-062",
@@ -746,7 +802,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kokoro-OP03-062"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kokoro-OP03-062",
+      "language": "EN"
     },
     {
       "cardId": "OP03-119",
@@ -759,7 +816,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buzz-Cut-Mochi-OP03-119"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buzz-Cut-Mochi-OP03-119",
+      "language": "EN"
     },
     {
       "cardId": "OP03-043",
@@ -772,7 +830,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gaimon-OP03-043"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Gaimon-OP03-043",
+      "language": "EN"
     },
     {
       "cardId": "OP03-040",
@@ -785,7 +844,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-040-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-040-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-012",
@@ -798,7 +858,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MarshallDTeach-OP03-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MarshallDTeach-OP03-012",
+      "language": "EN"
     },
     {
       "cardId": "OP03-015",
@@ -811,7 +872,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Lim-OP03-015"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Lim-OP03-015",
+      "language": "EN"
     },
     {
       "cardId": "OP03-008",
@@ -824,7 +886,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buggy-OP03-008"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buggy-OP03-008",
+      "language": "EN"
     },
     {
       "cardId": "OP03-036",
@@ -837,7 +900,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Out-of-the-Bag-OP03-036"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Out-of-the-Bag-OP03-036",
+      "language": "EN"
     },
     {
       "cardId": "OP03-079",
@@ -850,7 +914,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Vergo-OP03-079"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Vergo-OP03-079",
+      "language": "EN"
     },
     {
       "cardId": "OP03-029",
@@ -863,7 +928,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Chew-OP03-029"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Chew-OP03-029",
+      "language": "EN"
     },
     {
       "cardId": "OP03-053",
@@ -876,7 +942,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Yosaku-Johnny-OP03-053"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Yosaku-Johnny-OP03-053",
+      "language": "EN"
     },
     {
       "cardId": "OP03-002",
@@ -889,7 +956,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Adio-OP03-002"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Adio-OP03-002",
+      "language": "EN"
     },
     {
       "cardId": "OP03-037",
@@ -902,7 +970,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tooth-Attack-OP03-037"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tooth-Attack-OP03-037",
+      "language": "EN"
     },
     {
       "cardId": "OP03-116",
@@ -915,7 +984,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Shirahoshi-OP03-116"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Shirahoshi-OP03-116",
+      "language": "EN"
     },
     {
       "cardId": "OP03-122",
@@ -928,7 +998,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-027",
@@ -941,7 +1012,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sham-OP03-027"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sham-OP03-027",
+      "language": "EN"
     },
     {
       "cardId": "OP03-032",
@@ -954,7 +1026,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buggy-OP03-032"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buggy-OP03-032",
+      "language": "EN"
     },
     {
       "cardId": "OP03-042",
@@ -967,7 +1040,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopps-Pirate-Crew-OP03-042"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopps-Pirate-Crew-OP03-042",
+      "language": "EN"
     },
     {
       "cardId": "OP03-120",
@@ -980,7 +1054,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tropical-Torment-OP03-120"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tropical-Torment-OP03-120",
+      "language": "EN"
     },
     {
       "cardId": "OP03-011",
@@ -993,7 +1068,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Blamenco-OP03-011"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Blamenco-OP03-011",
+      "language": "EN"
     },
     {
       "cardId": "OP03-123",
@@ -1001,12 +1077,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-123-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/720060/720060.png",
-      "priceFrom": "19,00 €",
-      "priceEur": 19,
+      "priceFrom": "19,99 €",
+      "priceEur": 19.99,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-123-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-123-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-018",
@@ -1019,7 +1096,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fire-Fist-OP03-018-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fire-Fist-OP03-018-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP03-081",
@@ -1032,7 +1110,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-081-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kalifa-OP03-081-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-023",
@@ -1045,7 +1124,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Alvida-OP03-023"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Alvida-OP03-023",
+      "language": "EN"
     },
     {
       "cardId": "OP03-118",
@@ -1058,7 +1138,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Ikoku-Sovereignty-OP03-118"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Ikoku-Sovereignty-OP03-118",
+      "language": "EN"
     },
     {
       "cardId": "OP03-004",
@@ -1071,7 +1152,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Curiel-OP03-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Curiel-OP03-004",
+      "language": "EN"
     },
     {
       "cardId": "OP03-061",
@@ -1084,7 +1166,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kiwi-Mozu-OP03-061"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kiwi-Mozu-OP03-061",
+      "language": "EN"
     },
     {
       "cardId": "OP03-065",
@@ -1097,7 +1180,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Chimney-Gonbe-OP03-065"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Chimney-Gonbe-OP03-065",
+      "language": "EN"
     },
     {
       "cardId": "OP03-009",
@@ -1110,7 +1194,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Haruta-OP03-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Haruta-OP03-009",
+      "language": "EN"
     },
     {
       "cardId": "OP03-075",
@@ -1123,7 +1208,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Galley-La-Company-OP03-075"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Galley-La-Company-OP03-075",
+      "language": "EN"
     },
     {
       "cardId": "OP03-092",
@@ -1136,7 +1222,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-092-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-092-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-094",
@@ -1149,7 +1236,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Air-Door-OP03-094"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Air-Door-OP03-094",
+      "language": "EN"
     },
     {
       "cardId": "OP03-095",
@@ -1162,7 +1250,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Soap-Sheep-OP03-095"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Soap-Sheep-OP03-095",
+      "language": "EN"
     },
     {
       "cardId": "OP03-112",
@@ -1170,12 +1259,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Pudding-OP03-112-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719412/719412.png",
-      "priceFrom": "8,49 €",
-      "priceEur": 8.49,
+      "priceFrom": "8,00 €",
+      "priceEur": 8,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Pudding-OP03-112-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Pudding-OP03-112-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-039",
@@ -1188,7 +1278,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/One-Two-Jango-OP03-039"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/One-Two-Jango-OP03-039",
+      "language": "EN"
     },
     {
       "cardId": "OP03-080",
@@ -1196,12 +1287,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-080-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719409/719409.png",
-      "priceFrom": "2,99 €",
-      "priceEur": 2.99,
+      "priceFrom": "2,95 €",
+      "priceEur": 2.95,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-080-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-080-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-086",
@@ -1214,7 +1306,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Spandam-OP03-086-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Spandam-OP03-086-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-067",
@@ -1227,7 +1320,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Peepley-Lulu-OP03-067"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Peepley-Lulu-OP03-067",
+      "language": "EN"
     },
     {
       "cardId": "OP03-105",
@@ -1240,7 +1334,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Oven-OP03-105"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Oven-OP03-105",
+      "language": "EN"
     },
     {
       "cardId": "OP03-109",
@@ -1253,7 +1348,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Chiffon-OP03-109"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Chiffon-OP03-109",
+      "language": "EN"
     },
     {
       "cardId": "OP03-047",
@@ -1266,7 +1362,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zeff-OP03-047-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zeff-OP03-047-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-049",
@@ -1279,7 +1376,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Patty-OP03-049"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Patty-OP03-049",
+      "language": "EN"
     },
     {
       "cardId": "OP03-052",
@@ -1292,7 +1390,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Merry-OP03-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Merry-OP03-052",
+      "language": "EN"
     },
     {
       "cardId": "OP03-101",
@@ -1305,7 +1404,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Camie-OP03-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Camie-OP03-101",
+      "language": "EN"
     },
     {
       "cardId": "OP03-107",
@@ -1318,7 +1418,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Galette-OP03-107"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Galette-OP03-107",
+      "language": "EN"
     },
     {
       "cardId": "OP03-111",
@@ -1331,7 +1432,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Praline-OP03-111"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Praline-OP03-111",
+      "language": "EN"
     },
     {
       "cardId": "OP03-108",
@@ -1339,12 +1441,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719405/719405.png",
-      "priceFrom": "3,50 €",
-      "priceEur": 3.5,
+      "priceFrom": "3,40 €",
+      "priceEur": 3.4,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Cracker-OP03-108-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-019",
@@ -1357,7 +1460,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fiery-Doll-OP03-019"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fiery-Doll-OP03-019",
+      "language": "EN"
     },
     {
       "cardId": "OP03-020",
@@ -1370,7 +1474,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Striker-OP03-020"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Striker-OP03-020",
+      "language": "EN"
     },
     {
       "cardId": "OP03-034",
@@ -1383,7 +1488,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buchi-OP03-034"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Buchi-OP03-034",
+      "language": "EN"
     },
     {
       "cardId": "OP03-064",
@@ -1396,7 +1502,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tilestone-OP03-064"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tilestone-OP03-064",
+      "language": "EN"
     },
     {
       "cardId": "OP03-071",
@@ -1409,7 +1516,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-071"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-071",
+      "language": "EN"
     },
     {
       "cardId": "OP03-093",
@@ -1422,7 +1530,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Wanze-OP03-093"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Wanze-OP03-093",
+      "language": "EN"
     },
     {
       "cardId": "OP03-007",
@@ -1435,7 +1544,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Namule-OP03-007"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Namule-OP03-007",
+      "language": "EN"
     },
     {
       "cardId": "OP03-068",
@@ -1448,7 +1558,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Minozebra-OP03-068"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Minozebra-OP03-068",
+      "language": "EN"
     },
     {
       "cardId": "OP03-073",
@@ -1461,7 +1572,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Hull-Dismantler-Slash-OP03-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Hull-Dismantler-Slash-OP03-073",
+      "language": "EN"
     },
     {
       "cardId": "OP03-104",
@@ -1474,7 +1586,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Shirley-OP03-104"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Shirley-OP03-104",
+      "language": "EN"
     },
     {
       "cardId": "OP03-046",
@@ -1487,7 +1600,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Genzo-OP03-046"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Genzo-OP03-046",
+      "language": "EN"
     },
     {
       "cardId": "OP03-074",
@@ -1500,7 +1614,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Top-Knot-OP03-074"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Top-Knot-OP03-074",
+      "language": "EN"
     },
     {
       "cardId": "OP03-005",
@@ -1513,7 +1628,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Thatch-OP03-005"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Thatch-OP03-005",
+      "language": "EN"
     },
     {
       "cardId": "OP03-006",
@@ -1526,7 +1642,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Speed-Jil-OP03-006"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Speed-Jil-OP03-006",
+      "language": "EN"
     },
     {
       "cardId": "OP03-100",
@@ -1539,7 +1656,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kingbaum-OP03-100"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kingbaum-OP03-100",
+      "language": "EN"
     },
     {
       "cardId": "OP03-069",
@@ -1552,7 +1670,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Minorhinoceros-OP03-069"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Minorhinoceros-OP03-069",
+      "language": "EN"
     },
     {
       "cardId": "OP03-091",
@@ -1565,7 +1684,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Helmeppo-OP03-091"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Helmeppo-OP03-091",
+      "language": "EN"
     },
     {
       "cardId": "OP03-103",
@@ -1578,7 +1698,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Bobbin-the-Disposer-OP03-103"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Bobbin-the-Disposer-OP03-103",
+      "language": "EN"
     },
     {
       "cardId": "OP03-013",
@@ -1591,7 +1712,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Marco-OP03-013-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Marco-OP03-013-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-010",
@@ -1604,7 +1726,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fossa-OP03-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fossa-OP03-010",
+      "language": "EN"
     },
     {
       "cardId": "OP03-063",
@@ -1617,7 +1740,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zambai-OP03-063"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Zambai-OP03-063",
+      "language": "EN"
     },
     {
       "cardId": "OP03-115",
@@ -1630,7 +1754,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Streusen-OP03-115"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Streusen-OP03-115",
+      "language": "EN"
     },
     {
       "cardId": "ST01-012",
@@ -1638,12 +1763,13 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDLuffy-ST01-012",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/720061/720061.png",
-      "priceFrom": "218,00 €",
-      "priceEur": 218,
+      "priceFrom": "219,99 €",
+      "priceEur": 219.99,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDLuffy-ST01-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/MonkeyDLuffy-ST01-012",
+      "language": "EN"
     },
     {
       "cardId": "OP03-083",
@@ -1656,7 +1782,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Corgy-OP03-083"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Corgy-OP03-083",
+      "language": "EN"
     },
     {
       "cardId": "OP03-084",
@@ -1669,7 +1796,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jerry-OP03-084"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jerry-OP03-084",
+      "language": "EN"
     },
     {
       "cardId": "OP03-114",
@@ -1682,7 +1810,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-114-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-114-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-121",
@@ -1695,7 +1824,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Thunder-Bolt-OP03-121"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Thunder-Bolt-OP03-121",
+      "language": "EN"
     },
     {
       "cardId": "OP03-088",
@@ -1708,7 +1838,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fukurou-OP03-088"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Fukurou-OP03-088",
+      "language": "EN"
     },
     {
       "cardId": "OP03-087",
@@ -1721,7 +1852,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nero-OP03-087"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nero-OP03-087",
+      "language": "EN"
     },
     {
       "cardId": "OP03-117",
@@ -1734,7 +1866,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Napoleon-OP03-117"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Napoleon-OP03-117",
+      "language": "EN"
     },
     {
       "cardId": "OP03-106",
@@ -1747,7 +1880,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Opera-OP03-106"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Opera-OP03-106",
+      "language": "EN"
     },
     {
       "cardId": "OP03-113",
@@ -1760,7 +1894,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Perospero-OP03-113-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Perospero-OP03-113-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-059",
@@ -1773,7 +1908,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-059"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaku-OP03-059",
+      "language": "EN"
     },
     {
       "cardId": "OP03-096",
@@ -1786,7 +1922,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tempest-Kick-Sky-Slicer-OP03-096"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Tempest-Kick-Sky-Slicer-OP03-096",
+      "language": "EN"
     },
     {
       "cardId": "OP03-041",
@@ -1794,12 +1931,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopp-OP03-041-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719378/719378.png",
-      "priceFrom": "4,00 €",
-      "priceEur": 4,
+      "priceFrom": "3,90 €",
+      "priceEur": 3.9,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopp-OP03-041-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Usopp-OP03-041-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-082",
@@ -1812,7 +1950,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kumadori-OP03-082"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kumadori-OP03-082",
+      "language": "EN"
     },
     {
       "cardId": "OP03-085",
@@ -1825,7 +1964,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jabra-OP03-085"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Jabra-OP03-085",
+      "language": "EN"
     },
     {
       "cardId": "OP03-066",
@@ -1838,7 +1978,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Paulie-OP03-066-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Paulie-OP03-066-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-078",
@@ -1851,7 +1992,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Issho-OP03-078-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Issho-OP03-078-V2",
+      "language": "EN"
     },
     {
       "cardId": "ST04-003",
@@ -1859,12 +2001,13 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaido-ST04-003",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/720063/720063.png",
-      "priceFrom": "69,99 €",
-      "priceEur": 69.99,
+      "priceFrom": "70,00 €",
+      "priceEur": 70,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaido-ST04-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kaido-ST04-003",
+      "language": "EN"
     },
     {
       "cardId": "OP03-022",
@@ -1877,7 +2020,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Arlong-OP03-022-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Arlong-OP03-022-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-077",
@@ -1890,7 +2034,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-077-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Linlin-OP03-077-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-099",
@@ -1898,12 +2043,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-099-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719395/719395.png",
-      "priceFrom": "89,95 €",
-      "priceEur": 89.95,
+      "priceFrom": "83,00 €",
+      "priceEur": 83,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-099-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Charlotte-Katakuri-OP03-099-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-040",
@@ -1911,12 +2057,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-040-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719991/719991.png",
-      "priceFrom": "243,00 €",
-      "priceEur": 243,
+      "priceFrom": "230,00 €",
+      "priceEur": 230,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-040-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Nami-OP03-040-V2",
+      "language": "EN"
     },
     {
       "cardId": "ST03-009",
@@ -1929,7 +2076,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Donquixote-Doflamingo-ST03-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Donquixote-Doflamingo-ST03-009",
+      "language": "EN"
     },
     {
       "cardId": "OP01-051",
@@ -1942,7 +2090,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/EustassCaptainKid-OP01-051"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/EustassCaptainKid-OP01-051",
+      "language": "EN"
     },
     {
       "cardId": "OP03-001",
@@ -1955,7 +2104,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/PortgasDAce-OP03-001-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/PortgasDAce-OP03-001-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-122",
@@ -1968,7 +2118,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Sogeking-OP03-122-V3",
+      "language": "EN"
     },
     {
       "cardId": "OP03-021",
@@ -1981,7 +2132,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuro-OP03-021-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Kuro-OP03-021-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-058",
@@ -1994,7 +2146,8 @@
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Iceburg-OP03-058-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Iceburg-OP03-058-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP03-076",
@@ -2002,13 +2155,15 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-076-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP03/719390/719390.png",
-      "priceFrom": "35,00 €",
-      "priceEur": 35,
+      "priceFrom": "34,99 €",
+      "priceEur": 34.99,
       "expansion": "Pillars of Strength",
       "setCode": "OP03",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-076-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Pillars-of-Strength/Rob-Lucci-OP03-076-V2",
+      "language": "EN"
     }
   ],
-  "errors": []
+  "errors": [],
+  "language": "EN"
 }

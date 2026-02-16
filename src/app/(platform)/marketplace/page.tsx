@@ -103,16 +103,14 @@ export default function MarketplacePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Marketplace</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Live bid/ask prices from active listings
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Live bid/ask prices from active listings</p>
 
       <div className="mt-6 space-y-4">
         {/* Filters */}
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-3 sm:flex-row">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
               <Input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -140,7 +138,7 @@ export default function MarketplacePage() {
               <select
                 value={setFilter}
                 onChange={(e) => setSetFilter(e.target.value)}
-                className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 focus:border-indigo-300 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+                className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 focus:outline-none"
               >
                 <option value="">All Sets</option>
                 {sets.map((s) => (
@@ -169,9 +167,13 @@ export default function MarketplacePage() {
                 </p>
               </div>
             ) : (
-              <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {results.cards.map((card) => (
-                  <Link key={card.id} href={`/marketplace/${card.id}`} className="block transition-shadow hover:shadow-md rounded-xl">
+                  <Link
+                    key={card.id}
+                    href={`/marketplace/${card.id}`}
+                    className="block rounded-xl transition-shadow hover:shadow-md"
+                  >
                     <MarketCard card={card} />
                   </Link>
                 ))}
@@ -226,7 +228,12 @@ function MarketCard({ card }: { card: MarketCard }) {
         ) : (
           <div className="flex h-full w-full items-center justify-center text-gray-300">
             <svg className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"
+              />
             </svg>
           </div>
         )}
@@ -235,7 +242,7 @@ function MarketCard({ card }: { card: MarketCard }) {
       {/* Card info */}
       <div className="flex flex-col gap-1.5 p-3">
         <div className="flex items-start justify-between gap-1">
-          <h3 className="text-sm font-semibold leading-tight text-gray-900 line-clamp-2">
+          <h3 className="line-clamp-2 text-sm leading-tight font-semibold text-gray-900">
             {card.name}
           </h3>
           <Badge variant={TCG_BADGE_COLORS[card.tcg]} className="shrink-0 text-[10px]">
@@ -263,9 +270,7 @@ function MarketCard({ card }: { card: MarketCard }) {
             )}
             {hasBothSides && market.spread != null && (
               <span className="text-[10px] text-gray-400">
-                {market.spreadPct != null && market.spreadPct > 0
-                  ? `${market.spreadPct}%`
-                  : "0%"}
+                {market.spreadPct != null && market.spreadPct > 0 ? `${market.spreadPct}%` : "0%"}
               </span>
             )}
             {market.bestAsk != null ? (
@@ -277,8 +282,12 @@ function MarketCard({ card }: { card: MarketCard }) {
             )}
           </div>
           <div className="mt-1 flex items-center justify-between text-[10px] text-gray-400">
-            <span>{market.bidCount} bid{market.bidCount !== 1 ? "s" : ""}</span>
-            <span>{market.askCount} ask{market.askCount !== 1 ? "s" : ""}</span>
+            <span>
+              {market.bidCount} bid{market.bidCount !== 1 ? "s" : ""}
+            </span>
+            <span>
+              {market.askCount} ask{market.askCount !== 1 ? "s" : ""}
+            </span>
           </div>
         </div>
       </div>

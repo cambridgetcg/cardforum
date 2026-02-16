@@ -25,7 +25,7 @@ export default function BrowsePage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true); // eslint-disable-line react-hooks/set-state-in-effect
     const params = new URLSearchParams();
     if (tcgFilter) params.set("tcg", tcgFilter);
 
@@ -37,9 +37,7 @@ export default function BrowsePage() {
   }, [tcgFilter]);
 
   // Group sets by TCG, with ONEPIECE first when unfiltered
-  const tcgOrder: TCG[] = tcgFilter
-    ? [tcgFilter]
-    : ["ONEPIECE", "POKEMON", "YUGIOH", "MTG"];
+  const tcgOrder: TCG[] = tcgFilter ? [tcgFilter] : ["ONEPIECE", "POKEMON", "YUGIOH", "MTG"];
 
   const grouped = tcgOrder
     .map((tcg) => ({
@@ -51,9 +49,7 @@ export default function BrowsePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Browse Cards</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Explore sets and cards across all supported TCGs
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Explore sets and cards across all supported TCGs</p>
 
       <div className="mt-6 space-y-6">
         {/* Filters */}
@@ -71,7 +67,7 @@ export default function BrowsePage() {
             ))}
           </div>
           <div className="relative sm:ml-auto sm:w-64">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <Input
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -94,29 +90,28 @@ export default function BrowsePage() {
           </div>
         )}
 
-        {!loading && grouped.map(({ tcg, sets: tcgSets }) => (
-          <section key={tcg}>
-            {!tcgFilter && (
-              <h2 className="mb-3 text-lg font-semibold text-gray-800">
-                {TCG_LABELS[tcg]}
-              </h2>
-            )}
-            <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-              {tcgSets.map((set) => (
-                <Link key={set.id} href={`/browse/sets/${set.code}`}>
-                  <SetCard
-                    code={set.code}
-                    name={set.name}
-                    tcg={set.tcg}
-                    productType={set.productType}
-                    cardCount={set._count.cards}
-                    coverImage={set.coverImage}
-                  />
-                </Link>
-              ))}
-            </div>
-          </section>
-        ))}
+        {!loading &&
+          grouped.map(({ tcg, sets: tcgSets }) => (
+            <section key={tcg}>
+              {!tcgFilter && (
+                <h2 className="mb-3 text-lg font-semibold text-gray-800">{TCG_LABELS[tcg]}</h2>
+              )}
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                {tcgSets.map((set) => (
+                  <Link key={set.id} href={`/browse/sets/${set.code}`}>
+                    <SetCard
+                      code={set.code}
+                      name={set.name}
+                      tcg={set.tcg}
+                      productType={set.productType}
+                      cardCount={set._count.cards}
+                      coverImage={set.coverImage}
+                    />
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ))}
       </div>
     </div>
   );

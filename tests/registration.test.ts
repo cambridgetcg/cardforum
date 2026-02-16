@@ -48,7 +48,7 @@ describe("P2P User Registration", () => {
       await expect(
         db.user.create({
           data: { email, passwordHash },
-        })
+        }),
       ).rejects.toThrow(); // Prisma unique constraint violation
     });
 

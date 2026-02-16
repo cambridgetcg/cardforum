@@ -114,10 +114,7 @@ export default function DigitisationPage() {
       </div>
 
       {showForm && (
-        <CreateDigitisationForm
-          onClose={() => setShowForm(false)}
-          onCreated={handleCreated}
-        />
+        <CreateDigitisationForm onClose={() => setShowForm(false)} onCreated={handleCreated} />
       )}
     </div>
   );

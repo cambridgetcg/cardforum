@@ -4,9 +4,22 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 interface Application {
   id: string;
@@ -196,7 +209,7 @@ export default function AdminAuthenticatorsPage() {
           </DialogHeader>
           {reviewAction === "REJECTED" && (
             <textarea
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               rows={3}
               placeholder="Rejection reason..."
               value={reason}
@@ -212,11 +225,7 @@ export default function AdminAuthenticatorsPage() {
               onClick={handleReview}
               disabled={submitting}
             >
-              {submitting
-                ? "Submitting..."
-                : reviewAction === "APPROVED"
-                  ? "Approve"
-                  : "Reject"}
+              {submitting ? "Submitting..." : reviewAction === "APPROVED" ? "Approve" : "Reject"}
             </Button>
           </DialogFooter>
         </DialogContent>

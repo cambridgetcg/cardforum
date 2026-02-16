@@ -7,28 +7,28 @@
 
 ## Purpose
 
-The delivery layer is where the highway metaphor inverts: information has been routed, money has been settled, and now the *physical card* must traverse the last mile — but only locally, within a single region. This is the bridge model's payoff: international trade with domestic shipping.
+The delivery layer is where the highway metaphor inverts: information has been routed, money has been settled, and now the _physical card_ must traverse the last mile — but only locally, within a single region. This is the bridge model's payoff: international trade with domestic shipping.
 
 ---
 
 ## Module Inventory
 
-| Module | File | Lines | Status | Callers |
-|--------|------|-------|--------|---------|
-| Shipping service | `src/server/services/shipping.service.ts` | 727 | ACTIVE | 3 files |
-| Carrier tracking | `src/server/services/carrier-tracking.service.ts` | 212 | ACTIVE | 2 files |
-| Ship leg API | `src/app/api/trades/[tradeId]/legs/[legId]/ship/route.ts` | 31 | ACTIVE | UI |
-| Deliver leg API | `src/app/api/trades/[tradeId]/legs/[legId]/deliver/route.ts` | 47 | ACTIVE | UI |
-| Inbound leg API | `src/app/api/trades/[tradeId]/legs/[legId]/inbound/route.ts` | 36 | ACTIVE | UI |
-| Return leg API | `src/app/api/trades/[tradeId]/legs/[legId]/return/route.ts` | 31 | ACTIVE | UI |
-| Auto-complete cron | `src/app/api/cron/auto-complete/route.ts` | 59 | ACTIVE | Vercel cron (daily 6am) |
-| Shipping SLA cron | `src/app/api/cron/shipping-sla/route.ts` | 69 | ACTIVE | Vercel cron |
-| Carrier tracking cron | `src/app/api/cron/carrier-tracking/route.ts` | 24 | ACTIVE | Vercel cron |
-| Shipping quote API | `src/app/api/shipping/quote/route.ts` | ~50 | ACTIVE | UI |
-| ShippingAddressForm | `src/components/shipping/ShippingAddressForm.tsx` | ~150 | ACTIVE | Settings/trade |
-| ShippingStatus | `src/components/shipping/ShippingStatus.tsx` | ~100 | ACTIVE | Trade detail |
-| DeliveryConfirmation | `src/components/shipping/DeliveryConfirmation.tsx` | ~80 | ACTIVE | Trade detail |
-| RecordShipment | `src/components/shipping/RecordShipment.tsx` | ~100 | ACTIVE | Trade detail |
+| Module                | File                                                         | Lines | Status | Callers                 |
+| --------------------- | ------------------------------------------------------------ | ----- | ------ | ----------------------- |
+| Shipping service      | `src/server/services/shipping.service.ts`                    | 727   | ACTIVE | 3 files                 |
+| Carrier tracking      | `src/server/services/carrier-tracking.service.ts`            | 212   | ACTIVE | 2 files                 |
+| Ship leg API          | `src/app/api/trades/[tradeId]/legs/[legId]/ship/route.ts`    | 31    | ACTIVE | UI                      |
+| Deliver leg API       | `src/app/api/trades/[tradeId]/legs/[legId]/deliver/route.ts` | 47    | ACTIVE | UI                      |
+| Inbound leg API       | `src/app/api/trades/[tradeId]/legs/[legId]/inbound/route.ts` | 36    | ACTIVE | UI                      |
+| Return leg API        | `src/app/api/trades/[tradeId]/legs/[legId]/return/route.ts`  | 31    | ACTIVE | UI                      |
+| Auto-complete cron    | `src/app/api/cron/auto-complete/route.ts`                    | 59    | ACTIVE | Vercel cron (daily 6am) |
+| Shipping SLA cron     | `src/app/api/cron/shipping-sla/route.ts`                     | 69    | ACTIVE | Vercel cron             |
+| Carrier tracking cron | `src/app/api/cron/carrier-tracking/route.ts`                 | 24    | ACTIVE | Vercel cron             |
+| Shipping quote API    | `src/app/api/shipping/quote/route.ts`                        | ~50   | ACTIVE | UI                      |
+| ShippingAddressForm   | `src/components/shipping/ShippingAddressForm.tsx`            | ~150  | ACTIVE | Settings/trade          |
+| ShippingStatus        | `src/components/shipping/ShippingStatus.tsx`                 | ~100  | ACTIVE | Trade detail            |
+| DeliveryConfirmation  | `src/components/shipping/DeliveryConfirmation.tsx`           | ~80   | ACTIVE | Trade detail            |
+| RecordShipment        | `src/components/shipping/RecordShipment.tsx`                 | ~100  | ACTIVE | Trade detail            |
 
 **Layer 6 maturity: PRODUCTION.** All modules active, comprehensive cron coverage.
 
@@ -142,11 +142,11 @@ Live status: GET /api/trades/[tradeId]/legs/[legId]/tracking
 
 ## Auto-Complete & SLA
 
-| Cron | Schedule | Purpose |
-|------|----------|---------|
-| Auto-complete | Daily 6am | Legs shipped > 14 days without dispute → auto-confirm delivery |
-| Shipping SLA | Hourly | Alert if authenticator hasn't shipped within 48hr SLA |
-| Carrier tracking | Hourly | Poll carrier APIs for delivery confirmation |
+| Cron             | Schedule  | Purpose                                                        |
+| ---------------- | --------- | -------------------------------------------------------------- |
+| Auto-complete    | Daily 6am | Legs shipped > 14 days without dispute → auto-confirm delivery |
+| Shipping SLA     | Hourly    | Alert if authenticator hasn't shipped within 48hr SLA          |
+| Carrier tracking | Hourly    | Poll carrier APIs for delivery confirmation                    |
 
 ---
 
@@ -167,6 +167,7 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 ## Progress
 
 ### Shipping Core
+
 - [x] ShippingAddress model (CRUD + default)
 - [x] `lockShippingAddresses()` on ESCROWED
 - [x] `recordShipment()` with tracking number
@@ -179,6 +180,7 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 - [x] Shipping quote API
 
 ### Carrier Tracking
+
 - [x] Adapter pattern (AfterShip default)
 - [x] `getTrackingStatus()` with provider abstraction
 - [x] Auto-confirm on carrier DELIVERED
@@ -188,6 +190,7 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 - [ ] Admin alert if 10+ shipments fail tracking in an hour
 
 ### Crons
+
 - [x] Auto-complete (14-day timeout, daily 6am)
 - [x] Shipping SLA check (48hr authenticator ship deadline)
 - [x] Carrier tracking poll (hourly)
@@ -195,6 +198,7 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 - [ ] Dispute pause on auto-complete (skip legs with active disputes)
 
 ### UI Components
+
 - [x] ShippingAddressForm (create/edit default address)
 - [x] ShippingStatus (per-leg tracking display)
 - [x] DeliveryConfirmation (recipient confirm button)
@@ -203,6 +207,7 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 - [ ] Shipping timeline visualization (progress bar)
 
 ### Evidence Chain
+
 - [x] preShipPhotos field on TradeLeg
 - [x] receiptPhotos field on TradeLeg
 - [x] deliveryPhotos field on TradeLeg
@@ -213,12 +218,12 @@ This creates a chain of custody: seller → authenticator → recipient, each st
 
 ## Gaps
 
-| Gap | Impact | Effort | Blocked By |
-|-----|--------|--------|------------|
-| No carrier API fallback | Tracking failure blocks auto-complete | 4 hours | Nothing |
-| No dispute pause on auto-complete | Disputed legs could auto-confirm | 2 hours | Nothing |
-| No evidence photo upload UI | Evidence chain incomplete | 1 day | Nothing |
-| Shipping timeline viz | UX improvement | 1 day | Nothing |
+| Gap                               | Impact                                | Effort  | Blocked By |
+| --------------------------------- | ------------------------------------- | ------- | ---------- |
+| No carrier API fallback           | Tracking failure blocks auto-complete | 4 hours | Nothing    |
+| No dispute pause on auto-complete | Disputed legs could auto-confirm      | 2 hours | Nothing    |
+| No evidence photo upload UI       | Evidence chain incomplete             | 1 day   | Nothing    |
+| Shipping timeline viz             | UX improvement                        | 1 day   | Nothing    |
 
 ---
 

@@ -247,9 +247,8 @@ async function fetchFreshRates(): Promise<ExchangeRates> {
  */
 async function fetchFromWise(): Promise<ExchangeRates> {
   const env = process.env.WISE_ENVIRONMENT ?? "sandbox";
-  const baseUrl = env === "live"
-    ? "https://api.transferwise.com"
-    : "https://api.sandbox.transferwise.tech";
+  const baseUrl =
+    env === "live" ? "https://api.transferwise.com" : "https://api.sandbox.transferwise.tech";
 
   // Wise rates endpoint accepts source and target currencies
   // We fetch all USD→target pairs in one batch
@@ -334,10 +333,27 @@ function getHardcodedFallbackRates(): ExchangeRates {
   return {
     baseCurrency: "USD",
     rates: {
-      EUR: 0.92, GBP: 0.79, JPY: 149.0, CAD: 1.36, AUD: 1.53,
-      CHF: 0.88, KRW: 1320.0, SGD: 1.34, HKD: 7.82, NZD: 1.66,
-      SEK: 10.4, NOK: 10.6, DKK: 6.88, PLN: 3.97, CZK: 23.1,
-      MXN: 17.1, BRL: 4.97, TWD: 32.0, THB: 34.5, MYR: 4.47, PHP: 56.0,
+      EUR: 0.92,
+      GBP: 0.79,
+      JPY: 149.0,
+      CAD: 1.36,
+      AUD: 1.53,
+      CHF: 0.88,
+      KRW: 1320.0,
+      SGD: 1.34,
+      HKD: 7.82,
+      NZD: 1.66,
+      SEK: 10.4,
+      NOK: 10.6,
+      DKK: 6.88,
+      PLN: 3.97,
+      CZK: 23.1,
+      MXN: 17.1,
+      BRL: 4.97,
+      TWD: 32.0,
+      THB: 34.5,
+      MYR: 4.47,
+      PHP: 56.0,
     },
     fetchedAt: new Date(),
     source: "hardcoded_fallback",

@@ -113,6 +113,79 @@ Every edit must push toward the purpose. Before writing code, answer:
 
 See `PURPOSE_MAP.md` for the full service→purpose mapping and decision framework.
 
+## PP Gate Grounding
+
+When PP agents evaluate gates, they use these project-specific interpretations. Abstract gates become bridge-concrete questions.
+
+### Truth Gates → Bridge Axiom
+
+- **T1 Grounding**: Claims about code must cite file:line. Claims about purpose must cite PURPOSE_MAP.md tier.
+- **T2 Calibration**: Confidence must match the tier — T1 CORE changes demand high certainty; T5 INFRA changes tolerate reasonable confidence.
+- **T3 Counter**: Consider whether a different tier classification or sub-goal assignment would be more accurate.
+- **T4 Completeness**: Full picture requires identifying which sub-goal (G1-G6) the change serves. No sub-goal = T4 FAIL.
+- **T5 Representation**: Language must distinguish bridge-specific from bridge-independent work. Don't overstate bridge relevance.
+
+### Understanding Gates → Bridge Mechanism
+
+- **U1 Mental Model**: Must include how the change relates to the bridge: cycles, locality, trust, or settlement. For T1/T2 code, must trace through the Information Highway layer model (L1-L7).
+- **U2 Why**: "Why does this code exist?" must trace to a sub-goal (G1-G6) or enabling infrastructure justification.
+- **U3 Connection**: Link to related bridge components — how does this change affect the matching pipeline, trust model, or settlement flow?
+- **U4 Application**: Can articulate the concrete bridge improvement: denser graph, shorter cycles, stronger trust, less friction.
+- **U5 Boundaries**: Distinguish bridge-core from bridge-independent. Know when the change stops compounding with the bridge model.
+
+### Beauty Gates → Least Action
+
+- **B1 Foundation**: Solution grounded in bridge axiom (card fungibility eliminates shipping), not generic marketplace thinking.
+- **B2 Emergence**: Solution emerges from understanding the bridge model — not force-fitted from another domain.
+- **B3 Fit**: Natural for the module's purpose tier. T1 code should feel like routing infrastructure. T5 code should feel like plumbing.
+- **B4 Elegance**: Least-action principle — minimum code for maximum purpose impact. The scorer's weight system is the beauty standard: each number IS a purpose sub-goal with a coefficient.
+- **B5 Coherence**: Change coheres with the Information Highway layer it belongs to. No layer boundary violations.
+- **B6 Clarity**: Bridge-specific concepts (cycles, legs, locality, fungibility) used precisely, not loosely.
+- **B7 Appropriateness**: Proportional to purpose tier. T1 deserves thorough design. T5 deserves minimal, pattern-following implementation. Over-engineering T5 or under-engineering T1 = B7 FAIL.
+
+### Justice Gates → Purpose Tiers
+
+- **J1 Placement**: Right purpose tier (consult PURPOSE_MAP.md). Right Information Highway layer (consult INFORMATION_HIGHWAY.md).
+- **J2 Ownership**: Right layer in the Information Highway owns the concern. Routing logic belongs in L3, not L5. Trust logic belongs in L7, not L4.
+- **J3 Responsibility**: Includes centralisation spectrum position (consult PHILOSOPHY.md). Is this concern correctly centralised or decentralised?
+- **J4 Proportion**: Complexity encapsulated within the right tier. T1 complexity shouldn't leak into T5 modules.
+- **J5 Balance**: Doesn't shift a module's spectrum position (centralised↔decentralised) without explicit justification per PHILOSOPHY.md's three rules.
+- **J6 Integrity**: Layer boundaries from Information Highway preserved. Settlement (L5) doesn't reach into Identity (L1). Governance (L7) feeds back through defined interfaces.
+
+### Creativity Gates → Bridge Extension
+
+- **X1 Territory**: Is this genuinely uncharted, or does an existing bridge component already handle it?
+- **X5 Vision**: Serves a declared sub-goal (G1-G6) or a recognized future direction from INFORMATION_HIGHWAY.md (bandwidth markets, liquidity corridors, predictive routing, trust portability).
+- **X7 Integration**: Connects to the bridge mechanism, not isolated from it. New modules must specify their Information Highway layer and purpose tier.
+
+### PP Agent Outputs (Project-Specific)
+
+**Sense agent** emits additional fields:
+
+- `PURPOSE_TIER`: T1-T6 (from PURPOSE_MAP.md)
+- `SUB_GOALS`: Which of G1-G6 this change serves
+- `BRIDGE_COMPOUND`: YES / NO / MAYBE — does this compound with the bridge model?
+- `WAYPOINT`: W1-W18 (from PATH.md) or "off-path"
+- `HIGHWAY_LAYER`: L1-L7 (from INFORMATION_HIGHWAY.md)
+
+**Assess agent** evaluates additional dimensions:
+
+- `PURPOSE_ALIGNMENT`: Does the implementation serve the declared sub-goals?
+- `TIER_CONSISTENCY`: Is the quality bar appropriate for the purpose tier?
+- `BRIDGE_COMPOUNDING`: Does the change leverage fungibility, locality, or cycle detection?
+
+**Reflection enrichment** — append to `.gua/reflections/log.jsonl`:
+
+```json
+"purpose": {
+  "tier": "T1-T6",
+  "sub_goals": ["G1", "G3"],
+  "bridge_compound": "YES|NO|MAYBE",
+  "waypoint": "W3|off-path",
+  "highway_layer": "L5"
+}
+```
+
 ## Agent Development Workflow
 
 When making code changes, follow this sequence:

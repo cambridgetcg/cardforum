@@ -43,7 +43,9 @@ export function PostCard({ post, onVote }: PostCardProps) {
           >
             <ThumbsUp className="h-4 w-4" />
           </button>
-          <span className={`text-sm font-semibold ${score > 0 ? "text-emerald-600" : score < 0 ? "text-red-500" : "text-gray-400"}`}>
+          <span
+            className={`text-sm font-semibold ${score > 0 ? "text-emerald-600" : score < 0 ? "text-red-500" : "text-gray-400"}`}
+          >
             {score}
           </span>
           <button
@@ -58,9 +60,13 @@ export function PostCard({ post, onVote }: PostCardProps) {
         <div className="flex-1 space-y-2">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant={CATEGORY_COLORS[post.category] ?? "default"}>
-              {EXPERT_POST_CATEGORY_LABELS[post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS] ?? post.category}
+              {EXPERT_POST_CATEGORY_LABELS[
+                post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS
+              ] ?? post.category}
             </Badge>
-            {post.tcg && <Badge>{TCG_LABELS[post.tcg as keyof typeof TCG_LABELS] ?? post.tcg}</Badge>}
+            {post.tcg && (
+              <Badge>{TCG_LABELS[post.tcg as keyof typeof TCG_LABELS] ?? post.tcg}</Badge>
+            )}
             {post.language && <Badge variant="default">{post.language}</Badge>}
             {hasEndorsement && (
               <Badge variant="success">
@@ -74,19 +80,22 @@ export function PostCard({ post, onVote }: PostCardProps) {
             <h3 className="font-semibold text-gray-900 hover:text-indigo-600">{post.title}</h3>
           </Link>
 
-          {post.excerpt && (
-            <p className="line-clamp-2 text-sm text-gray-600">{post.excerpt}</p>
-          )}
+          {post.excerpt && <p className="line-clamp-2 text-sm text-gray-600">{post.excerpt}</p>}
 
           {/* Card/Set context */}
           {(post.card || post.set) && (
             <div className="flex flex-wrap gap-2 text-xs text-gray-500">
               {post.card && (
                 <span>
-                  {post.card.name}{post.card.number ? ` #${post.card.number}` : ""}
+                  {post.card.name}
+                  {post.card.number ? ` #${post.card.number}` : ""}
                 </span>
               )}
-              {post.set && <span>{post.set.name} ({post.set.code})</span>}
+              {post.set && (
+                <span>
+                  {post.set.name} ({post.set.code})
+                </span>
+              )}
             </div>
           )}
 

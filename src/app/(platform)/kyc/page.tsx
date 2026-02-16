@@ -49,13 +49,48 @@ const STATUS_CONFIG: Record<
   { label: string; color: string; bgColor: string; Icon: typeof Shield }
 > = {
   UNVERIFIED: { label: "Unverified", color: "text-gray-600", bgColor: "bg-gray-100", Icon: Shield },
-  BASIC_PENDING: { label: "Basic — Pending Review", color: "text-amber-700", bgColor: "bg-amber-50", Icon: Clock },
-  BASIC_VERIFIED: { label: "Basic — Verified", color: "text-green-700", bgColor: "bg-green-50", Icon: ShieldCheck },
-  BASIC_REJECTED: { label: "Basic — Rejected", color: "text-red-700", bgColor: "bg-red-50", Icon: ShieldAlert },
-  ENHANCED_PENDING: { label: "Enhanced — Pending Review", color: "text-amber-700", bgColor: "bg-amber-50", Icon: Clock },
-  ENHANCED_VERIFIED: { label: "Enhanced — Verified", color: "text-emerald-700", bgColor: "bg-emerald-50", Icon: ShieldCheck },
-  ENHANCED_REJECTED: { label: "Enhanced — Rejected", color: "text-red-700", bgColor: "bg-red-50", Icon: ShieldAlert },
-  SUSPENDED: { label: "Suspended", color: "text-red-700", bgColor: "bg-red-50", Icon: AlertTriangle },
+  BASIC_PENDING: {
+    label: "Basic — Pending Review",
+    color: "text-amber-700",
+    bgColor: "bg-amber-50",
+    Icon: Clock,
+  },
+  BASIC_VERIFIED: {
+    label: "Basic — Verified",
+    color: "text-green-700",
+    bgColor: "bg-green-50",
+    Icon: ShieldCheck,
+  },
+  BASIC_REJECTED: {
+    label: "Basic — Rejected",
+    color: "text-red-700",
+    bgColor: "bg-red-50",
+    Icon: ShieldAlert,
+  },
+  ENHANCED_PENDING: {
+    label: "Enhanced — Pending Review",
+    color: "text-amber-700",
+    bgColor: "bg-amber-50",
+    Icon: Clock,
+  },
+  ENHANCED_VERIFIED: {
+    label: "Enhanced — Verified",
+    color: "text-emerald-700",
+    bgColor: "bg-emerald-50",
+    Icon: ShieldCheck,
+  },
+  ENHANCED_REJECTED: {
+    label: "Enhanced — Rejected",
+    color: "text-red-700",
+    bgColor: "bg-red-50",
+    Icon: ShieldAlert,
+  },
+  SUSPENDED: {
+    label: "Suspended",
+    color: "text-red-700",
+    bgColor: "bg-red-50",
+    Icon: AlertTriangle,
+  },
   REVOKED: { label: "Revoked", color: "text-red-800", bgColor: "bg-red-100", Icon: XCircle },
 };
 
@@ -71,7 +106,9 @@ const ACCEPTED_TYPES = "image/jpeg,image/png,application/pdf";
 function StatusBadge({ status }: { status: KYCStatus }) {
   const { label, color, bgColor, Icon } = STATUS_CONFIG[status];
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium ${color} ${bgColor}`}>
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium ${color} ${bgColor}`}
+    >
       <Icon className="h-4 w-4" />
       {label}
     </span>
@@ -118,7 +155,7 @@ function TierCard({
       <p className="mt-1 text-sm text-gray-600">{description}</p>
 
       <div className="mt-4">
-        <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Limits</p>
+        <p className="text-xs font-medium tracking-wide text-gray-500 uppercase">Limits</p>
         <ul className="mt-1 space-y-1">
           {caps.map((cap) => (
             <li key={cap} className="flex items-center gap-1.5 text-sm text-gray-700">
@@ -130,7 +167,7 @@ function TierCard({
       </div>
 
       <div className="mt-4">
-        <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+        <p className="text-xs font-medium tracking-wide text-gray-500 uppercase">
           Required Documents
         </p>
         <ul className="mt-1 space-y-1">
@@ -172,13 +209,14 @@ function DocumentUploadForm({
   });
 
   const requiredDocs: DocumentType[] =
-    tier === "BASIC"
-      ? ["GOVERNMENT_ID", "SELFIE"]
-      : ["PROOF_OF_ADDRESS"];
+    tier === "BASIC" ? ["GOVERNMENT_ID", "SELFIE"] : ["PROOF_OF_ADDRESS"];
 
   const allRequiredPresent = requiredDocs.every((dt) => files[dt] !== null);
 
-  async function uploadFile(file: File, documentType: DocumentType): Promise<{
+  async function uploadFile(
+    file: File,
+    documentType: DocumentType,
+  ): Promise<{
     type: DocumentType;
     fileName: string;
     fileSize: number;
@@ -228,9 +266,7 @@ function DocumentUploadForm({
     try {
       // Upload each file and get document metadata
       const documents = await Promise.all(
-        requiredDocs
-          .filter((dt) => files[dt] !== null)
-          .map((dt) => uploadFile(files[dt]!, dt))
+        requiredDocs.filter((dt) => files[dt] !== null).map((dt) => uploadFile(files[dt]!, dt)),
       );
 
       // Submit KYC
@@ -242,11 +278,7 @@ function DocumentUploadForm({
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(
-          typeof data.error === "string"
-            ? data.error
-            : JSON.stringify(data.error)
-        );
+        throw new Error(typeof data.error === "string" ? data.error : JSON.stringify(data.error));
       }
 
       onSuccess();
@@ -299,9 +331,7 @@ function DocumentUploadForm({
       </div>
 
       {error && (
-        <div className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
-          {error}
-        </div>
+        <div className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>
       )}
 
       <div className="mt-6 flex gap-3">
@@ -371,7 +401,7 @@ export default function KYCPage() {
   }, []);
 
   useEffect(() => {
-    fetchStatus();
+    fetchStatus(); // eslint-disable-line react-hooks/set-state-in-effect
   }, [fetchStatus]);
 
   if (loading) {
@@ -397,7 +427,12 @@ export default function KYCPage() {
   // Determine which actions are available
   const canSubmitBasic = status === "UNVERIFIED" || status === "BASIC_REJECTED";
   const canSubmitEnhanced = status === "BASIC_VERIFIED" || status === "ENHANCED_REJECTED";
-  const isBasicDone = ["BASIC_VERIFIED", "ENHANCED_PENDING", "ENHANCED_VERIFIED", "ENHANCED_REJECTED"].includes(status);
+  const isBasicDone = [
+    "BASIC_VERIFIED",
+    "ENHANCED_PENDING",
+    "ENHANCED_VERIFIED",
+    "ENHANCED_REJECTED",
+  ].includes(status);
   const isEnhancedDone = status === "ENHANCED_VERIFIED";
 
   return (
@@ -410,7 +445,7 @@ export default function KYCPage() {
       {/* Status banner */}
       <div className="mt-6 flex items-center justify-between rounded-xl border border-gray-200 bg-white px-6 py-4">
         <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+          <p className="text-xs font-medium tracking-wide text-gray-500 uppercase">
             Current Status
           </p>
           <div className="mt-1">
@@ -429,9 +464,7 @@ export default function KYCPage() {
         <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3">
           <p className="text-sm font-medium text-red-800">Verification Rejected</p>
           <p className="mt-1 text-sm text-red-700">{kyc.rejectionReason}</p>
-          <p className="mt-2 text-xs text-red-600">
-            You can resubmit your documents below.
-          </p>
+          <p className="mt-2 text-xs text-red-600">You can resubmit your documents below.</p>
         </div>
       )}
 
@@ -495,7 +528,10 @@ export default function KYCPage() {
             description="Add proof of address for higher limits."
             caps={["Unlimited listing value", "Unlimited trade value", "Apply as authenticator"]}
             requirements={[
-              { type: "PROOF_OF_ADDRESS", label: "Proof of Address (utility bill, bank statement)" },
+              {
+                type: "PROOF_OF_ADDRESS",
+                label: "Proof of Address (utility bill, bank statement)",
+              },
             ]}
             canSubmit={canSubmitEnhanced && !isPending}
             isCurrent={isEnhancedDone}

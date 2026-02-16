@@ -19,30 +19,21 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const envelope = submitKYCBodySchema.safeParse(body);
   if (!envelope.success) {
-    return NextResponse.json(
-      { error: envelope.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: envelope.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {
     if (envelope.data.tier === "BASIC") {
       const parsed = submitBasicKYCSchema.safeParse({ documents: envelope.data.documents });
       if (!parsed.success) {
-        return NextResponse.json(
-          { error: parsed.error.flatten().fieldErrors },
-          { status: 400 },
-        );
+        return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
       }
       const user = await submitBasicKYC(session.user.id, parsed.data);
       return NextResponse.json({ kycStatus: user.kycStatus }, { status: 201 });
     } else {
       const parsed = submitEnhancedKYCSchema.safeParse({ documents: envelope.data.documents });
       if (!parsed.success) {
-        return NextResponse.json(
-          { error: parsed.error.flatten().fieldErrors },
-          { status: 400 },
-        );
+        return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
       }
       const user = await submitEnhancedKYC(session.user.id, parsed.data);
       return NextResponse.json({ kycStatus: user.kycStatus }, { status: 201 });

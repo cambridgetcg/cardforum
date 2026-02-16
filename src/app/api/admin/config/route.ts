@@ -28,10 +28,7 @@ export const PUT = withRole("ADMIN")(async (req, { userId }) => {
   const { key, value } = body;
 
   if (!key || value === undefined) {
-    return NextResponse.json(
-      { error: "key and value are required" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "key and value are required" }, { status: 400 });
   }
 
   const result = await setConfig(key as ConfigKey, value, userId);

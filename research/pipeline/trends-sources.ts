@@ -126,9 +126,9 @@ export const TREND_SOURCES: SignalSourceConfig[] = [
  * Returns sources sorted by priority (lowest = best).
  */
 export function getEnabledSources(tcg: TCG): SignalSourceConfig[] {
-  return TREND_SOURCES
-    .filter((s) => s.enabled && s.tcgs.includes(tcg))
-    .sort((a, b) => a.priority - b.priority);
+  return TREND_SOURCES.filter((s) => s.enabled && s.tcgs.includes(tcg)).sort(
+    (a, b) => a.priority - b.priority,
+  );
 }
 
 /**
@@ -136,18 +136,20 @@ export function getEnabledSources(tcg: TCG): SignalSourceConfig[] {
  * Respects priority and enabled state.
  */
 export function getBestSource(metric: TrendMetric, tcg: TCG): SignalSourceConfig | null {
-  return TREND_SOURCES
-    .filter((s) => s.enabled && s.tcgs.includes(tcg) && s.metrics.includes(metric))
-    .sort((a, b) => a.priority - b.priority)[0] ?? null;
+  return (
+    TREND_SOURCES.filter(
+      (s) => s.enabled && s.tcgs.includes(tcg) && s.metrics.includes(metric),
+    ).sort((a, b) => a.priority - b.priority)[0] ?? null
+  );
 }
 
 /**
  * Get all sources that provide a given metric, regardless of enabled state.
  */
 export function getSourcesForMetric(metric: TrendMetric): SignalSourceConfig[] {
-  return TREND_SOURCES
-    .filter((s) => s.metrics.includes(metric))
-    .sort((a, b) => a.priority - b.priority);
+  return TREND_SOURCES.filter((s) => s.metrics.includes(metric)).sort(
+    (a, b) => a.priority - b.priority,
+  );
 }
 
 /**
@@ -191,21 +193,19 @@ export function getSourcesByCostTier(): Record<CostTier, SignalSourceConfig[]> {
  * Set-level keywords track release hype and demand.
  * Card-level keywords track individual chase card demand.
  */
-export const TCG_TREND_KEYWORDS: Record<TCG, {
-  /** TCG-wide search terms */
-  tcgKeywords: string[];
-  /** Set-level keywords keyed by set code */
-  setKeywords: Record<string, string[]>;
-  /** High-value card keywords keyed by cardId */
-  cardKeywords: Record<string, string[]>;
-}> = {
+export const TCG_TREND_KEYWORDS: Record<
+  TCG,
+  {
+    /** TCG-wide search terms */
+    tcgKeywords: string[];
+    /** Set-level keywords keyed by set code */
+    setKeywords: Record<string, string[]>;
+    /** High-value card keywords keyed by cardId */
+    cardKeywords: Record<string, string[]>;
+  }
+> = {
   onepiece: {
-    tcgKeywords: [
-      "one piece card game",
-      "one piece tcg",
-      "one piece cards",
-      "opcg",
-    ],
+    tcgKeywords: ["one piece card game", "one piece tcg", "one piece cards", "opcg"],
     setKeywords: {
       OP01: ["one piece romance dawn", "op01 cards"],
       OP02: ["one piece paramount war", "op02 cards"],
@@ -230,12 +230,7 @@ export const TCG_TREND_KEYWORDS: Record<TCG, {
     },
   },
   pokemon: {
-    tcgKeywords: [
-      "pokemon cards",
-      "pokemon tcg",
-      "pokemon card game",
-      "pokemon cards value",
-    ],
+    tcgKeywords: ["pokemon cards", "pokemon tcg", "pokemon card game", "pokemon cards value"],
     setKeywords: {
       // Populate per active sets
     },
@@ -244,22 +239,12 @@ export const TCG_TREND_KEYWORDS: Record<TCG, {
     },
   },
   yugioh: {
-    tcgKeywords: [
-      "yugioh cards",
-      "yu-gi-oh tcg",
-      "yugioh card game",
-      "yugioh card prices",
-    ],
+    tcgKeywords: ["yugioh cards", "yu-gi-oh tcg", "yugioh card game", "yugioh card prices"],
     setKeywords: {},
     cardKeywords: {},
   },
   mtg: {
-    tcgKeywords: [
-      "magic the gathering",
-      "mtg cards",
-      "magic cards",
-      "mtg prices",
-    ],
+    tcgKeywords: ["magic the gathering", "mtg cards", "magic cards", "mtg prices"],
     setKeywords: {},
     cardKeywords: {},
   },
@@ -269,11 +254,7 @@ export const TCG_TREND_KEYWORDS: Record<TCG, {
  * Get all keywords for a TCG + optional set + optional card.
  * Returns a flat list of search terms for Google Trends queries.
  */
-export function getKeywords(
-  tcg: TCG,
-  setCode?: string,
-  cardId?: string,
-): string[] {
+export function getKeywords(tcg: TCG, setCode?: string, cardId?: string): string[] {
   const config = TCG_TREND_KEYWORDS[tcg];
   const keywords: string[] = [...config.tcgKeywords];
 
@@ -286,6 +267,54 @@ export function getKeywords(
   }
 
   return keywords;
+}
+
+/**
+ * Keyword with its hierarchy level.
+ * Used by the search fetcher to correctly assign entityId/setCode.
+ */
+export interface KeywordWithLevel {
+  keyword: string;
+  level: "tcg" | "set" | "card";
+  setCode?: string;
+  cardId?: string;
+}
+
+/**
+ * Get keywords with their hierarchy level attached.
+ * Unlike getKeywords() which returns a flat string[], this preserves
+ * the origin of each keyword so downstream consumers can correctly
+ * assign entityType and setCode without leaking set-level context
+ * onto TCG-wide keywords.
+ */
+export function getKeywordsWithLevel(
+  tcg: TCG,
+  setCode?: string,
+  cardId?: string,
+): KeywordWithLevel[] {
+  const config = TCG_TREND_KEYWORDS[tcg];
+  const result: KeywordWithLevel[] = [];
+
+  // TCG-level keywords — never have a setCode
+  for (const kw of config.tcgKeywords) {
+    result.push({ keyword: kw, level: "tcg" });
+  }
+
+  // Set-level keywords — only for the requested set
+  if (setCode && config.setKeywords[setCode]) {
+    for (const kw of config.setKeywords[setCode]) {
+      result.push({ keyword: kw, level: "set", setCode });
+    }
+  }
+
+  // Card-level keywords — only for the requested card
+  if (cardId && config.cardKeywords[cardId]) {
+    for (const kw of config.cardKeywords[cardId]) {
+      result.push({ keyword: kw, level: "card", cardId, setCode });
+    }
+  }
+
+  return result;
 }
 
 // ── Reddit Subreddits ───────────────────────────────────────
@@ -327,19 +356,23 @@ const TCG_DIR_MAP: Record<TCG, string> = {
  * Scans research/{tcg}/ for tcgplayer-{code}.json files.
  */
 export function getAvailableSetCodes(tcg: TCG): string[] {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const fs = require("fs") as typeof import("fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const path = require("path") as typeof import("path");
   const dir = path.join(process.cwd(), "research", TCG_DIR_MAP[tcg]);
   if (!fs.existsSync(dir)) return [];
 
   const prefix = "tcgplayer-";
-  return fs.readdirSync(dir)
-    .filter((f: string) =>
-      f.startsWith(prefix) &&
-      f.endsWith(".json") &&
-      !f.includes("groups") &&
-      !f.includes("progress") &&
-      !f.includes("summary"),
+  return fs
+    .readdirSync(dir)
+    .filter(
+      (f: string) =>
+        f.startsWith(prefix) &&
+        f.endsWith(".json") &&
+        !f.includes("groups") &&
+        !f.includes("progress") &&
+        !f.includes("summary"),
     )
     .map((f: string) => f.replace(prefix, "").replace(".json", "").toUpperCase());
 }

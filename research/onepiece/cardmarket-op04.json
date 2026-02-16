@@ -4,8 +4,8 @@
   "setCode": "OP04",
   "totalPages": 5,
   "totalCards": 149,
-  "scrapedAt": "2026-02-15T14:54:22.649Z",
-  "durationMs": 38172,
+  "scrapedAt": "2026-02-16T14:37:32.508Z",
+  "durationMs": 38860,
   "cards": [
     {
       "cardId": "OP04-035",
@@ -18,7 +18,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Spiderweb-OP04-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Spiderweb-OP04-035",
+      "language": "EN"
     },
     {
       "cardId": "OP04-056",
@@ -31,7 +32,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gum-Gum-Red-Roc-OP04-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gum-Gum-Red-Roc-OP04-056",
+      "language": "EN"
     },
     {
       "cardId": "OP04-005",
@@ -44,7 +46,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kung-Fu-Jugon-OP04-005"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kung-Fu-Jugon-OP04-005",
+      "language": "EN"
     },
     {
       "cardId": "OP04-002",
@@ -57,7 +60,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Igaram-OP04-002"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Igaram-OP04-002",
+      "language": "EN"
     },
     {
       "cardId": "OP04-100",
@@ -70,7 +74,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/CaponeGangBege-OP04-100-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/CaponeGangBege-OP04-100-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-006",
@@ -83,7 +88,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Koza-OP04-006"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Koza-OP04-006",
+      "language": "EN"
     },
     {
       "cardId": "OP04-031",
@@ -96,7 +102,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-031-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-031-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-050",
@@ -109,7 +116,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hanger-OP04-050"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hanger-OP04-050",
+      "language": "EN"
     },
     {
       "cardId": "OP04-083",
@@ -122,7 +130,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-060",
@@ -135,7 +144,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-060-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-060-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-118",
@@ -148,7 +158,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-118-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-118-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-041",
@@ -161,7 +172,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Apis-OP04-041"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Apis-OP04-041",
+      "language": "EN"
     },
     {
       "cardId": "OP04-090",
@@ -174,7 +186,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-090-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-090-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-014",
@@ -187,7 +200,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-014"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-014",
+      "language": "EN"
     },
     {
       "cardId": "OP04-112",
@@ -200,7 +214,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yamato-OP04-112-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yamato-OP04-112-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-109",
@@ -213,7 +228,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tonoyasu-OP04-109"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tonoyasu-OP04-109",
+      "language": "EN"
     },
     {
       "cardId": "OP04-104",
@@ -226,7 +242,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-104-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-104-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-044",
@@ -239,7 +256,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kaido-OP04-044-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kaido-OP04-044-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-064",
@@ -252,7 +270,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ms-All-Sunday-OP04-064-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ms-All-Sunday-OP04-064-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-010",
@@ -265,7 +284,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tony-TonyChopper-OP04-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tony-TonyChopper-OP04-010",
+      "language": "EN"
     },
     {
       "cardId": "OP04-015",
@@ -278,7 +298,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Roronoa-Zoro-OP04-015"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Roronoa-Zoro-OP04-015",
+      "language": "EN"
     },
     {
       "cardId": "OP04-013",
@@ -291,7 +312,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pell-OP04-013-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pell-OP04-013-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-112",
@@ -304,7 +326,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yamato-OP04-112-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yamato-OP04-112-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-011",
@@ -317,7 +340,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nami-OP04-011"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nami-OP04-011",
+      "language": "EN"
     },
     {
       "cardId": "OP04-017",
@@ -330,7 +354,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Happiness-Punch-OP04-017"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Happiness-Punch-OP04-017",
+      "language": "EN"
     },
     {
       "cardId": "OP04-119",
@@ -338,12 +363,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732813/732813.png",
-      "priceFrom": "2,99 €",
-      "priceEur": 2.99,
+      "priceFrom": "2,50 €",
+      "priceEur": 2.5,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-008",
@@ -356,7 +382,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Chaka-OP04-008"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Chaka-OP04-008",
+      "language": "EN"
     },
     {
       "cardId": "OP04-001",
@@ -369,7 +396,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-001-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-001-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-024",
@@ -382,7 +410,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sugar-OP04-024-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sugar-OP04-024-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-039",
@@ -395,7 +424,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-039-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-039-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-004",
@@ -408,7 +438,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Karoo-OP04-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Karoo-OP04-004",
+      "language": "EN"
     },
     {
       "cardId": "OP04-016",
@@ -421,7 +452,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bad-Manners-Kick-Course-OP04-016"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bad-Manners-Kick-Course-OP04-016",
+      "language": "EN"
     },
     {
       "cardId": "OP04-030",
@@ -434,7 +466,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trebol-OP04-030-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trebol-OP04-030-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-058",
@@ -447,7 +480,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-058-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-058-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-064",
@@ -455,12 +489,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ms-All-Sunday-OP04-064-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732795/732795.png",
-      "priceFrom": "14,50 €",
-      "priceEur": 14.5,
+      "priceFrom": "13,50 €",
+      "priceEur": 13.5,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ms-All-Sunday-OP04-064-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ms-All-Sunday-OP04-064-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-092",
@@ -473,7 +508,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-092"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-092",
+      "language": "EN"
     },
     {
       "cardId": "OP04-020",
@@ -486,7 +522,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Issho-OP04-020-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Issho-OP04-020-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-019",
@@ -499,7 +536,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-019-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-019-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-095",
@@ -512,7 +550,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Barrier-OP04-095"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Barrier-OP04-095",
+      "language": "EN"
     },
     {
       "cardId": "OP04-031",
@@ -525,7 +564,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-031-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-031-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-118",
@@ -538,7 +578,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-118-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-118-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-012",
@@ -551,7 +592,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Cobra-OP04-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Cobra-OP04-012",
+      "language": "EN"
     },
     {
       "cardId": "OP04-040",
@@ -564,7 +606,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-040-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-040-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-072",
@@ -577,7 +620,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr5Gem-OP04-072-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr5Gem-OP04-072-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-066",
@@ -590,7 +634,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissValentineMikita-OP04-066"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissValentineMikita-OP04-066",
+      "language": "EN"
     },
     {
       "cardId": "OP04-003",
@@ -603,7 +648,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Usopp-OP04-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Usopp-OP04-003",
+      "language": "EN"
     },
     {
       "cardId": "OP04-081",
@@ -616,7 +662,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Cavendish-OP04-081"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Cavendish-OP04-081",
+      "language": "EN"
     },
     {
       "cardId": "OP04-051",
@@ -629,7 +676,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WhosWho-OP04-051-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WhosWho-OP04-051-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-026",
@@ -642,7 +690,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Senor-Pink-OP04-026"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Senor-Pink-OP04-026",
+      "language": "EN"
     },
     {
       "cardId": "OP04-038",
@@ -655,7 +704,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/The-Weak-Do-Not-Have-the-Right-to-Choose-How-They-Die-OP04-038"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/The-Weak-Do-Not-Have-the-Right-to-Choose-How-They-Die-OP04-038",
+      "language": "EN"
     },
     {
       "cardId": "OP04-063",
@@ -668,7 +718,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Franky-OP04-063"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Franky-OP04-063",
+      "language": "EN"
     },
     {
       "cardId": "OP04-074",
@@ -681,7 +732,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Colors-Trap-OP04-074"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Colors-Trap-OP04-074",
+      "language": "EN"
     },
     {
       "cardId": "OP04-072",
@@ -694,7 +746,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr5Gem-OP04-072-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr5Gem-OP04-072-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-089",
@@ -707,7 +760,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bartolomeo-OP04-089"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bartolomeo-OP04-089",
+      "language": "EN"
     },
     {
       "cardId": "OP04-028",
@@ -720,7 +774,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diamante-OP04-028-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diamante-OP04-028-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-018",
@@ -733,7 +788,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Enchanting-Vertigo-Dance-OP04-018"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Enchanting-Vertigo-Dance-OP04-018",
+      "language": "EN"
     },
     {
       "cardId": "OP04-022",
@@ -746,7 +802,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Eric-OP04-022"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Eric-OP04-022",
+      "language": "EN"
     },
     {
       "cardId": "OP04-117",
@@ -759,7 +816,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Heavenly-Fire-OP04-117"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Heavenly-Fire-OP04-117",
+      "language": "EN"
     },
     {
       "cardId": "OP04-099",
@@ -772,7 +830,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Olin-OP04-099"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Olin-OP04-099",
+      "language": "EN"
     },
     {
       "cardId": "OP04-105",
@@ -785,7 +844,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Amande-OP04-105"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Amande-OP04-105",
+      "language": "EN"
     },
     {
       "cardId": "OP04-023",
@@ -798,7 +858,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kuro-OP04-023"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kuro-OP04-023",
+      "language": "EN"
     },
     {
       "cardId": "OP04-007",
@@ -811,7 +872,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-007"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-007",
+      "language": "EN"
     },
     {
       "cardId": "OP04-043",
@@ -824,7 +886,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ulti-OP04-043"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ulti-OP04-043",
+      "language": "EN"
     },
     {
       "cardId": "OP04-057",
@@ -837,7 +900,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Dragon-Twister-Demolition-Breath-OP04-057"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Dragon-Twister-Demolition-Breath-OP04-057",
+      "language": "EN"
     },
     {
       "cardId": "OP04-044",
@@ -850,7 +914,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kaido-OP04-044-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kaido-OP04-044-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-083",
@@ -863,7 +928,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-045",
@@ -876,7 +942,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/King-OP04-045"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/King-OP04-045",
+      "language": "EN"
     },
     {
       "cardId": "OP04-093",
@@ -889,7 +956,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gum-Gum-King-Kong-Gun-OP04-093"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gum-Gum-King-Kong-Gun-OP04-093",
+      "language": "EN"
     },
     {
       "cardId": "OP04-103",
@@ -902,7 +970,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kouzuki-Hiyori-OP04-103"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kouzuki-Hiyori-OP04-103",
+      "language": "EN"
     },
     {
       "cardId": "OP04-027",
@@ -915,7 +984,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Daddy-Masterson-OP04-027"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Daddy-Masterson-OP04-027",
+      "language": "EN"
     },
     {
       "cardId": "OP04-076",
@@ -928,7 +998,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WeaknessIs-an-Unforgivable-Sin-OP04-076"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WeaknessIs-an-Unforgivable-Sin-OP04-076",
+      "language": "EN"
     },
     {
       "cardId": "OP04-102",
@@ -941,7 +1012,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kinemon-OP04-102"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kinemon-OP04-102",
+      "language": "EN"
     },
     {
       "cardId": "OP04-116",
@@ -954,7 +1026,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diable-Jambe-Joue-Shot-OP04-116"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diable-Jambe-Joue-Shot-OP04-116",
+      "language": "EN"
     },
     {
       "cardId": "OP04-079",
@@ -967,7 +1040,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Orlumbus-OP04-079"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Orlumbus-OP04-079",
+      "language": "EN"
     },
     {
       "cardId": "OP04-084",
@@ -980,7 +1054,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Stussy-OP04-084"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Stussy-OP04-084",
+      "language": "EN"
     },
     {
       "cardId": "OP04-100",
@@ -993,7 +1068,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/CaponeGangBege-OP04-100-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/CaponeGangBege-OP04-100-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-104",
@@ -1006,7 +1082,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-104-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sanji-OP04-104-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-075",
@@ -1019,7 +1096,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nez-Palm-Cannon-OP04-075"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nez-Palm-Cannon-OP04-075",
+      "language": "EN"
     },
     {
       "cardId": "OP04-042",
@@ -1032,7 +1110,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ipponmatsu-OP04-042"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ipponmatsu-OP04-042",
+      "language": "EN"
     },
     {
       "cardId": "OP04-051",
@@ -1045,7 +1124,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WhosWho-OP04-051-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/WhosWho-OP04-051-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-111",
@@ -1058,7 +1138,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hera-OP04-111"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hera-OP04-111",
+      "language": "EN"
     },
     {
       "cardId": "OP04-115",
@@ -1071,7 +1152,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gun-Modoki-OP04-115"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gun-Modoki-OP04-115",
+      "language": "EN"
     },
     {
       "cardId": "OP04-024",
@@ -1079,12 +1161,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sugar-OP04-024-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732775/732775.png",
-      "priceFrom": "4,00 €",
-      "priceEur": 4,
+      "priceFrom": "3,49 €",
+      "priceEur": 3.49,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sugar-OP04-024-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sugar-OP04-024-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-090",
@@ -1097,7 +1180,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-090-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MonkeyDLuffy-OP04-090-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-036",
@@ -1110,7 +1194,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Family-OP04-036"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Family-OP04-036",
+      "language": "EN"
     },
     {
       "cardId": "OP04-037",
@@ -1123,7 +1208,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Flapping-Thread-OP04-037"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Flapping-Thread-OP04-037",
+      "language": "EN"
     },
     {
       "cardId": "OP04-059",
@@ -1136,7 +1222,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Iceburg-OP04-059"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Iceburg-OP04-059",
+      "language": "EN"
     },
     {
       "cardId": "OP04-025",
@@ -1149,7 +1236,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Giolla-OP04-025"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Giolla-OP04-025",
+      "language": "EN"
     },
     {
       "cardId": "OP04-029",
@@ -1162,7 +1250,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Dellinger-OP04-029"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Dellinger-OP04-029",
+      "language": "EN"
     },
     {
       "cardId": "OP04-052",
@@ -1175,7 +1264,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Black-Maria-OP04-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Black-Maria-OP04-052",
+      "language": "EN"
     },
     {
       "cardId": "OP04-065",
@@ -1188,7 +1278,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissGoldenweekMarianne-OP04-065"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissGoldenweekMarianne-OP04-065",
+      "language": "EN"
     },
     {
       "cardId": "OP04-046",
@@ -1201,7 +1292,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-046"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-046",
+      "language": "EN"
     },
     {
       "cardId": "OP04-069",
@@ -1214,7 +1306,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr2BonKureiBentham-OP04-069"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr2BonKureiBentham-OP04-069",
+      "language": "EN"
     },
     {
       "cardId": "OP04-080",
@@ -1227,7 +1320,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gyats-OP04-080"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Gyats-OP04-080",
+      "language": "EN"
     },
     {
       "cardId": "OP04-087",
@@ -1240,7 +1334,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trafalgar-Law-OP04-087"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trafalgar-Law-OP04-087",
+      "language": "EN"
     },
     {
       "cardId": "OP04-047",
@@ -1253,7 +1348,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ice-Oni-OP04-047"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ice-Oni-OP04-047",
+      "language": "EN"
     },
     {
       "cardId": "OP04-082",
@@ -1266,7 +1362,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kyros-OP04-082-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kyros-OP04-082-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-094",
@@ -1279,7 +1376,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trueno-Bastardo-OP04-094"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trueno-Bastardo-OP04-094",
+      "language": "EN"
     },
     {
       "cardId": "OP04-030",
@@ -1292,7 +1390,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trebol-OP04-030-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trebol-OP04-030-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-098",
@@ -1305,7 +1404,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Toko-OP04-098"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Toko-OP04-098",
+      "language": "EN"
     },
     {
       "cardId": "OP04-049",
@@ -1318,7 +1418,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Jack-OP04-049"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Jack-OP04-049",
+      "language": "EN"
     },
     {
       "cardId": "OP04-070",
@@ -1331,7 +1432,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr3Galdino-OP04-070"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr3Galdino-OP04-070",
+      "language": "EN"
     },
     {
       "cardId": "OP04-073",
@@ -1344,7 +1446,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr13-MsFriday-OP04-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr13-MsFriday-OP04-073",
+      "language": "EN"
     },
     {
       "cardId": "OP04-028",
@@ -1357,7 +1460,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diamante-OP04-028-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Diamante-OP04-028-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-032",
@@ -1370,7 +1474,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Baby-5-OP04-032"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Baby-5-OP04-032",
+      "language": "EN"
     },
     {
       "cardId": "OP04-053",
@@ -1383,7 +1488,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Page-One-OP04-053"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Page-One-OP04-053",
+      "language": "EN"
     },
     {
       "cardId": "OP04-097",
@@ -1396,7 +1502,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Otama-OP04-097"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Otama-OP04-097",
+      "language": "EN"
     },
     {
       "cardId": "OP04-113",
@@ -1409,7 +1516,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rabiyan-OP04-113"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rabiyan-OP04-113",
+      "language": "EN"
     },
     {
       "cardId": "OP04-060",
@@ -1422,7 +1530,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-060-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-060-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-061",
@@ -1435,7 +1544,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tom-OP04-061"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Tom-OP04-061",
+      "language": "EN"
     },
     {
       "cardId": "OP04-034",
@@ -1448,7 +1558,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/LaoG-OP04-034"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/LaoG-OP04-034",
+      "language": "EN"
     },
     {
       "cardId": "OP04-077",
@@ -1461,7 +1572,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ideo-OP04-077"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Ideo-OP04-077",
+      "language": "EN"
     },
     {
       "cardId": "OP04-107",
@@ -1474,7 +1586,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Perospero-OP04-107"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Perospero-OP04-107",
+      "language": "EN"
     },
     {
       "cardId": "OP04-013",
@@ -1487,7 +1600,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pell-OP04-013-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pell-OP04-013-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-021",
@@ -1500,7 +1614,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Viola-OP04-021"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Viola-OP04-021",
+      "language": "EN"
     },
     {
       "cardId": "OP04-086",
@@ -1513,7 +1628,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Chinjao-OP04-086"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Chinjao-OP04-086",
+      "language": "EN"
     },
     {
       "cardId": "OP04-101",
@@ -1526,7 +1642,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Carmel-OP04-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Carmel-OP04-101",
+      "language": "EN"
     },
     {
       "cardId": "OP04-119",
@@ -1534,12 +1651,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732814/732814.png",
-      "priceFrom": "7,90 €",
-      "priceEur": 7.9,
+      "priceFrom": "7,00 €",
+      "priceEur": 7,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Rosinante-OP04-119-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-048",
@@ -1552,7 +1670,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sasaki-OP04-048"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sasaki-OP04-048",
+      "language": "EN"
     },
     {
       "cardId": "OP04-055",
@@ -1565,7 +1684,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Plague-Rounds-OP04-055"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Plague-Rounds-OP04-055",
+      "language": "EN"
     },
     {
       "cardId": "OP04-009",
@@ -1578,7 +1698,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Super-Spot-Billed-Duck-Troops-OP04-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Super-Spot-Billed-Duck-Troops-OP04-009",
+      "language": "EN"
     },
     {
       "cardId": "OP04-033",
@@ -1591,7 +1712,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Machvise-OP04-033"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Machvise-OP04-033",
+      "language": "EN"
     },
     {
       "cardId": "OP04-067",
@@ -1604,7 +1726,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissMerryChristmasDrophy-OP04-067"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/MissMerryChristmasDrophy-OP04-067",
+      "language": "EN"
     },
     {
       "cardId": "OP04-082",
@@ -1617,7 +1740,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kyros-OP04-082-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Kyros-OP04-082-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP04-054",
@@ -1630,7 +1754,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rokki-OP04-054"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rokki-OP04-054",
+      "language": "EN"
     },
     {
       "cardId": "OP04-108",
@@ -1643,7 +1768,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Moscato-OP04-108"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Moscato-OP04-108",
+      "language": "EN"
     },
     {
       "cardId": "OP04-068",
@@ -1656,7 +1782,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yokozuna-OP04-068"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Yokozuna-OP04-068",
+      "language": "EN"
     },
     {
       "cardId": "OP01-078",
@@ -1669,7 +1796,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Boa-Hancock-OP01-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Boa-Hancock-OP01-078",
+      "language": "EN"
     },
     {
       "cardId": "OP04-078",
@@ -1682,7 +1810,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Oimo-Kashii-OP04-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Oimo-Kashii-OP04-078",
+      "language": "EN"
     },
     {
       "cardId": "OP02-004",
@@ -1690,12 +1819,13 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/EdwardNewgate-OP02-004",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732764/732764.png",
-      "priceFrom": "98,99 €",
-      "priceEur": 98.99,
+      "priceFrom": "90,00 €",
+      "priceEur": 90,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/EdwardNewgate-OP02-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/EdwardNewgate-OP02-004",
+      "language": "EN"
     },
     {
       "cardId": "OP04-058",
@@ -1703,12 +1833,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-058-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP04/732791/732791.png",
-      "priceFrom": "50,00 €",
-      "priceEur": 50,
+      "priceFrom": "41,00 €",
+      "priceEur": 41,
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-058-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Crocodile-OP04-058-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-088",
@@ -1721,7 +1852,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hajrudin-OP04-088"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Hajrudin-OP04-088",
+      "language": "EN"
     },
     {
       "cardId": "OP04-114",
@@ -1734,7 +1866,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Randolph-OP04-114"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Randolph-OP04-114",
+      "language": "EN"
     },
     {
       "cardId": "OP04-001",
@@ -1747,7 +1880,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-001-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Nefeltari-Vivi-OP04-001-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-019",
@@ -1760,7 +1894,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-019-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Donquixote-Doflamingo-OP04-019-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-096",
@@ -1773,7 +1908,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Corrida-Coliseum-OP04-096"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Corrida-Coliseum-OP04-096",
+      "language": "EN"
     },
     {
       "cardId": "OP01-047",
@@ -1786,7 +1922,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trafalgar-Law-OP01-047"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Trafalgar-Law-OP01-047",
+      "language": "EN"
     },
     {
       "cardId": "OP04-071",
@@ -1799,7 +1936,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr4Babe-OP04-071"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Mr4Babe-OP04-071",
+      "language": "EN"
     },
     {
       "cardId": "OP04-106",
@@ -1812,7 +1950,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Bavarois-OP04-106"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Charlotte-Bavarois-OP04-106",
+      "language": "EN"
     },
     {
       "cardId": "OP04-062",
@@ -1825,7 +1964,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bananagator-OP04-062"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Bananagator-OP04-062",
+      "language": "EN"
     },
     {
       "cardId": "OP04-085",
@@ -1838,7 +1978,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Suleiman-OP04-085"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Suleiman-OP04-085",
+      "language": "EN"
     },
     {
       "cardId": "OP04-091",
@@ -1851,7 +1992,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Leo-OP04-091"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Leo-OP04-091",
+      "language": "EN"
     },
     {
       "cardId": "OP04-020",
@@ -1864,7 +2006,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Issho-OP04-020-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Issho-OP04-020-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-040",
@@ -1877,7 +2020,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-040-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Queen-OP04-040-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP04-039",
@@ -1890,7 +2034,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-039-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Rebecca-OP04-039-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP02-099",
@@ -1903,7 +2048,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sakazuki-OP02-099"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sakazuki-OP02-099",
+      "language": "EN"
     },
     {
       "cardId": "OP04-110",
@@ -1916,7 +2062,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pound-OP04-110"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Pound-OP04-110",
+      "language": "EN"
     },
     {
       "cardId": "OP02-085",
@@ -1929,7 +2076,8 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Magellan-OP02-085"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Magellan-OP02-085",
+      "language": "EN"
     },
     {
       "cardId": "OP04-083",
@@ -1942,8 +2090,10 @@
       "expansion": "Kingdoms of Intrigue",
       "setCode": "OP04",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Kingdoms-of-Intrigue/Sabo-OP04-083-V3",
+      "language": "EN"
     }
   ],
-  "errors": []
+  "errors": [],
+  "language": "EN"
 }

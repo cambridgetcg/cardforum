@@ -28,9 +28,7 @@ const XIMILAR_TIMEOUT_MS = 30_000; // 30 seconds — photo analysis takes time
  * Accepts 1-2 base64-encoded photos (front + optional back).
  * Returns CCS dimensions + suggested condition tier.
  */
-export async function gradeCardWithAI(
-  photos: string[],
-): Promise<AIGradingResult> {
+export async function gradeCardWithAI(photos: string[]): Promise<AIGradingResult> {
   const apiToken = process.env.XIMILAR_API_TOKEN;
 
   if (!apiToken) {

@@ -3,7 +3,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DigitalTokenStatusBadge } from "./digital-token-status-badge";
-import { CONDITION_LABELS, formatPrice, type Condition, type DigitalTokenStatus } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  formatPrice,
+  type Condition,
+  type DigitalTokenStatus,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 import { Tag, ArrowRightLeft, Package } from "lucide-react";
 
@@ -58,14 +63,14 @@ export function DigitalTokenCard({
             <Package className="h-12 w-12" />
           </div>
         )}
-        <div className="absolute right-2 top-2">
+        <div className="absolute top-2 right-2">
           <DigitalTokenStatusBadge status={status} />
         </div>
       </div>
 
       {/* Token info */}
       <div className="flex flex-col gap-1.5 p-3">
-        <h3 className="text-sm font-semibold leading-tight text-gray-900 line-clamp-2">
+        <h3 className="line-clamp-2 text-sm leading-tight font-semibold text-gray-900">
           {card.name}
         </h3>
         <p className="text-xs text-gray-500">

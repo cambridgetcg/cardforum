@@ -7,10 +7,7 @@ import { getTrustProfile } from "@/server/services/trust-profile.service";
  * Public endpoint — returns the trust profile for a user.
  * Shows composite score (0–100) plus per-dimension breakdown.
  */
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: Promise<{ userId: string }> },
-) {
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ userId: string }> }) {
   const { userId } = await params;
 
   if (!userId) {

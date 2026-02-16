@@ -59,22 +59,14 @@ DialogHeader.displayName = "DialogHeader";
 
 const DialogTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
   ({ className, ...props }, ref) => (
-    <h2
-      ref={ref}
-      className={cn("text-lg font-semibold text-gray-900", className)}
-      {...props}
-    />
+    <h2 ref={ref} className={cn("text-lg font-semibold text-gray-900", className)} {...props} />
   ),
 );
 DialogTitle.displayName = "DialogTitle";
 
 const DialogFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn("mt-6 flex justify-end gap-2", className)}
-      {...props}
-    />
+    <div ref={ref} className={cn("mt-6 flex justify-end gap-2", className)} {...props} />
   ),
 );
 DialogFooter.displayName = "DialogFooter";

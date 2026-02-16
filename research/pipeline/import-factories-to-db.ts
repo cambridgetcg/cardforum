@@ -77,7 +77,13 @@ async function importSeedFactories(
   db: PrismaClient,
   dryRun: boolean,
 ): Promise<{ stats: ImportStats; factoryIdMap: Map<string, string> }> {
-  const stats: ImportStats = { factoriesCreated: 0, factoriesUpdated: 0, runsCreated: 0, runsUpdated: 0, errors: 0 };
+  const stats: ImportStats = {
+    factoriesCreated: 0,
+    factoriesUpdated: 0,
+    runsCreated: 0,
+    runsUpdated: 0,
+    errors: 0,
+  };
   const factoryIdMap = new Map<string, string>(); // code → DB id
 
   console.log(`\n── Importing ${FACTORY_SEEDS.length} seed factories ──\n`);
@@ -152,20 +158,30 @@ async function importSeedRuns(
   factoryIdMap: Map<string, string>,
   dryRun: boolean,
 ): Promise<ImportStats> {
-  const stats: ImportStats = { factoriesCreated: 0, factoriesUpdated: 0, runsCreated: 0, runsUpdated: 0, errors: 0 };
+  const stats: ImportStats = {
+    factoriesCreated: 0,
+    factoriesUpdated: 0,
+    runsCreated: 0,
+    runsUpdated: 0,
+    errors: 0,
+  };
 
   console.log(`\n── Importing ${PRODUCTION_RUN_SEEDS.length} seed production runs ──\n`);
 
   for (const seed of PRODUCTION_RUN_SEEDS) {
     const factoryId = factoryIdMap.get(seed.factoryCode);
     if (!factoryId) {
-      console.error(`  ERROR: Factory code "${seed.factoryCode}" not found for ${seed.tcg} ${seed.setCode} ${seed.language}`);
+      console.error(
+        `  ERROR: Factory code "${seed.factoryCode}" not found for ${seed.tcg} ${seed.setCode} ${seed.language}`,
+      );
       stats.errors++;
       continue;
     }
 
     if (dryRun) {
-      console.log(`  [DRY RUN] Would upsert run: ${seed.tcg} ${seed.setCode} ${seed.language} → ${seed.factoryCode}`);
+      console.log(
+        `  [DRY RUN] Would upsert run: ${seed.tcg} ${seed.setCode} ${seed.language} → ${seed.factoryCode}`,
+      );
       stats.runsCreated++;
       continue;
     }
@@ -231,7 +247,9 @@ async function importSeedRuns(
       }
     } catch (err) {
       stats.errors++;
-      console.error(`  ERROR: ${seed.tcg} ${seed.setCode} ${seed.language}: ${err instanceof Error ? err.message : String(err)}`);
+      console.error(
+        `  ERROR: ${seed.tcg} ${seed.setCode} ${seed.language}: ${err instanceof Error ? err.message : String(err)}`,
+      );
     }
   }
 
@@ -244,7 +262,8 @@ async function importSeedRuns(
 function findScrapedFiles(): string[] {
   if (!fs.existsSync(FACTORIES_DIR)) return [];
 
-  return fs.readdirSync(FACTORIES_DIR)
+  return fs
+    .readdirSync(FACTORIES_DIR)
     .filter((f) => f.endsWith(".json"))
     .map((f) => path.join(FACTORIES_DIR, f))
     .sort();
@@ -299,11 +318,14 @@ async function resolveFactory(
 /**
  * Import scraped JSON files into the database.
  */
-async function importScrapedFiles(
-  db: PrismaClient,
-  dryRun: boolean,
-): Promise<ImportStats> {
-  const stats: ImportStats = { factoriesCreated: 0, factoriesUpdated: 0, runsCreated: 0, runsUpdated: 0, errors: 0 };
+async function importScrapedFiles(db: PrismaClient, dryRun: boolean): Promise<ImportStats> {
+  const stats: ImportStats = {
+    factoriesCreated: 0,
+    factoriesUpdated: 0,
+    runsCreated: 0,
+    runsUpdated: 0,
+    errors: 0,
+  };
 
   const files = findScrapedFiles();
   if (files.length === 0) {
@@ -327,7 +349,9 @@ async function importScrapedFiles(
       const raw = fs.readFileSync(filePath, "utf-8");
       data = JSON.parse(raw);
     } catch (err) {
-      console.error(`    ERROR: Failed to parse ${fileName}: ${err instanceof Error ? err.message : String(err)}`);
+      console.error(
+        `    ERROR: Failed to parse ${fileName}: ${err instanceof Error ? err.message : String(err)}`,
+      );
       stats.errors++;
       continue;
     }
@@ -358,7 +382,9 @@ async function importScrapedFiles(
       const period = run.printingPeriod ?? null;
 
       if (dryRun) {
-        console.log(`    [DRY RUN] Would upsert: ${tcg} ${run.setCode} ${run.language} → ${run.factoryName ?? "unknown"}`);
+        console.log(
+          `    [DRY RUN] Would upsert: ${tcg} ${run.setCode} ${run.language} → ${run.factoryName ?? "unknown"}`,
+        );
         stats.runsCreated++;
         continue;
       }
@@ -415,7 +441,9 @@ async function importScrapedFiles(
         }
       } catch (err) {
         stats.errors++;
-        console.error(`    ERROR: ${tcg} ${run.setCode} ${run.language}: ${err instanceof Error ? err.message : String(err)}`);
+        console.error(
+          `    ERROR: ${tcg} ${run.setCode} ${run.language}: ${err instanceof Error ? err.message : String(err)}`,
+        );
       }
     }
   }
@@ -435,7 +463,10 @@ async function main() {
   for (const arg of args) {
     if (arg === "--seed") importSeed = true;
     if (arg === "--scraped") importScraped = true;
-    if (arg === "--all") { importSeed = true; importScraped = true; }
+    if (arg === "--all") {
+      importSeed = true;
+      importScraped = true;
+    }
     if (arg === "--dry-run") dryRun = true;
   }
 
@@ -463,7 +494,13 @@ async function main() {
     db = {} as PrismaClient;
   }
 
-  const totals: ImportStats = { factoriesCreated: 0, factoriesUpdated: 0, runsCreated: 0, runsUpdated: 0, errors: 0 };
+  const totals: ImportStats = {
+    factoriesCreated: 0,
+    factoriesUpdated: 0,
+    runsCreated: 0,
+    runsUpdated: 0,
+    errors: 0,
+  };
 
   // 1. Seed data
   if (importSeed) {

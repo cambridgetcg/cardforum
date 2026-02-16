@@ -31,9 +31,15 @@ export async function POST(req: NextRequest, ctx: RouteContext) {
   if (!authenticator) {
     // Check admin (simple email-based check matching rbac.ts pattern)
     const user = await db.user.findUnique({ where: { id: session.user.id } });
-    const adminEmails = (process.env.ADMIN_EMAILS ?? "").split(",").map((e) => e.trim()).filter(Boolean);
+    const adminEmails = (process.env.ADMIN_EMAILS ?? "")
+      .split(",")
+      .map((e) => e.trim())
+      .filter(Boolean);
     if (!user?.email || !adminEmails.includes(user.email)) {
-      return NextResponse.json({ error: "Only authenticators and admins can endorse posts" }, { status: 403 });
+      return NextResponse.json(
+        { error: "Only authenticators and admins can endorse posts" },
+        { status: 403 },
+      );
     }
   }
 

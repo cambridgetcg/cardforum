@@ -43,10 +43,7 @@ export async function PATCH(req: NextRequest) {
   const body = await req.json();
   const parsed = updateProfileSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   // Only include fields that were actually provided

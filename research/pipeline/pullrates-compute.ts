@@ -43,13 +43,23 @@ const TCG_DIR_MAP: Record<TCG, string> = {
 };
 
 function loadDistribution(tcg: TCG, setCode: string): RarityDistribution | null {
-  const filePath = path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `rarity-distribution-${setCode}.json`);
+  const filePath = path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `rarity-distribution-${setCode}.json`,
+  );
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
 function getOutputPath(tcg: TCG, setCode: string, language: BoxLanguage): string {
-  return path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `pullrates-${setCode}-${language}.json`);
+  return path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `pullrates-${setCode}-${language}.json`,
+  );
 }
 
 // ── Core Math ─────────────────────────────────────────────────
@@ -92,10 +102,7 @@ function expectedPerPackForVariant(
 /**
  * Compute weighted average expected per pack across all variants.
  */
-function expectedPerPack(
-  packConfig: PackConfig,
-  rarities: string[],
-): Record<string, number> {
+function expectedPerPack(packConfig: PackConfig, rarities: string[]): Record<string, number> {
   const totalWeight = packConfig.variants.reduce((a, v) => a + v.weight, 0);
   if (totalWeight === 0) return Object.fromEntries(rarities.map((r) => [r, 0]));
 
@@ -218,7 +225,7 @@ function computeForSet(
   for (const r of rates) {
     console.log(
       `    ${r.rarity.padEnd(10)} per-pack: ${r.perPack.toFixed(3)}  per-box: ${r.perBox.toFixed(2)}  ` +
-      `unique: ${r.uniqueCards}  per-specific: ${r.perSpecificCardPerBox.toFixed(4)}`,
+        `unique: ${r.uniqueCards}  per-specific: ${r.perSpecificCardPerBox.toFixed(4)}`,
     );
   }
 
@@ -243,15 +250,13 @@ async function main() {
   const tcg = (args.find((a, i) => args[i - 1] === "--tcg") ?? "onepiece") as TCG;
   const setArg = args.find((a, i) => args[i - 1] === "--set");
   const languageArg = (args.find((a, i) => args[i - 1] === "--language") ?? "EN") as BoxLanguage;
-  const productTypeArg = args.find((a, i) => args[i - 1] === "--product-type") as BoosterProductType | undefined;
+  const productTypeArg = args.find((a, i) => args[i - 1] === "--product-type") as
+    | BoosterProductType
+    | undefined;
   const isAll = args.includes("--all");
   const isDryRun = args.includes("--dry-run");
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all");
@@ -280,7 +285,9 @@ async function main() {
       fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
       console.log(`  → Saved to ${path.relative(process.cwd(), outPath)}`);
     } else {
-      console.log(`  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode, languageArg))}`);
+      console.log(
+        `  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode, languageArg))}`,
+      );
     }
 
     successCount++;

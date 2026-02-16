@@ -4,7 +4,12 @@ import { useEffect, useState, useCallback } from "react";
 import { DigitiserStats } from "@/components/digitisation/digitiser-stats";
 import { DigitalTokenCard } from "@/components/digitisation/digital-token-card";
 import { Badge } from "@/components/ui/badge";
-import { CONDITION_LABELS, formatPrice, type Condition, type DigitalTokenStatus } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  formatPrice,
+  type Condition,
+  type DigitalTokenStatus,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 
 interface Stats {
@@ -71,9 +76,7 @@ export default function DigitiserPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Digitiser Dashboard</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Track your digitised tokens and royalty earnings
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Track your digitised tokens and royalty earnings</p>
 
       {/* Stats */}
       {stats && (
@@ -98,10 +101,7 @@ export default function DigitiserPage() {
         ) : (
           <div className="space-y-4">
             {tokens.map((token) => (
-              <div
-                key={token.id}
-                className="rounded-xl border border-gray-200 bg-white p-4"
-              >
+              <div key={token.id} className="rounded-xl border border-gray-200 bg-white p-4">
                 <div className="flex items-start gap-4">
                   {/* Card thumbnail */}
                   <div className="h-20 w-14 shrink-0 overflow-hidden rounded-lg bg-gray-100">
@@ -125,7 +125,13 @@ export default function DigitiserPage() {
                       <Badge variant="default">
                         {token.condition} — {CONDITION_LABELS[token.condition]}
                       </Badge>
-                      <Badge variant={token.status === "ACTIVE" || token.status === "LISTED" ? "success" : "default"}>
+                      <Badge
+                        variant={
+                          token.status === "ACTIVE" || token.status === "LISTED"
+                            ? "success"
+                            : "default"
+                        }
+                      >
                         {token.status}
                       </Badge>
                     </div>
@@ -149,9 +155,7 @@ export default function DigitiserPage() {
                             key={t.id}
                             className="flex items-center justify-between text-xs text-gray-500"
                           >
-                            <span>
-                              Sold for {formatPrice(t.priceCents)}
-                            </span>
+                            <span>Sold for {formatPrice(t.priceCents)}</span>
                             <span className="font-medium text-green-600">
                               +{formatPrice(t.royaltyCents)} royalty
                             </span>

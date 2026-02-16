@@ -3,10 +3,7 @@ import { auth } from "@/lib/auth";
 import { requestAuthentication } from "@/server/services/trade.service";
 
 // POST /api/trades/:tradeId/request-auth — Upgrade DIRECT trade to AUTHENTICATED
-export async function POST(
-  _req: Request,
-  { params }: { params: Promise<{ tradeId: string }> }
-) {
+export async function POST(_req: Request, { params }: { params: Promise<{ tradeId: string }> }) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

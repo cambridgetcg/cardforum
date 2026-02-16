@@ -73,7 +73,10 @@ export default function TradesPage() {
     }
   }
 
-  async function handleTradeAction(tradeId: string, action: "accept" | "reject" | "cancel" | "request-auth") {
+  async function handleTradeAction(
+    tradeId: string,
+    action: "accept" | "reject" | "cancel" | "request-auth",
+  ) {
     if (action === "request-auth") {
       await fetch(`/api/trades/${tradeId}/request-auth`, { method: "POST" });
     } else {
@@ -86,14 +89,15 @@ export default function TradesPage() {
     fetchTrades();
   }
 
-  const filteredTrades = modeFilter === "ALL"
-    ? trades
-    : trades.filter((t) => (t.mode ?? "AUTHENTICATED") === modeFilter);
+  const filteredTrades =
+    modeFilter === "ALL"
+      ? trades
+      : trades.filter((t) => (t.mode ?? "AUTHENTICATED") === modeFilter);
   const activeTrades = filteredTrades.filter(
-    (t) => !["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status)
+    (t) => !["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status),
   );
   const completedTrades = filteredTrades.filter((t) =>
-    ["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status)
+    ["COMPLETED", "REJECTED", "CANCELLED"].includes(t.status),
   );
 
   if (loading) {
@@ -109,14 +113,10 @@ export default function TradesPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Trades</h1>
-          <p className="mt-1 text-sm text-gray-600">
-            View and manage your active trades
-          </p>
+          <p className="mt-1 text-sm text-gray-600">View and manage your active trades</p>
         </div>
         <div className="flex items-center gap-3">
-          {matchingStatus && (
-            <span className="text-sm text-gray-500">{matchingStatus}</span>
-          )}
+          {matchingStatus && <span className="text-sm text-gray-500">{matchingStatus}</span>}
           <Button variant="outline" onClick={handleRunMatching}>
             Find Matches
           </Button>
@@ -137,15 +137,13 @@ export default function TradesPage() {
 
       {/* Active Trades */}
       <div className="mt-8">
-        <h2 className="mb-4 text-lg font-semibold text-gray-900">
-          Active ({activeTrades.length})
-        </h2>
+        <h2 className="mb-4 text-lg font-semibold text-gray-900">Active ({activeTrades.length})</h2>
         {activeTrades.length === 0 ? (
           <Card>
             <CardContent className="py-12 text-center">
               <p className="text-gray-500">
-                No active trades. When the matching engine finds a bridge for your
-                listings, trade proposals will appear here.
+                No active trades. When the matching engine finds a bridge for your listings, trade
+                proposals will appear here.
               </p>
             </CardContent>
           </Card>

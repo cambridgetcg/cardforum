@@ -138,7 +138,9 @@ async function scrapePokeguardian(client: BrightDataClient): Promise<ScrapedProd
 
   // Look for articles mentioning "Cartamundi", "Millennium", "print", "factory"
   const html = typeof result.data === "string" ? result.data : JSON.stringify(result.data);
-  const printerMentions = html.match(/(?:Cartamundi|Millennium Print|print(?:ing|ed)\s+(?:by|at|in))[^<]{0,200}/gi);
+  const printerMentions = html.match(
+    /(?:Cartamundi|Millennium Print|print(?:ing|ed)\s+(?:by|at|in))[^<]{0,200}/gi,
+  );
 
   if (printerMentions) {
     for (const mention of printerMentions.slice(0, 10)) {

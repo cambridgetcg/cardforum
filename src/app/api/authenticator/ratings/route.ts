@@ -13,18 +13,14 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = submitRatingSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {
     const rating = await submitRating(session.user.id, parsed.data);
     return NextResponse.json({ rating }, { status: 201 });
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to submit rating";
+    const message = err instanceof Error ? err.message : "Failed to submit rating";
     const status = message.includes("Not authorized") ? 403 : 400;
     return NextResponse.json({ error: message }, { status });
   }

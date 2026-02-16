@@ -1,11 +1,7 @@
 import { db } from "@/lib/db";
 import { getConfigs } from "@/server/services/config.service";
 import { transferToken } from "./digital-token.service";
-import type {
-  DigitalTokenListing,
-  DigitalTrade,
-  Condition,
-} from "@/generated/prisma/client";
+import type { DigitalTokenListing, DigitalTrade, Condition } from "@/generated/prisma/client";
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -68,10 +64,7 @@ export async function createListing(
   });
 }
 
-export async function delistToken(
-  listingId: string,
-  userId: string,
-): Promise<void> {
+export async function delistToken(listingId: string, userId: string): Promise<void> {
   await db.$transaction(async (tx) => {
     const listing = await tx.digitalTokenListing.findUniqueOrThrow({
       where: { id: listingId },
@@ -99,79 +92,77 @@ export async function delistToken(
 
 // ─── Buy Flow ───────────────────────────────────────────
 
-export async function buyToken(
-  listingId: string,
-  buyerId: string,
-): Promise<DigitalTrade> {
-  return db.$transaction(async (tx) => {
-    const listing = await tx.digitalTokenListing.findUniqueOrThrow({
-      where: { id: listingId },
-      include: { token: true },
-    });
+export async function buyToken(listingId: string, buyerId: string): Promise<DigitalTrade> {
+  return db
+    .$transaction(
+      async (tx) => {
+        const listing = await tx.digitalTokenListing.findUniqueOrThrow({
+          where: { id: listingId },
+          include: { token: true },
+        });
 
-    if (!listing.isActive) {
-      throw new Error("Listing is no longer active");
-    }
-    if (listing.sellerId === buyerId) {
-      throw new Error("Cannot buy your own listing");
-    }
+        if (!listing.isActive) {
+          throw new Error("Listing is no longer active");
+        }
+        if (listing.sellerId === buyerId) {
+          throw new Error("Cannot buy your own listing");
+        }
 
-    const token = listing.token;
-    if (token.status !== "LISTED") {
-      throw new Error(`Token is not available (status: ${token.status})`);
-    }
+        const token = listing.token;
+        if (token.status !== "LISTED") {
+          throw new Error(`Token is not available (status: ${token.status})`);
+        }
 
-    // Calculate fees
-    const {
-      "fees.digital_platform_rate": digitalPlatformRate,
-      "fees.digitiser_royalty_rate": digitiserRoyaltyRate,
-    } = await getConfigs(["fees.digital_platform_rate", "fees.digitiser_royalty_rate"]);
-    const priceCents = listing.askPrice;
-    const platformFeeCents = Math.floor(priceCents * digitalPlatformRate);
-    const royaltyCents = token.digitiserId === listing.sellerId
-      ? 0
-      : Math.floor(priceCents * digitiserRoyaltyRate);
-    const sellerNetCents = priceCents - platformFeeCents - royaltyCents;
+        // Calculate fees
+        const {
+          "fees.digital_platform_rate": digitalPlatformRate,
+          "fees.digitiser_royalty_rate": digitiserRoyaltyRate,
+        } = await getConfigs(["fees.digital_platform_rate", "fees.digitiser_royalty_rate"]);
+        const priceCents = listing.askPrice;
+        const platformFeeCents = Math.floor(priceCents * digitalPlatformRate);
+        const royaltyCents =
+          token.digitiserId === listing.sellerId
+            ? 0
+            : Math.floor(priceCents * digitiserRoyaltyRate);
+        const sellerNetCents = priceCents - platformFeeCents - royaltyCents;
 
-    // Lock the token
-    await tx.digitalToken.update({
-      where: { id: token.id },
-      data: { status: "TRADE_LOCKED" },
-    });
+        // Lock the token
+        await tx.digitalToken.update({
+          where: { id: token.id },
+          data: { status: "TRADE_LOCKED" },
+        });
 
-    // Deactivate listing
-    await tx.digitalTokenListing.update({
-      where: { id: listingId },
-      data: { isActive: false },
-    });
+        // Deactivate listing
+        await tx.digitalTokenListing.update({
+          where: { id: listingId },
+          data: { isActive: false },
+        });
 
-    // Create the trade record
-    const trade = await tx.digitalTrade.create({
-      data: {
-        listingId,
-        buyerId,
-        sellerId: listing.sellerId,
-        tokenId: token.id,
-        priceCents,
-        platformFeeCents,
-        royaltyCents,
-        sellerNetCents,
-        completedAt: new Date(),
+        // Create the trade record
+        const trade = await tx.digitalTrade.create({
+          data: {
+            listingId,
+            buyerId,
+            sellerId: listing.sellerId,
+            tokenId: token.id,
+            priceCents,
+            platformFeeCents,
+            royaltyCents,
+            sellerNetCents,
+            completedAt: new Date(),
+          },
+        });
+
+        return trade;
       },
+      { timeout: 10000 },
+    )
+    .then(async (trade) => {
+      // Execute the transfer outside the trade-creation transaction
+      // to avoid long-running transactions with multiple wallet updates
+      await transferToken(trade.tokenId, trade.sellerId, trade.buyerId, trade.priceCents);
+      return trade;
     });
-
-    return trade;
-  }, { timeout: 10000 }).then(async (trade) => {
-    // Execute the transfer outside the trade-creation transaction
-    // to avoid long-running transactions with multiple wallet updates
-    await transferToken(
-      trade.tokenId,
-      trade.sellerId,
-      trade.buyerId,
-      trade.priceCents,
-    );
-    return trade;
-  });
 }
 
 // ─── Queries ────────────────────────────────────────────

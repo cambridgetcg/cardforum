@@ -92,9 +92,9 @@ describe("Authenticator Registration", () => {
 
       await submitApplication(user.id, validApplicationInput);
 
-      await expect(
-        submitApplication(user.id, validApplicationInput)
-      ).rejects.toThrow("You already have an application in status: SUBMITTED");
+      await expect(submitApplication(user.id, validApplicationInput)).rejects.toThrow(
+        "You already have an application in status: SUBMITTED",
+      );
     });
 
     it("rejects duplicate if already ACTIVE", async () => {
@@ -111,9 +111,9 @@ describe("Authenticator Registration", () => {
         },
       });
 
-      await expect(
-        submitApplication(user.id, validApplicationInput)
-      ).rejects.toThrow("You already have an application in status: ACTIVE");
+      await expect(submitApplication(user.id, validApplicationInput)).rejects.toThrow(
+        "You already have an application in status: ACTIVE",
+      );
     });
 
     it("allows reapply from REVOKED after 30 days", async () => {
@@ -147,9 +147,9 @@ describe("Authenticator Registration", () => {
         },
       });
 
-      await expect(
-        submitApplication(user.id, validApplicationInput)
-      ).rejects.toThrow("Cannot reapply within 30 days of revocation");
+      await expect(submitApplication(user.id, validApplicationInput)).rejects.toThrow(
+        "Cannot reapply within 30 days of revocation",
+      );
     });
   });
 
@@ -244,7 +244,7 @@ describe("Authenticator Registration", () => {
       const auth = await submitApplication(user.id, validApplicationInput);
 
       await expect(activateAuthenticator(auth.id)).rejects.toThrow(
-        "Authenticator must be APPROVED or ONBOARDING to activate"
+        "Authenticator must be APPROVED or ONBOARDING to activate",
       );
     });
   });

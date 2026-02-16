@@ -1,10 +1,6 @@
 import { db } from "@/lib/db";
 import { getConfigs } from "@/server/services/config.service";
-import type {
-  DigitalToken,
-  DigitalTokenTransfer,
-  Condition,
-} from "@/generated/prisma/client";
+import type { DigitalToken, DigitalTokenTransfer, Condition } from "@/generated/prisma/client";
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -91,9 +87,8 @@ export async function transferToken(
     } = await getConfigs(["fees.digital_platform_rate", "fees.digitiser_royalty_rate"]);
     const platformFeeCents = Math.floor(priceCents * digitalPlatformRate);
     // Self-trade guard: no royalty if digitiser is the seller
-    const royaltyCents = token.digitiserId === fromUserId
-      ? 0
-      : Math.floor(priceCents * digitiserRoyaltyRate);
+    const royaltyCents =
+      token.digitiserId === fromUserId ? 0 : Math.floor(priceCents * digitiserRoyaltyRate);
     const sellerNetCents = priceCents - platformFeeCents - royaltyCents;
 
     // Debit buyer
@@ -196,9 +191,7 @@ export async function burnToken(tokenId: string): Promise<void> {
 
 // ─── Vault Stock Queries ────────────────────────────────
 
-export async function getVaultStock(
-  authenticatorId: string,
-): Promise<VaultStockSummary[]> {
+export async function getVaultStock(authenticatorId: string): Promise<VaultStockSummary[]> {
   const items = await db.authenticatorInventory.findMany({
     where: { authenticatorId, isAvailable: true, quantity: { gt: 0 } },
     select: { cardId: true, condition: true, language: true, quantity: true },
@@ -214,7 +207,12 @@ export async function getGlobalStock(
     where: { cardId, condition, isAvailable: true, quantity: { gt: 0 } },
     include: {
       authenticator: {
-        select: { id: true, businessName: true, region: true, regionRef: { select: { country: true } } },
+        select: {
+          id: true,
+          businessName: true,
+          region: true,
+          regionRef: { select: { country: true } },
+        },
       },
     },
   });

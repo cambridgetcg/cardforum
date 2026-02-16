@@ -63,22 +63,26 @@ interface ScryfallResponse {
 // Known MTG printer associations
 const MTG_PRINTERS: Record<string, { name: string; country: string; languages: string[] }> = {
   "cartamundi-us": { name: "Cartamundi Dallas", country: "US", languages: ["en"] },
-  "cartamundi-be": { name: "Cartamundi Belgium", country: "BE", languages: ["en", "de", "fr", "it", "es", "pt"] },
+  "cartamundi-be": {
+    name: "Cartamundi Belgium",
+    country: "BE",
+    languages: ["en", "de", "fr", "it", "es", "pt"],
+  },
   "cartamundi-jp": { name: "Cartamundi Japan", country: "JP", languages: ["ja"] },
 };
 
 // MTG languages and their likely printer origins
 const LANG_TO_PRINTER: Record<string, string> = {
-  en: "cartamundi-us",   // US English (also cartamundi-be for EU)
-  ja: "cartamundi-jp",   // Japanese
-  de: "cartamundi-be",   // European languages
+  en: "cartamundi-us", // US English (also cartamundi-be for EU)
+  ja: "cartamundi-jp", // Japanese
+  de: "cartamundi-be", // European languages
   fr: "cartamundi-be",
   it: "cartamundi-be",
   es: "cartamundi-be",
   pt: "cartamundi-be",
-  ko: "cartamundi-jp",   // Korean — likely same facility
-  zhs: "cartamundi-jp",  // Simplified Chinese
-  zht: "cartamundi-jp",  // Traditional Chinese
+  ko: "cartamundi-jp", // Korean — likely same facility
+  zhs: "cartamundi-jp", // Simplified Chinese
+  zht: "cartamundi-jp", // Traditional Chinese
 };
 
 // Standard set types we care about
@@ -141,7 +145,9 @@ function parseWikiPrintingPage(html: string): Map<string, string[]> {
  */
 function generateRunsForSet(set: ScryfallSet): ScrapedProductionRun[] {
   const runs: ScrapedProductionRun[] = [];
-  const period = set.released_at ? `${set.released_at.slice(0, 4)} Q${Math.ceil(parseInt(set.released_at.slice(5, 7)) / 3)}` : undefined;
+  const period = set.released_at
+    ? `${set.released_at.slice(0, 4)} Q${Math.ceil(parseInt(set.released_at.slice(5, 7)) / 3)}`
+    : undefined;
 
   // MTG is printed in 11 languages — map each to likely printer
   const mtgLanguages = ["en", "ja", "de", "fr", "it", "es", "pt", "ko", "zhs", "zht"];

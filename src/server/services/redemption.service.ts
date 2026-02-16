@@ -8,7 +8,7 @@ import type { Redemption, RedemptionStatus } from "@/generated/prisma/client";
 
 function assertTransition(from: RedemptionStatus, to: RedemptionStatus) {
   const allowed = REDEMPTION_TRANSITIONS[from as keyof typeof REDEMPTION_TRANSITIONS] ?? [];
-  if (!allowed.includes(to as typeof allowed[number])) {
+  if (!allowed.includes(to as (typeof allowed)[number])) {
     throw new Error(`Invalid redemption transition: ${from} → ${to}`);
   }
 }
@@ -28,9 +28,7 @@ interface RedemptionInput {
   preferredVaultId?: string;
 }
 
-export async function requestRedemption(
-  input: RedemptionInput,
-): Promise<Redemption> {
+export async function requestRedemption(input: RedemptionInput): Promise<Redemption> {
   return db.$transaction(async (tx) => {
     const token = await tx.digitalToken.findUniqueOrThrow({
       where: { id: input.tokenId },
@@ -73,9 +71,7 @@ export async function requestRedemption(
     // Score vaults: same zone > rating > lower load
     let selectedItem = inventoryItems[0];
     if (input.preferredVaultId) {
-      const preferred = inventoryItems.find(
-        (i) => i.authenticator.id === input.preferredVaultId,
-      );
+      const preferred = inventoryItems.find((i) => i.authenticator.id === input.preferredVaultId);
       if (preferred) selectedItem = preferred;
     } else {
       const scored = inventoryItems.map((item) => {
@@ -84,9 +80,7 @@ export async function requestRedemption(
         return {
           item,
           score:
-            (sameZone ? 1000 : 0) +
-            item.authenticator.rating * 10 -
-            item.authenticator.currentLoad,
+            (sameZone ? 1000 : 0) + item.authenticator.rating * 10 - item.authenticator.currentLoad,
         };
       });
       scored.sort((a, b) => b.score - a.score);
@@ -98,7 +92,10 @@ export async function requestRedemption(
     const {
       "digital.redemption_base_fee_cents": baseFee,
       "digital.cross_zone_surcharge_cents": surchargeConfig,
-    } = await getConfigs(["digital.redemption_base_fee_cents", "digital.cross_zone_surcharge_cents"]);
+    } = await getConfigs([
+      "digital.redemption_base_fee_cents",
+      "digital.cross_zone_surcharge_cents",
+    ]);
     const surcharge = crossZone ? surchargeConfig : 0;
     const totalFee = baseFee + surcharge;
 
@@ -159,9 +156,7 @@ export async function requestRedemption(
 
 // ─── State Transitions ──────────────────────────────────
 
-export async function reserveStock(
-  redemptionId: string,
-): Promise<Redemption> {
+export async function reserveStock(redemptionId: string): Promise<Redemption> {
   const redemption = await getRedemptionOrThrow(redemptionId);
   assertTransition(redemption.status, "STOCK_RESERVED");
 
@@ -227,9 +222,7 @@ export async function confirmDelivery(
   });
 }
 
-export async function completeRedemption(
-  redemptionId: string,
-): Promise<Redemption> {
+export async function completeRedemption(redemptionId: string): Promise<Redemption> {
   const redemption = await getRedemptionOrThrow(redemptionId);
   assertTransition(redemption.status, "COMPLETED");
 
@@ -272,10 +265,7 @@ export async function completeRedemption(
   });
 }
 
-export async function cancelRedemption(
-  redemptionId: string,
-  userId: string,
-): Promise<Redemption> {
+export async function cancelRedemption(redemptionId: string, userId: string): Promise<Redemption> {
   const redemption = await getRedemptionOrThrow(redemptionId);
   assertTransition(redemption.status, "CANCELLED");
 
@@ -284,10 +274,12 @@ export async function cancelRedemption(
     const inventory = await tx.authenticatorInventory.findFirst({
       where: {
         authenticatorId: redemption.vaultAuthenticatorId,
-        cardId: (await tx.digitalToken.findUniqueOrThrow({
-          where: { id: redemption.tokenId },
-          select: { cardId: true, condition: true, language: true },
-        })).cardId,
+        cardId: (
+          await tx.digitalToken.findUniqueOrThrow({
+            where: { id: redemption.tokenId },
+            select: { cardId: true, condition: true, language: true },
+          })
+        ).cardId,
       },
     });
 
@@ -332,10 +324,7 @@ export async function cancelRedemption(
   });
 }
 
-export async function failRedemption(
-  redemptionId: string,
-  reason: string,
-): Promise<Redemption> {
+export async function failRedemption(redemptionId: string, reason: string): Promise<Redemption> {
   const redemption = await getRedemptionOrThrow(redemptionId);
   assertTransition(redemption.status, "FAILED");
 
@@ -407,9 +396,7 @@ export async function getUserRedemptions(userId: string): Promise<Redemption[]> 
   });
 }
 
-export async function getRedemption(
-  redemptionId: string,
-): Promise<Redemption | null> {
+export async function getRedemption(redemptionId: string): Promise<Redemption | null> {
   return db.redemption.findUnique({
     where: { id: redemptionId },
     include: {
@@ -420,9 +407,7 @@ export async function getRedemption(
   });
 }
 
-export async function getVaultRedemptions(
-  authenticatorId: string,
-): Promise<Redemption[]> {
+export async function getVaultRedemptions(authenticatorId: string): Promise<Redemption[]> {
   return db.redemption.findMany({
     where: { vaultAuthenticatorId: authenticatorId },
     orderBy: { createdAt: "desc" },

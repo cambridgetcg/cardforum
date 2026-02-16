@@ -52,9 +52,7 @@ export interface SellerComparisonStats {
  * Silently returns null if AI CCS data is missing (listing was not
  * AI-graded) — this is expected for many listings.
  */
-export async function createConditionComparison(
-  tradeLegId: string,
-): Promise<string | null> {
+export async function createConditionComparison(tradeLegId: string): Promise<string | null> {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: {
@@ -186,9 +184,7 @@ export async function getAuthenticatorComparisonStats(
 /**
  * Aggregate comparison stats for a seller.
  */
-export async function getSellerComparisonStats(
-  sellerId: string,
-): Promise<SellerComparisonStats> {
+export async function getSellerComparisonStats(sellerId: string): Promise<SellerComparisonStats> {
   const comparisons = await db.conditionComparison.findMany({
     where: { sellerId },
     select: { agreed: true, deltaComposite: true },

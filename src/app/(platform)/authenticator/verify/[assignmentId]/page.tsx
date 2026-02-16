@@ -262,12 +262,20 @@ export default function VerificationPage() {
               <span>Value: {formatPrice(listing?.askPrice ?? graded?.askPrice ?? 0)}</span>
               {listing && (
                 <span>
-                  Listed Condition: <strong>{CONDITION_LABELS[listing.condition as Condition] ?? listing.condition}</strong>
+                  Listed Condition:{" "}
+                  <strong>
+                    {CONDITION_LABELS[listing.condition as Condition] ?? listing.condition}
+                  </strong>
                 </span>
               )}
               {graded && (
                 <>
-                  <span>Grade: <strong>{graded.gradingCompany} {graded.grade}</strong></span>
+                  <span>
+                    Grade:{" "}
+                    <strong>
+                      {graded.gradingCompany} {graded.grade}
+                    </strong>
+                  </span>
                   <span>Cert: {graded.certNumber}</span>
                 </>
               )}
@@ -292,11 +300,7 @@ export default function VerificationPage() {
                   rel="noopener noreferrer"
                   className="block overflow-hidden rounded-lg border border-gray-200"
                 >
-                  <img
-                    src={url}
-                    alt={`Photo ${i + 1}`}
-                    className="h-32 w-full object-cover"
-                  />
+                  <img src={url} alt={`Photo ${i + 1}`} className="h-32 w-full object-cover" />
                 </a>
               ))}
             </div>
@@ -311,9 +315,7 @@ export default function VerificationPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
-            {error && (
-              <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-            )}
+            {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
             {/* Authenticity */}
             <div>
@@ -342,11 +344,9 @@ export default function VerificationPage() {
 
             {/* Verified Condition */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Verified Condition
-              </label>
+              <label className="block text-sm font-medium text-gray-700">Verified Condition</label>
               <p className="mt-0.5 text-xs text-gray-500">
-                Your assessment of the card's actual condition
+                Your assessment of the card&apos;s actual condition
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {CONDITIONS.map((c) => (
@@ -430,7 +430,7 @@ export default function VerificationPage() {
                     Certification number verified?
                   </label>
                   <p className="mt-0.5 text-xs text-gray-500">
-                    Cert #{graded?.certNumber} — verify against the grading company's database
+                    Cert #{graded?.certNumber} — verify against the grading company&apos;s database
                   </p>
                   <div className="mt-2 flex gap-2">
                     <Button
@@ -456,9 +456,7 @@ export default function VerificationPage() {
 
             {/* Confidence Level */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Confidence Level
-              </label>
+              <label className="block text-sm font-medium text-gray-700">Confidence Level</label>
               <div className="mt-2 flex gap-2">
                 {CONFIDENCE_LEVELS.map((level) => (
                   <Button
@@ -476,9 +474,7 @@ export default function VerificationPage() {
 
             {/* Defects */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Defects Found
-              </label>
+              <label className="block text-sm font-medium text-gray-700">Defects Found</label>
               <div className="mt-2 flex gap-2">
                 <Input
                   value={defectInput}
@@ -515,14 +511,12 @@ export default function VerificationPage() {
 
             {/* Notes */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Notes
-              </label>
+              <label className="block text-sm font-medium text-gray-700">Notes</label>
               <textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Additional observations about the card..."
-                className="mt-1 flex min-h-[80px] w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
+                className="mt-1 flex min-h-[80px] w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
                 maxLength={2000}
               />
             </div>
@@ -563,9 +557,8 @@ export default function VerificationPage() {
               <div className="rounded-lg bg-red-50 p-3">
                 <p className="text-sm font-medium text-red-800">
                   This verification will flag the card as{" "}
-                  {!authentic ? "counterfeit" : "condition mismatch"}.
-                  The trade will enter a DISPUTED state and a dispute record will be
-                  created.
+                  {!authentic ? "counterfeit" : "condition mismatch"}. The trade will enter a
+                  DISPUTED state and a dispute record will be created.
                 </p>
               </div>
             )}

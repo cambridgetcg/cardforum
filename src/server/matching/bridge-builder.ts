@@ -26,6 +26,7 @@ export interface BridgeProposal {
   isGraded?: boolean;
   isSealed?: boolean;
   hasDMM?: boolean;
+  allPreferBalancedSwap?: boolean;
   tradeMode?: "AUTHENTICATED" | "DIRECT";
 }
 

@@ -52,9 +52,7 @@ export function DigitiserStats({
           key={stat.label}
           className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
         >
-          <div
-            className={`flex h-10 w-10 items-center justify-center rounded-full ${stat.color}`}
-          >
+          <div className={`flex h-10 w-10 items-center justify-center rounded-full ${stat.color}`}>
             <stat.icon className="h-5 w-5" />
           </div>
           <div>
@@ -65,8 +63,8 @@ export function DigitiserStats({
       ))}
       <div className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm sm:col-span-2 lg:col-span-4">
         <p className="text-sm text-gray-500">
-          <span className="font-medium text-gray-900">{totalTrades}</span> royalty-earning
-          trades across your digitised tokens
+          <span className="font-medium text-gray-900">{totalTrades}</span> royalty-earning trades
+          across your digitised tokens
         </p>
       </div>
     </div>

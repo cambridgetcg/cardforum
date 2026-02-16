@@ -71,7 +71,7 @@ export function DigitalListingCard({
       {/* Info */}
       <div className="flex flex-col gap-1.5 p-3">
         <div className="flex items-start justify-between gap-1">
-          <h3 className="text-sm font-semibold leading-tight text-gray-900 line-clamp-2">
+          <h3 className="line-clamp-2 text-sm leading-tight font-semibold text-gray-900">
             {token.card.name}
           </h3>
           <Badge
@@ -94,12 +94,8 @@ export function DigitalListingCard({
         {/* Price + buy */}
         <div className="mt-1 rounded-lg bg-gray-50 px-2.5 py-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-indigo-600">
-              {formatPrice(askPrice)}
-            </span>
-            <span className="text-xs text-gray-400">
-              by {seller.name ?? "Anonymous"}
-            </span>
+            <span className="text-sm font-semibold text-indigo-600">{formatPrice(askPrice)}</span>
+            <span className="text-xs text-gray-400">by {seller.name ?? "Anonymous"}</span>
           </div>
         </div>
 
@@ -109,9 +105,7 @@ export function DigitalListingCard({
             Buy Now
           </Button>
         )}
-        {isSeller && (
-          <p className="mt-1 text-center text-xs text-gray-400">Your listing</p>
-        )}
+        {isSeller && <p className="mt-1 text-center text-xs text-gray-400">Your listing</p>}
       </div>
     </div>
   );

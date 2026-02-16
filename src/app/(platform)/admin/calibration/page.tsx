@@ -3,7 +3,13 @@
 import { useCallback, useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -25,7 +31,10 @@ interface CalibrationReport {
   driftDetected: boolean;
   driftDimensions: string[];
   driftDetails: Record<string, { recentBias: number; baselineBias: number; delta: number }> | null;
-  perTcgBreakdown: Record<string, { count: number; agreementRate: number; biasComposite: number; madComposite: number }> | null;
+  perTcgBreakdown: Record<
+    string,
+    { count: number; agreementRate: number; biasComposite: number; madComposite: number }
+  > | null;
   outlierAuthenticators: Array<{
     authenticatorId: string;
     name: string;
@@ -197,52 +206,82 @@ export default function CalibrationPage() {
             <div className="space-y-6">
               {/* Accuracy Card */}
               <div className="rounded-lg border border-gray-200 bg-white p-6">
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <h2 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
                   AI Accuracy
                 </h2>
                 <div className="mt-4 flex items-baseline gap-4">
                   <span className="text-3xl font-bold text-gray-900">
                     {(report.agreementRate * 100).toFixed(1)}%
                   </span>
-                  <Badge variant={report.agreementRate >= 0.8 ? "success" : report.agreementRate >= 0.6 ? "warning" : "error"}>
-                    {report.agreementRate >= 0.8 ? "Good" : report.agreementRate >= 0.6 ? "Fair" : "Poor"}
+                  <Badge
+                    variant={
+                      report.agreementRate >= 0.8
+                        ? "success"
+                        : report.agreementRate >= 0.6
+                          ? "warning"
+                          : "error"
+                    }
+                  >
+                    {report.agreementRate >= 0.8
+                      ? "Good"
+                      : report.agreementRate >= 0.6
+                        ? "Fair"
+                        : "Poor"}
                   </Badge>
-                  <Badge variant={report.confidenceLevel === "HIGH" ? "success" : report.confidenceLevel === "MODERATE" ? "warning" : "error"}>
+                  <Badge
+                    variant={
+                      report.confidenceLevel === "HIGH"
+                        ? "success"
+                        : report.confidenceLevel === "MODERATE"
+                          ? "warning"
+                          : "error"
+                    }
+                  >
                     {report.confidenceLevel} confidence
                   </Badge>
                 </div>
                 <p className="mt-2 text-sm text-gray-500">
                   {report.sampleSize} comparisons in the last 30 days
                 </p>
-                <Badge variant={report.status === "GENERATED" ? "info" : report.status === "WEIGHTS_APPLIED" ? "success" : "default"}>
+                <Badge
+                  variant={
+                    report.status === "GENERATED"
+                      ? "info"
+                      : report.status === "WEIGHTS_APPLIED"
+                        ? "success"
+                        : "default"
+                  }
+                >
                   {report.status}
                 </Badge>
               </div>
 
               {/* Per-Dimension Bias */}
               <div className="rounded-lg border border-gray-200 bg-white p-6">
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <h2 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
                   Per-Dimension Bias (AI - Authenticator)
                 </h2>
                 <p className="mt-1 text-xs text-gray-400">
                   Positive = AI grades higher. Negative = AI grades lower.
                 </p>
                 <div className="mt-4 space-y-3">
-                  {(["surface", "corners", "edges", "centering", "composite"] as const).map((dim) => {
-                    const biasKey = `bias${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof CalibrationReport;
-                    const madKey = `mad${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof CalibrationReport;
-                    const bias = report[biasKey] as number;
-                    const mad = report[madKey] as number;
-                    return (
-                      <BiasBar key={dim} label={dim} bias={bias} mad={mad} />
-                    );
-                  })}
+                  {(["surface", "corners", "edges", "centering", "composite"] as const).map(
+                    (dim) => {
+                      const biasKey =
+                        `bias${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof CalibrationReport;
+                      const madKey =
+                        `mad${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof CalibrationReport;
+                      const bias = report[biasKey] as number;
+                      const mad = report[madKey] as number;
+                      return <BiasBar key={dim} label={dim} bias={bias} mad={mad} />;
+                    },
+                  )}
                 </div>
               </div>
 
               {/* Drift Detection */}
               <div className="rounded-lg border border-gray-200 bg-white p-6">
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <h2 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
                   Drift Detection
                 </h2>
                 <div className="mt-3 flex items-center gap-3">
@@ -260,20 +299,20 @@ export default function CalibrationPage() {
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b text-left text-gray-500">
-                          <th className="pb-2 pr-4">Dimension</th>
-                          <th className="pb-2 pr-4">Recent Bias</th>
-                          <th className="pb-2 pr-4">Baseline Bias</th>
+                          <th className="pr-4 pb-2">Dimension</th>
+                          <th className="pr-4 pb-2">Recent Bias</th>
+                          <th className="pr-4 pb-2">Baseline Bias</th>
                           <th className="pb-2">Change</th>
                         </tr>
                       </thead>
                       <tbody>
                         {Object.entries(report.driftDetails).map(([dim, d]) => (
                           <tr key={dim} className="border-b border-gray-100">
-                            <td className="py-2 pr-4 capitalize font-medium">{dim}</td>
+                            <td className="py-2 pr-4 font-medium capitalize">{dim}</td>
                             <td className="py-2 pr-4">{d.recentBias.toFixed(3)}</td>
                             <td className="py-2 pr-4">{d.baselineBias.toFixed(3)}</td>
                             <td className="py-2">
-                              <span className={d.delta > 0.5 ? "text-red-600 font-medium" : ""}>
+                              <span className={d.delta > 0.5 ? "font-medium text-red-600" : ""}>
                                 {d.delta.toFixed(3)}
                               </span>
                             </td>
@@ -288,17 +327,17 @@ export default function CalibrationPage() {
               {/* Per-TCG Breakdown */}
               {report.perTcgBreakdown && Object.keys(report.perTcgBreakdown).length > 0 && (
                 <div className="rounded-lg border border-gray-200 bg-white p-6">
-                  <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                  <h2 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
                     Per-TCG Breakdown
                   </h2>
                   <div className="mt-4 overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b text-left text-gray-500">
-                          <th className="pb-2 pr-4">TCG</th>
-                          <th className="pb-2 pr-4">Comparisons</th>
-                          <th className="pb-2 pr-4">Agreement</th>
-                          <th className="pb-2 pr-4">Bias</th>
+                          <th className="pr-4 pb-2">TCG</th>
+                          <th className="pr-4 pb-2">Comparisons</th>
+                          <th className="pr-4 pb-2">Agreement</th>
+                          <th className="pr-4 pb-2">Bias</th>
                           <th className="pb-2">MAD</th>
                         </tr>
                       </thead>
@@ -321,16 +360,16 @@ export default function CalibrationPage() {
               {/* Weight Suggestion */}
               {report.suggestedWeights && report.status === "GENERATED" && (
                 <div className="rounded-lg border border-amber-200 bg-amber-50 p-6">
-                  <h2 className="text-sm font-semibold text-amber-800 uppercase tracking-wider">
+                  <h2 className="text-sm font-semibold tracking-wider text-amber-800 uppercase">
                     Suggested Weight Adjustment
                   </h2>
                   <div className="mt-4 overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b text-left text-gray-600">
-                          <th className="pb-2 pr-4">Dimension</th>
-                          <th className="pb-2 pr-4">Current</th>
-                          <th className="pb-2 pr-4">Suggested</th>
+                          <th className="pr-4 pb-2">Dimension</th>
+                          <th className="pr-4 pb-2">Current</th>
+                          <th className="pr-4 pb-2">Suggested</th>
                           <th className="pb-2">Change</th>
                         </tr>
                       </thead>
@@ -341,12 +380,17 @@ export default function CalibrationPage() {
                           const diff = suggested - current;
                           return (
                             <tr key={dim} className="border-b border-amber-100">
-                              <td className="py-2 pr-4 capitalize font-medium">{dim}</td>
+                              <td className="py-2 pr-4 font-medium capitalize">{dim}</td>
                               <td className="py-2 pr-4">{(current * 100).toFixed(1)}%</td>
                               <td className="py-2 pr-4">{(suggested * 100).toFixed(1)}%</td>
                               <td className="py-2">
-                                <span className={diff < 0 ? "text-red-600" : diff > 0 ? "text-green-600" : ""}>
-                                  {diff >= 0 ? "+" : ""}{(diff * 100).toFixed(1)}%
+                                <span
+                                  className={
+                                    diff < 0 ? "text-red-600" : diff > 0 ? "text-green-600" : ""
+                                  }
+                                >
+                                  {diff >= 0 ? "+" : ""}
+                                  {(diff * 100).toFixed(1)}%
                                 </span>
                               </td>
                             </tr>
@@ -399,7 +443,15 @@ export default function CalibrationPage() {
                       <tr key={a.authenticatorId} className="border-b border-gray-100">
                         <td className="px-4 py-3 font-medium">{a.name}</td>
                         <td className="px-4 py-3">
-                          <Badge variant={a.tier === "PREMIUM" ? "success" : a.tier === "VERIFIED" ? "info" : "default"}>
+                          <Badge
+                            variant={
+                              a.tier === "PREMIUM"
+                                ? "success"
+                                : a.tier === "VERIFIED"
+                                  ? "info"
+                                  : "default"
+                            }
+                          >
                             {a.tier}
                           </Badge>
                         </td>
@@ -407,8 +459,17 @@ export default function CalibrationPage() {
                         <td className="px-4 py-3">{(a.agreementRate * 100).toFixed(1)}%</td>
                         <td className="px-4 py-3">{a.avgDeltaComposite.toFixed(2)}</td>
                         <td className="px-4 py-3">
-                          <span className={a.biasComposite > 0.3 ? "text-red-600" : a.biasComposite < -0.3 ? "text-blue-600" : ""}>
-                            {a.biasComposite >= 0 ? "+" : ""}{a.biasComposite.toFixed(3)}
+                          <span
+                            className={
+                              a.biasComposite > 0.3
+                                ? "text-red-600"
+                                : a.biasComposite < -0.3
+                                  ? "text-blue-600"
+                                  : ""
+                            }
+                          >
+                            {a.biasComposite >= 0 ? "+" : ""}
+                            {a.biasComposite.toFixed(3)}
                           </span>
                         </td>
                         <td className="px-4 py-3">
@@ -461,12 +522,28 @@ export default function CalibrationPage() {
                           </Badge>
                         </td>
                         <td className="px-4 py-3">
-                          <Badge variant={h.confidenceLevel === "HIGH" ? "success" : h.confidenceLevel === "MODERATE" ? "warning" : "error"}>
+                          <Badge
+                            variant={
+                              h.confidenceLevel === "HIGH"
+                                ? "success"
+                                : h.confidenceLevel === "MODERATE"
+                                  ? "warning"
+                                  : "error"
+                            }
+                          >
                             {h.confidenceLevel}
                           </Badge>
                         </td>
                         <td className="px-4 py-3">
-                          <Badge variant={h.status === "WEIGHTS_APPLIED" ? "success" : h.status === "DISMISSED" ? "default" : "info"}>
+                          <Badge
+                            variant={
+                              h.status === "WEIGHTS_APPLIED"
+                                ? "success"
+                                : h.status === "DISMISSED"
+                                  ? "default"
+                                  : "info"
+                            }
+                          >
                             {h.status}
                           </Badge>
                         </td>
@@ -535,15 +612,14 @@ function BiasBar({ label, bias, mad }: { label: string; bias: number; mad: numbe
 
   const isPositive = clampedBias >= 0;
   const absBias = Math.abs(bias);
-  const barColor =
-    absBias < 0.3 ? "bg-green-500" : absBias < 0.5 ? "bg-amber-500" : "bg-red-500";
+  const barColor = absBias < 0.3 ? "bg-green-500" : absBias < 0.5 ? "bg-amber-500" : "bg-red-500";
 
   return (
     <div className="flex items-center gap-4">
-      <span className="w-24 text-sm font-medium capitalize text-gray-700">{label}</span>
-      <div className="relative flex-1 h-6 rounded bg-gray-100">
+      <span className="w-24 text-sm font-medium text-gray-700 capitalize">{label}</span>
+      <div className="relative h-6 flex-1 rounded bg-gray-100">
         {/* Center line */}
-        <div className="absolute left-1/2 top-0 h-full w-px bg-gray-300" />
+        <div className="absolute top-0 left-1/2 h-full w-px bg-gray-300" />
         {/* Bias bar */}
         <div
           className={`absolute top-1 h-4 rounded ${barColor}`}
@@ -555,7 +631,8 @@ function BiasBar({ label, bias, mad }: { label: string; bias: number; mad: numbe
       </div>
       <div className="w-32 text-right text-xs text-gray-500">
         <span className={absBias >= 0.3 ? "font-medium text-gray-900" : ""}>
-          {bias >= 0 ? "+" : ""}{bias.toFixed(3)}
+          {bias >= 0 ? "+" : ""}
+          {bias.toFixed(3)}
         </span>
         <span className="ml-2 text-gray-400">MAD {mad.toFixed(2)}</span>
       </div>

@@ -164,10 +164,12 @@ const CONFIG_DEFAULTS: Record<ConfigKey, unknown> = {
     fullyLocalBonus: 30,
     fewRegionsBonus: 15,
     conditionBonus: { NM: 5, LP: 4, MP: 3, HP: 2, DMG: 1 },
-    valueBalanceBonus: 20,
-    regionalImbalancePenalty: -25,
+    valueBalanceBonus: 60,
+    settlementSizePenalty: -40,
+    regionalImbalancePenalty: -60,
     chainBonus: 10,
     gradeMatchBonus: 5,
+    swapPreferenceBonus: 50,
   },
 
   "matching.trust_bonus_weight": 0.1, // 0.1 score per trust point (max +10 at trust=100)

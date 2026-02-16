@@ -7,7 +7,9 @@ Two physical cards are **fungible** when either could satisfy the same trade req
 ## Fungibility Levels
 
 ### Level 1: Exact Match
+
 Everything matches — same card, set, variant, language, and condition grade.
+
 ```
 Want: Pokemon Base Set Charizard #4 Holo EN NM
 Have: Pokemon Base Set Charizard #4 Holo EN NM
@@ -15,7 +17,9 @@ Have: Pokemon Base Set Charizard #4 Holo EN NM
 ```
 
 ### Level 2: Condition Upgrade
+
 Same everything, but the "have" is in equal or better condition.
+
 ```
 Want: Pokemon Base Set Charizard #4 Holo EN LP
 Have: Pokemon Base Set Charizard #4 Holo EN NM
@@ -23,7 +27,9 @@ Have: Pokemon Base Set Charizard #4 Holo EN NM
 ```
 
 ### Level 3: Language Flexible
+
 Same card and variant, different language. Only valid when the want-lister has opted into language flexibility.
+
 ```
 Want: Pokemon Base Set Charizard #4 Holo [any language] NM
 Have: Pokemon Base Set Charizard #4 Holo JP NM
@@ -31,7 +37,9 @@ Have: Pokemon Base Set Charizard #4 Holo JP NM
 ```
 
 ### Level 4: Variant Flexible
+
 Same game card, different variant/treatment. Only valid when the want-lister wants "any version."
+
 ```
 Want: Lightning Bolt [any printing]
 Have: Lightning Bolt — Secret Lair Foil
@@ -39,43 +47,48 @@ Have: Lightning Bolt — Secret Lair Foil
 ```
 
 ### Level 5: Not Fungible
+
 Different game card, or mismatched on a dimension the lister cares about.
 
 ## Default Rules by TCG
 
 ### Pokemon TCG
-| Dimension | Default Fungible? | User Override? |
-|-----------|------------------|----------------|
-| Set | No | Yes (can accept "any set") |
-| Treatment | No | Yes (can accept "any variant") |
-| Language | No | Yes (can accept specific languages) |
-| Edition | No | Yes (1st Ed / Unlimited distinction) |
-| Condition | Min threshold | Set minimum acceptable condition |
+
+| Dimension | Default Fungible? | User Override?                       |
+| --------- | ----------------- | ------------------------------------ |
+| Set       | No                | Yes (can accept "any set")           |
+| Treatment | No                | Yes (can accept "any variant")       |
+| Language  | No                | Yes (can accept specific languages)  |
+| Edition   | No                | Yes (1st Ed / Unlimited distinction) |
+| Condition | Min threshold     | Set minimum acceptable condition     |
 
 ### Yu-Gi-Oh
-| Dimension | Default Fungible? | User Override? |
-|-----------|------------------|----------------|
-| Set | No | Yes |
-| Rarity | No | Yes |
-| Language | No | Yes |
-| Edition | No | Yes (1st Ed matters for older sets) |
-| Condition | Min threshold | |
+
+| Dimension | Default Fungible? | User Override?                      |
+| --------- | ----------------- | ----------------------------------- |
+| Set       | No                | Yes                                 |
+| Rarity    | No                | Yes                                 |
+| Language  | No                | Yes                                 |
+| Edition   | No                | Yes (1st Ed matters for older sets) |
+| Condition | Min threshold     |                                     |
 
 ### One Piece TCG
-| Dimension | Default Fungible? | User Override? |
-|-----------|------------------|----------------|
-| Set | No | Yes |
-| Parallel Art | No | Yes |
-| Language | No | Yes |
-| Condition | Min threshold | |
+
+| Dimension    | Default Fungible? | User Override? |
+| ------------ | ----------------- | -------------- |
+| Set          | No                | Yes            |
+| Parallel Art | No                | Yes            |
+| Language     | No                | Yes            |
+| Condition    | Min threshold     |                |
 
 ### MTG
-| Dimension | Default Fungible? | User Override? |
-|-----------|------------------|----------------|
-| Set | No | Yes (most common override — "any printing") |
-| Treatment | No | Yes |
-| Language | No | Yes |
-| Condition | Min threshold | |
+
+| Dimension | Default Fungible? | User Override?                              |
+| --------- | ----------------- | ------------------------------------------- |
+| Set       | No                | Yes (most common override — "any printing") |
+| Treatment | No                | Yes                                         |
+| Language  | No                | Yes                                         |
+| Condition | Min threshold     |                                             |
 
 ## Listing Schema Support
 

@@ -75,7 +75,7 @@ export default function CardDetailPage() {
 
   useEffect(() => {
     if (!cardId) return;
-    setLoading(true);
+    setLoading(true); // eslint-disable-line react-hooks/set-state-in-effect
     fetch(`/api/cards/${cardId}`)
       .then((res) => {
         if (!res.ok) throw new Error("Card not found");
@@ -113,10 +113,9 @@ export default function CardDetailPage() {
   }
 
   // Collect all unique images for thumbnail strip
-  const allImages = [
-    card.imageUrl,
-    ...card.variants.map((v) => v.imageUrl),
-  ].filter((url): url is string => url != null);
+  const allImages = [card.imageUrl, ...card.variants.map((v) => v.imageUrl)].filter(
+    (url): url is string => url != null,
+  );
   const uniqueImages = [...new Set(allImages)];
 
   return (
@@ -144,15 +143,16 @@ export default function CardDetailPage() {
         <div className="shrink-0 md:w-72">
           <div className="aspect-[5/7] w-full overflow-hidden rounded-xl bg-gray-100">
             {activeImage ? (
-              <img
-                src={activeImage}
-                alt={card.name}
-                className="h-full w-full object-contain"
-              />
+              <img src={activeImage} alt={card.name} className="h-full w-full object-contain" />
             ) : (
               <div className="flex h-full w-full items-center justify-center text-gray-300">
                 <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"
+                  />
                 </svg>
               </div>
             )}
@@ -177,14 +177,14 @@ export default function CardDetailPage() {
 
         {/* Right: info */}
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-2xl font-bold text-gray-900">{card.name}</h1>
             <Badge variant={TCG_BADGE_COLORS[card.tcg]} className="text-xs">
               {TCG_LABELS[card.tcg]}
             </Badge>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap text-sm text-gray-500">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500">
             {card.set && (
               <Link
                 href={`/browse/sets/${card.set.code}`}
@@ -194,7 +194,10 @@ export default function CardDetailPage() {
               </Link>
             )}
             {!card.set && card.setName && (
-              <span>{card.setName}{card.setCode && ` (${card.setCode})`}</span>
+              <span>
+                {card.setName}
+                {card.setCode && ` (${card.setCode})`}
+              </span>
             )}
             {card.number && <span>#{card.number}</span>}
             {card.rarity && <span>{card.rarity}</span>}
@@ -224,13 +227,15 @@ export default function CardDetailPage() {
 
           <div className="mt-3 flex gap-3">
             <Button variant="primary" size="sm" onClick={() => setIntentType("have")}>
-              I Have This
+              Sell This
             </Button>
             <Button variant="outline" size="sm" onClick={() => setIntentType("want")}>
-              I Want This
+              Buy This
             </Button>
             <Link href={`/marketplace/${card.id}`}>
-              <Button variant="ghost" size="sm">View Order Book</Button>
+              <Button variant="ghost" size="sm">
+                View Order Book
+              </Button>
             </Link>
           </div>
         </div>
@@ -263,13 +268,11 @@ export default function CardDetailPage() {
                 <tbody>
                   {card.haveListings.map((l) => (
                     <tr key={l.id} className="border-b border-gray-50">
-                      <td className="px-5 py-2 font-semibold tabular-nums text-amber-600">
+                      <td className="px-5 py-2 font-semibold text-amber-600 tabular-nums">
                         {formatPrice(l.askPrice, l.currency)}
                       </td>
-                      <td className="px-5 py-2 text-gray-700">
-                        {CONDITION_LABELS[l.condition]}
-                      </td>
-                      <td className="px-5 py-2 tabular-nums text-gray-700">{l.quantity}</td>
+                      <td className="px-5 py-2 text-gray-700">{CONDITION_LABELS[l.condition]}</td>
+                      <td className="px-5 py-2 text-gray-700 tabular-nums">{l.quantity}</td>
                       <td className="px-5 py-2 text-gray-500">{l.language}</td>
                       <td className="px-5 py-2 text-gray-700">{l.user.name ?? "Anonymous"}</td>
                       <td className="px-5 py-2 text-gray-400">
@@ -308,13 +311,13 @@ export default function CardDetailPage() {
                 <tbody>
                   {card.wantListings.map((l) => (
                     <tr key={l.id} className="border-b border-gray-50">
-                      <td className="px-5 py-2 font-semibold tabular-nums text-emerald-600">
+                      <td className="px-5 py-2 font-semibold text-emerald-600 tabular-nums">
                         {formatPrice(l.bidPrice, l.currency)}
                       </td>
                       <td className="px-5 py-2 text-gray-700">
                         {CONDITION_LABELS[l.minCondition]}
                       </td>
-                      <td className="px-5 py-2 tabular-nums text-gray-700">{l.maxQuantity}</td>
+                      <td className="px-5 py-2 text-gray-700 tabular-nums">{l.maxQuantity}</td>
                       <td className="px-5 py-2 text-gray-500">{l.language ?? "Any"}</td>
                       <td className="px-5 py-2 text-gray-700">{l.user.name ?? "Anonymous"}</td>
                       <td className="px-5 py-2 text-gray-400">

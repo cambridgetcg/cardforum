@@ -38,9 +38,7 @@ export interface SlabVerificationResult {
  *
  * v1: PSA only. Returns cert data if found, null if not.
  */
-export async function lookupPSACert(
-  certNumber: string,
-): Promise<CertLookupResult> {
+export async function lookupPSACert(certNumber: string): Promise<CertLookupResult> {
   const url = `https://www.psacard.com/cert/${encodeURIComponent(certNumber)}`;
 
   try {
@@ -89,9 +87,7 @@ export async function lookupPSACert(
  * 3. Cross-reference cert data with listing data
  * 4. Return verification result
  */
-export async function verifySlabForTradeLeg(
-  tradeLegId: string,
-): Promise<SlabVerificationResult> {
+export async function verifySlabForTradeLeg(tradeLegId: string): Promise<SlabVerificationResult> {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: {

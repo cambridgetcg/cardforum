@@ -14,29 +14,29 @@ import type { TCG } from "./types";
  * What kind of metric a data point represents.
  */
 export type TrendMetric =
-  | "market_price"       // TCGPlayer/Cardmarket market price (cents)
-  | "low_price"          // Lowest listing price (cents)
-  | "mid_price"          // Median listing price (cents)
-  | "high_price"         // Highest listing price (cents)
-  | "direct_low_price"   // TCGPlayer Direct low (cents)
-  | "search_interest"    // Google Trends relative interest (0-100)
-  | "reddit_mentions"    // Reddit mention count
-  | "twitter_mentions"   // Twitter/X mention count
-  | "listing_count"      // Number of active listings on marketplace
-  | "sales_volume"       // Number of recent sales
-  | "forum_activity"     // CardForum internal activity score
-  | "price_spread"       // Spread between low and high (cents)
-  | "foil_multiplier";   // Ratio of foil to normal price
+  | "market_price" // TCGPlayer/Cardmarket market price (cents)
+  | "low_price" // Lowest listing price (cents)
+  | "mid_price" // Median listing price (cents)
+  | "high_price" // Highest listing price (cents)
+  | "direct_low_price" // TCGPlayer Direct low (cents)
+  | "search_interest" // Google Trends relative interest (0-100)
+  | "reddit_mentions" // Reddit mention count
+  | "twitter_mentions" // Twitter/X mention count
+  | "listing_count" // Number of active listings on marketplace
+  | "sales_volume" // Number of recent sales
+  | "forum_activity" // CardForum internal activity score
+  | "price_spread" // Spread between low and high (cents)
+  | "foil_multiplier"; // Ratio of foil to normal price
 
 /**
  * What level of the hierarchy a trend applies to.
  */
 export type TrendEntityType =
-  | "card"        // Individual card (e.g., OP01-001)
-  | "set"         // Entire set (e.g., OP01)
-  | "tcg"         // Entire TCG (e.g., onepiece)
-  | "product"     // Sealed product (booster box, etc.)
-  | "rarity";     // Rarity tier within a set
+  | "card" // Individual card (e.g., OP01-001)
+  | "set" // Entire set (e.g., OP01)
+  | "tcg" // Entire TCG (e.g., onepiece)
+  | "product" // Sealed product (booster box, etc.)
+  | "rarity"; // Rarity tier within a set
 
 // ── Data Points ─────────────────────────────────────────────
 
@@ -60,7 +60,7 @@ export interface TrendDataPoint {
  */
 export interface TrendTimeSeries {
   entityType: TrendEntityType;
-  entityId: string;     // e.g., "OP01-001", "OP01", "onepiece"
+  entityId: string; // e.g., "OP01-001", "OP01", "onepiece"
   tcg: TCG;
   setCode?: string;
   metric: TrendMetric;
@@ -103,7 +103,7 @@ export interface CardPriceSnapshot {
 }
 
 export interface CardPriceVariant {
-  subTypeName: string;   // "Normal", "Foil", "1st Edition Normal", etc.
+  subTypeName: string; // "Normal", "Foil", "1st Edition Normal", etc.
   marketPrice: number | null;
   lowPrice: number | null;
   midPrice: number | null;
@@ -171,14 +171,14 @@ export interface SetPriceTrends {
  * Signal classification for trend direction.
  */
 export type SignalDirection =
-  | "emerging"   // Early uptrend detected (search interest rising, price stable/rising)
-  | "surging"    // Strong uptrend in progress (price + search both rising fast)
-  | "peaking"    // At or near peak (price high, search interest declining)
-  | "fading"     // Downtrend detected (both price and search declining)
-  | "stable"     // No significant movement
-  | "anomaly"    // Unusual pattern that doesn't fit normal classification
+  | "emerging" // Early uptrend detected (search interest rising, price stable/rising)
+  | "surging" // Strong uptrend in progress (price + search both rising fast)
+  | "peaking" // At or near peak (price high, search interest declining)
+  | "fading" // Downtrend detected (both price and search declining)
+  | "stable" // No significant movement
+  | "anomaly" // Unusual pattern that doesn't fit normal classification
   | "recovering" // Bouncing back after a decline
-  | "crashing";  // Rapid price decline
+  | "crashing"; // Rapid price decline
 
 /**
  * Signal strength indicator (how confident we are).
@@ -272,15 +272,15 @@ export interface TrendAnomaly {
  * Investment-oriented alert types.
  */
 export type AlertType =
-  | "price_spike"         // Sudden price increase
-  | "price_crash"         // Sudden price decrease
-  | "search_surge"        // Search interest spiking
-  | "momentum_shift"      // Trend direction changed
-  | "volume_anomaly"      // Unusual trading volume
-  | "correlation_break"   // Previously correlated metrics diverging
-  | "new_set_impact"      // New set release affecting existing set prices
-  | "undervalued"         // Price below EV or historical average
-  | "overvalued";         // Price significantly above historical average
+  | "price_spike" // Sudden price increase
+  | "price_crash" // Sudden price decrease
+  | "search_surge" // Search interest spiking
+  | "momentum_shift" // Trend direction changed
+  | "volume_anomaly" // Unusual trading volume
+  | "correlation_break" // Previously correlated metrics diverging
+  | "new_set_impact" // New set release affecting existing set prices
+  | "undervalued" // Price below EV or historical average
+  | "overvalued"; // Price significantly above historical average
 
 export type AlertSeverity = "critical" | "high" | "medium" | "low";
 
@@ -399,11 +399,7 @@ export interface SignalSourceConfig {
 
 // ── Pipeline Progress ───────────────────────────────────────
 
-export type TrendPipelineStage =
-  | "fetch_prices"
-  | "fetch_search"
-  | "correlate"
-  | "report";
+export type TrendPipelineStage = "fetch_prices" | "fetch_search" | "correlate" | "report";
 
 export interface TrendPipelineProgress {
   tcg: TCG;

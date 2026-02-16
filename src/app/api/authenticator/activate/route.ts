@@ -21,10 +21,7 @@ export async function POST() {
   });
 
   if (!authenticator) {
-    return NextResponse.json(
-      { error: "No authenticator profile found" },
-      { status: 404 },
-    );
+    return NextResponse.json({ error: "No authenticator profile found" }, { status: 404 });
   }
 
   try {

@@ -3,7 +3,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DigitisationStatusBadge } from "./digitisation-status-badge";
-import { CONDITION_LABELS, formatPrice, type Condition, type DigitisationStatus } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  formatPrice,
+  type Condition,
+  type DigitisationStatus,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 import { X } from "lucide-react";
 
@@ -68,9 +73,7 @@ export function DigitisationRequestCard({
         <p className="text-xs text-gray-500">
           Vault: {authenticator.businessName ?? authenticator.region}
         </p>
-        {trackingInbound && (
-          <p className="text-xs text-gray-400">Tracking: {trackingInbound}</p>
-        )}
+        {trackingInbound && <p className="text-xs text-gray-400">Tracking: {trackingInbound}</p>}
         <p className="text-xs text-gray-400">{formatRelativeTime(new Date(createdAt))}</p>
       </div>
       {canCancel && onCancel && (

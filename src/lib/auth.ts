@@ -40,10 +40,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           return null;
         }
 
-        const valid = await compare(
-          credentials.password as string,
-          user.passwordHash,
-        );
+        const valid = await compare(credentials.password as string, user.passwordHash);
 
         if (!valid) {
           return null;

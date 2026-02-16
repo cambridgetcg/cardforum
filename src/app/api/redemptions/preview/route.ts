@@ -42,7 +42,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "You do not own this token" }, { status: 403 });
   }
   if (token.status !== "ACTIVE") {
-    return NextResponse.json({ error: `Token is not redeemable (status: ${token.status})` }, { status: 400 });
+    return NextResponse.json(
+      { error: `Token is not redeemable (status: ${token.status})` },
+      { status: 400 },
+    );
   }
 
   // Auto-detect country from default shipping address
@@ -78,8 +81,10 @@ export async function GET(req: NextRequest) {
   });
 
   // Load config for redemption fees
-  const { "digital.redemption_base_fee_cents": baseFee, "digital.cross_zone_surcharge_cents": surchargeRate } =
-    await getConfigs(["digital.redemption_base_fee_cents", "digital.cross_zone_surcharge_cents"]);
+  const {
+    "digital.redemption_base_fee_cents": baseFee,
+    "digital.cross_zone_surcharge_cents": surchargeRate,
+  } = await getConfigs(["digital.redemption_base_fee_cents", "digital.cross_zone_surcharge_cents"]);
 
   // Score and sort vaults
   const vaults = inventoryItems.map((item) => {
@@ -103,9 +108,7 @@ export async function GET(req: NextRequest) {
         totalCents: totalFee,
       },
       score:
-        (sameZone ? 1000 : 0) +
-        item.authenticator.rating * 10 -
-        item.authenticator.currentLoad,
+        (sameZone ? 1000 : 0) + item.authenticator.rating * 10 - item.authenticator.currentLoad,
     };
   });
 

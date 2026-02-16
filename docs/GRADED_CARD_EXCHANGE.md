@@ -6,14 +6,14 @@
 
 ## 1. Domain: How Graded Cards Differ from Raw Cards
 
-| Property | Raw Cards | Graded Cards |
-|----------|-----------|-------------|
-| Condition source | Self-assessed by seller | Certified by grading company |
-| Condition type | Categorical (NM/LP/MP/HP/DMG) | Numeric (1.0–10.0) |
-| Physical form | Loose card, sleeve, toploader | Sealed tamper-evident slab |
-| Verification | Subjective inspection | Objective cert number lookup |
-| Matching logic | Condition meets minimum threshold | Equivalent grade (exact or cross-company) |
-| Price sensitivity | ~20% between adjacent conditions | ~200–1000% between adjacent grades at high end |
+| Property          | Raw Cards                         | Graded Cards                                   |
+| ----------------- | --------------------------------- | ---------------------------------------------- |
+| Condition source  | Self-assessed by seller           | Certified by grading company                   |
+| Condition type    | Categorical (NM/LP/MP/HP/DMG)     | Numeric (1.0–10.0)                             |
+| Physical form     | Loose card, sleeve, toploader     | Sealed tamper-evident slab                     |
+| Verification      | Subjective inspection             | Objective cert number lookup                   |
+| Matching logic    | Condition meets minimum threshold | Equivalent grade (exact or cross-company)      |
+| Price sensitivity | ~20% between adjacent conditions  | ~200–1000% between adjacent grades at high end |
 
 **Key insight**: Graded cards of the same grade are **fungible** — this is the property that makes bridging powerful. A PSA 9 Charizard is a PSA 9 Charizard regardless of where it sits.
 
@@ -23,12 +23,12 @@
 
 ### 2.1 Supported Companies
 
-| Company | Scale | Increments | Common Range |
-|---------|-------|------------|-------------|
-| **PSA** (Professional Sports Authenticator) | 1–10 | Whole numbers | 7–10 |
-| **BGS** (Beckett Grading Services) | 1–10 | 0.5 increments | 8.0–10.0 |
-| **CGC** (Certified Guaranty Company) | 1–10 | 0.5 increments | 8.0–10.0 |
-| **SGC** (Sportscard Guaranty) | 1–10 | Whole numbers | 7–10 |
+| Company                                     | Scale | Increments     | Common Range |
+| ------------------------------------------- | ----- | -------------- | ------------ |
+| **PSA** (Professional Sports Authenticator) | 1–10  | Whole numbers  | 7–10         |
+| **BGS** (Beckett Grading Services)          | 1–10  | 0.5 increments | 8.0–10.0     |
+| **CGC** (Certified Guaranty Company)        | 1–10  | 0.5 increments | 8.0–10.0     |
+| **SGC** (Sportscard Guaranty)               | 1–10  | Whole numbers  | 7–10         |
 
 ### 2.2 Equivalence Map
 
@@ -225,9 +225,9 @@ The `ListingEdge` interface and `GradedListingEdge` interface share the same gra
 
 Graded proposals use the same scorer with one addition:
 
-| Weight | Value | Rationale |
-|--------|-------|-----------|
-| `gradeMatchBonus` | +5 | Exact grade match (same company, same number) — stronger fungibility signal |
+| Weight            | Value | Rationale                                                                   |
+| ----------------- | ----- | --------------------------------------------------------------------------- |
+| `gradeMatchBonus` | +5    | Exact grade match (same company, same number) — stronger fungibility signal |
 
 All other weights (locality, cycle length, value balance, regional imbalance, chain bonus) apply identically. No cross-company penalty is needed — cert verification cost is the same regardless of company, and market pricing (askPrice/bidPrice) already handles company prestige differences.
 
@@ -255,24 +255,24 @@ runMatching()
 
 ### 5.1 How Slab Verification Differs
 
-| Step | Raw Card | Graded Card (Slab) |
-|------|----------|-------------------|
-| 1. Receive | Authenticator receives card in sleeve/toploader | Authenticator receives sealed slab |
-| 2. Authenticity | Visual inspection of card stock, printing, holo | Verify slab case integrity (not cracked/resealed) |
-| 3. Condition | Subjective condition assessment (is this really NM?) | **Skip** — grade is pre-certified by grading company |
-| 4. Cert verify | N/A | **Lookup cert number** with grading company API/site |
-| 5. Cross-reference | N/A | Confirm card name, set, grade on cert match listing |
-| 6. Photos | Document card front/back | Document slab front, back, cert label |
-| 7. Result | `{ authentic, conditionVerified, notes }` | `{ slabIntact, certVerified, gradingCompany, certifiedGrade, certNumber, notes }` |
+| Step               | Raw Card                                             | Graded Card (Slab)                                                                |
+| ------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 1. Receive         | Authenticator receives card in sleeve/toploader      | Authenticator receives sealed slab                                                |
+| 2. Authenticity    | Visual inspection of card stock, printing, holo      | Verify slab case integrity (not cracked/resealed)                                 |
+| 3. Condition       | Subjective condition assessment (is this really NM?) | **Skip** — grade is pre-certified by grading company                              |
+| 4. Cert verify     | N/A                                                  | **Lookup cert number** with grading company API/site                              |
+| 5. Cross-reference | N/A                                                  | Confirm card name, set, grade on cert match listing                               |
+| 6. Photos          | Document card front/back                             | Document slab front, back, cert label                                             |
+| 7. Result          | `{ authentic, conditionVerified, notes }`            | `{ slabIntact, certVerified, gradingCompany, certifiedGrade, certNumber, notes }` |
 
 ### 5.2 Cert Verification APIs
 
-| Company | Verification Method | Reliability |
-|---------|-------------------|------------|
-| **PSA** | Free cert lookup at `psacard.com/cert/{number}` | High — official API |
+| Company | Verification Method                                 | Reliability                               |
+| ------- | --------------------------------------------------- | ----------------------------------------- |
+| **PSA** | Free cert lookup at `psacard.com/cert/{number}`     | High — official API                       |
 | **BGS** | Beckett lookup at `beckett.com/grading/card-lookup` | Medium — no public API, web scrape needed |
-| **CGC** | CGC lookup at `cgccards.com/certlookup` | Medium — similar to BGS |
-| **SGC** | SGC database lookup | Medium |
+| **CGC** | CGC lookup at `cgccards.com/certlookup`             | Medium — similar to BGS                   |
+| **SGC** | SGC database lookup                                 | Medium                                    |
 
 **v1 recommendation**: Start with PSA cert verification (free, reliable API). Add BGS/CGC via web lookup or manual cert photo verification.
 
@@ -296,11 +296,11 @@ PENDING → CARD_RECEIVED → PHOTO_REVIEW → AUTHENTICATING → VERIFIED → S
 // Graded verification result (stored in VerificationAssignment.result JSON)
 interface GradedVerificationResult {
   isGraded: true;
-  slabIntact: boolean;        // slab case not cracked/resealed
-  certVerified: boolean;      // cert number validated with grading company
+  slabIntact: boolean; // slab case not cracked/resealed
+  certVerified: boolean; // cert number validated with grading company
   certNumber: string;
   gradingCompany: string;
-  certifiedGrade: number;     // grade from grading company lookup
+  certifiedGrade: number; // grade from grading company lookup
   gradMatchesListing: boolean; // cert grade matches listing grade
   cardMatchesListing: boolean; // cert card name matches listing card
   notes: string;
@@ -380,6 +380,7 @@ Same state machine as raw cards. The difference is **inside step 5** (cert verif
 ### 7.1 Counterfeit Slabs
 
 Fake slabs with real-looking cert numbers exist. Mitigation:
+
 - Cert lookup confirms the cert number is real AND matches the card
 - Authenticator physically inspects slab case (weight, UV markings, hologram)
 - If cert is valid but slab looks tampered → mark `slabIntact: false` → trade fails for that leg
@@ -391,6 +392,7 @@ A card could be cracked from a lower-grade slab, re-submitted for grading, and r
 ### 7.3 Grade Mismatch at Verification
 
 If authenticator cert lookup reveals a different grade than listed:
+
 - `gradMatchesListing: false`
 - Verification FAILS
 - Trade leg enters FAILED status
@@ -404,6 +406,7 @@ If authenticator cert lookup reveals a different grade than listed:
 ### 7.5 Price Disparity Between Companies
 
 A PSA 9 may be worth more than a BGS 9.0 for the same card. This is handled by prices:
+
 - The PSA holder sets a higher `askPrice`
 - The BGS holder sets a lower `askPrice`
 - Edge construction requires `bidPrice >= askPrice`
@@ -415,17 +418,17 @@ The market speaks through prices. The engine doesn't need to encode company pres
 
 ## 8. Implementation Order
 
-| Phase | What | Files | Depends On |
-|-------|------|-------|-----------|
-| **1** | Schema migration: `GradingCompany` enum, `GradedHaveListing`, `GradedWantListing`, TradeLeg modifications | `prisma/schema.prisma` | — |
-| **2** | Domain types: `GradingCompany` enum, grade validation, canonical grade normalization | `src/types/domain.ts`, NEW `src/lib/grading.ts` | Phase 1 |
-| **3** | Validators: Zod schemas for graded listing creation | `src/lib/validators.ts` | Phase 2 |
-| **4** | Graded edge builder: `buildGradedEdges()` | NEW `src/server/matching/graded-edge-builder.ts` | Phase 2 |
-| **5** | Matching integration: load graded listings, build graded edges, run separate cycle finding, merge proposals | `src/server/services/matching.service.ts` | Phase 4 |
-| **6** | Scorer: add `gradeMatchBonus` and `crossCompanyPenalty` | `src/server/matching/scorer.ts` | Phase 5 |
-| **7** | Slab verification service: cert lookup, verification result | NEW `src/server/services/slab-verification.service.ts` | Phase 1 |
-| **8** | API routes: create/list graded listings | `src/app/api/` | Phase 3 |
-| **9** | UI: listing form toggle (raw/graded), graded listing display, match display | `src/components/` | Phase 8 |
+| Phase | What                                                                                                        | Files                                                  | Depends On |
+| ----- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ---------- |
+| **1** | Schema migration: `GradingCompany` enum, `GradedHaveListing`, `GradedWantListing`, TradeLeg modifications   | `prisma/schema.prisma`                                 | —          |
+| **2** | Domain types: `GradingCompany` enum, grade validation, canonical grade normalization                        | `src/types/domain.ts`, NEW `src/lib/grading.ts`        | Phase 1    |
+| **3** | Validators: Zod schemas for graded listing creation                                                         | `src/lib/validators.ts`                                | Phase 2    |
+| **4** | Graded edge builder: `buildGradedEdges()`                                                                   | NEW `src/server/matching/graded-edge-builder.ts`       | Phase 2    |
+| **5** | Matching integration: load graded listings, build graded edges, run separate cycle finding, merge proposals | `src/server/services/matching.service.ts`              | Phase 4    |
+| **6** | Scorer: add `gradeMatchBonus` and `crossCompanyPenalty`                                                     | `src/server/matching/scorer.ts`                        | Phase 5    |
+| **7** | Slab verification service: cert lookup, verification result                                                 | NEW `src/server/services/slab-verification.service.ts` | Phase 1    |
+| **8** | API routes: create/list graded listings                                                                     | `src/app/api/`                                         | Phase 3    |
+| **9** | UI: listing form toggle (raw/graded), graded listing display, match display                                 | `src/components/`                                      | Phase 8    |
 
 ---
 
@@ -448,10 +451,10 @@ This is the power of the existing architecture: the **trade execution layer** is
 
 ## 10. Open Questions for Product Decision
 
-| # | Question | Options | Recommendation |
-|---|----------|---------|---------------|
-| 1 | Should BGS 9.5 match as equivalent to PSA 10? | Strict (no) / Loose (yes) / User choice | **User choice** — let want listing specify tolerance |
-| 2 | Start with all companies or PSA-only? | All / PSA-only for v1 | **PSA-only** for v1 — reliable cert API, largest market share |
-| 3 | Can authenticator inventory include slabs? | Yes / No | **Yes** — enables graded altruistic chains |
-| 4 | Minimum grade for listing? | 1 / 5 / 7 | **No minimum** — market decides what's worth trading |
-| 5 | Photo approval threshold for graded cards? | Same as raw ($50) / Higher ($200) / Always | **$200** — slabs provide more confidence than raw |
+| #   | Question                                      | Options                                    | Recommendation                                                |
+| --- | --------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
+| 1   | Should BGS 9.5 match as equivalent to PSA 10? | Strict (no) / Loose (yes) / User choice    | **User choice** — let want listing specify tolerance          |
+| 2   | Start with all companies or PSA-only?         | All / PSA-only for v1                      | **PSA-only** for v1 — reliable cert API, largest market share |
+| 3   | Can authenticator inventory include slabs?    | Yes / No                                   | **Yes** — enables graded altruistic chains                    |
+| 4   | Minimum grade for listing?                    | 1 / 5 / 7                                  | **No minimum** — market decides what's worth trading          |
+| 5   | Photo approval threshold for graded cards?    | Same as raw ($50) / Higher ($200) / Always | **$200** — slabs provide more confidence than raw             |

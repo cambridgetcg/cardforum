@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { CardSearch } from "@/components/listings/card-search";
-import { CONDITION_LABELS, TCG_LABELS, formatPrice, type TCG, type Condition } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  TCG_LABELS,
+  formatPrice,
+  type TCG,
+  type Condition,
+} from "@/types/domain";
 import { X } from "lucide-react";
 
 interface SelectedCard {
@@ -46,7 +52,7 @@ export function CreateDigitisationForm({
     fetch("/api/authenticator?vault=true")
       .then((res) => res.json())
       .then((data) => {
-        const list = Array.isArray(data) ? data : data.authenticators ?? [];
+        const list = Array.isArray(data) ? data : (data.authenticators ?? []);
         setVaults(list);
         if (list.length > 0) setAuthenticatorId(list[0].id);
       })
@@ -106,9 +112,7 @@ export function CreateDigitisationForm({
         </div>
 
         <div className="max-h-[70vh] overflow-y-auto px-6 py-4">
-          {step === "card" && (
-            <CardSearch onSelect={handleCardSelect} mode="select" />
-          )}
+          {step === "card" && <CardSearch onSelect={handleCardSelect} mode="select" />}
 
           {step === "details" && selectedCard && (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -130,15 +134,11 @@ export function CreateDigitisationForm({
                 </div>
               </div>
 
-              {error && (
-                <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-              )}
+              {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
               {/* Condition selector */}
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Card Condition
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Card Condition</label>
                 <p className="mt-0.5 text-xs text-gray-500">
                   Declare the condition — the vault authenticator will verify
                 </p>
@@ -174,7 +174,7 @@ export function CreateDigitisationForm({
                   <select
                     value={authenticatorId}
                     onChange={(e) => setAuthenticatorId(e.target.value)}
-                    className="mt-2 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 focus:border-indigo-300 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+                    className="mt-2 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 focus:outline-none"
                   >
                     {vaults.map((v) => (
                       <option key={v.id} value={v.id}>

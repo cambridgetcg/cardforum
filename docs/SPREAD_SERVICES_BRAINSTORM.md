@@ -1,6 +1,6 @@
 # Bid/Ask Spread — Extension Services & Product Potential
 
-*Brainstorm grounded in stock/commodities market analogies and CardForum's existing infrastructure.*
+_Brainstorm grounded in stock/commodities market analogies and CardForum's existing infrastructure._
 
 ---
 
@@ -15,9 +15,11 @@ CardForum's bid/ask data is the seed of that same ecosystem for trading cards.
 ## 1. Market Making — Authenticators as Designated Market Makers
 
 ### Stock Market Reference
+
 NYSE Designated Market Makers (DMMs) are obligated to maintain fair and orderly markets for assigned securities. They post bids and asks, provide liquidity, and earn the spread as compensation. In return, they get informational advantages and fee rebates.
 
 ### CardForum Mapping
+
 **Authenticators already hold card inventory** (`AuthenticatorInventory` model exists). They physically receive, verify, and store cards. This is embryonic market making — they have the supply and the trust layer.
 
 **Extension: Authenticator-as-Market-Maker**
@@ -34,6 +36,7 @@ Revenue model shift:
 The `chain-finder.ts` already uses authenticator inventory as **chain anchors** — supply-side starting points for altruistic chains. This is the execution mechanism: an authenticator supplies a card from their inventory to satisfy a want listing, then restocks from an incoming have listing. The spread between what they pay (bid) and what they sell at (ask) is their profit.
 
 **Tier implications** (from `constants.ts`):
+
 - STANDARD authenticators: market-make for cards < $100 (their value cap)
 - VERIFIED: cards < $500
 - PREMIUM: unlimited — the high-value market makers who post insurance bonds
@@ -45,9 +48,11 @@ The `chain-finder.ts` already uses authenticator inventory as **chain anchors** 
 ## 2. Order Book Depth — Level 2 Data
 
 ### Stock Market Reference
+
 Level 1 data shows best bid/ask. Level 2 (order book depth) shows all price levels and quantities. Traders use depth to gauge supply/demand pressure, identify support/resistance levels, and time entries.
 
 ### CardForum Mapping
+
 The marketplace currently shows only `bestBid` and `bestAsk`. But the database holds **all** active listings with their prices.
 
 **Extension: Depth View**
@@ -75,9 +80,11 @@ Qty  Price                   Price  Qty
 ## 3. Cross-Regional Arbitrage — NBBO for Trading Cards
 
 ### Stock Market Reference
+
 SEC Regulation NMS (National Market System) requires brokers to route orders to the exchange offering the National Best Bid and Offer (NBBO). This prevents exchanges from fragmenting into isolated pools with different prices for the same stock.
 
 ### CardForum Mapping
+
 CardForum IS a multi-region marketplace. The same card can have different bid/ask spreads in different regions:
 
 ```
@@ -93,6 +100,7 @@ NEW YORK: Bid $6.00 / Ask $8.50  (spread 34%)
 **Extension: Arbitrage Scanner**
 
 Surface opportunities to users:
+
 > "Alvida is $2.50 cheaper in Berlin than Tokyo. A bridge trade could save you $2.50 — want to match?"
 
 This is the CardForum equivalent of smart order routing. The platform captures value by routing trades through the cheapest region.
@@ -102,21 +110,23 @@ This is the CardForum equivalent of smart order routing. The platform captures v
 ## 4. Card Indices — S&P 500 for TCGs
 
 ### Stock Market Reference
+
 Market indices aggregate individual security prices into composite metrics. The S&P 500 tracks 500 stocks. Sector indices track industry groups. These enable portfolio benchmarking, ETF construction, and market sentiment analysis.
 
 ### CardForum Mapping
 
 **Potential indices from bid/ask data:**
 
-| Index | Composition | Analogy |
-|-------|-------------|---------|
-| **OP01 Index** | Average midpoint of all Romance Dawn cards | Set-level index (like sector ETF) |
-| **Leader Index** | Top leader-rarity cards across all TCGs | Blue-chip index |
-| **Meta Index** | Competitively relevant cards (tournament staples) | Momentum index |
-| **Regional Index** | Same card basket, priced per region | Regional exchange composite |
-| **Spread Index** | Average spread width across all cards | VIX-like liquidity/volatility gauge |
+| Index              | Composition                                       | Analogy                             |
+| ------------------ | ------------------------------------------------- | ----------------------------------- |
+| **OP01 Index**     | Average midpoint of all Romance Dawn cards        | Set-level index (like sector ETF)   |
+| **Leader Index**   | Top leader-rarity cards across all TCGs           | Blue-chip index                     |
+| **Meta Index**     | Competitively relevant cards (tournament staples) | Momentum index                      |
+| **Regional Index** | Same card basket, priced per region               | Regional exchange composite         |
+| **Spread Index**   | Average spread width across all cards             | VIX-like liquidity/volatility gauge |
 
 **Product value**:
+
 - Portfolio tracking: "Your collection is worth $1,240 (+3.2% this week)"
 - Trend analysis: "The OP01 Index rose 8% after the new ban list announcement"
 - Investment signals: "The Spread Index is widening — liquidity is drying up"
@@ -128,7 +138,9 @@ Market indices aggregate individual security prices into composite metrics. The 
 ## 5. Maker-Taker Fee Model — Spread-Based Platform Fees
 
 ### Stock Market Reference
+
 Most electronic exchanges use maker-taker pricing:
+
 - **Makers** (limit orders that add liquidity to the book) get **rebates**
 - **Takers** (market orders that remove liquidity) pay **fees**
 - This incentivizes tight spreads and deep order books
@@ -158,19 +170,20 @@ Spread improvement behavior:
 ## 6. Market Data API — Bloomberg for TCGs
 
 ### Stock Market Reference
+
 Market data is a multi-billion dollar industry. Bloomberg ($11B revenue), Refinitiv, ICE Data Services. Even exchanges sell their own data feeds.
 
 ### CardForum Mapping
 
 **Data products from bid/ask:**
 
-| Product | Consumers | Pricing Model |
-|---------|-----------|---------------|
-| **Real-time card prices** (best bid/ask per card) | Card shops, content creators | API subscription |
-| **Historical price data** (OHLC-style candles from daily bid/ask) | Portfolio trackers, analytics | Tiered API pricing |
-| **Trade tape** (completed trades with prices) | Price guides, market researchers | Per-query or bulk |
-| **Spread analytics** (width, depth, trend) | Algorithmic traders, shops | Premium tier |
-| **Regional price feeds** | Cross-border traders, arbitrageurs | Premium tier |
+| Product                                                           | Consumers                          | Pricing Model      |
+| ----------------------------------------------------------------- | ---------------------------------- | ------------------ |
+| **Real-time card prices** (best bid/ask per card)                 | Card shops, content creators       | API subscription   |
+| **Historical price data** (OHLC-style candles from daily bid/ask) | Portfolio trackers, analytics      | Tiered API pricing |
+| **Trade tape** (completed trades with prices)                     | Price guides, market researchers   | Per-query or bulk  |
+| **Spread analytics** (width, depth, trend)                        | Algorithmic traders, shops         | Premium tier       |
+| **Regional price feeds**                                          | Cross-border traders, arbitrageurs | Premium tier       |
 
 **Implementation**: Most of this is already queryable from the existing database. The main work is building a public API layer with authentication and rate limiting.
 
@@ -179,6 +192,7 @@ Market data is a multi-billion dollar industry. Bloomberg ($11B revenue), Refini
 ## 7. Price Discovery — From Reference Pricing to Live Markets
 
 ### Commodities Market Reference
+
 Commodity spot prices are set through **continuous auction** (futures exchanges) or **fixing** (London Gold Fix — twice-daily benchmark set by banks). The key distinction: reference prices are backward-looking (last sale), while live bid/ask is forward-looking (what people are willing to pay NOW).
 
 ### CardForum Mapping
@@ -192,6 +206,7 @@ CardForum's bid/ask system provides **forward-looking price discovery**: what pe
 If CardForum achieves sufficient liquidity, its bid/ask midpoint becomes the canonical price for a card. This is how exchanges work — the NYSE doesn't set stock prices, the order book does. Third parties reference the exchange price.
 
 **Value chain**:
+
 ```
 CardForum bid/ask data
   → Midpoint becomes "market price"
@@ -205,6 +220,7 @@ CardForum bid/ask data
 ## 8. Settlement Pricing — Beyond Simple Ask Price
 
 ### Stock Market Reference
+
 Stock trades settle at the traded price. But for block trades, illiquid securities, and after-hours trading, settlement mechanisms vary: VWAP (volume-weighted average price), TWAP (time-weighted), closing auction price, etc.
 
 ### CardForum Mapping
@@ -213,12 +229,12 @@ Currently: settlement at `leg.askPrice` (`bridge-builder.ts:104-109`). The selle
 
 **Extension: Spread-Aware Settlement**
 
-| Method | Formula | When to Use |
-|--------|---------|-------------|
-| **Ask price** (current) | Settlement = askPrice | Default — simple, seller sets terms |
-| **Midpoint** | Settlement = (bid + ask) / 2 | When spread is wide — fairer to both parties |
-| **Buyer-favorable** | Settlement = bid + (spread × 0.3) | Incentivize buyers in low-liquidity markets |
-| **VWAP** | Weighted avg of recent completed trades | For high-volume cards with trade history |
+| Method                  | Formula                                 | When to Use                                  |
+| ----------------------- | --------------------------------------- | -------------------------------------------- |
+| **Ask price** (current) | Settlement = askPrice                   | Default — simple, seller sets terms          |
+| **Midpoint**            | Settlement = (bid + ask) / 2            | When spread is wide — fairer to both parties |
+| **Buyer-favorable**     | Settlement = bid + (spread × 0.3)       | Incentivize buyers in low-liquidity markets  |
+| **VWAP**                | Weighted avg of recent completed trades | For high-volume cards with trade history     |
 
 **Effect on escrow**: Escrow amount could be based on midpoint rather than full ask. This reduces capital lockup for buyers while still protecting sellers.
 
@@ -229,6 +245,7 @@ Currently: settlement at `leg.askPrice` (`bridge-builder.ts:104-109`). The selle
 ## 9. Circuit Breakers & Price Guards
 
 ### Stock Market Reference
+
 Exchanges halt trading when prices move too fast: NYSE Rule 80B (market-wide), LULD (limit up-limit down per stock). This prevents flash crashes and manipulation.
 
 ### CardForum Mapping
@@ -248,6 +265,7 @@ IF spread exceeds 80% of midpoint → WARN users "thin market"
 ## 10. Liquidity Mining — Incentivized Spread Compression
 
 ### DeFi Reference
+
 Decentralized exchanges (Uniswap, Curve) incentivize liquidity providers with token rewards. Users who deposit assets into liquidity pools earn trading fees + reward tokens. This bootstraps liquidity in new markets.
 
 ### CardForum Mapping
@@ -276,6 +294,7 @@ Reward types:
 ## 11. Authenticator Inventory as a Lending Pool
 
 ### Securities Lending Reference
+
 In stock markets, securities lending allows short selling: Broker A lends shares to Broker B, who sells them and later repurchases (hopefully at a lower price). The lender earns a lending fee.
 
 ### CardForum Mapping
@@ -328,15 +347,15 @@ Lending fee: based on card's spread × time
 
 ### Revenue Impact Estimate
 
-| Service | Revenue Type | Dependency |
-|---------|-------------|------------|
-| Market Data API | Subscription (recurring) | Sufficient listing volume |
-| Maker-Taker Fees | Per-transaction (variable) | Fee model change |
-| Premium Analytics | Subscription (recurring) | Index construction |
-| Authenticator Market Making | Spread income (variable) | Inventory system |
-| Inventory Lending | Lending fees (variable) | Authenticator adoption |
-| Liquidity Mining | Cost center (investment) | Cold start strategy |
-| Arbitrage Scanner | Freemium feature | Multi-region data |
+| Service                     | Revenue Type               | Dependency                |
+| --------------------------- | -------------------------- | ------------------------- |
+| Market Data API             | Subscription (recurring)   | Sufficient listing volume |
+| Maker-Taker Fees            | Per-transaction (variable) | Fee model change          |
+| Premium Analytics           | Subscription (recurring)   | Index construction        |
+| Authenticator Market Making | Spread income (variable)   | Inventory system          |
+| Inventory Lending           | Lending fees (variable)    | Authenticator adoption    |
+| Liquidity Mining            | Cost center (investment)   | Cold start strategy       |
+| Arbitrage Scanner           | Freemium feature           | Multi-region data         |
 
 ### Implementation Priority
 

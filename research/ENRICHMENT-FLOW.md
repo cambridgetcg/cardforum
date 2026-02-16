@@ -243,14 +243,14 @@ card_variants table:
 
 Based on Cardmarket HTML patterns:
 
-| Field | Success Rate | Notes |
-|-------|--------------|-------|
-| **Rarity** | 95% | Clearly marked on all card pages |
-| **Card Type** | 90% | Mostly consistent, some edge cases |
-| **Effect Text** | 85% | Often present, formatting varies |
-| **Power/Cost** | 80% | Not always displayed (support cards) |
-| **Release Date** | 70% | Only from set metadata, not per-card |
-| **Any Field** | 98% | At least one enrichment field present |
+| Field            | Success Rate | Notes                                 |
+| ---------------- | ------------ | ------------------------------------- |
+| **Rarity**       | 95%          | Clearly marked on all card pages      |
+| **Card Type**    | 90%          | Mostly consistent, some edge cases    |
+| **Effect Text**  | 85%          | Often present, formatting varies      |
+| **Power/Cost**   | 80%          | Not always displayed (support cards)  |
+| **Release Date** | 70%          | Only from set metadata, not per-card  |
+| **Any Field**    | 98%          | At least one enrichment field present |
 
 **Overall**: 4,300 cards → 4,234 enriched (98.5% success)
 
@@ -326,6 +326,7 @@ model CardVariant {
 ```
 
 **Migration path**:
+
 1. Add columns as nullable (no data loss)
 2. Populate from enriched JSON during import
 3. Existing data unaffected

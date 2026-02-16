@@ -33,11 +33,14 @@ export class BrightDataClient {
    * Fetch a URL through Bright Data's Web Unlocker REST API.
    * Handles Cloudflare challenges server-side.
    */
-  async fetch(url: string, options?: {
-    format?: "html" | "json";
-    country?: string;
-    timeout?: number;
-  }): Promise<FetchResult<string>> {
+  async fetch(
+    url: string,
+    options?: {
+      format?: "html" | "json";
+      country?: string;
+      timeout?: number;
+    },
+  ): Promise<FetchResult<string>> {
     const start = Date.now();
     const { format = "html", country, timeout = 120000 } = options ?? {};
 
@@ -99,10 +102,13 @@ export class BrightDataClient {
   /**
    * Fetch a URL and parse JSON response.
    */
-  async fetchJson<T = unknown>(url: string, options?: {
-    country?: string;
-    timeout?: number;
-  }): Promise<FetchResult<T>> {
+  async fetchJson<T = unknown>(
+    url: string,
+    options?: {
+      country?: string;
+      timeout?: number;
+    },
+  ): Promise<FetchResult<T>> {
     const result = await this.fetch(url, { ...options, format: "json" });
     if (!result.success || !result.data) {
       return { ...result, data: undefined } as FetchResult<T>;
@@ -125,10 +131,13 @@ export class BrightDataClient {
    * Direct API call without proxy — for public APIs that don't need
    * anti-bot bypassing (e.g., pokemontcg.io, scryfall.com/api).
    */
-  async fetchDirect<T = unknown>(url: string, options?: {
-    headers?: Record<string, string>;
-    timeout?: number;
-  }): Promise<FetchResult<T>> {
+  async fetchDirect<T = unknown>(
+    url: string,
+    options?: {
+      headers?: Record<string, string>;
+      timeout?: number;
+    },
+  ): Promise<FetchResult<T>> {
     const start = Date.now();
     const { headers = {}, timeout = 15000 } = options ?? {};
 
@@ -194,12 +203,11 @@ export async function loadBrightDataConfig(): Promise<BrightDataConfig> {
 
   // Fall back to AWS Secrets Manager
   try {
-    const { SecretsManagerClient, GetSecretValueCommand } = await import(
-      "@aws-sdk/client-secrets-manager"
-    );
+    const { SecretsManagerClient, GetSecretValueCommand } =
+      await import("@aws-sdk/client-secrets-manager");
     const client = new SecretsManagerClient({ region: "us-east-1" });
     const result = await client.send(
-      new GetSecretValueCommand({ SecretId: "brightdata/web-unlocker" })
+      new GetSecretValueCommand({ SecretId: "brightdata/web-unlocker" }),
     );
     const secret = JSON.parse(result.SecretString ?? "{}");
     return {
@@ -208,7 +216,7 @@ export async function loadBrightDataConfig(): Promise<BrightDataConfig> {
     };
   } catch (error) {
     throw new Error(
-      `Failed to load Bright Data config: ${error instanceof Error ? error.message : String(error)}`
+      `Failed to load Bright Data config: ${error instanceof Error ? error.message : String(error)}`,
     );
   }
 }

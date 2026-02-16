@@ -73,11 +73,7 @@ export class StripePaymentAdapter implements IPaymentProvider {
     const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
     if (!webhookSecret) throw new Error("STRIPE_WEBHOOK_SECRET not configured");
 
-    const event = this.stripe.webhooks.constructEvent(
-      payload,
-      signature,
-      webhookSecret,
-    );
+    const event = this.stripe.webhooks.constructEvent(payload, signature, webhookSecret);
 
     return mapStripeEvent(event);
   }
@@ -89,10 +85,12 @@ export class StripePaymentAdapter implements IPaymentProvider {
       currency: params.currency,
       capture_method: params.captureMethod,
       metadata: params.metadata,
-      ...(params.paymentMethodId ? {
-        payment_method: params.paymentMethodId,
-        confirm: true,
-      } : {}),
+      ...(params.paymentMethodId
+        ? {
+            payment_method: params.paymentMethodId,
+            confirm: true,
+          }
+        : {}),
     });
 
     return {
@@ -104,9 +102,8 @@ export class StripePaymentAdapter implements IPaymentProvider {
 
   async capturePaymentIntent(paymentIntentId: string): Promise<{ chargeId: string }> {
     const pi = await this.stripe.paymentIntents.capture(paymentIntentId);
-    const chargeId = typeof pi.latest_charge === "string"
-      ? pi.latest_charge
-      : pi.latest_charge?.id ?? "";
+    const chargeId =
+      typeof pi.latest_charge === "string" ? pi.latest_charge : (pi.latest_charge?.id ?? "");
     return { chargeId };
   }
 
@@ -225,7 +222,9 @@ function mapStripeEvent(event: Stripe.Event): PaymentWebhookEvent {
       return {
         type: "transfer.failed",
         transferId: transfer.id,
-        reason: ((transfer as unknown as Record<string, unknown>).failure_message as string) ?? "Transfer failed",
+        reason:
+          ((transfer as unknown as Record<string, unknown>).failure_message as string) ??
+          "Transfer failed",
       };
     }
     case "transfer.reversed": {

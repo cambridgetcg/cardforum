@@ -12,16 +12,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
           {
             "bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary-ring":
               variant === "primary",
             "bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-muted":
               variant === "secondary",
-            "border border-border bg-transparent hover:bg-secondary focus-visible:ring-muted":
+            "border-border hover:bg-secondary focus-visible:ring-muted border bg-transparent":
               variant === "outline",
-            "bg-transparent hover:bg-secondary focus-visible:ring-muted":
-              variant === "ghost",
+            "hover:bg-secondary focus-visible:ring-muted bg-transparent": variant === "ghost",
             "bg-destructive text-destructive-foreground hover:bg-destructive-hover focus-visible:ring-destructive-ring":
               variant === "destructive",
           },
@@ -30,12 +29,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             "h-10 px-4 text-sm": size === "md",
             "h-12 px-6 text-base": size === "lg",
           },
-          className
+          className,
         )}
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

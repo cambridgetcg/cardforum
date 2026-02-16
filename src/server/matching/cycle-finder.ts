@@ -21,6 +21,7 @@ export interface ListingEdge {
   haveRegion: string;
   wantRegion: string;
   condition: string;
+  language: string; // card language (EN, JP) — partitions the order book
   askPrice: number; // cents — from HaveListing
   bidPrice: number; // cents — from WantListing
 }
@@ -33,14 +34,14 @@ export interface Cycle {
 }
 
 const MAX_CYCLE_DEPTH = 6;
+const MAX_CYCLES_PER_NODE = 100; // cap per starting user to prevent explosion on dense graphs
+const MAX_TOTAL_CYCLES = 5000; // global cap across all starting nodes
 
 /**
  * Build adjacency list from listing edges.
  * Key: userId who HAS a card -> edges where someone WANTs that card from them.
  */
-function buildAdjacencyList(
-  edges: ListingEdge[]
-): Map<string, ListingEdge[]> {
+function buildAdjacencyList(edges: ListingEdge[]): Map<string, ListingEdge[]> {
   const adj = new Map<string, ListingEdge[]>();
   for (const edge of edges) {
     const list = adj.get(edge.haveUserId) ?? [];
@@ -51,10 +52,11 @@ function buildAdjacencyList(
 }
 
 /**
- * Find all cycles in the listing graph using bounded DFS.
+ * Find cycles in the listing graph using bounded DFS.
  *
  * For each starting node, DFS up to MAX_CYCLE_DEPTH.
  * A cycle is detected when we reach the start node again.
+ * Capped at MAX_CYCLES_PER_NODE per user and MAX_TOTAL_CYCLES globally.
  */
 export function findCycles(edges: ListingEdge[]): Cycle[] {
   if (edges.length === 0) return [];
@@ -71,7 +73,16 @@ export function findCycles(edges: ListingEdge[]): Cycle[] {
 
   for (const startUser of userIds) {
     if (!adj.has(startUser)) continue;
+    if (cycles.length >= MAX_TOTAL_CYCLES) break;
+
+    const before = cycles.length;
     dfs(startUser, startUser, [], new Set([startUser]), adj, cycles, seen);
+
+    // If this node produced too many cycles, trim to the limit
+    // (shorter cycles are found first by DFS, so they're naturally prioritized)
+    if (cycles.length - before > MAX_CYCLES_PER_NODE) {
+      cycles.length = before + MAX_CYCLES_PER_NODE;
+    }
   }
 
   return cycles;
@@ -84,7 +95,7 @@ function dfs(
   visited: Set<string>,
   adj: Map<string, ListingEdge[]>,
   cycles: Cycle[],
-  seen: Set<string>
+  seen: Set<string>,
 ): void {
   if (path.length >= MAX_CYCLE_DEPTH) return;
 

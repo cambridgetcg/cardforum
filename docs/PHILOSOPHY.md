@@ -49,59 +49,59 @@ Every module in CardForum has a role relative to the bridge. This taxonomy class
 
 The bridge mechanism itself. Without these, cards cross borders.
 
-| Module | Role |
-|--------|------|
-| `cycle-finder.ts` | Graph cycle detection — the algorithm that finds local equivalents |
-| `bridge-builder.ts` | Regional balance tracking + proposal construction from cycles |
-| `scorer.ts` | Locality scoring — the least-action functional that prefers minimal movement |
-| `packer.ts` | Non-overlapping proposal selection — maximises matches at minimum total movement |
-| `chain-finder.ts` | Authenticator inventory seeding — altruistic chains from authenticator stock |
-| `matching.service.ts` | Orchestrates the full pipeline: edges → cycles → proposals → scores → selection |
-| `listing.service.ts` | Graph inputs — each have/want listing is an edge with region, condition, price |
+| Module                | Role                                                                             |
+| --------------------- | -------------------------------------------------------------------------------- |
+| `cycle-finder.ts`     | Graph cycle detection — the algorithm that finds local equivalents               |
+| `bridge-builder.ts`   | Regional balance tracking + proposal construction from cycles                    |
+| `scorer.ts`           | Locality scoring — the least-action functional that prefers minimal movement     |
+| `packer.ts`           | Non-overlapping proposal selection — maximises matches at minimum total movement |
+| `chain-finder.ts`     | Authenticator inventory seeding — altruistic chains from authenticator stock     |
+| `matching.service.ts` | Orchestrates the full pipeline: edges → cycles → proposals → scores → selection  |
+| `listing.service.ts`  | Graph inputs — each have/want listing is an edge with region, condition, price   |
 
 #### Tier 2 — Bridge Trust (8 modules)
 
 Make the bridge trustworthy. Without these, the bridge exists but nobody would use it.
 
-| Module | Role |
-|--------|------|
-| `authenticator.service.ts` | Local verifiers — the bridge's physical presence in each region |
-| `trade.service.ts` | State machine orchestrating bridge execution (DIRECT and AUTHENTICATED paths) |
-| `escrow.service.ts` | Holds funds atomically during multi-leg settlement |
-| `wallet.service.ts` | Double-entry ledger for multi-user atomic settlement |
-| `shipping.service.ts` | Local fulfillment logistics — address locking, SLA enforcement, evidence chain |
-| `fee.service.ts` | Funds authenticator work per leg — bridges only function if authenticators are compensated |
-| `photo-approval.service.ts` | Trust gate before authenticator handoff — prevents fraud on high-value legs |
-| `dispute.service.ts` | Trust failure resolution — financial consequences keep multi-party bridge honest |
+| Module                      | Role                                                                                       |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| `authenticator.service.ts`  | Local verifiers — the bridge's physical presence in each region                            |
+| `trade.service.ts`          | State machine orchestrating bridge execution (DIRECT and AUTHENTICATED paths)              |
+| `escrow.service.ts`         | Holds funds atomically during multi-leg settlement                                         |
+| `wallet.service.ts`         | Double-entry ledger for multi-user atomic settlement                                       |
+| `shipping.service.ts`       | Local fulfillment logistics — address locking, SLA enforcement, evidence chain             |
+| `fee.service.ts`            | Funds authenticator work per leg — bridges only function if authenticators are compensated |
+| `photo-approval.service.ts` | Trust gate before authenticator handoff — prevents fraud on high-value legs                |
+| `dispute.service.ts`        | Trust failure resolution — financial consequences keep multi-party bridge honest           |
 
 #### Tier 3 — Bridge Quality (11 modules)
 
 Improve bridge reliability, compliance, or economics. The bridge works without them, but worse.
 
-| Module | Role |
-|--------|------|
-| `authenticator-rating.service.ts` | Trust scoring improves authenticator assignment quality |
-| `tier-promotion.service.ts` | Gates card value per authenticator tier — protects high-value bridge legs |
-| `random-audit.service.ts` | QA on authenticator work — maintains verification standards |
-| `reserve-assignment.service.ts` | Failover if primary authenticator declines — keeps bridge legs moving |
-| `ai-grading.service.ts` | Condition pre-fill reduces listing friction — more listings = denser graph |
-| `condition-comparison.service.ts` | AI calibration via authenticator comparison — improves condition accuracy |
-| `condition-trust.service.ts` | Seller reputation from AI agreement rate — trust signal for matching |
-| `graded-listing.service.ts` | Parallel market for professionally certified cards |
-| `graded-edge-builder.ts` | Graded card matching pipeline — separate pool with stricter condition rules |
-| `kyc.service.ts` | Compliance gate on trade value — legal requirement for high-value bridge trades |
-| `slab-verification.service.ts` | External grading validation — verifies third-party certification |
+| Module                            | Role                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------------- |
+| `authenticator-rating.service.ts` | Trust scoring improves authenticator assignment quality                         |
+| `tier-promotion.service.ts`       | Gates card value per authenticator tier — protects high-value bridge legs       |
+| `random-audit.service.ts`         | QA on authenticator work — maintains verification standards                     |
+| `reserve-assignment.service.ts`   | Failover if primary authenticator declines — keeps bridge legs moving           |
+| `ai-grading.service.ts`           | Condition pre-fill reduces listing friction — more listings = denser graph      |
+| `condition-comparison.service.ts` | AI calibration via authenticator comparison — improves condition accuracy       |
+| `condition-trust.service.ts`      | Seller reputation from AI agreement rate — trust signal for matching            |
+| `graded-listing.service.ts`       | Parallel market for professionally certified cards                              |
+| `graded-edge-builder.ts`          | Graded card matching pipeline — separate pool with stricter condition rules     |
+| `kyc.service.ts`                  | Compliance gate on trade value — legal requirement for high-value bridge trades |
+| `slab-verification.service.ts`    | External grading validation — verifies third-party certification                |
 
 #### Bridge-Independent (4 modules)
 
 Orthogonal to the bridge. Work the same whether cards bridge or not.
 
-| Module | Role |
-|--------|------|
-| `digital-token.service.ts` | Digital card minting and management |
+| Module                     | Role                                                  |
+| -------------------------- | ----------------------------------------------------- |
+| `digital-token.service.ts` | Digital card minting and management                   |
 | `digital-trade.service.ts` | Digital marketplace buy/sell — no physical cards move |
-| `digitisation.service.ts` | Physical → digital conversion |
-| `redemption.service.ts` | Digital → physical reconversion |
+| `digitisation.service.ts`  | Physical → digital conversion                         |
+| `redemption.service.ts`    | Digital → physical reconversion                       |
 
 **Financial infrastructure** (`connect.service.ts`, `payout.service.ts`, `stripe.service.ts`) serves the bridge indirectly by funding wallets and authenticator payouts, but is generic payment plumbing not specific to the bridge mechanism.
 
@@ -135,13 +135,13 @@ The question for every feature is: **who should hold the trust?**
 
 Five positions, from most centralised to most decentralised:
 
-| Position | Description | Trust Holder | Example |
-|----------|-------------|--------------|---------|
-| **Fully Centralised** | Platform controls all decisions and execution | Platform alone | KYC document review |
-| **Platform-Governed** | Platform sets rules and enforces them; users have constrained choice | Platform, with user input | Matching with user preferences |
-| **Hybrid** | Platform and community share control; neither can act unilaterally | Split between platform and participants | Authenticator network (admin approves, community rates) |
-| **Community-Governed** | Community makes decisions within platform-defined boundaries | Community, with platform guardrails | Authenticator fee markets within bounds |
-| **Fully Decentralised** | Users control their own assets and decisions; platform is infrastructure | Users directly | Self-custodial wallets, market pricing |
+| Position                | Description                                                              | Trust Holder                            | Example                                                 |
+| ----------------------- | ------------------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------------- |
+| **Fully Centralised**   | Platform controls all decisions and execution                            | Platform alone                          | KYC document review                                     |
+| **Platform-Governed**   | Platform sets rules and enforces them; users have constrained choice     | Platform, with user input               | Matching with user preferences                          |
+| **Hybrid**              | Platform and community share control; neither can act unilaterally       | Split between platform and participants | Authenticator network (admin approves, community rates) |
+| **Community-Governed**  | Community makes decisions within platform-defined boundaries             | Community, with platform guardrails     | Authenticator fee markets within bounds                 |
+| **Fully Decentralised** | Users control their own assets and decisions; platform is infrastructure | Users directly                          | Self-custodial wallets, market pricing                  |
 
 A module's position is not its quality. Fully Centralised is correct for KYC (regulatory requirement). Fully Decentralised is correct for pricing (market knows better than admin). The wrong position — in either direction — is what creates problems.
 
@@ -151,20 +151,20 @@ A module's position is not its quality. Fully Centralised is correct for KYC (re
 
 ### Current State and Target State
 
-| Module | Current Position | Phase 3 Target | Rationale |
-|--------|-----------------|----------------|-----------|
-| **Matching Engine** | Fully Centralised (algorithmic, opaque) | Platform-Governed (transparent scoring, user preferences) | Fairness requires algorithmic neutrality; user choice improves adoption |
-| **Authenticator Network** | Hybrid (admin approval, algorithmic assignment, community ratings) | Community-Governed (community voting on applications, user-selected authenticators) | Trust must be earned progressively; community skin-in-the-game reduces platform liability |
-| **Escrow / Wallet** | Fully Centralised (platform custody) | Hybrid (smart contract escrow opt-in, platform fallback) | Custody is a liability; on-chain escrow shifts trust from platform promise to verifiable code |
-| **Dispute Resolution** | Fully Centralised (admin-only arbitration) | Hybrid (tiered: peer review → community arbitrator → admin escalation) | Admin arbitration doesn't scale; community arbitration builds stakeholder trust |
-| **KYC** | Fully Centralised (admin document review) | Platform-Governed (automated tier 1, manual review for tier 2+) | Regulatory compliance requires centralisation; automation reduces the bottleneck |
-| **Pricing** | Fully Decentralised (market-driven bid/ask) | Fully Decentralised (keep as-is) | Market pricing is already the right answer — admin price-setting would be worse |
-| **Fees** | Fully Centralised (hardcoded constants) | Hybrid (authenticators set own fees within platform bounds, volume discounts) | Competition among authenticators improves quality; bounds prevent exploitation |
-| **Digitisation** | Hybrid (platform-approved vault operators, user-initiated requests) | Community-Governed (multi-operator consensus, open applications with staking) | Single-operator risk is unacceptable for high-value cards; staking aligns incentives |
-| **Digital Marketplace** | Fully Centralised (platform orderbook) | Hybrid (platform orderbook for liquidity + P2P escrow option for power users) | Orderbook provides liquidity; P2P gives advanced users sovereignty |
-| **Redemption** | Hybrid (algorithmic vault assignment, user zone preference) | Community-Governed (vault competition, dynamic pricing, user vault selection) | Competition among vaults drives quality and lowers costs |
-| **Ratings** | Hybrid (community input, platform formula) | Community-Governed (transparent weighting, authenticator responses, appeals process) | Opaque formulas breed distrust; transparency makes the rating system self-correcting |
-| **Shipping** | Hybrid (automated SLA enforcement, manual fulfillment) | Hybrid (regional SLA flexibility, carrier API integration, keep enforcement consistent) | SLA enforcement must be consistent to protect buyers; flexibility accommodates regional reality |
+| Module                    | Current Position                                                    | Phase 3 Target                                                                          | Rationale                                                                                       |
+| ------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Matching Engine**       | Fully Centralised (algorithmic, opaque)                             | Platform-Governed (transparent scoring, user preferences)                               | Fairness requires algorithmic neutrality; user choice improves adoption                         |
+| **Authenticator Network** | Hybrid (admin approval, algorithmic assignment, community ratings)  | Community-Governed (community voting on applications, user-selected authenticators)     | Trust must be earned progressively; community skin-in-the-game reduces platform liability       |
+| **Escrow / Wallet**       | Fully Centralised (platform custody)                                | Hybrid (smart contract escrow opt-in, platform fallback)                                | Custody is a liability; on-chain escrow shifts trust from platform promise to verifiable code   |
+| **Dispute Resolution**    | Fully Centralised (admin-only arbitration)                          | Hybrid (tiered: peer review → community arbitrator → admin escalation)                  | Admin arbitration doesn't scale; community arbitration builds stakeholder trust                 |
+| **KYC**                   | Fully Centralised (admin document review)                           | Platform-Governed (automated tier 1, manual review for tier 2+)                         | Regulatory compliance requires centralisation; automation reduces the bottleneck                |
+| **Pricing**               | Fully Decentralised (market-driven bid/ask)                         | Fully Decentralised (keep as-is)                                                        | Market pricing is already the right answer — admin price-setting would be worse                 |
+| **Fees**                  | Fully Centralised (hardcoded constants)                             | Hybrid (authenticators set own fees within platform bounds, volume discounts)           | Competition among authenticators improves quality; bounds prevent exploitation                  |
+| **Digitisation**          | Hybrid (platform-approved vault operators, user-initiated requests) | Community-Governed (multi-operator consensus, open applications with staking)           | Single-operator risk is unacceptable for high-value cards; staking aligns incentives            |
+| **Digital Marketplace**   | Fully Centralised (platform orderbook)                              | Hybrid (platform orderbook for liquidity + P2P escrow option for power users)           | Orderbook provides liquidity; P2P gives advanced users sovereignty                              |
+| **Redemption**            | Hybrid (algorithmic vault assignment, user zone preference)         | Community-Governed (vault competition, dynamic pricing, user vault selection)           | Competition among vaults drives quality and lowers costs                                        |
+| **Ratings**               | Hybrid (community input, platform formula)                          | Community-Governed (transparent weighting, authenticator responses, appeals process)    | Opaque formulas breed distrust; transparency makes the rating system self-correcting            |
+| **Shipping**              | Hybrid (automated SLA enforcement, manual fulfillment)              | Hybrid (regional SLA flexibility, carrier API integration, keep enforcement consistent) | SLA enforcement must be consistent to protect buyers; flexibility accommodates regional reality |
 
 ### Reading the Table
 
@@ -179,6 +179,7 @@ No module targets Fully Decentralised except Pricing (which is already there). T
 ### Phase 1-2 (Current): Centralised by Necessity
 
 The platform is small. The user base is unproven. Trust hasn't been established. In this phase, centralisation is correct because:
+
 - There are too few authenticators for community governance to be meaningful
 - Dispute volume is low enough for admin resolution
 - The matching algorithm needs real-world data before users can meaningfully influence it
@@ -191,6 +192,7 @@ The platform is small. The user base is unproven. Trust hasn't been established.
 Smart contract escrow moves the highest-stakes trust point — money custody during trades — from platform promise to verifiable code. NFT ownership gives users cryptographic proof of digital card ownership that the platform cannot revoke.
 
 These two changes were chosen because:
+
 1. **Escrow is the #1 trust concern** for users. "What if the platform disappears with my money?" On-chain escrow eliminates this question.
 2. **Digital ownership is the #1 value proposition** for digital cards. Database records are promises. NFTs are proof.
 
@@ -201,6 +203,7 @@ Everything else stays centralised. This is intentional constraint.
 Self-custodial wallets give power users full control of their funds. Vault proof-of-reserves lets anyone verify that physical cards back digital tokens. Authenticator fee markets introduce competition that the platform previously administered.
 
 These changes require Phase 3A to be stable:
+
 - Self-custody only works if the escrow contracts are proven secure
 - Proof-of-reserves only matters if digital tokens (NFTs) exist
 - Fee markets only work if there are enough authenticators to create competition

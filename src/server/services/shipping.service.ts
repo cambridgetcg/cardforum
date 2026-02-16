@@ -24,7 +24,7 @@ export async function lockShippingAddresses(tradeId: string, tx?: TxClient) {
     if (!defaultAddress) {
       throw new Error(
         `User ${leg.toUserId} has no default shipping address. ` +
-        `All participants must set a shipping address before escrow.`
+          `All participants must set a shipping address before escrow.`,
       );
     }
 
@@ -48,8 +48,7 @@ export async function lockShippingAddresses(tradeId: string, tx?: TxClient) {
       select: { country: true },
     });
     const isInternational =
-      senderAddress?.country != null &&
-      senderAddress.country !== defaultAddress.country;
+      senderAddress?.country != null && senderAddress.country !== defaultAddress.country;
 
     await client.tradeLeg.update({
       where: { id: leg.id },
@@ -134,16 +133,14 @@ export async function getRecipientAddress(tradeLegId: string) {
  * Record that a card has been shipped (outbound: authenticator → recipient,
  * or direct: sender → recipient). Updates tracking and leg status.
  */
-export async function recordShipment(
-  tradeLegId: string,
-  userId: string,
-  trackingNumber: string,
-) {
+export async function recordShipment(tradeLegId: string, userId: string, trackingNumber: string) {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: {
       trade: { select: { id: true, status: true, mode: true } },
-      verification: { select: { authenticatorId: true, authenticator: { select: { userId: true } } } },
+      verification: {
+        select: { authenticatorId: true, authenticator: { select: { userId: true } } },
+      },
     },
   });
 
@@ -225,11 +222,7 @@ export async function recordInbound(
  * Transitions leg to DELIVERED. If ALL legs in the trade are DELIVERED,
  * returns true so caller can transition the trade.
  */
-export async function confirmDelivery(
-  tradeLegId: string,
-  userId: string,
-  photos?: string[],
-) {
+export async function confirmDelivery(tradeLegId: string, userId: string, photos?: string[]) {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: { trade: { select: { id: true } } },
@@ -625,10 +618,7 @@ export async function estimateInternationalCost(
     "shipping.international_insurance_rate",
     "shipping.international_insurance_min_cents",
   ]);
-  const insuranceCost = Math.max(
-    Math.ceil(cardValueCents * insuranceRate),
-    insuranceMin,
-  );
+  const insuranceCost = Math.max(Math.ceil(cardValueCents * insuranceRate), insuranceMin);
   return {
     baseCost,
     insuranceCost,
@@ -675,7 +665,9 @@ export async function getTradeShippingDetails(tradeId: string, userId: string) {
   }
 
   const mode = trade.mode ?? "AUTHENTICATED";
-  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(trade.status);
+  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(
+    trade.status,
+  );
 
   return trade.legs.map((leg) => {
     const cardName = leg.haveListing?.card?.name ?? leg.gradedHaveListing?.card?.name ?? "Unknown";
@@ -718,8 +710,7 @@ export async function getTradeShippingDetails(tradeId: string, userId: string) {
       // Recipient address (only visible to shipper during shipping phase)
       recipientAddress:
         isShippingPhase &&
-        (leg.fromUserId === userId ||
-          leg.verification?.authenticator !== undefined)
+        (leg.fromUserId === userId || leg.verification?.authenticator !== undefined)
           ? leg.shippingAddress
           : null,
     };

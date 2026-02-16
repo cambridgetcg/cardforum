@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, forwardRef, useContext, type HTMLAttributes, type ButtonHTMLAttributes } from "react";
+import {
+  createContext,
+  forwardRef,
+  useContext,
+  type HTMLAttributes,
+  type ButtonHTMLAttributes,
+} from "react";
 import { cn } from "@/lib/utils";
 
 interface TabsContextValue {
@@ -31,10 +37,7 @@ const TabsList = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn(
-        "inline-flex items-center gap-1 rounded-lg bg-gray-100 p-1",
-        className,
-      )}
+      className={cn("inline-flex items-center gap-1 rounded-lg bg-gray-100 p-1", className)}
       {...props}
     />
   ),
@@ -57,9 +60,7 @@ const TabsTrigger = forwardRef<HTMLButtonElement, TabsTriggerProps>(
         onClick={() => ctx.onValueChange(value)}
         className={cn(
           "inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-          isActive
-            ? "bg-white text-gray-900 shadow-sm"
-            : "text-gray-600 hover:text-gray-900",
+          isActive ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900",
           className,
         )}
         {...props}

@@ -4,9 +4,22 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 interface ConfigEntry {
   key: string;
@@ -140,14 +153,10 @@ export default function AdminConfigPage() {
                   <TableBody>
                     {configs.map((cfg) => (
                       <TableRow key={cfg.key}>
-                        <TableCell className="font-mono text-xs">
-                          {cfg.key}
-                        </TableCell>
+                        <TableCell className="font-mono text-xs">{cfg.key}</TableCell>
                         <TableCell className="font-mono text-xs">
                           {String(cfg.value)}
-                          {cfg.isDefault && (
-                            <span className="ml-2 text-gray-400">(default)</span>
-                          )}
+                          {cfg.isDefault && <span className="ml-2 text-gray-400">(default)</span>}
                         </TableCell>
                         <TableCell>
                           <div className="flex gap-2">
@@ -207,17 +216,15 @@ export default function AdminConfigPage() {
                   <TableBody>
                     {auditEntries.map((entry) => (
                       <TableRow key={entry.id}>
-                        <TableCell className="font-mono text-xs">
-                          {entry.key}
-                        </TableCell>
+                        <TableCell className="font-mono text-xs">{entry.key}</TableCell>
                         <TableCell className="font-mono text-xs text-gray-500">
                           {entry.oldValue ?? "—"}
                         </TableCell>
-                        <TableCell className="font-mono text-xs">
-                          {entry.newValue}
-                        </TableCell>
+                        <TableCell className="font-mono text-xs">{entry.newValue}</TableCell>
                         <TableCell>
-                          {entry.changedBy?.name ?? entry.changedBy?.email ?? entry.changedById.slice(0, 8)}
+                          {entry.changedBy?.name ??
+                            entry.changedBy?.email ??
+                            entry.changedById.slice(0, 8)}
                         </TableCell>
                         <TableCell className="text-gray-500">
                           {new Date(entry.createdAt).toLocaleString()}
@@ -239,19 +246,12 @@ export default function AdminConfigPage() {
           </DialogHeader>
           <div className="space-y-4">
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
-                Key
-              </label>
+              <label className="mb-1 block text-sm font-medium text-gray-700">Key</label>
               <Input value={editKey} disabled />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
-                Value
-              </label>
-              <Input
-                value={editValue}
-                onChange={(e) => setEditValue(e.target.value)}
-              />
+              <label className="mb-1 block text-sm font-medium text-gray-700">Value</label>
+              <Input value={editValue} onChange={(e) => setEditValue(e.target.value)} />
             </div>
           </div>
           <DialogFooter>

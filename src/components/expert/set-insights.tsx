@@ -29,17 +29,15 @@ export function SetInsights({ setId }: { setId: string }) {
             <div className="flex-1 space-y-1">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-gray-900">{post.title}</span>
-                {post.endorsements.length > 0 && (
-                  <Award className="h-3.5 w-3.5 text-emerald-500" />
-                )}
+                {post.endorsements.length > 0 && <Award className="h-3.5 w-3.5 text-emerald-500" />}
               </div>
-              {post.excerpt && (
-                <p className="line-clamp-1 text-xs text-gray-500">{post.excerpt}</p>
-              )}
+              {post.excerpt && <p className="line-clamp-1 text-xs text-gray-500">{post.excerpt}</p>}
               <div className="flex items-center gap-3 text-xs text-gray-400">
                 <span>{post.author.name ?? "Anonymous"}</span>
                 <Badge variant="default" className="text-[10px]">
-                  {EXPERT_POST_CATEGORY_LABELS[post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS] ?? post.category}
+                  {EXPERT_POST_CATEGORY_LABELS[
+                    post.category as keyof typeof EXPERT_POST_CATEGORY_LABELS
+                  ] ?? post.category}
                 </Badge>
               </div>
             </div>

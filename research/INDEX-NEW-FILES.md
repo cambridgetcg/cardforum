@@ -8,17 +8,20 @@
 ## Core Pipeline Scripts (4 Files)
 
 ### 1. `research/pipeline/scrape-all-products.ts`
+
 **Purpose**: Scrape all product types by category
 **Lines**: 371
 **Ready**: ✓ Production-ready
 
 **Key Features**:
+
 - Filter by product type: `booster`, `starter`, `extra`, `premium`, `promo`
 - Exclude non-English variants by default
 - Dry-run mode for safe preview
 - Resume support for interrupted runs
 
 **Usage**:
+
 ```bash
 npx tsx research/pipeline/scrape-all-products.ts --all
 npx tsx research/pipeline/scrape-all-products.ts --product-type starter
@@ -30,17 +33,20 @@ npx tsx research/pipeline/scrape-all-products.ts --all --dry-run
 ---
 
 ### 2. `research/pipeline/enrich-card-data.ts`
+
 **Purpose**: Enrich card data with metadata from individual pages
 **Lines**: 410
 **Ready**: ✓ Production-ready
 
 **Key Features**:
+
 - Fetch individual card pages via Bright Data
 - Parse rarity, type, effect text, cost, power
 - 80-95% enrichment success rate
 - Per-card processing with configurable delay
 
 **Usage**:
+
 ```bash
 npx tsx research/pipeline/enrich-card-data.ts --all
 npx tsx research/pipeline/enrich-card-data.ts --set OP01
@@ -52,26 +58,30 @@ npx tsx research/pipeline/enrich-card-data.ts --set OP01 --dry-run
 ---
 
 ### 3. `research/pipeline/set-code-mappings.ts`
+
 **Purpose**: Authoritative Cardmarket → official code mapping database
 **Lines**: 540
 **Ready**: ✓ Production-ready
 
 **Key Features**:
+
 - 56 official set code mappings
 - Exports: `SET_CODE_MAPPINGS`, `inferSetCode()`, `getMapping()`
 - Handles naming quirks and special cases
 - Includes release dates (EN+JP)
 
 **Usage**:
+
 ```typescript
 import { inferSetCode, getMapping } from "./set-code-mappings";
 
-const code = inferSetCode("Romance Dawn");     // "OP-01"
+const code = inferSetCode("Romance Dawn"); // "OP-01"
 const mapping = getMapping("Romance Dawn");
-console.log(mapping.releaseDate);              // "2022-12-02"
+console.log(mapping.releaseDate); // "2022-12-02"
 ```
 
 **Immediate Use Cases**:
+
 - Listing creation validators
 - API responses (return official codes)
 - Admin set management UI
@@ -80,11 +90,13 @@ console.log(mapping.releaseDate);              // "2022-12-02"
 ---
 
 ### 4. `research/pipeline/README-EXTENDED.md`
+
 **Purpose**: Complete usage guide for extended pipeline
 **Lines**: 532
 **Status**: ✓ Ready (comprehensive documentation)
 
 **Sections**:
+
 - Data model documentation (EnrichedCard interface)
 - Step-by-step usage instructions
 - Pipeline statistics and coverage gaps
@@ -99,11 +111,13 @@ console.log(mapping.releaseDate);              // "2022-12-02"
 ## Documentation Files (3 Files)
 
 ### 5. `research/EXTENDED-PIPELINE-SUMMARY.md`
+
 **Purpose**: High-level implementation summary
 **Lines**: 416
 **Status**: ✓ Complete
 
 **Key Sections**:
+
 - What was accomplished
 - Data coverage map (current + ready to scrape)
 - Execution roadmap (4 phases)
@@ -115,11 +129,13 @@ console.log(mapping.releaseDate);              // "2022-12-02"
 ---
 
 ### 6. `research/ENRICHMENT-FLOW.md`
+
 **Purpose**: Visual data transformation flow with examples
 **Lines**: 392
 **Status**: ✓ Complete
 
 **Key Sections**:
+
 - Overview diagram (5-layer pipeline)
 - Data transformation examples (3 detailed examples)
 - Enrichment success rates by field
@@ -133,11 +149,13 @@ console.log(mapping.releaseDate);              // "2022-12-02"
 ---
 
 ### 7. `research/LAYER-1-EXPANSION-BLUEPRINT.md`
+
 **Purpose**: Architecture overview and master plan
 **Lines**: 450+
 **Status**: ✓ Complete
 
 **Key Sections**:
+
 - Architecture overview (visual diagram)
 - Coverage map (current + ready)
 - Quick start (3 steps)
@@ -180,15 +198,15 @@ console.log(mapping.releaseDate);              // "2022-12-02"
 
 ## At-a-Glance Quick Reference
 
-| File | Type | Lines | Effort | Use Case |
-|------|------|-------|--------|----------|
-| `scrape-all-products.ts` | Script | 371 | Execute | Scrape all product types |
-| `enrich-card-data.ts` | Script | 410 | Execute | Add metadata to cards |
-| `set-code-mappings.ts` | Library | 540 | Import | Code mapping lookup |
-| `README-EXTENDED.md` | Guide | 532 | Read | Complete usage reference |
-| `EXTENDED-PIPELINE-SUMMARY.md` | Summary | 416 | Read | Scope & effort overview |
-| `ENRICHMENT-FLOW.md` | Diagram | 392 | Read | Data transformation flows |
-| `LAYER-1-EXPANSION-BLUEPRINT.md` | Architecture | 450+ | Read | Master plan & integration |
+| File                             | Type         | Lines | Effort  | Use Case                  |
+| -------------------------------- | ------------ | ----- | ------- | ------------------------- |
+| `scrape-all-products.ts`         | Script       | 371   | Execute | Scrape all product types  |
+| `enrich-card-data.ts`            | Script       | 410   | Execute | Add metadata to cards     |
+| `set-code-mappings.ts`           | Library      | 540   | Import  | Code mapping lookup       |
+| `README-EXTENDED.md`             | Guide        | 532   | Read    | Complete usage reference  |
+| `EXTENDED-PIPELINE-SUMMARY.md`   | Summary      | 416   | Read    | Scope & effort overview   |
+| `ENRICHMENT-FLOW.md`             | Diagram      | 392   | Read    | Data transformation flows |
+| `LAYER-1-EXPANSION-BLUEPRINT.md` | Architecture | 450+  | Read    | Master plan & integration |
 
 ---
 

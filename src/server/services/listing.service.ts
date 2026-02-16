@@ -7,6 +7,7 @@ import type {
 import { assertCanCreateListing } from "./kyc.service";
 import { convertToUsdCents } from "./exchange-rate.service";
 import { eventBus } from "@/server/events/event-bus";
+import { checkRawAskCrossing, checkRawBidCrossing } from "./price-validation.service";
 
 export async function getUserListings(userId: string) {
   const [have, want] = await Promise.all([
@@ -37,6 +38,14 @@ export async function createHaveListing(
     await assertCanCreateListing(userId, usdCents);
   }
 
+  // Self-crossing check: reject if user has a bid >= this ask (would self-match)
+  const crossing = await checkRawAskCrossing(userId, input.cardId, usdCents);
+  if (crossing.selfCross) {
+    throw new Error(
+      "Your ask price crosses your own active bid. Deactivate or raise your ask first.",
+    );
+  }
+
   const listing = await db.haveListing.create({
     data: {
       userId,
@@ -56,7 +65,7 @@ export async function createHaveListing(
     cardId: input.cardId,
   });
 
-  return listing;
+  return { ...listing, crossing: { marketCross: crossing.marketCross, bestBid: crossing.bestBid } };
 }
 
 export async function createWantListing(
@@ -70,6 +79,14 @@ export async function createWantListing(
   // KYC gate uses USD equivalent for cap checks
   if (!options?.skipKycGate) {
     await assertCanCreateListing(userId, usdCents);
+  }
+
+  // Self-crossing check: reject if user has an ask <= this bid (would self-match)
+  const crossing = await checkRawBidCrossing(userId, input.cardId, usdCents);
+  if (crossing.selfCross) {
+    throw new Error(
+      "Your bid price crosses your own active ask. Deactivate or lower your bid first.",
+    );
   }
 
   const listing = await db.wantListing.create({
@@ -91,7 +108,7 @@ export async function createWantListing(
     cardId: input.cardId,
   });
 
-  return listing;
+  return { ...listing, crossing: { marketCross: crossing.marketCross, bestAsk: crossing.bestAsk } };
 }
 
 export async function updateListing(userId: string, listingId: string, input: UpdateListingInput) {
@@ -110,6 +127,8 @@ export async function updateListing(userId: string, listingId: string, input: Up
     if (fields.quantity !== undefined) data.quantity = fields.quantity;
     if (fields.notes !== undefined) data.notes = fields.notes;
     if (fields.isActive !== undefined) data.isActive = fields.isActive;
+    if (fields.preferBalancedSwap !== undefined)
+      data.preferBalancedSwap = fields.preferBalancedSwap;
 
     if (fields.askPrice !== undefined || fields.currency !== undefined) {
       const newPrice = fields.askPrice ?? existing.askPrice;
@@ -140,6 +159,7 @@ export async function updateListing(userId: string, listingId: string, input: Up
   if (fields.maxQuantity !== undefined) data.maxQuantity = fields.maxQuantity;
   if (fields.notes !== undefined) data.notes = fields.notes;
   if (fields.isActive !== undefined) data.isActive = fields.isActive;
+  if (fields.preferBalancedSwap !== undefined) data.preferBalancedSwap = fields.preferBalancedSwap;
 
   if (fields.bidPrice !== undefined || fields.currency !== undefined) {
     const newPrice = fields.bidPrice ?? existing.bidPrice;

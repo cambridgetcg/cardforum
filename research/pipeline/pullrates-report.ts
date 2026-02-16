@@ -24,12 +24,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import type { TCG } from "./types";
-import type {
-  BoxLanguage,
-  PullRateReport,
-  EVReport,
-  PullRateValidation,
-} from "./pullrates-types";
+import type { BoxLanguage, PullRateReport, EVReport, PullRateValidation } from "./pullrates-types";
 import { getAvailableSetCodes, getBoxConfig } from "./pullrates-box-structures";
 
 // ── Directory Helpers ─────────────────────────────────────────
@@ -84,12 +79,14 @@ function renderPackStructure(tcg: TCG, setCode: string, language: BoxLanguage): 
 
   const lines: string[] = [];
   lines.push("```");
-  lines.push(`${box.packsPerBox} packs/box × ${box.packConfig.cardsPerPack} cards/pack = ${box.packsPerBox * box.packConfig.cardsPerPack} cards/box`);
+  lines.push(
+    `${box.packsPerBox} packs/box × ${box.packConfig.cardsPerPack} cards/pack = ${box.packsPerBox * box.packConfig.cardsPerPack} cards/box`,
+  );
   lines.push("");
 
   for (const variant of box.packConfig.variants) {
     const totalWeight = box.packConfig.variants.reduce((a, v) => a + v.weight, 0);
-    const variantPct = totalWeight > 0 ? (variant.weight / totalWeight * 100).toFixed(1) : "100";
+    const variantPct = totalWeight > 0 ? ((variant.weight / totalWeight) * 100).toFixed(1) : "100";
     lines.push(`Pack Variant: "${variant.name}" (${variantPct}% of packs)`);
     lines.push("┌────────────────────────────────────────┐");
 
@@ -100,7 +97,7 @@ function renderPackStructure(tcg: TCG, setCode: string, language: BoxLanguage): 
             .sort((a, b) => b[1] - a[1])
             .map(([r, w]) => {
               const total = Object.values(sheet.rarityWeights).reduce((a, b) => a + b, 0);
-              return `${r}:${(w / total * 100).toFixed(0)}%`;
+              return `${r}:${((w / total) * 100).toFixed(0)}%`;
             })
             .join(" ")
         : "???";
@@ -155,15 +152,19 @@ function generateSetReport(tcg: TCG, setCode: string): string {
   if (enReport) {
     lines.push("## Pull Rates (EN)");
     lines.push("");
-    lines.push("| Rarity | Unique Cards | Per Pack | Per Box | Pack Prob | Box Prob | Per Specific Card/Box |");
-    lines.push("|--------|-------------|----------|---------|-----------|----------|-----------------------|");
+    lines.push(
+      "| Rarity | Unique Cards | Per Pack | Per Box | Pack Prob | Box Prob | Per Specific Card/Box |",
+    );
+    lines.push(
+      "|--------|-------------|----------|---------|-----------|----------|-----------------------|",
+    );
 
     for (const r of enReport.rates) {
       lines.push(
         `| ${pad(r.rarity, 6)} | ${String(r.uniqueCards).padStart(11)} | ` +
-        `${r.perPack.toFixed(3).padStart(8)} | ${r.perBox.toFixed(2).padStart(7)} | ` +
-        `${pct(r.packProbability).padStart(9)} | ${pct(r.boxProbability).padStart(8)} | ` +
-        `${r.perSpecificCardPerBox.toFixed(4).padStart(21)} |`,
+          `${r.perPack.toFixed(3).padStart(8)} | ${r.perBox.toFixed(2).padStart(7)} | ` +
+          `${pct(r.packProbability).padStart(9)} | ${pct(r.boxProbability).padStart(8)} | ` +
+          `${r.perSpecificCardPerBox.toFixed(4).padStart(21)} |`,
       );
     }
     lines.push("");
@@ -172,15 +173,19 @@ function generateSetReport(tcg: TCG, setCode: string): string {
   if (jpReport) {
     lines.push("## Pull Rates (JP)");
     lines.push("");
-    lines.push("| Rarity | Unique Cards | Per Pack | Per Box | Pack Prob | Box Prob | Per Specific Card/Box |");
-    lines.push("|--------|-------------|----------|---------|-----------|----------|-----------------------|");
+    lines.push(
+      "| Rarity | Unique Cards | Per Pack | Per Box | Pack Prob | Box Prob | Per Specific Card/Box |",
+    );
+    lines.push(
+      "|--------|-------------|----------|---------|-----------|----------|-----------------------|",
+    );
 
     for (const r of jpReport.rates) {
       lines.push(
         `| ${pad(r.rarity, 6)} | ${String(r.uniqueCards).padStart(11)} | ` +
-        `${r.perPack.toFixed(3).padStart(8)} | ${r.perBox.toFixed(2).padStart(7)} | ` +
-        `${pct(r.packProbability).padStart(9)} | ${pct(r.boxProbability).padStart(8)} | ` +
-        `${r.perSpecificCardPerBox.toFixed(4).padStart(21)} |`,
+          `${r.perPack.toFixed(3).padStart(8)} | ${r.perBox.toFixed(2).padStart(7)} | ` +
+          `${pct(r.packProbability).padStart(9)} | ${pct(r.boxProbability).padStart(8)} | ` +
+          `${r.perSpecificCardPerBox.toFixed(4).padStart(21)} |`,
       );
     }
     lines.push("");
@@ -194,10 +199,7 @@ function generateSetReport(tcg: TCG, setCode: string): string {
     lines.push("|--------|-----------|-----------|-------------|");
 
     const allRarities = [
-      ...new Set([
-        ...enReport.rates.map((r) => r.rarity),
-        ...jpReport.rates.map((r) => r.rarity),
-      ]),
+      ...new Set([...enReport.rates.map((r) => r.rarity), ...jpReport.rates.map((r) => r.rarity)]),
     ];
 
     for (const rarity of allRarities) {
@@ -207,11 +209,12 @@ function generateSetReport(tcg: TCG, setCode: string): string {
 
       const enPerBox = en?.perBox ?? 0;
       const jpPerBox = jp?.perBox ?? 0;
-      const advantage = enPerBox > 0 ? ((jpPerBox - enPerBox) / enPerBox * 100).toFixed(1) : "N/A";
+      const advantage =
+        enPerBox > 0 ? (((jpPerBox - enPerBox) / enPerBox) * 100).toFixed(1) : "N/A";
 
       lines.push(
         `| ${pad(rarity, 6)} | ${enPerBox.toFixed(2).padStart(9)} | ${jpPerBox.toFixed(2).padStart(9)} | ` +
-        `${typeof advantage === "string" ? advantage : `${advantage}%`} |`,
+          `${typeof advantage === "string" ? advantage : `${advantage}%`} |`,
       );
     }
     lines.push("");
@@ -224,7 +227,9 @@ function generateSetReport(tcg: TCG, setCode: string): string {
     lines.push(`**Total EV: ${dollars(enEV.totalEVCents)}**`);
     if (enEV.boxPriceCents) {
       lines.push(`**Box Price: ${dollars(enEV.boxPriceCents)}**`);
-      lines.push(`**EV Ratio: ${enEV.evRatio?.toFixed(2)}x** ${enEV.evRatio && enEV.evRatio >= 1 ? "(positive)" : "(negative)"}`);
+      lines.push(
+        `**EV Ratio: ${enEV.evRatio?.toFixed(2)}x** ${enEV.evRatio && enEV.evRatio >= 1 ? "(positive)" : "(negative)"}`,
+      );
     }
     lines.push("");
     lines.push(`_Price source: ${enEV.priceSource}_`);
@@ -235,8 +240,8 @@ function generateSetReport(tcg: TCG, setCode: string): string {
     for (const b of enEV.breakdown.filter((b) => b.evContribution > 0)) {
       lines.push(
         `| ${pad(b.rarity, 6)} | ${b.expectedPerBox.toFixed(2).padStart(11)} | ` +
-        `${dollars(b.avgCardPrice).padStart(9)} | ${dollars(b.medianCardPrice).padStart(11)} | ` +
-        `${dollars(b.evContribution).padStart(14)} | ${pct(b.evShare).padStart(8)} |`,
+          `${dollars(b.avgCardPrice).padStart(9)} | ${dollars(b.medianCardPrice).padStart(11)} | ` +
+          `${dollars(b.evContribution).padStart(14)} | ${pct(b.evShare).padStart(8)} |`,
       );
     }
     lines.push("");
@@ -263,7 +268,9 @@ function generateSetReport(tcg: TCG, setCode: string): string {
     if (validation.sources.length > 0) {
       lines.push("Sources:");
       for (const s of validation.sources) {
-        lines.push(`- ${s.name}${s.sampleSize ? ` (n=${s.sampleSize})` : ""}${s.url ? ` — ${s.url}` : ""}`);
+        lines.push(
+          `- ${s.name}${s.sampleSize ? ` (n=${s.sampleSize})` : ""}${s.url ? ` — ${s.url}` : ""}`,
+        );
       }
       lines.push("");
     }
@@ -277,9 +284,9 @@ function generateSetReport(tcg: TCG, setCode: string): string {
         const status = r.significant ? "SIGNIFICANT" : "OK";
         lines.push(
           `| ${pad(r.rarity, 6)} | ${r.theoreticalRate.toFixed(2).padStart(10)} | ` +
-          `${r.observedRate!.toFixed(2).padStart(8)} | ` +
-          `${r.deviation! > 0 ? "+" : ""}${r.deviation!.toFixed(2).padStart(8)} | ` +
-          `${r.pValue!.toFixed(4).padStart(7)} | ${status} |`,
+            `${r.observedRate!.toFixed(2).padStart(8)} | ` +
+            `${r.deviation! > 0 ? "+" : ""}${r.deviation!.toFixed(2).padStart(8)} | ` +
+            `${r.pValue!.toFixed(4).padStart(7)} | ${status} |`,
         );
       }
       lines.push("");
@@ -318,9 +325,9 @@ function generateSummary(tcg: TCG, setCodes: string[]): string {
       evData.push({ setCode, ev });
       lines.push(
         `| ${setCode} | ${dollars(ev.totalEVCents)} | ` +
-        `${ev.boxPriceCents ? dollars(ev.boxPriceCents) : "N/A"} | ` +
-        `${ev.evRatio ? ev.evRatio.toFixed(2) + "x" : "N/A"} | ` +
-        `${ev.priceSource} |`,
+          `${ev.boxPriceCents ? dollars(ev.boxPriceCents) : "N/A"} | ` +
+          `${ev.evRatio ? ev.evRatio.toFixed(2) + "x" : "N/A"} | ` +
+          `${ev.priceSource} |`,
       );
     }
   }
@@ -332,13 +339,19 @@ function generateSummary(tcg: TCG, setCodes: string[]): string {
     lines.push("## Best & Worst Value");
     lines.push("");
     lines.push(`**Highest EV:** ${sorted[0].setCode} — ${dollars(sorted[0].ev.totalEVCents)}`);
-    lines.push(`**Lowest EV:** ${sorted[sorted.length - 1].setCode} — ${dollars(sorted[sorted.length - 1].ev.totalEVCents)}`);
+    lines.push(
+      `**Lowest EV:** ${sorted[sorted.length - 1].setCode} — ${dollars(sorted[sorted.length - 1].ev.totalEVCents)}`,
+    );
 
     const withRatio = evData.filter((d) => d.ev.evRatio !== null);
     if (withRatio.length > 0) {
       const sortedRatio = [...withRatio].sort((a, b) => (b.ev.evRatio ?? 0) - (a.ev.evRatio ?? 0));
-      lines.push(`**Best EV Ratio:** ${sortedRatio[0].setCode} — ${sortedRatio[0].ev.evRatio!.toFixed(2)}x`);
-      lines.push(`**Worst EV Ratio:** ${sortedRatio[sortedRatio.length - 1].setCode} — ${sortedRatio[sortedRatio.length - 1].ev.evRatio!.toFixed(2)}x`);
+      lines.push(
+        `**Best EV Ratio:** ${sortedRatio[0].setCode} — ${sortedRatio[0].ev.evRatio!.toFixed(2)}x`,
+      );
+      lines.push(
+        `**Worst EV Ratio:** ${sortedRatio[sortedRatio.length - 1].setCode} — ${sortedRatio[sortedRatio.length - 1].ev.evRatio!.toFixed(2)}x`,
+      );
     }
     lines.push("");
   }
@@ -348,10 +361,14 @@ function generateSummary(tcg: TCG, setCodes: string[]): string {
   lines.push("");
 
   // Find key rarities across all sets
-  const keyRarities = tcg === "onepiece" ? ["SR", "SEC", "L"]
-    : tcg === "pokemon" ? ["UR", "SAR", "SIR"]
-    : tcg === "yugioh" ? ["UR", "SCRT", "STARLIGHT"]
-    : ["MR", "R"];
+  const keyRarities =
+    tcg === "onepiece"
+      ? ["SR", "SEC", "L"]
+      : tcg === "pokemon"
+        ? ["UR", "SAR", "SIR"]
+        : tcg === "yugioh"
+          ? ["UR", "SCRT", "STARLIGHT"]
+          : ["MR", "R"];
 
   for (const rarity of keyRarities) {
     lines.push(`### ${rarity} Per Box`);
@@ -369,8 +386,8 @@ function generateSummary(tcg: TCG, setCodes: string[]): string {
 
       lines.push(
         `| ${setCode} | ${enRate ? enRate.perBox.toFixed(2) : "N/A"} | ` +
-        `${jpRate ? jpRate.perBox.toFixed(2) : "N/A"} | ` +
-        `${enRate ? enRate.perSpecificCardPerBox.toFixed(4) : "N/A"} |`,
+          `${jpRate ? jpRate.perBox.toFixed(2) : "N/A"} | ` +
+          `${enRate ? enRate.perSpecificCardPerBox.toFixed(4) : "N/A"} |`,
       );
     }
     lines.push("");
@@ -392,11 +409,7 @@ async function main() {
   const isAll = args.includes("--all");
   const isDryRun = args.includes("--dry-run");
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all");

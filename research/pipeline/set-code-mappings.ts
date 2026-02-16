@@ -476,6 +476,33 @@ export const SET_CODE_MAPPINGS: SetCodeMapping[] = [
 ];
 
 /**
+ * Normalize a set code by stripping dashes and uppercasing.
+ * "OP-01" → "OP01", "st-21" → "ST21", "PRB-01" → "PRB01"
+ *
+ * This is the single source of truth for set code normalization.
+ * All pipeline files should import this instead of inline .replace(/-/g, "").
+ */
+export function normalizeSetCode(code: string): string {
+  return code.replace(/-/g, "").toUpperCase();
+}
+
+/**
+ * Build a lookup map from normalized code (no dashes, uppercase) to mapping.
+ * "OP01" → mapping, "ST21" → mapping, "PRB01" → mapping
+ *
+ * This handles ALL prefixes (OP, ST, EB, PRB, PROMO, etc.) without
+ * hardcoding prefix patterns — new prefixes are handled automatically.
+ */
+export function buildNormalizedCodeMap(): Map<string, SetCodeMapping> {
+  const map = new Map<string, SetCodeMapping>();
+  for (const mapping of SET_CODE_MAPPINGS) {
+    const normalized = normalizeSetCode(mapping.officialCode);
+    map.set(normalized, mapping);
+  }
+  return map;
+}
+
+/**
  * Build a lookup map from Cardmarket expansion name to set code.
  */
 export function buildCardmarketNameMap(): Map<string, SetCodeMapping> {
@@ -532,7 +559,9 @@ export function inferSetCode(cardmarketName: string): string | null {
   }
 
   // Fuzzy: normalize punctuation (colon↔dash, remove dots/spaces)
-  const fuzzy = cardmarketName.split("(")[0].trim()
+  const fuzzy = cardmarketName
+    .split("(")[0]
+    .trim()
     .replace(/[:\-–—]/g, " ")
     .replace(/\s+/g, " ")
     .toLowerCase()
@@ -551,7 +580,12 @@ export function inferSetCode(cardmarketName: string): string | null {
   // Handle "Vol. 2" vs "Vol.2" and "Ultimate" vs "Ultra" style differences
   const noDots = fuzzy.replace(/\./g, " ").replace(/\s+/g, "");
   for (const [name, mapping] of map) {
-    const fuzzyName = name.replace(/[:\-–—]/g, " ").replace(/\./g, " ").replace(/\s+/g, "").toLowerCase().trim();
+    const fuzzyName = name
+      .replace(/[:\-–—]/g, " ")
+      .replace(/\./g, " ")
+      .replace(/\s+/g, "")
+      .toLowerCase()
+      .trim();
     if (noDots === fuzzyName) {
       return mapping.officialCode;
     }

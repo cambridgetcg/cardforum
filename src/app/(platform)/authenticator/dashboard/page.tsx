@@ -106,7 +106,10 @@ export default function AuthenticatorDashboardPage() {
           <CardContent className="py-12 text-center">
             <p className="text-gray-500">{error}</p>
             {error.includes("Not an authenticator") && (
-              <Button className="mt-4" onClick={() => (window.location.href = "/authenticator/apply")}>
+              <Button
+                className="mt-4"
+                onClick={() => (window.location.href = "/authenticator/apply")}
+              >
                 Apply to Become an Authenticator
               </Button>
             )}
@@ -127,26 +130,20 @@ export default function AuthenticatorDashboardPage() {
             {authenticator.businessName ?? "Authenticator"} &middot; {authenticator.region}
           </p>
         </div>
-        <Badge variant={TIER_COLORS[authenticator.tier] ?? "default"}>
-          {authenticator.tier}
-        </Badge>
+        <Badge variant={TIER_COLORS[authenticator.tier] ?? "default"}>{authenticator.tier}</Badge>
       </div>
 
       {/* Stats Overview */}
       <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Card>
           <CardContent className="py-4 text-center">
-            <p className="text-2xl font-bold text-gray-900">
-              {authenticator.rating.toFixed(1)}
-            </p>
+            <p className="text-2xl font-bold text-gray-900">{authenticator.rating.toFixed(1)}</p>
             <p className="text-xs text-gray-500">Rating</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="py-4 text-center">
-            <p className="text-2xl font-bold text-gray-900">
-              {authenticator.totalVerified}
-            </p>
+            <p className="text-2xl font-bold text-gray-900">{authenticator.totalVerified}</p>
             <p className="text-xs text-gray-500">Verified</p>
           </CardContent>
         </Card>
@@ -181,8 +178,8 @@ export default function AuthenticatorDashboardPage() {
           <Card>
             <CardContent className="py-12 text-center">
               <p className="text-gray-500">
-                No pending verification assignments. New assignments will appear here
-                when trades enter the authentication phase.
+                No pending verification assignments. New assignments will appear here when trades
+                enter the authentication phase.
               </p>
             </CardContent>
           </Card>
@@ -190,12 +187,10 @@ export default function AuthenticatorDashboardPage() {
           <div className="space-y-3">
             {assignments.map((assignment) => {
               const listing =
-                assignment.tradeLeg.haveListing ??
-                assignment.tradeLeg.gradedHaveListing;
+                assignment.tradeLeg.haveListing ?? assignment.tradeLeg.gradedHaveListing;
               const isGraded = !!assignment.tradeLeg.gradedHaveListing;
               const graded = assignment.tradeLeg.gradedHaveListing;
-              const hasPhotos =
-                assignment.tradeLeg.photoApproval?.status === "APPROVED";
+              const hasPhotos = assignment.tradeLeg.photoApproval?.status === "APPROVED";
 
               return (
                 <Card key={assignment.id}>
@@ -220,8 +215,8 @@ export default function AuthenticatorDashboardPage() {
                           {TCG_LABELS[listing?.card.tcg as TCG] ?? listing?.card.tcg}
                         </p>
                         <p className="text-xs text-gray-400">
-                          Value: {formatPrice(listing?.askPrice ?? 0)} &middot;
-                          Assigned {formatRelativeTime(new Date(assignment.assignedAt))}
+                          Value: {formatPrice(listing?.askPrice ?? 0)} &middot; Assigned{" "}
+                          {formatRelativeTime(new Date(assignment.assignedAt))}
                           {hasPhotos && (
                             <span className="ml-2 text-green-600">Photos available</span>
                           )}
@@ -247,9 +242,7 @@ export default function AuthenticatorDashboardPage() {
       {/* Recent Ratings */}
       {ratings.length > 0 && (
         <div className="mt-8">
-          <h2 className="mb-4 text-lg font-semibold text-gray-900">
-            Recent Ratings
-          </h2>
+          <h2 className="mb-4 text-lg font-semibold text-gray-900">Recent Ratings</h2>
           <div className="space-y-3">
             {ratings.map((rating) => (
               <Card key={rating.id}>
@@ -275,9 +268,7 @@ export default function AuthenticatorDashboardPage() {
                           )}
                         </div>
                       </div>
-                      {rating.comment && (
-                        <p className="text-sm text-gray-600">{rating.comment}</p>
-                      )}
+                      {rating.comment && <p className="text-sm text-gray-600">{rating.comment}</p>}
                     </div>
                     <span className="text-xs text-gray-400">
                       {formatRelativeTime(new Date(rating.createdAt))}

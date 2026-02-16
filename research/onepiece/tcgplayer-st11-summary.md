@@ -9,6 +9,7 @@
 - **Duration**: 0.1s
 
 ## Price Statistics (USD)
+
 - Cards with prices: 5
 - Price entries: 5
 - Avg market price: $0.95
@@ -16,10 +17,10 @@
 
 ## Cards (5)
 
-| # | Card ID | Name | Rarity | Type | Market Price |
-|---|---------|------|--------|------|-------------|
-| 1 | ST11-001 | Uta (001) | L | Leader | $2.68 |
-| 2 | ST11-002 | Uta (002) | SR | Character | $1.53 |
-| 3 | ST11-003 | Backlight | C | Event | $0.12 |
-| 4 | ST11-004 | New Genesis | SR | Event | $0.32 |
-| 5 | ST11-005 | I'm invincible | C | Event | $0.12 |
+| #   | Card ID  | Name           | Rarity | Type      | Market Price |
+| --- | -------- | -------------- | ------ | --------- | ------------ |
+| 1   | ST11-001 | Uta (001)      | L      | Leader    | $2.68        |
+| 2   | ST11-002 | Uta (002)      | SR     | Character | $1.53        |
+| 3   | ST11-003 | Backlight      | C      | Event     | $0.12        |
+| 4   | ST11-004 | New Genesis    | SR     | Event     | $0.32        |
+| 5   | ST11-005 | I'm invincible | C      | Event     | $0.12        |

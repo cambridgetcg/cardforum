@@ -11,18 +11,14 @@ const PSA_GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 /** Valid BGS/CGC grades: 1.0–10.0 in 0.5 increments. */
 const HALF_POINT_GRADES = [
-  1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5,
-  10,
+  1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10,
 ];
 
 /**
  * Validate that a grade is valid for the given grading company.
  * PSA/SGC: integers 1–10. BGS/CGC: 0.5 increments 1.0–10.0.
  */
-export function isValidGrade(
-  grade: number,
-  company: GradingCompany,
-): boolean {
+export function isValidGrade(grade: number, company: GradingCompany): boolean {
   if (company === "PSA" || company === "SGC") {
     return PSA_GRADES.includes(grade);
   }
@@ -36,10 +32,7 @@ export function isValidGrade(
  * BGS/CGC 9.5: stays 9.5 (distinct tier, no PSA equivalent).
  * BGS/CGC other half-grades: round down (8.5 → 8, 7.5 → 7).
  */
-export function canonicalGrade(
-  grade: number,
-  company: GradingCompany,
-): number {
+export function canonicalGrade(grade: number, company: GradingCompany): number {
   if (company === "PSA" || company === "SGC") return grade;
 
   // BGS/CGC 9.5 is a distinct tier (Gem Mint)

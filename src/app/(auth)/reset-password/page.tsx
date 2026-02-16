@@ -26,7 +26,9 @@ function ResetPasswordForm() {
             Invalid reset link. Please request a new one.
           </p>
           <Link href="/forgot-password" className="mt-4 block">
-            <Button variant="outline" className="w-full">Request New Link</Button>
+            <Button variant="outline" className="w-full">
+              Request New Link
+            </Button>
           </Link>
         </CardContent>
       </Card>
@@ -69,15 +71,11 @@ function ResetPasswordForm() {
     <Card className="mx-auto w-full max-w-md">
       <CardHeader>
         <h1 className="text-2xl font-bold text-gray-900">Set new password</h1>
-        <p className="text-sm text-gray-600">
-          Choose a new password for your account.
-        </p>
+        <p className="text-sm text-gray-600">Choose a new password for your account.</p>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {error && (
-            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-          )}
+          {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
           <div>
             <Input
               type="password"
@@ -111,7 +109,9 @@ function ResetPasswordForm() {
 export default function ResetPasswordPage() {
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4">
-      <Suspense fallback={<div className="animate-pulse h-64 w-full max-w-md rounded bg-gray-100" />}>
+      <Suspense
+        fallback={<div className="h-64 w-full max-w-md animate-pulse rounded bg-gray-100" />}
+      >
         <ResetPasswordForm />
       </Suspense>
     </div>

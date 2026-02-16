@@ -36,17 +36,27 @@ const RARITY_BG: Record<string, string> = {
 
 // Available sets for simulation
 const SETS = [
-  "OP01", "OP02", "OP03", "OP04", "OP05", "OP06", "OP07",
-  "OP08", "OP09", "OP10", "OP11", "OP12", "OP13", "OP14",
+  "OP01",
+  "OP02",
+  "OP03",
+  "OP04",
+  "OP05",
+  "OP06",
+  "OP07",
+  "OP08",
+  "OP09",
+  "OP10",
+  "OP11",
+  "OP12",
+  "OP13",
+  "OP14",
 ];
 
 /**
  * Simulate one pack using pull rate data.
  * Uses weighted random to fill card slots based on per-pack rates.
  */
-function simulatePack(
-  rates: { rarity: string; perPack: number }[],
-): SimulatedCard[] {
+function simulatePack(rates: { rarity: string; perPack: number }[]): SimulatedCard[] {
   const cards: SimulatedCard[] = [];
   let slotIndex = 0;
 
@@ -102,8 +112,8 @@ function PackSimulator() {
       setAllRevealed(true);
       return;
     }
-    setPack((prev) =>
-      prev?.map((c, i) => (i === nextIndex ? { ...c, revealed: true } : c)) ?? null,
+    setPack(
+      (prev) => prev?.map((c, i) => (i === nextIndex ? { ...c, revealed: true } : c)) ?? null,
     );
     setRevealedCount((prev) => prev + 1);
   }, [pack, revealedCount]);
@@ -148,7 +158,10 @@ function PackSimulator() {
             key={code}
             variant={selectedSet === code ? "primary" : "outline"}
             size="sm"
-            onClick={() => { setSelectedSet(code); setPack(null); }}
+            onClick={() => {
+              setSelectedSet(code);
+              setPack(null);
+            }}
           >
             {code}
           </Button>
@@ -184,8 +197,9 @@ function PackSimulator() {
                 key={i}
                 onClick={() => {
                   if (!card.revealed) {
-                    setPack((prev) =>
-                      prev?.map((c, j) => (j === i ? { ...c, revealed: true } : c)) ?? null,
+                    setPack(
+                      (prev) =>
+                        prev?.map((c, j) => (j === i ? { ...c, revealed: true } : c)) ?? null,
                     );
                     setRevealedCount((prev) => prev + 1);
                     if (revealedCount + 1 >= pack.length) setAllRevealed(true);
@@ -193,7 +207,7 @@ function PackSimulator() {
                 }}
                 className={`aspect-[5/7] rounded-lg border-2 transition-all duration-300 ${
                   card.revealed
-                    ? `${RARITY_BG[card.rarity] ?? "bg-gray-100 text-gray-700 border-gray-200"} ${
+                    ? `${RARITY_BG[card.rarity] ?? "border-gray-200 bg-gray-100 text-gray-700"} ${
                         card.isRare ? "scale-105 shadow-lg" : ""
                       }`
                     : "cursor-pointer border-indigo-300 bg-gradient-to-br from-indigo-500 to-purple-600 hover:scale-105 hover:shadow-md"
@@ -201,12 +215,8 @@ function PackSimulator() {
               >
                 {card.revealed ? (
                   <div className="flex h-full flex-col items-center justify-center gap-1 p-1">
-                    {card.isRare && (
-                      <Sparkles className="h-5 w-5 animate-pulse" />
-                    )}
-                    <span className="text-sm font-bold">
-                      {card.rarity}
-                    </span>
+                    {card.isRare && <Sparkles className="h-5 w-5 animate-pulse" />}
+                    <span className="text-sm font-bold">{card.rarity}</span>
                     <span className="text-[10px] leading-tight">
                       {RARITY_LABELS[card.rarity] ?? card.rarity}
                     </span>
@@ -247,7 +257,8 @@ function PackSimulator() {
                 You pulled <span className="font-bold">{pack.length}</span> cards
                 {rareCount > 0 && (
                   <>
-                    {" "}including{" "}
+                    {" "}
+                    including{" "}
                     <span className="font-bold text-purple-600">
                       {rareCount} rare{rareCount !== 1 ? "s" : ""}
                     </span>
@@ -260,7 +271,8 @@ function PackSimulator() {
                   <span
                     key={i}
                     className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${
-                      RARITY_BG[card.rarity]?.replace(/ring-\S+ /g, "") ?? "bg-gray-100 text-gray-700"
+                      RARITY_BG[card.rarity]?.replace(/ring-\S+ /g, "") ??
+                      "bg-gray-100 text-gray-700"
                     }`}
                   >
                     {card.rarity}
@@ -287,9 +299,9 @@ function PackSimulator() {
 
       {/* Disclaimer */}
       <p className="mt-6 text-center text-xs text-gray-400">
-        Simulated packs for entertainment and educational purposes only.
-        Results use theoretical pull rates and do not represent actual product contents.
-        Not affiliated with Bandai, The Pokemon Company, Konami, or Wizards of the Coast.
+        Simulated packs for entertainment and educational purposes only. Results use theoretical
+        pull rates and do not represent actual product contents. Not affiliated with Bandai, The
+        Pokemon Company, Konami, or Wizards of the Coast.
       </p>
     </div>
   );
@@ -297,12 +309,14 @@ function PackSimulator() {
 
 export default function PacksPage() {
   return (
-    <Suspense fallback={
-      <div className="mx-auto max-w-4xl px-4 py-8 text-center">
-        <Dices className="mx-auto h-8 w-8 text-indigo-600" />
-        <p className="mt-4 text-sm text-gray-500">Loading pack simulator...</p>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-4xl px-4 py-8 text-center">
+          <Dices className="mx-auto h-8 w-8 text-indigo-600" />
+          <p className="mt-4 text-sm text-gray-500">Loading pack simulator...</p>
+        </div>
+      }
+    >
       <PackSimulator />
     </Suspense>
   );

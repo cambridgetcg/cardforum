@@ -1,9 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
-import {
-  delistToken,
-  buyToken,
-} from "@/server/services/digital-trade.service";
+import { delistToken, buyToken } from "@/server/services/digital-trade.service";
 
 type Params = { params: Promise<{ listingId: string }> };
 

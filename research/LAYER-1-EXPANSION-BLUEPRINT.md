@@ -110,31 +110,31 @@ The card catalog pipeline has been **fully designed, implemented, and documented
 
 ### Current State (✓ Complete)
 
-| Set | Cards | Variants | Status |
-|-----|-------|----------|--------|
-| OP-01 through OP-10 | 1,194 | 1,373 | Scraped & Imported |
+| Set                 | Cards | Variants | Status             |
+| ------------------- | ----- | -------- | ------------------ |
+| OP-01 through OP-10 | 1,194 | 1,373    | Scraped & Imported |
 
 **Total**: 1 category, 10 sets, 1,194 cards
 
 ### Ready to Execute (→ New Scripts)
 
-| Category | Count | Est. Cards | Est. Variants | Script |
-|----------|-------|-----------|--------------|--------|
-| Boosters (OP-11+) | 4 | ~450 | ~520 | `scrape-all-products.ts --product-type booster` |
-| Starter Decks | 30 | ~1,500 | ~1,650 | `scrape-all-products.ts --product-type starter` |
-| Extra Boosters | 4 | ~500 | ~550 | `scrape-all-products.ts --product-type extra` |
-| Premium Boosters | 2 | ~300 | ~330 | `scrape-all-products.ts --product-type premium` |
-| Promo Sets | 5+ | ~800 | ~900 | `scrape-all-products.ts --product-type promo` |
-| **Subtotal** | **45+** | **~3,550** | **~3,950** | |
+| Category          | Count   | Est. Cards | Est. Variants | Script                                          |
+| ----------------- | ------- | ---------- | ------------- | ----------------------------------------------- |
+| Boosters (OP-11+) | 4       | ~450       | ~520          | `scrape-all-products.ts --product-type booster` |
+| Starter Decks     | 30      | ~1,500     | ~1,650        | `scrape-all-products.ts --product-type starter` |
+| Extra Boosters    | 4       | ~500       | ~550          | `scrape-all-products.ts --product-type extra`   |
+| Premium Boosters  | 2       | ~300       | ~330          | `scrape-all-products.ts --product-type premium` |
+| Promo Sets        | 5+      | ~800       | ~900          | `scrape-all-products.ts --product-type promo`   |
+| **Subtotal**      | **45+** | **~3,550** | **~3,950**    |                                                 |
 
 ### Combined Inventory
 
-| Metric | Current | After Execution | Growth |
-|--------|---------|-----------------|--------|
-| Unique sets | 10 | 55+ | 5.5× |
-| Unique cards | 1,194 | 4,744 | 4× |
-| Card variants | 1,373 | 5,323 | 3.9× |
-| Enriched fields | 0% | 80-95% | ∞ |
+| Metric          | Current | After Execution | Growth |
+| --------------- | ------- | --------------- | ------ |
+| Unique sets     | 10      | 55+             | 5.5×   |
+| Unique cards    | 1,194   | 4,744           | 4×     |
+| Card variants   | 1,373   | 5,323           | 3.9×   |
+| Enriched fields | 0%      | 80-95%          | ∞      |
 
 ---
 
@@ -258,13 +258,13 @@ research/
 
 ## Performance Characteristics
 
-| Phase | Duration | Parallelizable | Bright Data Cost |
-|-------|----------|----------------|------------------|
-| Scrape (4,300 cards) | 2-3 hours | No | ~$3 |
-| Enrich (4,300 cards) | 4-6 hours | No | ~$7 |
-| Import (4,300 cards) | 30 mins | Yes | $0 |
-| Verify (7 checks) | 15 mins | N/A | $0 |
-| **Total** | **7-10 hours** | | **~$10** |
+| Phase                | Duration       | Parallelizable | Bright Data Cost |
+| -------------------- | -------------- | -------------- | ---------------- |
+| Scrape (4,300 cards) | 2-3 hours      | No             | ~$3              |
+| Enrich (4,300 cards) | 4-6 hours      | No             | ~$7              |
+| Import (4,300 cards) | 30 mins        | Yes            | $0               |
+| Verify (7 checks)    | 15 mins        | N/A            | $0               |
+| **Total**            | **7-10 hours** |                | **~$10**         |
 
 ---
 
@@ -359,6 +359,7 @@ A: No, fully backward-compatible. New fields are optional.
 ## Ownership & Next Actions
 
 **Completed**:
+
 - ✓ Architecture design
 - ✓ Three core scripts
 - ✓ Authoritative mappings database
@@ -366,6 +367,7 @@ A: No, fully backward-compatible. New fields are optional.
 - ✓ Quality assurance checklist
 
 **Ready to Execute**:
+
 - → Scrape all products (2-3 hours)
 - → Enrich metadata (4-6 hours)
 - → Import & verify (45 mins)

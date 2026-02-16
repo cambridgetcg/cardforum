@@ -23,10 +23,7 @@ export async function GET(req: NextRequest) {
     const cardId = searchParams.get("cardId");
     const condition = searchParams.get("condition") as Condition | null;
     if (!cardId || !condition) {
-      return NextResponse.json(
-        { error: "cardId and condition are required" },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "cardId and condition are required" }, { status: 400 });
     }
     const stock = await getGlobalStock(cardId, condition);
     return NextResponse.json(stock);

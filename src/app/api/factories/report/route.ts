@@ -36,10 +36,23 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = reportSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json({ error: "Invalid input", details: parsed.error.flatten() }, { status: 400 });
+    return NextResponse.json(
+      { error: "Invalid input", details: parsed.error.flatten() },
+      { status: 400 },
+    );
   }
 
-  const { tcg, setCode, setName, language, factoryName, factoryCountry, printingPeriod, evidence, notes } = parsed.data;
+  const {
+    tcg,
+    setCode,
+    setName,
+    language,
+    factoryName,
+    factoryCountry,
+    printingPeriod,
+    evidence,
+    notes,
+  } = parsed.data;
 
   // Resolve or create factory
   const factoryCode = factoryName
@@ -119,9 +132,12 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  return NextResponse.json({
-    status: "created",
-    productionRunId: run.id,
-    reportCount: 1,
-  }, { status: 201 });
+  return NextResponse.json(
+    {
+      status: "created",
+      productionRunId: run.id,
+      reportCount: 1,
+    },
+    { status: 201 },
+  );
 }

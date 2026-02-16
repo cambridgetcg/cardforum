@@ -68,9 +68,7 @@ export function RegisterForm() {
     <Card className="mx-auto w-full max-w-md">
       <CardHeader>
         <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
-        <p className="text-sm text-gray-600">
-          Join CardForum and start trading
-        </p>
+        <p className="text-sm text-gray-600">Join CardForum and start trading</p>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-3">
@@ -100,11 +98,7 @@ export function RegisterForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {error && (
-            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
-              {error}
-            </p>
-          )}
+          {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
           <Input
             type="text"
             placeholder="Name"

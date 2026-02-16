@@ -11,6 +11,7 @@
 CardForum centralises **what should happen** (matching, settlement, trust scoring) and decentralises **how it happens** (local authenticators, regional shipping, market pricing). Every module sits deliberately on a spectrum from Fully Centralised to Fully Decentralised, and moves rightward only when centralisation becomes the bottleneck — not before.
 
 Three rules govern movement on the spectrum:
+
 1. **Decentralise when trust is the bottleneck** — if users route around your control, that control is the problem
 2. **Centralise when consistency is the requirement** — matching fairness, KYC compliance, SLA enforcement
 3. **Let the market decide when possible** — pricing, authenticator fees, vault competition
@@ -25,12 +26,12 @@ Cards are fungible. Shipping is not. A Near Mint Charizard in Tokyo is identical
 
 Every module in CardForum either **IS** part of the bridge (Core/Trust), **IMPROVES** the bridge (Quality), or is **INDEPENDENT** of the bridge. This taxonomy classifies all 30 services:
 
-| Tier | Count | Role | Without these... |
-|------|-------|------|------------------|
-| **Tier 1 — Bridge Core** | 7 | The bridge mechanism itself | Cards cross borders |
-| **Tier 2 — Bridge Trust** | 8 | Makes the bridge trustworthy | Nobody uses the bridge |
-| **Tier 3 — Bridge Quality** | 11 | Improves reliability, compliance, economics | Bridge works, but worse |
-| **Bridge-Independent** | 4 | Orthogonal to the bridge | Bridge is unaffected |
+| Tier                        | Count | Role                                        | Without these...        |
+| --------------------------- | ----- | ------------------------------------------- | ----------------------- |
+| **Tier 1 — Bridge Core**    | 7     | The bridge mechanism itself                 | Cards cross borders     |
+| **Tier 2 — Bridge Trust**   | 8     | Makes the bridge trustworthy                | Nobody uses the bridge  |
+| **Tier 3 — Bridge Quality** | 11    | Improves reliability, compliance, economics | Bridge works, but worse |
+| **Bridge-Independent**      | 4     | Orthogonal to the bridge                    | Bridge is unaffected    |
 
 See [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) for the full taxonomy with per-module classification, the 5-step bridge mechanism, and how borderless trade connects to the centralisation-decentralisation spectrum and path of least action.
 
@@ -38,7 +39,7 @@ See [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) for the full taxonomy with per-mo
 
 ## Path of Least Action
 
-> *A system evolves along the path that minimises total action.* — Hamilton's Principle
+> _A system evolves along the path that minimises total action._ — Hamilton's Principle
 
 CardForum's founding insight is a least-action argument: two collectors on opposite sides of the planet don't need to ship cards across borders if local equivalents exist. The bridge model eliminates the highest-friction path and replaces it with the lowest-cost one. This principle extends beyond the bridge into every module, every user flow, and every development decision.
 
@@ -52,7 +53,7 @@ CardForum's founding insight is a least-action argument: two collectors on oppos
 
 ### Least Action as Design Test
 
-Before adding any feature, ask: *Does this reduce total action in the system, or increase it?*
+Before adding any feature, ask: _Does this reduce total action in the system, or increase it?_
 
 - Adding photo approval for $50+ cards: **increases** user action, but **decreases** dispute action. Net action is lower because disputes are far more expensive than photos. Justified.
 - Adding a 12-state trade machine when 8 states suffice: **increases** action with no corresponding reduction. Unjustified — collapse states where possible.
@@ -62,15 +63,15 @@ Before adding any feature, ask: *Does this reduce total action in the system, or
 
 Each module has an implicit "action budget" — the maximum friction it can impose on users proportional to the value it protects:
 
-| Module | Action Budget | Rationale |
-|--------|--------------|-----------|
-| Listings | Very low | Creating a listing should be < 60 seconds. AI grading pre-fills condition. |
-| Matching | Zero (invisible) | Users set preferences; the engine acts. No user action required. |
-| Trade Lifecycle | Proportional to value | Low-value trades: 2 clicks (accept, confirm). High-value: photo approval, escrow, verification. |
-| Wallet | One-time setup | Deposit once, trade many times. Withdrawal should be ≤ 3 clicks. |
-| KYC | Progressive | Ask nothing until threshold. Ask little (selfie + ID) at $500. Ask more (proof of address) at $1K+. |
-| Escrow | Zero (invisible) | Users never interact with escrow. It holds and releases automatically. |
-| Disputes | Proportional to severity | Filing: 1 click + reason. Evidence: photos already in system. Resolution: admin acts, not users. |
+| Module          | Action Budget            | Rationale                                                                                           |
+| --------------- | ------------------------ | --------------------------------------------------------------------------------------------------- |
+| Listings        | Very low                 | Creating a listing should be < 60 seconds. AI grading pre-fills condition.                          |
+| Matching        | Zero (invisible)         | Users set preferences; the engine acts. No user action required.                                    |
+| Trade Lifecycle | Proportional to value    | Low-value trades: 2 clicks (accept, confirm). High-value: photo approval, escrow, verification.     |
+| Wallet          | One-time setup           | Deposit once, trade many times. Withdrawal should be ≤ 3 clicks.                                    |
+| KYC             | Progressive              | Ask nothing until threshold. Ask little (selfie + ID) at $500. Ask more (proof of address) at $1K+. |
+| Escrow          | Zero (invisible)         | Users never interact with escrow. It holds and releases automatically.                              |
+| Disputes        | Proportional to severity | Filing: 1 click + reason. Evidence: photos already in system. Resolution: admin acts, not users.    |
 
 ---
 
@@ -80,6 +81,7 @@ CardForum improves itself. Every module produces data that feeds improvement loo
 No module is a dead end.
 
 ### Principles
+
 1. **Configuration over Code** — Business rules are data, not deploys
 2. **Observe Everything** — What you don't measure, you can't improve
 3. **Small Experiments** — Test on 5% before rolling to 100%
@@ -129,9 +131,11 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 **Least Action**: The bridge model itself is a least-action solution — replace international shipping (high action) with local equivalents (minimal action). Phase 1 builds the machinery that finds these minimum-action paths through the trade graph.
 
 ### Listings
+
 > **Bridge Role**: Core (Tier 1). Every have/want listing is an edge in the bridge graph. `autoAcceptRegions` lets users constrain which regions they'll bridge with. The listing is the bridge's input — without listings, the graph is empty and no cycles exist.
 >
 > **Least Action**: Listing creation targets < 60 seconds. Card search narrows 256 cards to one with type-ahead + TCG filter. AI grading pre-fills condition (user confirms, not creates). Auto-accept eliminates a future decision point per match. Bid/ask pricing is a single number — no negotiation protocol.
+
 - [x] Have/Want listing CRUD (`POST /api/listings`, `listing.service.ts`)
 - [x] Card search with TCG filter (`card-search.tsx`, `TCG_FILTERS`)
 - [x] Bid/ask pricing (cents, zod validated, `min(1).max(10_000_000)`)
@@ -140,6 +144,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Graded card listings (PSA/BGS/CGC/SGC, cert numbers)
 
 ### Matching Engine ✅
+
 > **Bridge Role**: Core (Tier 1). The cycle-finder, bridge-builder, scorer, and packer ARE the bridge algorithm. `isFullyLocal`, `RegionalBalance`, `fullyLocalBonus` — these are the bridge's computational core. Without this engine, the platform is just a listing board; with it, listings become bridges.
 >
 > **Spectrum**: Fully Centralised (algorithmic, opaque). Users influence via bid/ask and auto-accept preferences, but the engine's scoring and selection logic is not visible to them. **Phase 3 target**: Platform-Governed — transparent scoring formula, user preference weighting, published match rationale.
@@ -157,6 +162,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Trigger mechanism — `POST /api/cron/matching` + Vercel Cron every 5 minutes
 
 ### Trade Lifecycle
+
 > **Bridge Role**: Trust (Tier 2). The state machine orchestrates bridge execution. DIRECT mode = local bridge (no authenticator needed, peer-to-peer). AUTHENTICATED mode = verified bridge (authenticators inspect per-leg in each region). The state machine IS the bridge's execution contract — it ensures all legs of a multi-party cycle complete or none do.
 >
 > **Spectrum**: Fully Centralised (platform state machine). Transitions are admin-gated where trust matters (AUTHENTICATING, COMPLETED). **Progressive path**: authenticator-signed transitions on-chain (Phase 3A), reducing platform as single point of trust.
@@ -170,12 +176,14 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Trade action API (accept, reject, cancel)
 
 ### Marketplace
+
 > **Bridge Role**: Independent. Aggregates bid/ask regardless of bridge mechanics. Could serve a non-bridge platform identically — it shows market depth, not bridge routes.
 
 - [x] Aggregated best bid/best ask per card with spread (`GET /api/marketplace`)
 - [x] Orderbook view
 
 ### Growth Hooks (wired in Phase 2.7)
+
 - **Listings**: Track fill rate by TCG/condition/region → suggest pricing to sellers
 - **Matching**: Track proposal→outcome mapping → calibrate scorer weights monthly
 - **Trades**: Track time-in-state per transition → identify bottleneck states
@@ -186,7 +194,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 
 **Status**: Services ~85% complete, API routing ~50% complete
 **Spectrum**: This is where the centralisation-decentralisation tension is richest. Every module here holds user trust — money, identity, dispute outcomes — and each must earn the right to decentralise through proven reliability.
-**Least Action**: Trust infrastructure is expensive action — but the alternative (no trust → no trades) is infinitely more expensive. Each module here adds the *minimum* friction necessary to protect the value at stake. Photo approval only above $50. KYC only above $500. Escrow is invisible. The design test: if removing this module would increase total system action (via disputes, fraud, chargebacks), it stays.
+**Least Action**: Trust infrastructure is expensive action — but the alternative (no trust → no trades) is infinitely more expensive. Each module here adds the _minimum_ friction necessary to protect the value at stake. Photo approval only above $50. KYC only above $500. Escrow is invisible. The design test: if removing this module would increase total system action (via disputes, fraud, chargebacks), it stays.
 **Trust Review**: See [`docs/TRUST_AND_FINANCIAL_REVIEW.md`](docs/TRUST_AND_FINANCIAL_REVIEW.md) for the full trust dimension mapping (7 dimensions, 47 mechanisms), financial infrastructure inventory (35 functions, 7 services), and 6 integration gaps between trust and financial systems.
 
 > Audit: 2026-02-15 — Services are implemented but many are unreachable due to missing
@@ -194,6 +202,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 > but only ACCEPTED/REJECTED/CANCELLED transitions have API routes.
 
 ### Wallet System ✅
+
 > **Bridge Role**: Trust (Tier 2). The double-entry ledger enables multi-user atomic settlement — the bridge requires all legs to clear before releasing funds. Without wallets, each bridge leg would need a separate payment, making multi-party cycles impractical.
 >
 > **Spectrum**: Fully Centralised (platform custody). Necessary at this scale — users trust the platform to hold funds. **Phase 3B**: self-custodial opt-in for power users who prefer to hold their own keys.
@@ -213,6 +222,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Payout history route (`GET /api/payouts/history`)
 
 ### Stripe Connect ✅
+
 > **Bridge Role**: Infrastructure. Generic payment plumbing — funds wallets and authenticator payouts, but is not bridge-specific. Would serve any marketplace identically.
 
 - [x] Express accounts for automated user payouts
@@ -224,6 +234,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] `charge.refunded` webhook handler
 
 ### Escrow ⚠️
+
 > **Bridge Role**: Trust (Tier 2). Holds funds atomically during multi-leg bridge execution. Each TradeLeg escrow is a constraint in the bridge's settlement graph — all legs clear or none do. Without escrow, multi-party bridge trades have no atomicity guarantee.
 >
 > **Spectrum**: Fully Centralised (platform-controlled). The platform holds funds during trades and releases on completion. **Phase 3A**: smart contract escrow replaces platform custody with verifiable code — the highest-ROI blockchain use case.
@@ -237,6 +248,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Escrow freeze on DISPUTED (currently stays HELD — no leak, but no explicit dispute state)
 
 ### Authenticator Network ⚠️ (~70%)
+
 > **Bridge Role**: Trust (Tier 2). Authenticators ARE the bridge's physical presence in each region. `findBestAuthenticator(region)` assigns per-leg, per-region. Without local authenticators, the bridge reduces to international shipping — the very problem it exists to solve.
 >
 > **Spectrum**: Hybrid. Applications are centralised (admin approval), assignment is algorithmic, ratings are community-driven. **Phase 3C**: community governance over applications (DAO voting), user-selected authenticators, authenticator fee markets within platform bounds.
@@ -259,6 +271,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Random audit trigger route (service exists, no cron)
 
 ### Photo Approval ✅
+
 > **Bridge Role**: Trust (Tier 2). Trust gate before authenticator handoff — prevents fraud on high-value bridge legs. Without photo approval, users ship misrepresented cards into the bridge, poisoning downstream legs.
 >
 > **Least Action**: The $50 threshold (`PHOTO_APPROVAL_THRESHOLD_CENTS = 5000`) is the action/value equilibrium point — below $50, dispute cost from a bad card is less than the friction cost of requiring photos from every seller. Above $50, the calculus flips. Max 2 attempts before auto-dispute eliminates infinite rejection loops. Future: trusted sellers skip photo approval entirely (see RIGIDNESS #11).
@@ -271,6 +284,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Photo approval UI wired into trades page (component exists, not integrated)
 
 ### Verification Fees ✅
+
 > **Bridge Role**: Quality (Tier 3). Funds authenticator work per leg — bridges only function if authenticators are compensated. The fee structure makes the bridge economically sustainable, but the bridge mechanism itself doesn't depend on how fees are calculated.
 >
 > **Spectrum**: Fully Centralised (hardcoded fee rates). **Phase 3B**: authenticator fee markets — authenticators set own fees within platform bounds, competition improves quality.
@@ -283,11 +297,12 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Refund verification fees on CANCELLED
 
 ### KYC ⚠️ (~75%)
+
 > **Bridge Role**: Quality (Tier 3). Compliance gate — ensures users trading via bridge meet legal thresholds. The bridge works without KYC, but wouldn't be legal at scale.
 >
 > **Spectrum**: Fully Centralised (admin document review). Regulatory requirement — this cannot be community-governed. **Target**: Platform-Governed — automate tier 1 verification to reduce bottleneck, keep manual review for tier 2+.
 >
-> **Least Action**: Progressive disclosure — ask for nothing until the user hits a threshold. UNVERIFIED users trade freely up to $500 listings / $1K trades. BASIC (selfie + gov ID) unlocks $500+. ENHANCED (proof of address) only when regulations demand it. Each tier asks for the *minimum* additional document. The KYC gate checks happen inside `assertCanTrade` and `assertCanCreateListing` — invisible until the user hits the boundary.
+> **Least Action**: Progressive disclosure — ask for nothing until the user hits a threshold. UNVERIFIED users trade freely up to $500 listings / $1K trades. BASIC (selfie + gov ID) unlocks $500+. ENHANCED (proof of address) only when regulations demand it. Each tier asks for the _minimum_ additional document. The KYC gate checks happen inside `assertCanTrade` and `assertCanCreateListing` — invisible until the user hits the boundary.
 
 - [x] Tiered KYC (UNVERIFIED → BASIC → ENHANCED)
 - [x] Document upload (gov ID, selfie, proof of address)
@@ -297,6 +312,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Admin role enforcement on KYC review route
 
 ### Disputes ⚠️ (~60%)
+
 > **Bridge Role**: Trust (Tier 2). Resolves trust failures in bridge legs — financial consequences keep multi-party bridge honest. A single unresolved dispute in a multi-leg cycle can block settlement for all participants.
 >
 > **Spectrum**: Fully Centralised (admin-only arbitration). Admin resolution works at current scale but won't scale past hundreds of active trades. **Phase 3B**: tiered arbitration — peer review → community arbitrator → admin escalation.
@@ -311,6 +327,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Financial safeguards on DISPUTED (wallet freeze for disputed amount)
 
 ### Edge Scenario Wiring ✅
+
 - [x] TradeLeg records created on manual trade creation (from proposal legs)
 - [x] MatchProposalLeg stores listing IDs (haveListingId, wantListingId, graded variants)
 - [x] Listing deactivation on ACCEPTED (prevents double-matching race condition)
@@ -318,17 +335,19 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Atomic wallet holds/settles/refunds (single transaction, rollback on failure)
 
 ### Trade Transition Routes ✅
+
 - [x] PROPOSED → ACCEPTED/REJECTED (via `action: accept/reject`)
-- [x] * → CANCELLED (via `action: cancel`)
+- [x] - → CANCELLED (via `action: cancel`)
 - [x] DELIVERED → COMPLETED (via `deliver/route.ts`)
 - [x] ACCEPTED → ESCROWED (via `action: escrow`)
 - [x] ESCROWED → CARDS_SUBMITTED (via `action: submit_cards`)
 - [x] CARDS_SUBMITTED → AUTHENTICATING (via `action: authenticate`)
 - [x] AUTHENTICATING → VERIFIED (auto-triggered by `submitVerificationResult`)
 - [x] VERIFIED → DELIVERING (via `action: deliver`)
-- [x] * → DISPUTED (via `action: dispute` + `POST /api/disputes`)
+- [x] - → DISPUTED (via `action: dispute` + `POST /api/disputes`)
 
 ### Auth Hardening ✅
+
 > **Bridge Role**: Infrastructure. Auth security is generic — not bridge-specific, but a prerequisite for production trust.
 >
 > **Least Action**: Each hardening measure addresses a specific attack surface at minimum user friction. Email verification is non-blocking (user trades immediately, verifies later). Rate limiting is invisible to legitimate users. Password reset is self-service (no support tickets). Sign-out is one click. Settings page saves in-place (no page navigation).
@@ -342,6 +361,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Email service (`src/lib/email.ts` — Resend API in production, console.log in dev)
 
 ### Growth Hooks (wired in Phase 2.7)
+
 - **Wallet**: Track deposit→trade→withdraw funnel → detect churn signals
 - **Authenticator**: Track AI agreement rate → adjust assignment priority
 - **Photo Approval**: Track rejection rate per user → flag repeat offenders for enhanced KYC
@@ -357,6 +377,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 **Least Action**: Digital tokens eliminate the highest-action operation in trading: physical handling. A digital token trade is a database write, not a shipment. Redemption reverses this only when the user explicitly wants the physical card — converting potential energy (vaulted card) to kinetic (shipped card) only on demand.
 
 ### Digitisation
+
 > **Bridge Role**: Independent. Converts physical to digital — not part of the bridge. Digitised cards trade via the digital marketplace, bypassing the bridge entirely. However, digitisation uses authenticator infrastructure (vault operators), which is bridge trust.
 >
 > **Spectrum**: Hybrid (vault operator gated by platform approval, user-initiated). **Phase 3A**: multi-operator consensus, NFT minting on-chain. **Phase 3C**: open applications with staking to align incentives.
@@ -369,6 +390,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Digitiser royalty tracking (2%)
 
 ### Digital Marketplace
+
 > **Bridge Role**: Independent. Pure digital orderbook — no physical cards moving. The bridge is irrelevant when both parties trade digital tokens.
 >
 > **Spectrum**: Fully Centralised (platform orderbook). **Phase 3B**: Hybrid — orderbook API for external aggregators, P2P escrow option for power users.
@@ -381,6 +403,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Transfer audit trail (`DigitalTokenTransfer`)
 
 ### Redemption
+
 > **Bridge Role**: Independent. Digital → physical reconversion. Cross-zone aware (`isSameCustomsZone`), but not bridge-dependent — redemption works identically whether the original trade was bridged or not.
 >
 > **Spectrum**: Hybrid (algorithmic vault assignment, user zone preference). **Phase 3B**: vault competition with dynamic pricing, user vault selection.
@@ -393,6 +416,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [x] Token burn on completion
 
 ### Condition Comparison ⚠️
+
 > **Bridge Role**: Quality (Tier 3). Calibrates AI grading which feeds listing condition accuracy — better conditions mean more accurate bridge matching. Reduces condition disputes that break bridge legs.
 
 - [x] AI vs authenticator CCS comparison (service implemented)
@@ -401,6 +425,7 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 - [ ] Trigger mechanism (never invoked after digitisation or verification)
 
 ### Growth Hooks (wired in Phase 2.7)
+
 - **Condition Comparison**: Feed AI vs. authenticator deltas into calibration pipeline
 - **Digital Marketplace**: Track price/volume by CCS tier → dynamic pricing suggestions
 
@@ -412,9 +437,9 @@ See `RIGIDNESS.md` for the full catalog of rigidity points blocking these loops.
 **Why**: Phases 1-2 built the platform. Phase 2.7 makes it learn.
 **Effort**: ~35 days (7 weeks, 1 engineer)
 **Prerequisite**: Phase 2 P0 bugs fixed (trade transition routes)
-**Bridge Role**: Phase 2.7 doesn't add bridge capability — it adds the feedback loops that make the bridge *self-improving*. Scorer calibration tunes the least-action functional. Region rebalancing addresses authenticator shortages. AI calibration improves condition confidence. All feedback flows serve bridge quality (Tier 3).
+**Bridge Role**: Phase 2.7 doesn't add bridge capability — it adds the feedback loops that make the bridge _self-improving_. Scorer calibration tunes the least-action functional. Region rebalancing addresses authenticator shortages. AI calibration improves condition confidence. All feedback flows serve bridge quality (Tier 3).
 **Spectrum**: Not a spectrum shift itself — this phase builds the observability, configuration, and experimentation foundations that enable Phase 3's deliberate decentralisation. You can't decentralise what you can't measure.
-**Least Action**: This phase minimises *developer* action. Today, changing a fee rate is a code change → PR → review → merge → deploy → verify (6 steps). After Phase 2.7: config write → verify (2 steps). Feedback loops replace engineer-notices-problem → engineer-investigates → engineer-proposes-fix with system-detects → system-proposes → admin-approves (or auto-applies). The system does the work that humans currently do by hand.
+**Least Action**: This phase minimises _developer_ action. Today, changing a fee rate is a code change → PR → review → merge → deploy → verify (6 steps). After Phase 2.7: config write → verify (2 steps). Feedback loops replace engineer-notices-problem → engineer-investigates → engineer-proposes-fix with system-detects → system-proposes → admin-approves (or auto-applies). The system does the work that humans currently do by hand.
 
 > See `RIGIDNESS.md` for the full catalog of rigidity points this phase resolves.
 > Each deliverable below references specific RIGIDNESS items by number.
@@ -447,15 +472,15 @@ Resolves: RIGIDNESS #8 (no observability)
 - [ ] Pino structured logging (replace all `console.log` calls)
 - [ ] Custom business metrics:
 
-| Metric | Type | Alert Threshold |
-|--------|------|-----------------|
-| `trade.completion_rate` | Gauge | <60% |
-| `match.acceptance_rate` | Gauge | <40% |
-| `wallet.failed_txns` | Counter | >5/hour |
-| `authenticator.avg_verification_hours` | Histogram | >48h |
-| `api.p99_latency` | Histogram | >2s |
-| `escrow.avg_hold_duration_hours` | Histogram | >72h |
-| `dispute.resolution_rate` | Gauge | <80% |
+| Metric                                 | Type      | Alert Threshold |
+| -------------------------------------- | --------- | --------------- |
+| `trade.completion_rate`                | Gauge     | <60%            |
+| `match.acceptance_rate`                | Gauge     | <40%            |
+| `wallet.failed_txns`                   | Counter   | >5/hour         |
+| `authenticator.avg_verification_hours` | Histogram | >48h            |
+| `api.p99_latency`                      | Histogram | >2s             |
+| `escrow.avg_hold_duration_hours`       | Histogram | >72h            |
+| `dispute.resolution_rate`              | Gauge     | <80%            |
 
 ### 4. Match Outcome Tracking (P1 — 4 days)
 
@@ -530,7 +555,7 @@ sentry.server.config.ts                       (Sentry Node SDK init)
 
 Phase 3 is not "add blockchain." It is the deliberate shift of specific trust points from platform custody to verifiable computation. Each item below was chosen because centralisation is the bottleneck for that module — not because decentralisation is fashionable. If a module works fine centralised, it stays centralised.
 
-**Least Action**: Blockchain is justified here because it *reduces* total system action at scale. Smart contract escrow eliminates admin intervention on release/refund — code enforces, no human reviews. NFTs eliminate vault trust assumptions — cryptographic proof replaces periodic audits. Embedded wallets eliminate the "connect wallet" friction that kills 90% of Web3 onboarding — users get wallets automatically, interact with them never. Each blockchain addition must pass the least-action test: does it reduce total action (user + operator + developer), or does it add ceremony that only satisfies ideology?
+**Least Action**: Blockchain is justified here because it _reduces_ total system action at scale. Smart contract escrow eliminates admin intervention on release/refund — code enforces, no human reviews. NFTs eliminate vault trust assumptions — cryptographic proof replaces periodic audits. Embedded wallets eliminate the "connect wallet" friction that kills 90% of Web3 onboarding — users get wallets automatically, interact with them never. Each blockchain addition must pass the least-action test: does it reduce total action (user + operator + developer), or does it add ceremony that only satisfies ideology?
 
 ### Phase 3A: Trust Infrastructure (Target: Q3 2026)
 
@@ -539,19 +564,19 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
 
 **Infrastructure**: Hardhat + OpenZeppelin v5, wagmi v2 + viem + RainbowKit, Dynamic embedded wallets, Alchemy RPC, Goldsky indexer
 
-- [ ] **Smart contract escrow** → Trust (Tier 2) evolution — moves bridge settlement from platform promise to verifiable code. *Least Action: eliminates admin release/refund operations; contract executes deterministically on authenticator signature. Reduces operator action to zero per trade.*
+- [ ] **Smart contract escrow** → Trust (Tier 2) evolution — moves bridge settlement from platform promise to verifiable code. _Least Action: eliminates admin release/refund operations; contract executes deterministically on authenticator signature. Reduces operator action to zero per trade._
   - [ ] MultiPartyEscrow contract (USDC-denominated, Base)
   - [ ] Oracle integration: authenticator signatures trigger release
   - [ ] Atomic multi-leg settlement (all legs clear or none)
   - [ ] Refund on CANCELLED/DISPUTED via contract
   - [ ] Security audit (Trail of Bits or OpenZeppelin, $50K-$100K)
-- [ ] **Graded card NFTs** → Independent (bridge-irrelevant) — digital ownership proof, not part of physical bridge. But enables future: NFT-backed bridge trades where the digital card IS the settlement. *Least Action: on-chain ownership proof eliminates vault audit overhead; ERC-2981 royalties are auto-enforced, removing manual royalty tracking.*
+- [ ] **Graded card NFTs** → Independent (bridge-irrelevant) — digital ownership proof, not part of physical bridge. But enables future: NFT-backed bridge trades where the digital card IS the settlement. _Least Action: on-chain ownership proof eliminates vault audit overhead; ERC-2981 royalties are auto-enforced, removing manual royalty tracking._
   - [ ] Upgradeable ERC-721 contract (OpenZeppelin)
   - [ ] IPFS metadata (CCS results, photos, grading cert)
   - [ ] ERC-2981 royalty enforcement (2% digitiser royalty on-chain)
   - [ ] Mint on digitisation completion (replace DB-only mint)
   - [ ] Burn on redemption (on-chain proof of destruction)
-- [ ] **Embedded wallets** → Infrastructure — generic, but reduces bridge onboarding friction by eliminating crypto setup. *Least Action: auto-provisioned on sign-in (zero wallet setup), gas-sponsored via paymaster (zero gas decisions). Users interact with cards and trades, never with blockchain primitives.*
+- [ ] **Embedded wallets** → Infrastructure — generic, but reduces bridge onboarding friction by eliminating crypto setup. _Least Action: auto-provisioned on sign-in (zero wallet setup), gas-sponsored via paymaster (zero gas decisions). Users interact with cards and trades, never with blockchain primitives._
   - [ ] Dynamic SDK integration with existing Auth.js
   - [ ] Auto-provision wallet on Google/Discord sign-in
   - [ ] Link `User.walletAddress` in PostgreSQL
@@ -563,6 +588,7 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
   - [ ] Failure mode handling: chain down → DB-only read mode
 
 #### Recursive Growth Mechanisms
+
 - **Escrow**: Track on-chain resolution times → auto-adjust timeout parameters via config service
 - **NFT Pricing**: Secondary market prices by CCS tier → recalibrate CCS dimension weights (feeds into `/api/cron/ai-calibration`)
 - **Vault Proofs**: Failed verification frequency → auto-flag suspicious vaults for enhanced auditing
@@ -585,7 +611,7 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
   - [ ] Fungible by `cardId + condition + language`
   - [ ] Batch minting for vault inventory
   - [ ] Batch transfers for multi-leg trades
-- [ ] **Self-custodial wallet mode** → Infrastructure — user controls funds; bridge settlement still works regardless of custody model. Fully Decentralised (user's keys, user's risk) (opt-in for power users). *Least Action for power users: direct stablecoin deposits skip Stripe entirely (no 2.9% + 30¢ fee, no 3-day settlement). More action for setup, less action per transaction — the crossover point is ~10 trades.*
+- [ ] **Self-custodial wallet mode** → Infrastructure — user controls funds; bridge settlement still works regardless of custody model. Fully Decentralised (user's keys, user's risk) (opt-in for power users). _Least Action for power users: direct stablecoin deposits skip Stripe entirely (no 2.9% + 30¢ fee, no 3-day settlement). More action for setup, less action per transaction — the crossover point is ~10 trades._
   - [ ] Connect external wallet (MetaMask, Coinbase Wallet)
   - [ ] Export embedded wallet keys
   - [ ] Gas-paid transactions (user covers gas)
@@ -609,17 +635,17 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
 
 ### Blockchain Cost Budget
 
-| Item | Phase 3A | Phase 3B | Ongoing Monthly |
-|------|----------|----------|-----------------|
-| Smart contract dev | $80K-$150K | $50K-$100K | — |
-| Security audits | $50K-$100K | $30K-$50K | — |
-| Legal/compliance | $100K-$200K | $50K-$100K | — |
-| KYC/AML integration | — | $30K-$60K | — |
-| Alchemy RPC | — | — | $49-$225 |
-| Goldsky indexer | — | — | $200-$500 |
-| Dynamic wallets | — | — | $99-$499 |
-| Gas sponsorship | — | — | $50-$1,000 |
-| **Total** | **$230K-$450K** | **$160K-$310K** | **$400-$2,200/mo** |
+| Item                | Phase 3A        | Phase 3B        | Ongoing Monthly    |
+| ------------------- | --------------- | --------------- | ------------------ |
+| Smart contract dev  | $80K-$150K      | $50K-$100K      | —                  |
+| Security audits     | $50K-$100K      | $30K-$50K       | —                  |
+| Legal/compliance    | $100K-$200K     | $50K-$100K      | —                  |
+| KYC/AML integration | —               | $30K-$60K       | —                  |
+| Alchemy RPC         | —               | —               | $49-$225           |
+| Goldsky indexer     | —               | —               | $200-$500          |
+| Dynamic wallets     | —               | —               | $99-$499           |
+| Gas sponsorship     | —               | —               | $50-$1,000         |
+| **Total**           | **$230K-$450K** | **$160K-$310K** | **$400-$2,200/mo** |
 
 ---
 
@@ -628,27 +654,32 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
 ### Bugs (Prioritized)
 
 **Fixed:**
+
 - [x] ~~**BUG-1 DOUBLE FEE**: `settleWalletFunds` + `captureFee()` charges fees 2×~~ — Fixed: settlement only releases credits, fees captured implicitly via hold.
 - [x] ~~**BUG-2 NO ESCROW**: `createEscrow()` never called~~ — Fixed: wired into ESCROWED transition.
 - [x] ~~**BUG-3 STALE ESCROW**: `releaseEscrow`/`refundEscrow` never called~~ — Fixed: wired into COMPLETED/CANCELLED.
 
 **Open:**
+
 - [x] ~~**BUG-4 DEAD TRANSITIONS (P0)**: Trade transitions ESCROWED through DELIVERING had no API routes~~ — Fixed: all transitions wired via extended `ACTION_STATUS_MAP` in `trades/route.ts`.
 - [x] ~~**BUG-5 NO DISPUTE ROUTE (P0)**: Users could not file disputes~~ — Fixed: `POST /api/disputes` route + `action: dispute` on trade route.
 
 ### Missing Features (Prioritized)
 
 **P0 — Blocks core trading flow:**
+
 - [x] Trade transition API routes (escrow, submit_cards, authenticate, deliver, complete, dispute)
 - [x] Matching engine trigger mechanism (`POST /api/cron/matching` + Vercel Cron)
 
 **P1 — Blocks production readiness:**
+
 - [ ] Admin role enforcement on authenticator/KYC/dispute routes
 - [x] Authenticator activation route (`POST /api/authenticator/activate`)
 - [x] KYC user-facing UI (/kyc page with tier cards, document upload, status badge)
 - [ ] Dispute admin resolution UI
 
 **P2 — Quality gaps:**
+
 - [x] Email verification flow (token-based, Resend API, auto-sends on register)
 - [x] Password reset / recovery (token-based, forgot-password + reset-password pages)
 - [x] Rate limiting on auth endpoints (in-memory sliding window: register 3/15min, login 5/15min, reset 3/15min)
@@ -662,11 +693,13 @@ Phase 3 is not "add blockchain." It is the deliberate shift of specific trust po
 - [ ] Random audit cron trigger (service exists, no route)
 
 ### Unused/Stub Services
+
 - `condition-comparison.service.ts` — AI vs authenticator CCS comparison (never triggered — wired in Phase 2.7 AI calibration cron)
 - `random-audit.service.ts` — Audit system (implemented, no cron trigger)
 - `slab-verification.service.ts` — Slab grading verification (implemented, unused)
 
 ### Test Coverage
+
 - [x] Vitest v4 framework (`fileParallelism: false` for shared DB)
 - [x] 62 passing tests (smoke, registration, KYC, KYC gates, authenticator partial)
 - [ ] 24 failing tests (pre-existing: `acceptsDropOff` column missing from DB — needs `prisma db push`)

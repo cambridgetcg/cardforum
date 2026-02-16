@@ -10,10 +10,7 @@ import { CenteringTool } from "./centering-tool";
 import type { CenteringMeasurement } from "@/lib/centering";
 
 interface AIGradingStepProps {
-  onComplete: (result: {
-    aiResult: AIGradingResult | null;
-    suggestedCondition: Condition;
-  }) => void;
+  onComplete: (result: { aiResult: AIGradingResult | null; suggestedCondition: Condition }) => void;
   onSkip: () => void;
 }
 
@@ -47,17 +44,12 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
       (file) =>
         new Promise<string>((resolve, reject) => {
           if (file.size > MAX_PHOTO_SIZE_BYTES) {
-            reject(
-              new Error(
-                `${file.name} exceeds ${MAX_PHOTO_SIZE_BYTES / (1024 * 1024)}MB`,
-              ),
-            );
+            reject(new Error(`${file.name} exceeds ${MAX_PHOTO_SIZE_BYTES / (1024 * 1024)}MB`));
             return;
           }
           const reader = new FileReader();
           reader.onload = () => resolve(reader.result as string);
-          reader.onerror = () =>
-            reject(new Error(`Failed to read ${file.name}`));
+          reader.onerror = () => reject(new Error(`Failed to read ${file.name}`));
           reader.readAsDataURL(file);
         }),
     );
@@ -104,12 +96,10 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
   return (
     <div className="space-y-5">
       <div>
-        <h3 className="text-base font-semibold text-gray-900">
-          AI Condition Assessment
-        </h3>
+        <h3 className="text-base font-semibold text-gray-900">AI Condition Assessment</h3>
         <p className="mt-1 text-sm text-gray-500">
-          Upload front and back photos for an AI-powered condition estimate.
-          This helps buyers trust your listing.
+          Upload front and back photos for an AI-powered condition estimate. This helps buyers trust
+          your listing.
         </p>
       </div>
 
@@ -154,11 +144,7 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
             ))}
           </div>
           <div className="flex gap-2">
-            <Button
-              onClick={handleGrade}
-              disabled={grading}
-              size="sm"
-            >
+            <Button onClick={handleGrade} disabled={grading} size="sm">
               {grading ? "Analyzing..." : "Analyze Condition"}
             </Button>
             <Button
@@ -177,9 +163,7 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
         </div>
       )}
 
-      {error && (
-        <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-      )}
+      {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
       {/* AI Result */}
       {result?.success && result.ccs && (
@@ -192,22 +176,14 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
           </div>
 
           <div className="mt-3 text-sm text-green-800">
-            <p className="font-medium">
-              CCS: {result.ccs.composite.toFixed(1)}
-            </p>
+            <p className="font-medium">CCS: {result.ccs.composite.toFixed(1)}</p>
             <div className="mt-2 grid grid-cols-2 gap-x-6 gap-y-1 text-xs">
-              {(["surface", "corners", "edges", "centering"] as const).map(
-                (dim) => (
-                  <div key={dim} className="flex justify-between">
-                    <span className="text-green-600">
-                      {CCS_DIMENSION_LABELS[dim]}
-                    </span>
-                    <span className="font-medium">
-                      {result.ccs![dim].toFixed(1)}
-                    </span>
-                  </div>
-                ),
-              )}
+              {(["surface", "corners", "edges", "centering"] as const).map((dim) => (
+                <div key={dim} className="flex justify-between">
+                  <span className="text-green-600">{CCS_DIMENSION_LABELS[dim]}</span>
+                  <span className="font-medium">{result.ccs![dim].toFixed(1)}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -252,9 +228,7 @@ export function AIGradingStep({ onComplete, onSkip }: AIGradingStepProps) {
         <Button variant="outline" onClick={onSkip}>
           Skip — Set Condition Manually
         </Button>
-        {result?.success && (
-          <Button onClick={handleAccept}>Accept & Continue</Button>
-        )}
+        {result?.success && <Button onClick={handleAccept}>Accept & Continue</Button>}
       </div>
     </div>
   );

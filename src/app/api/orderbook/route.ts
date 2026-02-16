@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { db } from "@/lib/db";
+import { getCached, setCached } from "@/lib/orderbook-cache";
 
 // GET /api/orderbook?cardId=xxx
 // Returns order book depth: all active bid/ask price levels with quantities for a card.
@@ -8,6 +9,14 @@ export async function GET(req: NextRequest) {
 
   if (!cardId) {
     return NextResponse.json({ error: "cardId is required" }, { status: 400 });
+  }
+
+  const cacheKey = `orderbook:raw:${cardId}`;
+  const cached = getCached<object>(cacheKey);
+  if (cached) {
+    return NextResponse.json(cached, {
+      headers: { "Cache-Control": "public, max-age=10" },
+    });
   }
 
   const [card, haveListings, wantListings] = await Promise.all([
@@ -40,7 +49,11 @@ export async function GET(req: NextRequest) {
       entry.listings += 1;
       entry.conditions.add(h.condition);
     } else {
-      askMap.set(h.askPrice, { totalQty: h.quantity, listings: 1, conditions: new Set([h.condition]) });
+      askMap.set(h.askPrice, {
+        totalQty: h.quantity,
+        listings: 1,
+        conditions: new Set([h.condition]),
+      });
     }
   }
   const asks = Array.from(askMap.entries())
@@ -53,7 +66,10 @@ export async function GET(req: NextRequest) {
     }));
 
   // Aggregate bids by price level
-  const bidMap = new Map<number, { totalQty: number; listings: number; minConditions: Set<string> }>();
+  const bidMap = new Map<
+    number,
+    { totalQty: number; listings: number; minConditions: Set<string> }
+  >();
   for (const w of wantListings) {
     const entry = bidMap.get(w.bidPrice);
     if (entry) {
@@ -61,7 +77,11 @@ export async function GET(req: NextRequest) {
       entry.listings += 1;
       entry.minConditions.add(w.minCondition);
     } else {
-      bidMap.set(w.bidPrice, { totalQty: w.maxQuantity, listings: 1, minConditions: new Set([w.minCondition]) });
+      bidMap.set(w.bidPrice, {
+        totalQty: w.maxQuantity,
+        listings: 1,
+        minConditions: new Set([w.minCondition]),
+      });
     }
   }
   const bids = Array.from(bidMap.entries())
@@ -88,7 +108,7 @@ export async function GET(req: NextRequest) {
   const totalAsks = haveListings.reduce((sum, h) => sum + h.quantity, 0);
   const totalBids = wantListings.reduce((sum, w) => sum + w.maxQuantity, 0);
 
-  return NextResponse.json({
+  const result = {
     card: {
       id: card.id,
       tcg: card.tcg,
@@ -103,5 +123,11 @@ export async function GET(req: NextRequest) {
     asks,
     bids,
     summary: { bestAsk, bestBid, spread, spreadPct, midpoint, totalAsks, totalBids },
+  };
+
+  setCached(cacheKey, result);
+
+  return NextResponse.json(result, {
+    headers: { "Cache-Control": "public, max-age=10" },
   });
 }

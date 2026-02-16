@@ -1,6 +1,6 @@
 # Card Condition Determination Workflow — Design Document
 
-*Beyond self-report: How CardForum can determine card condition through automated, semi-automated, and hybrid approaches.*
+_Beyond self-report: How CardForum can determine card condition through automated, semi-automated, and hybrid approaches._
 
 ---
 
@@ -8,15 +8,15 @@
 
 CardForum currently relies on **self-reported condition** at listing time. A seller picks NM/LP/MP/HP/DMG when creating a listing. This has well-known failure modes:
 
-| Failure Mode | Impact | Frequency |
-|-------------|--------|-----------|
-| **Optimistic bias** | Sellers grade their cards higher than reality | Very common |
-| **Inconsistency** | "NM" means different things to different people | Universal |
-| **Intentional misrepresentation** | List HP cards as NM to get better matches | Occasional |
-| **Inexperience** | New sellers genuinely don't know grading standards | Common |
+| Failure Mode                             | Impact                                                | Frequency   |
+| ---------------------------------------- | ----------------------------------------------------- | ----------- |
+| **Optimistic bias**                      | Sellers grade their cards higher than reality         | Very common |
+| **Inconsistency**                        | "NM" means different things to different people       | Universal   |
+| **Intentional misrepresentation**        | List HP cards as NM to get better matches             | Occasional  |
+| **Inexperience**                         | New sellers genuinely don't know grading standards    | Common      |
 | **No verification until authentication** | Condition disputes emerge late in the trade lifecycle | Problematic |
 
-The CCS system (Phase 1 complete) solves the *precision* problem — 4-dimension scoring instead of 5 labels — but CCS is only applied at authentication time. By then, the trade is already proposed, accepted, and escrowed. A condition mismatch at authentication is expensive: time wasted, potential disputes, lost trust.
+The CCS system (Phase 1 complete) solves the _precision_ problem — 4-dimension scoring instead of 5 labels — but CCS is only applied at authentication time. By then, the trade is already proposed, accepted, and escrowed. A condition mismatch at authentication is expensive: time wasted, potential disputes, lost trust.
 
 **The core question: How do we push condition determination earlier in the lifecycle — ideally at listing time — without requiring authenticator involvement for every listing?**
 
@@ -68,13 +68,14 @@ The most mature commercial option with a well-documented REST API.
 
 **Endpoints available:**
 
-| Endpoint | Purpose | Credits |
-|----------|---------|---------|
-| `POST /v2/grade` | Full grading (centering, corners, edges, surface) | ~100 |
-| `POST /v2/condition` | Quick condition label | ~50 |
-| `POST /v2/centering` | Centering ratios only | ~25 |
+| Endpoint             | Purpose                                           | Credits |
+| -------------------- | ------------------------------------------------- | ------- |
+| `POST /v2/grade`     | Full grading (centering, corners, edges, surface) | ~100    |
+| `POST /v2/condition` | Quick condition label                             | ~50     |
+| `POST /v2/centering` | Centering ratios only                             | ~25     |
 
 **Request format:**
+
 ```json
 {
   "records": [
@@ -86,34 +87,37 @@ The most mature commercial option with a well-documented REST API.
 ```
 
 **Response (relevant fields):**
+
 ```json
 {
-  "records": [{
-    "corners": {
-      "UPPER_LEFT": { "grade": 9.2 },
-      "UPPER_RIGHT": { "grade": 8.8 },
-      "DOWN_RIGHT": { "grade": 9.0 },
-      "DOWN_LEFT": { "grade": 7.5 }
-    },
-    "edges": {
-      "UPPER": { "grade": 8.5 },
-      "RIGHT": { "grade": 9.0 },
-      "DOWN": { "grade": 8.0 },
-      "LEFT": { "grade": 8.5 }
-    },
-    "card": {
-      "surface": { "grade": 8.2 },
-      "centering": {
-        "grade": 9.0,
-        "left_right": "52/48",
-        "top_bottom": "55/45"
+  "records": [
+    {
+      "corners": {
+        "UPPER_LEFT": { "grade": 9.2 },
+        "UPPER_RIGHT": { "grade": 8.8 },
+        "DOWN_RIGHT": { "grade": 9.0 },
+        "DOWN_LEFT": { "grade": 7.5 }
+      },
+      "edges": {
+        "UPPER": { "grade": 8.5 },
+        "RIGHT": { "grade": 9.0 },
+        "DOWN": { "grade": 8.0 },
+        "LEFT": { "grade": 8.5 }
+      },
+      "card": {
+        "surface": { "grade": 8.2 },
+        "centering": {
+          "grade": 9.0,
+          "left_right": "52/48",
+          "top_bottom": "55/45"
+        }
+      },
+      "grades": {
+        "final": 8.5,
+        "condition": "Near Mint"
       }
-    },
-    "grades": {
-      "final": 8.5,
-      "condition": "Near Mint"
     }
-  }]
+  ]
 }
 ```
 
@@ -133,25 +137,25 @@ CCS centering = Ximilar centering.grade      — direct mapping
 
 **Economics:**
 
-| Ximilar Plan | Monthly Cost | Credits | Cards/Month | Cost/Card |
-|-------------|-------------|---------|-------------|-----------|
-| Free | $0 | 1,000 | 10 | $0.00 |
-| Business 100K | ~$64 | 100,000 | 1,000 | $0.064 |
-| Business 300K | ~$192 | 300,000 | 3,000 | $0.064 |
-| Business 500K | ~$314 | 500,000 | 5,000 | $0.063 |
+| Ximilar Plan  | Monthly Cost | Credits | Cards/Month | Cost/Card |
+| ------------- | ------------ | ------- | ----------- | --------- |
+| Free          | $0           | 1,000   | 10          | $0.00     |
+| Business 100K | ~$64         | 100,000 | 1,000       | $0.064    |
+| Business 300K | ~$192        | 300,000 | 3,000       | $0.064    |
+| Business 500K | ~$314        | 500,000 | 5,000       | $0.063    |
 
 At $0.06/card, AI pre-grading is trivially cheap. Even at 10,000 listings/month, the cost is ~$640/month — far less than the cost of a single disputed trade.
 
 ### Alternative Services
 
-| Service | Approach | API? | TCG Support | Notes |
-|---------|----------|------|-------------|-------|
-| [Ximilar](https://www.ximilar.com/blog/automate-card-grading-with-ai-via-api-step-by-step/) | Cloud CV API | Yes, REST | Pokemon, YGO, MTG, Sports | Best documented API, production-ready |
-| [AGS](https://agscard.com/) | Full-service AI grading | No API | Pokemon, Sports | Physical submission only, no integration |
-| [CardGrader.AI](https://cardgrader.ai/) | Cloud + App | Limited | Pokemon, Sports | Consumer-focused, claims 95% accuracy |
-| [TCG AI Pro](https://tcgai.pro/) | Cloud | Unknown | Pokemon, MTG, OP, YGO, DB | Predicts PSA/BGS grades |
-| [TCGrader](https://www.tcgrader.com/) | Cloud | Unknown | Pokemon | Pokemon-focused |
-| [PokeGrade.AI](https://pokegrade.ai/) | Free cloud | No | Pokemon, Lorcana, OP | Free but limited scope |
+| Service                                                                                     | Approach                | API?      | TCG Support               | Notes                                    |
+| ------------------------------------------------------------------------------------------- | ----------------------- | --------- | ------------------------- | ---------------------------------------- |
+| [Ximilar](https://www.ximilar.com/blog/automate-card-grading-with-ai-via-api-step-by-step/) | Cloud CV API            | Yes, REST | Pokemon, YGO, MTG, Sports | Best documented API, production-ready    |
+| [AGS](https://agscard.com/)                                                                 | Full-service AI grading | No API    | Pokemon, Sports           | Physical submission only, no integration |
+| [CardGrader.AI](https://cardgrader.ai/)                                                     | Cloud + App             | Limited   | Pokemon, Sports           | Consumer-focused, claims 95% accuracy    |
+| [TCG AI Pro](https://tcgai.pro/)                                                            | Cloud                   | Unknown   | Pokemon, MTG, OP, YGO, DB | Predicts PSA/BGS grades                  |
+| [TCGrader](https://www.tcgrader.com/)                                                       | Cloud                   | Unknown   | Pokemon                   | Pokemon-focused                          |
+| [PokeGrade.AI](https://pokegrade.ai/)                                                       | Free cloud              | No        | Pokemon, Lorcana, OP      | Free but limited scope                   |
 
 **Recommendation**: Ximilar is the clear choice for API integration — documented REST API, 4-dimension grading matching CCS dimensions, multi-TCG support, reasonable pricing.
 
@@ -173,6 +177,7 @@ No external API needed. Runs client-side or on edge functions.
 ### Technology: Client-Side OpenCV.js or Custom Algorithm
 
 Centering detection uses straightforward computer vision:
+
 1. **Edge detection** (Canny) to find card borders
 2. **Contour detection** to isolate the card rectangle
 3. **Inner border detection** to find the print area within the card
@@ -251,12 +256,12 @@ Combine approaches based on listing value:
 
 ### Tiered Verification Strategy
 
-| Card Value | At Listing | At Authentication | CCS Source |
-|-----------|-----------|-------------------|------------|
-| **< $10** | AI pre-grade only | Identity check + AI CCS confirmation | AI |
-| **$10–$50** | AI pre-grade + seller confirm | Identity check + spot-check dimensions | AI (confirmed) |
-| **$50–$200** | AI pre-grade + seller confirm | Full manual CCS by authenticator | Authenticator |
-| **$200+** | AI pre-grade + photo review by receiver | Full manual CCS + supervisor review | Authenticator (audited) |
+| Card Value   | At Listing                              | At Authentication                      | CCS Source              |
+| ------------ | --------------------------------------- | -------------------------------------- | ----------------------- |
+| **< $10**    | AI pre-grade only                       | Identity check + AI CCS confirmation   | AI                      |
+| **$10–$50**  | AI pre-grade + seller confirm           | Identity check + spot-check dimensions | AI (confirmed)          |
+| **$50–$200** | AI pre-grade + seller confirm           | Full manual CCS by authenticator       | Authenticator           |
+| **$200+**    | AI pre-grade + photo review by receiver | Full manual CCS + supervisor review    | Authenticator (audited) |
 
 ### Seller Disagreement Flow
 
@@ -349,6 +354,7 @@ If CardForum scales to high volume (50,000+ listings/month) and wants to elimina
 **1. Card Detection + Crop (OpenCV — no ML needed)**
 
 Classical CV techniques are sufficient:
+
 - Canny edge detection to find card boundaries
 - Hough transform or contour detection for rectangle
 - Perspective correction (deskew)
@@ -359,6 +365,7 @@ This is a solved problem — [multiple open-source implementations](https://gith
 **2. Centering Detection (OpenCV — no ML needed)**
 
 Once the card is detected and cropped:
+
 - Detect inner print border (contrast between border and art area)
 - Measure border widths: left, right, top, bottom
 - Compute ratios: L/(L+R), T/(T+B)
@@ -369,6 +376,7 @@ This is the most automatable dimension — pure geometry, no subjective judgment
 **3. Corner Scoring (ML model)**
 
 Train a CNN to classify corner condition:
+
 - Input: 4 corner crops from the detected card (e.g., 200x200px each)
 - Output: condition score per corner (1.0-10.0 in 0.5 increments)
 - Training data: cards with known PSA sub-grades or CCS authenticator scores
@@ -377,6 +385,7 @@ Train a CNN to classify corner condition:
 **4. Edge Scoring (ML model)**
 
 Similar to corners:
+
 - Input: 4 edge strips from the detected card
 - Output: condition score per edge
 - Can share backbone with corner model (multi-task learning)
@@ -384,6 +393,7 @@ Similar to corners:
 **5. Surface Scoring (ML model — hardest)**
 
 Surface is the most subjective dimension:
+
 - Input: full card front + back images
 - Output: surface condition score
 - Needs to detect: scratches, print defects, staining, creasing, holo damage
@@ -392,23 +402,23 @@ Surface is the most subjective dimension:
 
 ### Training Data Requirements
 
-| Source | Volume | Quality | Cost |
-|--------|--------|---------|------|
-| PSA-graded cards (eBay listings) | ~100K+ available | High (known sub-grades for BGS) | Free (scraping) |
-| CardForum authenticator CCS scores | Grows over time | High (4-dimension scores) | Free (internal) |
-| Ximilar AI grades (as labels) | Unlimited | Medium (AI, not human) | ~$0.06/card |
-| Synthetic augmentation | Unlimited | Low-medium | Compute cost only |
+| Source                             | Volume           | Quality                         | Cost              |
+| ---------------------------------- | ---------------- | ------------------------------- | ----------------- |
+| PSA-graded cards (eBay listings)   | ~100K+ available | High (known sub-grades for BGS) | Free (scraping)   |
+| CardForum authenticator CCS scores | Grows over time  | High (4-dimension scores)       | Free (internal)   |
+| Ximilar AI grades (as labels)      | Unlimited        | Medium (AI, not human)          | ~$0.06/card       |
+| Synthetic augmentation             | Unlimited        | Low-medium                      | Compute cost only |
 
 **Bootstrap strategy**: Use Ximilar API as the initial "teacher" — grade 10,000 cards via Ximilar, use the results as training labels for a custom model. As CardForum authenticators produce CCS scores, those become the gold-standard training data.
 
 ### Cost Comparison at Scale
 
-| Volume | Ximilar API | Custom Pipeline (AWS) |
-|--------|------------|----------------------|
-| 1,000/month | $64/mo | Not worth it |
-| 10,000/month | $640/mo | ~$200/mo (GPU inference) |
-| 50,000/month | $3,200/mo | ~$500/mo |
-| 100,000/month | $6,400/mo | ~$800/mo |
+| Volume        | Ximilar API | Custom Pipeline (AWS)    |
+| ------------- | ----------- | ------------------------ |
+| 1,000/month   | $64/mo      | Not worth it             |
+| 10,000/month  | $640/mo     | ~$200/mo (GPU inference) |
+| 50,000/month  | $3,200/mo   | ~$500/mo                 |
+| 100,000/month | $6,400/mo   | ~$800/mo                 |
 
 Custom pipeline breaks even around **10,000-15,000 cards/month**. Below that, use Ximilar.
 
@@ -450,12 +460,14 @@ Listing Photo Uploaded
 ```
 
 **Incentives for community graders:**
+
 - Earn platform credits for grading cards
 - Accuracy tracked against eventual authenticator CCS
 - Top graders get "Community Grader" badge
 - Gamification: leaderboards, accuracy streaks
 
 **Protection against abuse:**
+
 - Random assignment (graders don't choose which cards to grade)
 - Minimum account age and trade history required
 - Outlier detection (grades far from consensus are flagged)
@@ -570,16 +582,16 @@ When CardForum has enough authenticator CCS data (~10,000 scored cards):
 
 ### What Sellers Need to Provide
 
-| Requirement | Specification | Why |
-|------------|--------------|-----|
-| **Resolution** | Min 2000px on short side | AI needs pixel detail for micro-defects |
-| **Photos** | 2 minimum: front + back | Both sides scored for surface and centering |
-| **Background** | Solid, contrasting color | Card edge detection accuracy |
-| **Lighting** | Even, no glare | Holo cards especially sensitive to lighting angle |
-| **Angle** | Directly overhead (flat) | Perspective correction degrades results |
-| **Sleeves** | Remove from sleeve/toploader | Sleeves cause reflections and hide edge defects |
-| **Format** | JPEG or PNG | Standard web formats |
-| **Max size** | 10MB per photo | Already enforced at 5MB in photo-approval.service.ts |
+| Requirement    | Specification                | Why                                                  |
+| -------------- | ---------------------------- | ---------------------------------------------------- |
+| **Resolution** | Min 2000px on short side     | AI needs pixel detail for micro-defects              |
+| **Photos**     | 2 minimum: front + back      | Both sides scored for surface and centering          |
+| **Background** | Solid, contrasting color     | Card edge detection accuracy                         |
+| **Lighting**   | Even, no glare               | Holo cards especially sensitive to lighting angle    |
+| **Angle**      | Directly overhead (flat)     | Perspective correction degrades results              |
+| **Sleeves**    | Remove from sleeve/toploader | Sleeves cause reflections and hide edge defects      |
+| **Format**     | JPEG or PNG                  | Standard web formats                                 |
+| **Max size**   | 10MB per photo               | Already enforced at 5MB in photo-approval.service.ts |
 
 ### Photo Guide UI
 
@@ -611,15 +623,15 @@ When CardForum has enough authenticator CCS data (~10,000 scored cards):
 
 ### AI Grading Risks
 
-| Risk | Severity | Mitigation |
-|------|----------|------------|
-| **AI inaccuracy on holo cards** | Medium | Flag holo cards for manual review; train TCG-specific models |
-| **Photo quality variance** | High | Photo quality validation before AI submission; rejection if too poor |
-| **Gaming the system** (submit good photos of a different card) | Medium | Photo + listing cross-reference; authenticator catches at trade time |
-| **Ximilar API downtime** | Low | Graceful degradation: listing proceeds without AI grade |
-| **Ximilar discontinues service** | Low | Abstract behind interface; swappable with custom model (Phase 5) |
-| **False precision** | Medium | Display CCS as ranges ("8.0-9.0") not false-precision points from AI |
-| **Community resistance** | Medium | Make AI grading advisory, not mandatory; seller always has override |
+| Risk                                                           | Severity | Mitigation                                                           |
+| -------------------------------------------------------------- | -------- | -------------------------------------------------------------------- |
+| **AI inaccuracy on holo cards**                                | Medium   | Flag holo cards for manual review; train TCG-specific models         |
+| **Photo quality variance**                                     | High     | Photo quality validation before AI submission; rejection if too poor |
+| **Gaming the system** (submit good photos of a different card) | Medium   | Photo + listing cross-reference; authenticator catches at trade time |
+| **Ximilar API downtime**                                       | Low      | Graceful degradation: listing proceeds without AI grade              |
+| **Ximilar discontinues service**                               | Low      | Abstract behind interface; swappable with custom model (Phase 5)     |
+| **False precision**                                            | Medium   | Display CCS as ranges ("8.0-9.0") not false-precision points from AI |
+| **Community resistance**                                       | Medium   | Make AI grading advisory, not mandatory; seller always has override  |
 
 ### Data Privacy
 
@@ -689,13 +701,13 @@ PHASE 5: BUILD (Custom models)
 
 ## Summary
 
-| Approach | Best For | Cost | Accuracy | Timeline |
-|----------|---------|------|----------|----------|
-| **AI Pre-Grade (Ximilar)** | All listings at creation | ~$0.06/card | ~95% vs PSA | 1-2 weeks |
-| **Centering Tool** | Seller self-service | Free | High (geometric) | 3-5 days |
-| **Hybrid Pipeline** | Production system | ~$0.06 + auth fee | Very high | 3-4 weeks |
-| **Community Calibration** | High-volume, low-cost | Platform credits | Medium-high | 4-6 weeks |
-| **Custom CV Pipeline** | Scale (10K+ cards/mo) | ~$0.01/card | Trainable | 2-4 weeks (ML) |
+| Approach                   | Best For                 | Cost              | Accuracy         | Timeline       |
+| -------------------------- | ------------------------ | ----------------- | ---------------- | -------------- |
+| **AI Pre-Grade (Ximilar)** | All listings at creation | ~$0.06/card       | ~95% vs PSA      | 1-2 weeks      |
+| **Centering Tool**         | Seller self-service      | Free              | High (geometric) | 3-5 days       |
+| **Hybrid Pipeline**        | Production system        | ~$0.06 + auth fee | Very high        | 3-4 weeks      |
+| **Community Calibration**  | High-volume, low-cost    | Platform credits  | Medium-high      | 4-6 weeks      |
+| **Custom CV Pipeline**     | Scale (10K+ cards/mo)    | ~$0.01/card       | Trainable        | 2-4 weeks (ML) |
 
 **The recommended path**: Start with Ximilar API integration (Phase 1) to get AI pre-grading live quickly. Add centering tool (Phase 2) for immediate seller value. Build trust badges and override tracking (Phase 3) for marketplace integrity. Use the data generated to eventually train custom models (Phase 5) when volume justifies it.
 

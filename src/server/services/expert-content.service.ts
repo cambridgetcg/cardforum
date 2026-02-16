@@ -27,7 +27,8 @@ export async function createExpertPost(authorId: string, input: CreateExpertPost
       excerpt,
       cardId: input.cardId ?? null,
       setId: input.setId ?? null,
-      tcg: input.tcg as any ?? null,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      tcg: (input.tcg as any) ?? null,
       language: input.language ?? null,
       tags: input.tags ?? [],
       mediaUrls: input.mediaUrls ?? [],
@@ -66,13 +67,19 @@ export interface ListExpertPostsParams {
 
 export async function listExpertPosts(params: ListExpertPostsParams) {
   const {
-    tcg, setId, cardId, category, language, authorId,
+    tcg,
+    setId,
+    cardId,
+    category,
+    language,
+    authorId,
     status = "PUBLISHED",
     sort = "recent",
     page = 1,
     limit = 20,
   } = params;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const where: Record<string, unknown> = { status: status as any };
   if (tcg) where.tcg = tcg;
   if (setId) where.setId = setId;
@@ -82,9 +89,11 @@ export async function listExpertPosts(params: ListExpertPostsParams) {
   if (authorId) where.authorId = authorId;
 
   const orderBy =
-    sort === "popular" ? { upvotes: "desc" as const } :
-    sort === "helpful" ? { helpfulCount: "desc" as const } :
-    { publishedAt: "desc" as const };
+    sort === "popular"
+      ? { upvotes: "desc" as const }
+      : sort === "helpful"
+        ? { helpfulCount: "desc" as const }
+        : { publishedAt: "desc" as const };
 
   const [posts, total] = await Promise.all([
     db.expertPost.findMany({
@@ -123,7 +132,11 @@ export async function getExpertPost(postId: string) {
 
 // ─── Update ──────────────────────────────────────────
 
-export async function updateExpertPost(postId: string, userId: string, input: UpdateExpertPostInput) {
+export async function updateExpertPost(
+  postId: string,
+  userId: string,
+  input: UpdateExpertPostInput,
+) {
   const existing = await db.expertPost.findUnique({ where: { id: postId } });
   if (!existing) throw new Error("Expert post not found");
   if (existing.authorId !== userId) throw new Error("Not authorized to edit this post");
@@ -205,12 +218,20 @@ export async function voteOnPost(postId: string, userId: string, input: VoteExpe
     ]);
   }
 
-  return db.expertPost.findUnique({ where: { id: postId }, select: { upvotes: true, downvotes: true, helpfulCount: true } });
+  return db.expertPost.findUnique({
+    where: { id: postId },
+    select: { upvotes: true, downvotes: true, helpfulCount: true },
+  });
 }
 
 // ─── Endorsement ─────────────────────────────────────
 
-export async function endorsePost(postId: string, endorserId: string, endorserType: "authenticator" | "admin", input: EndorseExpertPostInput) {
+export async function endorsePost(
+  postId: string,
+  endorserId: string,
+  endorserType: "authenticator" | "admin",
+  input: EndorseExpertPostInput,
+) {
   const post = await db.expertPost.findUnique({ where: { id: postId } });
   if (!post) throw new Error("Expert post not found");
 
@@ -227,7 +248,11 @@ export async function endorsePost(postId: string, endorserId: string, endorserTy
 
 // ─── Moderation ──────────────────────────────────────
 
-export async function moderatePost(postId: string, moderatorId: string, input: ModerateExpertPostInput) {
+export async function moderatePost(
+  postId: string,
+  moderatorId: string,
+  input: ModerateExpertPostInput,
+) {
   const statusMap = { approve: "PUBLISHED", flag: "FLAGGED", remove: "REMOVED" } as const;
 
   const post = await db.expertPost.update({
@@ -262,7 +287,11 @@ export async function getCardInsights(cardId: string, limit = 5) {
 
 // ─── Event Handlers ─────────────────────────────────
 
-export async function onExpertPostEndorsed(payload: { postId: string; endorserId: string; endorserType: "authenticator" | "admin" }) {
+export async function onExpertPostEndorsed(payload: {
+  postId: string;
+  endorserId: string;
+  endorserType: "authenticator" | "admin";
+}) {
   const post = await db.expertPost.findUnique({
     where: { id: payload.postId },
     select: { authorId: true, title: true },
@@ -280,7 +309,11 @@ export async function onExpertPostEndorsed(payload: { postId: string; endorserId
   });
 }
 
-export async function onExpertPostModerated(payload: { postId: string; moderatorId: string; action: "approve" | "flag" | "remove" }) {
+export async function onExpertPostModerated(payload: {
+  postId: string;
+  moderatorId: string;
+  action: "approve" | "flag" | "remove";
+}) {
   if (payload.action === "approve") return;
 
   const post = await db.expertPost.findUnique({

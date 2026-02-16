@@ -7,10 +7,7 @@ const TOKEN_EXPIRY_HOURS = 24;
 /**
  * Generate a verification token, store it, and email the user.
  */
-export async function sendVerificationEmail(
-  email: string,
-  baseUrl: string,
-): Promise<void> {
+export async function sendVerificationEmail(email: string, baseUrl: string): Promise<void> {
   const token = randomBytes(32).toString("hex");
   const expires = new Date(Date.now() + TOKEN_EXPIRY_HOURS * 60 * 60 * 1000);
 
@@ -42,10 +39,7 @@ export async function sendVerificationEmail(
  * Validate token and mark email as verified.
  * Returns the user email if successful, null if invalid/expired.
  */
-export async function verifyEmailToken(
-  email: string,
-  token: string,
-): Promise<string | null> {
+export async function verifyEmailToken(email: string, token: string): Promise<string | null> {
   const record = await db.verificationToken.findFirst({
     where: { identifier: email, token },
   });
@@ -70,10 +64,7 @@ export async function verifyEmailToken(
 /**
  * Send a password reset token.
  */
-export async function sendPasswordResetEmail(
-  email: string,
-  baseUrl: string,
-): Promise<void> {
+export async function sendPasswordResetEmail(email: string, baseUrl: string): Promise<void> {
   const user = await db.user.findUnique({ where: { email } });
   if (!user) return; // Silent — don't reveal whether email exists
 
@@ -106,10 +97,7 @@ export async function sendPasswordResetEmail(
 /**
  * Validate a password reset token. Returns the user email if valid.
  */
-export async function validateResetToken(
-  email: string,
-  token: string,
-): Promise<string | null> {
+export async function validateResetToken(email: string, token: string): Promise<string | null> {
   const record = await db.verificationToken.findFirst({
     where: { identifier: `reset:${email}`, token },
   });

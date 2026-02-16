@@ -69,6 +69,14 @@
     {
       "path": "/api/cron/dmm-obligations",
       "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/cleanup-stale-listings",
+      "schedule": "0 5 * * *"
+    },
+    {
+      "path": "/api/cron/refresh-listing-rates",
+      "schedule": "30 * * * *"
     }
   ]
 }

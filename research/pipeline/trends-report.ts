@@ -65,6 +65,36 @@ function loadPriceTrends(tcg: TCG, setCode: string): SetPriceTrends | null {
   return loadJson(path.join(getResearchDir(tcg), `price-trends-${setCode}.json`));
 }
 
+interface SearchTrendFile {
+  keyword: string;
+  source: string;
+}
+
+/**
+ * Check if any search trend files for a TCG are using mock data.
+ * Returns { hasMock, total } so reports can warn users.
+ */
+function detectMockSearchData(tcg: TCG): {
+  hasMock: boolean;
+  mockCount: number;
+  totalCount: number;
+} {
+  const dir = getResearchDir(tcg);
+  if (!fs.existsSync(dir)) return { hasMock: false, mockCount: 0, totalCount: 0 };
+
+  const files = fs
+    .readdirSync(dir)
+    .filter((f) => f.startsWith("search-trends-") && f.endsWith(".json"));
+
+  let mockCount = 0;
+  for (const f of files) {
+    const data = loadJson<SearchTrendFile>(path.join(dir, f));
+    if (data?.source === "mock") mockCount++;
+  }
+
+  return { hasMock: mockCount > 0, mockCount, totalCount: files.length };
+}
+
 // ── Formatting Helpers ───────────────────────────────────────
 
 function dollars(usd: number): string {
@@ -83,33 +113,50 @@ function pad(s: string, n: number): string {
 
 function severityIcon(severity: AlertSeverity): string {
   switch (severity) {
-    case "critical": return "[!!!]";
-    case "high": return "[!!]";
-    case "medium": return "[!]";
-    case "low": return "[.]";
+    case "critical":
+      return "[!!!]";
+    case "high":
+      return "[!!]";
+    case "medium":
+      return "[!]";
+    case "low":
+      return "[.]";
   }
 }
 
 function signalLabel(direction: SignalDirection): string {
   switch (direction) {
-    case "emerging": return "EMERGING";
-    case "surging": return "SURGING";
-    case "peaking": return "PEAKING";
-    case "fading": return "FADING";
-    case "stable": return "STABLE";
-    case "anomaly": return "ANOMALY";
-    case "recovering": return "RECOVERING";
-    case "crashing": return "CRASHING";
+    case "emerging":
+      return "EMERGING";
+    case "surging":
+      return "SURGING";
+    case "peaking":
+      return "PEAKING";
+    case "fading":
+      return "FADING";
+    case "stable":
+      return "STABLE";
+    case "anomaly":
+      return "ANOMALY";
+    case "recovering":
+      return "RECOVERING";
+    case "crashing":
+      return "CRASHING";
   }
 }
 
 function actionLabel(action: string): string {
   switch (action) {
-    case "buy": return "BUY";
-    case "sell": return "SELL";
-    case "hold": return "HOLD";
-    case "watch": return "WATCH";
-    default: return "-";
+    case "buy":
+      return "BUY";
+    case "sell":
+      return "SELL";
+    case "hold":
+      return "HOLD";
+    case "watch":
+      return "WATCH";
+    default:
+      return "-";
   }
 }
 
@@ -120,6 +167,7 @@ function generateSetReport(
   setCode: string,
   report: SetTrendReport,
   priceTrends: SetPriceTrends | null,
+  mockStatus: { hasMock: boolean; mockCount: number; totalCount: number },
 ): string {
   const lines: string[] = [];
 
@@ -127,6 +175,23 @@ function generateSetReport(
   lines.push("");
   lines.push(`_Generated: ${new Date().toISOString().split("T")[0]}_`);
   lines.push("");
+
+  if (mockStatus.hasMock) {
+    lines.push(
+      `> **WARNING: ${mockStatus.mockCount}/${mockStatus.totalCount} search trend sources use MOCK DATA.**`,
+    );
+    lines.push(
+      `> Correlations involving search interest are synthetic. Set SERPAPI_KEY for real data.`,
+    );
+    lines.push("");
+  }
+
+  if (priceTrends && priceTrends.snapshotCount < 7) {
+    lines.push(
+      `> **NOTE: Only ${priceTrends.snapshotCount} price snapshot(s) available.** Trend analysis requires 7+ days of data. Run the pipeline daily to accumulate history.`,
+    );
+    lines.push("");
+  }
 
   // Summary
   lines.push("## Summary");
@@ -152,7 +217,9 @@ function generateSetReport(
   lines.push("");
 
   if (priceTrends) {
-    lines.push(`_Data from ${priceTrends.snapshotCount} snapshots (${priceTrends.dateRange.oldest.split("T")[0]} to ${priceTrends.dateRange.newest.split("T")[0]})_`);
+    lines.push(
+      `_Data from ${priceTrends.snapshotCount} snapshots (${priceTrends.dateRange.oldest.split("T")[0]} to ${priceTrends.dateRange.newest.split("T")[0]})_`,
+    );
     lines.push("");
   }
 
@@ -166,8 +233,8 @@ function generateSetReport(
     for (const alert of report.alerts) {
       lines.push(
         `| ${severityIcon(alert.severity)} ${alert.severity} | ${alert.entityId} | ` +
-        `${signalLabel(alert.signal.direction)} | **${actionLabel(alert.action)}** | ` +
-        `${alert.description.slice(0, 80)} |`,
+          `${signalLabel(alert.signal.direction)} | **${actionLabel(alert.action)}** | ` +
+          `${alert.description.slice(0, 80)} |`,
       );
     }
     lines.push("");
@@ -190,7 +257,7 @@ function generateSetReport(
         const delta = card.trend?.[deltaKey] as number | null;
         lines.push(
           `| ${i + 1} | ${card.cardId} | ${card.name.slice(0, 30)} | ` +
-          `${card.rarity ?? "-"} | ${dollars(price)} | ${pct(delta)} |`,
+            `${card.rarity ?? "-"} | ${dollars(price)} | ${pct(delta)} |`,
         );
       }
       lines.push("");
@@ -209,7 +276,7 @@ function generateSetReport(
         const delta = card.trend?.[deltaKey] as number | null;
         lines.push(
           `| ${i + 1} | ${card.cardId} | ${card.name.slice(0, 30)} | ` +
-          `${card.rarity ?? "-"} | ${dollars(price)} | ${pct(delta)} |`,
+            `${card.rarity ?? "-"} | ${dollars(price)} | ${pct(delta)} |`,
         );
       }
       lines.push("");
@@ -229,8 +296,8 @@ function generateSetReport(
     for (const signal of sortedSignals.slice(0, 20)) {
       lines.push(
         `| ${signal.entityId} | ${signalLabel(signal.direction)} | ` +
-        `${signal.strength} | ${(signal.confidence * 100).toFixed(0)}% | ` +
-        `${signal.reason.slice(0, 60)} |`,
+          `${signal.strength} | ${(signal.confidence * 100).toFixed(0)}% | ` +
+          `${signal.reason.slice(0, 60)} |`,
       );
     }
     lines.push("");
@@ -259,8 +326,8 @@ function generateSetReport(
     for (const anomaly of report.anomalies) {
       lines.push(
         `| ${anomaly.entityId} | ${anomaly.direction.toUpperCase()} | ` +
-        `${anomaly.zScore.toFixed(2)} | ${dollars(anomaly.dataPoint.value)} | ` +
-        `${anomaly.context.mean.toFixed(4)} | ${anomaly.context.stdDev.toFixed(4)} |`,
+          `${anomaly.zScore.toFixed(2)} | ${dollars(anomaly.dataPoint.value)} | ` +
+          `${anomaly.context.mean.toFixed(4)} | ${anomaly.context.stdDev.toFixed(4)} |`,
       );
     }
     lines.push("");
@@ -276,8 +343,8 @@ function generateSetReport(
     for (const corr of report.correlations) {
       lines.push(
         `| ${corr.metricA.entityId} | ${corr.pearsonR.toFixed(3)} | ` +
-        `${corr.bestLagDays}d | ${corr.sampleSize} | ` +
-        `${corr.significant ? "YES" : "no"} |`,
+          `${corr.bestLagDays}d | ${corr.sampleSize} | ` +
+          `${corr.significant ? "YES" : "no"} |`,
       );
     }
     lines.push("");
@@ -288,12 +355,17 @@ function generateSetReport(
       lines.push("### Interpretation");
       lines.push("");
       for (const corr of significant) {
-        const strength = Math.abs(corr.pearsonR) > 0.7 ? "strong"
-          : Math.abs(corr.pearsonR) > 0.5 ? "moderate" : "weak";
+        const strength =
+          Math.abs(corr.pearsonR) > 0.7
+            ? "strong"
+            : Math.abs(corr.pearsonR) > 0.5
+              ? "moderate"
+              : "weak";
         const direction = corr.pearsonR > 0 ? "positive" : "negative";
-        const leadLag = corr.bestLagDays > 0
-          ? `search interest leads price by ~${corr.bestLagDays} days`
-          : "search interest and price move together";
+        const leadLag =
+          corr.bestLagDays > 0
+            ? `search interest leads price by ~${corr.bestLagDays} days`
+            : "search interest and price move together";
         lines.push(
           `- **${corr.metricA.entityId}**: ${strength} ${direction} correlation (r=${corr.pearsonR.toFixed(3)}). ${leadLag}.`,
         );
@@ -315,6 +387,7 @@ function generateSummary(
   tcg: TCG,
   setCodes: string[],
   reports: Map<string, SetTrendReport>,
+  mockStatus: { hasMock: boolean; mockCount: number; totalCount: number },
 ): string {
   const lines: string[] = [];
 
@@ -324,11 +397,22 @@ function generateSummary(
   lines.push(`_Sets: ${setCodes.join(", ")}_`);
   lines.push("");
 
+  if (mockStatus.hasMock) {
+    lines.push(
+      `> **WARNING: ${mockStatus.mockCount}/${mockStatus.totalCount} search trend sources use MOCK DATA.** Set SERPAPI_KEY for real data.`,
+    );
+    lines.push("");
+  }
+
   // Set comparison table
   lines.push("## Set-by-Set Overview");
   lines.push("");
-  lines.push("| Set | Cards | Avg 7d | Avg 30d | Signal | Alerts | Top Gainer (7d) | Top Loser (7d) |");
-  lines.push("|-----|-------|--------|---------|--------|--------|-----------------|----------------|");
+  lines.push(
+    "| Set | Cards | Avg 7d | Avg 30d | Signal | Alerts | Top Gainer (7d) | Top Loser (7d) |",
+  );
+  lines.push(
+    "|-----|-------|--------|---------|--------|--------|-----------------|----------------|",
+  );
 
   for (const setCode of setCodes) {
     const report = reports.get(setCode);
@@ -343,10 +427,10 @@ function generateSummary(
 
     lines.push(
       `| ${setCode} | ${report.summary.totalCards} | ` +
-      `${pct(report.summary.avgDelta7d)} | ${pct(report.summary.avgDelta30d)} | ` +
-      `${signalLabel(report.summary.dominantSignal)} | ${report.alerts.length} | ` +
-      `${topGainer ? `${topGainer.cardId} (${pct(topGainer.trend?.delta7d ?? null)})` : "-"} | ` +
-      `${topLoser ? `${topLoser.cardId} (${pct(topLoser.trend?.delta7d ?? null)})` : "-"} |`,
+        `${pct(report.summary.avgDelta7d)} | ${pct(report.summary.avgDelta30d)} | ` +
+        `${signalLabel(report.summary.dominantSignal)} | ${report.alerts.length} | ` +
+        `${topGainer ? `${topGainer.cardId} (${pct(topGainer.trend?.delta7d ?? null)})` : "-"} | ` +
+        `${topLoser ? `${topLoser.cardId} (${pct(topLoser.trend?.delta7d ?? null)})` : "-"} |`,
     );
   }
   lines.push("");
@@ -354,7 +438,10 @@ function generateSummary(
   // Hottest / Coldest Sets
   const withAvg = setCodes
     .map((sc) => ({ setCode: sc, report: reports.get(sc) }))
-    .filter((x): x is { setCode: string; report: SetTrendReport } => x.report !== null && x.report !== undefined)
+    .filter(
+      (x): x is { setCode: string; report: SetTrendReport } =>
+        x.report !== null && x.report !== undefined,
+    )
     .filter((x) => x.report.summary.avgDelta7d !== null);
 
   if (withAvg.length > 0) {
@@ -364,8 +451,12 @@ function generateSummary(
 
     lines.push("## Hottest & Coldest Sets");
     lines.push("");
-    lines.push(`**Hottest:** ${sorted[0].setCode} (avg 7d: ${pct(sorted[0].report.summary.avgDelta7d)})`);
-    lines.push(`**Coldest:** ${sorted[sorted.length - 1].setCode} (avg 7d: ${pct(sorted[sorted.length - 1].report.summary.avgDelta7d)})`);
+    lines.push(
+      `**Hottest:** ${sorted[0].setCode} (avg 7d: ${pct(sorted[0].report.summary.avgDelta7d)})`,
+    );
+    lines.push(
+      `**Coldest:** ${sorted[sorted.length - 1].setCode} (avg 7d: ${pct(sorted[sorted.length - 1].report.summary.avgDelta7d)})`,
+    );
     lines.push("");
   }
 
@@ -384,7 +475,9 @@ function generateSummary(
 
   lines.push("## TCG-Wide Signal Distribution");
   lines.push("");
-  lines.push(`_Total signals: ${Object.values(totalSignals).reduce((a, b) => a + b, 0)} across ${reports.size} sets_`);
+  lines.push(
+    `_Total signals: ${Object.values(totalSignals).reduce((a, b) => a + b, 0)} across ${reports.size} sets_`,
+  );
   lines.push(`_Total alerts: ${totalAlerts}, Total anomalies: ${totalAnomalies}_`);
   lines.push("");
 
@@ -415,8 +508,8 @@ function generateSummary(
     for (const alert of criticalAlerts.slice(0, 20)) {
       lines.push(
         `| ${alert.setCode} | ${severityIcon(alert.severity)} | ${alert.entityId} | ` +
-        `${signalLabel(alert.signal.direction)} | **${actionLabel(alert.action)}** | ` +
-        `${alert.description.slice(0, 60)} |`,
+          `${signalLabel(alert.signal.direction)} | **${actionLabel(alert.action)}** | ` +
+          `${alert.description.slice(0, 60)} |`,
       );
     }
     lines.push("");
@@ -468,7 +561,8 @@ Prerequisites:
   const dir = getResearchDir(tcg);
 
   if (isAll && fs.existsSync(dir)) {
-    setCodes = fs.readdirSync(dir)
+    setCodes = fs
+      .readdirSync(dir)
       .filter((f) => f.startsWith("trend-correlations-") && f.endsWith(".json"))
       .map((f) => f.replace("trend-correlations-", "").replace(".json", ""));
   } else if (setArg) {
@@ -487,6 +581,14 @@ Prerequisites:
   console.log("");
 
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+  // Detect mock search data once (shared across all set reports)
+  const mockStatus = detectMockSearchData(tcg);
+  if (mockStatus.hasMock) {
+    console.log(
+      `  WARNING: ${mockStatus.mockCount}/${mockStatus.totalCount} search trend files use mock data`,
+    );
+  }
 
   const allReports = new Map<string, SetTrendReport>();
   let successCount = 0;
@@ -507,12 +609,14 @@ Prerequisites:
     const priceTrends = loadPriceTrends(tcg, setCode);
 
     if (isDryRun) {
-      console.log(`    [dry-run] Would generate report (${correlationReport.signals.length} signals, ${correlationReport.alerts.length} alerts)`);
+      console.log(
+        `    [dry-run] Would generate report (${correlationReport.signals.length} signals, ${correlationReport.alerts.length} alerts)`,
+      );
       successCount++;
       continue;
     }
 
-    const reportMd = generateSetReport(tcg, setCode, correlationReport, priceTrends);
+    const reportMd = generateSetReport(tcg, setCode, correlationReport, priceTrends, mockStatus);
     const outPath = path.join(dir, `trend-report-${setCode}.md`);
     fs.writeFileSync(outPath, reportMd);
     console.log(`    -> ${path.relative(process.cwd(), outPath)}`);
@@ -527,7 +631,7 @@ Prerequisites:
     if (isDryRun) {
       console.log(`    [dry-run] Would generate summary for ${allReports.size} sets`);
     } else {
-      const summary = generateSummary(tcg, setCodes, allReports);
+      const summary = generateSummary(tcg, setCodes, allReports, mockStatus);
       const summaryPath = path.join(dir, "trend-summary.md");
       fs.writeFileSync(summaryPath, summary);
       console.log(`    -> ${path.relative(process.cwd(), summaryPath)}`);

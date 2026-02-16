@@ -11,10 +11,7 @@ import { getStripe } from "@/lib/stripe";
  * For DIRECT trades, includes Stripe PaymentIntent client secrets
  * so the frontend can complete payment authorization.
  */
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: Promise<{ tradeId: string }> },
-) {
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ tradeId: string }> }) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -37,7 +34,10 @@ export async function GET(
   }
 
   if (trade.mode !== "DIRECT") {
-    return NextResponse.json({ error: "Only DIRECT trades use marketplace payments" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Only DIRECT trades use marketplace payments" },
+      { status: 400 },
+    );
   }
 
   // Get payment summary

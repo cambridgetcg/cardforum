@@ -18,9 +18,7 @@ export function Footer() {
               Log In
             </Link>
           </nav>
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} CardForum
-          </p>
+          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} CardForum</p>
         </div>
       </div>
     </footer>

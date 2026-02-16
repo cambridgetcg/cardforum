@@ -63,7 +63,9 @@ async function fetchProducts(categoryId: number, groupId: number): Promise<Tcgcs
   const url = `${TCGCSV_BASE_URL}/tcgplayer/${categoryId}/${groupId}/products`;
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(`Failed to fetch products for group ${groupId}: ${res.status} ${res.statusText}`);
+    throw new Error(
+      `Failed to fetch products for group ${groupId}: ${res.status} ${res.statusText}`,
+    );
   }
   const data: TcgcsvResponse<TcgcsvProduct> = await res.json();
   if (!data.success) {
@@ -102,7 +104,11 @@ function buildPriceMap(prices: TcgcsvPrice[]): Map<number, TcgplayerPriceEntry[]
   return map;
 }
 
-function productToCard(product: TcgcsvProduct, setCode: string, priceMap: Map<number, TcgplayerPriceEntry[]>): TcgplayerCard | null {
+function productToCard(
+  product: TcgcsvProduct,
+  setCode: string,
+  priceMap: Map<number, TcgplayerPriceEntry[]>,
+): TcgplayerCard | null {
   // Skip sealed products (no extendedData)
   if (isSealed(product)) return null;
 
@@ -176,8 +182,8 @@ function generateSummary(result: TcgplayerScrapeResult): string {
   lines.push("|---|---------|------|--------|------|-------------|");
   for (let i = 0; i < result.cards.length; i++) {
     const c = result.cards[i];
-    const price = c.prices.find((p) => p.subTypeName === "Normal")?.marketPrice
-      ?? c.prices[0]?.marketPrice;
+    const price =
+      c.prices.find((p) => p.subTypeName === "Normal")?.marketPrice ?? c.prices[0]?.marketPrice;
     const priceStr = price !== null && price !== undefined ? `$${price.toFixed(2)}` : "-";
     lines.push(
       `| ${i + 1} | ${c.cardId} | ${c.name} | ${c.rarity || "-"} | ${c.cardType || "-"} | ${priceStr} |`,
@@ -254,7 +260,9 @@ async function fetchGroup(
   const summaryPath = path.join(outDir, `tcgplayer-${group.setCode.toLowerCase()}-summary.md`);
   fs.writeFileSync(summaryPath, generateSummary(result));
 
-  console.log(`    → ${cards.length} cards, ${sealedCount} sealed filtered, ${errors.length} errors (${(durationMs / 1000).toFixed(1)}s)`);
+  console.log(
+    `    → ${cards.length} cards, ${sealedCount} sealed filtered, ${errors.length} errors (${(durationMs / 1000).toFixed(1)}s)`,
+  );
 
   return result;
 }
@@ -277,7 +285,10 @@ async function main() {
       i++;
     }
     if (args[i] === "--sets" && args[i + 1]) {
-      setFilter = args[i + 1].toUpperCase().split(",").map((s) => s.trim());
+      setFilter = args[i + 1]
+        .toUpperCase()
+        .split(",")
+        .map((s) => s.trim());
       i++;
     }
     if (args[i] === "--set" && args[i + 1]) {
@@ -288,10 +299,16 @@ async function main() {
 
   if (!tcg || (!fetchAll && !setFilter)) {
     console.error("Usage:");
-    console.error("  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --sets OP01,OP02");
+    console.error(
+      "  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --sets OP01,OP02",
+    );
     console.error("  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --all");
-    console.error("  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --all --resume");
-    console.error("  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --all --include-supplemental");
+    console.error(
+      "  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --all --resume",
+    );
+    console.error(
+      "  npx tsx research/pipeline/tcgplayer-fetch-products.ts --tcg onepiece --all --include-supplemental",
+    );
     process.exit(1);
   }
 
@@ -309,7 +326,9 @@ async function main() {
   if (!fs.existsSync(groupsPath)) {
     console.error(`Groups file not found: ${groupsPath}`);
     console.error("Run discovery first:");
-    console.error(`  npx tsx research/pipeline/tcgplayer-discover-groups.ts --tcg ${tcg.toLowerCase()}`);
+    console.error(
+      `  npx tsx research/pipeline/tcgplayer-discover-groups.ts --tcg ${tcg.toLowerCase()}`,
+    );
     process.exit(1);
   }
 
@@ -338,7 +357,9 @@ async function main() {
     progress = loadProgress(progressPath);
     const before = groups.length;
     groups = groups.filter((g) => !progress.completedGroups.includes(g.groupId));
-    console.log(`Resuming: ${before - groups.length} groups already completed, ${groups.length} remaining`);
+    console.log(
+      `Resuming: ${before - groups.length} groups already completed, ${groups.length} remaining`,
+    );
   }
 
   console.log(`\n=== Fetching ${groups.length} group(s) for ${tcg} ===\n`);
@@ -359,7 +380,9 @@ async function main() {
       progress.completedGroups.push(group.groupId);
       saveProgress(progressPath, progress);
     } catch (err) {
-      console.error(`  ERROR fetching group ${group.setCode}: ${err instanceof Error ? err.message : String(err)}`);
+      console.error(
+        `  ERROR fetching group ${group.setCode}: ${err instanceof Error ? err.message : String(err)}`,
+      );
       totalErrors++;
     }
 

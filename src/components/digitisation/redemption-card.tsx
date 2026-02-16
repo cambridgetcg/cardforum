@@ -3,7 +3,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RedemptionStatusBadge } from "./redemption-status-badge";
-import { CONDITION_LABELS, formatPrice, type Condition, type RedemptionStatus } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  formatPrice,
+  type Condition,
+  type RedemptionStatus,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 import { CheckCircle, X } from "lucide-react";
 
@@ -73,9 +78,7 @@ export function RedemptionCard({
         <p className="text-xs text-gray-500">
           Vault: {vaultAuthenticator.businessName ?? vaultAuthenticator.region}
         </p>
-        {trackingOutbound && (
-          <p className="text-xs text-gray-400">Tracking: {trackingOutbound}</p>
-        )}
+        {trackingOutbound && <p className="text-xs text-gray-400">Tracking: {trackingOutbound}</p>}
         <p className="text-xs text-gray-400">{formatRelativeTime(new Date(createdAt))}</p>
       </div>
       <div className="flex gap-1">

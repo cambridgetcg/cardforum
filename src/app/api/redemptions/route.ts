@@ -2,10 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { createRedemptionSchema } from "@/lib/validators";
-import {
-  requestRedemption,
-  getUserRedemptions,
-} from "@/server/services/redemption.service";
+import { requestRedemption, getUserRedemptions } from "@/server/services/redemption.service";
 
 // GET /api/redemptions — List current user's redemptions
 export async function GET() {
@@ -28,10 +25,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = createRedemptionSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {

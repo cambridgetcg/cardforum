@@ -4,8 +4,8 @@
   "setCode": "OP07",
   "totalPages": 6,
   "totalCards": 151,
-  "scrapedAt": "2026-02-15T15:01:50.947Z",
-  "durationMs": 45649,
+  "scrapedAt": "2026-02-16T14:40:03.779Z",
+  "durationMs": 44611,
   "cards": [
     {
       "cardId": "OP07-099",
@@ -18,7 +18,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Usopp-OP07-099"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Usopp-OP07-099",
+      "language": "EN"
     },
     {
       "cardId": "OP07-057",
@@ -31,7 +32,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Perfume-Femur-OP07-057"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Perfume-Femur-OP07-057",
+      "language": "EN"
     },
     {
       "cardId": "OP07-076",
@@ -44,7 +46,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slow-Slow-Beam-Sword-OP07-076"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slow-Slow-Beam-Sword-OP07-076",
+      "language": "EN"
     },
     {
       "cardId": "OP07-046",
@@ -57,7 +60,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sengoku-OP07-046-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sengoku-OP07-046-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-056",
@@ -70,7 +74,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slave-Arrow-OP07-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slave-Arrow-OP07-056",
+      "language": "EN"
     },
     {
       "cardId": "OP07-077",
@@ -83,7 +88,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Were-Going-to-Claim-the-One-Piece-OP07-077"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Were-Going-to-Claim-the-One-Piece-OP07-077",
+      "language": "EN"
     },
     {
       "cardId": "OP07-109",
@@ -96,7 +102,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-109-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-109-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-072",
@@ -109,7 +116,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porche-OP07-072-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porche-OP07-072-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-085",
@@ -117,12 +125,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Stussy-OP07-085-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775564/775564.png",
-      "priceFrom": "1,20 €",
-      "priceEur": 1.2,
+      "priceFrom": "1,25 €",
+      "priceEur": 1.25,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Stussy-OP07-085-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Stussy-OP07-085-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-066",
@@ -135,7 +144,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tony-TonyChopper-OP07-066"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tony-TonyChopper-OP07-066",
+      "language": "EN"
     },
     {
       "cardId": "OP07-116",
@@ -148,7 +158,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Blaze-Slice-OP07-116"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Blaze-Slice-OP07-116",
+      "language": "EN"
     },
     {
       "cardId": "OP07-071",
@@ -161,7 +172,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-071-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-071-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-026",
@@ -174,7 +186,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-026-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-026-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-064",
@@ -187,7 +200,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sanji-OP07-064-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sanji-OP07-064-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-060",
@@ -200,7 +214,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Itomimizu-OP07-060"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Itomimizu-OP07-060",
+      "language": "EN"
     },
     {
       "cardId": "OP07-051",
@@ -213,7 +228,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-113",
@@ -226,7 +242,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Roronoa-Zoro-OP07-113"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Roronoa-Zoro-OP07-113",
+      "language": "EN"
     },
     {
       "cardId": "OP07-002",
@@ -239,7 +256,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Ain-OP07-002"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Ain-OP07-002",
+      "language": "EN"
     },
     {
       "cardId": "OP07-111",
@@ -252,7 +270,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lilith-OP07-111-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lilith-OP07-111-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-065",
@@ -265,7 +284,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gina-OP07-065"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gina-OP07-065",
+      "language": "EN"
     },
     {
       "cardId": "OP07-096",
@@ -278,7 +298,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tempest-Kick-OP07-096"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tempest-Kick-OP07-096",
+      "language": "EN"
     },
     {
       "cardId": "OP07-035",
@@ -291,7 +312,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Karmic-Punishment-OP07-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Karmic-Punishment-OP07-035",
+      "language": "EN"
     },
     {
       "cardId": "OP07-022",
@@ -304,7 +326,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Otama-OP07-022-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Otama-OP07-022-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-073",
@@ -317,7 +340,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-073",
+      "language": "EN"
     },
     {
       "cardId": "OP07-078",
@@ -330,7 +354,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Megaton-Nine-Tails-Rush-OP07-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Megaton-Nine-Tails-Rush-OP07-078",
+      "language": "EN"
     },
     {
       "cardId": "OP07-091",
@@ -343,7 +368,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-091"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-091",
+      "language": "EN"
     },
     {
       "cardId": "OP07-015",
@@ -356,7 +382,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-015-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-015-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-045",
@@ -364,12 +391,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-045-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775419/775419.png",
-      "priceFrom": "0,07 €",
-      "priceEur": 0.07,
+      "priceFrom": "0,02 €",
+      "priceEur": 0.02,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-045-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-045-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-047",
@@ -382,7 +410,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-OP07-047-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-OP07-047-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-107",
@@ -395,7 +424,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Franky-OP07-107-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Franky-OP07-107-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-041",
@@ -408,7 +438,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gloriosa-Grandma-Nyon-OP07-041"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gloriosa-Grandma-Nyon-OP07-041",
+      "language": "EN"
     },
     {
       "cardId": "OP07-118",
@@ -416,12 +447,13 @@
       "version": "V.1",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sabo-OP07-118-V1",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775637/775637.png",
-      "priceFrom": "0,93 €",
-      "priceEur": 0.93,
+      "priceFrom": "0,80 €",
+      "priceEur": 0.8,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sabo-OP07-118-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sabo-OP07-118-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-104",
@@ -434,7 +466,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Nico-Robin-OP07-104"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Nico-Robin-OP07-104",
+      "language": "EN"
     },
     {
       "cardId": "OP07-069",
@@ -447,7 +480,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pickles-OP07-069"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pickles-OP07-069",
+      "language": "EN"
     },
     {
       "cardId": "OP07-038",
@@ -460,7 +494,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-038-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-038-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-029",
@@ -473,7 +508,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Basil-Hawkins-OP07-029-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Basil-Hawkins-OP07-029-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-119",
@@ -486,7 +522,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-119-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-119-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-115",
@@ -499,7 +536,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/I-Re-Quasar-Helllp-OP07-115"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/I-Re-Quasar-Helllp-OP07-115",
+      "language": "EN"
     },
     {
       "cardId": "OP07-074",
@@ -512,7 +550,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Monda-OP07-074"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Monda-OP07-074",
+      "language": "EN"
     },
     {
       "cardId": "OP07-053",
@@ -525,7 +564,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-053"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-053",
+      "language": "EN"
     },
     {
       "cardId": "OP07-055",
@@ -538,7 +578,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Snake-Dance-OP07-055"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Snake-Dance-OP07-055",
+      "language": "EN"
     },
     {
       "cardId": "OP07-064",
@@ -546,12 +587,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sanji-OP07-064-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775493/775493.png",
-      "priceFrom": "19,00 €",
-      "priceEur": 19,
+      "priceFrom": "18,99 €",
+      "priceEur": 18.99,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sanji-OP07-064-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sanji-OP07-064-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-036",
@@ -564,7 +606,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Demonic-Aura-Nine-Sword-Style-Asura-Demon-Nine-Flash-OP07-036"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Demonic-Aura-Nine-Sword-Style-Asura-Demon-Nine-Flash-OP07-036",
+      "language": "EN"
     },
     {
       "cardId": "OP07-059",
@@ -577,7 +620,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-059-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-059-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-019",
@@ -590,7 +634,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-019-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-019-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-026",
@@ -598,12 +643,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-026-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775377/775377.png",
-      "priceFrom": "13,50 €",
-      "priceEur": 13.5,
+      "priceFrom": "14,00 €",
+      "priceEur": 14,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-026-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-026-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-109",
@@ -616,7 +662,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-109-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-109-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-117",
@@ -629,7 +676,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Egghead-OP07-117"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Egghead-OP07-117",
+      "language": "EN"
     },
     {
       "cardId": "OP07-101",
@@ -642,7 +690,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Shaka-OP07-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Shaka-OP07-101",
+      "language": "EN"
     },
     {
       "cardId": "OP07-071",
@@ -650,12 +699,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-071-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775506/775506.png",
-      "priceFrom": "5,99 €",
-      "priceEur": 5.99,
+      "priceFrom": "6,00 €",
+      "priceEur": 6,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-071-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-071-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-098",
@@ -668,7 +718,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Atlas-OP07-098"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Atlas-OP07-098",
+      "language": "EN"
     },
     {
       "cardId": "OP07-075",
@@ -681,7 +732,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slow-Slow-Beam-OP07-075"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Slow-Slow-Beam-OP07-075",
+      "language": "EN"
     },
     {
       "cardId": "OP07-046",
@@ -689,12 +741,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sengoku-OP07-046-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775425/775425.png",
-      "priceFrom": "7,00 €",
-      "priceEur": 7,
+      "priceFrom": "7,79 €",
+      "priceEur": 7.79,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sengoku-OP07-046-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sengoku-OP07-046-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-079",
@@ -707,7 +760,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-079-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-079-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-031",
@@ -720,7 +774,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Bartolomeo-OP07-031"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Bartolomeo-OP07-031",
+      "language": "EN"
     },
     {
       "cardId": "OP07-072",
@@ -733,7 +788,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porche-OP07-072-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porche-OP07-072-V2",
+      "language": "EN"
     },
     {
       "cardId": "ST10-010",
@@ -746,7 +802,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-ST10-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-ST10-010",
+      "language": "EN"
     },
     {
       "cardId": "OP07-093",
@@ -759,7 +816,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-093"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-093",
+      "language": "EN"
     },
     {
       "cardId": "OP07-034",
@@ -772,7 +830,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Roronoa-Zoro-OP07-034"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Roronoa-Zoro-OP07-034",
+      "language": "EN"
     },
     {
       "cardId": "OP07-111",
@@ -780,12 +839,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lilith-OP07-111-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775625/775625.png",
-      "priceFrom": "7,95 €",
-      "priceEur": 7.95,
+      "priceFrom": "7,49 €",
+      "priceEur": 7.49,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lilith-OP07-111-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lilith-OP07-111-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-112",
@@ -798,7 +858,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lucy-OP07-112"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Lucy-OP07-112",
+      "language": "EN"
     },
     {
       "cardId": "OP07-097",
@@ -811,7 +872,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vegapunk-OP07-097-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vegapunk-OP07-097-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-100",
@@ -824,7 +886,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Edison-OP07-100"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Edison-OP07-100",
+      "language": "EN"
     },
     {
       "cardId": "OP07-114",
@@ -837,7 +900,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/He-Possesses-the-Worlds-Most-Brilliant-Mind-OP07-114"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/He-Possesses-the-Worlds-Most-Brilliant-Mind-OP07-114",
+      "language": "EN"
     },
     {
       "cardId": "OP07-032",
@@ -850,7 +914,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Fisher-Tiger-OP07-032"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Fisher-Tiger-OP07-032",
+      "language": "EN"
     },
     {
       "cardId": "OP07-088",
@@ -863,7 +928,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Hattori-OP07-088"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Hattori-OP07-088",
+      "language": "EN"
     },
     {
       "cardId": "OP07-045",
@@ -876,7 +942,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-045-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-045-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-047",
@@ -884,12 +951,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-OP07-047-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775427/775427.png",
-      "priceFrom": "3,00 €",
-      "priceEur": 3,
+      "priceFrom": "2,95 €",
+      "priceEur": 2.95,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-OP07-047-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Trafalgar-Law-OP07-047-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-016",
@@ -902,7 +970,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Galaxy-Wink-OP07-016"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Galaxy-Wink-OP07-016",
+      "language": "EN"
     },
     {
       "cardId": "OP07-083",
@@ -915,7 +984,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gecko-Moria-OP07-083"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gecko-Moria-OP07-083",
+      "language": "EN"
     },
     {
       "cardId": "OP07-015",
@@ -928,7 +998,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-015-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-015-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-033",
@@ -941,7 +1012,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-033"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDLuffy-OP07-033",
+      "language": "EN"
     },
     {
       "cardId": "OP07-010",
@@ -954,7 +1026,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Baccarat-OP07-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Baccarat-OP07-010",
+      "language": "EN"
     },
     {
       "cardId": "OP07-022",
@@ -967,7 +1040,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Otama-OP07-022-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Otama-OP07-022-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-063",
@@ -980,7 +1054,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Capote-OP07-063"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Capote-OP07-063",
+      "language": "EN"
     },
     {
       "cardId": "OP07-107",
@@ -993,7 +1068,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Franky-OP07-107-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Franky-OP07-107-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-001",
@@ -1006,7 +1082,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-001-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-001-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-051",
@@ -1014,12 +1091,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775438/775438.png",
-      "priceFrom": "17,99 €",
-      "priceEur": 17.99,
+      "priceFrom": "15,00 €",
+      "priceEur": 15,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-054",
@@ -1032,7 +1110,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Marguerite-OP07-054"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Marguerite-OP07-054",
+      "language": "EN"
     },
     {
       "cardId": "OP07-105",
@@ -1045,7 +1124,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pythagoras-OP07-105"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pythagoras-OP07-105",
+      "language": "EN"
     },
     {
       "cardId": "OP07-003",
@@ -1058,7 +1138,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Outlook-III-OP07-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Outlook-III-OP07-003",
+      "language": "EN"
     },
     {
       "cardId": "OP07-050",
@@ -1071,7 +1152,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Sandersonia-OP07-050"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Sandersonia-OP07-050",
+      "language": "EN"
     },
     {
       "cardId": "OP07-005",
@@ -1084,7 +1166,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Carina-OP07-005-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Carina-OP07-005-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-070",
@@ -1097,7 +1180,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Big-Bun-OP07-070"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Big-Bun-OP07-070",
+      "language": "EN"
     },
     {
       "cardId": "OP07-085",
@@ -1110,7 +1194,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Stussy-OP07-085-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Stussy-OP07-085-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-080",
@@ -1123,7 +1208,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Kaku-OP07-080"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Kaku-OP07-080",
+      "language": "EN"
     },
     {
       "cardId": "OP07-103",
@@ -1136,7 +1222,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tony-TonyChopper-OP07-103"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tony-TonyChopper-OP07-103",
+      "language": "EN"
     },
     {
       "cardId": "OP07-110",
@@ -1149,7 +1236,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/York-OP07-110"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/York-OP07-110",
+      "language": "EN"
     },
     {
       "cardId": "OP07-005",
@@ -1162,7 +1250,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Carina-OP07-005-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Carina-OP07-005-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP07-029",
@@ -1175,7 +1264,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Basil-Hawkins-OP07-029-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Basil-Hawkins-OP07-029-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-058",
@@ -1188,7 +1278,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Island-of-Women-OP07-058"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Island-of-Women-OP07-058",
+      "language": "EN"
     },
     {
       "cardId": "OP07-068",
@@ -1201,7 +1292,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Hamburg-OP07-068"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Hamburg-OP07-068",
+      "language": "EN"
     },
     {
       "cardId": "OP07-048",
@@ -1214,7 +1306,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Donquixote-Doflamingo-OP07-048"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Donquixote-Doflamingo-OP07-048",
+      "language": "EN"
     },
     {
       "cardId": "OP07-079",
@@ -1227,7 +1320,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-079-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Rob-Lucci-OP07-079-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-059",
@@ -1235,12 +1329,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-059-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775485/775485.png",
-      "priceFrom": "19,00 €",
-      "priceEur": 19,
+      "priceFrom": "10,55 €",
+      "priceEur": 10.55,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-059-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Foxy-OP07-059-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-038",
@@ -1248,12 +1343,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-038-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775398/775398.png",
-      "priceFrom": "78,98 €",
-      "priceEur": 78.98,
+      "priceFrom": "70,00 €",
+      "priceEur": 70,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-038-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-038-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-102",
@@ -1266,7 +1362,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-102"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-102",
+      "language": "EN"
     },
     {
       "cardId": "OP07-082",
@@ -1279,7 +1376,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Captain-John-OP07-082"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Captain-John-OP07-082",
+      "language": "EN"
     },
     {
       "cardId": "OP07-030",
@@ -1292,7 +1390,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pappag-OP07-030"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Pappag-OP07-030",
+      "language": "EN"
     },
     {
       "cardId": "OP07-081",
@@ -1305,7 +1404,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Kalifa-OP07-081"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Kalifa-OP07-081",
+      "language": "EN"
     },
     {
       "cardId": "OP07-043",
@@ -1318,7 +1418,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Salome-OP07-043"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Salome-OP07-043",
+      "language": "EN"
     },
     {
       "cardId": "OP07-095",
@@ -1331,7 +1432,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Iron-Body-OP07-095"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Iron-Body-OP07-095",
+      "language": "EN"
     },
     {
       "cardId": "OP07-004",
@@ -1344,7 +1446,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/CurlyDadan-OP07-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/CurlyDadan-OP07-004",
+      "language": "EN"
     },
     {
       "cardId": "OP07-001",
@@ -1357,7 +1460,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-001-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/MonkeyDDragon-OP07-001-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-094",
@@ -1370,7 +1474,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Shave-OP07-094"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Shave-OP07-094",
+      "language": "EN"
     },
     {
       "cardId": "OP07-037",
@@ -1383,7 +1488,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/More-Pizza-OP07-037"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/More-Pizza-OP07-037",
+      "language": "EN"
     },
     {
       "cardId": "OP07-119",
@@ -1396,7 +1502,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-119-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/PortgasDAce-OP07-119-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-019",
@@ -1404,12 +1511,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-019-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775342/775342.png",
-      "priceFrom": "38,00 €",
-      "priceEur": 38,
+      "priceFrom": "37,00 €",
+      "priceEur": 37,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-019-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jewelry-Bonney-OP07-019-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-021",
@@ -1422,7 +1530,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Urouge-OP07-021"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Urouge-OP07-021",
+      "language": "EN"
     },
     {
       "cardId": "OP07-062",
@@ -1435,7 +1544,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vinsmoke-Reiju-OP07-062"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vinsmoke-Reiju-OP07-062",
+      "language": "EN"
     },
     {
       "cardId": "OP07-061",
@@ -1448,7 +1558,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vinsmoke-Sanji-OP07-061"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vinsmoke-Sanji-OP07-061",
+      "language": "EN"
     },
     {
       "cardId": "OP07-039",
@@ -1461,7 +1572,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Edward-Weevil-OP07-039"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Edward-Weevil-OP07-039",
+      "language": "EN"
     },
     {
       "cardId": "OP07-020",
@@ -1474,7 +1586,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Aladine-OP07-020"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Aladine-OP07-020",
+      "language": "EN"
     },
     {
       "cardId": "OP05-074",
@@ -1487,7 +1600,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/EustassCaptainKid-OP05-074"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/EustassCaptainKid-OP05-074",
+      "language": "EN"
     },
     {
       "cardId": "OP07-013",
@@ -1500,7 +1614,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Masked-Deuce-OP07-013"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Masked-Deuce-OP07-013",
+      "language": "EN"
     },
     {
       "cardId": "OP07-040",
@@ -1513,7 +1628,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Crocodile-OP07-040"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Crocodile-OP07-040",
+      "language": "EN"
     },
     {
       "cardId": "OP07-044",
@@ -1526,7 +1642,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dracule-Mihawk-OP07-044"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dracule-Mihawk-OP07-044",
+      "language": "EN"
     },
     {
       "cardId": "OP07-017",
@@ -1539,7 +1656,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dragon-Breath-OP07-017"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dragon-Breath-OP07-017",
+      "language": "EN"
     },
     {
       "cardId": "OP07-042",
@@ -1552,7 +1670,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gecko-Moria-OP07-042"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gecko-Moria-OP07-042",
+      "language": "EN"
     },
     {
       "cardId": "OP07-052",
@@ -1565,7 +1684,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Marigold-OP07-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Marigold-OP07-052",
+      "language": "EN"
     },
     {
       "cardId": "OP07-027",
@@ -1578,7 +1698,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-027"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Jinbe-OP07-027",
+      "language": "EN"
     },
     {
       "cardId": "OP07-023",
@@ -1591,7 +1712,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Caribou-OP07-023"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Caribou-OP07-023",
+      "language": "EN"
     },
     {
       "cardId": "OP07-118",
@@ -1604,7 +1726,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sabo-OP07-118-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sabo-OP07-118-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-018",
@@ -1617,7 +1740,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/KEEP-OUT-OP07-018"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/KEEP-OUT-OP07-018",
+      "language": "EN"
     },
     {
       "cardId": "OP07-097",
@@ -1630,7 +1754,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vegapunk-OP07-097-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vegapunk-OP07-097-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP07-108",
@@ -1643,7 +1768,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vega-Force-01-OP07-108"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Vega-Force-01-OP07-108",
+      "language": "EN"
     },
     {
       "cardId": "OP07-086",
@@ -1656,7 +1782,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Spandam-OP07-086"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Spandam-OP07-086",
+      "language": "EN"
     },
     {
       "cardId": "OP07-024",
@@ -1669,7 +1796,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Koala-OP07-024"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Koala-OP07-024",
+      "language": "EN"
     },
     {
       "cardId": "OP07-092",
@@ -1682,7 +1810,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Joseph-OP07-092"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Joseph-OP07-092",
+      "language": "EN"
     },
     {
       "cardId": "OP07-106",
@@ -1695,7 +1824,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Fuza-OP07-106"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Fuza-OP07-106",
+      "language": "EN"
     },
     {
       "cardId": "OP01-073",
@@ -1708,7 +1838,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Donquixote-Doflamingo-OP01-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Donquixote-Doflamingo-OP01-073",
+      "language": "EN"
     },
     {
       "cardId": "OP07-008",
@@ -1721,7 +1852,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Mr-Tanaka-OP07-008"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Mr-Tanaka-OP07-008",
+      "language": "EN"
     },
     {
       "cardId": "OP07-009",
@@ -1734,7 +1866,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dogura-Magura-OP07-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dogura-Magura-OP07-009",
+      "language": "EN"
     },
     {
       "cardId": "OP07-087",
@@ -1747,7 +1880,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Baskerville-OP07-087"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Baskerville-OP07-087",
+      "language": "EN"
     },
     {
       "cardId": "OP07-089",
@@ -1760,7 +1894,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Maha-OP07-089"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Maha-OP07-089",
+      "language": "EN"
     },
     {
       "cardId": "OP03-078",
@@ -1773,7 +1908,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Issho-OP03-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Issho-OP03-078",
+      "language": "EN"
     },
     {
       "cardId": "OP07-006",
@@ -1786,7 +1922,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sterry-OP07-006"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Sterry-OP07-006",
+      "language": "EN"
     },
     {
       "cardId": "OP07-049",
@@ -1799,7 +1936,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Buckin-OP07-049"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Buckin-OP07-049",
+      "language": "EN"
     },
     {
       "cardId": "OP01-035",
@@ -1812,7 +1950,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Okiku-OP01-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Okiku-OP01-035",
+      "language": "EN"
     },
     {
       "cardId": "OP07-007",
@@ -1825,7 +1964,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dice-OP07-007"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Dice-OP07-007",
+      "language": "EN"
     },
     {
       "cardId": "OP07-014",
@@ -1838,7 +1978,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Moda-OP07-014"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Moda-OP07-014",
+      "language": "EN"
     },
     {
       "cardId": "OP06-101",
@@ -1851,7 +1992,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/O-Nami-OP06-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/O-Nami-OP06-101",
+      "language": "EN"
     },
     {
       "cardId": "OP07-028",
@@ -1864,7 +2006,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Scratchmen-Apoo-OP07-028"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Scratchmen-Apoo-OP07-028",
+      "language": "EN"
     },
     {
       "cardId": "OP07-084",
@@ -1877,7 +2020,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gismonda-OP07-084"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Gismonda-OP07-084",
+      "language": "EN"
     },
     {
       "cardId": "OP07-090",
@@ -1890,7 +2034,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Morgans-OP07-090"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Morgans-OP07-090",
+      "language": "EN"
     },
     {
       "cardId": "OP03-003",
@@ -1903,7 +2048,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Izo-OP03-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Izo-OP03-003",
+      "language": "EN"
     },
     {
       "cardId": "OP07-012",
@@ -1916,7 +2062,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porchemy-OP07-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Porchemy-OP07-012",
+      "language": "EN"
     },
     {
       "cardId": "OP07-025",
@@ -1929,7 +2076,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Coribou-OP07-025"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Coribou-OP07-025",
+      "language": "EN"
     },
     {
       "cardId": "OP07-011",
@@ -1942,7 +2090,8 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Bluejam-OP07-011"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Bluejam-OP07-011",
+      "language": "EN"
     },
     {
       "cardId": "OP07-051",
@@ -1950,12 +2099,13 @@
       "version": "V.3",
       "url": "/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V3",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP07/775439/775439.png",
-      "priceFrom": "1.400,00 €",
-      "priceEur": 1.4,
+      "priceFrom": "1.550,00 €",
+      "priceEur": 1.55,
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Boa-Hancock-OP07-051-V3",
+      "language": "EN"
     },
     {
       "cardId": "OP07-067",
@@ -1968,8 +2118,10 @@
       "expansion": "500 Years into the Future",
       "setCode": "OP07",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tonjit-OP07-067"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/500-Years-into-the-Future/Tonjit-OP07-067",
+      "language": "EN"
     }
   ],
-  "errors": []
+  "errors": [],
+  "language": "EN"
 }

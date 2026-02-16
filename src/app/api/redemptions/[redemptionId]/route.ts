@@ -53,10 +53,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       case "ship": {
         const trackingNumber = body.trackingNumber as string;
         if (!trackingNumber) {
-          return NextResponse.json(
-            { error: "Tracking number is required" },
-            { status: 400 },
-          );
+          return NextResponse.json({ error: "Tracking number is required" }, { status: 400 });
         }
         const result = await markShipped(redemptionId, trackingNumber);
         return NextResponse.json(result);
@@ -76,10 +73,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       case "fail": {
         const reason = body.reason as string;
         if (!reason) {
-          return NextResponse.json(
-            { error: "Failure reason is required" },
-            { status: 400 },
-          );
+          return NextResponse.json({ error: "Failure reason is required" }, { status: 400 });
         }
         const result = await failRedemption(redemptionId, reason);
         return NextResponse.json(result);

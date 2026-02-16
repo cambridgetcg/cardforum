@@ -15,6 +15,7 @@ Three new pipeline scripts were created to extend the One Piece TCG catalog from
 **Purpose**: Filter Cardmarket expansions by product type and scrape them selectively.
 
 **Features**:
+
 - Filters by product type: `booster`, `starter`, `extra`, `premium`, `promo`
 - Excludes non-English variants by default (can be included with flags)
 - Excludes Asia-region legal variants by default
@@ -23,6 +24,7 @@ Three new pipeline scripts were created to extend the One Piece TCG catalog from
 - Resume support for interrupted runs
 
 **Command Examples**:
+
 ```bash
 # All starter decks
 npx tsx research/pipeline/scrape-all-products.ts --product-type starter
@@ -35,6 +37,7 @@ npx tsx research/pipeline/scrape-all-products.ts --all
 ```
 
 **Expected Output**:
+
 - ~30 Starter Decks (ST-01 through ST-29)
 - ~4 Extra Boosters (EB-01 through EB-04)
 - ~2 Premium Boosters (PRB-01, PRB-02)
@@ -46,6 +49,7 @@ npx tsx research/pipeline/scrape-all-products.ts --all
 **Purpose**: Fetch individual card pages and extract metadata (rarity, type, mechanics).
 
 **Features**:
+
 - Parses rarity levels (C, U, R, SR, SSR, SEC, UR)
 - Extracts card type (Character, Event, Stage, Support, Leader)
 - Captures effect text (game abilities)
@@ -54,6 +58,7 @@ npx tsx research/pipeline/scrape-all-products.ts --all
 - Dry-run mode
 
 **Command Examples**:
+
 ```bash
 # Enrich single set
 npx tsx research/pipeline/enrich-card-data.ts --set OP01
@@ -66,6 +71,7 @@ npx tsx research/pipeline/enrich-card-data.ts --set OP01 --dry-run
 ```
 
 **Expected Output**:
+
 - Enriched JSON files: `cardmarket-{code}-enriched.json`
 - Added fields: `rarity`, `cardType`, `effectText`, `cost`, `power`, `releaseDate`
 - ~85-95% enrichment success rate for most fields
@@ -76,6 +82,7 @@ npx tsx research/pipeline/enrich-card-data.ts --set OP01 --dry-run
 **Purpose**: Single source of truth for Cardmarket→official code mapping.
 
 **Database Contents**:
+
 - 15 booster packs (OP-01 through OP-14, OP-15 announced)
 - 4 extra boosters (EB-01 through EB-04)
 - 2 premium boosters (PRB-01, PRB-02)
@@ -84,6 +91,7 @@ npx tsx research/pipeline/enrich-card-data.ts --set OP01 --dry-run
 - **Total**: 56 unique set mappings
 
 **Key Features**:
+
 - Exports `SET_CODE_MAPPINGS` array with full metadata
 - Helper functions: `inferSetCode()`, `getMapping()`, `buildCardmarketNameMap()`
 - Handles naming quirks (e.g., "500 Years into/in the Future")
@@ -91,12 +99,13 @@ npx tsx research/pipeline/enrich-card-data.ts --set OP01 --dry-run
 - Notes section for special cases
 
 **Usage Example**:
+
 ```typescript
 import { inferSetCode, getMapping } from "./set-code-mappings";
 
-const code = inferSetCode("Romance Dawn");  // "OP-01"
+const code = inferSetCode("Romance Dawn"); // "OP-01"
 const mapping = getMapping("Romance Dawn");
-console.log(mapping.releaseDate);          // "2022-12-02"
+console.log(mapping.releaseDate); // "2022-12-02"
 ```
 
 ### Extended README (`README-EXTENDED.md`)
@@ -104,6 +113,7 @@ console.log(mapping.releaseDate);          // "2022-12-02"
 **Purpose**: Complete guide to the extended pipeline.
 
 **Includes**:
+
 - Data model documentation
 - Step-by-step usage instructions
 - Pipeline statistics and coverage gaps
@@ -117,29 +127,29 @@ console.log(mapping.releaseDate);          // "2022-12-02"
 
 ### Current State (✓ Complete)
 
-| Product | Count | Cards | Variants | Status |
-|---------|-------|-------|----------|--------|
-| OP-01 through OP-10 | 10 | 1,194 | 1,373 | ✓ Scraped |
+| Product             | Count | Cards | Variants | Status    |
+| ------------------- | ----- | ----- | -------- | --------- |
+| OP-01 through OP-10 | 10    | 1,194 | 1,373    | ✓ Scraped |
 
 ### Ready to Scrape (→ Use `scrape-all-products.ts`)
 
-| Product | Count | Est. Cards | Est. Variants | Status |
-|---------|-------|-----------|--------------|--------|
-| Starter Decks ST-01 to ST-29 | 30 | ~1,500 | ~1,650 | Ready |
-| Extra Boosters EB-01 to EB-04 | 4 | ~500 | ~550 | Ready |
-| Premium Boosters PRB-01, PRB-02 | 2 | ~300 | ~330 | Ready |
-| Promo Categories | 5+ | ~800 | ~900 | Ready |
-| **Subtotal** | **41+** | **~3,100** | **~3,430** |
-| **Combined Total** | **51+** | **~4,294** | **~4,803** |
+| Product                         | Count   | Est. Cards | Est. Variants | Status |
+| ------------------------------- | ------- | ---------- | ------------- | ------ |
+| Starter Decks ST-01 to ST-29    | 30      | ~1,500     | ~1,650        | Ready  |
+| Extra Boosters EB-01 to EB-04   | 4       | ~500       | ~550          | Ready  |
+| Premium Boosters PRB-01, PRB-02 | 2       | ~300       | ~330          | Ready  |
+| Promo Categories                | 5+      | ~800       | ~900          | Ready  |
+| **Subtotal**                    | **41+** | **~3,100** | **~3,430**    |
+| **Combined Total**              | **51+** | **~4,294** | **~4,803**    |
 
 ### Enrichment Status (→ Use `enrich-card-data.ts`)
 
-| Product | Current | Enrichment | Status |
-|---------|---------|-----------|--------|
-| All OP-01 through OP-10 | ✓ Complete | Ready | Use `--all` flag |
-| ST-01 through ST-29 | Not yet scraped | Will auto-enrich | After scraping |
-| EB-01 through EB-04 | Not yet scraped | Will auto-enrich | After scraping |
-| Other sets | Not yet scraped | Will auto-enrich | After scraping |
+| Product                 | Current         | Enrichment       | Status           |
+| ----------------------- | --------------- | ---------------- | ---------------- |
+| All OP-01 through OP-10 | ✓ Complete      | Ready            | Use `--all` flag |
+| ST-01 through ST-29     | Not yet scraped | Will auto-enrich | After scraping   |
+| EB-01 through EB-04     | Not yet scraped | Will auto-enrich | After scraping   |
+| Other sets              | Not yet scraped | Will auto-enrich | After scraping   |
 
 ---
 
@@ -221,18 +231,18 @@ The implementation provides these features **at no additional cost**:
 
 ### Scraping Gaps
 
-| Gap | Impact | Workaround |
-|-----|--------|-----------|
-| Japanese variants not scraped | ~20% of Cardmarket inventory missing | Use Cardmarket Japan site separately |
-| OP-15+ (future releases) | Won't auto-discover until released | Re-run `discover-expansions.ts` quarterly |
-| Promo card numbering inconsistent | Some promos lack numbers | Manual cleanup or Cardmarket correction |
+| Gap                               | Impact                               | Workaround                                |
+| --------------------------------- | ------------------------------------ | ----------------------------------------- |
+| Japanese variants not scraped     | ~20% of Cardmarket inventory missing | Use Cardmarket Japan site separately      |
+| OP-15+ (future releases)          | Won't auto-discover until released   | Re-run `discover-expansions.ts` quarterly |
+| Promo card numbering inconsistent | Some promos lack numbers             | Manual cleanup or Cardmarket correction   |
 
 ### Enrichment Gaps
 
-| Gap | Impact | Workaround |
-|-----|--------|-----------|
-| Effect text capture incomplete | ~10-15% missing | Manual review of high-value cards |
-| Cost/power parsing fragile | Works for ~80% of cards | Manual verification needed |
+| Gap                                | Impact                             | Workaround                                    |
+| ---------------------------------- | ---------------------------------- | --------------------------------------------- |
+| Effect text capture incomplete     | ~10-15% missing                    | Manual review of high-value cards             |
+| Cost/power parsing fragile         | Works for ~80% of cards            | Manual verification needed                    |
 | Release dates from Cardmarket only | No JP-specific dates in enrichment | Use `set-code-mappings.ts` for official dates |
 
 ### Schema Updates Needed
@@ -297,23 +307,25 @@ npx tsx research/pipeline/verify-import.ts
 ### Bright Data Usage
 
 **Estimated quota**: 4,300-5,000 requests
+
 - Gallery page scrapes: ~50 sets × 5-6 pages = ~270 requests
 - Card enrichment: ~4,300 cards × 1 request/card = ~4,300 requests
 - **Total**: ~4,570 requests
 
 **At typical rates**:
+
 - Bright Data zone usage: ~$5-10 depending on current quota
 - Payload: ~50-70 MB (compressed: ~10-15 MB)
 
 ### Execution Time
 
-| Phase | Duration | Parallelizable |
-|-------|----------|----------------|
-| Scrape (4,300 cards) | 2-3 hours | No (rate limited) |
-| Enrich (4,300 cards) | 4-6 hours | No (rate limited) |
-| Import (4,300 cards) | 30 mins | Yes (batch DB ops) |
-| Verify (7 checks) | 15 mins | N/A |
-| **Total** | **7-10 hours** | |
+| Phase                | Duration       | Parallelizable     |
+| -------------------- | -------------- | ------------------ |
+| Scrape (4,300 cards) | 2-3 hours      | No (rate limited)  |
+| Enrich (4,300 cards) | 4-6 hours      | No (rate limited)  |
+| Import (4,300 cards) | 30 mins        | Yes (batch DB ops) |
+| Verify (7 checks)    | 15 mins        | N/A                |
+| **Total**            | **7-10 hours** |                    |
 
 ---
 

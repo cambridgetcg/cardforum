@@ -23,7 +23,12 @@ async function createEntry(
   type: WalletTransactionType,
   amount: number,
   description: string,
-  opts?: { tradeId?: string; stripePaymentIntentId?: string; stripePayoutId?: string; tx?: TxClient },
+  opts?: {
+    tradeId?: string;
+    stripePaymentIntentId?: string;
+    stripePayoutId?: string;
+    tx?: TxClient;
+  },
 ) {
   const execute = async (client: TxClient) => {
     const user = await client.user.findUniqueOrThrow({
@@ -66,11 +71,7 @@ async function createEntry(
 
 // ─── Deposit / Withdraw ─────────────────────────────────
 
-export async function deposit(
-  userId: string,
-  cents: number,
-  stripePaymentIntentId: string,
-) {
+export async function deposit(userId: string, cents: number, stripePaymentIntentId: string) {
   // Idempotency: skip if this payment intent was already processed
   const existing = await db.walletTransaction.findUnique({
     where: { stripePaymentIntentId },
@@ -90,42 +91,97 @@ export async function withdraw(userId: string, cents: number) {
 
 export async function holdForTrade(userId: string, tradeId: string, cents: number, tx?: TxClient) {
   return createEntry(userId, "TRADE_HOLD", -cents, `Hold for trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
+    tradeId,
+    tx,
   });
 }
 
-export async function releaseFromTrade(userId: string, tradeId: string, cents: number, tx?: TxClient) {
-  return createEntry(userId, "TRADE_RELEASE", cents, `Settlement from trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
-  });
+export async function releaseFromTrade(
+  userId: string,
+  tradeId: string,
+  cents: number,
+  tx?: TxClient,
+) {
+  return createEntry(
+    userId,
+    "TRADE_RELEASE",
+    cents,
+    `Settlement from trade #${tradeId.slice(-6)}`,
+    {
+      tradeId,
+      tx,
+    },
+  );
 }
 
-export async function refundTradeHold(userId: string, tradeId: string, cents: number, tx?: TxClient) {
+export async function refundTradeHold(
+  userId: string,
+  tradeId: string,
+  cents: number,
+  tx?: TxClient,
+) {
   return createEntry(userId, "TRADE_REFUND", cents, `Refund hold for trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
+    tradeId,
+    tx,
   });
 }
 
 // ─── Verification Fees ──────────────────────────────────
 
-export async function debitVerificationFee(userId: string, tradeId: string, cents: number, tx?: TxClient) {
-  return createEntry(userId, "VERIFICATION_FEE", -cents, `Verification fee for trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
-  });
+export async function debitVerificationFee(
+  userId: string,
+  tradeId: string,
+  cents: number,
+  tx?: TxClient,
+) {
+  return createEntry(
+    userId,
+    "VERIFICATION_FEE",
+    -cents,
+    `Verification fee for trade #${tradeId.slice(-6)}`,
+    {
+      tradeId,
+      tx,
+    },
+  );
 }
 
-export async function refundVerificationFee(userId: string, tradeId: string, cents: number, tx?: TxClient) {
-  return createEntry(userId, "VERIFICATION_FEE_REFUND", cents, `Verification fee refund for trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
-  });
+export async function refundVerificationFee(
+  userId: string,
+  tradeId: string,
+  cents: number,
+  tx?: TxClient,
+) {
+  return createEntry(
+    userId,
+    "VERIFICATION_FEE_REFUND",
+    cents,
+    `Verification fee refund for trade #${tradeId.slice(-6)}`,
+    {
+      tradeId,
+      tx,
+    },
+  );
 }
 
 // ─── Authenticator Earnings ─────────────────────────────
 
-export async function creditAuthenticatorEarning(userId: string, tradeId: string, cents: number, tx?: TxClient) {
-  return createEntry(userId, "AUTHENTICATOR_EARN", cents, `Verification payout for trade #${tradeId.slice(-6)}`, {
-    tradeId, tx,
-  });
+export async function creditAuthenticatorEarning(
+  userId: string,
+  tradeId: string,
+  cents: number,
+  tx?: TxClient,
+) {
+  return createEntry(
+    userId,
+    "AUTHENTICATOR_EARN",
+    cents,
+    `Verification payout for trade #${tradeId.slice(-6)}`,
+    {
+      tradeId,
+      tx,
+    },
+  );
 }
 
 // ─── Pending ACH Deposits ───────────────────────────────
@@ -157,11 +213,15 @@ export async function getTransactions(userId: string, limit = 50) {
 /**
  * Calculate the hold amount required from each user when a trade enters ESCROWED.
  *
+ * Netting fee model: fees are charged on the NET settlement amount only,
+ * not on each card sent. This means equal-value swaps are fee-free —
+ * the core competitive advantage of the bridge model.
+ *
  * For each user:
- *   hold = max(netSettlement, 0) + sum(seller fees on cards they send)
+ *   fee = PLATFORM_FEE_RATE * abs(netSettlement)
+ *   hold = max(netSettlement, 0) + fee
  *
  * netSettlement: from computeSettlements (positive = user owes)
- * seller fees: PLATFORM_FEE_RATE * askPrice of each card the user sends
  */
 export async function calculateHoldAmounts(
   legs: { fromUserId: string; askPrice: number }[],
@@ -181,12 +241,10 @@ export async function calculateHoldAmounts(
     // positive net = user owes money (received higher-value card)
     const settlementHold = Math.max(net, 0);
 
-    // Seller fee on cards this user sends
-    const sellerFee = legs
-      .filter((l) => l.fromUserId === userId)
-      .reduce((sum, l) => sum + Math.ceil(l.askPrice * feeRate), 0);
+    // Fee on net settlement amount (netting advantage: equal swaps = $0 fee)
+    const fee = Math.ceil(Math.abs(net) * feeRate);
 
-    holds.set(userId, settlementHold + sellerFee);
+    holds.set(userId, settlementHold + fee);
   }
 
   return holds;

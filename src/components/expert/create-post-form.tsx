@@ -40,7 +40,13 @@ interface CreatePostFormProps {
   defaultSetId?: string;
 }
 
-export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, defaultSetId }: CreatePostFormProps) {
+export function CreatePostForm({
+  onSubmit,
+  onCancel,
+  defaultTcg,
+  defaultCardId,
+  defaultSetId,
+}: CreatePostFormProps) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState<ExpertPostCategory>("SET_REVIEW");
@@ -54,7 +60,7 @@ export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, 
   // Card picker
   const [showCardPicker, setShowCardPicker] = useState(false);
   const [selectedCard, setSelectedCard] = useState<SelectedCard | null>(
-    defaultCardId ? null : null
+    defaultCardId ? null : null,
   );
 
   function addTag() {
@@ -130,18 +136,26 @@ export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, 
         >
           <option value="">Select game...</option>
           {TCG_FILTERS.map((t) => (
-            <option key={t.value} value={t.value}>{t.label}</option>
+            <option key={t.value} value={t.value}>
+              {t.label}
+            </option>
           ))}
         </select>
       </div>
 
       {/* Card Picker */}
       <div>
-        <label className="mb-1 block text-sm font-medium text-gray-700">Linked Card (optional)</label>
+        <label className="mb-1 block text-sm font-medium text-gray-700">
+          Linked Card (optional)
+        </label>
         {selectedCard ? (
           <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 p-3">
             {selectedCard.imageUrl && (
-              <img src={selectedCard.imageUrl} alt={selectedCard.name} className="h-12 w-8 rounded object-cover" />
+              <img
+                src={selectedCard.imageUrl}
+                alt={selectedCard.name}
+                className="h-12 w-8 rounded object-cover"
+              />
             )}
             <div className="flex-1">
               <p className="text-sm font-medium text-gray-900">{selectedCard.name}</p>
@@ -171,7 +185,12 @@ export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, 
                 setShowCardPicker(false);
               }}
             />
-            <Button type="button" variant="outline" size="sm" onClick={() => setShowCardPicker(false)}>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => setShowCardPicker(false)}
+            >
               Cancel
             </Button>
           </div>
@@ -228,15 +247,25 @@ export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, 
             placeholder="Add a tag..."
             maxLength={50}
             onKeyDown={(e) => {
-              if (e.key === "Enter") { e.preventDefault(); addTag(); }
+              if (e.key === "Enter") {
+                e.preventDefault();
+                addTag();
+              }
             }}
           />
-          <Button type="button" variant="outline" size="sm" onClick={addTag}>Add</Button>
+          <Button type="button" variant="outline" size="sm" onClick={addTag}>
+            Add
+          </Button>
         </div>
         {tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags.map((tag) => (
-              <Badge key={tag} variant="default" className="cursor-pointer" onClick={() => setTags(tags.filter((t) => t !== tag))}>
+              <Badge
+                key={tag}
+                variant="default"
+                className="cursor-pointer"
+                onClick={() => setTags(tags.filter((t) => t !== tag))}
+              >
                 {tag} &times;
               </Badge>
             ))}
@@ -249,7 +278,9 @@ export function CreatePostForm({ onSubmit, onCancel, defaultTcg, defaultCardId, 
         <Button type="submit" disabled={submitting}>
           {submitting ? "Publishing..." : "Publish"}
         </Button>
-        <Button type="button" variant="outline" onClick={onCancel}>Cancel</Button>
+        <Button type="button" variant="outline" onClick={onCancel}>
+          Cancel
+        </Button>
       </div>
     </form>
   );

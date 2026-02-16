@@ -64,7 +64,7 @@ interface ScrapedFileEntry {
   code: string;
   filePath: string;
   enriched: boolean;
-  language: string;  // "EN" | "JP" | "NEL" | "AL" | "PE"
+  language: string; // "EN" | "JP" | "NEL" | "AL" | "PE"
 }
 
 /**
@@ -168,7 +168,9 @@ async function importSet(
   const uniqueCardIds = new Set(cards.map((c) => c.cardId));
 
   if (dryRun) {
-    console.log(`  [DRY RUN] Would upsert CardSet: ${setCode} - ${expansionName} (${uniqueCardIds.size} unique cards)${releaseDate ? ` [release: ${mapping!.releaseDate}]` : ""}`);
+    console.log(
+      `  [DRY RUN] Would upsert CardSet: ${setCode} - ${expansionName} (${uniqueCardIds.size} unique cards)${releaseDate ? ` [release: ${mapping!.releaseDate}]` : ""}`,
+    );
     stats.setsCreated = 1;
   } else {
     const existing = await db.cardSet.findUnique({
@@ -222,7 +224,9 @@ async function importSet(
     const number = cardId;
 
     if (dryRun) {
-      console.log(`  [DRY RUN] Would upsert Card: ${cardId} - ${firstVariant.name} (${variants.length} variant(s)) [${language}]`);
+      console.log(
+        `  [DRY RUN] Would upsert Card: ${cardId} - ${firstVariant.name} (${variants.length} variant(s)) [${language}]`,
+      );
       stats.cardsCreated++;
       stats.variantsCreated += variants.length;
       continue;
@@ -301,7 +305,7 @@ async function importSet(
             imageUrl: v.imageUrl,
             rarity: ev.rarity ?? null,
             priceEur: v.priceEur > 0 ? v.priceEur : null,
-            priceUpdatedAt: v.priceEur > 0 ? new Date() : null,
+            priceEurUpdatedAt: v.priceEur > 0 ? new Date() : null,
           },
           update: {
             treatment: v.treatment,
@@ -309,7 +313,7 @@ async function importSet(
             imageUrl: v.imageUrl || undefined,
             rarity: ev.rarity ?? undefined,
             priceEur: v.priceEur > 0 ? v.priceEur : undefined,
-            priceUpdatedAt: v.priceEur > 0 ? new Date() : undefined,
+            priceEurUpdatedAt: v.priceEur > 0 ? new Date() : undefined,
           },
         });
 
@@ -347,7 +351,10 @@ async function main() {
       i++;
     }
     if (args[i] === "--sets" && args[i + 1]) {
-      setFilter = args[i + 1].toUpperCase().split(",").map((s) => s.trim());
+      setFilter = args[i + 1]
+        .toUpperCase()
+        .split(",")
+        .map((s) => s.trim());
       i++;
     }
   }
@@ -366,7 +373,7 @@ async function main() {
   if (files.length === 0) {
     console.error("No scraped JSON files found in research/onepiece/");
     console.error("Run the scraper first:");
-    console.error("  npx tsx research/pipeline/scrape-all-sets.ts");
+    console.error("  npx tsx research/pipeline/scrape-all-products.ts --all");
     process.exit(1);
   }
 
@@ -386,7 +393,9 @@ async function main() {
 
   for (const file of files) {
     const langLabel = file.language !== "EN" ? ` [${file.language}]` : "";
-    console.log(`\nImporting ${file.code}${langLabel} from ${path.basename(file.filePath)}${file.enriched ? " (enriched)" : ""}...`);
+    console.log(
+      `\nImporting ${file.code}${langLabel} from ${path.basename(file.filePath)}${file.enriched ? " (enriched)" : ""}...`,
+    );
 
     // Load scraped data
     const raw = fs.readFileSync(file.filePath, "utf-8");
@@ -402,10 +411,10 @@ async function main() {
     const s = result.stats;
     console.log(
       `  ${result.code}: ` +
-      `sets=${s.setsCreated}+${s.setsUpdated}, ` +
-      `cards=${s.cardsCreated}+${s.cardsUpdated}, ` +
-      `variants=${s.variantsCreated}+${s.variantsUpdated}` +
-      (result.errors.length > 0 ? `, errors=${result.errors.length}` : ""),
+        `sets=${s.setsCreated}+${s.setsUpdated}, ` +
+        `cards=${s.cardsCreated}+${s.cardsUpdated}, ` +
+        `variants=${s.variantsCreated}+${s.variantsUpdated}` +
+        (result.errors.length > 0 ? `, errors=${result.errors.length}` : ""),
     );
   }
 
@@ -422,7 +431,15 @@ async function main() {
       variantsUpdated: acc.variantsUpdated + r.stats.variantsUpdated,
       errors: acc.errors + r.errors.length,
     }),
-    { setsCreated: 0, setsUpdated: 0, cardsCreated: 0, cardsUpdated: 0, variantsCreated: 0, variantsUpdated: 0, errors: 0 },
+    {
+      setsCreated: 0,
+      setsUpdated: 0,
+      cardsCreated: 0,
+      cardsUpdated: 0,
+      variantsCreated: 0,
+      variantsUpdated: 0,
+      errors: 0,
+    },
   );
 
   console.log(`\n=== Import Complete ${dryRun ? "(DRY RUN)" : ""} ===`);

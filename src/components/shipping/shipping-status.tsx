@@ -40,11 +40,7 @@ const STEP_CONFIG = {
 };
 
 function TrackingLink({ tracking }: { tracking: string }) {
-  return (
-    <span className="font-mono text-xs text-blue-600">
-      {tracking}
-    </span>
-  );
+  return <span className="font-mono text-xs text-blue-600">{tracking}</span>;
 }
 
 function ShippingTimeline({ status }: { status: string }) {
@@ -56,9 +52,7 @@ function ShippingTimeline({ status }: { status: string }) {
       {steps.map((step, i) => (
         <div key={step} className="flex items-center gap-1">
           <div
-            className={`h-2 w-2 rounded-full ${
-              i <= currentIndex ? "bg-green-500" : "bg-gray-300"
-            }`}
+            className={`h-2 w-2 rounded-full ${i <= currentIndex ? "bg-green-500" : "bg-gray-300"}`}
           />
           <span
             className={`text-[10px] ${
@@ -68,11 +62,7 @@ function ShippingTimeline({ status }: { status: string }) {
             {step === "SHIPPED" ? "Shipped" : "Delivered"}
           </span>
           {i < steps.length - 1 && (
-            <div
-              className={`h-px w-4 ${
-                i < currentIndex ? "bg-green-400" : "bg-gray-300"
-              }`}
-            />
+            <div className={`h-px w-4 ${i < currentIndex ? "bg-green-400" : "bg-gray-300"}`} />
           )}
         </div>
       ))}
@@ -81,9 +71,14 @@ function ShippingTimeline({ status }: { status: string }) {
 }
 
 export function ShippingStatus({ legs, tradeMode, tradeStatus }: ShippingStatusProps) {
-  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(tradeStatus);
+  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(
+    tradeStatus,
+  );
 
-  if (!isShippingPhase && !["ESCROWED", "CARDS_SUBMITTED", "AUTHENTICATING", "VERIFIED"].includes(tradeStatus)) {
+  if (
+    !isShippingPhase &&
+    !["ESCROWED", "CARDS_SUBMITTED", "AUTHENTICATING", "VERIFIED"].includes(tradeStatus)
+  ) {
     return null;
   }
 
@@ -143,18 +138,18 @@ export function ShippingStatus({ legs, tradeMode, tradeStatus }: ShippingStatusP
             {tradeMode === "AUTHENTICATED" && leg.authenticator && (
               <div className="rounded bg-white p-2 text-xs text-gray-600">
                 <p className="font-medium">{leg.authenticator.businessName ?? "Authenticator"}</p>
-                {leg.authenticator.businessAddress && (
-                  <p>{leg.authenticator.businessAddress}</p>
-                )}
+                {leg.authenticator.businessAddress && <p>{leg.authenticator.businessAddress}</p>}
                 {leg.authenticator.shippingNotes && (
-                  <p className="italic text-gray-400">{leg.authenticator.shippingNotes}</p>
+                  <p className="text-gray-400 italic">{leg.authenticator.shippingNotes}</p>
                 )}
                 <div className="mt-1 flex gap-2">
                   {leg.authenticator.acceptsDropOff && (
-                    <Badge className="bg-emerald-50 text-emerald-700 text-[10px]">Drop-off OK</Badge>
+                    <Badge className="bg-emerald-50 text-[10px] text-emerald-700">
+                      Drop-off OK
+                    </Badge>
                   )}
                   {leg.authenticator.acceptsMail && (
-                    <Badge className="bg-blue-50 text-blue-700 text-[10px]">Mail OK</Badge>
+                    <Badge className="bg-blue-50 text-[10px] text-blue-700">Mail OK</Badge>
                   )}
                 </div>
               </div>
@@ -162,7 +157,7 @@ export function ShippingStatus({ legs, tradeMode, tradeStatus }: ShippingStatusP
 
             {/* International badge */}
             {leg.isInternational && (
-              <Badge className="bg-amber-100 text-amber-700 text-[10px]">International</Badge>
+              <Badge className="bg-amber-100 text-[10px] text-amber-700">International</Badge>
             )}
           </div>
         );

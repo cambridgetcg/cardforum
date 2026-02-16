@@ -30,13 +30,7 @@ export interface CenteringRatio {
   topBottom: { top: number; bottom: number };
 }
 
-export type CenteringRating =
-  | "perfect"
-  | "excellent"
-  | "good"
-  | "fair"
-  | "poor"
-  | "very-poor";
+export type CenteringRating = "perfect" | "excellent" | "good" | "fair" | "poor" | "very-poor";
 
 export interface CenteringMeasurement extends CenteringRatio {
   ccsScore: number;
@@ -53,17 +47,9 @@ export interface CenteringMeasurement extends CenteringRatio {
  * Takes raw pixel measurements (left, right, top, bottom border widths)
  * and returns a CCS score using the worst-axis rule.
  */
-export function calculateCenteringScore(
-  ratio: CenteringRatio,
-): CenteringMeasurement {
-  const lrDeviation = calculateRatioDeviation(
-    ratio.leftRight.left,
-    ratio.leftRight.right,
-  );
-  const tbDeviation = calculateRatioDeviation(
-    ratio.topBottom.top,
-    ratio.topBottom.bottom,
-  );
+export function calculateCenteringScore(ratio: CenteringRatio): CenteringMeasurement {
+  const lrDeviation = calculateRatioDeviation(ratio.leftRight.left, ratio.leftRight.right);
+  const tbDeviation = calculateRatioDeviation(ratio.topBottom.top, ratio.topBottom.bottom);
 
   const maxDeviation = Math.max(lrDeviation, tbDeviation);
   const ccsScore = deviationToCCS(maxDeviation);
@@ -102,9 +88,7 @@ function deviationToCCS(deviation: number): number {
   const bp = CENTERING_BREAKPOINTS;
   for (let i = 0; i < bp.length - 1; i++) {
     if (deviation <= bp[i + 1].deviation) {
-      const t =
-        (deviation - bp[i].deviation) /
-        (bp[i + 1].deviation - bp[i].deviation);
+      const t = (deviation - bp[i].deviation) / (bp[i + 1].deviation - bp[i].deviation);
       const raw = bp[i].ccs + t * (bp[i + 1].ccs - bp[i].ccs);
       return roundToHalf(Math.max(1.0, Math.min(10.0, raw)));
     }

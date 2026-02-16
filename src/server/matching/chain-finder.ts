@@ -24,6 +24,7 @@ export interface ChainAnchor {
   authenticatorId: string;
   cardId: string;
   condition: string;
+  language: string; // card language (EN, JP)
   region: string;
   askPrice: number; // cents
 }
@@ -38,12 +39,16 @@ export interface Chain {
 }
 
 const MAX_CHAIN_DEPTH = 6;
+const MAX_CHAINS_PER_ANCHOR = 50; // cap chains per anchor to prevent explosion
 
 /**
  * Find altruistic chains starting from authenticator inventory anchors.
  *
  * For each anchor, DFS through the edge graph from users who want the
  * anchor's card, following have→want edges up to MAX_CHAIN_DEPTH.
+ *
+ * Uses reachability memoization: caches whether a user has viable outgoing
+ * edges at a given depth, so multiple anchors skip dead-end paths faster.
  */
 export function findChains(
   anchors: ChainAnchor[],
@@ -61,7 +66,6 @@ export function findChains(
   }
 
   // For each anchor, find edges where someone wants the anchor's card
-  // (the anchor provides the card, so we look for wantUsers of that card)
   const wantEdgesByCard = new Map<string, ListingEdge[]>();
   for (const edge of edges) {
     const list = wantEdgesByCard.get(edge.cardId) ?? [];
@@ -69,17 +73,26 @@ export function findChains(
     wantEdgesByCard.set(edge.cardId, list);
   }
 
+  // Memoize: "user has no viable outgoing edges at remaining depth N"
+  // Key: `${userId}:${remainingDepth}`, Value: true = dead end
+  const deadEndMemo = new Map<string, boolean>();
+
   const chains: Chain[] = [];
 
   for (const anchor of anchors) {
-    // Find users who want the anchor's card (these become the first "recipients")
-    const firstEdges = wantEdgesByCard.get(anchor.cardId) ?? [];
+    const firstEdges = (wantEdgesByCard.get(anchor.cardId) ?? []).filter(
+      (e) => e.language === anchor.language,
+    );
+
+    let anchorChainCount = 0;
 
     for (const firstEdge of firstEdges) {
-      // The want user receives the anchor's card; now follow their have edges
+      if (anchorChainCount >= MAX_CHAINS_PER_ANCHOR) break;
+
       const recipient = firstEdge.wantUserId;
       const visited = new Set<string>([recipient]);
 
+      const before = chains.length;
       chainDfs(
         anchor,
         recipient,
@@ -88,7 +101,9 @@ export function findChains(
         adj,
         authenticatorWantCardIds,
         chains,
+        deadEndMemo,
       );
+      anchorChainCount += chains.length - before;
     }
   }
 
@@ -103,6 +118,7 @@ function chainDfs(
   adj: Map<string, ListingEdge[]>,
   authenticatorWantCardIds: Set<string>,
   chains: Chain[],
+  deadEndMemo: Map<string, boolean>,
 ): void {
   // Record chain if length >= 1 (at least one real leg beyond the anchor)
   if (path.length >= 1) {
@@ -123,9 +139,19 @@ function chainDfs(
 
   if (path.length >= MAX_CHAIN_DEPTH) return;
 
-  const outEdges = adj.get(currentUser);
-  if (!outEdges) return;
+  const remainingDepth = MAX_CHAIN_DEPTH - path.length;
+  const memoKey = `${currentUser}:${remainingDepth}`;
 
+  // Skip if we've previously determined this is a dead end at this depth
+  if (deadEndMemo.get(memoKey)) return;
+
+  const outEdges = adj.get(currentUser);
+  if (!outEdges) {
+    deadEndMemo.set(memoKey, true);
+    return;
+  }
+
+  let foundViable = false;
   for (const edge of outEdges) {
     if (edge.bidPrice < edge.askPrice) continue;
     if (path.some((e) => e.haveListingId === edge.haveListingId)) continue;
@@ -133,9 +159,24 @@ function chainDfs(
     const nextUser = edge.wantUserId;
     if (visited.has(nextUser)) continue;
 
+    foundViable = true;
     visited.add(nextUser);
-    chainDfs(anchor, nextUser, [...path, edge], visited, adj, authenticatorWantCardIds, chains);
+    chainDfs(
+      anchor,
+      nextUser,
+      [...path, edge],
+      visited,
+      adj,
+      authenticatorWantCardIds,
+      chains,
+      deadEndMemo,
+    );
     visited.delete(nextUser);
+  }
+
+  // If no viable outgoing edges, mark as dead end for future anchors
+  if (!foundViable) {
+    deadEndMemo.set(memoKey, true);
   }
 }
 
@@ -164,6 +205,7 @@ export async function chainToProposal(chain: Chain): Promise<BridgeProposal> {
     toUserId: firstEdge.wantUserId,
     cardId: chain.anchor.cardId,
     region: chain.anchor.region,
+    language: chain.anchor.language,
     haveListingId: chain.anchor.inventoryId, // inventory item acts as the "have listing"
     wantListingId: firstEdge.wantListingId,
     condition: chain.anchor.condition,
@@ -177,6 +219,7 @@ export async function chainToProposal(chain: Chain): Promise<BridgeProposal> {
     toUserId: edge.wantUserId,
     cardId: edge.cardId,
     region: edge.haveRegion,
+    language: edge.language,
     haveListingId: edge.haveListingId,
     wantListingId: edge.wantListingId,
     condition: edge.condition,

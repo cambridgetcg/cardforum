@@ -34,14 +34,20 @@ const LANGUAGE_OPTIONS = [
 ];
 
 export function PostFilters({
-  tcg, category, sort, language,
-  onTcgChange, onCategoryChange, onSortChange, onLanguageChange,
+  tcg,
+  category,
+  sort,
+  language,
+  onTcgChange,
+  onCategoryChange,
+  onSortChange,
+  onLanguageChange,
 }: PostFiltersProps) {
   return (
     <div className="space-y-4">
       {/* TCG filter */}
       <div>
-        <h4 className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">Game</h4>
+        <h4 className="mb-2 text-xs font-medium tracking-wider text-gray-500 uppercase">Game</h4>
         <div className="flex flex-wrap gap-2">
           <button onClick={() => onTcgChange(null)}>
             <Badge variant={!tcg ? "info" : "default"}>All</Badge>
@@ -61,7 +67,9 @@ export function PostFilters({
 
       {/* Category filter */}
       <div>
-        <h4 className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">Category</h4>
+        <h4 className="mb-2 text-xs font-medium tracking-wider text-gray-500 uppercase">
+          Category
+        </h4>
         <div className="flex flex-wrap gap-2">
           <button onClick={() => onCategoryChange(null)}>
             <Badge variant={!category ? "info" : "default"}>All</Badge>
@@ -78,16 +86,16 @@ export function PostFilters({
 
       {/* Language filter */}
       <div>
-        <h4 className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">Language</h4>
+        <h4 className="mb-2 text-xs font-medium tracking-wider text-gray-500 uppercase">
+          Language
+        </h4>
         <div className="flex flex-wrap gap-2">
           <button onClick={() => onLanguageChange(null)}>
             <Badge variant={!language ? "info" : "default"}>All</Badge>
           </button>
           {LANGUAGE_OPTIONS.map((lang) => (
             <button key={lang.code} onClick={() => onLanguageChange(lang.code)}>
-              <Badge variant={language === lang.code ? "info" : "default"}>
-                {lang.label}
-              </Badge>
+              <Badge variant={language === lang.code ? "info" : "default"}>{lang.label}</Badge>
             </button>
           ))}
         </div>
@@ -95,7 +103,7 @@ export function PostFilters({
 
       {/* Sort */}
       <div>
-        <h4 className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">Sort</h4>
+        <h4 className="mb-2 text-xs font-medium tracking-wider text-gray-500 uppercase">Sort</h4>
         <div className="flex gap-2">
           {(["recent", "popular", "helpful"] as const).map((s) => (
             <button key={s} onClick={() => onSortChange(s)}>

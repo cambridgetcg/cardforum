@@ -49,14 +49,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Proposal not found" }, { status: 404 });
     }
     if (proposal.trade) {
-      return NextResponse.json({ error: "Trade already exists for this proposal" }, { status: 409 });
+      return NextResponse.json(
+        { error: "Trade already exists for this proposal" },
+        { status: 409 },
+      );
     }
 
     // Get unique user IDs from the proposal legs
-    const userIds = [...new Set([
-      ...proposal.legs.map((l) => l.fromUserId),
-      ...proposal.legs.map((l) => l.toUserId),
-    ])];
+    const userIds = [
+      ...new Set([
+        ...proposal.legs.map((l) => l.fromUserId),
+        ...proposal.legs.map((l) => l.toUserId),
+      ]),
+    ];
 
     if (!userIds.includes(session.user.id)) {
       return NextResponse.json({ error: "Not part of this proposal" }, { status: 403 });
@@ -78,7 +83,7 @@ export async function POST(req: NextRequest) {
             wantListingId: leg.wantListingId,
             gradedHaveListingId: leg.gradedHaveListingId,
             gradedWantListingId: leg.gradedWantListingId,
-            isGraded: !!(leg.gradedHaveListingId),
+            isGraded: !!leg.gradedHaveListingId,
             fromUserId: leg.fromUserId,
             toUserId: leg.toUserId,
             region: leg.region,
@@ -103,10 +108,7 @@ export async function POST(req: NextRequest) {
   // Handle dispute action separately — uses createShippingDispute with structured data
   if (action === "dispute") {
     if (!parsed.data.reason) {
-      return NextResponse.json(
-        { error: "reason is required for dispute action" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "reason is required for dispute action" }, { status: 400 });
     }
 
     try {

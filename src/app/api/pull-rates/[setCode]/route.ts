@@ -20,25 +20,19 @@ const PULL_RATE_FILES: Record<string, () => Promise<unknown>> = {
 };
 
 // GET /api/pull-rates/[setCode] — Serve pre-computed pull rate data
-export async function GET(
-  _req: Request,
-  { params }: { params: Promise<{ setCode: string }> },
-) {
+export async function GET(_req: Request, { params }: { params: Promise<{ setCode: string }> }) {
   const { setCode } = await params;
   const code = setCode.toUpperCase();
   const key = `${code}-EN`;
   const loader = PULL_RATE_FILES[key];
 
   if (!loader) {
-    return NextResponse.json(
-      { error: `No pull rate data for set ${code}` },
-      { status: 404 },
-    );
+    return NextResponse.json({ error: `No pull rate data for set ${code}` }, { status: 404 });
   }
 
   try {
-    const module = await loader() as { default: unknown };
-    return NextResponse.json(module.default, {
+    const pullRateModule = (await loader()) as { default: unknown };
+    return NextResponse.json(pullRateModule.default, {
       headers: { "Cache-Control": "public, max-age=86400" },
     });
   } catch {

@@ -9,7 +9,11 @@ interface WalletBalanceProps {
   pendingAchCents?: number;
 }
 
-export function WalletBalance({ balance, pendingAchCount = 0, pendingAchCents = 0 }: WalletBalanceProps) {
+export function WalletBalance({
+  balance,
+  pendingAchCount = 0,
+  pendingAchCents = 0,
+}: WalletBalanceProps) {
   return (
     <div className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">

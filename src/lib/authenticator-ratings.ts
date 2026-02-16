@@ -97,12 +97,15 @@ export async function computeTimeWeightedRating(ratings: RatingRecord[]): Promis
 export function getRatingWeight(
   score: number,
   comment: string | null | undefined,
-  rater: RaterInfo
+  rater: RaterInfo,
 ): number {
   let weight = 1.0;
 
   // Extreme rating without explanation
-  if ((score <= RATING_EXTREME_THRESHOLD.low || score >= RATING_EXTREME_THRESHOLD.high) && !comment) {
+  if (
+    (score <= RATING_EXTREME_THRESHOLD.low || score >= RATING_EXTREME_THRESHOLD.high) &&
+    !comment
+  ) {
     weight *= 0.5;
   }
 

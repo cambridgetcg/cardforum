@@ -33,7 +33,10 @@ interface Transaction {
   createdAt: string;
 }
 
-const TYPE_CONFIG: Record<TransactionType, { label: string; variant: "success" | "error" | "warning" | "info" | "default" }> = {
+const TYPE_CONFIG: Record<
+  TransactionType,
+  { label: string; variant: "success" | "error" | "warning" | "info" | "default" }
+> = {
   DEPOSIT: { label: "Deposit", variant: "success" },
   WITHDRAWAL: { label: "Withdrawal", variant: "error" },
   WITHDRAWAL_REVERSAL: { label: "Payout Returned", variant: "info" },
@@ -85,9 +88,7 @@ export function TransactionHistory({ transactions }: TransactionHistoryProps) {
               </div>
               <div className="flex items-center gap-4">
                 <span
-                  className={`text-sm font-medium ${
-                    isCredit ? "text-green-600" : "text-red-600"
-                  }`}
+                  className={`text-sm font-medium ${isCredit ? "text-green-600" : "text-red-600"}`}
                 >
                   {isCredit ? "+" : ""}
                   {formatPrice(tx.amount)}

@@ -117,9 +117,7 @@ export default function DashboardPage() {
           <CardContent className="py-8 text-center">
             {s.listings === 0 ? (
               <>
-                <p className="text-gray-500">
-                  Start by listing cards you want to trade!
-                </p>
+                <p className="text-gray-500">Start by listing cards you want to trade!</p>
                 <Link href="/listings" className="mt-3 inline-block">
                   <Button>Go to Listings</Button>
                 </Link>
@@ -127,8 +125,8 @@ export default function DashboardPage() {
             ) : (
               <>
                 <p className="text-gray-500">
-                  You have {s.listings} active listing{s.listings !== 1 ? "s" : ""}.
-                  The matching engine can find bridge trades for you.
+                  You have {s.listings} active listing{s.listings !== 1 ? "s" : ""}. The matching
+                  engine can find bridge trades for you.
                 </p>
                 <Link href="/trades" className="mt-3 inline-block">
                   <Button>View Trades</Button>
@@ -174,7 +172,8 @@ export default function DashboardPage() {
             ) : (
               <>
                 <p className="text-gray-500">
-                  You have {s.collectionCards} card{s.collectionCards !== 1 ? "s" : ""} in your collection.
+                  You have {s.collectionCards} card{s.collectionCards !== 1 ? "s" : ""} in your
+                  collection.
                 </p>
                 <Link href="/collection" className="mt-3 inline-block">
                   <Button variant="outline">View Collection</Button>

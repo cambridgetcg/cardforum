@@ -24,7 +24,7 @@ export default function ExpertHubPage() {
 
   // Reset page when filters change
   useEffect(() => {
-    setPage(1);
+    setPage(1); // eslint-disable-line react-hooks/set-state-in-effect
   }, [tcg, category, sort, language]);
 
   const { data, isLoading } = useExpertPosts({

@@ -8,7 +8,14 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, type WalletBalance, type ExpertPostListParams, type CollectionStats, type CollectionEntry, type PullRateData } from "@/lib/api-client";
+import {
+  api,
+  type WalletBalance,
+  type ExpertPostListParams,
+  type CollectionStats,
+  type CollectionEntry,
+  type PullRateData,
+} from "@/lib/api-client";
 
 // ─── Query Keys ──────────────────────────────────────
 // Centralized keys prevent typos and enable targeted invalidation.

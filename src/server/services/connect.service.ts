@@ -37,10 +37,7 @@ export async function createConnectAccount(userId: string): Promise<string> {
  * Generate a Stripe-hosted onboarding link for an Express account.
  * Return and refresh URLs both point to /wallet/connect.
  */
-export async function createOnboardingLink(
-  accountId: string,
-  userId: string,
-): Promise<string> {
+export async function createOnboardingLink(accountId: string, userId: string): Promise<string> {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
   const accountLink = await getStripe().accountLinks.create({

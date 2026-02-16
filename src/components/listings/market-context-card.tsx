@@ -1,8 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { TrendingUp, TrendingDown, Minus } from "lucide-react";
-import { fromMinorUnits, getCurrencyExponent, CURRENCY_INFO, type SupportedCurrency } from "@/lib/currency";
+import { TrendingUp, TrendingDown, Minus, Zap } from "lucide-react";
+import {
+  fromMinorUnits,
+  getCurrencyExponent,
+  CURRENCY_INFO,
+  type SupportedCurrency,
+} from "@/lib/currency";
 
 interface MarketData {
   suggestedAsk: number | null;
@@ -23,6 +28,8 @@ interface MarketContextCardProps {
   userPriceMinor: number | null;
   currency: SupportedCurrency;
   onApplySuggestion: (priceDisplay: string) => void;
+  /** Called with the counterparty market price in minor units (bestBid for have, bestAsk for want) */
+  onUseMarketPrice?: (priceCents: number) => void;
 }
 
 function formatCurrencyPrice(minorUnits: number, currency: SupportedCurrency): string {
@@ -39,17 +46,20 @@ export function MarketContextCard({
   userPriceMinor,
   currency,
   onApplySuggestion,
+  onUseMarketPrice,
 }: MarketContextCardProps) {
   const [data, setData] = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!cardId) return;
-    setLoading(true);
-    setData(null);
+    setLoading(true); // eslint-disable-line react-hooks/set-state-in-effect
+    setData(null);  
     fetch(`/api/marketplace/price-suggestion?cardId=${cardId}&condition=${condition}`)
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => { if (d) setData(d); })
+      .then((d) => {
+        if (d) setData(d);
+      })
       .catch(() => {})
       .finally(() => setLoading(false));
   }, [cardId, condition]);
@@ -123,7 +133,7 @@ export function MarketContextCard({
 
   return (
     <div className="mt-3 rounded-lg border border-gray-100 bg-gray-50 p-3 text-sm">
-      <p className="text-xs font-medium uppercase tracking-wide text-gray-500">Market Snapshot</p>
+      <p className="text-xs font-medium tracking-wide text-gray-500 uppercase">Market Snapshot</p>
 
       {/* Suggested price */}
       {suggestedPrice != null && (
@@ -144,6 +154,24 @@ export function MarketContextCard({
           </span>
         </div>
       )}
+
+      {/* Market price button */}
+      {onUseMarketPrice &&
+        (() => {
+          const marketCents = type === "have" ? bestBid : bestAsk;
+          if (marketCents == null) return null;
+          const label = type === "have" ? "Sell at Market" : "Buy at Market";
+          return (
+            <button
+              type="button"
+              onClick={() => onUseMarketPrice(marketCents)}
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700"
+            >
+              <Zap className="h-4 w-4" />
+              {label} — {formatCurrencyPrice(marketCents, currency)}
+            </button>
+          );
+        })()}
 
       {/* Best bid/ask */}
       {hasMarketData && (
@@ -172,7 +200,7 @@ export function MarketContextCard({
       {/* No data */}
       {!hasMarketData && suggestedPrice == null && (
         <p className="mt-2 text-xs text-gray-500">
-          No market data yet. You'll be the first to list this card at this condition.
+          No market data yet. You&apos;ll be the first to list this card at this condition.
         </p>
       )}
 

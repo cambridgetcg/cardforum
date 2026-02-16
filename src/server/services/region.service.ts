@@ -55,16 +55,12 @@ export async function resolveRegionFromText(
   });
 
   const lower = normalized.toLowerCase();
-  const countryMatch = allRegions.find(
-    (r) => r.country.toLowerCase() === lower,
-  );
+  const countryMatch = allRegions.find((r) => r.country.toLowerCase() === lower);
   if (countryMatch) return countryMatch;
 
   // 4. Substring containment
   const substring = allRegions.find(
-    (r) =>
-      r.name.toLowerCase().includes(lower) ||
-      lower.includes(r.name.toLowerCase()),
+    (r) => r.name.toLowerCase().includes(lower) || lower.includes(r.name.toLowerCase()),
   );
   return substring ?? null;
 }
@@ -134,7 +130,10 @@ export async function backfillUserRegions(): Promise<{ updated: number; skipped:
  * Backfill authenticators' regionId from their free-text region field.
  * Safe to run multiple times — only processes authenticators with null regionId.
  */
-export async function backfillAuthenticatorRegions(): Promise<{ updated: number; skipped: number }> {
+export async function backfillAuthenticatorRegions(): Promise<{
+  updated: number;
+  skipped: number;
+}> {
   const auths = await db.authenticator.findMany({
     where: { regionId: null },
     select: { id: true, region: true },

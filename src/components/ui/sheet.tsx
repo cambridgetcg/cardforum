@@ -46,7 +46,7 @@ export function Sheet({ open, onClose, title, children, className }: SheetProps)
           // Mobile: bottom sheet
           "inset-x-0 bottom-0 max-h-[85vh] rounded-t-2xl",
           // Desktop: right panel
-          "md:inset-y-0 md:right-0 md:left-auto md:w-[420px] md:max-h-none md:rounded-t-none md:rounded-l-2xl",
+          "md:inset-y-0 md:right-0 md:left-auto md:max-h-none md:w-[420px] md:rounded-t-none md:rounded-l-2xl",
           className,
         )}
       >

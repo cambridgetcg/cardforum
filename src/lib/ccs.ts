@@ -41,12 +41,7 @@ export async function calculateCCS(input: CCSInput): Promise<CCS> {
     input.centering * w.centering;
 
   // Min-cap rule
-  const minDimension = Math.min(
-    input.surface,
-    input.corners,
-    input.edges,
-    input.centering,
-  );
+  const minDimension = Math.min(input.surface, input.corners, input.edges, input.centering);
   if (minDimension < composite - minCapThreshold) {
     composite = minDimension + minCapThreshold;
   }
@@ -104,9 +99,7 @@ export function isValidDimensionScore(score: number): boolean {
 
 /** Validate all four dimension scores. */
 export function isValidCCSInput(input: CCSInput): boolean {
-  return [input.surface, input.corners, input.edges, input.centering].every(
-    isValidDimensionScore,
-  );
+  return [input.surface, input.corners, input.edges, input.centering].every(isValidDimensionScore);
 }
 
 /** Format CCS for display: "9.5 (NM+)" */
@@ -120,10 +113,7 @@ export function ccsDelta(a: number, b: number): number {
 }
 
 /** Check if a have listing's CCS meets a want listing's minimum CCS. */
-export function ccsMeetsMinimum(
-  haveCCS: number,
-  wantMinCCS: number | null,
-): boolean {
+export function ccsMeetsMinimum(haveCCS: number, wantMinCCS: number | null): boolean {
   if (wantMinCCS == null) return true;
   return haveCCS >= wantMinCCS;
 }

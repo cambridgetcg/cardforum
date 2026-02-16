@@ -27,10 +27,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = createDigitisationSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {

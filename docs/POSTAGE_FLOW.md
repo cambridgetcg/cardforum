@@ -67,9 +67,9 @@ to their assigned local authenticator.
 
 **Two submission methods**:
 
-| Method | How It Works | Status Transition |
-|--------|-------------|-------------------|
-| **Drop-off** | User visits authenticator's physical location. Authenticator scans a receipt QR or manually confirms. | Immediate `CARD_RECEIVED` |
+| Method            | How It Works                                                                                          | Status Transition                                            |
+| ----------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| **Drop-off**      | User visits authenticator's physical location. Authenticator scans a receipt QR or manually confirms. | Immediate `CARD_RECEIVED`                                    |
 | **Domestic mail** | User ships via carrier (USPS, Royal Mail, Japan Post, etc.). User enters tracking number on platform. | `CARD_RECEIVED` when authenticator confirms physical receipt |
 
 **Who pays**: The sender pays inbound shipping. This is their cost of participating
@@ -80,10 +80,12 @@ for inbound shipping. Users choose their own method. The platform only records
 the tracking number (if mailed) for dispute evidence.
 
 **TradeLeg fields used**:
+
 - `trackingNumber` — carrier tracking (optional, only if mailed)
 - `preShipmentPhotos` — sender's photos before packaging (evidence)
 
 **Why the platform doesn't manage inbound shipping**:
+
 - Authenticators are local — often within the same city
 - Drop-off is the expected primary method (card shops)
 - Adding carrier integration for inbound adds complexity with little value
@@ -99,6 +101,7 @@ to the recipient.
 
 **Who pays**: The authenticator's verification fee includes outbound shipping cost.
 This is bundled — not itemized to the user — because:
+
 1. Authenticators choose their own carriers and packaging
 2. Shipping cost varies by authenticator location/preference
 3. Bundling simplifies the user experience
@@ -113,17 +116,19 @@ Verification fee breakdown (internal, not shown to user):
 
 **Shipping requirements by card value**:
 
-| Card Value | Packaging | Tracking | Signature | Insurance |
-|-----------|-----------|----------|-----------|-----------|
-| < $50 | Toploader + bubble mailer | Required | Optional | Optional |
-| $50–$200 | Toploader + bubble mailer | Required | Required | Recommended |
-| $200+ | Rigid case + padded box | Required | Required | **Mandatory** |
+| Card Value | Packaging                 | Tracking | Signature | Insurance     |
+| ---------- | ------------------------- | -------- | --------- | ------------- |
+| < $50      | Toploader + bubble mailer | Required | Optional  | Optional      |
+| $50–$200   | Toploader + bubble mailer | Required | Required  | Recommended   |
+| $200+      | Rigid case + padded box   | Required | Required  | **Mandatory** |
 
 **TradeLeg fields used**:
+
 - `trackingNumber` — authenticator enters when shipping
 - `authenticatorId` — who is responsible for shipping
 
 **Outbound state flow**:
+
 ```
 Trade: VERIFIED → DELIVERING
   Per-leg: authenticator creates shipment → enters tracking → SHIPPED
@@ -168,6 +173,7 @@ Trade: ESCROWED → SHIPPING
 **Who pays**: The sender pays shipping.
 
 **Existing constants** (already in `constants.ts`):
+
 - `DIRECT_TRADE_SHIPPING_DEADLINE_DAYS = 7` — sender must ship within 7 days
 - `DIRECT_TRADE_AUTO_COMPLETE_DAYS = 14` — auto-complete if recipient doesn't confirm
 
@@ -179,18 +185,19 @@ in `TradeLeg.preShipmentPhotos`.
 
 Without an authenticator, trust comes from:
 
-| Mechanism | Purpose |
-|-----------|---------|
+| Mechanism           | Purpose                                    |
+| ------------------- | ------------------------------------------ |
 | Pre-shipment photos | Evidence of card condition before shipping |
-| Tracking number | Proof of shipment and delivery |
-| Escrow hold | Funds locked until delivery confirmed |
-| Auto-complete timer | Prevents indefinite holds (14 days) |
-| Dispute system | Resolution if card doesn't match listing |
-| User ratings | Reputation incentive |
+| Tracking number     | Proof of shipment and delivery             |
+| Escrow hold         | Funds locked until delivery confirmed      |
+| Auto-complete timer | Prevents indefinite holds (14 days)        |
+| Dispute system      | Resolution if card doesn't match listing   |
+| User ratings        | Reputation incentive                       |
 
 ### 3.3 When to Recommend Upgrading to Authenticated
 
 The platform should suggest upgrading (`requestAuthentication()`) when:
+
 - Card value > $100 (risk justifies authenticator fee)
 - Either party has low trade history (< 5 completed trades)
 - Either party has dispute history
@@ -212,6 +219,7 @@ No separate postage charge to user. The authenticator absorbs shipping as a busi
 cost within their fee.
 
 **Total user cost for authenticated trade**:
+
 ```
 Platform fee:        2.2% of card value (askPrice)
 Verification fee:    $3–$5 per card (includes outbound shipping)
@@ -226,6 +234,7 @@ Typical total:       ~$5–$12 per card
 Typical cost: $3–$8 domestic tracked.
 
 **Total user cost for direct trade**:
+
 ```
 Platform fee:        2.2% of card value (askPrice)
 Shipping:            $3–$8 (sender arranges)
@@ -248,6 +257,7 @@ from v1 for these reasons:
    significant engineering investment for a feature that doesn't block core functionality.
 
 **Future (v2+)**: Platform-managed labels make sense when:
+
 - Volume justifies bulk carrier rates
 - Standardized packaging quality becomes important
 - International fallback shipping is common
@@ -259,22 +269,24 @@ from v1 for these reasons:
 
 ### 5.1 When Addresses Are Needed
 
-| Scenario | From | To | When Resolved |
-|----------|------|----|---------------|
-| Authenticated inbound (mail) | User | Authenticator's location | At authenticator assignment |
-| Authenticated outbound | Authenticator | Recipient | At VERIFIED → DELIVERING |
-| Direct trade | Sender | Recipient | At ESCROWED → SHIPPING |
+| Scenario                     | From          | To                       | When Resolved               |
+| ---------------------------- | ------------- | ------------------------ | --------------------------- |
+| Authenticated inbound (mail) | User          | Authenticator's location | At authenticator assignment |
+| Authenticated outbound       | Authenticator | Recipient                | At VERIFIED → DELIVERING    |
+| Direct trade                 | Sender        | Recipient                | At ESCROWED → SHIPPING      |
 
 ### 5.2 Address Disclosure
 
 **Critical privacy concern**: Sharing home addresses between strangers.
 
 **Authenticated mode**: Users NEVER share addresses with each other.
-- Inbound: User ships to authenticator's *business* address (publicly listed).
+
+- Inbound: User ships to authenticator's _business_ address (publicly listed).
 - Outbound: Authenticator ships to recipient. Only the authenticator sees the
   recipient's address. The other trade participant never sees it.
 
 **Direct mode**: Sender needs recipient's shipping address.
+
 - Address revealed only after trade enters `ESCROWED` (funds locked).
 - This prevents address harvesting — no one sees addresses without financial commitment.
 - After trade completes, address is redacted from the sender's view (data minimization).
@@ -291,12 +303,13 @@ Shipping addresses are **locked when trade enters ESCROWED**.
 
 User addresses should be stored on a separate `ShippingAddress` model (not inline
 on `User`) to support:
+
 - Multiple addresses per user (home, office, PO box)
 - Address selection per trade
 - Address history for dispute resolution
 - GDPR deletion without affecting user record
 
-Authenticator addresses are the authenticator's *business location* — stored on
+Authenticator addresses are the authenticator's _business location_ — stored on
 the `Authenticator` model or linked `Region` record. These are semi-public
 (visible to users assigned to that authenticator).
 
@@ -307,6 +320,7 @@ the `Authenticator` model or linked `Region` record. These are semi-public
 ### 6.1 When It's Needed
 
 The bridge model breaks when a card cannot be found locally:
+
 - **Regional exclusives** (JP tournament promos)
 - **Language-specific printings** (Japanese vs. English)
 - **Ultra-rare / low-print-run cards** (< 50 known copies)
@@ -341,6 +355,7 @@ OPTION B: Authenticator-to-Recipient direct international
 
 International shipping is NOT bundled in the authenticator fee. It's a separate,
 explicitly quoted cost because:
+
 - Varies wildly by origin/destination ($15–$60+)
 - Customs/duties are unpredictable
 - Insurance costs scale with distance and value
@@ -360,6 +375,7 @@ International postage quote (shown to user before accepting trade):
 ### 6.4 Customs Declarations
 
 For international shipments, the authenticator must complete customs documentation:
+
 - Declared value = card's askPrice
 - Description = "Trading card game collectible"
 - HS Code = 9504.40 (preferred — "articles for parlour games, including playing cards")
@@ -382,6 +398,7 @@ card never arrives. Trade is in `CARDS_SUBMITTED` phase.
 **Impact**: Trade blocked. Other legs may already be at authenticator.
 
 **Resolution**:
+
 1. Wait until `CARDS_SUBMITTED` timeout (7 days from EXCHANGE_FLOW.md §6.2)
 2. If card doesn't arrive: user files carrier insurance claim
 3. Trade cancelled: `CARDS_SUBMITTED → CANCELLED`
@@ -390,6 +407,7 @@ card never arrives. Trade is in `CARDS_SUBMITTED` phase.
 6. Non-submitting user may forfeit deposit (per existing timeout rules)
 
 **Edge within edge**: Was it actually lost, or did the user never ship?
+
 - Tracking number is evidence. If tracking shows "shipped" + "lost", it's carrier fault.
 - If no tracking / tracking shows "label created, not shipped" → user penalty.
 
@@ -406,6 +424,7 @@ says they never received it.
 **Impact**: Trade stuck at `DELIVERING`. Recipient won't confirm `DELIVERED`.
 
 **Resolution**:
+
 1. Check carrier proof of delivery (signature, photo, GPS)
 2. If carrier confirms delivery → recipient dispute. Likely resolved in favor
    of authenticator (carrier evidence).
@@ -427,6 +446,7 @@ if recipient has filed a "not received" dispute. Disputes pause the timer.
 
 **Resolution**: Authenticator photographs card on receipt (standard procedure).
 If condition doesn't match listing:
+
 1. Authenticator flags condition mismatch
 2. Platform compares authenticator photos vs. sender's pre-shipment photos
 3. If damage occurred in transit → carrier insurance claim, trade may continue
@@ -437,6 +457,7 @@ If condition doesn't match listing:
 verified condition.
 
 **Resolution**: Recipient photographs card on receipt.
+
 1. Compare to authenticator's post-verification photos (taken during AUTHENTICATING)
 2. Damage clearly from transit → authenticator files carrier claim
 3. Authenticator is liable (they chose packaging/carrier)
@@ -454,6 +475,7 @@ to the leg where it occurred.
 Trade is in `AUTHENTICATING` or `VERIFIED → DELIVERING`.
 
 **Resolution timeline**:
+
 1. **24h**: Automated reminder to authenticator
 2. **48h**: Reserve authenticator alerted (Phase 4)
 3. **72h**: Support intervention — contact authenticator
@@ -465,6 +487,7 @@ Trade is in `AUTHENTICATING` or `VERIFIED → DELIVERING`.
 
 **For DELIVERING phase specifically**: If authenticator verified the card but
 won't ship it:
+
 - Reserve authenticator cannot help (they don't have the card)
 - Only resolution is direct contact with original authenticator
 - This is why PREMIUM tier requires an insurance bond
@@ -479,6 +502,7 @@ slow authenticators. Tiering ensures high-value cards go to proven authenticator
 **Scenario**: Carrier attempts delivery but recipient refuses the package.
 
 **Authenticated mode**:
+
 1. Package returned to authenticator
 2. Authenticator notifies platform
 3. Dispute opened: why did recipient refuse?
@@ -487,6 +511,7 @@ slow authenticators. Tiering ensures high-value cards go to proven authenticator
    - Legitimate concern → dispute resolution
 
 **Direct mode**:
+
 1. Package returned to sender
 2. Sender enters "returned" status
 3. Dispute opened per same logic above
@@ -498,6 +523,7 @@ slow authenticators. Tiering ensures high-value cards go to proven authenticator
 **Scenario**: Recipient realizes their address is wrong after trade enters `ESCROWED`.
 
 **Resolution**:
+
 - Address is locked at `ESCROWED`. This is by design (§5.3).
 - Recipient must contact support to update address **before** shipping phase begins.
 - If address change is minor (apt number, spelling): support can update.
@@ -516,6 +542,7 @@ is slow — ships late, delivery takes 10 days.
 is still held. They can't re-list or re-trade those cards.
 
 **Resolution**:
+
 - Trade-level status tracks the **slowest leg**
 - Per-leg `DELIVERED` status is tracked independently
 - Escrow remains held until ALL legs are `DELIVERED` (atomic settlement)
@@ -535,6 +562,7 @@ The alternative — partial completion — creates worse problems (see §7.8).
 **This is the hardest edge case in the entire platform.**
 
 **Options**:
+
 1. **Cancel everything**: Refund escrow. But legs 1 and 2 already delivered —
    recipients must return cards. This is painful and may not happen.
 2. **Compensate with funds**: Leg 3's recipient doesn't get their card.
@@ -587,6 +615,7 @@ But enforcement is the question:
   packaging choices.
 
 **Insurance enforcement**:
+
 - Cards > $200: Platform requires tracking number that includes insurance
   (cannot verify programmatically, but can warn and require user attestation)
 - Cards > $500: Signature confirmation required
@@ -600,6 +629,7 @@ But enforcement is the question:
 says they never received it.
 
 **Resolution**:
+
 1. Authenticator scans/confirms receipt at drop-off → digital receipt generated
 2. Without digital receipt, authenticator's word stands (they're the trusted party)
 3. If pattern emerges (user repeatedly claims drop-off, authenticator denies):
@@ -615,6 +645,7 @@ says they never received it.
 to the wrong recipient (meant for someone else).
 
 **Resolution**:
+
 1. Recipient reports wrong card received
 2. Authenticator arranges return shipping (at their cost)
 3. Authenticator re-ships correct card
@@ -632,6 +663,7 @@ Platform can provide a dashboard showing which card goes to which recipient.
 the authenticator.
 
 **Resolution**:
+
 1. **Day 0**: Trade cancelled. Platform notifies sender: "Retrieve your card
    from [authenticator] within 30 days."
 2. **Day 7**: Reminder notification
@@ -650,6 +682,7 @@ shipping. Authenticator should not be out-of-pocket for returns.
 or natural disasters.
 
 **Resolution**:
+
 - Auto-complete timer (14 days) should account for this — it's already generous
 - If tracking shows "in transit" with carrier delays, the dispute system should
   recognize this is not the sender's/authenticator's fault
@@ -664,6 +697,7 @@ or natural disasters.
 is empty or contains a worthless card.
 
 **Resolution**:
+
 1. Recipient photographs contents on opening (encouraged by platform UI)
 2. Package weight from carrier may indicate discrepancy (trading cards weigh ~2-4g)
 3. Dispute opened with photo evidence
@@ -680,11 +714,13 @@ the platform should strongly recommend authentication.
 **Scenario**: International fallback shipment (§6). Customs seizes the card.
 
 **Reasons customs might seize**:
+
 - Incorrect declaration (wrong HS code, underdeclared value)
 - Country-specific import restrictions
 - Suspected counterfeits (customs doesn't know TCG cards)
 
 **Resolution**:
+
 1. Sender (authenticator) provides customs documentation
 2. If value was correctly declared: customs usually releases after review
 3. If seized permanently: insurance claim. Trade leg fails → partial cycle
@@ -732,6 +768,7 @@ trade.service.ts — transitionTrade()
 ### 8.2 TradeLeg Status Transitions for Shipping
 
 **Authenticated mode per-leg**:
+
 ```
 PENDING
   → CARD_RECEIVED       [authenticator confirms receipt]
@@ -743,6 +780,7 @@ PENDING
 ```
 
 **Direct mode per-leg**:
+
 ```
 PENDING
   → SHIPPED             [sender enters tracking, ships to recipient]
@@ -803,24 +841,25 @@ model ShippingAddress {
 
 ## 10. Key Design Decisions Summary
 
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| Who pays inbound shipping? | User (sender) | Authenticator is local, cost is minimal |
-| Who pays outbound shipping? | Bundled in authenticator fee | Simplifies UX, authenticator chooses carrier |
-| Who pays direct shipping? | Sender | Standard marketplace convention |
-| Platform-managed labels? | No (v1) | Multi-country complexity, low marginal value |
-| Address visibility | Minimal — only shipping party sees address | Privacy protection |
-| Address lock timing | At ESCROWED | Prevents post-commitment address disputes |
-| Auto-complete timer | 14 days (existing) | Generous for carrier variance |
-| Partial cycle failure | Fund compensation + re-match attempt | Best balance of fairness |
-| International shipping | Explicit cost quote, not bundled | Costs vary wildly, user must consent |
-| Insurance | Mandatory > $200, optional below | Risk-proportionate |
+| Decision                    | Choice                                     | Rationale                                    |
+| --------------------------- | ------------------------------------------ | -------------------------------------------- |
+| Who pays inbound shipping?  | User (sender)                              | Authenticator is local, cost is minimal      |
+| Who pays outbound shipping? | Bundled in authenticator fee               | Simplifies UX, authenticator chooses carrier |
+| Who pays direct shipping?   | Sender                                     | Standard marketplace convention              |
+| Platform-managed labels?    | No (v1)                                    | Multi-country complexity, low marginal value |
+| Address visibility          | Minimal — only shipping party sees address | Privacy protection                           |
+| Address lock timing         | At ESCROWED                                | Prevents post-commitment address disputes    |
+| Auto-complete timer         | 14 days (existing)                         | Generous for carrier variance                |
+| Partial cycle failure       | Fund compensation + re-match attempt       | Best balance of fairness                     |
+| International shipping      | Explicit cost quote, not bundled           | Costs vary wildly, user must consent         |
+| Insurance                   | Mandatory > $200, optional below           | Risk-proportionate                           |
 
 ---
 
 ## 11. Implementation Phases
 
 ### Phase 1 (MVP — enables trade completion)
+
 - [ ] Add `ShippingAddress` model
 - [ ] Address CRUD API (`/api/users/[userId]/address`)
 - [ ] Lock address on ESCROWED transition
@@ -831,18 +870,21 @@ model ShippingAddress {
 - [ ] Auto-complete after 14 days
 
 ### Phase 2 (Trust & Safety)
+
 - [ ] Photo evidence chain (receipt → verification → pre-ship → delivery)
 - [ ] Dispute integration for shipping issues
 - [ ] Authenticator shipping SLA enforcement
 - [ ] Card return flow on cancellation
 
 ### Phase 3 (International Fallback)
+
 - [ ] International trade flag on match proposal
 - [ ] Postage cost quoting for international legs
 - [ ] Customs documentation helper
 - [ ] Authenticator-to-authenticator relay flow
 
 ### Phase 4 (Platform-Managed Labels)
+
 - [ ] Carrier API integration (EasyPost or Shippo)
 - [ ] Label generation for authenticator outbound
 - [ ] Webhook tracking for delivery status
@@ -852,12 +894,12 @@ model ShippingAddress {
 
 ## Appendix A: Comparison with Existing Platforms
 
-| Platform | Shipping Model | CardForum Equivalent |
-|----------|---------------|---------------------|
-| **TCGPlayer** | Seller ships to buyer directly | Direct mode |
-| **eBay** | Seller ships, buyer confirms | Direct mode with escrow |
-| **StockX** | Seller → StockX auth center → buyer | Authenticated mode |
-| **COMC** | Consignment — cards stored at facility | Authenticator as custody |
+| Platform            | Shipping Model                          | CardForum Equivalent              |
+| ------------------- | --------------------------------------- | --------------------------------- |
+| **TCGPlayer**       | Seller ships to buyer directly          | Direct mode                       |
+| **eBay**            | Seller ships, buyer confirms            | Direct mode with escrow           |
+| **StockX**          | Seller → StockX auth center → buyer     | Authenticated mode                |
+| **COMC**            | Consignment — cards stored at facility  | Authenticator as custody          |
 | **Kidney Exchange** | All surgeries local, no organ transport | Bridge model — all shipping local |
 
 CardForum's authenticated mode is closest to StockX, but with **distributed
@@ -868,13 +910,13 @@ cross-country).
 
 ## Appendix B: Carrier Reference by Region
 
-| Region | Primary Carriers | Tracked Letter | Tracked Parcel |
-|--------|-----------------|----------------|----------------|
-| JP (Japan) | Japan Post, Yamato, Sagawa | Yu-Pack Mini (~¥350) | Yu-Pack (~¥800) |
-| US (United States) | USPS, UPS, FedEx | First Class (~$4) | Priority (~$9) |
-| EU (Germany) | Deutsche Post, DPD, Hermes | Brief (~€1.60) | Paket (~€5) |
-| GB (United Kingdom) | Royal Mail, Evri, DPD | Signed For (~£2.50) | Tracked 24 (~£4) |
-| AU (Australia) | Australia Post, Sendle | Regular (~A$3) | Express (~A$10) |
+| Region              | Primary Carriers           | Tracked Letter       | Tracked Parcel   |
+| ------------------- | -------------------------- | -------------------- | ---------------- |
+| JP (Japan)          | Japan Post, Yamato, Sagawa | Yu-Pack Mini (~¥350) | Yu-Pack (~¥800)  |
+| US (United States)  | USPS, UPS, FedEx           | First Class (~$4)    | Priority (~$9)   |
+| EU (Germany)        | Deutsche Post, DPD, Hermes | Brief (~€1.60)       | Paket (~€5)      |
+| GB (United Kingdom) | Royal Mail, Evri, DPD      | Signed For (~£2.50)  | Tracked 24 (~£4) |
+| AU (Australia)      | Australia Post, Sendle     | Regular (~A$3)       | Express (~A$10)  |
 
 These rates are approximate as of 2026 for lightweight items (< 100g, fits letter).
 Authenticators in each region will have their own preferred carriers and rates.

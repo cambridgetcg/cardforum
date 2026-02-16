@@ -28,7 +28,7 @@ interface VerificationResult {
 
 function assertTransition(from: DigitisationStatus, to: DigitisationStatus) {
   const allowed = DIGITISATION_TRANSITIONS[from as keyof typeof DIGITISATION_TRANSITIONS] ?? [];
-  if (!allowed.includes(to as typeof allowed[number])) {
+  if (!allowed.includes(to as (typeof allowed)[number])) {
     throw new Error(`Invalid digitisation transition: ${from} → ${to}`);
   }
 }
@@ -126,7 +126,7 @@ export async function completeVerification(
     data: {
       status: "VERIFIED",
       verifiedCondition: result.verifiedCondition,
-      ccsResult: result.ccsResult as object ?? undefined,
+      ccsResult: (result.ccsResult as object) ?? undefined,
       verifiedAt: new Date(),
     },
   });
@@ -171,7 +171,10 @@ export async function receiveAndVerify(
   });
 
   // Complete verification (auto-mints)
-  return completeVerification(requestId, result, true) as Promise<{ request: DigitisationRequest; token: DigitalToken }>;
+  return completeVerification(requestId, result, true) as Promise<{
+    request: DigitisationRequest;
+    token: DigitalToken;
+  }>;
 }
 
 export async function mintToken(
@@ -314,13 +317,14 @@ export async function cancelDigitisation(
 
 // ─── Queries ────────────────────────────────────────────
 
-export async function getUserDigitisationRequests(
-  userId: string,
-): Promise<DigitisationRequest[]> {
+export async function getUserDigitisationRequests(userId: string): Promise<DigitisationRequest[]> {
   return db.digitisationRequest.findMany({
     where: { userId },
     orderBy: { createdAt: "desc" },
-    include: { card: true, authenticator: { select: { id: true, businessName: true, region: true } } },
+    include: {
+      card: true,
+      authenticator: { select: { id: true, businessName: true, region: true } },
+    },
   });
 }
 

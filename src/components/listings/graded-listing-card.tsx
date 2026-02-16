@@ -2,7 +2,13 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TCG_LABELS, GRADING_COMPANY_LABELS, formatPrice, type TCG, type GradingCompany } from "@/types/domain";
+import {
+  TCG_LABELS,
+  GRADING_COMPANY_LABELS,
+  formatPrice,
+  type TCG,
+  type GradingCompany,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 import { Trash2 } from "lucide-react";
 
@@ -68,9 +74,7 @@ export function GradedListingCard({
         <div className="flex flex-wrap gap-2">
           <Badge>{TCG_LABELS[card.tcg]}</Badge>
           <Badge variant="default">{gradeDisplay}</Badge>
-          {certNumber && (
-            <Badge variant="default">Cert #{certNumber}</Badge>
-          )}
+          {certNumber && <Badge variant="default">Cert #{certNumber}</Badge>}
           <Badge variant="default">
             {type === "have" ? "Ask" : "Bid"}: {formatPrice(price)}
           </Badge>

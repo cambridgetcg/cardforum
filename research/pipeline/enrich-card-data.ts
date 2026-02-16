@@ -131,10 +131,7 @@ function parseCostAndPower(html: string): { cost?: number; power?: number } {
 /**
  * Fetch and enrich a single card from its Cardmarket page.
  */
-async function enrichCard(
-  client: BrightDataClient,
-  card: CardmarketCard,
-): Promise<EnrichedCard> {
+async function enrichCard(client: BrightDataClient, card: CardmarketCard): Promise<EnrichedCard> {
   const enriched: EnrichedCard = { ...card };
 
   try {
@@ -158,7 +155,9 @@ async function enrichCard(
     if (costPower.cost !== undefined) enriched.cost = costPower.cost;
     if (costPower.power !== undefined) enriched.power = costPower.power;
   } catch (err) {
-    console.warn(`    Error enriching ${card.cardId}: ${err instanceof Error ? err.message : String(err)}`);
+    console.warn(
+      `    Error enriching ${card.cardId}: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 
   return enriched;
@@ -205,7 +204,9 @@ async function enrichSet(
       const elapsed = (Date.now() - startTime) / 1000;
       const rate = (i + 1) / elapsed;
       const remaining = (scrapeData.cards.length - i - 1) / rate;
-      console.log(`  ${i + 1}/${scrapeData.cards.length} (${rate.toFixed(1)} cards/sec, ~${remaining.toFixed(0)}s remaining)`);
+      console.log(
+        `  ${i + 1}/${scrapeData.cards.length} (${rate.toFixed(1)} cards/sec, ~${remaining.toFixed(0)}s remaining)`,
+      );
     }
 
     // Delay between requests
@@ -237,8 +238,15 @@ async function main() {
   }
 
   // Find scraped files to enrich
-  const files = fs.readdirSync(DATA_DIR)
-    .filter((f) => f.startsWith("cardmarket-") && f.endsWith(".json") && !f.includes("summary") && !f.includes("enriched"))
+  const files = fs
+    .readdirSync(DATA_DIR)
+    .filter(
+      (f) =>
+        f.startsWith("cardmarket-") &&
+        f.endsWith(".json") &&
+        !f.includes("summary") &&
+        !f.includes("enriched"),
+    )
     .map((f) => {
       const match = f.match(/^cardmarket-(.+)\.json$/);
       return match ? { code: match[1].toUpperCase(), filePath: path.join(DATA_DIR, f) } : null;
@@ -247,7 +255,9 @@ async function main() {
 
   if (setFilter) {
     files.length = 0;
-    const match = fs.readdirSync(DATA_DIR).find((f) => f === `cardmarket-${setFilter.toLowerCase()}.json`);
+    const match = fs
+      .readdirSync(DATA_DIR)
+      .find((f) => f === `cardmarket-${setFilter.toLowerCase()}.json`);
     if (match) {
       files.push({ code: setFilter, filePath: path.join(DATA_DIR, match) });
     }
@@ -255,7 +265,7 @@ async function main() {
 
   if (files.length === 0) {
     console.error("No scraped JSON files found. Run scraper first:");
-    console.error("  npx tsx research/pipeline/scrape-all-sets.ts --set OP01");
+    console.error("  npx tsx research/pipeline/scrape-all-products.ts --product-type booster");
     process.exit(1);
   }
 
@@ -285,7 +295,9 @@ async function main() {
     // Save stats
     console.log(`\nStats for ${file.code}:`);
     console.log(`  Total cards: ${stats.totalCards}`);
-    console.log(`  Enriched: ${stats.enrichedCards} (${((stats.enrichedCards / stats.totalCards) * 100).toFixed(1)}%)`);
+    console.log(
+      `  Enriched: ${stats.enrichedCards} (${((stats.enrichedCards / stats.totalCards) * 100).toFixed(1)}%)`,
+    );
     console.log(`  Missing rarity: ${stats.missingRarity}`);
     console.log(`  Missing effect: ${stats.missingEffect}`);
     console.log(`  Avg time per card: ${stats.averageEnrichmentTime.toFixed(0)}ms`);

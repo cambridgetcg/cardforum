@@ -2,10 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { db } from "@/lib/db";
 import { deposit, freezeWallet } from "@/server/services/wallet.service";
-import {
-  markOnboardingComplete,
-  markOnboardingRevoked,
-} from "@/server/services/connect.service";
+import { markOnboardingComplete, markOnboardingRevoked } from "@/server/services/connect.service";
 import {
   handleTransferPaid,
   handleTransferFailed,
@@ -223,9 +220,10 @@ export async function POST(req: NextRequest) {
         const chargeId = typeof dispute.charge === "string" ? dispute.charge : dispute.charge?.id;
 
         // Find the user who made this payment via the payment intent
-        const piId = typeof dispute.payment_intent === "string"
-          ? dispute.payment_intent
-          : dispute.payment_intent?.id;
+        const piId =
+          typeof dispute.payment_intent === "string"
+            ? dispute.payment_intent
+            : dispute.payment_intent?.id;
 
         if (piId) {
           const walletTx = await db.walletTransaction.findUnique({
@@ -255,9 +253,10 @@ export async function POST(req: NextRequest) {
 
       case "charge.dispute.closed": {
         const dispute = event.data.object as Stripe.Dispute;
-        const piId = typeof dispute.payment_intent === "string"
-          ? dispute.payment_intent
-          : dispute.payment_intent?.id;
+        const piId =
+          typeof dispute.payment_intent === "string"
+            ? dispute.payment_intent
+            : dispute.payment_intent?.id;
 
         if (piId) {
           const walletTx = await db.walletTransaction.findUnique({
@@ -367,8 +366,9 @@ export async function POST(req: NextRequest) {
             select: { id: true },
           });
           if (user) {
-            const reason = (payout as unknown as { failure_message?: string }).failure_message
-              ?? "Bank rejected the payout";
+            const reason =
+              (payout as unknown as { failure_message?: string }).failure_message ??
+              "Bank rejected the payout";
             await db.notification.create({
               data: {
                 userId: user.id,
@@ -390,10 +390,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (err) {
     console.error(`Webhook handler failed for ${eventType}:`, err);
-    return NextResponse.json(
-      { error: "Webhook handler failed" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Webhook handler failed" }, { status: 500 });
   }
 
   return NextResponse.json({ received: true });

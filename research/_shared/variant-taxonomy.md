@@ -6,24 +6,25 @@ Normalize variant/treatment names across all four TCGs into a unified taxonomy. 
 
 ## Universal Treatment Categories
 
-| Category | Description | Pokemon | Yu-Gi-Oh | One Piece | MTG |
-|----------|-------------|---------|----------|-----------|-----|
-| `regular` | Standard printing | Regular | Common | C/UC/R | Regular |
-| `holofoil` | Holographic foil | Holo Rare | Super Rare | - | Foil |
-| `reverse_holo` | Reverse holographic | Reverse Holo | - | - | - |
-| `full_art` | Full illustration | Full Art | Ultra Rare (some) | - | Full Art |
-| `alt_art` | Alternative artwork | Alt Art / Illustration Rare | Alternate Art | Alt Art / Manga Art | Borderless Art |
-| `secret_rare` | Beyond-set-count rarity | Secret Rare | Secret Rare | SEC | Extended Art |
-| `ultra_rare` | Premium tier | Ultra Rare (Pokemon ex, V, VMAX) | Ultra Rare | - | Mythic Rare |
-| `textured` | Textured surface | Textured Holo | Ultimate Rare | - | Textured Foil |
-| `gold` | Gold/premium treatment | Gold / Hyper Rare | Ghost Rare / Gold | - | Gilded Foil |
-| `serialized` | Numbered copy | - | Quarter Century SR | - | Serialized |
-| `promo` | Promotional card | Promo | Promo | Promo | Promo |
-| `special` | Game-specific special | Radiant, Shiny | Starlight Rare | SP / Treasure Rare | Showcase |
+| Category       | Description             | Pokemon                          | Yu-Gi-Oh           | One Piece           | MTG            |
+| -------------- | ----------------------- | -------------------------------- | ------------------ | ------------------- | -------------- |
+| `regular`      | Standard printing       | Regular                          | Common             | C/UC/R              | Regular        |
+| `holofoil`     | Holographic foil        | Holo Rare                        | Super Rare         | -                   | Foil           |
+| `reverse_holo` | Reverse holographic     | Reverse Holo                     | -                  | -                   | -              |
+| `full_art`     | Full illustration       | Full Art                         | Ultra Rare (some)  | -                   | Full Art       |
+| `alt_art`      | Alternative artwork     | Alt Art / Illustration Rare      | Alternate Art      | Alt Art / Manga Art | Borderless Art |
+| `secret_rare`  | Beyond-set-count rarity | Secret Rare                      | Secret Rare        | SEC                 | Extended Art   |
+| `ultra_rare`   | Premium tier            | Ultra Rare (Pokemon ex, V, VMAX) | Ultra Rare         | -                   | Mythic Rare    |
+| `textured`     | Textured surface        | Textured Holo                    | Ultimate Rare      | -                   | Textured Foil  |
+| `gold`         | Gold/premium treatment  | Gold / Hyper Rare                | Ghost Rare / Gold  | -                   | Gilded Foil    |
+| `serialized`   | Numbered copy           | -                                | Quarter Century SR | -                   | Serialized     |
+| `promo`        | Promotional card        | Promo                            | Promo              | Promo               | Promo          |
+| `special`      | Game-specific special   | Radiant, Shiny                   | Starlight Rare     | SP / Treasure Rare  | Showcase       |
 
 ## Per-TCG Rarity → Treatment Mapping
 
 ### Pokemon TCG Rarities
+
 ```
 Common                  → regular
 Uncommon                → regular
@@ -41,6 +42,7 @@ Promo                   → promo
 ```
 
 ### Yu-Gi-Oh Rarities
+
 ```
 Common                   → regular
 Rare                     → regular
@@ -59,6 +61,7 @@ Short Print              → regular (scarce)
 ```
 
 ### One Piece TCG Rarities
+
 ```
 Common (C)               → regular
 Uncommon (UC)            → regular
@@ -74,6 +77,7 @@ Promo (P)               → promo
 ```
 
 ### MTG Treatments (Note: MTG separates rarity from treatment)
+
 ```
 Regular (non-foil)       → regular
 Foil                     → holofoil
@@ -106,13 +110,13 @@ Promo and special are orthogonal — their value depends on specifics.
 
 All TCGs use the same condition scale for physical cards:
 
-| Code | Name | Description |
-|------|------|-------------|
-| `NM` | Near Mint | No visible wear |
-| `LP` | Lightly Played | Minor edge wear, light scratches |
-| `MP` | Moderately Played | Noticeable wear, creases visible |
-| `HP` | Heavily Played | Significant wear, bending |
-| `DMG` | Damaged | Major damage, missing pieces |
+| Code  | Name              | Description                      |
+| ----- | ----------------- | -------------------------------- |
+| `NM`  | Near Mint         | No visible wear                  |
+| `LP`  | Lightly Played    | Minor edge wear, light scratches |
+| `MP`  | Moderately Played | Noticeable wear, creases visible |
+| `HP`  | Heavily Played    | Significant wear, bending        |
+| `DMG` | Damaged           | Major damage, missing pieces     |
 
 ## Open Questions
 

@@ -51,12 +51,17 @@ export class PrismaUserRepository implements IUserRepository {
     await db.user.update({ where: { id }, data: { stripeCustomerId: customerId } });
   }
 
-  async updateConnectAccount(id: string, data: { accountId?: string | null; onboardingComplete?: boolean }): Promise<void> {
+  async updateConnectAccount(
+    id: string,
+    data: { accountId?: string | null; onboardingComplete?: boolean },
+  ): Promise<void> {
     await db.user.update({
       where: { id },
       data: {
         ...(data.accountId !== undefined ? { stripeConnectAccountId: data.accountId } : {}),
-        ...(data.onboardingComplete !== undefined ? { connectOnboardingComplete: data.onboardingComplete } : {}),
+        ...(data.onboardingComplete !== undefined
+          ? { connectOnboardingComplete: data.onboardingComplete }
+          : {}),
       },
     });
   }
@@ -91,13 +96,17 @@ export class PrismaListingRepository implements IListingRepository {
     return listings as unknown as WantListingRecord[];
   }
 
-  async createHaveListing(data: Omit<HaveListingRecord, "id" | "createdAt" | "isActive">): Promise<HaveListingRecord> {
+  async createHaveListing(
+    data: Omit<HaveListingRecord, "id" | "createdAt" | "isActive">,
+  ): Promise<HaveListingRecord> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const listing = await db.haveListing.create({ data: data as any });
     return listing as unknown as HaveListingRecord;
   }
 
-  async createWantListing(data: Omit<WantListingRecord, "id" | "createdAt" | "isActive">): Promise<WantListingRecord> {
+  async createWantListing(
+    data: Omit<WantListingRecord, "id" | "createdAt" | "isActive">,
+  ): Promise<WantListingRecord> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const listing = await db.wantListing.create({ data: data as any });
     return listing as unknown as WantListingRecord;
@@ -105,8 +114,12 @@ export class PrismaListingRepository implements IListingRepository {
 
   async deactivateListings(haveIds: string[], wantIds: string[]): Promise<void> {
     await Promise.all([
-      haveIds.length > 0 ? db.haveListing.updateMany({ where: { id: { in: haveIds } }, data: { isActive: false } }) : Promise.resolve(),
-      wantIds.length > 0 ? db.wantListing.updateMany({ where: { id: { in: wantIds } }, data: { isActive: false } }) : Promise.resolve(),
+      haveIds.length > 0
+        ? db.haveListing.updateMany({ where: { id: { in: haveIds } }, data: { isActive: false } })
+        : Promise.resolve(),
+      wantIds.length > 0
+        ? db.wantListing.updateMany({ where: { id: { in: wantIds } }, data: { isActive: false } })
+        : Promise.resolve(),
     ]);
   }
 }
@@ -131,8 +144,8 @@ export class PrismaTradeRepository implements ITradeRepository {
   }
 
   async findByStatus(status: string): Promise<TradeRecord[]> {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const trades = await db.trade.findMany({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       where: { status: status as any },
       orderBy: { createdAt: "desc" },
     });
@@ -143,11 +156,12 @@ export class PrismaTradeRepository implements ITradeRepository {
     const trade = await db.trade.findUniqueOrThrow({ where: { id } });
     const history = (trade.statusHistory as unknown[]) ?? [];
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const updated = await db.trade.update({
       where: { id },
       data: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         status: status as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         statusHistory: [...history, historyEntry] as any,
       },
     });
@@ -158,10 +172,11 @@ export class PrismaTradeRepository implements ITradeRepository {
     data: Omit<TradeRecord, "id" | "createdAt" | "updatedAt">,
     legs: Omit<TradeLegRecord, "id" | "tradeId">[],
   ): Promise<TradeRecord> {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const trade = await db.trade.create({
       data: {
-        ...data as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ...(data as any),
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         legs: { create: legs as any },
       },
     });
@@ -172,7 +187,10 @@ export class PrismaTradeRepository implements ITradeRepository {
 // ─── Wallet Transaction ──────────────────────────────
 
 export class PrismaWalletTransactionRepository implements IWalletTransactionRepository {
-  async findByUser(userId: string, pagination?: PaginationParams): Promise<WalletTransactionRecord[]> {
+  async findByUser(
+    userId: string,
+    pagination?: PaginationParams,
+  ): Promise<WalletTransactionRecord[]> {
     const limit = pagination?.limit ?? 50;
     const page = pagination?.page ?? 1;
     const txs = await db.walletTransaction.findMany({
@@ -192,7 +210,9 @@ export class PrismaWalletTransactionRepository implements IWalletTransactionRepo
     return tx as unknown as WalletTransactionRecord | null;
   }
 
-  async create(data: Omit<WalletTransactionRecord, "id" | "createdAt">): Promise<WalletTransactionRecord> {
+  async create(
+    data: Omit<WalletTransactionRecord, "id" | "createdAt">,
+  ): Promise<WalletTransactionRecord> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = await db.walletTransaction.create({ data: data as any });
     return tx as unknown as WalletTransactionRecord;
@@ -203,10 +223,10 @@ export class PrismaWalletTransactionRepository implements IWalletTransactionRepo
 
 export class PrismaCardRepository implements ICardRepository {
   async search(query: string, tcg?: string, limit = 20): Promise<CardRecord[]> {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const cards = await db.card.findMany({
       where: {
         name: { contains: query, mode: "insensitive" },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ...(tcg ? { tcg: tcg as any } : {}),
       },
       take: limit,

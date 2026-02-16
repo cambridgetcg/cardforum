@@ -1,9 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
-import {
-  getDigitiserStats,
-  getDigitisedTokens,
-} from "@/server/services/digital-token.service";
+import { getDigitiserStats, getDigitisedTokens } from "@/server/services/digital-token.service";
 
 // GET /api/digitiser — Digitiser dashboard stats or token list
 export async function GET(req: NextRequest) {

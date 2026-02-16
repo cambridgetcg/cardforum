@@ -25,10 +25,7 @@ export class ApiError extends Error {
 
 // ─── Base Fetch ──────────────────────────────────────
 
-async function fetchApi<T>(
-  url: string,
-  options?: RequestInit,
-): Promise<T> {
+async function fetchApi<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(url, {
     headers: { "Content-Type": "application/json", ...options?.headers },
     ...options,
@@ -36,7 +33,11 @@ async function fetchApi<T>(
 
   if (!res.ok) {
     let body: unknown;
-    try { body = await res.json(); } catch { /* empty */ }
+    try {
+      body = await res.json();
+    } catch {
+      /* empty */
+    }
     throw new ApiError(res.status, res.statusText, body);
   }
 
@@ -85,7 +86,8 @@ const wallet = {
   getBalance: () => get<WalletBalance>("/api/wallet/balance"),
   getHistory: () => get<WalletTransaction[]>("/api/wallet/history"),
   deposit: (amountCents: number) => post<{ url: string }>("/api/wallet/deposit", { amountCents }),
-  withdraw: (amountCents: number) => post<{ transaction: unknown; payout: unknown }>("/api/wallet/withdraw", { amountCents }),
+  withdraw: (amountCents: number) =>
+    post<{ transaction: unknown; payout: unknown }>("/api/wallet/withdraw", { amountCents }),
 };
 
 // ─── Cards ───────────────────────────────────────────
@@ -168,7 +170,8 @@ const dashboard = {
 
 const connect = {
   onboard: () => post<{ url: string }>("/api/connect/onboard"),
-  status: () => get<{ hasConnectAccount: boolean; onboardingComplete: boolean }>("/api/connect/status"),
+  status: () =>
+    get<{ hasConnectAccount: boolean; onboardingComplete: boolean }>("/api/connect/status"),
   dashboard: () => get<{ url: string }>("/api/connect/dashboard"),
 };
 
@@ -219,7 +222,13 @@ export interface ExpertPostDetail extends ExpertPostSummary {
   tags: string[];
   status: string;
   createdAt: string;
-  card: { id: string; name: string; number: string | null; imageUrl: string | null; tcg: string } | null;
+  card: {
+    id: string;
+    name: string;
+    number: string | null;
+    imageUrl: string | null;
+    tcg: string;
+  } | null;
   set: { id: string; name: string; code: string; tcg: string } | null;
   endorsements: { id: string; endorserType: string; endorserId: string; note: string | null }[];
 }
@@ -260,7 +269,8 @@ const expert = {
   },
   get: (postId: string) => get<{ post: ExpertPostDetail }>(`/api/expert/posts/${postId}`),
   create: (data: unknown) => post<{ post: ExpertPostDetail }>("/api/expert/posts", data),
-  update: (postId: string, data: unknown) => patch<{ post: ExpertPostDetail }>(`/api/expert/posts/${postId}`, data),
+  update: (postId: string, data: unknown) =>
+    patch<{ post: ExpertPostDetail }>(`/api/expert/posts/${postId}`, data),
   delete: (postId: string) => del<{ success: boolean }>(`/api/expert/posts/${postId}`),
   vote: (postId: string, value: 1 | -1, helpful: boolean) =>
     post<unknown>(`/api/expert/posts/${postId}/vote`, { value, helpful }),
@@ -330,10 +340,17 @@ const collection = {
     const qs = sp.toString();
     return get<{ entries: CollectionEntry[] }>(`/api/collection${qs ? `?${qs}` : ""}`);
   },
-  add: (data: { cardId: string; quantity?: number; condition?: string; pricePaid?: number; notes?: string }) =>
-    post<{ entry: unknown }>("/api/collection", data),
-  update: (entryId: string, data: { quantity?: number; notes?: string; pricePaid?: number | null }) =>
-    patch<{ success: boolean }>(`/api/collection/${entryId}`, data),
+  add: (data: {
+    cardId: string;
+    quantity?: number;
+    condition?: string;
+    pricePaid?: number;
+    notes?: string;
+  }) => post<{ entry: unknown }>("/api/collection", data),
+  update: (
+    entryId: string,
+    data: { quantity?: number; notes?: string; pricePaid?: number | null },
+  ) => patch<{ success: boolean }>(`/api/collection/${entryId}`, data),
   remove: (entryId: string) => del<{ success: boolean }>(`/api/collection/${entryId}`),
   stats: () => get<CollectionStats>("/api/collection/stats"),
   check: (cardIds: string[]) =>

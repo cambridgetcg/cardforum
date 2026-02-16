@@ -13,17 +13,17 @@ Settlement is the ACK layer. Two parallel protocols exist: DIRECT (Stripe Paymen
 
 ## Module Inventory
 
-| Module | File | Lines | Status | Callers |
-|--------|------|-------|--------|---------|
-| Wallet service | `src/server/services/wallet.service.ts` | 209 | ACTIVE | 5 files |
-| Escrow service | `src/server/services/escrow.service.ts` | 65 | ACTIVE | 2 files |
-| Marketplace escrow | `src/server/services/marketplace-escrow.service.ts` | 361 | ACTIVE | 2 files |
-| Trade service | `src/server/services/trade.service.ts` | 437 | ACTIVE | 7 files |
-| Connect service | `src/server/services/connect.service.ts` | 119 | ACTIVE | 2 files |
-| Payout service | `src/server/services/payout.service.ts` | 222 | ACTIVE | 2 files |
-| Stripe webhooks | `src/app/api/stripe/webhooks/route.ts` | 400 | ACTIVE | Stripe |
-| Deposit button | `src/components/wallet/deposit-button.tsx` | ~200 | ACTIVE | Wallet page |
-| Withdraw form | `src/components/wallet/withdraw-form.tsx` | ~200 | ACTIVE | Wallet page |
+| Module             | File                                                | Lines | Status | Callers     |
+| ------------------ | --------------------------------------------------- | ----- | ------ | ----------- |
+| Wallet service     | `src/server/services/wallet.service.ts`             | 209   | ACTIVE | 5 files     |
+| Escrow service     | `src/server/services/escrow.service.ts`             | 65    | ACTIVE | 2 files     |
+| Marketplace escrow | `src/server/services/marketplace-escrow.service.ts` | 361   | ACTIVE | 2 files     |
+| Trade service      | `src/server/services/trade.service.ts`              | 437   | ACTIVE | 7 files     |
+| Connect service    | `src/server/services/connect.service.ts`            | 119   | ACTIVE | 2 files     |
+| Payout service     | `src/server/services/payout.service.ts`             | 222   | ACTIVE | 2 files     |
+| Stripe webhooks    | `src/app/api/stripe/webhooks/route.ts`              | 400   | ACTIVE | Stripe      |
+| Deposit button     | `src/components/wallet/deposit-button.tsx`          | ~200  | ACTIVE | Wallet page |
+| Withdraw form      | `src/components/wallet/withdraw-form.tsx`           | ~200  | ACTIVE | Wallet page |
 
 **Layer 5 maturity: PRODUCTION.** All modules active, zero dormancy.
 
@@ -143,21 +143,21 @@ createEntry(userId, type, amount):
 
 `POST /api/stripe/webhooks/route.ts` handles 20+ event types:
 
-| Event | Handler | Purpose |
-|-------|---------|---------|
-| `checkout.session.completed` | deposit (card) or PendingDeposit (ACH) | Wallet credit |
-| `checkout.session.async_payment_succeeded` | deposit + PendingDeposit SUCCEEDED | ACH settled |
-| `checkout.session.async_payment_failed` | PendingDeposit FAILED + notification | ACH rejected |
-| `payment_intent.succeeded` | deposit or handlePaymentAuthorized | Deposit or escrow auth |
-| `payment_intent.amount_capturable_updated` | handlePaymentAuthorized | Escrow hold confirmed |
-| `payment_intent.payment_failed` | handlePaymentFailed + notification | Escrow or deposit failed |
-| `payment_intent.canceled` | TradePayment CANCELLED | Escrow voided |
-| `charge.dispute.created` | freezeWallet + notification | Chargeback protection |
-| `charge.dispute.closed` | unfreezeWallet (if won) | Chargeback resolved |
-| `account.updated` | markOnboardingComplete | Connect account ready |
-| `account.application.deauthorized` | markOnboardingRevoked | Connect account revoked |
-| `transfer.paid/failed/reversed` | handleTransferPaid/Failed/Reversed | Payout status |
-| `payout.paid/failed` | notification | Express payout status |
+| Event                                      | Handler                                | Purpose                  |
+| ------------------------------------------ | -------------------------------------- | ------------------------ |
+| `checkout.session.completed`               | deposit (card) or PendingDeposit (ACH) | Wallet credit            |
+| `checkout.session.async_payment_succeeded` | deposit + PendingDeposit SUCCEEDED     | ACH settled              |
+| `checkout.session.async_payment_failed`    | PendingDeposit FAILED + notification   | ACH rejected             |
+| `payment_intent.succeeded`                 | deposit or handlePaymentAuthorized     | Deposit or escrow auth   |
+| `payment_intent.amount_capturable_updated` | handlePaymentAuthorized                | Escrow hold confirmed    |
+| `payment_intent.payment_failed`            | handlePaymentFailed + notification     | Escrow or deposit failed |
+| `payment_intent.canceled`                  | TradePayment CANCELLED                 | Escrow voided            |
+| `charge.dispute.created`                   | freezeWallet + notification            | Chargeback protection    |
+| `charge.dispute.closed`                    | unfreezeWallet (if won)                | Chargeback resolved      |
+| `account.updated`                          | markOnboardingComplete                 | Connect account ready    |
+| `account.application.deauthorized`         | markOnboardingRevoked                  | Connect account revoked  |
+| `transfer.paid/failed/reversed`            | handleTransferPaid/Failed/Reversed     | Payout status            |
+| `payout.paid/failed`                       | notification                           | Express payout status    |
 
 **Idempotency**: Event-level dedup via `ProcessedStripeEvent` table (checks event.id before processing). Deposit-level dedup via `stripePaymentIntentId` unique constraint on WalletTransaction.
 
@@ -166,6 +166,7 @@ createEntry(userId, type, amount):
 ## Progress
 
 ### Wallet
+
 - [x] Double-entry ledger (createEntry with $transaction)
 - [x] Deposit (card + ACH)
 - [x] Withdrawal via Stripe Connect
@@ -182,6 +183,7 @@ createEntry(userId, type, amount):
 - [ ] Revenue reporting (aggregate platform fees)
 
 ### Escrow
+
 - [x] Escrow model (HELD → RELEASED / REFUNDED)
 - [x] createEscrow on ESCROWED
 - [x] releaseEscrow on COMPLETED
@@ -190,6 +192,7 @@ createEntry(userId, type, amount):
 - [ ] DISPUTED escrow status (explicit freeze)
 
 ### Marketplace Escrow (DIRECT mode)
+
 - [x] Stripe PaymentIntent creation (manual capture)
 - [x] TradePayment model (per-user PI tracking)
 - [x] captureAndSettle (capture + transfer)
@@ -200,6 +203,7 @@ createEntry(userId, type, amount):
 - [ ] PI retry on transient failure
 
 ### Stripe Connect
+
 - [x] Express account creation
 - [x] Onboarding link generation
 - [x] Dashboard link
@@ -209,6 +213,7 @@ createEntry(userId, type, amount):
 - [ ] Payout scheduling (batch payouts)
 
 ### Webhooks
+
 - [x] Event-level idempotency (ProcessedStripeEvent table)
 - [x] Deposit idempotency (stripePaymentIntentId unique)
 - [x] 20+ event types handled
@@ -221,13 +226,13 @@ createEntry(userId, type, amount):
 
 ## Gaps
 
-| Gap | Impact | Effort | Blocked By |
-|-----|--------|--------|------------|
-| 7-day auth hold limit | DIRECT trades > 7 days lose PI hold | Architecture | BaaS partner for true escrow |
-| No revenue reporting | Can't track platform earnings | 1 day | Nothing |
-| No partial refund | All-or-nothing on cancellation | 1 day | Dispute resolution design |
-| Trade service is god-object | Settlement logic mixed with orchestration | Refactor | Architecture decision |
-| DIRECT Stripe calls after commit | DB committed but Stripe may fail → inconsistent | 2 days | Saga pattern or outbox |
+| Gap                              | Impact                                          | Effort       | Blocked By                   |
+| -------------------------------- | ----------------------------------------------- | ------------ | ---------------------------- |
+| 7-day auth hold limit            | DIRECT trades > 7 days lose PI hold             | Architecture | BaaS partner for true escrow |
+| No revenue reporting             | Can't track platform earnings                   | 1 day        | Nothing                      |
+| No partial refund                | All-or-nothing on cancellation                  | 1 day        | Dispute resolution design    |
+| Trade service is god-object      | Settlement logic mixed with orchestration       | Refactor     | Architecture decision        |
+| DIRECT Stripe calls after commit | DB committed but Stripe may fail → inconsistent | 2 days       | Saga pattern or outbox       |
 
 ---
 

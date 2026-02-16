@@ -96,9 +96,7 @@ export default function SettingsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Manage your account and preferences
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Manage your account and preferences</p>
 
       <div className="mt-8 space-y-6">
         {/* Account Info (read-only) */}
@@ -128,7 +126,9 @@ export default function SettingsPage() {
                           try {
                             await fetch("/api/auth/resend-verification", { method: "POST" });
                             setVerificationSent(true);
-                          } catch { /* ignore */ }
+                          } catch {
+                            /* ignore */
+                          }
                           setSendingVerification(false);
                         }}
                       >
@@ -141,9 +141,7 @@ export default function SettingsPage() {
               <div className="flex items-center justify-between">
                 <span className="text-gray-500">Member Since</span>
                 <span className="text-gray-900">
-                  {profile?.createdAt
-                    ? new Date(profile.createdAt).toLocaleDateString()
-                    : "—"}
+                  {profile?.createdAt ? new Date(profile.createdAt).toLocaleDateString() : "—"}
                 </span>
               </div>
             </div>
@@ -157,18 +155,14 @@ export default function SettingsPage() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {error && (
-                <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-              )}
+              {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
               {success && (
                 <p className="rounded-lg bg-green-50 p-3 text-sm text-green-600">
                   Profile saved successfully
                 </p>
               )}
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Display Name
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Display Name</label>
                 <Input
                   className="mt-1"
                   placeholder="Your name"
@@ -178,9 +172,7 @@ export default function SettingsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Region
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Region</label>
                 <div className="mt-1">
                   <RegionSelect
                     value={regionId}
@@ -193,9 +185,7 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Bio
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Bio</label>
                 <Input
                   className="mt-1"
                   placeholder="Tell other traders about yourself"

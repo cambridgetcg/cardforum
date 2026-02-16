@@ -46,6 +46,45 @@ test.describe("OP01 Card Images", () => {
     expect(naturalWidth).toBeGreaterThan(0);
   });
 
+  test("card detail page shows variant buttons and no broken images", async ({ authedPage }) => {
+    // Get a card with multiple variants (3+)
+    const res = await authedPage.request.get("/api/cards?set=OP01&limit=40");
+    const data = await res.json();
+    const multiVariant = data.cards?.find(
+      (c: { _count: { variants: number } }) => c._count.variants >= 3,
+    );
+    expect(multiVariant).toBeTruthy();
+
+    await authedPage.goto(`/browse/cards/${multiVariant.id}`);
+    await authedPage.waitForLoadState("networkidle");
+
+    // Main card image should be visible
+    const mainImg = authedPage.locator("img[src*='tcgplayer-cdn']").first();
+    await expect(mainImg).toBeVisible({ timeout: 10_000 });
+    const mainWidth = await mainImg.evaluate((el: HTMLImageElement) => el.naturalWidth);
+    expect(mainWidth).toBeGreaterThan(0);
+
+    // Variant buttons should exist (treatment labels like "parallel", "regular")
+    const variantButtons = authedPage.locator("button", { hasText: /regular|parallel/ });
+    const buttonCount = await variantButtons.count();
+    console.log(`Card ${multiVariant.number}: ${buttonCount} variant buttons found`);
+    expect(buttonCount).toBeGreaterThanOrEqual(2);
+
+    // Check ALL images on the detail page are loaded (no broken)
+    const allImages = authedPage.locator("img");
+    const totalCount = await allImages.count();
+    let broken = 0;
+    for (let i = 0; i < totalCount; i++) {
+      const img = allImages.nth(i);
+      const src = await img.getAttribute("src");
+      if (!src) continue;
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      if (naturalWidth === 0) broken++;
+    }
+    console.log(`Card detail: ${totalCount} images, ${broken} broken`);
+    expect(broken, `${broken} images broken on card detail page`).toBe(0);
+  });
+
   test("no broken images on OP01 set page", async ({ authedPage }) => {
     await authedPage.goto("/browse/sets/OP01");
     await authedPage.waitForLoadState("networkidle");

@@ -225,9 +225,17 @@ export async function runMatching(): Promise<BridgeProposal[]> {
   const dmmHaveIds = new Set(haveListings.filter((h) => h.isDMM).map((h) => h.id));
   const dmmWantIds = new Set(wantListings.filter((w) => w.isDMM).map((w) => w.id));
 
+  // 4.2. Build swap preference lookup for raw listings
+  const swapPrefHave = new Set(haveListings.filter((h) => h.preferBalancedSwap).map((h) => h.id));
+  const swapPrefWant = new Set(wantListings.filter((w) => w.preferBalancedSwap).map((w) => w.id));
+
   for (const p of [...cycleProposals, ...chainProposals]) {
     p.hasDMM = p.legs.some(
       (l) => dmmHaveIds.has(l.haveListingId) || dmmWantIds.has(l.wantListingId),
+    );
+    // All listings must have preferBalancedSwap for the bonus
+    p.allPreferBalancedSwap = p.legs.every(
+      (l) => swapPrefHave.has(l.haveListingId) && swapPrefWant.has(l.wantListingId),
     );
   }
 

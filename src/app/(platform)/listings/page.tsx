@@ -150,7 +150,8 @@ export default function ListingsPage() {
 
   const rawCount = haveListings.length + wantListings.length;
   const gradedCount = gradedHaveListings.length + gradedWantListings.length;
-  const pausedCount = haveListings.filter((l) => !l.isActive).length + wantListings.filter((l) => !l.isActive).length;
+  const pausedCount =
+    haveListings.filter((l) => !l.isActive).length + wantListings.filter((l) => !l.isActive).length;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -159,9 +160,7 @@ export default function ListingsPage() {
           <h1 className="text-2xl font-bold text-gray-900">My Listings</h1>
           <p className="mt-1 text-sm text-gray-600">
             Manage your have and want listings
-            {pausedCount > 0 && (
-              <span className="ml-2 text-amber-600">({pausedCount} paused)</span>
-            )}
+            {pausedCount > 0 && <span className="ml-2 text-amber-600">({pausedCount} paused)</span>}
           </p>
         </div>
         <div className="flex gap-2">
@@ -170,18 +169,14 @@ export default function ListingsPage() {
               <Button variant="outline" onClick={() => setShowForm("want")}>
                 + Want
               </Button>
-              <Button onClick={() => setShowForm("have")}>
-                + Have
-              </Button>
+              <Button onClick={() => setShowForm("have")}>+ Have</Button>
             </>
           ) : (
             <>
               <Button variant="outline" onClick={() => setShowForm("graded-want")}>
                 + Want (Graded)
               </Button>
-              <Button onClick={() => setShowForm("graded-have")}>
-                + Have (Graded)
-              </Button>
+              <Button onClick={() => setShowForm("graded-have")}>+ Have (Graded)</Button>
             </>
           )}
         </div>
@@ -236,12 +231,14 @@ export default function ListingsPage() {
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Cards I Have ({filteredHave.length})
+              Selling ({filteredHave.length})
             </h2>
             {filteredHave.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">
                 <p className="text-gray-500">
-                  {viewFilter !== "all" ? `No ${viewFilter} have listings.` : "No have listings yet."}
+                  {viewFilter !== "all"
+                    ? `No ${viewFilter} have listings.`
+                    : "No have listings yet."}
                 </p>
                 {viewFilter === "all" && (
                   <button
@@ -279,12 +276,14 @@ export default function ListingsPage() {
 
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Cards I Want ({filteredWant.length})
+              Buying ({filteredWant.length})
             </h2>
             {filteredWant.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">
                 <p className="text-gray-500">
-                  {viewFilter !== "all" ? `No ${viewFilter} want listings.` : "No want listings yet."}
+                  {viewFilter !== "all"
+                    ? `No ${viewFilter} want listings.`
+                    : "No want listings yet."}
                 </p>
                 {viewFilter === "all" && (
                   <button
@@ -325,7 +324,7 @@ export default function ListingsPage() {
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Graded Cards I Have ({gradedHaveListings.length})
+              Graded Selling ({gradedHaveListings.length})
             </h2>
             {gradedHaveListings.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">
@@ -360,7 +359,7 @@ export default function ListingsPage() {
 
           <div>
             <h2 className="mb-4 text-lg font-semibold text-gray-900">
-              Graded Cards I Want ({gradedWantListings.length})
+              Graded Buying ({gradedWantListings.length})
             </h2>
             {gradedWantListings.length === 0 ? (
               <div className="rounded-xl border border-gray-200 bg-white py-12 text-center">

@@ -17,7 +17,7 @@ export function Badge({ className, variant = "default", ...props }: BadgeProps) 
           "bg-badge-error-bg text-badge-error-fg": variant === "error",
           "bg-badge-info-bg text-badge-info-fg": variant === "info",
         },
-        className
+        className,
       )}
       {...props}
     />

@@ -24,10 +24,7 @@ export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Rate-limit credentials sign-in (POST to NextAuth callback)
-  if (
-    req.method === "POST" &&
-    pathname.startsWith("/api/auth/callback/credentials")
-  ) {
+  if (req.method === "POST" && pathname.startsWith("/api/auth/callback/credentials")) {
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
     const rl = checkRateLimitSync(`login:${ip}`, AUTH_RATE_LIMIT);
     if (!rl.allowed) {

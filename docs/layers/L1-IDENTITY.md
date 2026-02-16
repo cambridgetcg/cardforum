@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Every card has a canonical address: `(tcg, setName, number)`. This triple is unique. CCS certifies condition. Together they define the *fungibility class* — the set of physically interchangeable cards worldwide.
+Every card has a canonical address: `(tcg, setName, number)`. This triple is unique. CCS certifies condition. Together they define the _fungibility class_ — the set of physically interchangeable cards worldwide.
 
 Without this layer, there is no fungibility. Without fungibility, there is no routing. This is the foundation.
 
@@ -15,15 +15,15 @@ Without this layer, there is no fungibility. Without fungibility, there is no ro
 
 ## Module Inventory
 
-| Module | File | Lines | Status | Callers |
-|--------|------|-------|--------|---------|
-| Card model | `prisma/schema.prisma:428-453` | — | ACTIVE | All listing/matching/token services |
-| CardVariant model | `prisma/schema.prisma:455-470` | — | ACTIVE | Catalog display, variant search |
-| CCS algorithm | `src/lib/ccs.ts` | 129 | ACTIVE | 5 files (condition-comparison, condition-trust, ai-grading, ccs/calculate route, listing form) |
-| AI grading service | `src/server/services/ai-grading.service.ts` | 136 | ACTIVE | 1 file (ai-grading route) |
-| Card detail API | `src/app/api/cards/[cardId]/route.ts` | 59 | ACTIVE | Frontend card pages |
-| Card sets API | `src/app/api/card-sets/route.ts` | 32 | ACTIVE | Browse/catalog UI |
-| CCS calculate API | `src/app/api/ccs/calculate/route.ts` | 18 | ACTIVE | Listing form (client-side CCS preview) |
+| Module             | File                                        | Lines | Status | Callers                                                                                        |
+| ------------------ | ------------------------------------------- | ----- | ------ | ---------------------------------------------------------------------------------------------- |
+| Card model         | `prisma/schema.prisma:428-453`              | —     | ACTIVE | All listing/matching/token services                                                            |
+| CardVariant model  | `prisma/schema.prisma:455-470`              | —     | ACTIVE | Catalog display, variant search                                                                |
+| CCS algorithm      | `src/lib/ccs.ts`                            | 129   | ACTIVE | 5 files (condition-comparison, condition-trust, ai-grading, ccs/calculate route, listing form) |
+| AI grading service | `src/server/services/ai-grading.service.ts` | 136   | ACTIVE | 1 file (ai-grading route)                                                                      |
+| Card detail API    | `src/app/api/cards/[cardId]/route.ts`       | 59    | ACTIVE | Frontend card pages                                                                            |
+| Card sets API      | `src/app/api/card-sets/route.ts`            | 32    | ACTIVE | Browse/catalog UI                                                                              |
+| CCS calculate API  | `src/app/api/ccs/calculate/route.ts`        | 18    | ACTIVE | Listing form (client-side CCS preview)                                                         |
 
 ---
 
@@ -62,6 +62,7 @@ AI Grading (ai-grading.service.ts)
 ## Schema Fields on Listings
 
 HaveListing stores identity + condition proof:
+
 ```
 cardId              → canonical card reference
 condition           → declared condition (NM/LP/MP/HP/DMG)
@@ -80,6 +81,7 @@ overrideReason      → why seller overrode
 ## Progress
 
 ### Core Identity
+
 - [x] Card model with unique constraint `(tcg, setName, number)`
 - [x] CardVariant model for language/edition/treatment
 - [x] 1,244 One Piece cards + 274 variants seeded (OP01-OP10)
@@ -90,6 +92,7 @@ overrideReason      → why seller overrode
 - [ ] MTG card catalog import
 
 ### Condition Scoring
+
 - [x] CCS algorithm with 4-dimension weighted composite
 - [x] Min-cap rule for catastrophic defect detection
 - [x] Sub-tier grading (NM+, NM, NM-, etc.)
@@ -101,6 +104,7 @@ overrideReason      → why seller overrode
 - [ ] Multi-provider AI grading (Ximilar + fallback)
 
 ### Catalog Management
+
 - [ ] Card catalog admin UI (add/edit/merge cards)
 - [ ] Duplicate card detection (fuzzy matching on name+set)
 - [ ] Card image CDN health check (Cardmarket S3 URLs)
@@ -110,21 +114,21 @@ overrideReason      → why seller overrode
 
 ## Gaps
 
-| Gap | Impact | Effort | Blocked By |
-|-----|--------|--------|------------|
-| Only One Piece cards seeded | Users of other TCGs can't trade | 2-3 days per TCG | Catalog sources (Cardmarket, Scryfall, etc.) |
-| CCS calibration not running | Condition weights may drift from reality | 1 day | 100+ completed trades with comparison data |
-| No admin UI for catalog | Can't fix card data errors | 2 days | Nothing |
+| Gap                         | Impact                                   | Effort           | Blocked By                                   |
+| --------------------------- | ---------------------------------------- | ---------------- | -------------------------------------------- |
+| Only One Piece cards seeded | Users of other TCGs can't trade          | 2-3 days per TCG | Catalog sources (Cardmarket, Scryfall, etc.) |
+| CCS calibration not running | Condition weights may drift from reality | 1 day            | 100+ completed trades with comparison data   |
+| No admin UI for catalog     | Can't fix card data errors               | 2 days           | Nothing                                      |
 
 ---
 
 ## External Dependencies
 
-| Dependency | Purpose | Status |
-|-----------|---------|--------|
-| Cardmarket S3 CDN | Card images | Configured in `next.config.ts` |
-| Ximilar API | AI condition grading | Adapter at `ximilar.adapter.ts` |
-| Card data sources | Catalog population | One Piece done; others pending |
+| Dependency        | Purpose              | Status                          |
+| ----------------- | -------------------- | ------------------------------- |
+| Cardmarket S3 CDN | Card images          | Configured in `next.config.ts`  |
+| Ximilar API       | AI condition grading | Adapter at `ximilar.adapter.ts` |
+| Card data sources | Catalog population   | One Piece done; others pending  |
 
 ---
 

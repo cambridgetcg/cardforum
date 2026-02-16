@@ -21,6 +21,7 @@
 ### The Universal Pattern
 
 Across all four major TCGs, **Japanese-manufactured cards are consistently rated as superior**. This is attributed to:
+
 - Smaller production runs allowing tighter per-card QC
 - Advanced printing technology (Komori UV presses for Pokemon, proprietary processes for others)
 - Shorter supply chains with more direct oversight
@@ -31,12 +32,12 @@ The trade-off: English/international prints serve vastly larger markets. High-gr
 
 ### Card Stock & Coating Summary
 
-| TCG | GSM | Core Type | Coating |
-|-----|-----|-----------|---------|
-| MTG | 320-330 | Blue core, graphite laminate | Plastic laminate |
-| Pokemon | ~300-330 (JP thinner) | Not disclosed | Glossy (JP) / Matte (EN) |
-| Yu-Gi-Oh | ~280-310 | Not disclosed | Varies by region |
-| One Piece | ~300-330 | Not disclosed | High-gloss UV coating |
+| TCG       | GSM                   | Core Type                    | Coating                  |
+| --------- | --------------------- | ---------------------------- | ------------------------ |
+| MTG       | 320-330               | Blue core, graphite laminate | Plastic laminate         |
+| Pokemon   | ~300-330 (JP thinner) | Not disclosed                | Glossy (JP) / Matte (EN) |
+| Yu-Gi-Oh  | ~280-310              | Not disclosed                | Varies by region         |
+| One Piece | ~300-330              | Not disclosed                | High-gloss UV coating    |
 
 ### Centering Accuracy (Best → Worst)
 
@@ -49,12 +50,12 @@ The trade-off: English/international prints serve vastly larger markets. High-gr
 
 ### Foil Technology
 
-| TCG | Foil Varieties | Curl Resistance | Innovation |
-|-----|---------------|-----------------|------------|
-| MTG | 8+ types (classic, etched, galaxy, surge, textured) | **Worst** (Pringle effect) | Highest diversity |
-| Pokemon | Hot-foil stamping, prismatic, cosmos | Moderate | Best anti-counterfeit (debossed stamps) |
-| Yu-Gi-Oh | Ghost Rare, Starlight, Ultimate (embossed) | Good (EU localized foil) | Most collector-prized rarities |
-| One Piece | Manga texture, embossed foil, anti-counterfeit stamps from OP-05+ | **Best** (minimal curl) | Newest, rapidly improving |
+| TCG       | Foil Varieties                                                    | Curl Resistance            | Innovation                              |
+| --------- | ----------------------------------------------------------------- | -------------------------- | --------------------------------------- |
+| MTG       | 8+ types (classic, etched, galaxy, surge, textured)               | **Worst** (Pringle effect) | Highest diversity                       |
+| Pokemon   | Hot-foil stamping, prismatic, cosmos                              | Moderate                   | Best anti-counterfeit (debossed stamps) |
+| Yu-Gi-Oh  | Ghost Rare, Starlight, Ultimate (embossed)                        | Good (EU localized foil)   | Most collector-prized rarities          |
+| One Piece | Manga texture, embossed foil, anti-counterfeit stamps from OP-05+ | **Best** (minimal curl)    | Newest, rapidly improving               |
 
 ### Bandai One Piece: JP vs EN Quality
 
@@ -66,12 +67,12 @@ The trade-off: English/international prints serve vastly larger markets. High-gr
 
 ### Pokemon: The Factory Split
 
-| Feature | JP (DNP/Komori UV) | EN-US (Cartamundi Dallas / MPG) | EN-EU (Cartamundi Belgium) |
-|---------|--------------------|---------------------------------|---------------------------|
-| Color saturation | Richer, vibrant | Slightly duller | Moderate |
-| Holofoil | Fine prismatic grids, uniform | Coarser dot matrix, uneven | Better than US |
-| Edge quality | Sharp, precise cuts | Can be rougher | Moderate |
-| PSA 10 rate | Higher | Lower | Moderate |
+| Feature          | JP (DNP/Komori UV)            | EN-US (Cartamundi Dallas / MPG) | EN-EU (Cartamundi Belgium) |
+| ---------------- | ----------------------------- | ------------------------------- | -------------------------- |
+| Color saturation | Richer, vibrant               | Slightly duller                 | Moderate                   |
+| Holofoil         | Fine prismatic grids, uniform | Coarser dot matrix, uneven      | Better than US             |
+| Edge quality     | Sharp, precise cuts           | Can be rougher                  | Moderate                   |
+| PSA 10 rate      | Higher                        | Lower                           | Moderate                   |
 
 Problematic EN sets (peak demand era 2020-2022): Chilling Reign, Evolving Skies, Fusion Strike, Brilliant Stars.
 Volume context: 10.2 billion Pokemon cards produced March 2024-2025.
@@ -85,12 +86,12 @@ Volume context: 10.2 billion Pokemon cards produced March 2024-2025.
 
 ### Yu-Gi-Oh: OCG vs TCG
 
-| Feature | OCG (Japan) | TCG (US) | TCG (EU) |
-|---------|-------------|----------|----------|
-| Card stock | Thicker, sturdier | Lighter weight | Mid-weight |
-| Ink tone | Superior contrast | Lighter, purple-toned | Darker |
-| Foil | Superior effects, vertical Secret Rare | Brighter, linear, full-card | More glittery, localized |
-| Warping | Less prone | More prone (full-card foil) | Better resistance |
+| Feature    | OCG (Japan)                            | TCG (US)                    | TCG (EU)                 |
+| ---------- | -------------------------------------- | --------------------------- | ------------------------ |
+| Card stock | Thicker, sturdier                      | Lighter weight              | Mid-weight               |
+| Ink tone   | Superior contrast                      | Lighter, purple-toned       | Darker                   |
+| Foil       | Superior effects, vertical Secret Rare | Brighter, linear, full-card | More glittery, localized |
+| Warping    | Less prone                             | More prone (full-card foil) | Better resistance        |
 
 Interesting sub-distinction: JP cards vs Japanese-Asian (JA) cards — JA Secret Rares use horizontal foil patterns vs JP vertical.
 
@@ -121,16 +122,16 @@ No single published "official roster" exists. Best searchable database: [Limitle
 
 ### Guest Manga Artist Collaborations (Bandai's Signature Move)
 
-| Artist | Known For | One Piece Card |
-|--------|-----------|---------------|
-| **Gege Akutami** | Jujutsu Kaisen | Five Elders parallels (OP-13) |
-| **Yuto Suzuki** | Sakamoto Days | Shanks (Jump #45, Oct 2024) |
-| **Kyousuke Usuta** | Sexy Commando Gaiden | Buggy (Jump #46, Oct 2024) |
-| **Yuki Tabata** | Black Clover | Luffy |
-| **Posuka Demizu** | The Promised Neverland | Sabo |
-| **Sun Saeki** | Food Wars! | Ace |
-| **Naoshi Komi** | Nisekoi | Vivi and Luffy |
-| **Boichi** | Dr. Stone | Redrew One Piece chapters used in TCG |
+| Artist             | Known For              | One Piece Card                        |
+| ------------------ | ---------------------- | ------------------------------------- |
+| **Gege Akutami**   | Jujutsu Kaisen         | Five Elders parallels (OP-13)         |
+| **Yuto Suzuki**    | Sakamoto Days          | Shanks (Jump #45, Oct 2024)           |
+| **Kyousuke Usuta** | Sexy Commando Gaiden   | Buggy (Jump #46, Oct 2024)            |
+| **Yuki Tabata**    | Black Clover           | Luffy                                 |
+| **Posuka Demizu**  | The Promised Neverland | Sabo                                  |
+| **Sun Saeki**      | Food Wars!             | Ace                                   |
+| **Naoshi Komi**    | Nisekoi                | Vivi and Luffy                        |
+| **Boichi**         | Dr. Stone              | Redrew One Piece chapters used in TCG |
 
 This is **unique to Bandai** — no other TCG publisher orchestrates cross-franchise artist collaborations at this scale. These create cultural events, not just cards.
 
@@ -144,37 +145,37 @@ This is **unique to Bandai** — no other TCG publisher orchestrates cross-franc
 
 ### Special Art Treatments (Layered Rarity System)
 
-| Rarity | Description | Pull Rate |
-|--------|-------------|-----------|
-| Common/Uncommon | Standard anime/original art | Every pack |
-| Rare (R) | Border-only foil | 1+ per pack |
-| Super Rare (SR) | Enhanced foil | Less frequent |
-| Secret Rare (SEC) | Gold borders, textured finish, rainbow holo | ~1 per 24 packs |
-| Alternate Art (AA) | New illustration, rainbow holofoil, textured, star symbol | ~1 per 12 packs |
-| Treasure Rare (TR) | Western-exclusive alt art reprint (from OP-06) | ~1 per case |
-| Special Rare (SP) | Bonus chase above SEC | ~1 per 6-12 boxes |
-| Manga Rare | Oda's manga panels with foil | ~1 per case |
-| God Pack | JP-exclusive: every card is a premium hit | ~1 per master case |
+| Rarity             | Description                                               | Pull Rate          |
+| ------------------ | --------------------------------------------------------- | ------------------ |
+| Common/Uncommon    | Standard anime/original art                               | Every pack         |
+| Rare (R)           | Border-only foil                                          | 1+ per pack        |
+| Super Rare (SR)    | Enhanced foil                                             | Less frequent      |
+| Secret Rare (SEC)  | Gold borders, textured finish, rainbow holo               | ~1 per 24 packs    |
+| Alternate Art (AA) | New illustration, rainbow holofoil, textured, star symbol | ~1 per 12 packs    |
+| Treasure Rare (TR) | Western-exclusive alt art reprint (from OP-06)            | ~1 per case        |
+| Special Rare (SP)  | Bonus chase above SEC                                     | ~1 per 6-12 boxes  |
+| Manga Rare         | Oda's manga panels with foil                              | ~1 per case        |
+| God Pack           | JP-exclusive: every card is a premium hit                 | ~1 per master case |
 
 ### God Packs (Japanese-Exclusive Innovation)
 
-| Type | Set | Contents |
-|------|-----|----------|
-| Manga God Pack | PRB-01 | 10 Manga Rare cards |
-| Gold Don God Pack | PRB-02 | 10 Gold Don!! cards |
-| SP God Pack | EB-03 | 6 Special Parallel cards |
-| Demon God Pack | OP-13 | Five Elders by Gege Akutami |
+| Type              | Set    | Contents                    |
+| ----------------- | ------ | --------------------------- |
+| Manga God Pack    | PRB-01 | 10 Manga Rare cards         |
+| Gold Don God Pack | PRB-02 | 10 Gold Don!! cards         |
+| SP God Pack       | EB-03  | 6 Special Parallel cards    |
+| Demon God Pack    | OP-13  | Five Elders by Gege Akutami |
 
 God Packs create **structural price differences** between language editions.
 
 ### Bandai's Cross-TCG Art Philosophy
 
-| Game | Art Source | Unique Feature |
-|------|-----------|---------------|
-| **One Piece** | Manga/anime/original mix | Manga Rares, guest manga artists |
-| **Digimon** | Color-coded thematic cohesion | Stained-glass and blur-with-detail styles |
-| **Dragon Ball Super** | Heavy anime key frame usage | Franchise-consistent style |
-| **Gundam** (2025) | Mecha design-focused | Simultaneous trilingual release |
+| Game                  | Art Source                    | Unique Feature                            |
+| --------------------- | ----------------------------- | ----------------------------------------- |
+| **One Piece**         | Manga/anime/original mix      | Manga Rares, guest manga artists          |
+| **Digimon**           | Color-coded thematic cohesion | Stained-glass and blur-with-detail styles |
+| **Dragon Ball Super** | Heavy anime key frame usage   | Franchise-consistent style                |
+| **Gundam** (2025)     | Mecha design-focused          | Simultaneous trilingual release           |
 
 Each title operates with significant creative independence. The BANDAI CARD GAMES brand (under Carddass division, 17.7+ billion cards sold since 1988) provides shared production infrastructure.
 
@@ -239,6 +240,7 @@ Each title operates with significant creative independence. The BANDAI CARD GAME
 ### Illustration Rare / Special Art Rare
 
 Scarlet & Violet era paradigm shift:
+
 - **Illustration Rare (IR)** — Full-art cards showing Pokemon in natural environments. Single golden star.
 - **Special Illustration Rare (SIR)** — Glitter foil, alternative artwork. Double gold star. Crown jewels of modern sets.
 - Primary driver of modern Pokemon collector value.
@@ -276,13 +278,13 @@ Scarlet & Violet era paradigm shift:
 
 Systematic modification between Japanese OCG and international TCG:
 
-| Category | Examples |
-|----------|---------|
-| Religious symbols | Pentagrams, crosses, halos removed |
-| Violence/gore | Blood removed, weapons obscured |
-| Firearms | Guns redrawn as lasers/toys |
-| Sexual content | Nudity covered, cleavage reduced |
-| Alcohol/drugs | Bottles replaced with neutral objects |
+| Category          | Examples                              |
+| ----------------- | ------------------------------------- |
+| Religious symbols | Pentagrams, crosses, halos removed    |
+| Violence/gore     | Blood removed, weapons obscured       |
+| Firearms          | Guns redrawn as lasers/toys           |
+| Sexual content    | Nudity covered, cleavage reduced      |
+| Alcohol/drugs     | Bottles replaced with neutral objects |
 
 2022 "Lost Art Promotion" partially addressed fan frustration with uncensored international art.
 
@@ -310,12 +312,12 @@ Artists receive detailed descriptions: **Location, Color, Action, Focus, Mood**.
 
 ### Showcase Frames (Since 2019)
 
-| Set | Style | Concept |
-|-----|-------|---------|
-| Throne of Eldraine | Art nouveau storybook | Fairy-tale world |
-| Theros: Beyond Death | Constellation gods | Night sky reimagination |
-| Zendikar Rising | Retro travel posters | Land connection |
-| Bloomburrow | Woodland autumnal | Nature immersion |
+| Set                  | Style                 | Concept                 |
+| -------------------- | --------------------- | ----------------------- |
+| Throne of Eldraine   | Art nouveau storybook | Fairy-tale world        |
+| Theros: Beyond Death | Constellation gods    | Night sky reimagination |
+| Zendikar Rising      | Retro travel posters  | Land connection         |
+| Bloomburrow          | Woodland autumnal     | Nature immersion        |
 
 Goal: Each set feels like "a piece hangs on the plane itself."
 
@@ -331,21 +333,21 @@ Goal: Each set feels like "a piece hangs on the plane itself."
 
 ### Compensation
 
-| Company | Per-Card Rate | Royalties | In-House Salary |
-|---------|--------------|-----------|-----------------|
-| MTG | ~$1,250 (raised 2024) | None since 1997 | ~$73K concept artist |
-| Pokemon | ~$400-$1,500 (estimated) | None | ~$76-100K senior artist |
-| Yu-Gi-Oh | Not disclosed (NDA) | None | ~$46-68K artist/designer |
-| One Piece | Not disclosed | None | Not disclosed |
+| Company   | Per-Card Rate            | Royalties       | In-House Salary          |
+| --------- | ------------------------ | --------------- | ------------------------ |
+| MTG       | ~$1,250 (raised 2024)    | None since 1997 | ~$73K concept artist     |
+| Pokemon   | ~$400-$1,500 (estimated) | None            | ~$76-100K senior artist  |
+| Yu-Gi-Oh  | Not disclosed (NDA)      | None            | ~$46-68K artist/designer |
+| One Piece | Not disclosed            | None            | Not disclosed            |
 
 ### Artist Credit & Rights
 
-| Company | Credits on Cards | Artist Proofs | Secondary Market Rights |
-|---------|-----------------|---------------|------------------------|
-| MTG | Yes (since 1993) | Yes (except Universes Beyond) | Limited/declining |
-| Pokemon | Yes (since 1996) | No | Unknown |
-| Yu-Gi-Oh | **No** | No | No |
-| One Piece | Yes | No | Unknown |
+| Company   | Credits on Cards | Artist Proofs                 | Secondary Market Rights |
+| --------- | ---------------- | ----------------------------- | ----------------------- |
+| MTG       | Yes (since 1993) | Yes (except Universes Beyond) | Limited/declining       |
+| Pokemon   | Yes (since 1996) | No                            | Unknown                 |
+| Yu-Gi-Oh  | **No**           | No                            | No                      |
+| One Piece | Yes              | No                            | Unknown                 |
 
 ### The Universes Beyond Problem (MTG)
 
@@ -374,6 +376,7 @@ Recent Universes Beyond sets prohibit all secondary market artist activities —
 ## Sources
 
 ### Print Quality
+
 - [Japanese vs English One Piece TCG Guide — Ripperholics](https://ripperholics.com/blogs/ripperholics-blog/japanese-vs-english-one-piece-tcg-guide)
 - [How to Spot a Fake One Piece Card — Rare Cards Japan](https://rarecardsjapan.com/blogs/news/how-to-spot-a-fake-one-piece-card-a-5-step-authentication-guide)
 - [OG vs PRB Manga Rares Explained — Rare Cards Japan](https://rarecardsjapan.com/blogs/news/one-piece-tcg-og-vs-prb-manga-rares-explained-stamps-text-texture-and-color-differences)
@@ -388,6 +391,7 @@ Recent Universes Beyond sets prohibit all secondary market artist activities —
 - [25 Years of Foil Magic Cards — Rhystic Studies](https://rhysticstudies.substack.com/p/the-glimmer-25-years-of-foil-magic)
 
 ### Artist Selection
+
 - [Official One Piece Staff on Art Sources](https://x.com/Eiichiro_Staff/status/1508438820047384579)
 - [Top 10 Anderson One Piece TCG Cards — SAIFR TCG](https://www.saifrtcg.com/post/top-10-anderson-one-piece-tcg-cards)
 - [Gege Akutami as OPTCG Guest Artist — Essential Japan](https://essential-japan.com/news/jujutsu-kaisen-creator-gege-akutami-revealed-as-guest-artist-for-new-one-piece-tcg-cards/)
@@ -402,6 +406,7 @@ Recent Universes Beyond sets prohibit all secondary market artist activities —
 - [Pricing and Artist Compensation for Magic — Muddy Colors](https://www.muddycolors.com/2024/11/pricing-aftermarket-and-secondary-market-artist-compensation-for-magic/)
 
 ### Bandai Specifics
+
 - [One Piece Card Game Artwork Explained — Chobanov Games](https://chobanovgamesltd.com/blog-article/one-piece-card-game-artwork-explained-iconic-illustrations-design-trends-and-collector-s-appeal.html)
 - [Complete List of Manga Rare Cards — TCGKing](https://tcgking.nl/blogs/collecting/complete-list-of-one-piece-tcg-manga-rare-cards)
 - [All One Piece TCG Rarities Explained — TCGKing](https://tcgking.nl/blogs/collecting/all-one-piece-tcg-rarities-explained)

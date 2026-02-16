@@ -13,13 +13,13 @@ The matching engine is a packet switch. It takes a pool of intent declarations (
 
 ## Module Inventory
 
-| Module | File | Lines | Status | Callers |
-|--------|------|-------|--------|---------|
-| Chain finder | `src/server/matching/chain-finder.ts` | 220 | ACTIVE | matching.service |
-| Bridge builder | `src/server/matching/bridge-builder.ts` | 199 | ACTIVE | matching.service |
-| Scorer | `src/server/matching/scorer.ts` | 93 | ACTIVE | bridge-builder |
-| Matching service | `src/server/services/matching.service.ts` | 293 | ACTIVE | cron route |
-| Matching cron | `src/app/api/cron/matching/route.ts` | 35 | ACTIVE | Vercel cron (*/5) |
+| Module           | File                                      | Lines | Status | Callers            |
+| ---------------- | ----------------------------------------- | ----- | ------ | ------------------ |
+| Chain finder     | `src/server/matching/chain-finder.ts`     | 220   | ACTIVE | matching.service   |
+| Bridge builder   | `src/server/matching/bridge-builder.ts`   | 199   | ACTIVE | matching.service   |
+| Scorer           | `src/server/matching/scorer.ts`           | 93    | ACTIVE | bridge-builder     |
+| Matching service | `src/server/services/matching.service.ts` | 293   | ACTIVE | cron route         |
+| Matching cron    | `src/app/api/cron/matching/route.ts`      | 35    | ACTIVE | Vercel cron (\*/5) |
 
 **Layer 3 maturity: PRODUCTION.** All modules active, zero dormancy.
 
@@ -111,12 +111,12 @@ The matching engine is a packet switch. It takes a pool of intent declarations (
 
 ## The Four Routing Decisions
 
-| # | Gate | Question | Outcome | Location |
-|---|------|----------|---------|----------|
-| 1 | **Price** | `bidPrice ≥ askPrice`? | Edge exists or dropped | `chain-finder.ts:96` |
-| 2 | **Locality** | All users same region? | DIRECT vs AUTHENTICATED | `bridge-builder.ts:70` |
-| 3 | **Score** | Which proposal ranks highest? | Execution priority | `scorer.ts:88-92` |
-| 4 | **Consent** | All parties auto-accept? | Immediate vs manual | `bridge-builder.ts:160-199` |
+| #   | Gate         | Question                      | Outcome                 | Location                    |
+| --- | ------------ | ----------------------------- | ----------------------- | --------------------------- |
+| 1   | **Price**    | `bidPrice ≥ askPrice`?        | Edge exists or dropped  | `chain-finder.ts:96`        |
+| 2   | **Locality** | All users same region?        | DIRECT vs AUTHENTICATED | `bridge-builder.ts:70`      |
+| 3   | **Score**    | Which proposal ranks highest? | Execution priority      | `scorer.ts:88-92`           |
+| 4   | **Consent**  | All parties auto-accept?      | Immediate vs manual     | `bridge-builder.ts:160-199` |
 
 ---
 
@@ -139,6 +139,7 @@ chainBonus              default: 10
 ## Progress
 
 ### Core Routing
+
 - [x] Edge construction from active listings
 - [x] Condition compatibility check (`conditionMeetsMinimum`)
 - [x] Price viability filter (`bidPrice ≥ askPrice`)
@@ -149,6 +150,7 @@ chainBonus              default: 10
 - [x] Multi-party settlement computation (zero-sum)
 
 ### Scoring
+
 - [x] Composite scoring function (7 factors)
 - [x] Configurable weights via PlatformConfig
 - [x] Proposal ranking by score
@@ -156,6 +158,7 @@ chainBonus              default: 10
 - [ ] A/B test framework for scorer weights
 
 ### Auto-Accept
+
 - [x] Constraint evaluation per proposal
 - [x] Auto-trade creation on full consent
 - [x] MatchProposal storage for manual review
@@ -163,6 +166,7 @@ chainBonus              default: 10
 - [ ] MatchProposal expiry (proposals go stale)
 
 ### Matching Orchestration
+
 - [x] `runMatching()` orchestrator in matching.service.ts
 - [x] Cron trigger every 5 minutes (vercel.json)
 - [x] Cron route with CRON_SECRET auth
@@ -174,13 +178,13 @@ chainBonus              default: 10
 
 ## Gaps
 
-| Gap | Impact | Effort | Blocked By |
-|-----|--------|--------|------------|
-| Regions are free-text | Locality check unreliable | 2-3 days | Region normalization (L1/L2) |
-| No scorer calibration | Weights may not optimize for real outcomes | 3 days | 100+ completed trades |
-| No match tracking/metrics | Can't measure matching quality | 1 day | Nothing |
-| No proposal expiry | Stale proposals accumulate | 4 hours | Nothing |
-| No demand heatmap | Can't identify liquidity gaps | 2 days | Match tracking |
+| Gap                       | Impact                                     | Effort   | Blocked By                   |
+| ------------------------- | ------------------------------------------ | -------- | ---------------------------- |
+| Regions are free-text     | Locality check unreliable                  | 2-3 days | Region normalization (L1/L2) |
+| No scorer calibration     | Weights may not optimize for real outcomes | 3 days   | 100+ completed trades        |
+| No match tracking/metrics | Can't measure matching quality             | 1 day    | Nothing                      |
+| No proposal expiry        | Stale proposals accumulate                 | 4 hours  | Nothing                      |
+| No demand heatmap         | Can't identify liquidity gaps              | 2 days   | Match tracking               |
 
 ---
 

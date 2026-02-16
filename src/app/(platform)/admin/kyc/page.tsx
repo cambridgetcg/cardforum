@@ -4,9 +4,22 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 interface KYCSubmission {
   id: string;
@@ -102,9 +115,7 @@ export default function AdminKYCPage() {
               </p>
             </CardHeader>
             <CardContent>
-              {error && (
-                <p className="mb-4 text-sm text-red-600">{error}</p>
-              )}
+              {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
               {loading ? (
                 <p className="py-8 text-center text-sm text-gray-500">Loading...</p>
               ) : submissions.length === 0 ? (
@@ -123,9 +134,7 @@ export default function AdminKYCPage() {
                   <TableBody>
                     {submissions.map((sub) => (
                       <TableRow key={sub.id}>
-                        <TableCell className="font-medium">
-                          {sub.name ?? "—"}
-                        </TableCell>
+                        <TableCell className="font-medium">{sub.name ?? "—"}</TableCell>
                         <TableCell>{sub.email}</TableCell>
                         <TableCell>
                           <Badge variant={STATUS_BADGE[sub.kycStatus] ?? "outline"}>
@@ -181,7 +190,7 @@ export default function AdminKYCPage() {
           </DialogHeader>
           {action === "reject" && (
             <textarea
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
               rows={3}
               placeholder="Rejection reason..."
               value={reason}

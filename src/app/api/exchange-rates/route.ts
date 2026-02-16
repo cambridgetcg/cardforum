@@ -24,9 +24,6 @@ export async function GET() {
     });
   } catch (error) {
     console.error("[exchange-rates] Failed to get rates:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch exchange rates" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to fetch exchange rates" }, { status: 500 });
   }
 }

@@ -4,10 +4,7 @@ import { updateListingSchema } from "@/lib/validators";
 import { updateListing } from "@/server/services/listing.service";
 
 // PATCH /api/listings/[id] — Update a listing (price, condition, quantity, notes, isActive)
-export async function PATCH(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> },
-) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -17,10 +14,7 @@ export async function PATCH(
   const body = await req.json();
   const parsed = updateListingSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {

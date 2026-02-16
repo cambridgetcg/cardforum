@@ -9,10 +9,7 @@ interface ConnectAccountProps {
   onboardingComplete: boolean;
 }
 
-export function ConnectAccount({
-  hasConnectAccount,
-  onboardingComplete,
-}: ConnectAccountProps) {
+export function ConnectAccount({ hasConnectAccount, onboardingComplete }: ConnectAccountProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

@@ -1,8 +1,6 @@
 import { db } from "@/lib/db";
-import type {
-  CreateGradedHaveListingInput,
-  CreateGradedWantListingInput,
-} from "@/lib/validators";
+import type { CreateGradedHaveListingInput, CreateGradedWantListingInput } from "@/lib/validators";
+import { checkGradedAskCrossing, checkGradedBidCrossing } from "./price-validation.service";
 
 export async function getUserGradedListings(userId: string) {
   const [have, want] = await Promise.all([
@@ -20,24 +18,36 @@ export async function getUserGradedListings(userId: string) {
   return { have, want };
 }
 
-export async function createGradedHaveListing(
-  userId: string,
-  input: CreateGradedHaveListingInput,
-) {
-  return db.gradedHaveListing.create({
+export async function createGradedHaveListing(userId: string, input: CreateGradedHaveListingInput) {
+  const crossing = await checkGradedAskCrossing(userId, input.cardId, input.askPrice);
+  if (crossing.selfCross) {
+    throw new Error(
+      "Your ask price crosses your own active graded bid. Deactivate or raise your ask first.",
+    );
+  }
+
+  const listing = await db.gradedHaveListing.create({
     data: { userId, ...input },
     include: { card: true },
   });
+
+  return { ...listing, crossing: { marketCross: crossing.marketCross, bestBid: crossing.bestBid } };
 }
 
-export async function createGradedWantListing(
-  userId: string,
-  input: CreateGradedWantListingInput,
-) {
-  return db.gradedWantListing.create({
+export async function createGradedWantListing(userId: string, input: CreateGradedWantListingInput) {
+  const crossing = await checkGradedBidCrossing(userId, input.cardId, input.bidPrice);
+  if (crossing.selfCross) {
+    throw new Error(
+      "Your bid price crosses your own active graded ask. Deactivate or lower your bid first.",
+    );
+  }
+
+  const listing = await db.gradedWantListing.create({
     data: { userId, ...input },
     include: { card: true },
   });
+
+  return { ...listing, crossing: { marketCross: crossing.marketCross, bestAsk: crossing.bestAsk } };
 }
 
 export async function deactivateGradedListing(

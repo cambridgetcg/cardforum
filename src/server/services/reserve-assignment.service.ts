@@ -35,9 +35,7 @@ export async function assignReserveAuthenticator(tradeLegId: string) {
       isActive: true,
       applicationStatus: "ACTIVE",
       tier: {
-        in: tierPriority.filter(
-          (t) => AUTHENTICATOR_TIER_VALUE_CAPS[t] >= cardValueCents
-        ),
+        in: tierPriority.filter((t) => AUTHENTICATOR_TIER_VALUE_CAPS[t] >= cardValueCents),
       },
       userId: { notIn: assignment.tradeLeg.trade.participantIds },
     },
@@ -57,10 +55,7 @@ export async function assignReserveAuthenticator(tradeLegId: string) {
 /**
  * Accept an assignment. The primary authenticator confirms they will process it.
  */
-export async function acceptAssignment(
-  assignmentId: string,
-  authenticatorUserId: string
-) {
+export async function acceptAssignment(assignmentId: string, authenticatorUserId: string) {
   const assignment = await db.verificationAssignment.findUnique({
     where: { id: assignmentId },
     include: { authenticator: true },
@@ -85,9 +80,7 @@ export async function acceptAssignment(
  */
 export async function checkAcceptanceTimeouts() {
   const timeoutHours = await getConfig("authenticator.reserve_timeout_hours");
-  const cutoff = new Date(
-    Date.now() - timeoutHours * 60 * 60 * 1000
-  );
+  const cutoff = new Date(Date.now() - timeoutHours * 60 * 60 * 1000);
 
   // Find assignments that are overdue and haven't been accepted
   const overdue = await db.verificationAssignment.findMany({

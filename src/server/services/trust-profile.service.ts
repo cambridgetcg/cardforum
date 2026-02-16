@@ -179,10 +179,7 @@ export async function getTrustProfile(userId: string): Promise<TrustProfile> {
     (Date.now() - user.createdAt.getTime()) / (24 * 60 * 60 * 1000),
   );
   const agePoints = Math.min(5, Math.floor(accountAgeDays / 30)); // +1 per 30 days, max 5
-  const identityPoints = Math.min(
-    MAX_IDENTITY_POINTS,
-    (emailVerified ? 5 : 0) + agePoints,
-  );
+  const identityPoints = Math.min(MAX_IDENTITY_POINTS, (emailVerified ? 5 : 0) + agePoints);
 
   // Authenticator score (0–10)
   let authScore: TrustProfile["authScore"] = null;
@@ -205,7 +202,8 @@ export async function getTrustProfile(userId: string): Promise<TrustProfile> {
 
   // ─── Composite ──────────────────────────────────
 
-  const rawComposite = BASE_SCORE + tradePoints + kycPoints + photoPoints + identityPoints + authPoints + expertPoints;
+  const rawComposite =
+    BASE_SCORE + tradePoints + kycPoints + photoPoints + identityPoints + authPoints + expertPoints;
   const composite = user.walletFrozen ? 0 : Math.min(100, Math.max(0, rawComposite));
 
   return {

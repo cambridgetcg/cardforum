@@ -3,6 +3,7 @@
 ## The Problem
 
 A single trading card can exist in dozens of physical forms:
+
 - Different sets (reprints)
 - Different languages (EN, JP, KR, etc.)
 - Different treatments (regular, holofoil, full art, etc.)
@@ -55,25 +56,25 @@ onepiece:OP01-001:L:regular     → Monkey D. Luffy Leader OP01
 
 ## Fungibility Dimensions
 
-| Dimension | Must Match for Trade? | Notes |
-|-----------|----------------------|-------|
-| TCG | Always | Can't trade Pokemon for MTG |
-| Card Name | Always | Must be the "same card" |
-| Set | Depends on user pref | Some traders want specific sets |
-| Number | Follows from set | |
-| Treatment/Variant | Depends on user pref | Holo vs non-holo matters to collectors |
-| Language | Depends on user pref | JP vs EN is a major distinction |
-| Edition | Depends on user pref | 1st Ed vs Unlimited for older sets |
-| Condition | Minimum threshold | NM can substitute for LP want, not vice versa |
+| Dimension         | Must Match for Trade? | Notes                                         |
+| ----------------- | --------------------- | --------------------------------------------- |
+| TCG               | Always                | Can't trade Pokemon for MTG                   |
+| Card Name         | Always                | Must be the "same card"                       |
+| Set               | Depends on user pref  | Some traders want specific sets               |
+| Number            | Follows from set      |                                               |
+| Treatment/Variant | Depends on user pref  | Holo vs non-holo matters to collectors        |
+| Language          | Depends on user pref  | JP vs EN is a major distinction               |
+| Edition           | Depends on user pref  | 1st Ed vs Unlimited for older sets            |
+| Condition         | Minimum threshold     | NM can substitute for LP want, not vice versa |
 
 ## Per-TCG Complexity
 
-| TCG | Sets | Avg Variants per Card | Languages | Key Challenge |
-|-----|------|----------------------|-----------|---------------|
-| Pokemon | ~200+ | 2-5 | 13+ | JP/EN set mapping (JP splits into multiple) |
-| Yu-Gi-Oh | ~400+ | 5-15 | 9+ | Same card reprinted across many sets/rarities |
-| One Piece | ~15+ | 2-4 | 4+ | New game, evolving structure |
-| MTG | ~700+ | 3-30 | 11+ | Treatment explosion (foil types, showcase, etc.) |
+| TCG       | Sets  | Avg Variants per Card | Languages | Key Challenge                                    |
+| --------- | ----- | --------------------- | --------- | ------------------------------------------------ |
+| Pokemon   | ~200+ | 2-5                   | 13+       | JP/EN set mapping (JP splits into multiple)      |
+| Yu-Gi-Oh  | ~400+ | 5-15                  | 9+        | Same card reprinted across many sets/rarities    |
+| One Piece | ~15+  | 2-4                   | 4+        | New game, evolving structure                     |
+| MTG       | ~700+ | 3-30                  | 11+       | Treatment explosion (foil types, showcase, etc.) |
 
 ## Schema Implications
 

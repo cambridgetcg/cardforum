@@ -21,7 +21,7 @@ export async function assignAuthenticator(tradeLegId: string, authenticatorId: s
 export async function registerAuthenticator(
   userId: string,
   region: string,
-  tier: AuthenticatorTier = "STANDARD"
+  tier: AuthenticatorTier = "STANDARD",
 ) {
   return db.authenticator.create({
     data: {

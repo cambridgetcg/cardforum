@@ -13,9 +13,11 @@ import { formatPrice } from "@/lib/currency";
 export default function CollectionPage() {
   const [tcgFilter, setTcgFilter] = useState<string>("");
   const [removingId, setRemovingId] = useState<string | null>(null);
-  const { data: collectionData, isLoading: loadingEntries, isError: entriesError } = useCollection(
-    tcgFilter ? { tcg: tcgFilter } : undefined,
-  );
+  const {
+    data: collectionData,
+    isLoading: loadingEntries,
+    isError: entriesError,
+  } = useCollection(tcgFilter ? { tcg: tcgFilter } : undefined);
   const { data: stats, isLoading: loadingStats, isError: statsError } = useCollectionStats();
   const removeEntry = useRemoveFromCollection();
 
@@ -104,7 +106,7 @@ export default function CollectionPage() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="rounded bg-gray-100 px-1.5 py-0.5 text-xs font-mono font-medium text-gray-600">
+                    <span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-xs font-medium text-gray-600">
                       {sc.setCode}
                     </span>
                     <span className="text-sm font-medium text-gray-900">{sc.setName}</span>
@@ -126,9 +128,7 @@ export default function CollectionPage() {
                   />
                 </div>
                 {sc.pct === 100 && (
-                  <p className="mt-1 text-xs font-medium text-emerald-600">
-                    Set Complete!
-                  </p>
+                  <p className="mt-1 text-xs font-medium text-emerald-600">Set Complete!</p>
                 )}
               </Link>
             ))}
@@ -201,11 +201,11 @@ export default function CollectionPage() {
                     </div>
                   )}
                 </Link>
-                <div className="flex flex-1 flex-col justify-between min-w-0">
+                <div className="flex min-w-0 flex-1 flex-col justify-between">
                   <div>
                     <Link
                       href={`/browse/cards/${entry.card.id}`}
-                      className="text-sm font-semibold text-gray-900 hover:text-indigo-600 line-clamp-1"
+                      className="line-clamp-1 text-sm font-semibold text-gray-900 hover:text-indigo-600"
                     >
                       {entry.card.name}
                     </Link>

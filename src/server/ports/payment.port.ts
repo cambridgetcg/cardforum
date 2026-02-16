@@ -141,9 +141,24 @@ export interface MarketplaceTransferParams {
 // ─── Webhook Events ──────────────────────────────────
 
 export type PaymentWebhookEvent =
-  | { type: "checkout.session.completed"; sessionId: string; metadata: Record<string, string>; amountCents: number }
-  | { type: "payment_intent.succeeded"; paymentIntentId: string; metadata: Record<string, string>; amountCents: number }
-  | { type: "payment_intent.payment_failed"; paymentIntentId: string; metadata: Record<string, string>; reason: string }
+  | {
+      type: "checkout.session.completed";
+      sessionId: string;
+      metadata: Record<string, string>;
+      amountCents: number;
+    }
+  | {
+      type: "payment_intent.succeeded";
+      paymentIntentId: string;
+      metadata: Record<string, string>;
+      amountCents: number;
+    }
+  | {
+      type: "payment_intent.payment_failed";
+      paymentIntentId: string;
+      metadata: Record<string, string>;
+      reason: string;
+    }
   | { type: "payment_intent.canceled"; paymentIntentId: string; metadata: Record<string, string> }
   | { type: "transfer.paid"; transferId: string }
   | { type: "transfer.failed"; transferId: string; reason: string }

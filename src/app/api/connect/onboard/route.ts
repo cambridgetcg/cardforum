@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import {
-  createConnectAccount,
-  createOnboardingLink,
-} from "@/server/services/connect.service";
+import { createConnectAccount, createOnboardingLink } from "@/server/services/connect.service";
 
 export async function POST() {
   const session = await auth();
@@ -16,8 +13,7 @@ export async function POST() {
     const url = await createOnboardingLink(accountId, session.user.id);
     return NextResponse.json({ url });
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to start onboarding";
+    const message = err instanceof Error ? err.message : "Failed to start onboarding";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

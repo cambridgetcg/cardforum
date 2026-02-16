@@ -24,7 +24,14 @@
 import * as fs from "fs";
 import * as path from "path";
 import type { TCG } from "./types";
-import { getKeywords, getSourceById, isSourceConfigured } from "./trends-sources";
+import {
+  getKeywords,
+  getKeywordsWithLevel,
+  getAvailableSetCodes,
+  getSourceById,
+  isSourceConfigured,
+} from "./trends-sources";
+import type { KeywordWithLevel } from "./trends-sources";
 import type { TrendTimeSeries, TrendDataPoint, TrendDeltas } from "./trends-types";
 
 // ── Directory Helpers ─────────────────────────────────────────
@@ -65,18 +72,18 @@ function sleep(ms: number): Promise<void> {
  * Raw Google Trends response (simplified — real API varies).
  */
 interface GoogleTrendsDataPoint {
-  date: string;         // ISO date
-  value: number;        // 0-100 relative interest
-  isPartial?: boolean;  // True for the most recent period
+  date: string; // ISO date
+  value: number; // 0-100 relative interest
+  isPartial?: boolean; // True for the most recent period
 }
 
 interface SearchTrendResult {
   keyword: string;
   tcg: TCG;
   setCode?: string;
-  source: string;         // "serpapi" | "brightdata_scrape" | "mock"
-  geo: string;            // "US", "JP", "worldwide"
-  timeRange: string;      // "today 12-m", "today 3-m", etc.
+  source: string; // "serpapi" | "brightdata_scrape" | "mock"
+  geo: string; // "US", "JP", "worldwide"
+  timeRange: string; // "today 12-m", "today 3-m", etc.
   fetchedAt: string;
   dataPoints: GoogleTrendsDataPoint[];
   relatedQueries: {
@@ -205,16 +212,13 @@ function computeSearchDeltas(points: GoogleTrendsDataPoint[]): TrendDeltas | nul
   const current = sorted[sorted.length - 1];
 
   function findValueAtAge(ageDays: number): number | null {
-    const targetDate = new Date(Date.now() - ageDays * 86_400_000)
-      .toISOString().split("T")[0];
+    const targetDate = new Date(Date.now() - ageDays * 86_400_000).toISOString().split("T")[0];
 
     // Find closest point within 10 days
     let best: GoogleTrendsDataPoint | null = null;
     let bestDist = Infinity;
     for (const p of sorted) {
-      const dist = Math.abs(
-        new Date(p.date).getTime() - new Date(targetDate).getTime(),
-      );
+      const dist = Math.abs(new Date(p.date).getTime() - new Date(targetDate).getTime());
       if (dist < bestDist && dist < 10 * 86_400_000) {
         bestDist = dist;
         best = p;
@@ -358,21 +362,35 @@ Environment:
   if (args.includes("--via-scrape")) mode = "scrape";
   if (isMock) mode = "mock";
 
-  // Determine keywords to fetch
-  let keywords: string[];
+  // Determine keywords to fetch (with hierarchy level for correct entityId)
+  let keywordsWithLevel: KeywordWithLevel[];
   if (keywordArg) {
-    keywords = [keywordArg];
+    // Manual keyword — use set arg if provided, otherwise TCG-level
+    keywordsWithLevel = [
+      {
+        keyword: keywordArg,
+        level: setArg ? "set" : "tcg",
+        setCode: setArg?.toUpperCase(),
+      },
+    ];
   } else if (isAll) {
-    // Get all TCG keywords + all set keywords
-    keywords = getKeywords(tcg);
+    // Get TCG-level keywords + keywords for every known set
+    keywordsWithLevel = getKeywordsWithLevel(tcg);
+    for (const sc of getAvailableSetCodes(tcg)) {
+      const setKws = getKeywordsWithLevel(tcg, sc);
+      // Only add set/card-level keywords (TCG-level already included above)
+      for (const kw of setKws) {
+        if (kw.level !== "tcg") keywordsWithLevel.push(kw);
+      }
+    }
   } else if (setArg) {
-    keywords = getKeywords(tcg, setArg.toUpperCase());
+    keywordsWithLevel = getKeywordsWithLevel(tcg, setArg.toUpperCase());
   } else {
     // Just TCG-level keywords
-    keywords = getKeywords(tcg);
+    keywordsWithLevel = getKeywordsWithLevel(tcg);
   }
 
-  if (keywords.length === 0) {
+  if (keywordsWithLevel.length === 0) {
     console.error("No keywords found for the given TCG/set. Check trends-sources.ts.");
     process.exit(1);
   }
@@ -381,7 +399,7 @@ Environment:
   console.log(`TCG: ${tcg}`);
   console.log(`Mode: ${mode}`);
   console.log(`Geo: ${geoArg}`);
-  console.log(`Keywords: ${keywords.length}`);
+  console.log(`Keywords: ${keywordsWithLevel.length}`);
   console.log(`Dry run: ${isDryRun}`);
 
   // Check source availability
@@ -406,11 +424,13 @@ Environment:
   let successCount = 0;
   let errorCount = 0;
 
-  for (let i = 0; i < keywords.length; i++) {
-    const keyword = keywords[i];
-    const outPath = getOutputPath(tcg, keyword);
+  for (let i = 0; i < keywordsWithLevel.length; i++) {
+    const kwl = keywordsWithLevel[i];
+    const outPath = getOutputPath(tcg, kwl.keyword);
 
-    console.log(`  [${i + 1}/${keywords.length}] "${keyword}"`);
+    console.log(
+      `  [${i + 1}/${keywordsWithLevel.length}] "${kwl.keyword}" (${kwl.level}${kwl.setCode ? ` / ${kwl.setCode}` : ""})`,
+    );
 
     if (isDryRun) {
       console.log(`    [dry-run] Would save to ${path.relative(process.cwd(), outPath)}`);
@@ -419,10 +439,14 @@ Environment:
     }
 
     try {
-      const result = await fetchKeyword(keyword, tcg, mode, geoArg, setArg?.toUpperCase());
+      // Pass the keyword's own setCode (undefined for TCG-level keywords)
+      // instead of the CLI --set arg which would leak to all keywords
+      const result = await fetchKeyword(kwl.keyword, tcg, mode, geoArg, kwl.setCode);
 
       fs.writeFileSync(outPath, JSON.stringify(result, null, 2));
-      console.log(`    -> ${path.relative(process.cwd(), outPath)} (${result.dataPoints.length} points, source: ${result.source})`);
+      console.log(
+        `    -> ${path.relative(process.cwd(), outPath)} (${result.dataPoints.length} points, source: ${result.source})`,
+      );
 
       if (result.trend) {
         const d30 = result.trend.delta30d;
@@ -439,7 +463,7 @@ Environment:
     }
 
     // Rate limit between requests
-    if (i < keywords.length - 1) {
+    if (i < keywordsWithLevel.length - 1) {
       await sleep(mode === "serpapi" ? 2000 : 500);
     }
   }

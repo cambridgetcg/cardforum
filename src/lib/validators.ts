@@ -2,7 +2,7 @@ import { z } from "zod";
 import {
   TCG_VALUES,
   CONDITION_VALUES,
-  GRADING_COMPANY_VALUES,
+  CARD_LANGUAGE_VALUES,
   DELIVERY_METHOD_VALUES,
   EXPERT_POST_CATEGORY_VALUES,
   EXPERT_POST_STATUS_VALUES,
@@ -28,13 +28,14 @@ export type RegisterInput = z.infer<typeof registerSchema>;
 
 const tcgValues = TCG_VALUES;
 const conditionValues = CONDITION_VALUES;
+const cardLanguageValues = CARD_LANGUAGE_VALUES;
 const currencyValues = SUPPORTED_CURRENCIES as unknown as [string, ...string[]];
 
 export const createHaveListingSchema = z.object({
   cardId: z.string().min(1, "Card is required"),
   condition: z.enum(conditionValues),
-  language: z.string().default("EN"),
-  quantity: z.number().int().min(1).max(99).default(1),
+  language: z.enum(cardLanguageValues),
+  quantity: z.number().int().min(1).max(99),
   askPrice: z.number().int().min(1).max(10_000_000),
   currency: z.enum(currencyValues).default("USD"),
   notes: z.string().max(500).optional(),
@@ -42,6 +43,7 @@ export const createHaveListingSchema = z.object({
   autoAcceptMaxGap: z.number().int().min(0).optional(),
   autoAcceptMaxCycleLength: z.number().int().min(2).max(6).optional(),
   autoAcceptRegions: z.array(z.string().min(1)).default([]),
+  preferBalancedSwap: z.boolean().default(false),
   // AI grading fields (optional — populated when seller uses AI grading)
   aiGradingResult: z.any().optional(),
   aiConditionSuggestion: z.enum(conditionValues).optional(),
@@ -58,8 +60,8 @@ export type CreateHaveListingInput = z.infer<typeof createHaveListingSchema>;
 export const createWantListingSchema = z.object({
   cardId: z.string().min(1, "Card is required"),
   minCondition: z.enum(conditionValues).default("LP"),
-  language: z.string().optional(),
-  maxQuantity: z.number().int().min(1).max(99).default(1),
+  language: z.enum(cardLanguageValues),
+  maxQuantity: z.number().int().min(1).max(99),
   bidPrice: z.number().int().min(1).max(10_000_000),
   currency: z.enum(currencyValues).default("USD"),
   notes: z.string().max(500).optional(),
@@ -67,6 +69,7 @@ export const createWantListingSchema = z.object({
   autoAcceptMaxGap: z.number().int().min(0).optional(),
   autoAcceptMaxCycleLength: z.number().int().min(2).max(6).optional(),
   autoAcceptRegions: z.array(z.string().min(1)).default([]),
+  preferBalancedSwap: z.boolean().default(false),
 });
 export type CreateWantListingInput = z.infer<typeof createWantListingSchema>;
 
@@ -83,19 +86,20 @@ export const updateListingSchema = z.object({
   notes: z.string().max(500).optional(),
   currency: z.enum(currencyValues).optional(),
   isActive: z.boolean().optional(),
+  preferBalancedSwap: z.boolean().optional(),
 });
 export type UpdateListingInput = z.infer<typeof updateListingSchema>;
 
 // ─── Graded Listing Validators ────────────────────────────
 
-const gradingCompanyValues = GRADING_COMPANY_VALUES;
+const supportedGradingCompanies = ["PSA", "BGS"] as const;
 
 export const createGradedHaveListingSchema = z.object({
   cardId: z.string().min(1, "Card is required"),
-  gradingCompany: z.enum(gradingCompanyValues),
+  gradingCompany: z.enum(supportedGradingCompanies),
   grade: z.number().min(1).max(10),
   certNumber: z.string().min(7).max(10).regex(/^\d+$/, "Cert number must be numeric"),
-  language: z.string().default("EN"),
+  language: z.enum(cardLanguageValues),
   askPrice: z.number().int().min(1).max(10_000_000),
   currency: z.enum(currencyValues).default("USD"),
   notes: z.string().max(500).optional(),
@@ -108,10 +112,10 @@ export type CreateGradedHaveListingInput = z.infer<typeof createGradedHaveListin
 
 export const createGradedWantListingSchema = z.object({
   cardId: z.string().min(1, "Card is required"),
-  gradingCompany: z.enum(gradingCompanyValues).optional(),
+  gradingCompany: z.enum(supportedGradingCompanies).optional(),
   minGrade: z.number().min(1).max(10),
   maxGrade: z.number().min(1).max(10).optional(),
-  language: z.string().optional(),
+  language: z.enum(cardLanguageValues),
   bidPrice: z.number().int().min(1).max(10_000_000),
   currency: z.enum(currencyValues).default("USD"),
   notes: z.string().max(500).optional(),
@@ -136,7 +140,10 @@ export const shippingAddressSchema = z.object({
   state: z.string().max(100).optional(),
   postalCode: z.string().min(2).max(20),
   country: z.string().regex(ISO_COUNTRY_REGEX, "Must be ISO 3166-1 alpha-2 (e.g. US, JP, DE)"),
-  phone: z.string().regex(/^\+?[0-9\s\-()]{6,20}$/, "Invalid phone number").optional(),
+  phone: z
+    .string()
+    .regex(/^\+?[0-9\s\-()]{6,20}$/, "Invalid phone number")
+    .optional(),
   isDefault: z.boolean().default(false),
 });
 export type ShippingAddressInput = z.infer<typeof shippingAddressSchema>;
@@ -235,15 +242,9 @@ export const authenticatorApplicationSchema = z.object({
     .min(1, "Provide at least one proof of expertise")
     .max(5),
 });
-export type AuthenticatorApplicationInput = z.infer<
-  typeof authenticatorApplicationSchema
->;
+export type AuthenticatorApplicationInput = z.infer<typeof authenticatorApplicationSchema>;
 
-const applicationReviewActions = [
-  "approve",
-  "reject",
-  "request_info",
-] as const;
+const applicationReviewActions = ["approve", "reject", "request_info"] as const;
 
 export const applicationReviewSchema = z.object({
   action: z.enum(applicationReviewActions),
@@ -254,14 +255,12 @@ export type ApplicationReviewInput = z.infer<typeof applicationReviewSchema>;
 // ─── CCS Validators ────────────────────────────────
 
 const ccsScoreValues = [
-  1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5,
-  6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0,
+  1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0,
 ] as const;
 
-const ccsScore = z.number().refine(
-  (val) => (ccsScoreValues as readonly number[]).includes(val),
-  { message: "Score must be 1.0-10.0 in 0.5 increments" },
-);
+const ccsScore = z.number().refine((val) => (ccsScoreValues as readonly number[]).includes(val), {
+  message: "Score must be 1.0-10.0 in 0.5 increments",
+});
 
 export const ccsInputSchema = z.object({
   surface: ccsScore,
@@ -276,10 +275,7 @@ export const verificationResultSchema = z.object({
   conditionVerified: z.enum(conditionValues),
   conditionMatchesListing: z.boolean(),
   notes: z.string().max(2000).default(""),
-  photos: z
-    .array(z.string())
-    .min(4, "Minimum 4 photos required")
-    .max(10),
+  photos: z.array(z.string()).min(4, "Minimum 4 photos required").max(10),
   defects: z.array(z.string().max(200)).default([]),
   confidenceLevel: z.enum(["HIGH", "MEDIUM", "LOW"]),
   // For graded cards
@@ -313,11 +309,7 @@ export type RecordInsuranceBondInput = z.infer<typeof recordInsuranceBondSchema>
 
 // ─── KYC Validators ──────────────────────────────────
 
-const kycDocMimeTypes = [
-  "image/jpeg",
-  "image/png",
-  "application/pdf",
-] as const;
+const kycDocMimeTypes = ["image/jpeg", "image/png", "application/pdf"] as const;
 
 const kycDocumentSchema = z.object({
   type: z.enum(["GOVERNMENT_ID", "SELFIE", "PROOF_OF_ADDRESS", "BANK_VERIFICATION"]),
@@ -471,3 +463,35 @@ export const listExpertPostsSchema = z.object({
   page: z.number().int().min(1).default(1),
   limit: z.number().int().min(1).max(50).default(20),
 });
+
+// ─── Sealed Product Listings ────────────────────────────
+
+export const createSealedHaveListingSchema = z.object({
+  sealedProductId: z.string().cuid(),
+  condition: z.enum(["FACTORY_SEALED", "OPENED", "DAMAGED_BOX"]).default("FACTORY_SEALED"),
+  language: z.string().default("EN"),
+  quantity: z.number().int().min(1).max(100).default(1),
+  askPrice: z.number().int().min(1).max(10_000_000),
+  currency: z.string().default("USD"),
+  notes: z.string().max(500).optional(),
+  autoAccept: z.boolean().default(false),
+  autoAcceptMaxGap: z.number().int().min(0).optional(),
+  autoAcceptMaxCycleLength: z.number().int().min(2).max(10).optional(),
+});
+
+export type CreateSealedHaveListingInput = z.infer<typeof createSealedHaveListingSchema>;
+
+export const createSealedWantListingSchema = z.object({
+  sealedProductId: z.string().cuid(),
+  minCondition: z.enum(["FACTORY_SEALED", "OPENED", "DAMAGED_BOX"]).default("FACTORY_SEALED"),
+  language: z.string().nullable().default(null),
+  maxQuantity: z.number().int().min(1).max(100).default(1),
+  bidPrice: z.number().int().min(1).max(10_000_000),
+  currency: z.string().default("USD"),
+  notes: z.string().max(500).optional(),
+  autoAccept: z.boolean().default(false),
+  autoAcceptMaxGap: z.number().int().min(0).optional(),
+  autoAcceptMaxCycleLength: z.number().int().min(2).max(10).optional(),
+});
+
+export type CreateSealedWantListingInput = z.infer<typeof createSealedWantListingSchema>;

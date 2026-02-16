@@ -46,10 +46,15 @@ interface VerificationResult {
   issues: string[];
 }
 
-async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Promise<VerificationResult> {
+async function verify(
+  db: PrismaClient,
+  tcgFilter?: string,
+  verbose = false,
+): Promise<VerificationResult> {
   const issues: string[] = [];
 
   // 1. Count sets
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const setWhere = tcgFilter ? { tcg: tcgFilter as any } : {};
   const sets = await db.cardSet.findMany({
     where: setWhere,
@@ -114,14 +119,17 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
   }
 
   // 3. Global counts
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const cardWhere = tcgFilter ? { tcg: tcgFilter as any } : {};
   const totalCards = await db.card.count({ where: cardWhere });
   const totalVariants = await db.cardVariant.count({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     where: tcgFilter ? { card: { tcg: tcgFilter as any } } : {},
   });
 
   const eurOnlyVariants = await db.cardVariant.count({
     where: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ...(tcgFilter ? { card: { tcg: tcgFilter as any } } : {}),
       priceEur: { not: null },
       priceUsd: null,
@@ -130,6 +138,7 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
 
   const usdOnlyVariants = await db.cardVariant.count({
     where: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ...(tcgFilter ? { card: { tcg: tcgFilter as any } } : {}),
       priceEur: null,
       priceUsd: { not: null },
@@ -138,6 +147,7 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
 
   const crossMatchedVariants = await db.cardVariant.count({
     where: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ...(tcgFilter ? { card: { tcg: tcgFilter as any } } : {}),
       priceEur: { not: null },
       priceUsd: { not: null },
@@ -146,6 +156,7 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
 
   const noPriceVariants = await db.cardVariant.count({
     where: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ...(tcgFilter ? { card: { tcg: tcgFilter as any } } : {}),
       priceEur: null,
       priceUsd: null,
@@ -154,6 +165,7 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
 
   // 4. Orphaned cards (no setId)
   const orphanedCards = await db.card.count({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     where: { ...(tcgFilter ? { tcg: tcgFilter as any } : {}), setId: null },
   });
   if (orphanedCards > 0) {
@@ -162,6 +174,7 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
 
   // 5. Missing images
   const missingImages = await db.card.count({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     where: { ...(tcgFilter ? { tcg: tcgFilter as any } : {}), imageUrl: null },
   });
   if (missingImages > 0) {
@@ -169,13 +182,15 @@ async function verify(db: PrismaClient, tcgFilter?: string, verbose = false): Pr
   }
 
   // 6. Variants without card link (shouldn't happen, but check)
-  const danglingVariants = await db.cardVariant.count({
-    where: {
-      card: {
-        id: undefined,
+  const danglingVariants = await db.cardVariant
+    .count({
+      where: {
+        card: {
+          id: undefined,
+        },
       },
-    },
-  }).catch(() => 0); // Will fail if no dangling — that's fine
+    })
+    .catch(() => 0); // Will fail if no dangling — that's fine
 
   return {
     totalSets: sets.length,
@@ -223,15 +238,15 @@ function printReport(result: VerificationResult, verbose: boolean) {
   console.log("\n── Per-Set Breakdown ───────────────────────────────────────\n");
   console.log(
     "  " +
-    "Set".padEnd(10) +
-    "Name".padEnd(30) +
-    "Cards".padStart(7) +
-    "Vars".padStart(7) +
-    "EUR".padStart(6) +
-    "USD".padStart(6) +
-    "Both".padStart(6) +
-    "CM".padStart(4) +
-    "TCP".padStart(5)
+      "Set".padEnd(10) +
+      "Name".padEnd(30) +
+      "Cards".padStart(7) +
+      "Vars".padStart(7) +
+      "EUR".padStart(6) +
+      "USD".padStart(6) +
+      "Both".padStart(6) +
+      "CM".padStart(4) +
+      "TCP".padStart(5),
   );
   console.log("  " + "─".repeat(81));
 
@@ -239,15 +254,15 @@ function printReport(result: VerificationResult, verbose: boolean) {
     const name = r.name.length > 28 ? r.name.slice(0, 27) + "…" : r.name;
     console.log(
       "  " +
-      r.code.padEnd(10) +
-      name.padEnd(30) +
-      String(r.cardCount).padStart(7) +
-      String(r.variantCount).padStart(7) +
-      String(r.eurPriceCount).padStart(6) +
-      String(r.usdPriceCount).padStart(6) +
-      String(r.crossMatchCount).padStart(6) +
-      (r.hasCardmarketId ? " ✓" : " ✗").padStart(4) +
-      (r.hasTcgplayerGroupId ? "  ✓" : "  ✗").padStart(5)
+        r.code.padEnd(10) +
+        name.padEnd(30) +
+        String(r.cardCount).padStart(7) +
+        String(r.variantCount).padStart(7) +
+        String(r.eurPriceCount).padStart(6) +
+        String(r.usdPriceCount).padStart(6) +
+        String(r.crossMatchCount).padStart(6) +
+        (r.hasCardmarketId ? " ✓" : " ✗").padStart(4) +
+        (r.hasTcgplayerGroupId ? "  ✓" : "  ✗").padStart(5),
     );
   }
 

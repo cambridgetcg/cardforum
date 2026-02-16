@@ -71,7 +71,8 @@ function loadSearchTrends(tcg: TCG): SearchTrendFile[] {
   const dir = getResearchDir(tcg);
   if (!fs.existsSync(dir)) return [];
 
-  return fs.readdirSync(dir)
+  return fs
+    .readdirSync(dir)
     .filter((f) => f.startsWith("search-trends-") && f.endsWith(".json"))
     .map((f) => loadJson<SearchTrendFile>(path.join(dir, f)))
     .filter((d): d is SearchTrendFile => d !== null);
@@ -157,7 +158,7 @@ function alignTimeSeries(
     const targetTime = new Date(pointA.date).getTime() + lagDays * DAY_MS;
 
     // Find closest point in seriesB
-    let best: typeof seriesB[0] | null = null;
+    let best: (typeof seriesB)[0] | null = null;
     let bestDist = Infinity;
 
     for (const pointB of seriesB) {
@@ -242,10 +243,7 @@ const ANOMALY_WINDOW_DAYS = 30;
 /**
  * Detect price anomalies using Z-score on percentage changes.
  */
-function detectAnomalies(
-  tcg: TCG,
-  cardTrends: CardPriceTrend[],
-): TrendAnomaly[] {
+function detectAnomalies(tcg: TCG, cardTrends: CardPriceTrend[]): TrendAnomaly[] {
   const anomalies: TrendAnomaly[] = [];
 
   for (const card of cardTrends) {
@@ -295,10 +293,7 @@ function detectAnomalies(
 /**
  * Classify the trend direction for a card based on its deltas.
  */
-function classifySignal(
-  card: CardPriceTrend,
-  anomalies: TrendAnomaly[],
-): TrendSignal | null {
+function classifySignal(card: CardPriceTrend, anomalies: TrendAnomaly[]): TrendSignal | null {
   const trend = card.trend;
   if (!trend) return null;
 
@@ -321,7 +316,7 @@ function classifySignal(
     reason = "Anomalous price movement detected (Z-score > 2.5)";
     confidence = 0.8;
   } else if (d7 !== null && d30 !== null) {
-    if (d7 > 0.10 && d30 > 0.20) {
+    if (d7 > 0.1 && d30 > 0.2) {
       direction = "surging";
       strength = "strong";
       reason = `Price rising strongly: +${(d7 * 100).toFixed(1)}% (7d), +${(d30 * 100).toFixed(1)}% (30d)`;
@@ -331,17 +326,17 @@ function classifySignal(
       strength = "moderate";
       reason = `Upward trend forming: +${(d7 * 100).toFixed(1)}% (7d), +${(d30 * 100).toFixed(1)}% (30d)`;
       confidence = 0.5;
-    } else if (d7 < -0.05 && d30 > 0.10) {
+    } else if (d7 < -0.05 && d30 > 0.1) {
       direction = "peaking";
       strength = "moderate";
       reason = `Near peak: 7d declining ${(d7 * 100).toFixed(1)}% after 30d gain of +${(d30 * 100).toFixed(1)}%`;
       confidence = 0.5;
-    } else if (d7 < -0.05 && d30 < -0.10) {
+    } else if (d7 < -0.05 && d30 < -0.1) {
       direction = "fading";
       strength = "moderate";
       reason = `Downtrend: ${(d7 * 100).toFixed(1)}% (7d), ${(d30 * 100).toFixed(1)}% (30d)`;
       confidence = 0.6;
-    } else if (d7 < -0.15 && d30 < -0.20) {
+    } else if (d7 < -0.15 && d30 < -0.2) {
       direction = "crashing";
       strength = "strong";
       reason = `Rapid decline: ${(d7 * 100).toFixed(1)}% (7d), ${(d30 * 100).toFixed(1)}% (30d)`;
@@ -358,12 +353,12 @@ function classifySignal(
       confidence = 0.5;
     }
   } else if (d7 !== null) {
-    if (d7 > 0.10) {
+    if (d7 > 0.1) {
       direction = "emerging";
       strength = "weak";
       reason = `Short-term rise: +${(d7 * 100).toFixed(1)}% (7d)`;
       confidence = 0.3;
-    } else if (d7 < -0.10) {
+    } else if (d7 < -0.1) {
       direction = "fading";
       strength = "weak";
       reason = `Short-term decline: ${(d7 * 100).toFixed(1)}% (7d)`;
@@ -386,28 +381,33 @@ function classifySignal(
     confidence,
     detectedAt: new Date().toISOString(),
     evidence: [
-      ...(d7 !== null ? [{
-        metric: "market_price" as const,
-        value: trend.current,
-        delta: d7,
-        period: "7d",
-      }] : []),
-      ...(d30 !== null ? [{
-        metric: "market_price" as const,
-        value: trend.current,
-        delta: d30,
-        period: "30d",
-      }] : []),
+      ...(d7 !== null
+        ? [
+            {
+              metric: "market_price" as const,
+              value: trend.current,
+              delta: d7,
+              period: "7d",
+            },
+          ]
+        : []),
+      ...(d30 !== null
+        ? [
+            {
+              metric: "market_price" as const,
+              value: trend.current,
+              delta: d30,
+              period: "30d",
+            },
+          ]
+        : []),
     ],
   };
 }
 
 // ── Alert Generation ─────────────────────────────────────────
 
-function generateAlerts(
-  signals: TrendSignal[],
-  anomalies: TrendAnomaly[],
-): TrendAlert[] {
+function generateAlerts(signals: TrendSignal[], anomalies: TrendAnomaly[]): TrendAlert[] {
   const alerts: TrendAlert[] = [];
 
   for (const signal of signals) {
@@ -495,12 +495,14 @@ function generateAlerts(
         contributingMetrics: [anomaly.metric],
         confidence: 0.8,
         detectedAt: new Date().toISOString(),
-        evidence: [{
-          metric: anomaly.metric,
-          value: anomaly.dataPoint.value,
-          delta: anomaly.zScore,
-          period: "latest",
-        }],
+        evidence: [
+          {
+            metric: anomaly.metric,
+            value: anomaly.dataPoint.value,
+            delta: anomaly.zScore,
+            period: "latest",
+          },
+        ],
       },
       generatedAt: new Date().toISOString(),
       action: "watch",
@@ -509,7 +511,10 @@ function generateAlerts(
 
   // Sort by severity
   const severityOrder: Record<AlertSeverity, number> = {
-    critical: 0, high: 1, medium: 2, low: 3,
+    critical: 0,
+    high: 1,
+    medium: 2,
+    low: 3,
   };
   alerts.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
@@ -564,11 +569,7 @@ function computeSetReport(
         }))
         .sort((a, b) => a.date.localeCompare(b.date));
 
-      const correlation = computeCorrelations(
-        avgPriceSeries,
-        search.dataPoints,
-        setCode,
-      );
+      const correlation = computeCorrelations(avgPriceSeries, search.dataPoints, setCode);
 
       if (correlation) {
         correlations.push(correlation);
@@ -579,8 +580,9 @@ function computeSetReport(
   // Top movers
   const topMovers = (["1d", "7d", "30d"] as const).map((period) => {
     const deltaKey = `delta${period}` as keyof TrendDeltas;
-    const withDelta = priceTrends.cards
-      .filter((c) => c.trend && c.trend[deltaKey] !== null && c.trend[deltaKey] !== undefined);
+    const withDelta = priceTrends.cards.filter(
+      (c) => c.trend && c.trend[deltaKey] !== null && c.trend[deltaKey] !== undefined,
+    );
 
     const sorted = [...withDelta].sort(
       (a, b) => (b.trend![deltaKey] as number) - (a.trend![deltaKey] as number),
@@ -595,12 +597,20 @@ function computeSetReport(
 
   // Dominant signal
   const signalCounts: Record<SignalDirection, number> = {
-    emerging: 0, surging: 0, peaking: 0, fading: 0,
-    stable: 0, anomaly: 0, recovering: 0, crashing: 0,
+    emerging: 0,
+    surging: 0,
+    peaking: 0,
+    fading: 0,
+    stable: 0,
+    anomaly: 0,
+    recovering: 0,
+    crashing: 0,
   };
   for (const s of signals) signalCounts[s.direction]++;
-  const dominantSignal = (Object.entries(signalCounts) as [SignalDirection, number][])
-    .sort((a, b) => b[1] - a[1])[0]?.[0] ?? "stable";
+  const dominantSignal =
+    (Object.entries(signalCounts) as [SignalDirection, number][]).sort(
+      (a, b) => b[1] - a[1],
+    )[0]?.[0] ?? "stable";
 
   // Average deltas
   const d7Values = priceTrends.cards
@@ -622,12 +632,10 @@ function computeSetReport(
     summary: {
       totalCards: priceTrends.cards.length,
       cardsWithTrends: priceTrends.cards.filter((c) => c.trend !== null).length,
-      avgDelta7d: d7Values.length > 0
-        ? d7Values.reduce((a, b) => a + b, 0) / d7Values.length
-        : null,
-      avgDelta30d: d30Values.length > 0
-        ? d30Values.reduce((a, b) => a + b, 0) / d30Values.length
-        : null,
+      avgDelta7d:
+        d7Values.length > 0 ? d7Values.reduce((a, b) => a + b, 0) / d7Values.length : null,
+      avgDelta30d:
+        d30Values.length > 0 ? d30Values.reduce((a, b) => a + b, 0) / d30Values.length : null,
       setValueTrend: priceTrends.setTrend,
       dominantSignal,
     },
@@ -674,7 +682,8 @@ Prerequisites:
   if (isAll) {
     const dir = getResearchDir(tcg);
     if (fs.existsSync(dir)) {
-      setCodes = fs.readdirSync(dir)
+      setCodes = fs
+        .readdirSync(dir)
         .filter((f) => f.startsWith("price-trends-") && f.endsWith(".json"))
         .map((f) => f.replace("price-trends-", "").replace(".json", ""));
     }
@@ -713,7 +722,9 @@ Prerequisites:
 
     if (isDryRun) {
       console.log(`    [dry-run] Would process ${priceTrends.cards.length} cards`);
-      console.log(`    [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`);
+      console.log(
+        `    [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`,
+      );
       successCount++;
       continue;
     }
@@ -726,8 +737,12 @@ Prerequisites:
     console.log(`    -> ${path.relative(process.cwd(), outPath)}`);
 
     // Summary
-    console.log(`    Cards: ${report.summary.totalCards} (${report.summary.cardsWithTrends} with trends)`);
-    console.log(`    Signals: ${report.signals.length} (dominant: ${report.summary.dominantSignal})`);
+    console.log(
+      `    Cards: ${report.summary.totalCards} (${report.summary.cardsWithTrends} with trends)`,
+    );
+    console.log(
+      `    Signals: ${report.signals.length} (dominant: ${report.summary.dominantSignal})`,
+    );
     console.log(`    Anomalies: ${report.anomalies.length}`);
     console.log(`    Alerts: ${report.alerts.length}`);
     console.log(`    Correlations: ${report.correlations.length}`);

@@ -61,7 +61,7 @@ function ToastItem({ toast, onDismiss }: { toast: Toast; onDismiss: (id: string)
 
   return (
     <div
-      className={`flex items-center gap-2 rounded-lg border px-4 py-3 text-sm shadow-md animate-in slide-in-from-bottom-2 ${colors}`}
+      className={`animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-lg border px-4 py-3 text-sm shadow-md ${colors}`}
     >
       <Icon className="h-4 w-4 flex-shrink-0" />
       <span className="flex-1">{toast.message}</span>

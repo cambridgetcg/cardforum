@@ -20,9 +20,7 @@ export function ConditionPicker({ value, onChange, type, aiSuggestion }: Conditi
         {type === "have" ? "Condition" : "Minimum Condition"}
       </label>
       <p className="mt-0.5 text-xs text-gray-500">
-        {type === "have"
-          ? "How would you describe this card?"
-          : "Minimum condition you'll accept"}
+        {type === "have" ? "How would you describe this card?" : "Minimum condition you'll accept"}
       </p>
       <div className="mt-2 flex gap-1.5">
         {CONDITIONS.map((c) => (

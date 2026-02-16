@@ -48,7 +48,8 @@ async function main() {
   });
 
   // --- Check 2: Card counts per set match JSON source ---
-  const scrapedFiles = fs.readdirSync(DATA_DIR)
+  const scrapedFiles = fs
+    .readdirSync(DATA_DIR)
     .filter((f) => f.startsWith("cardmarket-") && f.endsWith(".json") && !f.includes("summary"));
 
   for (const file of scrapedFiles) {
@@ -96,13 +97,16 @@ async function main() {
   checks.push({
     name: "All cards have imageUrl",
     passed: cardsWithoutImage === 0,
-    message: cardsWithoutImage === 0
-      ? `All ${totalCards} cards have images`
-      : `${cardsWithoutImage} of ${totalCards} cards missing imageUrl`,
+    message:
+      cardsWithoutImage === 0
+        ? `All ${totalCards} cards have images`
+        : `${cardsWithoutImage} of ${totalCards} cards missing imageUrl`,
   });
 
   // --- Check 4: No duplicate cards ---
-  const duplicates = await db.$queryRawUnsafe<{ cnt: bigint; tcg: string; set_name: string; number: string }[]>(`
+  const duplicates = await db.$queryRawUnsafe<
+    { cnt: bigint; tcg: string; set_name: string; number: string }[]
+  >(`
     SELECT count(*) as cnt, tcg, "setName" as set_name, number
     FROM cards
     WHERE tcg = 'ONEPIECE'
@@ -112,9 +116,10 @@ async function main() {
   checks.push({
     name: "No duplicate cards",
     passed: duplicates.length === 0,
-    message: duplicates.length === 0
-      ? "No duplicates found"
-      : `${duplicates.length} duplicate card groups found`,
+    message:
+      duplicates.length === 0
+        ? "No duplicates found"
+        : `${duplicates.length} duplicate card groups found`,
     details: duplicates.map((d) => `${d.set_name} ${d.number}: ${d.cnt} copies`),
   });
 
@@ -130,9 +135,10 @@ async function main() {
   checks.push({
     name: "All sets have CardSet records",
     passed: setsWithoutCardSet.length === 0,
-    message: setsWithoutCardSet.length === 0
-      ? "All card sets have CardSet records"
-      : `${setsWithoutCardSet.length} sets missing CardSet records`,
+    message:
+      setsWithoutCardSet.length === 0
+        ? "All card sets have CardSet records"
+        : `${setsWithoutCardSet.length} sets missing CardSet records`,
     details: setsWithoutCardSet,
   });
 
@@ -143,9 +149,10 @@ async function main() {
   checks.push({
     name: "Cards linked to CardSet",
     passed: unlinkedCards === 0,
-    message: unlinkedCards === 0
-      ? `All ${totalCards} cards linked to a CardSet`
-      : `${unlinkedCards} of ${totalCards} cards not linked to a CardSet`,
+    message:
+      unlinkedCards === 0
+        ? `All ${totalCards} cards linked to a CardSet`
+        : `${unlinkedCards} of ${totalCards} cards not linked to a CardSet`,
   });
 
   // --- Check 7: Sample 10 random cards ---
@@ -176,7 +183,9 @@ async function main() {
   checks.push({
     name: "Sample card verification",
     passed: samplePassed,
-    message: samplePassed ? "All 10 sampled cards pass validation" : "Some sampled cards have issues",
+    message: samplePassed
+      ? "All 10 sampled cards pass validation"
+      : "Some sampled cards have issues",
     details: sampleDetails,
   });
 
@@ -198,7 +207,9 @@ async function main() {
   }
 
   console.log("\n" + "─".repeat(60));
-  console.log(`\nResults: ${totalPassed} passed, ${totalFailed} failed out of ${checks.length} checks`);
+  console.log(
+    `\nResults: ${totalPassed} passed, ${totalFailed} failed out of ${checks.length} checks`,
+  );
 
   // Overall stats
   const totalVariants = await db.cardVariant.count({

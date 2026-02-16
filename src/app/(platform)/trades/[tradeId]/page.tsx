@@ -124,7 +124,8 @@ function StatusTimeline({ history }: { history: { status: string; at: string }[]
           <div className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
           <span className="font-medium text-gray-700">{entry.status}</span>
           <span className="text-gray-400">
-            {new Date(entry.at).toLocaleDateString()} {new Date(entry.at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+            {new Date(entry.at).toLocaleDateString()}{" "}
+            {new Date(entry.at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
           </span>
         </div>
       ))}
@@ -156,11 +157,14 @@ function LegDetail({
   const isDirect = mode === "DIRECT";
 
   // Photo approval conditions
-  const showUpload = !isDirect && pa && isSender && (pa.status === "PENDING_PHOTOS" || pa.status === "REJECTED");
+  const showUpload =
+    !isDirect && pa && isSender && (pa.status === "PENDING_PHOTOS" || pa.status === "REJECTED");
   const showReview = !isDirect && pa && isReceiver && pa.status === "PENDING_REVIEW";
 
   // Shipping conditions
-  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(trade.status);
+  const isShippingPhase = ["DELIVERING", "SHIPPING", "DELIVERED", "COMPLETED"].includes(
+    trade.status,
+  );
   const legIsShipped = leg.status === "SHIPPED";
   const legIsDelivered = leg.status === "DELIVERED";
 
@@ -168,8 +172,7 @@ function LegDetail({
   // Authenticated: authenticator ships (outbound). Not handled here — authenticator has their own dashboard.
   // Direct: sender ships.
   const canRecordShipment =
-    isDirect && isSender && leg.status === "PENDING" &&
-    ["SHIPPING"].includes(trade.status);
+    isDirect && isSender && leg.status === "PENDING" && ["SHIPPING"].includes(trade.status);
 
   // Who can confirm delivery? Receiver, when leg is SHIPPED.
   const canConfirmDelivery = isReceiver && legIsShipped;
@@ -185,18 +188,28 @@ function LegDetail({
             <div>
               <p className="font-medium text-gray-900">{cardName}</p>
               <p className="text-xs text-gray-500">
-                {leg.haveListing?.condition ?? (leg.gradedHaveListing ? `${leg.gradedHaveListing.gradingCompany} ${leg.gradedHaveListing.grade}` : "")} &middot; {formatPrice(cardValue)}
+                {leg.haveListing?.condition ??
+                  (leg.gradedHaveListing
+                    ? `${leg.gradedHaveListing.gradingCompany} ${leg.gradedHaveListing.grade}`
+                    : "")}{" "}
+                &middot; {formatPrice(cardValue)}
               </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Badge className={
-              legIsDelivered ? "bg-green-100 text-green-700" :
-              legIsShipped ? "bg-blue-100 text-blue-700" :
-              leg.status === "VERIFIED" ? "bg-emerald-100 text-emerald-700" :
-              leg.status === "FAILED" ? "bg-red-100 text-red-700" :
-              "bg-gray-100 text-gray-700"
-            }>
+            <Badge
+              className={
+                legIsDelivered
+                  ? "bg-green-100 text-green-700"
+                  : legIsShipped
+                    ? "bg-blue-100 text-blue-700"
+                    : leg.status === "VERIFIED"
+                      ? "bg-emerald-100 text-emerald-700"
+                      : leg.status === "FAILED"
+                        ? "bg-red-100 text-red-700"
+                        : "bg-gray-100 text-gray-700"
+              }
+            >
               {leg.status}
             </Badge>
             {leg.isInternational && (
@@ -224,7 +237,8 @@ function LegDetail({
           <div className="mt-2 flex flex-wrap gap-3 text-xs">
             {leg.trackingNumber && (
               <span className="text-gray-500">
-                {isDirect ? "Tracking" : "Inbound"}: <span className="font-mono text-blue-600">{leg.trackingNumber}</span>
+                {isDirect ? "Tracking" : "Inbound"}:{" "}
+                <span className="font-mono text-blue-600">{leg.trackingNumber}</span>
               </span>
             )}
             {leg.outboundTracking && (
@@ -244,13 +258,15 @@ function LegDetail({
         {(leg.shippedAt || leg.deliveredAt) && (
           <div className="mt-1 flex gap-4 text-[10px] text-gray-400">
             {leg.shippedAt && <span>Shipped: {new Date(leg.shippedAt).toLocaleDateString()}</span>}
-            {leg.deliveredAt && <span>Delivered: {new Date(leg.deliveredAt).toLocaleDateString()}</span>}
+            {leg.deliveredAt && (
+              <span>Delivered: {new Date(leg.deliveredAt).toLocaleDateString()}</span>
+            )}
           </div>
         )}
 
         {/* Authenticator info */}
         {mode === "AUTHENTICATED" && leg.verification?.authenticator && (
-          <div className="mt-3 rounded-lg bg-white border border-gray-100 p-3 text-xs text-gray-600">
+          <div className="mt-3 rounded-lg border border-gray-100 bg-white p-3 text-xs text-gray-600">
             <p className="font-medium text-gray-800">
               {leg.verification.authenticator.businessName ?? "Authenticator"}
             </p>
@@ -258,14 +274,16 @@ function LegDetail({
               <p className="mt-0.5">{leg.verification.authenticator.businessAddress}</p>
             )}
             {leg.verification.authenticator.shippingNotes && (
-              <p className="mt-0.5 italic text-gray-400">{leg.verification.authenticator.shippingNotes}</p>
+              <p className="mt-0.5 text-gray-400 italic">
+                {leg.verification.authenticator.shippingNotes}
+              </p>
             )}
             <div className="mt-1.5 flex gap-2">
               {leg.verification.authenticator.acceptsDropOff && (
-                <Badge className="bg-emerald-50 text-emerald-700 text-[10px]">Drop-off OK</Badge>
+                <Badge className="bg-emerald-50 text-[10px] text-emerald-700">Drop-off OK</Badge>
               )}
               {leg.verification.authenticator.acceptsMail && (
-                <Badge className="bg-blue-50 text-blue-700 text-[10px]">Mail OK</Badge>
+                <Badge className="bg-blue-50 text-[10px] text-blue-700">Mail OK</Badge>
               )}
             </div>
           </div>
@@ -274,7 +292,7 @@ function LegDetail({
         {/* Photo approval */}
         {!isDirect && pa && (
           <div className="mt-3">
-            <div className="flex items-center gap-2 mb-2">
+            <div className="mb-2 flex items-center gap-2">
               <span className="text-xs text-gray-500">Photo Approval:</span>
               <PhotoApprovalBadge status={pa.status} />
             </div>
@@ -462,9 +480,7 @@ export default function TradeDetailPage() {
       <div className="mt-4 flex items-center justify-between">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-gray-900">
-              Trade #{trade.id.slice(-6)}
-            </h1>
+            <h1 className="text-2xl font-bold text-gray-900">Trade #{trade.id.slice(-6)}</h1>
             <TradeModeBadge mode={mode} />
             <TradeStatusBadge status={trade.status} />
           </div>
@@ -481,17 +497,11 @@ export default function TradeDetailPage() {
       {/* Address warning for pre-escrow trades */}
       {needsAddress && (
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
-          <p className="text-sm font-medium text-amber-800">
-            Shipping address required
-          </p>
+          <p className="text-sm font-medium text-amber-800">Shipping address required</p>
           <p className="mt-1 text-xs text-amber-600">
             You need a shipping address before this trade can be escrowed. Add one below.
           </p>
-          <Button
-            size="sm"
-            className="mt-2"
-            onClick={() => setShowAddressForm(true)}
-          >
+          <Button size="sm" className="mt-2" onClick={() => setShowAddressForm(true)}>
             Add Shipping Address
           </Button>
         </div>
@@ -501,7 +511,7 @@ export default function TradeDetailPage() {
       {showAddressForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
           <div className="w-full max-w-lg rounded-xl bg-white p-6 shadow-xl">
-            <div className="flex items-center justify-between mb-4">
+            <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-semibold">Add Shipping Address</h2>
               <Button variant="ghost" size="sm" onClick={() => setShowAddressForm(false)}>
                 &times;
@@ -520,9 +530,7 @@ export default function TradeDetailPage() {
       <div className="mt-6 grid gap-6 lg:grid-cols-3">
         {/* Main content: legs */}
         <div className="space-y-4 lg:col-span-2">
-          <h2 className="text-lg font-semibold text-gray-900">
-            Trade Legs ({trade.legs.length})
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-900">Trade Legs ({trade.legs.length})</h2>
 
           {trade.legs.map((leg) => (
             <LegDetail
@@ -546,22 +554,37 @@ export default function TradeDetailPage() {
               <CardContent>
                 <div className="flex flex-col gap-2">
                   {canAccept && (
-                    <Button onClick={() => handleAction("accept")} disabled={actionLoading || needsAddress}>
+                    <Button
+                      onClick={() => handleAction("accept")}
+                      disabled={actionLoading || needsAddress}
+                    >
                       {actionLoading ? "Processing..." : "Accept Trade"}
                     </Button>
                   )}
                   {canRequestAuth && (
-                    <Button variant="outline" onClick={() => handleAction("request-auth")} disabled={actionLoading}>
+                    <Button
+                      variant="outline"
+                      onClick={() => handleAction("request-auth")}
+                      disabled={actionLoading}
+                    >
                       Request Authentication
                     </Button>
                   )}
                   {canReject && (
-                    <Button variant="outline" onClick={() => handleAction("reject")} disabled={actionLoading}>
+                    <Button
+                      variant="outline"
+                      onClick={() => handleAction("reject")}
+                      disabled={actionLoading}
+                    >
                       Reject
                     </Button>
                   )}
                   {canCancel && (
-                    <Button variant="destructive" onClick={() => handleAction("cancel")} disabled={actionLoading}>
+                    <Button
+                      variant="destructive"
+                      onClick={() => handleAction("cancel")}
+                      disabled={actionLoading}
+                    >
                       Cancel Trade
                     </Button>
                   )}
@@ -600,7 +623,7 @@ export default function TradeDetailPage() {
                     <span className="text-gray-500">Escrow</span>
                     <div className="text-right">
                       <span className="font-medium">{formatPrice(trade.escrow.totalAmount)}</span>
-                      <Badge className="ml-2 text-[10px] bg-gray-100 text-gray-600">
+                      <Badge className="ml-2 bg-gray-100 text-[10px] text-gray-600">
                         {trade.escrow.status}
                       </Badge>
                     </div>
@@ -619,11 +642,7 @@ export default function TradeDetailPage() {
           </Card>
 
           {/* Shipping overview */}
-          <ShippingStatus
-            legs={shippingLegs}
-            tradeMode={mode}
-            tradeStatus={trade.status}
-          />
+          <ShippingStatus legs={shippingLegs} tradeMode={mode} tradeStatus={trade.status} />
 
           {/* Shipping address */}
           {addresses.length > 0 && (
@@ -642,14 +661,18 @@ export default function TradeDetailPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                {addresses.filter((a) => a.isDefault).map((addr) => (
-                  <div key={addr.id} className="text-sm text-gray-600">
-                    <p className="font-medium text-gray-800">{addr.label}</p>
-                    <p>{addr.line1}</p>
-                    <p>{addr.city}, {addr.postalCode}</p>
-                    <p>{addr.country}</p>
-                  </div>
-                ))}
+                {addresses
+                  .filter((a) => a.isDefault)
+                  .map((addr) => (
+                    <div key={addr.id} className="text-sm text-gray-600">
+                      <p className="font-medium text-gray-800">{addr.label}</p>
+                      <p>{addr.line1}</p>
+                      <p>
+                        {addr.city}, {addr.postalCode}
+                      </p>
+                      <p>{addr.country}</p>
+                    </div>
+                  ))}
               </CardContent>
             </Card>
           )}

@@ -37,6 +37,7 @@ export interface GradedWantRow {
   gradingCompany: string | null;
   minGrade: number;
   maxGrade: number | null;
+  language: string | null; // null = any language
   bidPrice: number;
   user: UserWithRegion;
 }
@@ -91,6 +92,9 @@ export function buildGradedEdges(
       // Check price viability
       if (want.bidPrice < have.askPrice) continue;
 
+      // Language filter: want.language specified → must match have.language
+      if (want.language && have.language !== want.language) continue;
+
       edges.push({
         haveListingId: have.id,
         wantListingId: want.id,
@@ -100,6 +104,7 @@ export function buildGradedEdges(
         haveRegion: resolveRegion(have.user),
         wantRegion: resolveRegion(want.user),
         condition: `${have.gradingCompany}-${have.grade}`,
+        language: have.language,
         askPrice: have.askPrice,
         bidPrice: want.bidPrice,
       });

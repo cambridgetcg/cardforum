@@ -1,6 +1,13 @@
 "use client";
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface PullRate {
   rarity: string;
@@ -74,17 +81,27 @@ export function PullRateTable({ rates, packsPerBox, setCode, language }: PullRat
             {rates.map((rate) => (
               <TableRow key={rate.rarity}>
                 <TableCell>
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-                    RARITY_COLORS[rate.rarity] ?? "bg-gray-100 text-gray-700"
-                  }`}>
+                  <span
+                    className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+                      RARITY_COLORS[rate.rarity] ?? "bg-gray-100 text-gray-700"
+                    }`}
+                  >
                     {rate.rarity}
                   </span>
                 </TableCell>
                 <TableCell className="text-right font-mono text-sm">{rate.uniqueCards}</TableCell>
-                <TableCell className="text-right font-mono text-sm">{rate.perPack.toFixed(2)}</TableCell>
-                <TableCell className="text-right font-mono text-sm">{rate.perBox.toFixed(1)}</TableCell>
-                <TableCell className="text-right text-sm">{formatOdds(rate.packProbability)}</TableCell>
-                <TableCell className="text-right text-sm">{formatPct(rate.boxProbability)}</TableCell>
+                <TableCell className="text-right font-mono text-sm">
+                  {rate.perPack.toFixed(2)}
+                </TableCell>
+                <TableCell className="text-right font-mono text-sm">
+                  {rate.perBox.toFixed(1)}
+                </TableCell>
+                <TableCell className="text-right text-sm">
+                  {formatOdds(rate.packProbability)}
+                </TableCell>
+                <TableCell className="text-right text-sm">
+                  {formatPct(rate.boxProbability)}
+                </TableCell>
                 <TableCell className="text-right font-mono text-sm">
                   {rate.perSpecificCardPerBox >= 1
                     ? rate.perSpecificCardPerBox.toFixed(1)
@@ -97,8 +114,8 @@ export function PullRateTable({ rates, packsPerBox, setCode, language }: PullRat
       </div>
 
       <p className="text-xs text-gray-400">
-        Theoretical rates based on known pack structure. Actual results may vary.
-        Not affiliated with Bandai or any TCG manufacturer.
+        Theoretical rates based on known pack structure. Actual results may vary. Not affiliated
+        with Bandai or any TCG manufacturer.
       </p>
     </div>
   );

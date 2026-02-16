@@ -10,7 +10,25 @@ import { ConnectAccount } from "@/components/wallet/connect-account";
 
 interface Transaction {
   id: string;
-  type: "DEPOSIT" | "WITHDRAWAL" | "WITHDRAWAL_REVERSAL" | "TRADE_HOLD" | "TRADE_RELEASE" | "TRADE_FEE" | "TRADE_REFUND" | "VERIFICATION_FEE" | "VERIFICATION_FEE_REFUND" | "AUTHENTICATOR_EARN" | "DIGITISATION_FEE" | "DIGITISATION_FEE_REFUND" | "DIGITAL_TRADE_HOLD" | "DIGITAL_TRADE_RELEASE" | "DIGITAL_TRADE_FEE" | "DIGITISER_ROYALTY" | "REDEMPTION_FEE" | "VAULT_EARN";
+  type:
+    | "DEPOSIT"
+    | "WITHDRAWAL"
+    | "WITHDRAWAL_REVERSAL"
+    | "TRADE_HOLD"
+    | "TRADE_RELEASE"
+    | "TRADE_FEE"
+    | "TRADE_REFUND"
+    | "VERIFICATION_FEE"
+    | "VERIFICATION_FEE_REFUND"
+    | "AUTHENTICATOR_EARN"
+    | "DIGITISATION_FEE"
+    | "DIGITISATION_FEE_REFUND"
+    | "DIGITAL_TRADE_HOLD"
+    | "DIGITAL_TRADE_RELEASE"
+    | "DIGITAL_TRADE_FEE"
+    | "DIGITISER_ROYALTY"
+    | "REDEMPTION_FEE"
+    | "VAULT_EARN";
   amount: number;
   balanceAfter: number;
   description: string;
@@ -58,7 +76,7 @@ function WalletContent() {
   }, []);
 
   useEffect(() => {
-    fetchData();
+    fetchData(); // eslint-disable-line react-hooks/set-state-in-effect
   }, [fetchData]);
 
   if (loading) {
@@ -85,13 +103,11 @@ function WalletContent() {
 
       {frozen && (
         <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3">
-          <p className="text-sm font-medium text-red-800">
-            Your wallet is frozen
-          </p>
+          <p className="text-sm font-medium text-red-800">Your wallet is frozen</p>
           <p className="mt-1 text-xs text-red-600">
             Withdrawals and trades are disabled due to a pending dispute.
-            {frozenReason && ` Reason: ${frozenReason}`}
-            {" "}Contact support if you believe this is an error.
+            {frozenReason && ` Reason: ${frozenReason}`} Contact support if you believe this is an
+            error.
           </p>
         </div>
       )}
@@ -128,9 +144,7 @@ export default function WalletPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Wallet</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Manage your funds for trading
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Manage your funds for trading</p>
       <Suspense fallback={<p className="mt-6 text-gray-500">Loading wallet...</p>}>
         <WalletContent />
       </Suspense>

@@ -59,7 +59,7 @@ function processGroup(group: TcgcsvGroup, tcg: string): TcgplayerGroupEntry {
   if (tcg === "ONEPIECE") {
     const inferred = inferSetCode(group.name);
     if (inferred) {
-      setCode = inferred.replace(/-/g, "");
+      setCode = normalizeSetCode(inferred);
     }
   }
 

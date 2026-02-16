@@ -33,8 +33,7 @@ interface SDNEntry {
 let sdnEntries: SDNEntry[] = [];
 let sdnLoadedAt: number = 0;
 const SDN_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
-const SDN_CSV_URL =
-  "https://www.treasury.gov/ofac/downloads/sdn.csv";
+const SDN_CSV_URL = "https://www.treasury.gov/ofac/downloads/sdn.csv";
 
 /**
  * Load SDN entries from the Treasury CSV. Cached for 24 hours.
@@ -126,8 +125,7 @@ function jaroWinkler(s1: string, s2: string): number {
     k++;
   }
 
-  const jaro =
-    (matches / a + matches / b + (matches - transpositions / 2) / matches) / 3;
+  const jaro = (matches / a + matches / b + (matches - transpositions / 2) / matches) / 3;
 
   // Winkler prefix bonus
   let prefix = 0;

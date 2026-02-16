@@ -54,10 +54,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       case "verify": {
         const parsed = digitisationVerificationSchema.safeParse(body);
         if (!parsed.success) {
-          return NextResponse.json(
-            { error: parsed.error.flatten().fieldErrors },
-            { status: 400 },
-          );
+          return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
         }
         // Auto-mints on verification completion
         const result = await completeVerification(requestId, parsed.data);
@@ -67,10 +64,7 @@ export async function POST(req: NextRequest, { params }: Params) {
         // Single-step: receive + verify + auto-mint
         const parsed = digitisationVerificationSchema.safeParse(body);
         if (!parsed.success) {
-          return NextResponse.json(
-            { error: parsed.error.flatten().fieldErrors },
-            { status: 400 },
-          );
+          return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
         }
         const result = await receiveAndVerify(requestId, session.user.id, parsed.data);
         return NextResponse.json(result, { status: 201 });
@@ -83,10 +77,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       case "reject": {
         const reason = body.reason as string;
         if (!reason) {
-          return NextResponse.json(
-            { error: "Rejection reason is required" },
-            { status: 400 },
-          );
+          return NextResponse.json({ error: "Rejection reason is required" }, { status: 400 });
         }
         const result = await rejectDigitisation(requestId, reason);
         return NextResponse.json(result);
@@ -97,7 +88,10 @@ export async function POST(req: NextRequest, { params }: Params) {
       }
       default:
         return NextResponse.json(
-          { error: "Invalid action. Use: receive, start_verification, verify, receive_and_verify, mint, reject, cancel" },
+          {
+            error:
+              "Invalid action. Use: receive, start_verification, verify, receive_and_verify, mint, reject, cancel",
+          },
           { status: 400 },
         );
     }

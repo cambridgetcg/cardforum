@@ -4,7 +4,13 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CONDITION_LABELS, TCG_LABELS, formatPrice, type TCG, type Condition } from "@/types/domain";
+import {
+  CONDITION_LABELS,
+  TCG_LABELS,
+  formatPrice,
+  type TCG,
+  type Condition,
+} from "@/types/domain";
 import { formatRelativeTime } from "@/lib/utils";
 import { ConditionBadge } from "./condition-badge";
 import { Trash2, Pause, Play, Check, X, Pencil } from "lucide-react";
@@ -89,9 +95,11 @@ export function ListingCard({
   }
 
   return (
-    <div className={`flex items-start justify-between gap-3 rounded-xl border bg-white p-4 ${
-      isActive ? "border-gray-200" : "border-gray-100 opacity-60"
-    }`}>
+    <div
+      className={`flex items-start justify-between gap-3 rounded-xl border bg-white p-4 ${
+        isActive ? "border-gray-200" : "border-gray-100 opacity-60"
+      }`}
+    >
       <div className="flex-1 space-y-1">
         <div className="flex items-center gap-2">
           <h3 className="font-semibold text-gray-900">{card.name}</h3>

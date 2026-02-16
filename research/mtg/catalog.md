@@ -12,32 +12,32 @@ Magic: The Gathering is the most complex trading card game to catalog. With appr
 
 Scryfall classifies every MTG product release into one of 24 set types:
 
-| Set Type | Description | Examples |
-|----------|-------------|---------|
-| `core` | Yearly core sets | Tenth Edition, Magic 2015, Foundations |
-| `expansion` | Rotational expansion sets | Zendikar, Innistrad, Duskmourn |
-| `masters` | Reprint-only sets | Modern Masters, Commander Masters |
-| `eternal` | New cards for non-rotating formats | Modern Horizons 3 |
-| `alchemy` | Arena-only digital sets | Alchemy: Innistrad |
-| `masterpiece` | Premium foil inserts | Kaladesh Inventions, Amonkhet Invocations |
-| `arsenal` | Commander gift sets | Commander Collection: Green |
-| `from_the_vault` | Premium gift sets (discontinued) | From the Vault: Relics |
-| `spellbook` | Themed reprint gift sets | Spellbook: Jace |
-| `premium_deck` | Premium precon decks (discontinued) | Premium Deck Series: Slivers |
-| `duel_deck` | Two-player precon decks (discontinued) | Duel Decks: Elves vs. Goblins |
-| `draft_innovation` | Special draft formats | Conspiracy, Battlebond |
-| `treasure_chest` | Magic Online prize cards | MTGO Treasure Chests |
-| `commander` | Commander precon decks | Every set's Commander decks |
-| `planechase` | Planechase products | Planechase 2012 |
-| `archenemy` | Archenemy products | Archenemy: Nicol Bolas |
-| `vanguard` | Vanguard card sets | Vanguard |
-| `funny` | Un-sets and joke promos | Unglued, Unfinity, Happy Holidays |
-| `starter` | Intro products | Portal, Starter 2000 |
-| `box` | Gift box sets | Gift Bundles |
-| `promo` | Purely promotional cards | Judge Promos, FNM Promos |
-| `token` | Token and emblem sets | Set-specific token sheets |
-| `memorabilia` | Non-legal collectibles | Gold-bordered, oversized, trophy cards |
-| `minigame` | Minigame card inserts | Minigame inserts from boosters |
+| Set Type           | Description                            | Examples                                  |
+| ------------------ | -------------------------------------- | ----------------------------------------- |
+| `core`             | Yearly core sets                       | Tenth Edition, Magic 2015, Foundations    |
+| `expansion`        | Rotational expansion sets              | Zendikar, Innistrad, Duskmourn            |
+| `masters`          | Reprint-only sets                      | Modern Masters, Commander Masters         |
+| `eternal`          | New cards for non-rotating formats     | Modern Horizons 3                         |
+| `alchemy`          | Arena-only digital sets                | Alchemy: Innistrad                        |
+| `masterpiece`      | Premium foil inserts                   | Kaladesh Inventions, Amonkhet Invocations |
+| `arsenal`          | Commander gift sets                    | Commander Collection: Green               |
+| `from_the_vault`   | Premium gift sets (discontinued)       | From the Vault: Relics                    |
+| `spellbook`        | Themed reprint gift sets               | Spellbook: Jace                           |
+| `premium_deck`     | Premium precon decks (discontinued)    | Premium Deck Series: Slivers              |
+| `duel_deck`        | Two-player precon decks (discontinued) | Duel Decks: Elves vs. Goblins             |
+| `draft_innovation` | Special draft formats                  | Conspiracy, Battlebond                    |
+| `treasure_chest`   | Magic Online prize cards               | MTGO Treasure Chests                      |
+| `commander`        | Commander precon decks                 | Every set's Commander decks               |
+| `planechase`       | Planechase products                    | Planechase 2012                           |
+| `archenemy`        | Archenemy products                     | Archenemy: Nicol Bolas                    |
+| `vanguard`         | Vanguard card sets                     | Vanguard                                  |
+| `funny`            | Un-sets and joke promos                | Unglued, Unfinity, Happy Holidays         |
+| `starter`          | Intro products                         | Portal, Starter 2000                      |
+| `box`              | Gift box sets                          | Gift Bundles                              |
+| `promo`            | Purely promotional cards               | Judge Promos, FNM Promos                  |
+| `token`            | Token and emblem sets                  | Set-specific token sheets                 |
+| `memorabilia`      | Non-legal collectibles                 | Gold-bordered, oversized, trophy cards    |
+| `minigame`         | Minigame card inserts                  | Minigame inserts from boosters            |
 
 ### Scale
 
@@ -123,25 +123,25 @@ This is MTG's greatest cataloging complexity. A single card can exist in dozens 
 
 The `finishes` field in Scryfall tracks four base values: `nonfoil`, `foil`, `etched`, `glossy`. But the actual physical foil treatments are far more varied:
 
-| Foil Treatment | First Set | Description |
-|----------------|-----------|-------------|
-| **Traditional Foil** | Urza's Legacy (1999) | Original rainbow-sheen foiling, still the most common |
-| **Foil-Etched** | Commander Legends (2020) | Metallic shimmer highlighting specific elements only |
-| **Textured Foil** | Double Masters 2022 | Embossed 3D effect creating illusion of movement |
-| **Galaxy Foil** | Unfinity (2022) | Stars-in-space appearance |
-| **Gilded Foil** | Streets of New Capenna (2022) | Golden 3D-embossed frame over foil base |
-| **Surge Foil** | Warhammer 40K Commander (2022) | Ripple/wave foiling; exclusive to Universes Beyond |
-| **Double-Rainbow Foil** | Brothers' War Retro Artifacts | Exclusive to serialized versions |
-| **Halo Foil** | March of the Machine (2023) | Collector Booster exclusive |
-| **Step-and-Compleat Foil** | Phyrexia: All Will Be One (2023) | Repeating raised Phyrexian symbols |
-| **Confetti Foil** | Wilds of Eldraine (2023) | Confetti-like sparkle pattern |
-| **Oil Slick Foil** | ONE (listed in promo types) | Raised, dark iridescent finish |
-| **Neon Ink Foil** | Kamigawa: Neon Dynasty | UV-reactive colored ink (red, blue, green, yellow variants) |
-| **Fracture Foil** | (recent sets) | Shattered-glass foil effect |
-| **Rainbow Foil** | (Scryfall promo type) | Enhanced rainbow effect |
-| **Raise Foil** | (Scryfall promo type) | Raised embossed elements |
-| **Silver Foil** | (Scryfall promo type) | Silver-tinted foil treatment |
-| **Mana Foil** | (Scryfall promo type) | Mana-symbol themed foiling |
+| Foil Treatment             | First Set                        | Description                                                 |
+| -------------------------- | -------------------------------- | ----------------------------------------------------------- |
+| **Traditional Foil**       | Urza's Legacy (1999)             | Original rainbow-sheen foiling, still the most common       |
+| **Foil-Etched**            | Commander Legends (2020)         | Metallic shimmer highlighting specific elements only        |
+| **Textured Foil**          | Double Masters 2022              | Embossed 3D effect creating illusion of movement            |
+| **Galaxy Foil**            | Unfinity (2022)                  | Stars-in-space appearance                                   |
+| **Gilded Foil**            | Streets of New Capenna (2022)    | Golden 3D-embossed frame over foil base                     |
+| **Surge Foil**             | Warhammer 40K Commander (2022)   | Ripple/wave foiling; exclusive to Universes Beyond          |
+| **Double-Rainbow Foil**    | Brothers' War Retro Artifacts    | Exclusive to serialized versions                            |
+| **Halo Foil**              | March of the Machine (2023)      | Collector Booster exclusive                                 |
+| **Step-and-Compleat Foil** | Phyrexia: All Will Be One (2023) | Repeating raised Phyrexian symbols                          |
+| **Confetti Foil**          | Wilds of Eldraine (2023)         | Confetti-like sparkle pattern                               |
+| **Oil Slick Foil**         | ONE (listed in promo types)      | Raised, dark iridescent finish                              |
+| **Neon Ink Foil**          | Kamigawa: Neon Dynasty           | UV-reactive colored ink (red, blue, green, yellow variants) |
+| **Fracture Foil**          | (recent sets)                    | Shattered-glass foil effect                                 |
+| **Rainbow Foil**           | (Scryfall promo type)            | Enhanced rainbow effect                                     |
+| **Raise Foil**             | (Scryfall promo type)            | Raised embossed elements                                    |
+| **Silver Foil**            | (Scryfall promo type)            | Silver-tinted foil treatment                                |
+| **Mana Foil**              | (Scryfall promo type)            | Mana-symbol themed foiling                                  |
 
 ### B. Frame Treatments
 
@@ -157,6 +157,7 @@ Scryfall tracks frame treatments via the `frame` field (era) and `frame_effects`
 | `future` | Futureshifted frame (Future Sight) |
 
 **Frame Effects** (`frame_effects` array -- 25 values):
+
 - `legendary` -- legendary crown
 - `miracle` -- miracle frame
 - `enchantment` -- enchantment nyx frame
@@ -187,16 +188,16 @@ Scryfall tracks frame treatments via the `frame` field (era) and `frame_effects`
 
 ### C. Art/Frame Variant Types
 
-| Variant Type | Description |
-|--------------|-------------|
-| **Regular** | Standard frame, standard art |
-| **Extended Art** | Art extends to left/right card edges, frame partially removed |
-| **Borderless** | Art extends to all card edges, no frame visible |
-| **Showcase** | Set-specific themed frame + alternate art (unique per set -- Eldraine storybook, Theros constellation, Neon Dynasty ukiyo-e, etc.) |
-| **Retro Frame** | Reprinted with 1993/1997-era frame |
-| **Full Art** | Art fills most of the card (common for basic lands) |
-| **Alternate Art** | Same card, different illustration |
-| **Textless** | No rules text (promo versions) |
+| Variant Type      | Description                                                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Regular**       | Standard frame, standard art                                                                                                       |
+| **Extended Art**  | Art extends to left/right card edges, frame partially removed                                                                      |
+| **Borderless**    | Art extends to all card edges, no frame visible                                                                                    |
+| **Showcase**      | Set-specific themed frame + alternate art (unique per set -- Eldraine storybook, Theros constellation, Neon Dynasty ukiyo-e, etc.) |
+| **Retro Frame**   | Reprinted with 1993/1997-era frame                                                                                                 |
+| **Full Art**      | Art fills most of the card (common for basic lands)                                                                                |
+| **Alternate Art** | Same card, different illustration                                                                                                  |
+| **Textless**      | No rules text (promo versions)                                                                                                     |
 
 **Showcase is not one treatment** -- it is a catch-all term where each set has its own unique visual identity. Over 31 distinct showcase styles exist across MTG's history.
 
@@ -222,6 +223,7 @@ upsidedown, upsidedownback, vault, wizardsplaynetwork
 ```
 
 Major promo distribution channels:
+
 - **Prerelease promos** (`prerelease`, `datestamped`) -- stamped with event date
 - **Buy-a-Box promos** (`buyabox`) -- given for buying a sealed booster box
 - **Bundle promos** (`bundle`) -- included in fat pack/bundle products
@@ -236,6 +238,7 @@ Major promo distribution channels:
 ### E. Security Stamps
 
 The `security_stamp` field tracks anti-counterfeit stamps:
+
 - `oval` -- standard holographic stamp (rares/mythics since M15)
 - `triangle` -- Universes Beyond stamp
 - `acorn` -- "not tournament legal" stamp (replaces silver border)
@@ -247,32 +250,32 @@ The `security_stamp` field tracks anti-counterfeit stamps:
 
 Scryfall's `layout` field describes the physical structure of the card:
 
-| Layout | Card Faces | Description |
-|--------|-----------|-------------|
-| `normal` | 1 front | Standard single-faced card |
-| `split` | 2 on front | Two mini-cards side by side (Fire // Ice) |
-| `flip` | 2 on front | Card inverts vertically (Kamigawa flip cards) |
-| `adventure` | 2 on front | Creature + Adventure spell (Eldraine) |
-| `transform` | 1 front + 1 back | Double-faced, transforms (Innistrad werewolves) |
-| `modal_dfc` | 1 front + 1 back | Play either side from hand (Zendikar Rising pathways) |
-| `meld` | Special | Three cards meld into one oversized card back |
-| `leveler` | 1 front | Level Up creatures with multiple stat blocks |
-| `class` | 1 front | Class enchantments with level-up abilities |
-| `case` | 1 front | Case enchantments (Murders at Karlov Manor) |
-| `saga` | 1 front (sometimes DFC) | Saga enchantments with chapter abilities |
-| `mutate` | 1 front | Cards with Mutate keyword |
-| `prototype` | 1 front | Cards with Prototype alternate casting cost |
-| `battle` | 1 front + 1 back | Battle type cards (March of the Machine) |
-| `planar` | 1 front | Plane/Phenomenon cards (Planechase) |
-| `scheme` | 1 front | Scheme cards (Archenemy) |
-| `vanguard` | 1 front | Vanguard cards |
-| `token` | 1 front | Token cards |
-| `double_faced_token` | 1 front + 1 back | Tokens with different token on back |
-| `emblem` | 1 front | Emblem cards |
-| `augment` | 1 front | Augment cards (Unstable) |
-| `host` | 1 front | Host cards (Unstable) |
-| `art_series` | 1 front + 1 back | Art Series collectible cards |
-| `reversible_card` | 1 front + 1 back | Two unrelated faces |
+| Layout               | Card Faces              | Description                                           |
+| -------------------- | ----------------------- | ----------------------------------------------------- |
+| `normal`             | 1 front                 | Standard single-faced card                            |
+| `split`              | 2 on front              | Two mini-cards side by side (Fire // Ice)             |
+| `flip`               | 2 on front              | Card inverts vertically (Kamigawa flip cards)         |
+| `adventure`          | 2 on front              | Creature + Adventure spell (Eldraine)                 |
+| `transform`          | 1 front + 1 back        | Double-faced, transforms (Innistrad werewolves)       |
+| `modal_dfc`          | 1 front + 1 back        | Play either side from hand (Zendikar Rising pathways) |
+| `meld`               | Special                 | Three cards meld into one oversized card back         |
+| `leveler`            | 1 front                 | Level Up creatures with multiple stat blocks          |
+| `class`              | 1 front                 | Class enchantments with level-up abilities            |
+| `case`               | 1 front                 | Case enchantments (Murders at Karlov Manor)           |
+| `saga`               | 1 front (sometimes DFC) | Saga enchantments with chapter abilities              |
+| `mutate`             | 1 front                 | Cards with Mutate keyword                             |
+| `prototype`          | 1 front                 | Cards with Prototype alternate casting cost           |
+| `battle`             | 1 front + 1 back        | Battle type cards (March of the Machine)              |
+| `planar`             | 1 front                 | Plane/Phenomenon cards (Planechase)                   |
+| `scheme`             | 1 front                 | Scheme cards (Archenemy)                              |
+| `vanguard`           | 1 front                 | Vanguard cards                                        |
+| `token`              | 1 front                 | Token cards                                           |
+| `double_faced_token` | 1 front + 1 back        | Tokens with different token on back                   |
+| `emblem`             | 1 front                 | Emblem cards                                          |
+| `augment`            | 1 front                 | Augment cards (Unstable)                              |
+| `host`               | 1 front                 | Host cards (Unstable)                                 |
+| `art_series`         | 1 front + 1 back        | Art Series collectible cards                          |
+| `reversible_card`    | 1 front + 1 back        | Two unrelated faces                                   |
 
 ---
 
@@ -280,39 +283,40 @@ Scryfall's `layout` field describes the physical structure of the card:
 
 ### Currently Active Print Languages (as of 2026)
 
-| Language | Code | Status |
-|----------|------|--------|
-| English | `en` | Active (always) |
-| Japanese | `ja` | Active |
-| French | `fr` | Active |
-| German | `de` | Active |
-| Italian | `it` | Active |
-| Spanish | `es` | Active |
+| Language | Code | Status          |
+| -------- | ---- | --------------- |
+| English  | `en` | Active (always) |
+| Japanese | `ja` | Active          |
+| French   | `fr` | Active          |
+| German   | `de` | Active          |
+| Italian  | `it` | Active          |
+| Spanish  | `es` | Active          |
 
 ### Discontinued Print Languages
 
-| Language | Code | Discontinued |
-|----------|------|-------------|
-| Russian | `ru` | 2022 (Dominaria United) |
-| Korean | `ko` | 2022 (Dominaria United) |
+| Language            | Code  | Discontinued            |
+| ------------------- | ----- | ----------------------- |
+| Russian             | `ru`  | 2022 (Dominaria United) |
+| Korean              | `ko`  | 2022 (Dominaria United) |
 | Chinese Traditional | `zht` | 2022 (Dominaria United) |
-| Portuguese | `pt` | 2024 (Bloomburrow) |
-| Chinese Simplified | `zhs` | 2024 (Bloomburrow) |
+| Portuguese          | `pt`  | 2024 (Bloomburrow)      |
+| Chinese Simplified  | `zhs` | 2024 (Bloomburrow)      |
 
 ### Special/Limited Language Printings
 
-| Language | Code | Usage |
-|----------|------|-------|
-| Phyrexian | `ph` | ~33 cards (Judge promos, Praetor variants, special printings) |
-| Latin | -- | Select prerelease promos and Booster Fun cards |
-| Ancient Greek | -- | Select promotional cards |
-| Sanskrit | -- | Select promotional cards |
-| Arabic | -- | Select promotional cards |
-| Hebrew | -- | Select promotional cards |
+| Language      | Code | Usage                                                         |
+| ------------- | ---- | ------------------------------------------------------------- |
+| Phyrexian     | `ph` | ~33 cards (Judge promos, Praetor variants, special printings) |
+| Latin         | --   | Select prerelease promos and Booster Fun cards                |
+| Ancient Greek | --   | Select promotional cards                                      |
+| Sanskrit      | --   | Select promotional cards                                      |
+| Arabic        | --   | Select promotional cards                                      |
+| Hebrew        | --   | Select promotional cards                                      |
 
 ### Language-Exclusive Variants
 
 **Japanese Alternate Art** is the most significant language-exclusive phenomenon:
+
 - **Strixhaven Mystical Archive**: 63 cards received Japan-exclusive alternate art inspired by traditional Japanese painting styles. These are numbered #64-126 (separately from the global versions #1-63). Found in Japanese boosters and at least one per Collector Booster worldwide.
 - **War of the Spark**: Japanese alternate-art planeswalkers by different artists
 - **181 total cards** with Japanese-exclusive art cataloged by Scryfall
@@ -399,30 +403,32 @@ oracle_id (Game Object)
 ### What Scryfall's `id` Does NOT Capture
 
 A single Scryfall `id` can represent multiple physically distinct items:
+
 - A nonfoil **and** a foil of the same printing share the same `id` (distinguished only by the `finishes` array)
 - Serialized vs. non-serialized versions are not always separate `id` values
 - Condition, signed status, and other physical attributes are not tracked
 
-This means **Scryfall's `id` is NOT a unique physical item identifier** -- it is a unique *printing specification* identifier. The marketplace platforms (TCGplayer, Cardmarket) add their own product IDs and SKUs to distinguish foil from nonfoil for pricing purposes.
+This means **Scryfall's `id` is NOT a unique physical item identifier** -- it is a unique _printing specification_ identifier. The marketplace platforms (TCGplayer, Cardmarket) add their own product IDs and SKUs to distinguish foil from nonfoil for pricing purposes.
 
 ### Cross-Reference IDs on a Scryfall Card Object
 
-| Field | Source | Granularity |
-|-------|--------|-------------|
-| `id` | Scryfall | Unique per printing (set + number + lang) |
-| `oracle_id` | Scryfall | Unique per game card identity |
-| `illustration_id` | Scryfall | Unique per artwork |
-| `multiverse_ids` | Gatherer | Varies; older standard |
-| `arena_id` | MTG Arena | Arena-specific |
-| `mtgo_id` | MTGO | Magic Online specific |
-| `mtgo_foil_id` | MTGO | MTGO foil version |
-| `tcgplayer_id` | TCGplayer | Marketplace product |
-| `tcgplayer_etched_id` | TCGplayer | Etched variant product |
-| `cardmarket_id` | Cardmarket | EU marketplace product |
+| Field                 | Source     | Granularity                               |
+| --------------------- | ---------- | ----------------------------------------- |
+| `id`                  | Scryfall   | Unique per printing (set + number + lang) |
+| `oracle_id`           | Scryfall   | Unique per game card identity             |
+| `illustration_id`     | Scryfall   | Unique per artwork                        |
+| `multiverse_ids`      | Gatherer   | Varies; older standard                    |
+| `arena_id`            | MTG Arena  | Arena-specific                            |
+| `mtgo_id`             | MTGO       | Magic Online specific                     |
+| `mtgo_foil_id`        | MTGO       | MTGO foil version                         |
+| `tcgplayer_id`        | TCGplayer  | Marketplace product                       |
+| `tcgplayer_etched_id` | TCGplayer  | Etched variant product                    |
+| `cardmarket_id`       | Cardmarket | EU marketplace product                    |
 
 ### Scryfall's Deduplication Modes
 
 When searching, Scryfall offers three deduplication strategies:
+
 - `unique:cards` -- One result per `oracle_id` (game-level dedup)
 - `unique:art` -- One result per `illustration_id` (artwork-level dedup)
 - `unique:prints` -- Every distinct printing shown (no dedup)
@@ -450,6 +456,7 @@ Scryfall stops at level 2-3. Marketplaces handle level 4. Level 5 is a collectio
 ### The Variant Explosion Problem
 
 For a single set release like Modern Horizons 3 (2024), a single mythic rare card might exist as:
+
 - Regular (nonfoil)
 - Regular (foil)
 - Extended Art (nonfoil, Collector Booster exclusive)

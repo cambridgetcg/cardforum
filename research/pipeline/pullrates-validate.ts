@@ -33,14 +33,28 @@ const TCG_DIR_MAP: Record<TCG, string> = {
   mtg: "mtg",
 };
 
-function loadPullRateReport(tcg: TCG, setCode: string, language: BoxLanguage): PullRateReport | null {
-  const filePath = path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `pullrates-${setCode}-${language}.json`);
+function loadPullRateReport(
+  tcg: TCG,
+  setCode: string,
+  language: BoxLanguage,
+): PullRateReport | null {
+  const filePath = path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `pullrates-${setCode}-${language}.json`,
+  );
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
 function getOutputPath(tcg: TCG, setCode: string): string {
-  return path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `pullrates-validation-${setCode}.json`);
+  return path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `pullrates-validation-${setCode}.json`,
+  );
 }
 
 // ── Community Data (Manual Entry) ─────────────────────────────
@@ -102,18 +116,21 @@ function proportionZTest(observed: number, expected: number, sampleSize: number)
   // Approximate p-value from z-score using Abramowitz and Stegun
   const t = 1 / (1 + 0.2316419 * z);
   const d = 0.3989422804014327;
-  const p = d * Math.exp(-z * z / 2) * (0.3193815 * t + -0.3565638 * t * t + 1.781478 * t * t * t + -1.8212560 * t * t * t * t + 1.3302744 * t * t * t * t * t);
+  const p =
+    d *
+    Math.exp((-z * z) / 2) *
+    (0.3193815 * t +
+      -0.3565638 * t * t +
+      1.781478 * t * t * t +
+      -1.821256 * t * t * t * t +
+      1.3302744 * t * t * t * t * t);
 
   return 2 * p; // Two-sided
 }
 
 // ── Validation Logic ──────────────────────────────────────────
 
-function validateSet(
-  tcg: TCG,
-  setCode: string,
-  language: BoxLanguage,
-): PullRateValidation | null {
+function validateSet(tcg: TCG, setCode: string, language: BoxLanguage): PullRateValidation | null {
   console.log(`\nValidating: ${tcg} / ${setCode} / ${language}`);
 
   const report = loadPullRateReport(tcg, setCode, language);
@@ -183,7 +200,7 @@ function validateSet(
     const status = significant ? "⚠️ SIGNIFICANT" : "✓ OK";
     console.log(
       `  ${rate.rarity.padEnd(10)} theoretical: ${rate.perBox.toFixed(2)}  observed: ${obsRate.toFixed(2)}  ` +
-      `deviation: ${deviation > 0 ? "+" : ""}${deviation.toFixed(2)}  p=${pValue.toFixed(4)}  ${status}`,
+        `deviation: ${deviation > 0 ? "+" : ""}${deviation.toFixed(2)}  p=${pValue.toFixed(4)}  ${status}`,
     );
   }
 
@@ -202,7 +219,9 @@ function validateSet(
     overallAssessment = "rejected";
   }
 
-  console.log(`  Overall: ${overallAssessment} (${significantCount}/${testedCount} significant deviations)`);
+  console.log(
+    `  Overall: ${overallAssessment} (${significantCount}/${testedCount} significant deviations)`,
+  );
 
   return {
     tcg,
@@ -226,11 +245,7 @@ async function main() {
   const isAll = args.includes("--all");
   const isDryRun = args.includes("--dry-run");
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all");
@@ -258,7 +273,9 @@ async function main() {
       fs.writeFileSync(outPath, JSON.stringify(validation, null, 2));
       console.log(`  → Saved to ${path.relative(process.cwd(), outPath)}`);
     } else {
-      console.log(`  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`);
+      console.log(
+        `  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`,
+      );
     }
 
     successCount++;

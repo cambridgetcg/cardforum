@@ -19,10 +19,7 @@ export default defineConfig({
   expect: { timeout: 10_000 },
   retries: 0,
 
-  reporter: [
-    ["list"],
-    ["html", { open: "on-failure" }],
-  ],
+  reporter: [["list"], ["html", { open: "on-failure" }]],
 
   use: {
     ...baseConfig.use,

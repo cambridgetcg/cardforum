@@ -2,8 +2,8 @@ import { getConfig } from "@/server/services/config.service";
 import type { AuthenticatorTier } from "@/types/domain";
 
 export interface FeeBreakdown {
-  baseFee: number;         // cents — total fee per card
-  platformShare: number;   // cents — platform takes this
+  baseFee: number; // cents — total fee per card
+  platformShare: number; // cents — platform takes this
   authenticatorShare: number; // cents — authenticator earns this
 }
 
@@ -27,9 +27,7 @@ export async function calculateVerificationFee(tier: AuthenticatorTier): Promise
 /**
  * Calculate total fees for an entire trade (all legs).
  */
-export async function calculateTradeFees(
-  legs: Array<{ tier: AuthenticatorTier }>
-): Promise<{
+export async function calculateTradeFees(legs: Array<{ tier: AuthenticatorTier }>): Promise<{
   totalFees: number;
   totalPlatformShare: number;
   totalAuthenticatorShare: number;

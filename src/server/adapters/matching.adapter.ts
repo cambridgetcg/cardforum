@@ -41,7 +41,16 @@ export class DefaultMatchFinder implements IMatchFinder {
 
     for (const startUser of userIds) {
       if (!adj.has(startUser)) continue;
-      this.dfs(startUser, startUser, [], new Set([startUser]), adj, cycles, seen, config.maxCycleDepth);
+      this.dfs(
+        startUser,
+        startUser,
+        [],
+        new Set([startUser]),
+        adj,
+        cycles,
+        seen,
+        config.maxCycleDepth,
+      );
     }
 
     return cycles;
@@ -70,7 +79,10 @@ export class DefaultMatchFinder implements IMatchFinder {
 
       if (nextUser === startUser && path.length >= 1) {
         const cyclePath = [...path, edge];
-        const key = cyclePath.map((e) => `${e.haveListingId}:${e.wantListingId}`).sort().join("|");
+        const key = cyclePath
+          .map((e) => `${e.haveListingId}:${e.wantListingId}`)
+          .sort()
+          .join("|");
         if (!seen.has(key)) {
           seen.add(key);
           const regions = [...new Set(cyclePath.flatMap((e) => [e.haveRegion, e.wantRegion]))];
@@ -119,7 +131,16 @@ export class DefaultMatchFinder implements IMatchFinder {
       const firstEdges = wantEdgesByCard.get(anchor.cardId) ?? [];
       for (const firstEdge of firstEdges) {
         const recipient = firstEdge.wantUserId;
-        this.chainDfs(anchor, recipient, [firstEdge], new Set([recipient]), adj, authenticatorWantCardIds, chains, config.maxChainDepth);
+        this.chainDfs(
+          anchor,
+          recipient,
+          [firstEdge],
+          new Set([recipient]),
+          adj,
+          authenticatorWantCardIds,
+          chains,
+          config.maxChainDepth,
+        );
       }
     }
 
@@ -138,7 +159,10 @@ export class DefaultMatchFinder implements IMatchFinder {
   ): void {
     if (path.length >= 1) {
       const lastEdge = path[path.length - 1];
-      const regions = [anchor.region, ...new Set(path.flatMap((e) => [e.haveRegion, e.wantRegion]))];
+      const regions = [
+        anchor.region,
+        ...new Set(path.flatMap((e) => [e.haveRegion, e.wantRegion])),
+      ];
       const uniqueRegions = [...new Set(regions)];
       chains.push({
         anchor,
@@ -162,7 +186,16 @@ export class DefaultMatchFinder implements IMatchFinder {
       if (visited.has(nextUser)) continue;
 
       visited.add(nextUser);
-      this.chainDfs(anchor, nextUser, [...path, edge], visited, adj, authenticatorWantCardIds, chains, maxDepth);
+      this.chainDfs(
+        anchor,
+        nextUser,
+        [...path, edge],
+        visited,
+        adj,
+        authenticatorWantCardIds,
+        chains,
+        maxDepth,
+      );
       visited.delete(nextUser);
     }
   }
@@ -187,8 +220,8 @@ export class DefaultMatchScorer implements IMatchScorer {
       score += weights.conditionBonus[leg.condition] ?? 0;
     }
 
-    const totalSettlement = [...proposal.settlements.values()]
-      .reduce((sum, v) => sum + Math.abs(v), 0) / 2;
+    const totalSettlement =
+      [...proposal.settlements.values()].reduce((sum, v) => sum + Math.abs(v), 0) / 2;
     const avgAskPrice = proposal.legs.reduce((s, l) => s + l.askPrice, 0) / proposal.legs.length;
     if (avgAskPrice > 0) {
       const balanceRatio = 1 - Math.min(totalSettlement / avgAskPrice, 1);

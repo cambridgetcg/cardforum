@@ -67,6 +67,7 @@ function toBridgeLegs(legs: TradeLegForSettlement[]) {
     haveListingId: "",
     wantListingId: "",
     condition: "",
+    language: "",
     askPrice: l.askPrice,
     sequence: i,
   }));
@@ -185,7 +186,11 @@ export async function captureAndSettle(tradeId: string): Promise<void> {
       for (const captured of capturedPayments) {
         try {
           // Stripe supports refunds on captured charges
-          const stripe = (provider as { stripe?: { refunds: { create: (p: { payment_intent: string }) => Promise<unknown> } } }).stripe;
+          const stripe = (
+            provider as {
+              stripe?: { refunds: { create: (p: { payment_intent: string }) => Promise<unknown> } };
+            }
+          ).stripe;
           if (stripe) {
             await stripe.refunds.create({ payment_intent: captured.piId });
           }
@@ -195,7 +200,10 @@ export async function captureAndSettle(tradeId: string): Promise<void> {
           });
           console.warn(`[marketplace-escrow] Refunded PI ${captured.piId} (rollback)`);
         } catch (refundErr) {
-          console.error(`[marketplace-escrow] CRITICAL: Failed to refund PI ${captured.piId}:`, refundErr);
+          console.error(
+            `[marketplace-escrow] CRITICAL: Failed to refund PI ${captured.piId}:`,
+            refundErr,
+          );
         }
       }
 
@@ -212,11 +220,16 @@ export async function captureAndSettle(tradeId: string): Promise<void> {
             data: { status: "VOIDED" },
           });
         } catch (cancelErr) {
-          console.error(`[marketplace-escrow] Failed to cancel PI ${remaining.stripePaymentIntentId}:`, cancelErr);
+          console.error(
+            `[marketplace-escrow] Failed to cancel PI ${remaining.stripePaymentIntentId}:`,
+            cancelErr,
+          );
         }
       }
 
-      throw new Error(`Trade ${tradeId} settlement failed: capture of PI ${payment.stripePaymentIntentId} failed. All captures rolled back.`);
+      throw new Error(
+        `Trade ${tradeId} settlement failed: capture of PI ${payment.stripePaymentIntentId} failed. All captures rolled back.`,
+      );
     }
   }
 
@@ -406,9 +419,7 @@ export async function getTradePaymentSummary(tradeId: string) {
  * Handle a payment authorization confirmation from Stripe webhook.
  * Called when a user completes 3D Secure or other payment confirmation.
  */
-export async function handlePaymentAuthorized(
-  stripePaymentIntentId: string,
-): Promise<void> {
+export async function handlePaymentAuthorized(stripePaymentIntentId: string): Promise<void> {
   await db.tradePayment.updateMany({
     where: { stripePaymentIntentId },
     data: { status: "AUTHORIZED" },
@@ -419,9 +430,7 @@ export async function handlePaymentAuthorized(
  * Handle a payment failure from Stripe webhook.
  * Marks the payment as failed and notifies.
  */
-export async function handlePaymentFailed(
-  stripePaymentIntentId: string,
-): Promise<void> {
+export async function handlePaymentFailed(stripePaymentIntentId: string): Promise<void> {
   await db.tradePayment.updateMany({
     where: { stripePaymentIntentId },
     data: { status: "FAILED" },

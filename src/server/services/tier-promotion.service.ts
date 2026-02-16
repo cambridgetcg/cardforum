@@ -180,7 +180,10 @@ type AuthWithRatings = NonNullable<Awaited<ReturnType<typeof db.authenticator.fi
   }>;
 };
 
-async function isEligibleForTier(auth: AuthWithRatings, targetTier: AuthenticatorTier): Promise<boolean> {
+async function isEligibleForTier(
+  auth: AuthWithRatings,
+  targetTier: AuthenticatorTier,
+): Promise<boolean> {
   const thresholds = await getConfig("authenticator.tier_promotion_thresholds");
   if (targetTier === "VERIFIED") {
     const t = thresholds.VERIFIED;

@@ -10,13 +10,13 @@ CardForum's bridge model decouples logical trades (who trades what) from physica
 
 The authenticator serves five simultaneous functions:
 
-| Function | What It Means | Why It Matters |
-|----------|---------------|----------------|
-| **Escrow agent** | Physical custody of cards until all legs clear | Atomic settlement — nobody gets anything until everyone's cards check out |
-| **Quality controller** | Authenticity + condition verification | Eliminates cross-cultural grading disputes ("my NM is your LP") |
-| **Condition normalizer** | Applies platform-wide condition standards | Makes fungibility real — a CardForum NM means the same everywhere |
-| **Logistics hub** | Local shipping to recipients | Keeps all physical movement within a single region |
-| **Trust anchor** | Reputation-backed, tiered, accountable | Converts platform trust into local physical trust |
+| Function                 | What It Means                                  | Why It Matters                                                            |
+| ------------------------ | ---------------------------------------------- | ------------------------------------------------------------------------- |
+| **Escrow agent**         | Physical custody of cards until all legs clear | Atomic settlement — nobody gets anything until everyone's cards check out |
+| **Quality controller**   | Authenticity + condition verification          | Eliminates cross-cultural grading disputes ("my NM is your LP")           |
+| **Condition normalizer** | Applies platform-wide condition standards      | Makes fungibility real — a CardForum NM means the same everywhere         |
+| **Logistics hub**        | Local shipping to recipients                   | Keeps all physical movement within a single region                        |
+| **Trust anchor**         | Reputation-backed, tiered, accountable         | Converts platform trust into local physical trust                         |
 
 Without authenticators, CardForum is just a matchmaker with no way to fulfill trades safely.
 
@@ -33,12 +33,12 @@ The solution: **progressive trust**. Start with low barriers and low-value acces
 
 ### 2.2 Applicant Types
 
-| Type | Profile | Motivation | Risk |
-|------|---------|------------|------|
-| **Card shop** | Established business, physical location, existing inventory | Revenue stream, customer acquisition | Low — reputation at stake |
-| **Grading service** | Existing TCG authentication business | Expand services | Very low — already vetted by market |
-| **Individual collector** | Experienced collector, deep TCG knowledge | Side income, community contribution | Medium — no business accountability |
-| **Platform-operated** | CardForum's own staff in key regions | Guaranteed quality, bootstrap | Low — direct control |
+| Type                     | Profile                                                     | Motivation                           | Risk                                |
+| ------------------------ | ----------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
+| **Card shop**            | Established business, physical location, existing inventory | Revenue stream, customer acquisition | Low — reputation at stake           |
+| **Grading service**      | Existing TCG authentication business                        | Expand services                      | Very low — already vetted by market |
+| **Individual collector** | Experienced collector, deep TCG knowledge                   | Side income, community contribution  | Medium — no business accountability |
+| **Platform-operated**    | CardForum's own staff in key regions                        | Guaranteed quality, bootstrap        | Low — direct control                |
 
 ### 2.3 Application Flow
 
@@ -109,15 +109,16 @@ ACTIVE → REVOKED (permanent, for cause)
 
 ### 3.1 Tier Definitions
 
-| Tier | Max Card Value | Assignment Priority | Requirements |
-|------|---------------|--------------------|-|
-| **STANDARD** | $100 per card | Last (fills when no higher tier available) | Complete onboarding |
-| **VERIFIED** | $500 per card | Second | 50+ verifications, 4.5+ rating, 90-day track record, zero disputes lost |
-| **PREMIUM** | Unlimited | First | 200+ verifications, 4.8+ rating, 180-day track record, insurance bond posted, staff audit passed |
+| Tier         | Max Card Value | Assignment Priority                        | Requirements                                                                                     |
+| ------------ | -------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| **STANDARD** | $100 per card  | Last (fills when no higher tier available) | Complete onboarding                                                                              |
+| **VERIFIED** | $500 per card  | Second                                     | 50+ verifications, 4.5+ rating, 90-day track record, zero disputes lost                          |
+| **PREMIUM**  | Unlimited      | First                                      | 200+ verifications, 4.8+ rating, 180-day track record, insurance bond posted, staff audit passed |
 
 ### 3.2 Why Value Caps per Tier?
 
 A new STANDARD authenticator handling a $5,000 Black Lotus is an unacceptable risk. The value cap:
+
 - Limits exposure from unproven authenticators
 - Creates natural incentive to earn higher tiers
 - Protects the platform's trust reputation during cold start
@@ -149,13 +150,13 @@ AFTER each completed verification:
 
 Demotion happens when trust signals degrade:
 
-| Trigger | Action | Recovery |
-|---------|--------|----------|
-| Rating drops below tier minimum | Demote one tier | Re-earn requirements |
+| Trigger                               | Action                | Recovery                           |
+| ------------------------------------- | --------------------- | ---------------------------------- |
+| Rating drops below tier minimum       | Demote one tier       | Re-earn requirements               |
 | Dispute lost (authenticator at fault) | Suspend + investigate | Staff review → reinstate or revoke |
-| 3+ disputes in 30 days | Auto-suspend | Investigation required |
-| Failed random audit | Demote one tier | Pass re-audit |
-| Inactive 90+ days | Demote to STANDARD | Complete refresher quiz |
+| 3+ disputes in 30 days                | Auto-suspend          | Investigation required             |
+| Failed random audit                   | Demote one tier       | Pass re-audit                      |
+| Inactive 90+ days                     | Demote to STANDARD    | Complete refresher quiz            |
 
 ---
 
@@ -314,12 +315,12 @@ WHEN all legs VERIFIED:
 
 An authenticator's rating (1.0–5.0) is a weighted composite:
 
-| Component | Weight | Source |
-|-----------|--------|--------|
-| **Verification accuracy** | 40% | Did their condition assessment match reality? (measured by disputes and second-opinion checks) |
-| **Speed** | 20% | Time from card receipt to result submission (vs SLA) |
-| **Recipient satisfaction** | 25% | Post-trade rating by the card recipient |
-| **Communication** | 15% | Responsiveness to questions, quality of notes/photos |
+| Component                  | Weight | Source                                                                                         |
+| -------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
+| **Verification accuracy**  | 40%    | Did their condition assessment match reality? (measured by disputes and second-opinion checks) |
+| **Speed**                  | 20%    | Time from card receipt to result submission (vs SLA)                                           |
+| **Recipient satisfaction** | 25%    | Post-trade rating by the card recipient                                                        |
+| **Communication**          | 15%    | Responsiveness to questions, quality of notes/photos                                           |
 
 ### 5.2 Rating Decay
 
@@ -335,6 +336,7 @@ effective_rating =
 ### 5.3 Rating Protection
 
 To prevent gaming and unfair ratings:
+
 - Recipients can rate only after confirming delivery (skin in the game)
 - Extreme ratings (1.0 or 5.0) require written explanation
 - Authenticator can respond to negative ratings (visible to platform, not public initially)
@@ -347,21 +349,21 @@ To prevent gaming and unfair ratings:
 
 ### 6.1 Fee Structure
 
-| Service | Fee | Paid By |
-|---------|-----|---------|
-| **Verification** (raw card) | $3-5 flat per card | Split: 50% buyer, 50% seller |
-| **Verification** (graded slab) | $2-3 flat per card | Split: 50% buyer, 50% seller |
-| **Local shipping** | Actual cost + $1 handling | Recipient |
-| **Express processing** | +$5 premium | Requesting party |
-| **Re-verification** (second opinion) | $5-8 per card | Platform (insurance pool) |
+| Service                              | Fee                       | Paid By                      |
+| ------------------------------------ | ------------------------- | ---------------------------- |
+| **Verification** (raw card)          | $3-5 flat per card        | Split: 50% buyer, 50% seller |
+| **Verification** (graded slab)       | $2-3 flat per card        | Split: 50% buyer, 50% seller |
+| **Local shipping**                   | Actual cost + $1 handling | Recipient                    |
+| **Express processing**               | +$5 premium               | Requesting party             |
+| **Re-verification** (second opinion) | $5-8 per card             | Platform (insurance pool)    |
 
 ### 6.2 Fee Tiers
 
 | Authenticator Tier | Base Fee | Platform Commission | Authenticator Take |
-|-------------------|----------|--------------------|--------------------|
-| STANDARD | $3/card | 30% ($0.90) | 70% ($2.10) |
-| VERIFIED | $4/card | 25% ($1.00) | 75% ($3.00) |
-| PREMIUM | $5/card | 20% ($1.00) | 80% ($4.00) |
+| ------------------ | -------- | ------------------- | ------------------ |
+| STANDARD           | $3/card  | 30% ($0.90)         | 70% ($2.10)        |
+| VERIFIED           | $4/card  | 25% ($1.00)         | 75% ($3.00)        |
+| PREMIUM            | $5/card  | 20% ($1.00)         | 80% ($4.00)        |
 
 Higher tiers earn more per card AND keep a larger percentage. This creates strong economic incentive to maintain quality and achieve promotion.
 
@@ -398,19 +400,20 @@ AUDIT PROCESS:
 
 ### 7.2 Accountability Mechanisms
 
-| Violation | Consequence |
-|-----------|-------------|
-| Condition assessment off by 1 grade | Warning, noted in record |
-| Condition assessment off by 2+ grades | Demotion, re-training required |
-| Failed to detect counterfeit | Suspension pending investigation |
-| Passed a known counterfeit | Revocation + banned |
-| Card lost or damaged in custody | Must compensate at market value from bond/earnings |
-| SLA violation (slow processing) | Rating penalty, assignment priority reduced |
-| Conflict of interest (authenticating own trade) | Revocation |
+| Violation                                       | Consequence                                        |
+| ----------------------------------------------- | -------------------------------------------------- |
+| Condition assessment off by 1 grade             | Warning, noted in record                           |
+| Condition assessment off by 2+ grades           | Demotion, re-training required                     |
+| Failed to detect counterfeit                    | Suspension pending investigation                   |
+| Passed a known counterfeit                      | Revocation + banned                                |
+| Card lost or damaged in custody                 | Must compensate at market value from bond/earnings |
+| SLA violation (slow processing)                 | Rating penalty, assignment priority reduced        |
+| Conflict of interest (authenticating own trade) | Revocation                                         |
 
 ### 7.3 Insurance Bond (PREMIUM Only)
 
 PREMIUM authenticators post a bond ($1,000-$5,000 depending on region) that covers:
+
 - Card losses in their custody
 - Damage during handling
 - Errors in authentication that cause financial harm
@@ -604,13 +607,13 @@ model Region {
 
 Each concern should be owned by a single service:
 
-| Service | Owns | Called By |
-|---------|------|----------|
-| `authenticator.service.ts` | Application flow, tier management, assignment algorithm, load tracking, availability | API routes, trade.service.ts |
+| Service                           | Owns                                                                                   | Called By                                                           |
+| --------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `authenticator.service.ts`        | Application flow, tier management, assignment algorithm, load tracking, availability   | API routes, trade.service.ts                                        |
 | `authenticator-rating.service.ts` | Rating submission, composite calculation, time-weighted decay, rating protection rules | API routes (post-trade), authenticator.service.ts (for tier checks) |
-| `authenticator-audit.service.ts` | Random audit scheduling, audit assignment, result comparison, escalation | Cron/background job after verification submission |
-| `trade.service.ts` (existing) | Calls `authenticator.service.assignForLegs(tradeId)` when trade enters AUTHENTICATING | Existing trade transition logic (`trade.service.ts:28-62`) |
-| `escrow.service.ts` (existing) | Holds authenticator fees, releases on completion, forfeits on fault | Existing escrow flow |
+| `authenticator-audit.service.ts`  | Random audit scheduling, audit assignment, result comparison, escalation               | Cron/background job after verification submission                   |
+| `trade.service.ts` (existing)     | Calls `authenticator.service.assignForLegs(tradeId)` when trade enters AUTHENTICATING  | Existing trade transition logic (`trade.service.ts:28-62`)          |
+| `escrow.service.ts` (existing)    | Holds authenticator fees, releases on completion, forfeits on fault                    | Existing escrow flow                                                |
 
 **Key boundary**: `trade.service.ts` should NOT contain authenticator ranking, filtering, or selection logic. It calls `authenticator.service.assignForLegs()` and gets back assignments. The algorithm is encapsulated.
 
@@ -685,6 +688,7 @@ The authenticator tier system is the answer to "how do you trust strangers with 
 ### Insight 2: Authenticators Are the Cold Start Solution
 
 From EXCHANGE_FLOW.md: "card shops ARE traders." Authenticators aren't just infrastructure — they're the bootstrap. They bring:
+
 - Existing inventory (seeds matching chains)
 - Existing expertise (reduces training burden)
 - Existing customer base (brings users to the platform)
@@ -728,39 +732,43 @@ The current schema uses `String` for region. But authenticator assignment requir
 
 ## 12. Open Questions
 
-| # | Question | Impact | Proposed Direction |
-|---|----------|--------|-------------------|
-| 1 | Should authenticators be exclusive to one region? | Assignment, scalability | No — allow multi-region for businesses with multiple locations |
-| 2 | Can authenticators refuse specific TCGs they're not expert in? | Quality | Yes — tcgExpertise already exists, respect it in assignment |
-| 3 | Who pays for return shipping when verification fails? | Economics | Sender bears cost (they submitted a non-conforming card) |
-| 4 | How does the platform handle regions with zero authenticators? | Coverage | Fall back to "mail-in" to nearest region's authenticator, or pause matching for that region |
-| 5 | Should STANDARD authenticators be allowed for graded cards? | Risk | Yes — graded verification is lower-risk (cert lookup is automated) |
-| 6 | What's the minimum number of authenticators per region to launch? | Cold start | 2 (for redundancy and audit capability) |
-| 7 | How should authenticator fees interact with escrow? | Payment flow | Fees deducted from escrow on trade completion, before release to parties |
-| 8 | Can an authenticator be promoted mid-trade? | Edge case | No — tier at time of assignment governs the trade |
+| #   | Question                                                          | Impact                  | Proposed Direction                                                                          |
+| --- | ----------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------- |
+| 1   | Should authenticators be exclusive to one region?                 | Assignment, scalability | No — allow multi-region for businesses with multiple locations                              |
+| 2   | Can authenticators refuse specific TCGs they're not expert in?    | Quality                 | Yes — tcgExpertise already exists, respect it in assignment                                 |
+| 3   | Who pays for return shipping when verification fails?             | Economics               | Sender bears cost (they submitted a non-conforming card)                                    |
+| 4   | How does the platform handle regions with zero authenticators?    | Coverage                | Fall back to "mail-in" to nearest region's authenticator, or pause matching for that region |
+| 5   | Should STANDARD authenticators be allowed for graded cards?       | Risk                    | Yes — graded verification is lower-risk (cert lookup is automated)                          |
+| 6   | What's the minimum number of authenticators per region to launch? | Cold start              | 2 (for redundancy and audit capability)                                                     |
+| 7   | How should authenticator fees interact with escrow?               | Payment flow            | Fees deducted from escrow on trade completion, before release to parties                    |
+| 8   | Can an authenticator be promoted mid-trade?                       | Edge case               | No — tier at time of assignment governs the trade                                           |
 
 ---
 
 ## 13. Implementation Priority
 
 ### Phase 1: Foundation (Build First)
+
 1. Application flow + review system (let people sign up)
 2. Region structure (prerequisite for everything)
 3. Basic verification submission UI (authenticators need to work)
 4. Result processing → TradeLeg state transitions (connect to trade lifecycle)
 
 ### Phase 2: Trust Layer
+
 5. Rating system with composite scoring
 6. Tier promotion/demotion logic
 7. Value caps per tier
 8. Random audit mechanism
 
 ### Phase 3: Economics
+
 9. Fee calculation and escrow integration
 10. Authenticator payment/payout system
 11. Insurance bond system for PREMIUM tier
 
 ### Phase 4: Scale
+
 12. Automated assignment algorithm
 13. Load balancing across authenticators
 14. Reserve authenticator system for failover

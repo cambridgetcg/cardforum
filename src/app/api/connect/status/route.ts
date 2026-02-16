@@ -12,8 +12,7 @@ export async function GET() {
     const status = await getUserConnectStatus(session.user.id);
     return NextResponse.json(status);
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to get connect status";
+    const message = err instanceof Error ? err.message : "Failed to get connect status";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

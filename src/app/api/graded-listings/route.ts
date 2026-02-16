@@ -1,9 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
-import {
-  createGradedHaveListingSchema,
-  createGradedWantListingSchema,
-} from "@/lib/validators";
+import { createGradedHaveListingSchema, createGradedWantListingSchema } from "@/lib/validators";
 import {
   getUserGradedListings,
   createGradedHaveListing,
@@ -35,10 +32,7 @@ export async function POST(req: NextRequest) {
   if (type === "have") {
     const parsed = createGradedHaveListingSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json(
-        { error: parsed.error.flatten().fieldErrors },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
     }
     const listing = await createGradedHaveListing(session.user.id, parsed.data);
     return NextResponse.json(listing, { status: 201 });
@@ -47,19 +41,13 @@ export async function POST(req: NextRequest) {
   if (type === "want") {
     const parsed = createGradedWantListingSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json(
-        { error: parsed.error.flatten().fieldErrors },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
     }
     const listing = await createGradedWantListing(session.user.id, parsed.data);
     return NextResponse.json(listing, { status: 201 });
   }
 
-  return NextResponse.json(
-    { error: "type must be 'have' or 'want'" },
-    { status: 400 },
-  );
+  return NextResponse.json({ error: "type must be 'have' or 'want'" }, { status: 400 });
 }
 
 // DELETE /api/graded-listings?id=...&type=have|want — Deactivate a graded listing

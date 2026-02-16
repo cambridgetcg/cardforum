@@ -4,8 +4,8 @@
   "setCode": "OP10",
   "totalPages": 6,
   "totalCards": 152,
-  "scrapedAt": "2026-02-15T14:59:01.925Z",
-  "durationMs": 45786,
+  "scrapedAt": "2026-02-16T14:42:51.389Z",
+  "durationMs": 54438,
   "cards": [
     {
       "cardId": "OP10-065",
@@ -18,7 +18,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-065"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-065",
+      "language": "EN"
     },
     {
       "cardId": "OP10-071",
@@ -31,7 +32,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Doflamingo-OP10-071-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Doflamingo-OP10-071-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-072",
@@ -44,7 +46,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Rosinante-OP10-072-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Rosinante-OP10-072-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-078",
@@ -57,7 +60,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/I-Do-Not-Forgive-Those-Who-Laugh-at-My-Family-OP10-078"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/I-Do-Not-Forgive-Those-Who-Laugh-at-My-Family-OP10-078",
+      "language": "EN"
     },
     {
       "cardId": "OP10-112",
@@ -70,7 +74,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-112-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-112-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-032",
@@ -83,7 +88,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tashigi-OP10-032-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tashigi-OP10-032-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-118",
@@ -96,7 +102,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-118-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-118-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-062",
@@ -109,7 +116,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Violet-OP10-062"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Violet-OP10-062",
+      "language": "EN"
     },
     {
       "cardId": "OP10-045",
@@ -122,7 +130,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-045-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-045-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-109",
@@ -135,7 +144,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Basil-Hawkins-OP10-109"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Basil-Hawkins-OP10-109",
+      "language": "EN"
     },
     {
       "cardId": "OP10-082",
@@ -148,7 +158,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kuzan-OP10-082-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kuzan-OP10-082-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-005",
@@ -161,7 +172,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-OP10-005-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-OP10-005-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-058",
@@ -174,7 +186,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rebecca-OP10-058-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rebecca-OP10-058-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-076",
@@ -187,7 +200,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Baby-5-OP10-076"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Baby-5-OP10-076",
+      "language": "EN"
     },
     {
       "cardId": "OP10-011",
@@ -200,7 +214,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tony-TonyChopper-OP10-011"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tony-TonyChopper-OP10-011",
+      "language": "EN"
     },
     {
       "cardId": "OP10-119",
@@ -213,7 +228,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-030",
@@ -226,7 +242,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-030-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-030-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-046",
@@ -239,7 +256,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kyros-OP10-046-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kyros-OP10-046-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-057",
@@ -252,7 +270,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Leo-OP10-057"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Leo-OP10-057",
+      "language": "EN"
     },
     {
       "cardId": "OP10-019",
@@ -265,7 +284,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Divine-Departure-OP10-019-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Divine-Departure-OP10-019-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-075",
@@ -278,7 +298,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Foxy-OP10-075"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Foxy-OP10-075",
+      "language": "EN"
     },
     {
       "cardId": "OP10-058",
@@ -291,7 +312,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rebecca-OP10-058-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rebecca-OP10-058-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-016",
@@ -304,7 +326,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Monet-OP10-016-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Monet-OP10-016-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-111",
@@ -317,7 +340,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-111-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-111-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-025",
@@ -330,7 +354,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Enel-OP10-025"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Enel-OP10-025",
+      "language": "EN"
     },
     {
       "cardId": "OP10-046",
@@ -343,7 +368,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kyros-OP10-046-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kyros-OP10-046-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-112",
@@ -356,7 +382,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-112-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-112-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-098",
@@ -369,7 +396,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Liberation-OP10-098"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Liberation-OP10-098",
+      "language": "EN"
     },
     {
       "cardId": "OP10-029",
@@ -382,7 +410,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Dracule-Mihawk-OP10-029"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Dracule-Mihawk-OP10-029",
+      "language": "EN"
     },
     {
       "cardId": "OP10-086",
@@ -395,7 +424,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Shiryu-OP10-086"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Shiryu-OP10-086",
+      "language": "EN"
     },
     {
       "cardId": "OP10-071",
@@ -408,7 +438,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Doflamingo-OP10-071-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Doflamingo-OP10-071-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-045",
@@ -416,12 +447,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-045-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP10/817059/817059.jpg",
-      "priceFrom": "9,35 €",
-      "priceEur": 9.35,
+      "priceFrom": "9,75 €",
+      "priceEur": 9.75,
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-045-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-045-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-049",
@@ -434,7 +466,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sabo-OP10-049"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sabo-OP10-049",
+      "language": "EN"
     },
     {
       "cardId": "OP10-103",
@@ -447,7 +480,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/CaponeGangBege-OP10-103"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/CaponeGangBege-OP10-103",
+      "language": "EN"
     },
     {
       "cardId": "OP10-032",
@@ -455,12 +489,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Royal-Blood/Tashigi-OP10-032-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP10/817043/817043.jpg",
-      "priceFrom": "9,50 €",
-      "priceEur": 9.5,
+      "priceFrom": "9,90 €",
+      "priceEur": 9.9,
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tashigi-OP10-032-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tashigi-OP10-032-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-027",
@@ -473,7 +508,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kinemon-OP10-027"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kinemon-OP10-027",
+      "language": "EN"
     },
     {
       "cardId": "OP10-037",
@@ -486,7 +522,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lim-OP10-037-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lim-OP10-037-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-055",
@@ -499,7 +536,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Marco-OP10-055"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Marco-OP10-055",
+      "language": "EN"
     },
     {
       "cardId": "OP10-033",
@@ -512,7 +550,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-033"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-033",
+      "language": "EN"
     },
     {
       "cardId": "OP10-059",
@@ -525,7 +564,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/FollowMeandIWillGuideYou-OP10-059"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/FollowMeandIWillGuideYou-OP10-059",
+      "language": "EN"
     },
     {
       "cardId": "OP10-063",
@@ -538,7 +578,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Vinsmoke-Sanji-OP10-063"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Vinsmoke-Sanji-OP10-063",
+      "language": "EN"
     },
     {
       "cardId": "OP10-072",
@@ -546,12 +587,13 @@
       "version": "V.2",
       "url": "/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Rosinante-OP10-072-V2",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP10/817091/817091.jpg",
-      "priceFrom": "14,99 €",
-      "priceEur": 14.99,
+      "priceFrom": "15,00 €",
+      "priceEur": 15,
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Rosinante-OP10-072-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Donquixote-Rosinante-OP10-072-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-095",
@@ -564,7 +606,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-095"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-095",
+      "language": "EN"
     },
     {
       "cardId": "OP10-030",
@@ -577,7 +620,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-030-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-030-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-082",
@@ -590,7 +634,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kuzan-OP10-082-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kuzan-OP10-082-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-067",
@@ -603,7 +648,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Senor-Pink-OP10-067-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Senor-Pink-OP10-067-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-090",
@@ -616,7 +662,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-090-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-090-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-090",
@@ -629,7 +676,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-090-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-090-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-118",
@@ -642,7 +690,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-118-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-118-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-004",
@@ -655,7 +704,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Vergo-OP10-004"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Vergo-OP10-004",
+      "language": "EN"
     },
     {
       "cardId": "OP10-119",
@@ -668,7 +718,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-116",
@@ -681,7 +732,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Damned-Punk-OP10-116"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Damned-Punk-OP10-116",
+      "language": "EN"
     },
     {
       "cardId": "OP10-092",
@@ -694,7 +746,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP10-092"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP10-092",
+      "language": "EN"
     },
     {
       "cardId": "OP10-022",
@@ -707,7 +760,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-022-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-022-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-019",
@@ -720,7 +774,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Divine-Departure-OP10-019-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Divine-Departure-OP10-019-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-060",
@@ -733,7 +788,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Barrier-Barrier-Pistol-OP10-060"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Barrier-Barrier-Pistol-OP10-060",
+      "language": "EN"
     },
     {
       "cardId": "OP10-009",
@@ -746,7 +802,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smiley-OP10-009"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smiley-OP10-009",
+      "language": "EN"
     },
     {
       "cardId": "OP10-020",
@@ -759,7 +816,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-UFO-OP10-020"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-UFO-OP10-020",
+      "language": "EN"
     },
     {
       "cardId": "OP10-041",
@@ -772,7 +830,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Radio-Knife-OP10-041"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Radio-Knife-OP10-041",
+      "language": "EN"
     },
     {
       "cardId": "OP10-099",
@@ -785,7 +844,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-099-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-099-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-003",
@@ -798,7 +858,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-003-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-003-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-042",
@@ -811,7 +872,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-042-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-042-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-016",
@@ -824,7 +886,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Monet-OP10-016-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Monet-OP10-016-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP08-052",
@@ -837,7 +900,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/PortgasDAce-OP08-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/PortgasDAce-OP08-052",
+      "language": "EN"
     },
     {
       "cardId": "OP10-036",
@@ -850,7 +914,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP10-036"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP10-036",
+      "language": "EN"
     },
     {
       "cardId": "OP10-117",
@@ -863,7 +928,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/ROOM-OP10-117"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/ROOM-OP10-117",
+      "language": "EN"
     },
     {
       "cardId": "OP10-067",
@@ -876,7 +942,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Senor-Pink-OP10-067-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Senor-Pink-OP10-067-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-005",
@@ -889,7 +956,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-OP10-005-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-OP10-005-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-111",
@@ -902,7 +970,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-111-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/MonkeyDLuffy-OP10-111-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-094",
@@ -915,7 +984,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ryuma-OP10-094"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ryuma-OP10-094",
+      "language": "EN"
     },
     {
       "cardId": "OP10-002",
@@ -928,7 +998,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-002-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-002-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-085",
@@ -941,7 +1012,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Jesus-Burgess-OP10-085"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Jesus-Burgess-OP10-085",
+      "language": "EN"
     },
     {
       "cardId": "OP10-024",
@@ -954,7 +1026,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EdwardNewgate-OP10-024"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EdwardNewgate-OP10-024",
+      "language": "EN"
     },
     {
       "cardId": "OP10-099",
@@ -967,7 +1040,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-099-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EustassCaptainKid-OP10-099-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-113",
@@ -980,7 +1054,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-113"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-113",
+      "language": "EN"
     },
     {
       "cardId": "OP10-001",
@@ -993,7 +1068,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-001-V1"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-001-V1",
+      "language": "EN"
     },
     {
       "cardId": "OP10-042",
@@ -1006,7 +1082,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-042-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-042-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-037",
@@ -1019,7 +1096,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lim-OP10-037-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lim-OP10-037-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-003",
@@ -1032,7 +1110,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-003-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sugar-OP10-003-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-002",
@@ -1045,7 +1124,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-002-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-002-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-053",
@@ -1058,7 +1138,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bian-OP10-053"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bian-OP10-053",
+      "language": "EN"
     },
     {
       "cardId": "OP10-061",
@@ -1071,7 +1152,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Special-Long-Range-Attack-Bagworm-OP10-061"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Special-Long-Range-Attack-Bagworm-OP10-061",
+      "language": "EN"
     },
     {
       "cardId": "OP10-066",
@@ -1084,7 +1166,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Giolla-OP10-066"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Giolla-OP10-066",
+      "language": "EN"
     },
     {
       "cardId": "OP10-114",
@@ -1097,7 +1180,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/XDrake-OP10-114"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/XDrake-OP10-114",
+      "language": "EN"
     },
     {
       "cardId": "OP10-107",
@@ -1110,7 +1194,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Jewelry-Bonney-OP10-107"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Jewelry-Bonney-OP10-107",
+      "language": "EN"
     },
     {
       "cardId": "OP10-022",
@@ -1123,7 +1208,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-022-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-022-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-097",
@@ -1136,7 +1222,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-Rhino-Schneider-OP10-097"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-Rhino-Schneider-OP10-097",
+      "language": "EN"
     },
     {
       "cardId": "OP10-047",
@@ -1149,7 +1236,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Koala-OP10-047"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Koala-OP10-047",
+      "language": "EN"
     },
     {
       "cardId": "ST14-003",
@@ -1162,7 +1250,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-ST14-003"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sanji-ST14-003",
+      "language": "EN"
     },
     {
       "cardId": "OP10-038",
@@ -1175,7 +1264,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-038"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Roronoa-Zoro-OP10-038",
+      "language": "EN"
     },
     {
       "cardId": "OP10-079",
@@ -1188,7 +1278,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/God-Thread-OP10-079"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/God-Thread-OP10-079",
+      "language": "EN"
     },
     {
       "cardId": "OP10-106",
@@ -1201,7 +1292,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Killer-OP10-106"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Killer-OP10-106",
+      "language": "EN"
     },
     {
       "cardId": "OP10-001",
@@ -1214,7 +1306,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-001-V2"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Smoker-OP10-001-V2",
+      "language": "EN"
     },
     {
       "cardId": "OP10-018",
@@ -1227,7 +1320,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ten-Layer-Igloo-OP10-018"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ten-Layer-Igloo-OP10-018",
+      "language": "EN"
     },
     {
       "cardId": "OP10-088",
@@ -1240,7 +1334,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-088"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-088",
+      "language": "EN"
     },
     {
       "cardId": "OP10-056",
@@ -1253,7 +1348,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Mansherry-OP10-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Mansherry-OP10-056",
+      "language": "EN"
     },
     {
       "cardId": "OP10-043",
@@ -1266,7 +1362,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Moocy-OP10-043"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Moocy-OP10-043",
+      "language": "EN"
     },
     {
       "cardId": "OP10-015",
@@ -1279,7 +1376,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Mocha-OP10-015"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Mocha-OP10-015",
+      "language": "EN"
     },
     {
       "cardId": "OP10-048",
@@ -1292,7 +1390,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sai-OP10-048"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sai-OP10-048",
+      "language": "EN"
     },
     {
       "cardId": "OP10-044",
@@ -1305,7 +1404,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cub-OP10-044"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cub-OP10-044",
+      "language": "EN"
     },
     {
       "cardId": "ST12-012",
@@ -1318,7 +1418,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Charlotte-Pudding-ST12-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Charlotte-Pudding-ST12-012",
+      "language": "EN"
     },
     {
       "cardId": "OP10-077",
@@ -1331,7 +1432,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bellamy-OP10-077"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bellamy-OP10-077",
+      "language": "EN"
     },
     {
       "cardId": "OP10-006",
@@ -1344,7 +1446,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-006"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caesar-Clown-OP10-006",
+      "language": "EN"
     },
     {
       "cardId": "OP10-080",
@@ -1357,7 +1460,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Little-Black-Bears-OP10-080"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Little-Black-Bears-OP10-080",
+      "language": "EN"
     },
     {
       "cardId": "OP10-087",
@@ -1370,7 +1474,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tony-TonyChopper-OP10-087"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Tony-TonyChopper-OP10-087",
+      "language": "EN"
     },
     {
       "cardId": "OP10-096",
@@ -1383,7 +1488,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Theres-No-Longer-Any-Need-for-the-Seven-Warlords-of-the-Sea-OP10-096"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Theres-No-Longer-Any-Need-for-the-Seven-Warlords-of-the-Sea-OP10-096",
+      "language": "EN"
     },
     {
       "cardId": "OP10-040",
@@ -1396,7 +1502,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/The-Weak-Do-Not-Have-the-Right-to-Choose-How-They-Die-OP10-040"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/The-Weak-Do-Not-Have-the-Right-to-Choose-How-They-Die-OP10-040",
+      "language": "EN"
     },
     {
       "cardId": "OP10-052",
@@ -1409,7 +1516,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bartolomeo-OP10-052"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Bartolomeo-OP10-052",
+      "language": "EN"
     },
     {
       "cardId": "OP10-035",
@@ -1422,7 +1530,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Brook-OP10-035"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Brook-OP10-035",
+      "language": "EN"
     },
     {
       "cardId": "OP10-054",
@@ -1435,7 +1544,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Blue-Gilly-OP10-054"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Blue-Gilly-OP10-054",
+      "language": "EN"
     },
     {
       "cardId": "OP10-050",
@@ -1448,7 +1558,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Hajrudin-OP10-050"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Hajrudin-OP10-050",
+      "language": "EN"
     },
     {
       "cardId": "OP10-108",
@@ -1461,7 +1572,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Scratchmen-Apoo-OP10-108"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Scratchmen-Apoo-OP10-108",
+      "language": "EN"
     },
     {
       "cardId": "OP10-014",
@@ -1474,7 +1586,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-014"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-014",
+      "language": "EN"
     },
     {
       "cardId": "OP10-051",
@@ -1487,7 +1600,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Hack-OP10-051"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Hack-OP10-051",
+      "language": "EN"
     },
     {
       "cardId": "OP10-089",
@@ -1500,7 +1614,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nico-Robin-OP10-089"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nico-Robin-OP10-089",
+      "language": "EN"
     },
     {
       "cardId": "OP10-028",
@@ -1513,7 +1628,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kouzuki-Momonosuke-OP10-028"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kouzuki-Momonosuke-OP10-028",
+      "language": "EN"
     },
     {
       "cardId": "OP10-039",
@@ -1526,7 +1642,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-Dragon-Fire-Pistol-Twister-Star-OP10-039"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Gum-Gum-Dragon-Fire-Pistol-Twister-Star-OP10-039",
+      "language": "EN"
     },
     {
       "cardId": "OP10-074",
@@ -1539,7 +1656,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Pica-OP10-074"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Pica-OP10-074",
+      "language": "EN"
     },
     {
       "cardId": "OP10-104",
@@ -1552,7 +1670,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caribou-OP10-104"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Caribou-OP10-104",
+      "language": "EN"
     },
     {
       "cardId": "OP10-026",
@@ -1565,7 +1684,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kinemon-OP10-026"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kinemon-OP10-026",
+      "language": "EN"
     },
     {
       "cardId": "OP10-081",
@@ -1578,7 +1698,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-081"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Usopp-OP10-081",
+      "language": "EN"
     },
     {
       "cardId": "OP10-007",
@@ -1591,7 +1712,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ceaser-Soldier-OP10-007"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Ceaser-Soldier-OP10-007",
+      "language": "EN"
     },
     {
       "cardId": "OP10-083",
@@ -1604,7 +1726,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kouzuki-Momonosuke-OP10-083"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Kouzuki-Momonosuke-OP10-083",
+      "language": "EN"
     },
     {
       "cardId": "OP10-012",
@@ -1617,7 +1740,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Dragon-Number-Thirteen-OP10-012"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Dragon-Number-Thirteen-OP10-012",
+      "language": "EN"
     },
     {
       "cardId": "OP10-013",
@@ -1630,7 +1754,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-013"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Nami-OP10-013",
+      "language": "EN"
     },
     {
       "cardId": "OP10-010",
@@ -1643,7 +1768,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/ChadrosHigelyges-Brownbeard-OP10-010"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/ChadrosHigelyges-Brownbeard-OP10-010",
+      "language": "EN"
     },
     {
       "cardId": "OP10-034",
@@ -1656,7 +1782,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-034"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Franky-OP10-034",
+      "language": "EN"
     },
     {
       "cardId": "ST15-002",
@@ -1669,7 +1796,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EdwardNewgate-ST15-002"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EdwardNewgate-ST15-002",
+      "language": "EN"
     },
     {
       "cardId": "ST18-001",
@@ -1682,7 +1810,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Uso-Hachi-ST18-001"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Uso-Hachi-ST18-001",
+      "language": "EN"
     },
     {
       "cardId": "OP10-031",
@@ -1695,7 +1824,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sengoku-OP10-031"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Sengoku-OP10-031",
+      "language": "EN"
     },
     {
       "cardId": "EB01-056",
@@ -1708,7 +1838,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Charlotte-Flampe-EB01-056"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Charlotte-Flampe-EB01-056",
+      "language": "EN"
     },
     {
       "cardId": "OP07-021",
@@ -1716,12 +1847,13 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Royal-Blood/Urouge-OP07-021",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP10/817000/817000.jpg",
-      "priceFrom": "29,80 €",
-      "priceEur": 29.8,
+      "priceFrom": "25,00 €",
+      "priceEur": 25,
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Urouge-OP07-021"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Urouge-OP07-021",
+      "language": "EN"
     },
     {
       "cardId": "OP10-068",
@@ -1734,7 +1866,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Diamante-OP10-068"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Diamante-OP10-068",
+      "language": "EN"
     },
     {
       "cardId": "OP10-070",
@@ -1747,7 +1880,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trebol-OP10-070"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trebol-OP10-070",
+      "language": "EN"
     },
     {
       "cardId": "OP10-091",
@@ -1760,7 +1894,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Brook-OP10-091"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Brook-OP10-091",
+      "language": "EN"
     },
     {
       "cardId": "OP10-093",
@@ -1773,7 +1908,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Saint-Homing-OP10-093"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Saint-Homing-OP10-093",
+      "language": "EN"
     },
     {
       "cardId": "OP10-021",
@@ -1786,7 +1922,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Punk-Hazard-OP10-021"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Punk-Hazard-OP10-021",
+      "language": "EN"
     },
     {
       "cardId": "OP10-115",
@@ -1799,7 +1936,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lets-Meet-Again-in-the-New-World-OP10-115"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Lets-Meet-Again-in-the-New-World-OP10-115",
+      "language": "EN"
     },
     {
       "cardId": "OP10-023",
@@ -1812,7 +1950,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Issho-OP10-023"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Issho-OP10-023",
+      "language": "EN"
     },
     {
       "cardId": "OP10-073",
@@ -1825,7 +1964,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Buffalo-OP10-073"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Buffalo-OP10-073",
+      "language": "EN"
     },
     {
       "cardId": "OP10-064",
@@ -1838,7 +1978,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Clone-Soldier-OP10-064"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Clone-Soldier-OP10-064",
+      "language": "EN"
     },
     {
       "cardId": "OP10-100",
@@ -1851,7 +1992,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Inazuma-OP10-100"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Inazuma-OP10-100",
+      "language": "EN"
     },
     {
       "cardId": "OP10-008",
@@ -1864,7 +2006,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Scotch-OP10-008"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Scotch-OP10-008",
+      "language": "EN"
     },
     {
       "cardId": "OP10-105",
@@ -1877,7 +2020,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-105"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Cavendish-OP10-105",
+      "language": "EN"
     },
     {
       "cardId": "OP10-110",
@@ -1890,7 +2034,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Heat-Wire-OP10-110"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Heat-Wire-OP10-110",
+      "language": "EN"
     },
     {
       "cardId": "OP10-069",
@@ -1903,7 +2048,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Fighting-Fish-OP10-069"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Fighting-Fish-OP10-069",
+      "language": "EN"
     },
     {
       "cardId": "OP10-101",
@@ -1916,7 +2062,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Urouge-OP10-101"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Urouge-OP10-101",
+      "language": "EN"
     },
     {
       "cardId": "OP10-017",
@@ -1929,7 +2076,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rock-OP10-017"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Rock-OP10-017",
+      "language": "EN"
     },
     {
       "cardId": "OP10-102",
@@ -1942,7 +2090,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EmporioIvankov-OP10-102"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/EmporioIvankov-OP10-102",
+      "language": "EN"
     },
     {
       "cardId": "OP10-119",
@@ -1955,7 +2104,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "parallel",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V3"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Trafalgar-Law-OP10-119-V3",
+      "language": "EN"
     },
     {
       "cardId": "OP10-084",
@@ -1968,7 +2118,8 @@
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/SanjuanWolf-OP10-084"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/SanjuanWolf-OP10-084",
+      "language": "EN"
     },
     {
       "cardId": "OP09-034",
@@ -1976,13 +2127,17 @@
       "version": null,
       "url": "/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP09-034",
       "imageUrl": "https://product-images.s3.cardmarket.com/1621/OP10/817152/817152.jpg",
-      "priceFrom": "290,00 €",
-      "priceEur": 290,
+      "priceFrom": "349,00 €",
+      "priceEur": 349,
       "expansion": "Royal Blood",
       "setCode": "OP10",
       "treatment": "regular",
-      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP09-034"
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Royal-Blood/Perona-OP09-034",
+      "language": "EN"
     }
   ],
-  "errors": []
+  "errors": [
+    "Page 4 failed: unknown error"
+  ],
+  "language": "EN"
 }

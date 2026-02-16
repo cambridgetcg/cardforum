@@ -18,9 +18,7 @@ import { getConfig } from "@/server/services/config.service";
  *
  * Called after createConditionComparison() adds a new data point.
  */
-export async function recalculateUserAIAgreement(
-  userId: string,
-): Promise<void> {
+export async function recalculateUserAIAgreement(userId: string): Promise<void> {
   const comparisons = await db.conditionComparison.findMany({
     where: { sellerId: userId },
     select: { agreed: true },

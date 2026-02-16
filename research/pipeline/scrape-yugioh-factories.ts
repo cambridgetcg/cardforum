@@ -105,8 +105,20 @@ const LANG_FACTORY: Record<string, FactoryInfo> = {
 
 // Recent core booster prefixes to focus on
 const RECENT_SET_PREFIXES = [
-  "AGOV", "PHNI", "LEDE", "INFO", "BLVO", "LIOV", "DAMA",
-  "POTE", "DABL", "PHHY", "CYAC", "DUNE", "AMDE", "WISU",
+  "AGOV",
+  "PHNI",
+  "LEDE",
+  "INFO",
+  "BLVO",
+  "LIOV",
+  "DAMA",
+  "POTE",
+  "DABL",
+  "PHHY",
+  "CYAC",
+  "DUNE",
+  "AMDE",
+  "WISU",
 ];
 
 /**
@@ -138,7 +150,9 @@ async function fetchYGOSets(client: BrightDataClient): Promise<YGOSet[]> {
 function generateRunsForSet(set: YGOSet): ScrapedProductionRun[] {
   const runs: ScrapedProductionRun[] = [];
   const setCodePrefix = set.set_code.split("-")[0];
-  const period = set.tcg_date ? `${set.tcg_date.slice(0, 4)} Q${Math.ceil(parseInt(set.tcg_date.slice(5, 7)) / 3)}` : undefined;
+  const period = set.tcg_date
+    ? `${set.tcg_date.slice(0, 4)} Q${Math.ceil(parseInt(set.tcg_date.slice(5, 7)) / 3)}`
+    : undefined;
 
   // TCG languages
   const tcgLanguages = ["en", "de", "fr", "it", "es", "pt"];
@@ -157,9 +171,10 @@ function generateRunsForSet(set: YGOSet): ScrapedProductionRun[] {
       releaseDate: set.tcg_date,
       confidence: factory.confidence,
       source: `https://db.ygoprodeck.com/api/v7/cardsets.php`,
-      notes: lang === "en"
-        ? "TCG English release. US contracted printing."
-        : `TCG ${lang.toUpperCase()} release. European contracted printing.`,
+      notes:
+        lang === "en"
+          ? "TCG English release. US contracted printing."
+          : `TCG ${lang.toUpperCase()} release. European contracted printing.`,
     });
   }
 

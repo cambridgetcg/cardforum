@@ -87,7 +87,10 @@ export function TradeCard({
         <div className="flex items-center justify-between">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <Link href={`/trades/${id}`} className="font-semibold text-gray-900 hover:text-indigo-600 hover:underline">
+              <Link
+                href={`/trades/${id}`}
+                className="font-semibold text-gray-900 hover:text-indigo-600 hover:underline"
+              >
                 Trade #{id.slice(-6)}
               </Link>
               <TradeModeBadge mode={mode} />
@@ -110,7 +113,10 @@ export function TradeCard({
             const isSender = leg.fromUserId === currentUserId;
             const isReceiver = leg.toUserId === currentUserId;
             const showUpload =
-              !isDirect && pa && isSender && (pa.status === "PENDING_PHOTOS" || pa.status === "REJECTED");
+              !isDirect &&
+              pa &&
+              isSender &&
+              (pa.status === "PENDING_PHOTOS" || pa.status === "REJECTED");
             const showReview = !isDirect && pa && isReceiver && pa.status === "PENDING_REVIEW";
 
             return (
@@ -131,9 +137,7 @@ export function TradeCard({
                   )}
                   {!isDirect && pa && <PhotoApprovalBadge status={pa.status} />}
                   {leg.trackingNumber && (
-                    <span className="text-xs text-blue-600">
-                      Tracking: {leg.trackingNumber}
-                    </span>
+                    <span className="text-xs text-blue-600">Tracking: {leg.trackingNumber}</span>
                   )}
                   <span className="ml-auto text-xs text-gray-400">{leg.region}</span>
                 </div>
@@ -164,7 +168,9 @@ export function TradeCard({
           {/* Fee breakdown */}
           {legsWithPrices.length > 0 && (
             <div className="mt-3 rounded-lg border border-gray-100 bg-gray-50/50 px-3 py-2">
-              <p className="mb-1 text-xs font-medium text-gray-500">Fee Summary (2.2% seller fee)</p>
+              <p className="mb-1 text-xs font-medium text-gray-500">
+                Fee Summary (2.2% seller fee)
+              </p>
               {legsWithPrices.map((leg, i) => {
                 const fee = Math.ceil(leg.askPrice * PLATFORM_FEE_RATE);
                 const isSender = leg.fromUserId === currentUserId;

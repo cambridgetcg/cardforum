@@ -24,10 +24,7 @@ export async function POST(req: NextRequest, context: RouteContext) {
   const body = await req.json();
   const parsed = auditResultSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {

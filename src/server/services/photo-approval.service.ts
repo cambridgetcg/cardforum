@@ -31,7 +31,10 @@ export async function createPhotoApprovalIfNeeded(tradeLegId: string, tx?: TxCli
   const {
     "thresholds.photo_trust_min_agreement_rate": trustMinRate,
     "thresholds.photo_trust_min_comparisons": trustMinComparisons,
-  } = await getConfigs(["thresholds.photo_trust_min_agreement_rate", "thresholds.photo_trust_min_comparisons"]);
+  } = await getConfigs([
+    "thresholds.photo_trust_min_agreement_rate",
+    "thresholds.photo_trust_min_comparisons",
+  ]);
 
   const sender = await client.user.findUnique({
     where: { id: leg.fromUserId },
@@ -60,11 +63,7 @@ export async function createPhotoApprovalIfNeeded(tradeLegId: string, tx?: TxCli
  * Sender uploads photos for review.
  * Validates caller is the sender (fromUserId) on the leg.
  */
-export async function submitPhotos(
-  tradeLegId: string,
-  userId: string,
-  photos: string[]
-) {
+export async function submitPhotos(tradeLegId: string, userId: string, photos: string[]) {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
     include: { photoApproval: true },
@@ -74,10 +73,7 @@ export async function submitPhotos(
   if (!leg.photoApproval) throw new Error("No photo approval required for this leg");
   if (leg.fromUserId !== userId) throw new Error("Only the sender can upload photos");
 
-  if (
-    leg.photoApproval.status !== "PENDING_PHOTOS" &&
-    leg.photoApproval.status !== "REJECTED"
-  ) {
+  if (leg.photoApproval.status !== "PENDING_PHOTOS" && leg.photoApproval.status !== "REJECTED") {
     throw new Error(`Cannot submit photos in status ${leg.photoApproval.status}`);
   }
 
@@ -116,7 +112,7 @@ export async function reviewPhotos(
   tradeLegId: string,
   userId: string,
   approved: boolean,
-  rejectionNote?: string
+  rejectionNote?: string,
 ) {
   const leg = await db.tradeLeg.findUnique({
     where: { id: tradeLegId },
@@ -194,7 +190,5 @@ export async function areAllLegsPhotoCleared(tradeId: string): Promise<boolean> 
     include: { photoApproval: true },
   });
 
-  return legs.every(
-    (leg) => !leg.photoApproval || leg.photoApproval.status === "APPROVED"
-  );
+  return legs.every((leg) => !leg.photoApproval || leg.photoApproval.status === "APPROVED");
 }

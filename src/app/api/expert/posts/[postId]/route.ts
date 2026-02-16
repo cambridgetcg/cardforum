@@ -1,7 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { updateExpertPostSchema, moderateExpertPostSchema } from "@/lib/validators";
-import { getExpertPost, updateExpertPost, deleteExpertPost, moderatePost } from "@/server/services/expert-content.service";
+import {
+  getExpertPost,
+  updateExpertPost,
+  deleteExpertPost,
+  moderatePost,
+} from "@/server/services/expert-content.service";
 import "@/server/events/subscribers"; // ensure handlers are registered in serverless
 import { requireRole } from "@/server/middleware/rbac";
 

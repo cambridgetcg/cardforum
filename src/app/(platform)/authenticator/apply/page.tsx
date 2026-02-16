@@ -19,7 +19,10 @@ interface AuthenticatorProfile {
   tcgExpertise: string[];
 }
 
-const STATUS_LABELS: Record<string, { label: string; variant: "default" | "success" | "warning" | "error" | "info" }> = {
+const STATUS_LABELS: Record<
+  string,
+  { label: string; variant: "default" | "success" | "warning" | "error" | "info" }
+> = {
   DRAFT: { label: "Draft", variant: "default" },
   SUBMITTED: { label: "Submitted", variant: "info" },
   PENDING_REVIEW: { label: "Under Review", variant: "warning" },
@@ -64,7 +67,7 @@ export default function AuthenticatorApplyPage() {
 
   function toggleTcg(tcg: TCG) {
     setTcgExpertise((prev) =>
-      prev.includes(tcg) ? prev.filter((t) => t !== tcg) : [...prev, tcg]
+      prev.includes(tcg) ? prev.filter((t) => t !== tcg) : [...prev, tcg],
     );
   }
 
@@ -143,7 +146,8 @@ export default function AuthenticatorApplyPage() {
       label: profile.applicationStatus,
       variant: "default" as const,
     };
-    const canReapply = profile.applicationStatus === "REVOKED" || profile.applicationStatus === "DRAFT";
+    const canReapply =
+      profile.applicationStatus === "REVOKED" || profile.applicationStatus === "DRAFT";
     const isActive = profile.applicationStatus === "ACTIVE";
 
     return (
@@ -198,7 +202,8 @@ export default function AuthenticatorApplyPage() {
               {profile.applicationStatus === "MORE_INFO_NEEDED" && (
                 <div className="mt-4 rounded-lg bg-yellow-50 p-3">
                   <p className="text-sm text-yellow-800">
-                    Additional information has been requested. Please update your application and resubmit.
+                    Additional information has been requested. Please update your application and
+                    resubmit.
                   </p>
                 </div>
               )}
@@ -220,16 +225,14 @@ export default function AuthenticatorApplyPage() {
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Become an Authenticator</h1>
       <p className="mt-1 text-sm text-gray-600">
-        Authenticators verify trading cards for local trades. You'll inspect cards, confirm
+        Authenticators verify trading cards for local trades. You&apos;ll inspect cards, confirm
         condition, and ensure authenticity before trades complete.
       </p>
 
       <Card className="mt-8">
         <CardContent className="pt-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {error && (
-              <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-            )}
+            {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
             {/* Business Name */}
             <div>
@@ -265,9 +268,7 @@ export default function AuthenticatorApplyPage() {
 
             {/* TCG Expertise */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                TCG Expertise
-              </label>
+              <label className="block text-sm font-medium text-gray-700">TCG Expertise</label>
               <p className="mt-0.5 text-xs text-gray-500">
                 Select the card games you can authenticate
               </p>
@@ -298,20 +299,16 @@ export default function AuthenticatorApplyPage() {
                 value={experienceDesc}
                 onChange={(e) => setExperienceDesc(e.target.value)}
                 placeholder="Describe your experience with grading, authenticating, or dealing in trading cards..."
-                className="mt-1 flex min-h-[100px] w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
+                className="mt-1 flex min-h-[100px] w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
                 maxLength={2000}
                 required
               />
-              <p className="mt-1 text-xs text-gray-400">
-                {experienceDesc.length}/2000 characters
-              </p>
+              <p className="mt-1 text-xs text-gray-400">{experienceDesc.length}/2000 characters</p>
             </div>
 
             {/* Proof of Expertise */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Proof of Expertise
-              </label>
+              <label className="block text-sm font-medium text-gray-700">Proof of Expertise</label>
               <p className="mt-0.5 text-xs text-gray-500">
                 Links to credentials, marketplace profiles, grading certifications, etc.
               </p>

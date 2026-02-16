@@ -105,7 +105,10 @@ const ROLE_PERMISSIONS: Record<Role, Permission[]> = {
 /** Admin email allowlist — env-based until DB roles exist */
 function getAdminEmails(): string[] {
   const raw = process.env.ADMIN_EMAILS ?? "";
-  return raw.split(",").map((e) => e.trim()).filter(Boolean);
+  return raw
+    .split(",")
+    .map((e) => e.trim())
+    .filter(Boolean);
 }
 
 /**
@@ -189,10 +192,7 @@ export async function requirePermission(required: Permission): Promise<RBACConte
   return { userId: session.user.id, role };
 }
 
-type RBACHandler = (
-  req: NextRequest,
-  ctx: RBACContext,
-) => Promise<NextResponse | Response>;
+type RBACHandler = (req: NextRequest, ctx: RBACContext) => Promise<NextResponse | Response>;
 
 // ─── Middleware Wrapper ──────────────────────────────
 

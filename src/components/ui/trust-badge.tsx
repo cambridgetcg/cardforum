@@ -24,11 +24,21 @@ function getTrustTier(score: number): TrustTier {
 }
 
 const TIER_STYLES: Record<TrustTier, { bg: string; text: string; icon: string; label: string }> = {
-  new:       { bg: "bg-gray-100",    text: "text-gray-500",    icon: "text-gray-400",    label: "New" },
-  basic:     { bg: "bg-gray-100",    text: "text-gray-600",    icon: "text-gray-500",    label: "Basic" },
-  good:      { bg: "bg-blue-50",     text: "text-blue-700",    icon: "text-blue-500",    label: "Good" },
-  trusted:   { bg: "bg-emerald-50",  text: "text-emerald-700", icon: "text-emerald-500", label: "Trusted" },
-  excellent: { bg: "bg-amber-50",    text: "text-amber-700",   icon: "text-amber-500",   label: "Excellent" },
+  new: { bg: "bg-gray-100", text: "text-gray-500", icon: "text-gray-400", label: "New" },
+  basic: { bg: "bg-gray-100", text: "text-gray-600", icon: "text-gray-500", label: "Basic" },
+  good: { bg: "bg-blue-50", text: "text-blue-700", icon: "text-blue-500", label: "Good" },
+  trusted: {
+    bg: "bg-emerald-50",
+    text: "text-emerald-700",
+    icon: "text-emerald-500",
+    label: "Trusted",
+  },
+  excellent: {
+    bg: "bg-amber-50",
+    text: "text-amber-700",
+    icon: "text-amber-500",
+    label: "Excellent",
+  },
 };
 
 /**
@@ -36,7 +46,12 @@ const TIER_STYLES: Record<TrustTier, { bg: string; text: string; icon: string; l
  *
  * Colors: grey (new/basic) → blue (good) → green (trusted) → gold (excellent)
  */
-export function TrustBadge({ userId, score: preloadedScore, size = "sm", showScore = false }: TrustBadgeProps) {
+export function TrustBadge({
+  userId,
+  score: preloadedScore,
+  size = "sm",
+  showScore = false,
+}: TrustBadgeProps) {
   const [score, setScore] = useState<number | null>(preloadedScore ?? null);
 
   useEffect(() => {

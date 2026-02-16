@@ -8,13 +8,13 @@
 
 A Near Mint Luffy in Tokyo **is** a Near Mint Luffy in Berlin. Not "equivalent to" — **is**. This is not metaphor. It is the foundational axiom of the entire system, and everything that follows is a consequence of taking it seriously.
 
-If two cards share identity (name, set, number) and condition (NM/LP/MP/HP/DMG), they are interchangeable. This means physical location is irrelevant to ownership transfer. Only the *obligation* — "you are owed this card" — needs to travel. The card itself stays local.
+If two cards share identity (name, set, number) and condition (NM/LP/MP/HP/DMG), they are interchangeable. This means physical location is irrelevant to ownership transfer. Only the _obligation_ — "you are owed this card" — needs to travel. The card itself stays local.
 
-This is exactly how the internet works. Data doesn't travel as a single stream from source to destination. It gets *routed* — broken into packets, forwarded through local nodes, reassembled at the endpoint. The valuable payload is the information, not the physical medium.
+This is exactly how the internet works. Data doesn't travel as a single stream from source to destination. It gets _routed_ — broken into packets, forwarded through local nodes, reassembled at the endpoint. The valuable payload is the information, not the physical medium.
 
 **Fungibility is the protocol layer that makes routing possible.**
 
-Without it, every trade is point-to-point physical shipping. With it, every trade is a *routing problem* — find a cycle of local obligations that satisfies all parties without any card leaving its region.
+Without it, every trade is point-to-point physical shipping. With it, every trade is a _routing problem_ — find a cycle of local obligations that satisfies all parties without any card leaving its region.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -61,7 +61,7 @@ Every card has a canonical address: `(tcg, setName, number)`. This triple is uni
 
 Variants (language, edition, treatment) extend identity without breaking fungibility — a Japanese NM Luffy and an English NM Luffy are tracked as variants of the same canonical card, routable to different want-pools.
 
-**Condition scoring (CCS)** acts as the *certificate authority* of this layer. It doesn't name cards — it certifies their state. Four dimensions (surface 30%, corners 25%, edges 25%, centering 20%) produce a composite score that maps to a condition tier. The min-cap rule (`ccs.ts:52-55`) prevents a single catastrophic defect from hiding behind high averages.
+**Condition scoring (CCS)** acts as the _certificate authority_ of this layer. It doesn't name cards — it certifies their state. Four dimensions (surface 30%, corners 25%, edges 25%, centering 20%) produce a composite score that maps to a condition tier. The min-cap rule (`ccs.ts:52-55`) prevents a single catastrophic defect from hiding behind high averages.
 
 ```
 Identity Resolution:
@@ -75,9 +75,9 @@ Identity Resolution:
 
 **Job**: Declare what enters and exits the network.
 
-A HaveListing is a *publishing endpoint*: "I have this card, at this condition, for this price, in this region." A WantListing is a *subscription endpoint*: "I want this card, at minimum this condition, for up to this price."
+A HaveListing is a _publishing endpoint_: "I have this card, at this condition, for this price, in this region." A WantListing is a _subscription endpoint_: "I want this card, at minimum this condition, for up to this price."
 
-Intent enters raw (user form input), passes through validation (`validators.ts` zod schemas), gets currency-normalized (`convertToUsdCents` via exchange-rate service), and emerges as *routable data* — a typed, priced, region-tagged declaration ready for the matching engine.
+Intent enters raw (user form input), passes through validation (`validators.ts` zod schemas), gets currency-normalized (`convertToUsdCents` via exchange-rate service), and emerges as _routable data_ — a typed, priced, region-tagged declaration ready for the matching engine.
 
 The critical transform happens at listing creation (`listing.service.ts:22-40`): raw user intent becomes a graph edge candidate. The listing's `isActive` flag is its availability bit — flip it off and the edge disappears from the routing table.
 
@@ -98,9 +98,10 @@ Intent Declaration:
 
 **Job**: Find cycles of locally-fulfillable obligations.
 
-This is the heart of the highway. The matching engine is a *packet switch* — it takes a pool of intent declarations and finds closed loops where every obligation can be fulfilled without cards leaving their region.
+This is the heart of the highway. The matching engine is a _packet switch_ — it takes a pool of intent declarations and finds closed loops where every obligation can be fulfilled without cards leaving their region.
 
 **Edge construction** (`matching.service.ts:18-69`): For every active HaveListing, find WantListings for the same card where:
+
 - Different users (no self-trade)
 - Condition meets minimum (`conditionMeetsMinimum`)
 - Price is viable (`bidPrice ≥ askPrice`)
@@ -147,12 +148,12 @@ Routing Pipeline:
 
 **The Four Routing Decisions**:
 
-| Gate | Question | Determines |
-|------|----------|-----------|
-| Price gate | `bidPrice ≥ askPrice`? | Edge exists at all |
-| Locality gate | All users in same region? | DIRECT vs AUTHENTICATED |
-| Score gate | Which proposal ranks highest? | Execution priority |
-| Consent gate | All parties auto-accept? | Immediate vs manual |
+| Gate          | Question                      | Determines              |
+| ------------- | ----------------------------- | ----------------------- |
+| Price gate    | `bidPrice ≥ askPrice`?        | Edge exists at all      |
+| Locality gate | All users in same region?     | DIRECT vs AUTHENTICATED |
+| Score gate    | Which proposal ranks highest? | Execution priority      |
+| Consent gate  | All parties auto-accept?      | Immediate vs manual     |
 
 **Module**: `src/server/matching/` (chain-finder, bridge-builder, scorer), `src/server/services/matching.service.ts`
 
@@ -160,11 +161,11 @@ Routing Pipeline:
 
 **Job**: Prove that the physical card matches the digital claim.
 
-This is the layer where the information highway meets physical reality. The axiom says a NM Luffy in Tokyo equals a NM Luffy in Berlin — but only if both are *actually* NM. Verification is the protocol that enforces this.
+This is the layer where the information highway meets physical reality. The axiom says a NM Luffy in Tokyo equals a NM Luffy in Berlin — but only if both are _actually_ NM. Verification is the protocol that enforces this.
 
 **Photo gate** (`photo-approval.service.ts:23-46`): High-value legs (≥ threshold) require photographic proof before cards ship. But users who've proven reliable (AI agreement rate ≥ 0.9 over ≥ 5 comparisons) earn trust exemption — their past accuracy becomes their credential.
 
-**Authenticator assignment** (`authenticator.service.ts:253-306`): The matching of card to verifier is itself a routing problem — find the best-rated, least-loaded authenticator in the right region at the right tier. Authenticators are the *routing infrastructure* of the highway — they handle the physical cards at junction points.
+**Authenticator assignment** (`authenticator.service.ts:253-306`): The matching of card to verifier is itself a routing problem — find the best-rated, least-loaded authenticator in the right region at the right tier. Authenticators are the _routing infrastructure_ of the highway — they handle the physical cards at junction points.
 
 **Condition comparison** (`condition-comparison.service.ts`): After authenticator verification, AI and human assessments are compared dimension-by-dimension. Agreement (delta ≤ 1.0) feeds back into the user's trust score. Disagreement triggers investigation. This is checksum verification — does the received packet match what was advertised?
 
@@ -238,7 +239,7 @@ Settlement Protocols:
 
 **Job**: Move physical cards locally.
 
-The delivery layer is where the highway metaphor inverts: information has been routed, money has been settled, and now the *physical card* must traverse the last mile — but only locally, within a single region. This is the bridge model's payoff: international trade with domestic shipping.
+The delivery layer is where the highway metaphor inverts: information has been routed, money has been settled, and now the _physical card_ must traverse the last mile — but only locally, within a single region. This is the bridge model's payoff: international trade with domestic shipping.
 
 **Address lock** (`shipping.service.ts:12-62`): At ESCROWED, shipping addresses are frozen — a snapshot of where cards will go, immune to mid-trade address changes.
 
@@ -359,9 +360,9 @@ The error-correction flow. When verification fails, the system must unwind finan
 
 ### Pass 1: TRUTH — What Is the Highway, Actually?
 
-The highway is not a metaphor. It is *literally* an information network.
+The highway is not a metaphor. It is _literally_ an information network.
 
-In a standard trade, physical cards ship internationally. In the bridge model, **no card crosses a border**. What crosses borders is the *obligation graph* — the matching engine's output. The physical cards stay in their region and get routed locally.
+In a standard trade, physical cards ship internationally. In the bridge model, **no card crosses a border**. What crosses borders is the _obligation graph_ — the matching engine's output. The physical cards stay in their region and get routed locally.
 
 This means the system's primary product is not "card delivery" — it's **obligation resolution**. The matching engine is a clearing house. The authenticators are local fulfillment nodes. The entire physical layer (shipping, tracking, delivery) operates within single regions.
 
@@ -373,19 +374,19 @@ What's NOT true yet: the codebase treats regions as free-text strings (`User.reg
 
 Each layer exists because removing it breaks a specific invariant:
 
-| Layer | Invariant It Protects | What Breaks Without It |
-|-------|----------------------|----------------------|
-| Identity | Card X in Tokyo = Card X in Berlin | No fungibility, no routing |
-| Intent | Users declare what they have and want | No edges in the graph |
-| Routing | Cycles exist that satisfy all parties | No trades possible |
-| Verification | Physical card matches digital claim | Fraud, trust collapse |
-| Settlement | Money moves atomically with trade state | Financial inconsistency |
-| Delivery | Physical cards reach recipients | Obligation without fulfillment |
-| Governance | System improves from its own output | Static, no learning |
+| Layer        | Invariant It Protects                   | What Breaks Without It         |
+| ------------ | --------------------------------------- | ------------------------------ |
+| Identity     | Card X in Tokyo = Card X in Berlin      | No fungibility, no routing     |
+| Intent       | Users declare what they have and want   | No edges in the graph          |
+| Routing      | Cycles exist that satisfy all parties   | No trades possible             |
+| Verification | Physical card matches digital claim     | Fraud, trust collapse          |
+| Settlement   | Money moves atomically with trade state | Financial inconsistency        |
+| Delivery     | Physical cards reach recipients         | Obligation without fulfillment |
+| Governance   | System improves from its own output     | Static, no learning            |
 
 The deeper insight: **Layers 1-3 are pure information** (no physical state changes). **Layers 4-6 bridge information and reality** (verification proves the axiom holds, settlement moves money, delivery moves cards). **Layer 7 is meta-information** (information about how well the information system works).
 
-The highway's fundamental tension: Layers 1-3 assume fungibility. Layers 4-6 must *verify* it. The gap between assumption and verification is where all risk lives.
+The highway's fundamental tension: Layers 1-3 assume fungibility. Layers 4-6 must _verify_ it. The gap between assumption and verification is where all risk lives.
 
 ### Pass 3: BEAUTY — What's the Minimal Complete Design?
 
@@ -402,6 +403,7 @@ The minimal highway needs exactly seven things:
 Nothing more, nothing less. Each module does one thing. No module does two things. If you add an eighth layer, ask: which of the seven does it belong inside? If it's truly orthogonal, the model is wrong. If it's a subset, it belongs in its parent layer.
 
 Current violations of beauty:
+
 - **Wallet service** does both balance management AND hold calculation — two concerns in one module
 - **Trade service** orchestrates state transitions AND calls external APIs — coordination and execution mixed
 - **Authenticator service** handles both application management AND verification assignment — two lifecycle concerns
@@ -412,23 +414,24 @@ These aren't bugs. They're signals that the module boundaries haven't fully sett
 
 Right code in right place. Right module owns right concern.
 
-| Concern | Rightful Owner | Current Owner | Justly Placed? |
-|---------|---------------|---------------|---------------|
-| Card naming | Card model + catalog | Card model | Yes |
-| Condition scoring | CCS algorithm | `ccs.ts` | Yes |
-| Intent capture | Listing service | Listing service | Yes |
-| Price normalization | Exchange rate service | Exchange rate service | Yes |
-| Cycle detection | Chain finder | `chain-finder.ts` | Yes |
-| Trade mode decision | Bridge builder | `bridge-builder.ts` | Yes |
-| Authenticator routing | Authenticator service | `authenticator.service.ts` | Yes |
-| Photo gating | Photo approval service | `photo-approval.service.ts` | Yes |
-| Wallet atomicity | Wallet service | `wallet.service.ts` | Yes |
-| Stripe escrow | Marketplace escrow service | `marketplace-escrow.service.ts` | Yes |
-| Shipping state | Shipping service | `shipping.service.ts` | Yes |
-| Trust feedback | Multiple services | **Scattered** | **No** |
-| Trade orchestration | Trade service | `trade.service.ts` | Overloaded |
+| Concern               | Rightful Owner             | Current Owner                   | Justly Placed? |
+| --------------------- | -------------------------- | ------------------------------- | -------------- |
+| Card naming           | Card model + catalog       | Card model                      | Yes            |
+| Condition scoring     | CCS algorithm              | `ccs.ts`                        | Yes            |
+| Intent capture        | Listing service            | Listing service                 | Yes            |
+| Price normalization   | Exchange rate service      | Exchange rate service           | Yes            |
+| Cycle detection       | Chain finder               | `chain-finder.ts`               | Yes            |
+| Trade mode decision   | Bridge builder             | `bridge-builder.ts`             | Yes            |
+| Authenticator routing | Authenticator service      | `authenticator.service.ts`      | Yes            |
+| Photo gating          | Photo approval service     | `photo-approval.service.ts`     | Yes            |
+| Wallet atomicity      | Wallet service             | `wallet.service.ts`             | Yes            |
+| Stripe escrow         | Marketplace escrow service | `marketplace-escrow.service.ts` | Yes            |
+| Shipping state        | Shipping service           | `shipping.service.ts`           | Yes            |
+| Trust feedback        | Multiple services          | **Scattered**                   | **No**         |
+| Trade orchestration   | Trade service              | `trade.service.ts`              | Overloaded     |
 
 Two injustices:
+
 1. **Trust feedback is scattered** across condition-comparison, tier-promotion, random-audit, and rating aggregation — no single module owns "trust computation." The trust concern needs a home.
 2. **Trade service is overloaded** — it orchestrates state transitions, calls wallet service, calls escrow service, calls shipping service, and calls Stripe. It's a god-object for trade lifecycle. The state machine module exists (`trade-state-machine.ts`) but trade service still does the work.
 
@@ -440,7 +443,7 @@ The highway, taken seriously, opens paths that don't exist yet:
 The DFS cycle finder supports cycles of length 2-6. A 4-party cycle (A→B→C→D→A) is a 4-hop route where each card moves locally but the collective effect is a 4-way international exchange. The codebase supports this today.
 
 **2. Bandwidth Markets**
-Authenticators have capacity (`currentLoad`, `maxLoad`). Capacity is finite and regional. This means authenticator availability is a *scarce resource* that could be priced dynamically — high-demand regions pay premium verification fees, incentivizing new authenticators to enter.
+Authenticators have capacity (`currentLoad`, `maxLoad`). Capacity is finite and regional. This means authenticator availability is a _scarce resource_ that could be priced dynamically — high-demand regions pay premium verification fees, incentivizing new authenticators to enter.
 
 **3. Liquidity Corridors**
 Some regional pairs will have high trade volume (US↔Japan for Pokemon, Europe↔US for MTG). The matching engine could identify these corridors and pre-seed them with authenticator capacity, like provisioning bandwidth on a high-traffic network link.
@@ -519,15 +522,15 @@ A user who has Pokemon cards but wants One Piece cards can't trade directly. But
 
 The highway blueprint reveals where the current implementation diverges from the ideal:
 
-| Gap | Layer | Impact | Severity |
-|-----|-------|--------|----------|
-| Regions are free-text strings | L3 Routing | Can't reliably determine locality | HIGH |
-| Trust feedback services are dormant | L7 Governance | No self-improvement loop | HIGH |
-| Trade service is the god-object | L3-L6 bridge | Coupling between layers | MEDIUM |
-| No trust aggregation module | L7 Governance | Scattered trust logic | MEDIUM |
-| CCS calibration cron missing | L7→L1 feedback | Condition weights static | LOW |
-| Cross-TCG routing not designed | L3 Routing | No inter-game liquidity | FUTURE |
-| Predictive routing not designed | L3 Routing | Reactive only | FUTURE |
+| Gap                                 | Layer          | Impact                            | Severity |
+| ----------------------------------- | -------------- | --------------------------------- | -------- |
+| Regions are free-text strings       | L3 Routing     | Can't reliably determine locality | HIGH     |
+| Trust feedback services are dormant | L7 Governance  | No self-improvement loop          | HIGH     |
+| Trade service is the god-object     | L3-L6 bridge   | Coupling between layers           | MEDIUM   |
+| No trust aggregation module         | L7 Governance  | Scattered trust logic             | MEDIUM   |
+| CCS calibration cron missing        | L7→L1 feedback | Condition weights static          | LOW      |
+| Cross-TCG routing not designed      | L3 Routing     | No inter-game liquidity           | FUTURE   |
+| Predictive routing not designed     | L3 Routing     | Reactive only                     | FUTURE   |
 
 ---
 
@@ -542,7 +545,7 @@ The recursive enrichment reveals a progression:
 
 Each level emerges from the one below it. You can't have the economy without the highway. You can't have the highway without the protocol. You can't have the protocol without the axiom.
 
-The axiom is one sentence: *a card is a card is a card, regardless of where it sits.*
+The axiom is one sentence: _a card is a card is a card, regardless of where it sits._
 
 Everything else follows.
 
@@ -552,12 +555,12 @@ Everything else follows.
 
 Each layer has a dedicated tracking document with module inventory, progress checklists, gap analysis, and dormancy status:
 
-| Layer | Doc | Modules | Active | Dormant | Maturity |
-|-------|-----|---------|--------|---------|----------|
-| L1 Identity | [L1-IDENTITY.md](layers/L1-IDENTITY.md) | 6 | 6 | 0 | MVP |
-| L2 Intent | [L2-INTENT.md](layers/L2-INTENT.md) | 8 | 8 | 0 | MVP |
-| L3 Routing | [L3-ROUTING.md](layers/L3-ROUTING.md) | 5 | 5 | 0 | PROD |
-| L4 Verification | [L4-VERIFICATION.md](layers/L4-VERIFICATION.md) | 7 | 4 | 3 | Partial |
-| L5 Settlement | [L5-SETTLEMENT.md](layers/L5-SETTLEMENT.md) | 9 | 9 | 0 | PROD |
-| L6 Delivery | [L6-DELIVERY.md](layers/L6-DELIVERY.md) | 14 | 14 | 0 | PROD |
-| L7 Governance | [L7-GOVERNANCE.md](layers/L7-GOVERNANCE.md) | 8 | 6 | 2 | Partial |
+| Layer           | Doc                                             | Modules | Active | Dormant | Maturity |
+| --------------- | ----------------------------------------------- | ------- | ------ | ------- | -------- |
+| L1 Identity     | [L1-IDENTITY.md](layers/L1-IDENTITY.md)         | 6       | 6      | 0       | MVP      |
+| L2 Intent       | [L2-INTENT.md](layers/L2-INTENT.md)             | 8       | 8      | 0       | MVP      |
+| L3 Routing      | [L3-ROUTING.md](layers/L3-ROUTING.md)           | 5       | 5      | 0       | PROD     |
+| L4 Verification | [L4-VERIFICATION.md](layers/L4-VERIFICATION.md) | 7       | 4      | 3       | Partial  |
+| L5 Settlement   | [L5-SETTLEMENT.md](layers/L5-SETTLEMENT.md)     | 9       | 9      | 0       | PROD     |
+| L6 Delivery     | [L6-DELIVERY.md](layers/L6-DELIVERY.md)         | 14      | 14     | 0       | PROD     |
+| L7 Governance   | [L7-GOVERNANCE.md](layers/L7-GOVERNANCE.md)     | 8       | 6      | 2       | Partial  |

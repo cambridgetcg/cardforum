@@ -2,22 +2,11 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import {
-  Elements,
-  PaymentElement,
-  useStripe,
-  useElements,
-} from "@stripe/react-stripe-js";
+import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Loader2,
-  CheckCircle2,
-  AlertCircle,
-  CreditCard,
-  ShieldCheck,
-} from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, CreditCard, ShieldCheck } from "lucide-react";
 import { formatPrice } from "@/types/domain";
 
 // ─── Types ──────────────────────────────────────────────
@@ -52,13 +41,7 @@ const stripePromise = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 
 // ─── Inline Payment Form ────────────────────────────────
 
-function PaymentForm({
-  onSuccess,
-  amountCents,
-}: {
-  onSuccess: () => void;
-  amountCents: number;
-}) {
+function PaymentForm({ onSuccess, amountCents }: { onSuccess: () => void; amountCents: number }) {
   const stripe = useStripe();
   const elements = useElements();
   const [processing, setProcessing] = useState(false);
@@ -105,11 +88,7 @@ function PaymentForm({
           {error}
         </div>
       )}
-      <Button
-        type="submit"
-        disabled={!stripe || processing}
-        className="w-full"
-      >
+      <Button type="submit" disabled={!stripe || processing} className="w-full">
         {processing ? (
           <>
             <Loader2 className="mr-1.5 h-4 w-4 animate-spin" />
@@ -122,7 +101,7 @@ function PaymentForm({
           </>
         )}
       </Button>
-      <p className="text-[10px] text-gray-400 text-center">
+      <p className="text-center text-[10px] text-gray-400">
         Your card will be authorized but not charged until the trade completes.
       </p>
     </form>
@@ -157,9 +136,7 @@ function PaymentStatusBadge({ status }: { status: string }) {
         </Badge>
       );
     case "CANCELLED":
-      return (
-        <Badge className="bg-gray-100 text-gray-600">Cancelled</Badge>
-      );
+      return <Badge className="bg-gray-100 text-gray-600">Cancelled</Badge>;
     default:
       return <Badge className="bg-gray-100 text-gray-600">{status}</Badge>;
   }
@@ -259,14 +236,16 @@ export function TradePaymentConfirmation({
 
   if (!summary) return null;
 
-  const myPayment = summary.payments.find(
-    (p) => summary.myPendingPayments.some((mp) => mp.stripePaymentIntentId === p.amountCents.toString())
-  ) ?? summary.payments[0];
+  const myPayment =
+    summary.payments.find((p) =>
+      summary.myPendingPayments.some((mp) => mp.stripePaymentIntentId === p.amountCents.toString()),
+    ) ?? summary.payments[0];
 
   // Find the current user's overall payment status
   const myPending = summary.myPendingPayments;
   const hasPending = myPending.length > 0;
-  const allAuthorized = summary.payments.length > 0 &&
+  const allAuthorized =
+    summary.payments.length > 0 &&
     summary.payments.every((p) => p.status === "AUTHORIZED" || p.status === "CAPTURED");
 
   // Get the active pending payment to show Elements for
@@ -276,9 +255,7 @@ export function TradePaymentConfirmation({
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-gray-900">
-            Payment Authorization
-          </h3>
+          <h3 className="text-sm font-semibold text-gray-900">Payment Authorization</h3>
           {allAuthorized ? (
             <Badge className="bg-green-100 text-green-700">
               <CheckCircle2 className="mr-1 h-3 w-3" />
@@ -296,17 +273,10 @@ export function TradePaymentConfirmation({
         <div className="space-y-4">
           {/* Payment entries */}
           {summary.payments.map((payment, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-between text-sm"
-            >
+            <div key={i} className="flex items-center justify-between text-sm">
               <div>
-                <span className="text-gray-600">
-                  User ...{payment.userId.slice(-4)}
-                </span>
-                <span className="ml-2 font-medium">
-                  {formatPrice(payment.amountCents)}
-                </span>
+                <span className="text-gray-600">User ...{payment.userId.slice(-4)}</span>
+                <span className="ml-2 font-medium">{formatPrice(payment.amountCents)}</span>
               </div>
               <PaymentStatusBadge status={payment.status} />
             </div>
@@ -324,8 +294,8 @@ export function TradePaymentConfirmation({
               <div>
                 <p className="font-medium">All payments authorized</p>
                 <p className="text-xs text-green-600">
-                  Funds are held on each participant&apos;s card and will be
-                  captured when the trade completes.
+                  Funds are held on each participant&apos;s card and will be captured when the trade
+                  completes.
                 </p>
               </div>
             </div>
@@ -345,51 +315,46 @@ export function TradePaymentConfirmation({
           )}
 
           {/* Payment form for pending payments */}
-          {!confirmed &&
-            hasPending &&
-            activePendingPayment?.clientSecret &&
-            stripePromise && (
-              <div className="space-y-2">
-                <p className="text-xs text-gray-500">
-                  Authorize a hold of{" "}
-                  <span className="font-semibold text-gray-700">
-                    {formatPrice(activePendingPayment.amountCents)}
-                  </span>{" "}
-                  on your card to secure this trade. You won&apos;t be charged
-                  until the trade completes.
-                </p>
-                <Elements
-                  stripe={stripePromise}
-                  options={{
-                    clientSecret: activePendingPayment.clientSecret,
-                    appearance: {
-                      theme: "stripe",
-                      variables: { colorPrimary: "#4f46e5" },
-                    },
-                  }}
-                >
-                  <PaymentForm
-                    onSuccess={handlePaymentSuccess}
-                    amountCents={activePendingPayment.amountCents}
-                  />
-                </Elements>
-              </div>
-            )}
+          {!confirmed && hasPending && activePendingPayment?.clientSecret && stripePromise && (
+            <div className="space-y-2">
+              <p className="text-xs text-gray-500">
+                Authorize a hold of{" "}
+                <span className="font-semibold text-gray-700">
+                  {formatPrice(activePendingPayment.amountCents)}
+                </span>{" "}
+                on your card to secure this trade. You won&apos;t be charged until the trade
+                completes.
+              </p>
+              <Elements
+                stripe={stripePromise}
+                options={{
+                  clientSecret: activePendingPayment.clientSecret,
+                  appearance: {
+                    theme: "stripe",
+                    variables: { colorPrimary: "#4f46e5" },
+                  },
+                }}
+              >
+                <PaymentForm
+                  onSuccess={handlePaymentSuccess}
+                  amountCents={activePendingPayment.amountCents}
+                />
+              </Elements>
+            </div>
+          )}
 
           {/* No client secret but still pending — show message */}
-          {!confirmed &&
-            hasPending &&
-            !activePendingPayment?.clientSecret && (
-              <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-3 py-2.5 text-sm text-amber-700">
-                <AlertCircle className="h-4 w-4 shrink-0" />
-                <div>
-                  <p className="font-medium">Payment setup in progress</p>
-                  <p className="text-xs text-amber-600">
-                    The payment authorization is being prepared. Please refresh in a moment.
-                  </p>
-                </div>
+          {!confirmed && hasPending && !activePendingPayment?.clientSecret && (
+            <div className="flex items-center gap-2 rounded-lg bg-amber-50 px-3 py-2.5 text-sm text-amber-700">
+              <AlertCircle className="h-4 w-4 shrink-0" />
+              <div>
+                <p className="font-medium">Payment setup in progress</p>
+                <p className="text-xs text-amber-600">
+                  The payment authorization is being prepared. Please refresh in a moment.
+                </p>
               </div>
-            )}
+            </div>
+          )}
 
           {/* Trade completed/cancelled — show final state */}
           {(tradeStatus === "COMPLETED" || tradeStatus === "CANCELLED") && (

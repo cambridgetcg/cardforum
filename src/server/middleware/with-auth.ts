@@ -12,6 +12,7 @@ type AuthenticatedHandler = (
   ctx: AuthContext,
 ) => Promise<NextResponse | Response>;
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface WithAuthOptions {
   // Future: roles?: UserRole[] — enforce role-based access
   // When RBAC lands, add:   roles?: ("USER" | "ADMIN" | "AUTHENTICATOR")[];
@@ -76,10 +77,7 @@ export function withAuthParams<P extends Record<string, string>>(
   ) => Promise<NextResponse | Response>,
   _options?: WithAuthOptions,
 ): (req: NextRequest, ctx: { params: Promise<P> }) => Promise<NextResponse | Response> {
-  return async (
-    req: NextRequest,
-    { params }: { params: Promise<P> },
-  ) => {
+  return async (req: NextRequest, { params }: { params: Promise<P> }) => {
     const session = await auth();
     if (!session?.user?.id) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

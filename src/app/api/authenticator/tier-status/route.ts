@@ -13,8 +13,7 @@ export async function GET() {
     const eligibility = await getTierEligibility(session.user.id);
     return NextResponse.json({ eligibility });
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to get tier status";
+    const message = err instanceof Error ? err.message : "Failed to get tier status";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

@@ -80,8 +80,7 @@ export async function resolveDispute(
     await initiateCardReturns(tradeId);
 
     // Transition trade to CANCELLED
-    const statusHistory =
-      (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+    const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
     statusHistory.push({ status: "CANCELLED", at: new Date().toISOString() });
 
     await db.trade.update({
@@ -108,8 +107,7 @@ export async function resolveDispute(
         data: { status: "VERIFIED" },
       });
 
-      const statusHistory =
-        (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+      const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
       statusHistory.push({ status: "VERIFIED", at: new Date().toISOString() });
 
       await db.trade.update({
@@ -171,8 +169,7 @@ export async function createShippingDispute(
   // Transition trade to DISPUTED
   const trade = await db.trade.findUnique({ where: { id: tradeId } });
   if (trade && trade.status !== "DISPUTED") {
-    const statusHistory =
-      (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+    const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
     statusHistory.push({ status: "DISPUTED", at: new Date().toISOString() });
 
     await db.trade.update({
@@ -213,9 +210,7 @@ export async function getOpenDisputes(tradeId?: string) {
  */
 export async function getAllDisputes(statusFilter?: string) {
   return db.dispute.findMany({
-    where: statusFilter
-      ? { status: statusFilter as PrismaDisputeStatus }
-      : {},
+    where: statusFilter ? { status: statusFilter as PrismaDisputeStatus } : {},
     include: {
       raisedBy: { select: { name: true, email: true } },
       trade: {

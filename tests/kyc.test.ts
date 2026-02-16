@@ -21,11 +21,7 @@ import {
   reinstateKYC,
   getUserKYCLevel,
 } from "@/server/services/kyc.service";
-import {
-  getKYCLevel,
-  kycLevelMeetsMinimum,
-  canTransitionKYC,
-} from "@/types/domain";
+import { getKYCLevel, kycLevelMeetsMinimum, canTransitionKYC } from "@/types/domain";
 
 const db = getTestDb();
 
@@ -226,9 +222,9 @@ describe("KYC System", () => {
       const admin = await createTestUser({ email: "kyc-admin-revinv@test.com" });
 
       // UNVERIFIED user — cannot approve
-      await expect(
-        reviewKYC(user.id, admin.id, { action: "approve" }),
-      ).rejects.toThrow(/Cannot approve from status/);
+      await expect(reviewKYC(user.id, admin.id, { action: "approve" })).rejects.toThrow(
+        /Cannot approve from status/,
+      );
     });
   });
 
@@ -265,9 +261,9 @@ describe("KYC System", () => {
       const user = await createTestUser({ email: "kyc-susp-unv@test.com" });
       const admin = await createTestUser({ email: "kyc-admin-suspunv@test.com" });
 
-      await expect(
-        suspendKYC(user.id, admin.id, "Reason"),
-      ).rejects.toThrow(/Cannot suspend from status/);
+      await expect(suspendKYC(user.id, admin.id, "Reason")).rejects.toThrow(
+        /Cannot suspend from status/,
+      );
     });
 
     it("revokes a SUSPENDED user", async () => {
@@ -292,9 +288,9 @@ describe("KYC System", () => {
 
       await approveBasicKYC(user.id, admin.id);
 
-      await expect(
-        revokeKYC(user.id, admin.id, "Reason"),
-      ).rejects.toThrow(/Cannot revoke from status.*Must be SUSPENDED/);
+      await expect(revokeKYC(user.id, admin.id, "Reason")).rejects.toThrow(
+        /Cannot revoke from status.*Must be SUSPENDED/,
+      );
     });
 
     it("reinstates a SUSPENDED user to BASIC_VERIFIED", async () => {
@@ -326,9 +322,9 @@ describe("KYC System", () => {
 
       await approveBasicKYC(user.id, admin.id);
 
-      await expect(
-        reinstateKYC(user.id, admin.id, "BASIC_VERIFIED"),
-      ).rejects.toThrow(/Cannot reinstate from status.*Must be SUSPENDED/);
+      await expect(reinstateKYC(user.id, admin.id, "BASIC_VERIFIED")).rejects.toThrow(
+        /Cannot reinstate from status.*Must be SUSPENDED/,
+      );
     });
   });
 

@@ -8,10 +8,10 @@
 
 CardForum separates every trade into two independent layers:
 
-| Layer | Scope | Movement |
-|-------|-------|----------|
-| **Logical** | Global — who trades what with whom | Information only |
-| **Physical** | Local — who hands cards to whom | Cards + money |
+| Layer        | Scope                              | Movement         |
+| ------------ | ---------------------------------- | ---------------- |
+| **Logical**  | Global — who trades what with whom | Information only |
+| **Physical** | Local — who hands cards to whom    | Cards + money    |
 
 The logical layer is where matching happens. The physical layer is where fulfillment happens. They are decoupled by **fungibility**: the logical trade says "Alice gets a Charizard from Bob" but the physical fulfillment says "Alice gets a Charizard from Charlie, who happens to be in her city." Alice doesn't care — it's the same card.
 
@@ -68,14 +68,14 @@ Longer cycles unlock more matches but add coordination complexity. Each addition
 
 CardForum's matching problem is structurally identical to the **Kidney Paired Donation** problem studied in economics and computer science (Roth, Sönmez, Ünver, 2004):
 
-| Kidney Exchange | CardForum |
-|----------------|-----------|
-| Incompatible donor-patient pairs | Users with have/want mismatches |
-| Finding compatible cycles | Finding trade cycles fulfillable locally |
+| Kidney Exchange                     | CardForum                                     |
+| ----------------------------------- | --------------------------------------------- |
+| Incompatible donor-patient pairs    | Users with have/want mismatches               |
+| Finding compatible cycles           | Finding trade cycles fulfillable locally      |
 | Surgeries happen at local hospitals | Card exchanges happen at local authenticators |
-| Cycle length capped at 3–4 | Same — coordination limit |
-| NP-hard for cycles ≥ 3 | Same computational complexity |
-| Altruistic donor chains | Authenticator-seeded inventory (see §6) |
+| Cycle length capped at 3–4          | Same — coordination limit                     |
+| NP-hard for cycles ≥ 3              | Same computational complexity                 |
+| Altruistic donor chains             | Authenticator-seeded inventory (see §6)       |
 
 **Algorithmic implication**: Maximum cycle packing with length ≤ k (k ≥ 3) is NP-hard. For practical purposes, integer programming with cycle enumeration (Abraham, Blum, Sandholm) is the standard approach. The matching engine is the core IP of the platform.
 
@@ -100,6 +100,7 @@ Users don't hand cards directly to strangers. Every physical exchange flows thro
 ```
 
 The authenticator is simultaneously:
+
 - **Escrow agent** — physical custody of the card until all legs clear
 - **Quality controller** — authenticity + condition verification
 - **Logistics hub** — local shipping to recipient
@@ -138,6 +139,7 @@ PER TRADE LEG:
 ### 5.1 The Problem
 
 Cards have different market values. In a swap:
+
 - Card A: $50 market value
 - Card B: $30 market value
 - Gap: $20 owed by the person receiving Card A
@@ -176,10 +178,10 @@ Perfect regional value balance won't always be achievable. Fallback options in p
 
 ### 5.4 The Three Locality Principles
 
-| What | Traditional | CardForum |
-|------|------------|-----------|
-| Cards move... | Internationally | Locally |
-| Money moves... | Internationally | Locally (or crypto) |
+| What                    | Traditional                 | CardForum                         |
+| ----------------------- | --------------------------- | --------------------------------- |
+| Cards move...           | Internationally             | Locally                           |
+| Money moves...          | Internationally             | Locally (or crypto)               |
 | Trust is established... | Across jurisdictions (hard) | Locally via authenticators (easy) |
 
 Everything that used to cross borders now stays local. The only thing that crosses borders is **information** — the match itself.
@@ -226,14 +228,14 @@ The trade-level state advances only when ALL legs reach the required state. One 
 
 ### 6.2 Timeouts and Penalties
 
-| Phase | Timeout | Consequence |
-|-------|---------|-------------|
-| PROPOSED → ACCEPTED | 48h | Auto-expires, no penalty |
-| ACCEPTED → ESCROWED | 24h | Auto-cancels |
-| ESCROWED → CARDS_SUBMITTED | 7 days | Deposit forfeited by non-submitting party |
-| AUTHENTICATING → VERIFIED | 3 days | Escalated to support |
-| VERIFIED → DELIVERING | 5 days | Escalated to support |
-| DELIVERING → DELIVERED | 14 days | Dispute auto-opened |
+| Phase                      | Timeout | Consequence                               |
+| -------------------------- | ------- | ----------------------------------------- |
+| PROPOSED → ACCEPTED        | 48h     | Auto-expires, no penalty                  |
+| ACCEPTED → ESCROWED        | 24h     | Auto-cancels                              |
+| ESCROWED → CARDS_SUBMITTED | 7 days  | Deposit forfeited by non-submitting party |
+| AUTHENTICATING → VERIFIED  | 3 days  | Escalated to support                      |
+| VERIFIED → DELIVERING      | 5 days  | Escalated to support                      |
+| DELIVERING → DELIVERED     | 14 days | Dispute auto-opened                       |
 
 ---
 
@@ -242,6 +244,7 @@ The trade-level state advances only when ALL legs reach the required state. One 
 ### 7.1 The Liquidity Requirement
 
 The platform only works with sufficient user density in each region. For a match to exist:
+
 - The same card must be available from multiple users across regions
 - Complementary want/have pairs must exist in each involved region
 - Value gaps should ideally balance within regions
@@ -251,6 +254,7 @@ The platform only works with sufficient user density in each region. For a match
 ### 7.2 The Regional Exclusivity Problem
 
 Fungibility breaks down for:
+
 - **Regional promos** (JP-exclusive tournament cards)
 - **Language-specific printings** (Japanese vs English)
 - **Ultra-rare / low-print-run cards** (1 of 50 in the world)
@@ -262,6 +266,7 @@ The platform should clearly signal to users: "This card can be matched locally" 
 ### 7.3 Condition Fungibility Limits
 
 Two "Near Mint" cards are fungible in theory. In practice:
+
 - Centering varies
 - Surface quality varies
 - One might be a 9.5 PSA candidate, another a 7
@@ -286,6 +291,7 @@ Layer 4: SOCIAL           — ratings, reviews, trade history
 ### 8.2 What If an Authenticator Is Dishonest?
 
 Mitigations:
+
 1. **Tiering** — new authenticators are STANDARD (low-value trades only), earn VERIFIED and PREMIUM through track record
 2. **Photo documentation** — every verification includes timestamped photos
 3. **Cross-verification** — random audits where a second authenticator checks the first
@@ -325,11 +331,13 @@ Users won't join without matches. Matches don't exist without users.
 ## 10. Open Questions
 
 ### Resolved in This Analysis
+
 - [x] How does value gap settlement avoid international money movement? → Regional balancing + crypto fallback
 - [x] What prevents users from ghosting? → Commitment deposits + timeouts + reputation
 - [x] How do you handle condition subjectivity? → Authenticator normalization
 
 ### Still Open
+
 - [ ] **Pricing oracle**: How does the platform determine card market values for gap calculation? (TCGPlayer API? Own price index?)
 - [ ] **Multi-TCG matching**: Can a cycle include different TCGs? (Alice trades a Pokemon card, receives a Yu-Gi-Oh card?) Or are cycles TCG-scoped?
 - [ ] **Partial fulfillment**: Can a user's want list be partially matched? (Want 4 cards, 2 matched locally, 2 require international?)
@@ -342,15 +350,15 @@ Users won't join without matches. Matches don't exist without users.
 
 ## 11. Summary of Key Insights
 
-| # | Insight | Implication |
-|---|---------|-------------|
-| 1 | **Fungibility enables logical-physical decoupling** | The entire platform rests on this property. Without it, you just have another marketplace. |
-| 2 | **The matching engine is the core IP** | Not the marketplace, not the UI — the algorithm that finds locally-fulfillable cycles is the moat. |
-| 3 | **Structurally identical to kidney exchange** | Well-studied problem. NP-hard for cycles ≥ 3. Use integer programming with cycle enumeration. |
-| 4 | **Authenticators are clearing nodes, not just verifiers** | They serve five functions: escrow, QC, logistics, trust, and condition normalization. |
-| 5 | **Value gaps should balance within regions** | Adds a constraint to matching but eliminates international money movement entirely. |
-| 6 | **Only information crosses borders** | Cards move locally, money moves locally, trust is local. The platform is pure information infrastructure. |
-| 7 | **Liquidity is existential** | The platform has a cold start problem. Authenticators (card shops) as initial traders is the bootstrap. |
-| 8 | **Fungibility has limits** | Regional exclusives, ultra-rares, and sub-grade condition differences break the model. Graceful fallback to international shipping is necessary. |
-| 9 | **Atomic settlement is mandatory** | All legs must clear before any cards are released. One failure blocks the whole trade. |
-| 10 | **Cycle length must be capped** | 3–4 max for practical coordination. Mirrors kidney exchange findings. |
+| #   | Insight                                                   | Implication                                                                                                                                      |
+| --- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Fungibility enables logical-physical decoupling**       | The entire platform rests on this property. Without it, you just have another marketplace.                                                       |
+| 2   | **The matching engine is the core IP**                    | Not the marketplace, not the UI — the algorithm that finds locally-fulfillable cycles is the moat.                                               |
+| 3   | **Structurally identical to kidney exchange**             | Well-studied problem. NP-hard for cycles ≥ 3. Use integer programming with cycle enumeration.                                                    |
+| 4   | **Authenticators are clearing nodes, not just verifiers** | They serve five functions: escrow, QC, logistics, trust, and condition normalization.                                                            |
+| 5   | **Value gaps should balance within regions**              | Adds a constraint to matching but eliminates international money movement entirely.                                                              |
+| 6   | **Only information crosses borders**                      | Cards move locally, money moves locally, trust is local. The platform is pure information infrastructure.                                        |
+| 7   | **Liquidity is existential**                              | The platform has a cold start problem. Authenticators (card shops) as initial traders is the bootstrap.                                          |
+| 8   | **Fungibility has limits**                                | Regional exclusives, ultra-rares, and sub-grade condition differences break the model. Graceful fallback to international shipping is necessary. |
+| 9   | **Atomic settlement is mandatory**                        | All legs must clear before any cards are released. One failure blocks the whole trade.                                                           |
+| 10  | **Cycle length must be capped**                           | 3–4 max for practical coordination. Mirrors kidney exchange findings.                                                                            |

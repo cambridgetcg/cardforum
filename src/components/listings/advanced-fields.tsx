@@ -57,11 +57,7 @@ export function AdvancedFields({
         className="flex w-full items-center justify-between text-sm font-medium text-gray-600 hover:text-gray-900"
       >
         <span>Advanced options</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4" />
-        ) : (
-          <ChevronDown className="h-4 w-4" />
-        )}
+        {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
       </button>
 
       {expanded && (
@@ -83,13 +79,11 @@ export function AdvancedFields({
 
           {/* Language */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Card Language
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Card Language</label>
             <select
               value={language}
               onChange={(e) => onLanguageChange(e.target.value)}
-              className="mt-1 h-10 w-40 rounded-lg border border-gray-300 bg-white px-3 text-sm text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
+              className="mt-1 h-10 w-40 rounded-lg border border-gray-300 bg-white px-3 text-sm text-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
             >
               {CARD_LANGUAGES.map((l) => (
                 <option key={l.value} value={l.value}>
@@ -101,9 +95,7 @@ export function AdvancedFields({
 
           {/* Notes */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Notes
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Notes</label>
             <div className="relative mt-1">
               <textarea
                 value={notes}
@@ -111,9 +103,9 @@ export function AdvancedFields({
                 maxLength={500}
                 placeholder="Any specifics about this listing..."
                 rows={3}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
+                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
               />
-              <span className="absolute bottom-2 right-2 text-xs text-gray-400">
+              <span className="absolute right-2 bottom-2 text-xs text-gray-400">
                 {notes.length}/500
               </span>
             </div>
@@ -128,20 +120,16 @@ export function AdvancedFields({
                 onChange={(e) => onAutoAcceptChange(e.target.checked)}
                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
               />
-              <span className="text-sm font-medium text-gray-700">
-                Auto-accept matching trades
-              </span>
+              <span className="text-sm font-medium text-gray-700">Auto-accept matching trades</span>
             </label>
-            <p className="ml-6 mt-0.5 text-xs text-gray-500">
+            <p className="mt-0.5 ml-6 text-xs text-gray-500">
               Automatically accept when a compatible trade is found
             </p>
 
             {autoAccept && (
-              <div className="ml-6 mt-3 space-y-3 rounded-lg bg-gray-50 p-3">
+              <div className="mt-3 ml-6 space-y-3 rounded-lg bg-gray-50 p-3">
                 <div>
-                  <label className="block text-xs font-medium text-gray-600">
-                    Max price gap
-                  </label>
+                  <label className="block text-xs font-medium text-gray-600">Max price gap</label>
                   <Input
                     type="number"
                     min={0}

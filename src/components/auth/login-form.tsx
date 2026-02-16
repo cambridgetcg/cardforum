@@ -45,9 +45,7 @@ export function LoginForm() {
     <Card className="mx-auto w-full max-w-md">
       <CardHeader>
         <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
-        <p className="text-sm text-gray-600">
-          Sign in to your CardForum account
-        </p>
+        <p className="text-sm text-gray-600">Sign in to your CardForum account</p>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-3">
@@ -97,11 +95,7 @@ export function LoginForm() {
               Invalid verification link.
             </p>
           )}
-          {error && (
-            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
-              {error}
-            </p>
-          )}
+          {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
           <Input
             type="email"
             placeholder="Email"
@@ -118,7 +112,10 @@ export function LoginForm() {
               required
             />
             <div className="mt-1 text-right">
-              <Link href="/forgot-password" className="text-xs text-indigo-600 hover:text-indigo-500">
+              <Link
+                href="/forgot-password"
+                className="text-xs text-indigo-600 hover:text-indigo-500"
+              >
                 Forgot password?
               </Link>
             </div>

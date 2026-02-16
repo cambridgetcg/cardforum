@@ -1,4 +1,10 @@
-import { PrismaClient, AuthenticatorTier, AuthenticatorApplicationStatus, TCG, KYCStatus } from "@/generated/prisma/client";
+import {
+  PrismaClient,
+  AuthenticatorTier,
+  AuthenticatorApplicationStatus,
+  TCG,
+  KYCStatus,
+} from "@/generated/prisma/client";
 import { hash } from "bcryptjs";
 import { db as serviceDb } from "@/lib/db";
 
@@ -29,10 +35,11 @@ export async function createTestUser(
     email?: string;
     password?: string;
     region?: string;
-  } = {}
+  } = {},
 ) {
   const db = getTestDb();
-  const email = overrides.email ?? `test-${Date.now()}-${Math.random().toString(36).slice(2, 8)}@test.com`;
+  const email =
+    overrides.email ?? `test-${Date.now()}-${Math.random().toString(36).slice(2, 8)}@test.com`;
   const passwordHash = overrides.password
     ? await hash(overrides.password, 4) // low rounds for speed in tests
     : await hash("TestPassword123!", 4);
@@ -60,7 +67,7 @@ export async function createTestAuthenticator(
     rating?: number;
     totalVerified?: number;
     maxLoad?: number;
-  } = {}
+  } = {},
 ) {
   const db = getTestDb();
   return db.authenticator.create({
@@ -98,12 +105,14 @@ export async function createTestRegion(country = "JP", name = "Tokyo") {
 /**
  * Seed base card data for tests that need cards.
  */
-export async function seedTestCard(overrides: {
-  name?: string;
-  tcg?: TCG;
-  setName?: string;
-  number?: string;
-} = {}) {
+export async function seedTestCard(
+  overrides: {
+    name?: string;
+    tcg?: TCG;
+    setName?: string;
+    number?: string;
+  } = {},
+) {
   const db = getTestDb();
   const tcg = overrides.tcg ?? "POKEMON";
   const setName = overrides.setName ?? "Test Set";

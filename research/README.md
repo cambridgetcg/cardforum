@@ -37,6 +37,7 @@ research/
 For bridge trading to work, we need to answer: **"Is Card A in Tokyo equivalent to Card B in London?"**
 
 This requires understanding:
+
 1. **Card Identity**: What uniquely identifies a card? (game, set, number, variant, language, condition)
 2. **Fungibility**: When are two physical cards interchangeable? (same card, same condition — but does language matter? does foil vs non-foil matter?)
 3. **Variant Hierarchy**: How do variants relate? (a Full Art is "the same card" as a regular print for gameplay, but NOT for collecting/trading)

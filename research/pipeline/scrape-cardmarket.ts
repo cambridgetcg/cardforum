@@ -10,7 +10,7 @@
  * Default: OP01 Romance Dawn (expansion ID 5229)
  *
  * This module also exports scrapeExpansion() and parseCardsFromHtml() for
- * use by the batch orchestrator (scrape-all-sets.ts).
+ * use by the batch orchestrator (scrape-all-products.ts).
  */
 
 import "dotenv/config";
@@ -20,31 +20,31 @@ import * as path from "path";
 
 // --- Cardmarket expansion IDs for One Piece (legacy, used by standalone mode) ---
 const EXPANSIONS: Record<string, { id: number; name: string; setCode: string }> = {
-  "OP01":  { id: 5229, name: "Romance Dawn",             setCode: "OP01" },
-  "OP01J": { id: 5484, name: "Romance Dawn (Japanese)",  setCode: "OP01" },
-  "OP02":  { id: 5263, name: "Paramount War",            setCode: "OP02" },
-  "OP03":  { id: 5364, name: "Pillars of Strength",      setCode: "OP03" },
-  "OP04":  { id: 5365, name: "Kingdoms of Intrigue",      setCode: "OP04" },
-  "OP05":  { id: 5426, name: "Awakening of the New Era",  setCode: "OP05" },
-  "OP06":  { id: 5524, name: "Wings of the Captain",      setCode: "OP06" },
-  "OP07":  { id: 5586, name: "500 Years into the Future",  setCode: "OP07" },
-  "OP08":  { id: 5610, name: "Two Legends",               setCode: "OP08" },
-  "OP09":  { id: 5755, name: "Emperors in the New World", setCode: "OP09" },
-  "OP10":  { id: 5974, name: "Royal Blood",               setCode: "OP10" },
+  OP01: { id: 5229, name: "Romance Dawn", setCode: "OP01" },
+  OP01J: { id: 5484, name: "Romance Dawn (Japanese)", setCode: "OP01" },
+  OP02: { id: 5263, name: "Paramount War", setCode: "OP02" },
+  OP03: { id: 5364, name: "Pillars of Strength", setCode: "OP03" },
+  OP04: { id: 5365, name: "Kingdoms of Intrigue", setCode: "OP04" },
+  OP05: { id: 5426, name: "Awakening of the New Era", setCode: "OP05" },
+  OP06: { id: 5524, name: "Wings of the Captain", setCode: "OP06" },
+  OP07: { id: 5586, name: "500 Years into the Future", setCode: "OP07" },
+  OP08: { id: 5610, name: "Two Legends", setCode: "OP08" },
+  OP09: { id: 5755, name: "Emperors in the New World", setCode: "OP09" },
+  OP10: { id: 5974, name: "Royal Blood", setCode: "OP10" },
 };
 
 export interface CardmarketCard {
-  cardId: string;        // e.g., "OP01-077", "ST01-001", "P-001"
-  name: string;          // e.g., "Perona"
+  cardId: string; // e.g., "OP01-077", "ST01-001", "P-001"
+  name: string; // e.g., "Perona"
   version: string | null; // e.g., "V.2" or null
-  url: string;           // relative URL on cardmarket
-  imageUrl: string;      // product image URL
-  priceFrom: string;     // e.g., "24,49 €"
-  priceEur: number;      // parsed float, e.g., 24.49
-  expansion: string;     // e.g., "Romance Dawn"
-  setCode: string;       // e.g., "OP01"
-  treatment: string;     // "regular", "parallel" (inferred from version)
-  sourceUrl: string;     // Full Cardmarket product URL
+  url: string; // relative URL on cardmarket
+  imageUrl: string; // product image URL
+  priceFrom: string; // e.g., "24,49 €"
+  priceEur: number; // parsed float, e.g., 24.49
+  expansion: string; // e.g., "Romance Dawn"
+  setCode: string; // e.g., "OP01"
+  treatment: string; // "regular", "parallel" (inferred from version)
+  sourceUrl: string; // Full Cardmarket product URL
 }
 
 export interface ScrapeResult {
@@ -74,7 +74,11 @@ export function inferTreatment(version: string | null): string {
  * Parse card entries from a Cardmarket gallery page HTML.
  * Returns parsed cards and the total number of pages.
  */
-export function parseCardsFromHtml(html: string, setCode: string, expansionName: string): {
+export function parseCardsFromHtml(
+  html: string,
+  setCode: string,
+  expansionName: string,
+): {
   cards: CardmarketCard[];
   totalPages: number;
 } {
@@ -89,7 +93,8 @@ export function parseCardsFromHtml(html: string, setCode: string, expansionName:
   //   <img ... alt="Name (CardID) (Version)" data-echo="IMAGE_URL" ...>
   //   ...
   //   <p class="card-text text-muted">From <b>PRICE</b></p>
-  const cardPattern = /<a\s+href="(\/en\/OnePiece\/Products\/Singles\/[^"]+)"\s+class="[^"]*galleryBox[^"]*">[\s\S]*?alt="([^"]*)"[\s\S]*?data-echo="([^"]*)"[\s\S]*?From\s*<b>([^<]*)<\/b>/g;
+  const cardPattern =
+    /<a\s+href="(\/en\/OnePiece\/Products\/Singles\/[^"]+)"\s+class="[^"]*galleryBox[^"]*">[\s\S]*?alt="([^"]*)"[\s\S]*?data-echo="([^"]*)"[\s\S]*?From\s*<b>([^<]*)<\/b>/g;
 
   let match;
   while ((match = cardPattern.exec(html)) !== null) {
@@ -108,7 +113,10 @@ export function parseCardsFromHtml(html: string, setCode: string, expansionName:
     const [, name, cardId, version] = altMatch;
 
     // Parse price: "24,49 €" → 24.49
-    const priceClean = priceText.trim().replace(/\s*€\s*/, "").replace(",", ".");
+    const priceClean = priceText
+      .trim()
+      .replace(/\s*€\s*/, "")
+      .replace(",", ".");
     const priceEur = parseFloat(priceClean) || 0;
 
     const treatment = inferTreatment(version || null);
@@ -210,7 +218,9 @@ export async function scrapeExpansion(
   const page1Result = parseCardsFromHtml(page1.data, setCode, expansionName);
   totalPages = page1Result.totalPages;
   allCards.push(...page1Result.cards);
-  console.log(`  Page 1: ${page1Result.cards.length} cards found (${totalPages} pages total) [${page1.durationMs}ms]`);
+  console.log(
+    `  Page 1: ${page1Result.cards.length} cards found (${totalPages} pages total) [${page1.durationMs}ms]`,
+  );
 
   // Fetch remaining pages sequentially (to avoid rate limiting)
   for (let page = 2; page <= totalPages; page++) {
@@ -234,7 +244,9 @@ export async function scrapeExpansion(
       if (retry.success && retry.data) {
         const retryResult = parseCardsFromHtml(retry.data, setCode, expansionName);
         allCards.push(...retryResult.cards);
-        console.log(`  Retry page ${page}: ${retryResult.cards.length} cards [${retry.durationMs}ms]`);
+        console.log(
+          `  Retry page ${page}: ${retryResult.cards.length} cards [${retry.durationMs}ms]`,
+        );
       } else {
         console.error(`  Retry also failed for page ${page}`);
       }
@@ -325,7 +337,9 @@ export function generateSummary(result: ScrapeResult): string {
     lines.push(`- **Cheapest**: ${prices[0].toFixed(2)} EUR`);
     lines.push(`- **Most expensive**: ${prices[prices.length - 1].toFixed(2)} EUR`);
     lines.push(`- **Median**: ${prices[Math.floor(prices.length / 2)].toFixed(2)} EUR`);
-    lines.push(`- **Average**: ${(prices.reduce((a, b) => a + b, 0) / prices.length).toFixed(2)} EUR`);
+    lines.push(
+      `- **Average**: ${(prices.reduce((a, b) => a + b, 0) / prices.length).toFixed(2)} EUR`,
+    );
     lines.push("");
 
     // Top 10 most expensive
@@ -335,7 +349,9 @@ export function generateSummary(result: ScrapeResult): string {
     lines.push("|---|------|---------|-------|");
     const sorted = [...result.cards].sort((a, b) => b.priceEur - a.priceEur);
     sorted.slice(0, 10).forEach((card, i) => {
-      lines.push(`| ${i + 1} | ${card.name} (${card.cardId}) | ${card.version || "-"} | ${card.priceFrom} |`);
+      lines.push(
+        `| ${i + 1} | ${card.name} (${card.cardId}) | ${card.version || "-"} | ${card.priceFrom} |`,
+      );
     });
   }
 

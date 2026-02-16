@@ -91,11 +91,7 @@ export function CreateGradedListingForm({
       });
       if (!res.ok) {
         const data = await res.json();
-        setError(
-          typeof data.error === "string"
-            ? data.error
-            : "Failed to create listing",
-        );
+        setError(typeof data.error === "string" ? data.error : "Failed to create listing");
         return;
       }
       onCreated();
@@ -111,31 +107,22 @@ export function CreateGradedListingForm({
       <div className="w-full max-w-2xl rounded-xl border border-gray-200 bg-white shadow-xl">
         <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
           <h2 className="text-lg font-semibold text-gray-900">
-            {type === "have"
-              ? "Add Graded Card I Have"
-              : "Add Graded Card I Want"}
+            {type === "have" ? "Sell a Graded Card" : "Buy a Graded Card"}
           </h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-gray-600"
-          >
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
             <X className="h-5 w-5" />
           </button>
         </div>
 
         <div className="max-h-[70vh] overflow-y-auto px-6 py-4">
-          {step === "card" && (
-            <CardSearch onSelect={handleCardSelect} mode="select" />
-          )}
+          {step === "card" && <CardSearch onSelect={handleCardSelect} mode="select" />}
 
           {step === "details" && selectedCard && (
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Selected card preview */}
               <div className="flex items-center justify-between rounded-lg bg-gray-50 p-4">
                 <div>
-                  <h3 className="font-semibold text-gray-900">
-                    {selectedCard.name}
-                  </h3>
+                  <h3 className="font-semibold text-gray-900">{selectedCard.name}</h3>
                   <p className="text-sm text-gray-600">
                     {selectedCard.setName}
                     {selectedCard.setCode && ` (${selectedCard.setCode})`}
@@ -144,27 +131,17 @@ export function CreateGradedListingForm({
                 </div>
                 <div className="flex items-center gap-2">
                   <Badge>{TCG_LABELS[selectedCard.tcg]}</Badge>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setStep("card")}
-                  >
+                  <Button variant="ghost" size="sm" onClick={() => setStep("card")}>
                     Change
                   </Button>
                 </div>
               </div>
 
-              {error && (
-                <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
-                  {error}
-                </p>
-              )}
+              {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
               {/* Grading company selector */}
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Grading Company
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Grading Company</label>
                 <div className="mt-2 flex gap-2">
                   {COMPANIES.map((c) => (
                     <Button
@@ -194,9 +171,7 @@ export function CreateGradedListingForm({
               {/* Grade selector — differs between have and want */}
               {type === "have" ? (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    PSA Grade
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">PSA Grade</label>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {PSA_GRADES.map((g) => (
                       <Button
@@ -214,9 +189,7 @@ export function CreateGradedListingForm({
               ) : (
                 <div className="flex gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Minimum Grade
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700">Minimum Grade</label>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {PSA_GRADES.map((g) => (
                         <Button
@@ -255,18 +228,14 @@ export function CreateGradedListingForm({
               {/* Cert number — only for have listings */}
               {type === "have" && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    PSA Cert Number
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">PSA Cert Number</label>
                   <p className="mt-0.5 text-xs text-gray-500">
                     Found on the slab label (7–10 digit number)
                   </p>
                   <Input
                     type="text"
                     value={certNumber}
-                    onChange={(e) =>
-                      setCertNumber(e.target.value.replace(/\D/g, ""))
-                    }
+                    onChange={(e) => setCertNumber(e.target.value.replace(/\D/g, ""))}
                     placeholder="12345678"
                     className="mt-1 w-40"
                     maxLength={10}
@@ -299,9 +268,7 @@ export function CreateGradedListingForm({
 
               {/* Notes */}
               <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Notes (optional)
-                </label>
+                <label className="block text-sm font-medium text-gray-700">Notes (optional)</label>
                 <Input
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}

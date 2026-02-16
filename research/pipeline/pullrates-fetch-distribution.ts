@@ -67,11 +67,13 @@ function loadTcgplayerJson(tcg: TCG, setCode: string): TcgplayerJsonResult | nul
   const cmFile = path.join(dir, `cardmarket-${setCode.toLowerCase()}-enriched.json`);
   if (fs.existsSync(cmFile)) {
     const data = JSON.parse(fs.readFileSync(cmFile, "utf-8"));
-    const cards = (data.cards ?? []).map((c: { cardId?: string; number?: string; rarity?: string; name?: string }) => ({
-      cardId: c.cardId ?? c.number ?? "",
-      rarity: c.rarity ?? null,
-      name: c.name ?? "",
-    }));
+    const cards = (data.cards ?? []).map(
+      (c: { cardId?: string; number?: string; rarity?: string; name?: string }) => ({
+        cardId: c.cardId ?? c.number ?? "",
+        rarity: c.rarity ?? null,
+        name: c.name ?? "",
+      }),
+    );
     return { cards, setCode };
   }
 
@@ -79,11 +81,13 @@ function loadTcgplayerJson(tcg: TCG, setCode: string): TcgplayerJsonResult | nul
   const cmBase = path.join(dir, `cardmarket-${setCode.toLowerCase()}.json`);
   if (fs.existsSync(cmBase)) {
     const data = JSON.parse(fs.readFileSync(cmBase, "utf-8"));
-    const cards = (data.cards ?? []).map((c: { cardId?: string; number?: string; rarity?: string; name?: string }) => ({
-      cardId: c.cardId ?? c.number ?? "",
-      rarity: c.rarity ?? null,
-      name: c.name ?? "",
-    }));
+    const cards = (data.cards ?? []).map(
+      (c: { cardId?: string; number?: string; rarity?: string; name?: string }) => ({
+        cardId: c.cardId ?? c.number ?? "",
+        rarity: c.rarity ?? null,
+        name: c.name ?? "",
+      }),
+    );
     return { cards, setCode };
   }
 
@@ -113,8 +117,9 @@ function buildDistributionFromJson(
     if (!card.rarity) continue;
 
     // Deduplicate: only count base cards (skip "Parallel" variants)
-    const isParallel = card.name?.toLowerCase().includes("(parallel)") ||
-                       card.name?.toLowerCase().includes("alternate art");
+    const isParallel =
+      card.name?.toLowerCase().includes("(parallel)") ||
+      card.name?.toLowerCase().includes("alternate art");
     if (isParallel) continue;
 
     const normalized = normalizeRarity(tcg, card.rarity);
@@ -172,6 +177,7 @@ async function buildDistributionFromDb(
     const tcgEnum = tcg.toUpperCase();
 
     // Find the set
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const cardSet = await (prisma as any).cardSet.findFirst({
       where: { code: setCode, tcg: tcgEnum },
     });
@@ -182,6 +188,7 @@ async function buildDistributionFromDb(
     }
 
     // Get all variants for this set, grouped by rarity
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const variants = await (prisma as any).cardVariant.findMany({
       where: {
         card: { setId: cardSet.id },
@@ -226,6 +233,7 @@ async function buildDistributionFromDb(
       generatedAt: new Date().toISOString(),
     };
   } finally {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await (prisma as any).$disconnect();
     await pool.end();
   }
@@ -286,7 +294,11 @@ async function buildDistributionFromYuGiOhApi(
   }
 
   const data = await res.json();
-  const cards: Array<{ id: number; name: string; card_sets?: Array<{ set_rarity: string; set_code: string }> }> = data.data ?? [];
+  const cards: Array<{
+    id: number;
+    name: string;
+    card_sets?: Array<{ set_rarity: string; set_code: string }>;
+  }> = data.data ?? [];
 
   const counts: Record<string, number> = {};
   const cardIds: Record<string, string[]> = {};
@@ -420,11 +432,7 @@ async function main() {
 
   const mode: SourceMode = isFromDb ? "from-db" : isFromApi ? "from-api" : "auto";
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
     console.error("Usage: --tcg <tcg> --set <code> OR --tcg <tcg> --all");
@@ -455,7 +463,9 @@ async function main() {
       fs.writeFileSync(outPath, JSON.stringify(dist, null, 2));
       console.log(`  → Saved to ${path.relative(process.cwd(), outPath)}`);
     } else {
-      console.log(`  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`);
+      console.log(
+        `  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode))}`,
+      );
     }
 
     successCount++;

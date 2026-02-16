@@ -145,10 +145,7 @@ export async function handleTransferPaid(stripeTransferId: string) {
  * Handle transfer.failed webhook — mark FAILED + credit wallet back.
  * Idempotent: skips if already FAILED or REVERSED.
  */
-export async function handleTransferFailed(
-  stripeTransferId: string,
-  reason: string,
-) {
+export async function handleTransferFailed(stripeTransferId: string, reason: string) {
   const payout = await db.payout.findUnique({
     where: { stripeTransferId },
   });
@@ -157,22 +154,14 @@ export async function handleTransferFailed(
     return;
   }
 
-  await creditBackFailedPayout(
-    payout.userId,
-    payout.amount,
-    payout.walletTransactionId,
-    reason,
-  );
+  await creditBackFailedPayout(payout.userId, payout.amount, payout.walletTransactionId, reason);
 }
 
 /**
  * Handle transfer.reversed webhook — mark REVERSED + credit wallet back if was PAID.
  * Idempotent: skips if already REVERSED.
  */
-export async function handleTransferReversed(
-  stripeTransferId: string,
-  reason: string,
-) {
+export async function handleTransferReversed(stripeTransferId: string, reason: string) {
   const payout = await db.payout.findUnique({
     where: { stripeTransferId },
   });

@@ -12,14 +12,16 @@ import { test as base, expect, type Page } from "@playwright/test";
  */
 export const test = base.extend<{
   authedPage: Page;
-  authedRequest: typeof base["prototype"]["request"];
+  authedRequest: (typeof base)["prototype"]["request"];
 }>({
   authedPage: async ({ page }, use) => {
     // storageState already loaded via project config
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     await use(page);
   },
   authedRequest: async ({ request }, use) => {
     // APIRequestContext shares cookies from storageState
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     await use(request);
   },
 });

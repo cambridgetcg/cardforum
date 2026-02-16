@@ -3,10 +3,7 @@ import { auth } from "@/lib/auth";
 import { getTradeShippingDetails } from "@/server/services/shipping.service";
 
 // GET /api/trades/[tradeId]/shipping — Get shipping details for all legs
-export async function GET(
-  _req: Request,
-  { params }: { params: Promise<{ tradeId: string }> },
-) {
+export async function GET(_req: Request, { params }: { params: Promise<{ tradeId: string }> }) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

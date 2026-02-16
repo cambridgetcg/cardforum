@@ -43,11 +43,12 @@ export async function GET(req: NextRequest) {
             data: {
               userId: auth.userId,
               type: v.severity === "WARNING" ? "SHIPPING_REMINDER" : "SHIPPING_SLA_WARNING",
-              title: v.severity === "ESCALATION"
-                ? "URGENT: Shipping overdue — support notified"
-                : v.severity === "OVERDUE"
-                  ? "Shipping deadline passed"
-                  : "Shipping reminder",
+              title:
+                v.severity === "ESCALATION"
+                  ? "URGENT: Shipping overdue — support notified"
+                  : v.severity === "OVERDUE"
+                    ? "Shipping deadline passed"
+                    : "Shipping reminder",
               message: `Trade leg has been awaiting shipment for ${Math.round(v.hoursOverdue)}h. Please ship as soon as possible.`,
               link: `/trades`,
             },

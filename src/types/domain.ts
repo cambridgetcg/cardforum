@@ -34,6 +34,24 @@ export const TCG_BADGE_COLORS: Record<TCG, "default" | "success" | "warning" | "
   MTG: "success",
 };
 
+// ─── Card Language ──────────────────────────────────
+// Partitions the order book: EN and JP cards are NOT fungible.
+
+export const CardLanguage = {
+  EN: "EN",
+  JP: "JP",
+} as const;
+export type CardLanguage = (typeof CardLanguage)[keyof typeof CardLanguage];
+export const CARD_LANGUAGE_VALUES = Object.values(CardLanguage) as [
+  CardLanguage,
+  ...CardLanguage[],
+];
+
+export const CARD_LANGUAGE_LABELS: Record<CardLanguage, string> = {
+  EN: "English",
+  JP: "Japanese",
+};
+
 export const Condition = {
   NM: "NM",
   LP: "LP",
@@ -60,9 +78,11 @@ export const GradingCompany = {
   CGC: "CGC",
   SGC: "SGC",
 } as const;
-export type GradingCompany =
-  (typeof GradingCompany)[keyof typeof GradingCompany];
-export const GRADING_COMPANY_VALUES = Object.values(GradingCompany) as [GradingCompany, ...GradingCompany[]];
+export type GradingCompany = (typeof GradingCompany)[keyof typeof GradingCompany];
+export const GRADING_COMPANY_VALUES = Object.values(GradingCompany) as [
+  GradingCompany,
+  ...GradingCompany[],
+];
 
 export const GRADING_COMPANY_LABELS: Record<GradingCompany, string> = {
   PSA: "PSA (Professional Sports Authenticator)",
@@ -71,24 +91,78 @@ export const GRADING_COMPANY_LABELS: Record<GradingCompany, string> = {
   SGC: "SGC (Sportscard Guaranty)",
 };
 
-export function conditionMeetsMinimum(
-  actual: Condition,
-  minimum: Condition
-): boolean {
+export function conditionMeetsMinimum(actual: Condition, minimum: Condition): boolean {
   return CONDITION_ORDER.indexOf(actual) <= CONDITION_ORDER.indexOf(minimum);
 }
+
+// ─── Sealed Product Types ──────────────────────────────
+
+export const SealedCondition = {
+  FACTORY_SEALED: "FACTORY_SEALED",
+  OPENED: "OPENED",
+  DAMAGED_BOX: "DAMAGED_BOX",
+} as const;
+export type SealedCondition = (typeof SealedCondition)[keyof typeof SealedCondition];
+export const SEALED_CONDITION_VALUES = Object.values(SealedCondition) as [
+  SealedCondition,
+  ...SealedCondition[],
+];
+
+export const SEALED_CONDITION_LABELS: Record<SealedCondition, string> = {
+  FACTORY_SEALED: "Factory Sealed",
+  OPENED: "Opened",
+  DAMAGED_BOX: "Damaged Box",
+};
+
+export const SEALED_CONDITION_ORDER: SealedCondition[] = [
+  "FACTORY_SEALED",
+  "OPENED",
+  "DAMAGED_BOX",
+];
+
+export function sealedConditionMeetsMinimum(
+  actual: SealedCondition,
+  minimum: SealedCondition,
+): boolean {
+  return SEALED_CONDITION_ORDER.indexOf(actual) <= SEALED_CONDITION_ORDER.indexOf(minimum);
+}
+
+export const SealedProductType = {
+  BOOSTER_BOX: "BOOSTER_BOX",
+  BOOSTER_PACK: "BOOSTER_PACK",
+  STARTER_DECK: "STARTER_DECK",
+  BUNDLE: "BUNDLE",
+  COLLECTION_BOX: "COLLECTION_BOX",
+  PREMIUM_PACK: "PREMIUM_PACK",
+  OTHER: "OTHER",
+} as const;
+export type SealedProductType = (typeof SealedProductType)[keyof typeof SealedProductType];
+export const SEALED_PRODUCT_TYPE_VALUES = Object.values(SealedProductType) as [
+  SealedProductType,
+  ...SealedProductType[],
+];
+
+export const SEALED_PRODUCT_TYPE_LABELS: Record<SealedProductType, string> = {
+  BOOSTER_BOX: "Booster Box",
+  BOOSTER_PACK: "Booster Pack",
+  STARTER_DECK: "Starter Deck",
+  BUNDLE: "Bundle",
+  COLLECTION_BOX: "Collection Box",
+  PREMIUM_PACK: "Premium Pack",
+  OTHER: "Other",
+};
 
 // ─── CCS (CardForum Condition Score) ────────────────
 
 /** Full CCS result with dimension scores, composite, and tier mapping. */
 export interface CCS {
-  surface: number;    // 1.0-10.0 in 0.5 increments
-  corners: number;    // 1.0-10.0 in 0.5 increments
-  edges: number;      // 1.0-10.0 in 0.5 increments
-  centering: number;  // 1.0-10.0 in 0.5 increments
-  composite: number;  // weighted average with min-cap rule
-  tier: Condition;    // NM/LP/MP/HP/DMG
-  subTier: string;    // "NM+", "NM", "NM-", "LP+", etc.
+  surface: number; // 1.0-10.0 in 0.5 increments
+  corners: number; // 1.0-10.0 in 0.5 increments
+  edges: number; // 1.0-10.0 in 0.5 increments
+  centering: number; // 1.0-10.0 in 0.5 increments
+  composite: number; // weighted average with min-cap rule
+  tier: Condition; // NM/LP/MP/HP/DMG
+  subTier: string; // "NM+", "NM", "NM-", "LP+", etc.
 }
 
 /** Raw dimension scores input for CCS calculation. */
@@ -101,8 +175,7 @@ export interface CCSInput {
 
 /** Valid CCS dimension scores: 1.0-10.0 in 0.5 increments. */
 export const VALID_CCS_SCORES = [
-  1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5,
-  6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0,
+  1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0,
 ] as const;
 
 /** Format a price in minor units with currency symbol.
@@ -179,7 +252,7 @@ export function getTradeTransitions(mode: TradeMode): Record<TradeStatus, TradeS
 export function canTransition(
   from: TradeStatus,
   to: TradeStatus,
-  mode: TradeMode = "AUTHENTICATED"
+  mode: TradeMode = "AUTHENTICATED",
 ): boolean {
   return getTradeTransitions(mode)[from].includes(to);
 }
@@ -194,8 +267,7 @@ export const TradeLegStatus = {
   DELIVERED: "DELIVERED",
   FAILED: "FAILED",
 } as const;
-export type TradeLegStatus =
-  (typeof TradeLegStatus)[keyof typeof TradeLegStatus];
+export type TradeLegStatus = (typeof TradeLegStatus)[keyof typeof TradeLegStatus];
 
 export const PhotoApprovalStatus = {
   PENDING_PHOTOS: "PENDING_PHOTOS",
@@ -203,8 +275,7 @@ export const PhotoApprovalStatus = {
   APPROVED: "APPROVED",
   REJECTED: "REJECTED",
 } as const;
-export type PhotoApprovalStatus =
-  (typeof PhotoApprovalStatus)[keyof typeof PhotoApprovalStatus];
+export type PhotoApprovalStatus = (typeof PhotoApprovalStatus)[keyof typeof PhotoApprovalStatus];
 
 import { PHOTO_APPROVAL_THRESHOLD_CENTS } from "@/lib/constants";
 
@@ -218,8 +289,7 @@ export const AuthenticatorTier = {
   VERIFIED: "VERIFIED",
   PREMIUM: "PREMIUM",
 } as const;
-export type AuthenticatorTier =
-  (typeof AuthenticatorTier)[keyof typeof AuthenticatorTier];
+export type AuthenticatorTier = (typeof AuthenticatorTier)[keyof typeof AuthenticatorTier];
 
 export const AuthenticatorApplicationStatus = {
   DRAFT: "DRAFT",
@@ -255,15 +325,15 @@ export const APPLICATION_TRANSITIONS: Record<
 
 export function canTransitionApplication(
   from: AuthenticatorApplicationStatus,
-  to: AuthenticatorApplicationStatus
+  to: AuthenticatorApplicationStatus,
 ): boolean {
   return APPLICATION_TRANSITIONS[from].includes(to);
 }
 
 /** Maximum card value (cents) an authenticator can handle per tier. */
 export const AUTHENTICATOR_TIER_VALUE_CAPS: Record<AuthenticatorTier, number> = {
-  STANDARD: 10_000,  // $100
-  VERIFIED: 50_000,  // $500
+  STANDARD: 10_000, // $100
+  VERIFIED: 50_000, // $500
   PREMIUM: Infinity,
 };
 
@@ -289,7 +359,10 @@ export const DeliveryMethod = {
   MAIL: "MAIL",
 } as const;
 export type DeliveryMethod = (typeof DeliveryMethod)[keyof typeof DeliveryMethod];
-export const DELIVERY_METHOD_VALUES = Object.values(DeliveryMethod) as [DeliveryMethod, ...DeliveryMethod[]];
+export const DELIVERY_METHOD_VALUES = Object.values(DeliveryMethod) as [
+  DeliveryMethod,
+  ...DeliveryMethod[],
+];
 
 /** Structured dispute reasons for shipping issues. */
 export const ShippingDisputeReason = {
@@ -308,7 +381,13 @@ export type ShippingDisputeReason =
  */
 export const SHIPPING_PACKAGING_REQUIREMENTS = {
   LOW: { maxCents: 5_000, tracking: true, signature: false, insurance: false, label: "< $50" },
-  MEDIUM: { maxCents: 20_000, tracking: true, signature: true, insurance: false, label: "$50–$200" },
+  MEDIUM: {
+    maxCents: 20_000,
+    tracking: true,
+    signature: true,
+    insurance: false,
+    label: "$50–$200",
+  },
   HIGH: { maxCents: Infinity, tracking: true, signature: true, insurance: true, label: "$200+" },
 } as const;
 
@@ -346,8 +425,7 @@ export const DisputeStatus = {
   ESCALATED: "ESCALATED",
   CLOSED: "CLOSED",
 } as const;
-export type DisputeStatus =
-  (typeof DisputeStatus)[keyof typeof DisputeStatus];
+export type DisputeStatus = (typeof DisputeStatus)[keyof typeof DisputeStatus];
 
 // ─── KYC ──────────────────────────────────────────
 
@@ -393,9 +471,7 @@ export function canTransitionKYC(from: KYCStatus, to: KYCStatus): boolean {
 }
 
 /** Map KYCStatus to effective verification level for gate checks. */
-export function getKYCLevel(
-  status: KYCStatus,
-): "UNVERIFIED" | "BASIC" | "ENHANCED" {
+export function getKYCLevel(status: KYCStatus): "UNVERIFIED" | "BASIC" | "ENHANCED" {
   switch (status) {
     case "BASIC_VERIFIED":
       return "BASIC";
@@ -426,8 +502,7 @@ export const DigitisationStatus = {
   REJECTED: "REJECTED",
   CANCELLED: "CANCELLED",
 } as const;
-export type DigitisationStatus =
-  (typeof DigitisationStatus)[keyof typeof DigitisationStatus];
+export type DigitisationStatus = (typeof DigitisationStatus)[keyof typeof DigitisationStatus];
 
 export const DIGITISATION_TRANSITIONS: Record<DigitisationStatus, DigitisationStatus[]> = {
   SUBMITTED: ["RECEIVED", "CANCELLED"],
@@ -439,7 +514,10 @@ export const DIGITISATION_TRANSITIONS: Record<DigitisationStatus, DigitisationSt
   CANCELLED: [],
 };
 
-export function canTransitionDigitisation(from: DigitisationStatus, to: DigitisationStatus): boolean {
+export function canTransitionDigitisation(
+  from: DigitisationStatus,
+  to: DigitisationStatus,
+): boolean {
   return DIGITISATION_TRANSITIONS[from].includes(to);
 }
 
@@ -451,8 +529,7 @@ export const DigitalTokenStatus = {
   REDEEMED: "REDEEMED",
   BURNED: "BURNED",
 } as const;
-export type DigitalTokenStatus =
-  (typeof DigitalTokenStatus)[keyof typeof DigitalTokenStatus];
+export type DigitalTokenStatus = (typeof DigitalTokenStatus)[keyof typeof DigitalTokenStatus];
 
 export const DIGITAL_TOKEN_TRANSITIONS: Record<DigitalTokenStatus, DigitalTokenStatus[]> = {
   ACTIVE: ["LISTED", "REDEMPTION_PENDING"],
@@ -463,7 +540,10 @@ export const DIGITAL_TOKEN_TRANSITIONS: Record<DigitalTokenStatus, DigitalTokenS
   BURNED: [],
 };
 
-export function canTransitionDigitalToken(from: DigitalTokenStatus, to: DigitalTokenStatus): boolean {
+export function canTransitionDigitalToken(
+  from: DigitalTokenStatus,
+  to: DigitalTokenStatus,
+): boolean {
   return DIGITAL_TOKEN_TRANSITIONS[from].includes(to);
 }
 
@@ -477,8 +557,7 @@ export const RedemptionStatus = {
   FAILED: "FAILED",
   CANCELLED: "CANCELLED",
 } as const;
-export type RedemptionStatus =
-  (typeof RedemptionStatus)[keyof typeof RedemptionStatus];
+export type RedemptionStatus = (typeof RedemptionStatus)[keyof typeof RedemptionStatus];
 
 export const REDEMPTION_TRANSITIONS: Record<RedemptionStatus, RedemptionStatus[]> = {
   REQUESTED: ["STOCK_RESERVED", "FAILED", "CANCELLED"],
@@ -509,9 +588,11 @@ export const ExpertPostCategory = {
   INVESTMENT_OUTLOOK: "INVESTMENT_OUTLOOK",
   MARKET_TRENDS: "MARKET_TRENDS",
 } as const;
-export type ExpertPostCategory =
-  (typeof ExpertPostCategory)[keyof typeof ExpertPostCategory];
-export const EXPERT_POST_CATEGORY_VALUES = Object.values(ExpertPostCategory) as [ExpertPostCategory, ...ExpertPostCategory[]];
+export type ExpertPostCategory = (typeof ExpertPostCategory)[keyof typeof ExpertPostCategory];
+export const EXPERT_POST_CATEGORY_VALUES = Object.values(ExpertPostCategory) as [
+  ExpertPostCategory,
+  ...ExpertPostCategory[],
+];
 
 export const EXPERT_POST_CATEGORY_LABELS: Record<ExpertPostCategory, string> = {
   PRICE_ANALYSIS: "Price Analysis",
@@ -533,9 +614,11 @@ export const ExpertPostStatus = {
   FLAGGED: "FLAGGED",
   REMOVED: "REMOVED",
 } as const;
-export type ExpertPostStatus =
-  (typeof ExpertPostStatus)[keyof typeof ExpertPostStatus];
-export const EXPERT_POST_STATUS_VALUES = Object.values(ExpertPostStatus) as [ExpertPostStatus, ...ExpertPostStatus[]];
+export type ExpertPostStatus = (typeof ExpertPostStatus)[keyof typeof ExpertPostStatus];
+export const EXPERT_POST_STATUS_VALUES = Object.values(ExpertPostStatus) as [
+  ExpertPostStatus,
+  ...ExpertPostStatus[],
+];
 
 export const KYCDocumentType = {
   GOVERNMENT_ID: "GOVERNMENT_ID",
@@ -543,8 +626,7 @@ export const KYCDocumentType = {
   PROOF_OF_ADDRESS: "PROOF_OF_ADDRESS",
   BANK_VERIFICATION: "BANK_VERIFICATION",
 } as const;
-export type KYCDocumentType =
-  (typeof KYCDocumentType)[keyof typeof KYCDocumentType];
+export type KYCDocumentType = (typeof KYCDocumentType)[keyof typeof KYCDocumentType];
 
 export const KYC_DOCUMENT_LABELS: Record<KYCDocumentType, string> = {
   GOVERNMENT_ID: "Government-Issued ID",
@@ -554,10 +636,7 @@ export const KYC_DOCUMENT_LABELS: Record<KYCDocumentType, string> = {
 };
 
 /** Documents required per KYC tier. */
-export const KYC_REQUIRED_DOCUMENTS: Record<
-  "BASIC" | "ENHANCED",
-  KYCDocumentType[]
-> = {
+export const KYC_REQUIRED_DOCUMENTS: Record<"BASIC" | "ENHANCED", KYCDocumentType[]> = {
   BASIC: ["GOVERNMENT_ID", "SELFIE"],
   ENHANCED: ["PROOF_OF_ADDRESS"],
 };

@@ -45,7 +45,10 @@ export interface IUserRepository {
   findByEmail(email: string): Promise<UserRecord | null>;
   updateWalletBalance(id: string, delta: number): Promise<UserRecord>;
   updateStripeCustomerId(id: string, customerId: string): Promise<void>;
-  updateConnectAccount(id: string, data: { accountId?: string | null; onboardingComplete?: boolean }): Promise<void>;
+  updateConnectAccount(
+    id: string,
+    data: { accountId?: string | null; onboardingComplete?: boolean },
+  ): Promise<void>;
 }
 
 // ─── Listing Repository ──────────────────────────────
@@ -79,8 +82,12 @@ export interface IListingRepository {
   findActiveWantListings(): Promise<WantListingRecord[]>;
   findUserHaveListings(userId: string): Promise<HaveListingRecord[]>;
   findUserWantListings(userId: string): Promise<WantListingRecord[]>;
-  createHaveListing(data: Omit<HaveListingRecord, "id" | "createdAt" | "isActive">): Promise<HaveListingRecord>;
-  createWantListing(data: Omit<WantListingRecord, "id" | "createdAt" | "isActive">): Promise<WantListingRecord>;
+  createHaveListing(
+    data: Omit<HaveListingRecord, "id" | "createdAt" | "isActive">,
+  ): Promise<HaveListingRecord>;
+  createWantListing(
+    data: Omit<WantListingRecord, "id" | "createdAt" | "isActive">,
+  ): Promise<WantListingRecord>;
   deactivateListings(haveIds: string[], wantIds: string[]): Promise<void>;
 }
 
@@ -116,7 +123,10 @@ export interface ITradeRepository {
   findByUser(userId: string): Promise<TradeRecord[]>;
   findByStatus(status: string): Promise<TradeRecord[]>;
   updateStatus(id: string, status: string, historyEntry: unknown): Promise<TradeRecord>;
-  create(data: Omit<TradeRecord, "id" | "createdAt" | "updatedAt">, legs: Omit<TradeLegRecord, "id" | "tradeId">[]): Promise<TradeRecord>;
+  create(
+    data: Omit<TradeRecord, "id" | "createdAt" | "updatedAt">,
+    legs: Omit<TradeLegRecord, "id" | "tradeId">[],
+  ): Promise<TradeRecord>;
 }
 
 // ─── Wallet Transaction Repository ───────────────────

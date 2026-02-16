@@ -12,16 +12,20 @@
 
 import "dotenv/config";
 import { BrightDataClient, loadBrightDataConfig } from "./brightdata";
-import { inferSetCode as inferSetCodeFromMappings, getMapping } from "./set-code-mappings";
+import {
+  inferSetCode as inferSetCodeFromMappings,
+  getMapping,
+  normalizeSetCode,
+} from "./set-code-mappings";
 import * as fs from "fs";
 import * as path from "path";
 
 export interface ExpansionEntry {
-  code: string;         // Inferred set code: "OP01", "ST01", "EB01", etc.
-  name: string;         // Cardmarket expansion name: "Romance Dawn"
+  code: string; // Inferred set code: "OP01", "ST01", "EB01", etc.
+  name: string; // Cardmarket expansion name: "Romance Dawn"
   cardmarketId: number; // Cardmarket expansion ID for URL params
-  productType: string;  // "booster" | "starter" | "extra" | "premium" | "promo" | "other"
-  language: string;     // "EN" | "JP" | "NEL" (Non-English) | "AL" (Asia Legal) | "PE" (Pre-Errata)
+  productType: string; // "booster" | "starter" | "extra" | "premium" | "promo" | "other"
+  language: string; // "EN" | "JP" | "NEL" (Non-English) | "AL" (Asia Legal) | "PE" (Pre-Errata)
 }
 
 /**
@@ -44,7 +48,7 @@ function inferLanguage(name: string): string {
 function inferSetCode(name: string): string | null {
   const officialCode = inferSetCodeFromMappings(name);
   if (officialCode) {
-    return officialCode.replace(/-/g, "");
+    return normalizeSetCode(officialCode);
   }
   return null;
 }
@@ -98,7 +102,10 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
         });
       } else {
         // Still record it with name-based code
-        const fallbackCode = name.replace(/[^a-zA-Z0-9]/g, "").substring(0, 10).toUpperCase();
+        const fallbackCode = name
+          .replace(/[^a-zA-Z0-9]/g, "")
+          .substring(0, 10)
+          .toUpperCase();
         expansions.push({
           code: fallbackCode,
           name,
@@ -118,7 +125,12 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
     const name = match[2].trim();
     if (id > 0 && !seen.has(id) && name.length > 0) {
       seen.add(id);
-      const code = inferSetCode(name) || name.replace(/[^a-zA-Z0-9]/g, "").substring(0, 10).toUpperCase();
+      const code =
+        inferSetCode(name) ||
+        name
+          .replace(/[^a-zA-Z0-9]/g, "")
+          .substring(0, 10)
+          .toUpperCase();
       expansions.push({
         code,
         name,
@@ -137,7 +149,12 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
     const name = match[2].trim();
     if (id > 0 && !seen.has(id) && name.length > 0) {
       seen.add(id);
-      const code = inferSetCode(name) || name.replace(/[^a-zA-Z0-9]/g, "").substring(0, 10).toUpperCase();
+      const code =
+        inferSetCode(name) ||
+        name
+          .replace(/[^a-zA-Z0-9]/g, "")
+          .substring(0, 10)
+          .toUpperCase();
       expansions.push({
         code,
         name,
@@ -155,16 +172,64 @@ export function parseExpansionsFromHtml(html: string): ExpansionEntry[] {
 // If scraping fails, use this manually-maintained list
 const KNOWN_EXPANSIONS: ExpansionEntry[] = [
   // Booster Packs — verified working IDs as of 2026-02-15
-  { code: "OP01",  name: "Romance Dawn",               cardmarketId: 5229, productType: "booster", language: "EN" },
-  { code: "OP02",  name: "Paramount War",              cardmarketId: 5263, productType: "booster", language: "EN" },
-  { code: "OP03",  name: "Pillars of Strength",        cardmarketId: 5364, productType: "booster", language: "EN" },
-  { code: "OP04",  name: "Kingdoms of Intrigue",       cardmarketId: 5365, productType: "booster", language: "EN" },
-  { code: "OP05",  name: "Awakening of the New Era",   cardmarketId: 5426, productType: "booster", language: "EN" },
-  { code: "OP06",  name: "Wings of the Captain",       cardmarketId: 5524, productType: "booster", language: "EN" },
-  { code: "OP07",  name: "500 Years into the Future",  cardmarketId: 5586, productType: "booster", language: "EN" },
-  { code: "OP08",  name: "Two Legends",                cardmarketId: 5610, productType: "booster", language: "EN" },
-  { code: "OP09",  name: "Emperors in the New World",  cardmarketId: 5755, productType: "booster", language: "EN" },
-  { code: "OP10",  name: "Royal Blood",                cardmarketId: 5974, productType: "booster", language: "EN" },
+  {
+    code: "OP01",
+    name: "Romance Dawn",
+    cardmarketId: 5229,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP02",
+    name: "Paramount War",
+    cardmarketId: 5263,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP03",
+    name: "Pillars of Strength",
+    cardmarketId: 5364,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP04",
+    name: "Kingdoms of Intrigue",
+    cardmarketId: 5365,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP05",
+    name: "Awakening of the New Era",
+    cardmarketId: 5426,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP06",
+    name: "Wings of the Captain",
+    cardmarketId: 5524,
+    productType: "booster",
+    language: "EN",
+  },
+  {
+    code: "OP07",
+    name: "500 Years into the Future",
+    cardmarketId: 5586,
+    productType: "booster",
+    language: "EN",
+  },
+  { code: "OP08", name: "Two Legends", cardmarketId: 5610, productType: "booster", language: "EN" },
+  {
+    code: "OP09",
+    name: "Emperors in the New World",
+    cardmarketId: 5755,
+    productType: "booster",
+    language: "EN",
+  },
+  { code: "OP10", name: "Royal Blood", cardmarketId: 5974, productType: "booster", language: "EN" },
 ];
 
 async function main() {
@@ -210,7 +275,9 @@ async function main() {
   for (const known of KNOWN_EXPANSIONS) {
     if (!byId.has(known.cardmarketId)) {
       expansions.push(known);
-      console.log(`  Added known expansion: ${known.code} - ${known.name} (ID: ${known.cardmarketId})`);
+      console.log(
+        `  Added known expansion: ${known.code} - ${known.name} (ID: ${known.cardmarketId})`,
+      );
     }
   }
 

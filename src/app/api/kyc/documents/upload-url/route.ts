@@ -20,27 +20,18 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const parsed = uploadUrlSchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   const docId = randomUUID();
   const storageKey = `kyc/${session.user.id}/${docId}/${parsed.data.fileName}`;
 
   try {
-    const { uploadUrl, expiresIn } = await getPresignedUploadUrl(
-      storageKey,
-      parsed.data.mimeType,
-    );
+    const { uploadUrl, expiresIn } = await getPresignedUploadUrl(storageKey, parsed.data.mimeType);
 
     return NextResponse.json({ storageKey, uploadUrl, expiresIn });
   } catch (error) {
     console.error("[kyc/upload-url] S3 presign failed:", error);
-    return NextResponse.json(
-      { error: "Failed to generate upload URL" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to generate upload URL" }, { status: 500 });
   }
 }

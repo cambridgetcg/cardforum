@@ -1,0 +1,55 @@
+{
+  "expansion": "Starter Deck: Uta",
+  "expansionId": 5427,
+  "setCode": "ST11",
+  "totalPages": 1,
+  "totalCards": 3,
+  "scrapedAt": "2026-02-16T14:59:44.968Z",
+  "durationMs": 6241,
+  "cards": [
+    {
+      "cardId": "ST11-004",
+      "name": "New Genesis",
+      "version": null,
+      "url": "/en/OnePiece/Products/Singles/Starter-Deck-Uta/New-Genesis-ST11-004",
+      "imageUrl": "https://product-images.s3.cardmarket.com/1621/ST-11/754836/754836.png",
+      "priceFrom": "0,02 €",
+      "priceEur": 0.02,
+      "expansion": "Starter Deck: Uta",
+      "setCode": "ST11",
+      "treatment": "regular",
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Starter-Deck-Uta/New-Genesis-ST11-004",
+      "language": "EN"
+    },
+    {
+      "cardId": "ST11-005",
+      "name": "I'm invincible",
+      "version": null,
+      "url": "/en/OnePiece/Products/Singles/Starter-Deck-Uta/Im-invincible-ST11-005",
+      "imageUrl": "https://product-images.s3.cardmarket.com/1621/ST-11/754837/754837.png",
+      "priceFrom": "0,02 €",
+      "priceEur": 0.02,
+      "expansion": "Starter Deck: Uta",
+      "setCode": "ST11",
+      "treatment": "regular",
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Starter-Deck-Uta/Im-invincible-ST11-005",
+      "language": "EN"
+    },
+    {
+      "cardId": "ST11-003",
+      "name": "Backlight",
+      "version": null,
+      "url": "/en/OnePiece/Products/Singles/Starter-Deck-Uta/Backlight-ST11-003",
+      "imageUrl": "https://product-images.s3.cardmarket.com/1621/ST-11/754835/754835.png",
+      "priceFrom": "0,02 €",
+      "priceEur": 0.02,
+      "expansion": "Starter Deck: Uta",
+      "setCode": "ST11",
+      "treatment": "regular",
+      "sourceUrl": "https://www.cardmarket.com/en/OnePiece/Products/Singles/Starter-Deck-Uta/Backlight-ST11-003",
+      "language": "EN"
+    }
+  ],
+  "errors": [],
+  "language": "EN"
+}

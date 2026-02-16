@@ -5,7 +5,14 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/ui/table";
 
 interface Dispute {
   id: string;
@@ -63,9 +70,10 @@ export default function AdminDisputesPage() {
     fetchData(filter);
   }, [filter]);
 
-  const filteredDisputes = filter === "resolved"
-    ? disputes.filter((d) => ["RESOLVED_BUYER", "RESOLVED_SELLER", "CLOSED"].includes(d.status))
-    : disputes;
+  const filteredDisputes =
+    filter === "resolved"
+      ? disputes.filter((d) => ["RESOLVED_BUYER", "RESOLVED_SELLER", "CLOSED"].includes(d.status))
+      : disputes;
 
   return (
     <div className="space-y-6">
@@ -132,13 +140,9 @@ export default function AdminDisputesPage() {
                     <TableCell>
                       {d.raisedBy?.name ?? d.raisedBy?.email ?? d.raisedById.slice(0, 8)}
                     </TableCell>
-                    <TableCell className="max-w-xs truncate">
-                      {d.reason}
-                    </TableCell>
+                    <TableCell className="max-w-xs truncate">{d.reason}</TableCell>
                     <TableCell>
-                      <Badge variant={STATUS_BADGE[d.status] ?? "default"}>
-                        {d.status}
-                      </Badge>
+                      <Badge variant={STATUS_BADGE[d.status] ?? "default"}>{d.status}</Badge>
                     </TableCell>
                     <TableCell className="text-gray-500">
                       {new Date(d.createdAt).toLocaleDateString()}

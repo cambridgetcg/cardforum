@@ -46,7 +46,7 @@ export function PhotoUpload({
           reader.onload = () => resolve(reader.result as string);
           reader.onerror = () => reject(new Error(`Failed to read ${file.name}`));
           reader.readAsDataURL(file);
-        })
+        }),
     );
 
     Promise.all(readers)
@@ -111,11 +111,7 @@ export function PhotoUpload({
           ))}
         </div>
       ) : (
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => inputRef.current?.click()}
-        >
+        <Button size="sm" variant="outline" onClick={() => inputRef.current?.click()}>
           Select Photos (max {MAX_PHOTO_COUNT})
         </Button>
       )}

@@ -25,12 +25,7 @@ interface Borders {
 
 type PlacementPhase = "outer" | "inner" | "done";
 
-const CORNER_ORDER: Corner[] = [
-  "topLeft",
-  "topRight",
-  "bottomRight",
-  "bottomLeft",
-];
+const CORNER_ORDER: Corner[] = ["topLeft", "topRight", "bottomRight", "bottomLeft"];
 
 const CORNER_LABELS: Record<Corner, string> = {
   topLeft: "top-left",
@@ -86,9 +81,7 @@ export function CenteringTool({
     border: "outer" | "inner";
     corner: Corner;
   } | null>(null);
-  const [measurement, setMeasurement] = useState<CenteringMeasurement | null>(
-    null,
-  );
+  const [measurement, setMeasurement] = useState<CenteringMeasurement | null>(null);
 
   // Canvas sizing — maintain 5:7 card ratio
   const canvasWidth = mode === "inline" ? 360 : 480;
@@ -269,9 +262,7 @@ export function CenteringTool({
     };
   }
 
-  function findNearestMarker(
-    pt: Point,
-  ): { border: "outer" | "inner"; corner: Corner } | null {
+  function findNearestMarker(pt: Point): { border: "outer" | "inner"; corner: Corner } | null {
     const threshold = MARKER_HIT_RADIUS * (canvasWidth / 480); // scale threshold
 
     for (const borderKey of ["outer", "inner"] as const) {
@@ -354,12 +345,10 @@ export function CenteringTool({
     <div className="space-y-4">
       {mode === "standalone" && (
         <div>
-          <h3 className="text-base font-semibold text-gray-900">
-            Centering Calculator
-          </h3>
+          <h3 className="text-base font-semibold text-gray-900">Centering Calculator</h3>
           <p className="mt-1 text-sm text-gray-500">
-            Upload a card photo and mark the card edge and print area borders to
-            calculate centering.
+            Upload a card photo and mark the card edge and print area borders to calculate
+            centering.
           </p>
         </div>
       )}
@@ -390,11 +379,7 @@ export function CenteringTool({
           {/* Instruction banner */}
           <div className="rounded-lg bg-gray-50 px-3 py-2 text-sm text-gray-700">
             <span className="font-medium">
-              {phase === "outer"
-                ? "Step 1/2:"
-                : phase === "inner"
-                  ? "Step 2/2:"
-                  : "Done!"}
+              {phase === "outer" ? "Step 1/2:" : phase === "inner" ? "Step 2/2:" : "Done!"}
             </span>{" "}
             {instruction}
           </div>
@@ -436,25 +421,17 @@ export function CenteringTool({
                 <div className="flex justify-between">
                   <span>Left / Right</span>
                   <span className="font-medium">
-                    {formatCenteringRatio(
-                      measurement.leftRight.left,
-                      measurement.leftRight.right,
-                    )}
+                    {formatCenteringRatio(measurement.leftRight.left, measurement.leftRight.right)}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Top / Bottom</span>
                   <span className="font-medium">
-                    {formatCenteringRatio(
-                      measurement.topBottom.top,
-                      measurement.topBottom.bottom,
-                    )}
+                    {formatCenteringRatio(measurement.topBottom.top, measurement.topBottom.bottom)}
                   </span>
                 </div>
               </div>
-              <p className="mt-2 text-xs capitalize opacity-70">
-                Rating: {measurement.rating}
-              </p>
+              <p className="mt-2 text-xs capitalize opacity-70">Rating: {measurement.rating}</p>
             </div>
           )}
 

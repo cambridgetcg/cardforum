@@ -1,3 +1,37 @@
+<!-- PP Quick Reference — compact lookup for PP agents during sense/assess phases -->
+
+## PP Quick Reference
+
+### Service → Tier Lookup
+
+| File Pattern                                                                                                                                                                                                   | Tier           | Gate Bar                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | --------------------------------- |
+| `matching/*.ts`, `listing.service`, `trade.service`, `shipping.service`, `region.service`                                                                                                                      | T1 CORE        | Integration + unit tests required |
+| `authenticator.service`, `wallet.service`, `marketplace-escrow.service`, `escrow.service`, `fee.service`, `photo-approval.service`, `dispute.service`, `authenticator-rating.service`, `trust-profile.service` | T2 TRUST       | Integration tests required        |
+| `tier-promotion`, `random-audit`, `reserve-assignment`, `ai-grading`, `condition-*`, `calibration`, `kyc`, `sanctions-screening`, `graded-listing`, `slab-verification`                                        | T3 QUALITY     | Unit tests preferred              |
+| `digital-*`, `digitisation`, `redemption`                                                                                                                                                                      | T4 INDEPENDENT | Standard                          |
+| `connect.service`, `payout.service`, `stripe.service`, `exchange-rate`, `carrier-tracking`, `email-verification`, `s3.service`, `config.service`, `collection.service`, `expert-content`                       | T5 INFRA       | Follow patterns                   |
+| `auth.service`                                                                                                                                                                                                 | T6 DEAD        | Delete when found                 |
+
+### Bridge Compounding Test
+
+- **YES**: Change leverages card fungibility, cycle detection, locality scoring, or regional balance → build it.
+- **NO**: Change works identically on any marketplace (generic CRUD, generic infra) → deprioritize.
+- **MAYBE**: Change enables future compounding (e.g., better region data → better locality detection) → build minimally.
+
+### Sub-Goal Quick Test
+
+| Goal                   | Diagnostic Question                                                      |
+| ---------------------- | ------------------------------------------------------------------------ |
+| **G1** Cycle Discovery | Does this make the listing graph denser or cycle detection smarter?      |
+| **G2** Locality        | Does this reduce the physical distance cards must travel?                |
+| **G3** Trust           | Does this make users more willing to trade through the bridge?           |
+| **G4** Friction        | Does this remove a step, a redirect, or a decision from the user's path? |
+| **G5** Compliance      | Does this satisfy a legal or regulatory requirement for operation?       |
+| **G6** Economics       | Does this reduce platform costs or improve unit economics per trade?     |
+
+<!-- End PP Quick Reference -->
+
 # Purpose Map — Every Module's Reason for Existing
 
 > **Axiom**: CardForum exploits card fungibility to eliminate international shipping through local bridging.

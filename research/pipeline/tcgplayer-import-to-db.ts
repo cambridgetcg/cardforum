@@ -212,15 +212,16 @@ async function importSet(
 
   // 4. Process each unique card
   for (const [cardId, cardEntries] of byCardId) {
-    const firstCard = cardEntries[0];
+    // Prefer the base (non-parallel) entry for Card-level data (name, image)
+    const baseCard = cardEntries.find((c) => !c.name.includes("(Parallel)")) ?? cardEntries[0];
 
     if (dryRun) {
-      const priceCount = firstCard.prices.length;
+      const totalPrices = cardEntries.reduce((sum, c) => sum + c.prices.length, 0);
       console.log(
-        `  [DRY RUN] Would upsert Card: ${cardId} - ${firstCard.name} (${priceCount} price entries)`,
+        `  [DRY RUN] Would upsert Card: ${cardId} - ${baseCard.name} (${cardEntries.length} products, ${totalPrices} price entries)`,
       );
       stats.cardsCreated++;
-      stats.variantsCreated += priceCount;
+      stats.variantsCreated += totalPrices;
       continue;
     }
 
@@ -234,34 +235,34 @@ async function importSet(
         where: { tcg_setName_number: { tcg: tcgEnum, setName, number: cardId } },
         create: {
           tcg: tcgEnum,
-          name: firstCard.name,
+          name: baseCard.name,
           setName,
           setCode,
           number: cardId,
-          imageUrl: firstCard.imageUrl,
+          imageUrl: baseCard.imageUrl,
           setId: cardSetId,
-          cardType: firstCard.cardType,
-          effectText: firstCard.effectText,
-          cost: firstCard.cost ? parseInt(firstCard.cost, 10) || null : null,
-          power: firstCard.power ? parseInt(firstCard.power, 10) || null : null,
-          rarity: firstCard.rarity,
+          cardType: baseCard.cardType,
+          effectText: baseCard.effectText,
+          cost: baseCard.cost ? parseInt(baseCard.cost, 10) || null : null,
+          power: baseCard.power ? parseInt(baseCard.power, 10) || null : null,
+          rarity: baseCard.rarity,
         },
         update: {
           // Fill missing metadata without overwriting existing Cardmarket data
-          cardType: existingCard?.cardType || firstCard.cardType || undefined,
-          effectText: existingCard?.effectText || firstCard.effectText || undefined,
+          cardType: existingCard?.cardType || baseCard.cardType || undefined,
+          effectText: existingCard?.effectText || baseCard.effectText || undefined,
           cost:
             existingCard?.cost ??
-            (firstCard.cost ? parseInt(firstCard.cost, 10) || undefined : undefined),
+            (baseCard.cost ? parseInt(baseCard.cost, 10) || undefined : undefined),
           power:
             existingCard?.power ??
-            (firstCard.power ? parseInt(firstCard.power, 10) || undefined : undefined),
-          rarity: existingCard?.rarity || firstCard.rarity || undefined,
+            (baseCard.power ? parseInt(baseCard.power, 10) || undefined : undefined),
+          rarity: existingCard?.rarity || baseCard.rarity || undefined,
           // Replace Cardmarket URLs (hotlink-protected, returns 403) with TCGPlayer URLs
           imageUrl:
-            existingCard?.imageUrl?.includes("cardmarket.com") && firstCard.imageUrl
-              ? firstCard.imageUrl
-              : existingCard?.imageUrl || firstCard.imageUrl || undefined,
+            existingCard?.imageUrl?.includes("cardmarket.com") && baseCard.imageUrl
+              ? baseCard.imageUrl
+              : existingCard?.imageUrl || baseCard.imageUrl || undefined,
           setId: cardSetId ?? undefined,
         },
       });
@@ -278,67 +279,70 @@ async function importSet(
         stats.cardsCreated++;
       }
 
-      // Upsert variants from price entries
-      for (const priceEntry of firstCard.prices) {
-        const { version, treatment } = mapSubTypeToVersion(priceEntry.subTypeName, tcg);
+      // Upsert variants from ALL product entries (base + parallel have separate entries)
+      for (const entry of cardEntries) {
+        for (const priceEntry of entry.prices) {
+          const { version, treatment } = mapSubTypeToVersion(priceEntry.subTypeName, tcg);
 
-        const existingVariant = await db.cardVariant.findUnique({
-          where: {
-            cardId_language_edition_version: {
+          const existingVariant = await db.cardVariant.findUnique({
+            where: {
+              cardId_language_edition_version: {
+                cardId: card.id,
+                language: "EN",
+                edition: "",
+                version,
+              },
+            },
+          });
+
+          await db.cardVariant.upsert({
+            where: {
+              cardId_language_edition_version: {
+                cardId: card.id,
+                language: "EN",
+                edition: "",
+                version,
+              },
+            },
+            create: {
               cardId: card.id,
               language: "EN",
-              edition: "",
               version,
+              treatment,
+              rarity: entry.rarity,
+              imageUrl: entry.imageUrl,
+              tcgplayerProductId: entry.productId,
+              tcgplayerUrl: entry.url,
+              priceUsd: priceEntry.marketPrice,
+              priceUsdLow: priceEntry.lowPrice,
+              priceUsdMid: priceEntry.midPrice,
+              priceUsdHigh: priceEntry.highPrice,
+              priceUsdUpdatedAt: new Date(),
             },
-          },
-        });
-
-        await db.cardVariant.upsert({
-          where: {
-            cardId_language_edition_version: {
-              cardId: card.id,
-              language: "EN",
-              edition: "",
-              version,
+            update: {
+              // Use this entry's image/productId (parallel entries have distinct images)
+              tcgplayerProductId: entry.productId,
+              tcgplayerUrl: entry.url,
+              imageUrl: entry.imageUrl,
+              priceUsd: priceEntry.marketPrice,
+              priceUsdLow: priceEntry.lowPrice,
+              priceUsdMid: priceEntry.midPrice,
+              priceUsdHigh: priceEntry.highPrice,
+              priceUsdUpdatedAt: new Date(),
+              // Fill missing fields only
+              treatment: existingVariant?.treatment || treatment,
+              rarity: existingVariant?.rarity || entry.rarity || undefined,
             },
-          },
-          create: {
-            cardId: card.id,
-            language: "EN",
-            version,
-            treatment,
-            rarity: firstCard.rarity,
-            imageUrl: firstCard.imageUrl,
-            tcgplayerProductId: firstCard.productId,
-            tcgplayerUrl: firstCard.url,
-            priceUsd: priceEntry.marketPrice,
-            priceUsdLow: priceEntry.lowPrice,
-            priceUsdMid: priceEntry.midPrice,
-            priceUsdHigh: priceEntry.highPrice,
-            priceUsdUpdatedAt: new Date(),
-          },
-          update: {
-            // Add USD prices without overwriting EUR data
-            tcgplayerProductId: firstCard.productId,
-            tcgplayerUrl: firstCard.url,
-            priceUsd: priceEntry.marketPrice,
-            priceUsdLow: priceEntry.lowPrice,
-            priceUsdMid: priceEntry.midPrice,
-            priceUsdHigh: priceEntry.highPrice,
-            priceUsdUpdatedAt: new Date(),
-            // Fill missing fields only
-            treatment: existingVariant?.treatment || treatment,
-            rarity: existingVariant?.rarity || firstCard.rarity || undefined,
-            imageUrl: existingVariant?.imageUrl || firstCard.imageUrl || undefined,
-          },
-        });
+          });
 
-        if (existingVariant) stats.variantsUpdated++;
-        else stats.variantsCreated++;
+          if (existingVariant) stats.variantsUpdated++;
+          else stats.variantsCreated++;
+        }
       }
 
-      // If the card has no price entries but we still want a base variant
-      if (firstCard.prices.length === 0) {
+      // If no entries had price data, create a base variant from the base card
+      const totalPrices = cardEntries.reduce((sum, c) => sum + c.prices.length, 0);
+      if (totalPrices === 0) {
         const existingVariant = await db.cardVariant.findUnique({
           where: {
             cardId_language_edition_version: {
@@ -364,16 +368,16 @@ async function importSet(
             language: "EN",
             version: "",
             treatment: "regular",
-            rarity: firstCard.rarity,
-            imageUrl: firstCard.imageUrl,
-            tcgplayerProductId: firstCard.productId,
-            tcgplayerUrl: firstCard.url,
+            rarity: baseCard.rarity,
+            imageUrl: baseCard.imageUrl,
+            tcgplayerProductId: baseCard.productId,
+            tcgplayerUrl: baseCard.url,
           },
           update: {
-            tcgplayerProductId: firstCard.productId,
-            tcgplayerUrl: firstCard.url,
-            rarity: existingVariant?.rarity || firstCard.rarity || undefined,
-            imageUrl: existingVariant?.imageUrl || firstCard.imageUrl || undefined,
+            tcgplayerProductId: baseCard.productId,
+            tcgplayerUrl: baseCard.url,
+            rarity: existingVariant?.rarity || baseCard.rarity || undefined,
+            imageUrl: existingVariant?.imageUrl || baseCard.imageUrl || undefined,
           },
         });
 

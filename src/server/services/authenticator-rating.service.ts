@@ -1,9 +1,6 @@
 import { db } from "@/lib/db";
 import type { SubmitRatingInput } from "@/lib/validators";
-import {
-  computeTimeWeightedRating,
-  getRatingWeight,
-} from "@/lib/authenticator-ratings";
+import { computeTimeWeightedRating, getRatingWeight } from "@/lib/authenticator-ratings";
 
 /**
  * Submit a rating for an authenticator after a trade leg is completed.
@@ -20,7 +17,8 @@ export async function submitRating(raterId: string, input: SubmitRatingInput) {
   });
 
   if (!leg) throw new Error("Trade leg not found");
-  if (leg.toUserId !== raterId) throw new Error("Not authorized — only the card recipient can rate");
+  if (leg.toUserId !== raterId)
+    throw new Error("Not authorized — only the card recipient can rate");
   if (leg.trade.status !== "COMPLETED") throw new Error("Trade must be completed before rating");
   if (!leg.verification) throw new Error("No verification assignment for this leg");
 

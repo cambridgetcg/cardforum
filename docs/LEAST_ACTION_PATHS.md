@@ -30,24 +30,24 @@ PHASE:          When to build (P0/P1/P2, keyed to ROADMAP.md phases)
 
 ## Action Budget Summary
 
-| Module | Current | Target | Reduction | Priority |
-|--------|---------|--------|-----------|----------|
-| 1. Listings | U:5 O:0 S:4 = **9** | U:3 O:0 S:5 = **8** | -1 (11%) | P2 |
-| 2. Matching | U:0 O:0 S:0 = **0** (broken) | U:0 O:0 S:8 = **8** | +8 (unblocked) | **P0** |
-| 3. Trade (Authenticated) | U:7 O:1 S:15 = **23** | U:3 O:0 S:18 = **21** | -5 (22%) | P1 |
-| 4. Trade (Direct) | U:4 O:0 S:8 = **12** | U:2 O:0 S:10 = **12** | -2 (17%) | P1 |
-| 5. Deposit | U:4 O:0 S:4 = **8** | U:2 O:0 S:4 = **6** | -2 (25%) | P2 |
-| 6. Withdrawal | U:5 O:0 S:6 = **11** | U:2 O:0 S:6 = **8** | -3 (27%) | P2 |
-| 7. KYC | U:3 O:1 S:4 = **8** | U:2 O:0 S:5 = **7** | -2 (25%) | P1 |
-| 8. Auth Onboarding | U:2 O:1 S:5 = **8** | U:1 O:0 S:6 = **7** | -2 (25%) | P2 |
-| 9. Verification | U:0 O:2 S:3 = **5** | U:0 O:1 S:4 = **5** | -1 (20%) | P2 |
-| 10. Photo Approval | U:2 O:0 S:4 = **6** | U:1 O:0 S:5 = **6** | -1 (17%) | P1 |
-| 11. Disputes | U:1 O:1 S:6 = **8** | U:1 O:0 S:8 = **9** | -1 O, +1 S | **P0** |
-| 12. Digitisation | U:2 O:3 S:5 = **10** | U:1 O:2 S:6 = **9** | -2 (20%) | P2 |
-| 13. Digital Trade | U:2 O:0 S:5 = **7** | U:1 O:0 S:5 = **6** | -1 (14%) | P2 |
-| 14. Redemption | U:3 O:1 S:6 = **10** | U:1 O:0 S:8 = **9** | -3 (30%) | P2 |
-| 15. Shipping | U:2 O:1 S:5 = **8** | U:0 O:1 S:7 = **8** | -2 U (25%) | P1 |
-| **TOTAL** | **U:42 O:11 S:80** | **U:20 O:4 S:111** | **-29 human, +31 system** | — |
+| Module                   | Current                      | Target                | Reduction                 | Priority |
+| ------------------------ | ---------------------------- | --------------------- | ------------------------- | -------- |
+| 1. Listings              | U:5 O:0 S:4 = **9**          | U:3 O:0 S:5 = **8**   | -1 (11%)                  | P2       |
+| 2. Matching              | U:0 O:0 S:0 = **0** (broken) | U:0 O:0 S:8 = **8**   | +8 (unblocked)            | **P0**   |
+| 3. Trade (Authenticated) | U:7 O:1 S:15 = **23**        | U:3 O:0 S:18 = **21** | -5 (22%)                  | P1       |
+| 4. Trade (Direct)        | U:4 O:0 S:8 = **12**         | U:2 O:0 S:10 = **12** | -2 (17%)                  | P1       |
+| 5. Deposit               | U:4 O:0 S:4 = **8**          | U:2 O:0 S:4 = **6**   | -2 (25%)                  | P2       |
+| 6. Withdrawal            | U:5 O:0 S:6 = **11**         | U:2 O:0 S:6 = **8**   | -3 (27%)                  | P2       |
+| 7. KYC                   | U:3 O:1 S:4 = **8**          | U:2 O:0 S:5 = **7**   | -2 (25%)                  | P1       |
+| 8. Auth Onboarding       | U:2 O:1 S:5 = **8**          | U:1 O:0 S:6 = **7**   | -2 (25%)                  | P2       |
+| 9. Verification          | U:0 O:2 S:3 = **5**          | U:0 O:1 S:4 = **5**   | -1 (20%)                  | P2       |
+| 10. Photo Approval       | U:2 O:0 S:4 = **6**          | U:1 O:0 S:5 = **6**   | -1 (17%)                  | P1       |
+| 11. Disputes             | U:1 O:1 S:6 = **8**          | U:1 O:0 S:8 = **9**   | -1 O, +1 S                | **P0**   |
+| 12. Digitisation         | U:2 O:3 S:5 = **10**         | U:1 O:2 S:6 = **9**   | -2 (20%)                  | P2       |
+| 13. Digital Trade        | U:2 O:0 S:5 = **7**          | U:1 O:0 S:5 = **6**   | -1 (14%)                  | P2       |
+| 14. Redemption           | U:3 O:1 S:6 = **10**         | U:1 O:0 S:8 = **9**   | -3 (30%)                  | P2       |
+| 15. Shipping             | U:2 O:1 S:5 = **8**          | U:0 O:1 S:7 = **8**   | -2 U (25%)                | P1       |
+| **TOTAL**                | **U:42 O:11 S:80**           | **U:20 O:4 S:111**    | **-29 human, +31 system** | —        |
 
 **Net effect**: 29 fewer human actions, 31 more system actions. The system absorbs the work humans used to do.
 
@@ -56,6 +56,7 @@ PHASE:          When to build (P0/P1/P2, keyed to ROADMAP.md phases)
 ## 1. Listings
 
 ### Current Path (U:5 O:0 S:4 = 9)
+
 ```
 1. [U] Open listing form
 2. [U] Search + select card
@@ -69,6 +70,7 @@ PHASE:          When to build (P0/P1/P2, keyed to ROADMAP.md phases)
 ```
 
 ### Target Path (U:3 O:0 S:5 = 8)
+
 ```
 1. [U] Search + select card (inline, no modal switch)
 2. [S] Auto-suggest price from marketplace data (bestBid/bestAsk)
@@ -81,13 +83,15 @@ PHASE:          When to build (P0/P1/P2, keyed to ROADMAP.md phases)
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| AI grading mandatory step | Background inference; condition pre-filled, user confirms |
-| Separate form open action | Inline card search → form appears below selection |
-| KYC surprise at submit | Pre-check on page load; show "KYC required for >$500" upfront |
+
+| Eliminated                | How                                                           |
+| ------------------------- | ------------------------------------------------------------- |
+| AI grading mandatory step | Background inference; condition pre-filled, user confirms     |
+| Separate form open action | Inline card search → form appears below selection             |
+| KYC surprise at submit    | Pre-check on page load; show "KYC required for >$500" upfront |
 
 ### Build Path
+
 1. Move AI grading to background call triggered on card selection (no blocking step)
 2. Add `GET /api/marketplace/suggest-price?cardId=X&condition=Y` — returns recent trade range
 3. Add KYC tier check to listing page load (show banner if upgrade needed)
@@ -100,6 +104,7 @@ PHASE:          When to build (P0/P1/P2, keyed to ROADMAP.md phases)
 ## 2. Matching Engine
 
 ### Current Path (U:0 O:0 S:0 = 0 — BROKEN)
+
 ```
 matching.service.ts:runMatching() exists but has NO trigger.
 No cron job. No API route. No scheduler.
@@ -107,6 +112,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:0 O:0 S:8 = 8 — invisible)
+
 ```
 1. [S] Cron trigger: /api/cron/matching (every 5 minutes)
 2. [S] Load active listings, build edge graph
@@ -119,12 +125,14 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Added | Why |
-|-------|-----|
-| Cron trigger route | Without this, the entire bridge is dead |
+
+| Added              | Why                                                    |
+| ------------------ | ------------------------------------------------------ |
+| Cron trigger route | Without this, the entire bridge is dead                |
 | User notifications | Proposals expire in 7 days; users must know they exist |
 
 ### Build Path
+
 1. Create `POST /api/cron/matching/route.ts` — calls `matchingService.runMatching()`
 2. Add Vercel Cron config (`vercel.json`: `{ "crons": [{ "path": "/api/cron/matching", "schedule": "*/5 * * * *" }] }`)
 3. Add notification on MatchProposal creation (in-app + email)
@@ -137,6 +145,7 @@ Matching literally never runs.
 ## 3. Trade Lifecycle — Authenticated Mode
 
 ### Current Path (U:7 O:1 S:15 = 23)
+
 ```
  1. [U] Accept proposal
  2. [S] KYC gate, deactivate listings
@@ -159,6 +168,7 @@ Matching literally never runs.
 6 of 10 transitions have no API route. The trade lifecycle is effectively frozen at ACCEPTED.
 
 ### Target Path (U:3 O:0 S:18 = 21)
+
 ```
  1. [U] Accept proposal
  2. [S] KYC gate, deactivate listings
@@ -177,13 +187,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| 4 manual transition clicks | Auto-transition: ACCEPTED→ESCROWED, ESCROWED→CARDS_SUBMITTED, CARDS_SUBMITTED→AUTHENTICATING happen automatically when preconditions are met |
-| Operator review of verification | Authenticator result triggers automatic transition (no admin approval) |
-| Manual DELIVERING trigger | Ship recording auto-transitions |
+
+| Eliminated                      | How                                                                                                                                          |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4 manual transition clicks      | Auto-transition: ACCEPTED→ESCROWED, ESCROWED→CARDS_SUBMITTED, CARDS_SUBMITTED→AUTHENTICATING happen automatically when preconditions are met |
+| Operator review of verification | Authenticator result triggers automatic transition (no admin approval)                                                                       |
+| Manual DELIVERING trigger       | Ship recording auto-transitions                                                                                                              |
 
 ### Build Path
+
 1. **P0**: Create 6 missing transition API routes (see ROADMAP "CRITICAL GAP")
 2. **P0**: Wire auto-transition: ACCEPTED triggers ESCROWED immediately (no manual step — acceptance IS the commitment)
 3. **P1**: Wire auto-transition: ESCROWED→CARDS_SUBMITTED when user confirms card sent to authenticator (single confirmation, not separate state click)
@@ -200,6 +212,7 @@ Matching literally never runs.
 ## 4. Trade Lifecycle — Direct Mode
 
 ### Current Path (U:4 O:0 S:8 = 12)
+
 ```
 1. [U] Accept proposal
 2. [S] KYC gate, deactivate listings
@@ -212,6 +225,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:2 O:0 S:10 = 12)
+
 ```
 1. [U] Accept proposal
 2. [S] Auto-transition → ESCROWED (hold funds, lock addresses)
@@ -224,12 +238,14 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Manual escrow trigger | Auto-transition on accept |
+
+| Eliminated                   | How                                |
+| ---------------------------- | ---------------------------------- |
+| Manual escrow trigger        | Auto-transition on accept          |
 | Manual delivery confirmation | Carrier API tracking auto-confirms |
 
 ### Build Path
+
 1. Reuse auto-transition from authenticated mode (ACCEPTED→ESCROWED)
 2. Add carrier tracking integration (EasyPost or AfterShip API) for delivery confirmation
 3. Auto-confirm delivery when carrier reports "delivered"
@@ -241,6 +257,7 @@ Matching literally never runs.
 ## 5. Wallet Deposit
 
 ### Current Path (U:4 O:0 S:4 = 8)
+
 ```
 1. [U] Click "Add Funds"
 2. [U] Enter amount
@@ -253,6 +270,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:2 O:0 S:4 = 6)
+
 ```
 1. [U] Enter amount (inline, no modal)
 2. [S] Create checkout session
@@ -263,13 +281,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Modal open action | Inline deposit form on wallet page |
-| Page redirect to Stripe | Stripe Elements embedded (no hosted page) |
-| Manual page refresh for balance | WebSocket/polling auto-updates balance |
+
+| Eliminated                      | How                                       |
+| ------------------------------- | ----------------------------------------- |
+| Modal open action               | Inline deposit form on wallet page        |
+| Page redirect to Stripe         | Stripe Elements embedded (no hosted page) |
+| Manual page refresh for balance | WebSocket/polling auto-updates balance    |
 
 ### Build Path
+
 1. Replace Stripe Checkout (redirect) with Stripe Elements (embedded) — saves one redirect
 2. Add saved payment methods (Stripe Customer portal) — one-click redeposit
 3. Add real-time balance polling after deposit (check every 2s for 30s)
@@ -282,6 +302,7 @@ Matching literally never runs.
 ## 6. Wallet Withdrawal
 
 ### Current Path (U:5 O:0 S:6 = 11) — first-time
+
 ```
 1. [U] Click "Set Up Payouts"
 2. [S] Create Connect account
@@ -297,6 +318,7 @@ Matching literally never runs.
 ```
 
 ### Target Path — first-time (U:3 O:0 S:6 = 9)
+
 ```
 1. [U] Click "Withdraw" (triggers onboarding if not connected)
 2. [S] Create Connect account + onboarding link
@@ -310,6 +332,7 @@ Matching literally never runs.
 ```
 
 ### Target Path — returning (U:2 O:0 S:4 = 6)
+
 ```
 1. [U] Enter amount
 2. [U] Submit
@@ -320,13 +343,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
+
+| Eliminated                     | How                                                           |
+| ------------------------------ | ------------------------------------------------------------- |
 | Separate "Set Up Payouts" step | Merge into withdrawal flow (auto-detect if onboarding needed) |
-| Return-page timing edge case | Show loading state until webhook confirms onboarding |
-| Opaque payout status | Add `/api/payouts/history` route, show in wallet page |
+| Return-page timing edge case   | Show loading state until webhook confirms onboarding          |
+| Opaque payout status           | Add `/api/payouts/history` route, show in wallet page         |
 
 ### Build Path
+
 1. Merge onboarding into withdrawal flow (detect `connectOnboardingComplete` and branch)
 2. Add loading/polling state on onboarding return (check every 2s for webhook)
 3. Create `GET /api/payouts/history` route
@@ -339,6 +364,7 @@ Matching literally never runs.
 ## 7. KYC
 
 ### Current Path (U:3 O:1 S:4 = 8)
+
 ```
 1. [S] KYC gate fires at listing/trade time — surprise rejection
 2. [U] Navigate to KYC page (doesn't exist)
@@ -351,6 +377,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:2 O:0 S:5 = 7)
+
 ```
 1. [S] Show KYC requirements proactively at signup / first listing
 2. [U] Upload documents (guided: "Take a selfie", "Photograph your ID")
@@ -362,13 +389,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Surprise KYC rejection | Show requirements proactively; tier indicator on dashboard |
-| Manual admin review (BASIC) | AI pre-verification auto-approves clear cases |
-| Missing KYC UI | Build document upload page at `/kyc` |
+
+| Eliminated                  | How                                                        |
+| --------------------------- | ---------------------------------------------------------- |
+| Surprise KYC rejection      | Show requirements proactively; tier indicator on dashboard |
+| Manual admin review (BASIC) | AI pre-verification auto-approves clear cases              |
+| Missing KYC UI              | Build document upload page at `/kyc`                       |
 
 ### Build Path
+
 1. **P0**: Build KYC UI page (`/kyc`) with document upload
 2. **P1**: Add KYC tier indicator to dashboard (show "Unverified — submit docs to list >$500")
 3. **P1**: Integrate document verification API (Onfido, Jumio, or Stripe Identity)
@@ -381,6 +410,7 @@ Matching literally never runs.
 ## 8. Authenticator Onboarding
 
 ### Current Path (U:2 O:1 S:5 = 8)
+
 ```
 1. [U] Fill application (business name, region, TCG expertise, proof)
 2. [U] Submit
@@ -393,6 +423,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:0 S:6 = 7)
+
 ```
 1. [U] Fill + submit application (with inline proof validation)
 2. [S] Validate KYC, create record
@@ -404,13 +435,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Admin manual review | Auto-verify expertise proof against external registries |
-| Missing activation route | Auto-activate on approval (merge APPROVED + ACTIVE) |
-| Second user action (activate) | Auto-activate eliminates the step |
+
+| Eliminated                    | How                                                     |
+| ----------------------------- | ------------------------------------------------------- |
+| Admin manual review           | Auto-verify expertise proof against external registries |
+| Missing activation route      | Auto-activate on approval (merge APPROVED + ACTIVE)     |
+| Second user action (activate) | Auto-activate eliminates the step                       |
 
 ### Build Path
+
 1. **P0**: Create activation route (`POST /api/authenticator/activate`)
 2. **P1**: Auto-activate on approval (remove ONBOARDING intermediate state)
 3. **P2**: Integrate proof-of-expertise validation (PSA cert lookup, BGS registry)
@@ -423,6 +456,7 @@ Matching literally never runs.
 ## 9. Authenticator Verification
 
 ### Current Path (U:0 O:2 S:3 = 5)
+
 ```
 1. [O] Authenticator receives card (physical receipt)
 2. [O] Authenticator inspects, grades, submits verification result
@@ -432,6 +466,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:0 O:1 S:4 = 5)
+
 ```
 1. [O] Authenticator receives card, photographs, submits result + photos
 2. [S] AI pre-check: compare authenticator CCS vs. AI CCS
@@ -441,12 +476,14 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Separate inspect + grade steps | Single submission with photos + CCS scores |
-| Blind trust in authenticator grade | AI cross-check catches systematic bias |
+
+| Eliminated                         | How                                        |
+| ---------------------------------- | ------------------------------------------ |
+| Separate inspect + grade steps     | Single submission with photos + CCS scores |
+| Blind trust in authenticator grade | AI cross-check catches systematic bias     |
 
 ### Build Path
+
 1. Require photo upload with verification submission (evidence chain)
 2. Run `condition-comparison.service.ts` on every verification (currently never triggered)
 3. Auto-flag high-delta verifications for review
@@ -459,6 +496,7 @@ Matching literally never runs.
 ## 10. Photo Approval
 
 ### Current Path (U:2 O:0 S:4 = 6)
+
 ```
 1. [S] Create PhotoApproval for legs ≥ $50
 2. [U] Sender uploads 1-4 photos
@@ -469,6 +507,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:0 S:5 = 6)
+
 ```
 1. [S] Create PhotoApproval for legs ≥ threshold (configurable, see RIGIDNESS #11)
 2. [S] Skip entirely for trusted sellers (trust score > 0.9 + 10+ completed trades)
@@ -480,13 +519,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Trusted seller photo requirement | Trust-based exemption (see Growth Hooks) |
+
+| Eliminated                       | How                                        |
+| -------------------------------- | ------------------------------------------ |
+| Trusted seller photo requirement | Trust-based exemption (see Growth Hooks)   |
 | Receiver review for clear photos | AI pre-screen auto-approves obvious passes |
-| Vague rejections | Annotated rejection with specific feedback |
+| Vague rejections                 | Annotated rejection with specific feedback |
 
 ### Build Path
+
 1. Add seller trust score (completed trades / total trades, time-weighted)
 2. Skip photo approval for trusted sellers below enhanced threshold
 3. Add AI photo quality check (blur, lighting, card visibility)
@@ -499,6 +540,7 @@ Matching literally never runs.
 ## 11. Disputes
 
 ### Current Path (U:1 O:1 S:6 = 8)
+
 ```
 1. [S] Auto-dispute triggers (photo exhaustion, verification failure)
 2. [U] User cannot file manual dispute — NO API ROUTE
@@ -509,6 +551,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:0 S:8 = 9)
+
 ```
 1. [U] File dispute with structured reason + evidence (or auto-triggered)
 2. [S] Create Dispute record with structured reason enum
@@ -524,13 +567,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Added | Why |
-|-------|-----|
-| Manual dispute filing route | Users must be able to dispute shipping issues |
-| Auto-resolution for clear cases | Tracking data provides deterministic evidence |
-| Feedback into calibration | Each dispute is a signal that upstream friction was insufficient |
+
+| Added                           | Why                                                              |
+| ------------------------------- | ---------------------------------------------------------------- |
+| Manual dispute filing route     | Users must be able to dispute shipping issues                    |
+| Auto-resolution for clear cases | Tracking data provides deterministic evidence                    |
+| Feedback into calibration       | Each dispute is a signal that upstream friction was insufficient |
 
 ### Build Path
+
 1. **P0**: Create `POST /api/disputes` route — expose `createShippingDispute()`
 2. **P0**: Add structured reason enum to dispute creation (NOT_RECEIVED, DAMAGED, WRONG_CARD, etc.)
 3. **P1**: Auto-resolve NOT_RECEIVED disputes using tracking data
@@ -543,6 +588,7 @@ Matching literally never runs.
 ## 12. Digitisation
 
 ### Current Path (U:2 O:3 S:5 = 10)
+
 ```
 1. [U] Submit digitisation request (select card, authenticator)
 2. [U] Ship card to authenticator
@@ -555,6 +601,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:2 S:6 = 9)
+
 ```
 1. [U] Submit request (auto-suggest nearest vault authenticator)
 2. [S] Auto-calculate fee, show upfront
@@ -567,13 +614,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
+
+| Eliminated                         | How                                                     |
+| ---------------------------------- | ------------------------------------------------------- |
 | Separate "start verification" step | Merge receive + verify into single authenticator action |
-| Separate "mint" step | Auto-mint on verification completion (no second action) |
-| Fee uncertainty | Calculate and display fee before submission |
+| Separate "mint" step               | Auto-mint on verification completion (no second action) |
+| Fee uncertainty                    | Calculate and display fee before submission             |
 
 ### Build Path
+
 1. Merge RECEIVED + VERIFYING states (single authenticator confirmation)
 2. Auto-mint on VERIFIED (remove manual mint step)
 3. Show fee estimate on request form (from authenticator tier)
@@ -586,6 +635,7 @@ Matching literally never runs.
 ## 13. Digital Trade
 
 ### Current Path (U:2 O:0 S:5 = 7)
+
 ```
 1. [U] List token with ask price
 2. [S] Validate ownership, update token status → LISTED
@@ -597,6 +647,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:0 S:5 = 6)
+
 ```
 1. [U] Buyer clicks "Buy" (or "Make Offer" for bid)
 2. [S] Validate ownership + buyer balance
@@ -607,15 +658,17 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
+
+| Eliminated                          | How                                                  |
+| ----------------------------------- | ---------------------------------------------------- |
 | Separate listing action for sellers | Add "instant buy" at floor price (no listing needed) |
 
-| Added | Why |
-|-------|-----|
+| Added               | Why                                                            |
+| ------------------- | -------------------------------------------------------------- |
 | Bid/offer mechanism | Buyers can make offers below ask — seller notified, can accept |
 
 ### Build Path
+
 1. Add bid/offer to digital marketplace (WantListing equivalent for tokens)
 2. Add instant-buy at listed price (current flow, just rename)
 3. Add seller notifications on sale
@@ -628,6 +681,7 @@ Matching literally never runs.
 ## 14. Redemption
 
 ### Current Path (U:3 O:1 S:6 = 10)
+
 ```
 1. [U] Click "Redeem Physical Card"
 2. [U] Select country, optionally preferred vault
@@ -642,6 +696,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:1 O:0 S:8 = 9)
+
 ```
 1. [U] Click "Redeem" (country auto-detected from shipping address)
 2. [S] Auto-select vault (same-zone preference, show selection to user)
@@ -655,13 +710,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Country selection | Auto-detect from default shipping address |
-| Manual delivery confirmation | Carrier API auto-confirms |
-| Vault notification gap | System auto-notifies vault with shipping details |
+
+| Eliminated                   | How                                              |
+| ---------------------------- | ------------------------------------------------ |
+| Country selection            | Auto-detect from default shipping address        |
+| Manual delivery confirmation | Carrier API auto-confirms                        |
+| Vault notification gap       | System auto-notifies vault with shipping details |
 
 ### Build Path
+
 1. Auto-detect country from user's default ShippingAddress
 2. Show vault selection + fee breakdown before confirmation
 3. Integrate carrier tracking for auto-delivery confirmation
@@ -674,6 +731,7 @@ Matching literally never runs.
 ## 15. Shipping
 
 ### Current Path (U:2 O:1 S:5 = 8)
+
 ```
 1. [S] Lock shipping addresses at ESCROWED
 2. [U] Sender ships card (physical action)
@@ -686,6 +744,7 @@ Matching literally never runs.
 ```
 
 ### Target Path (U:0 O:1 S:7 = 8)
+
 ```
 1. [S] Lock + validate shipping addresses at ESCROWED (postal API validation)
 2. [S] Generate pre-filled shipping label for sender
@@ -698,13 +757,15 @@ Matching literally never runs.
 ```
 
 ### Delta
-| Eliminated | How |
-|-----------|-----|
-| Manual tracking entry | Carrier API auto-detects from generated label |
-| Manual delivery confirmation | Carrier tracking auto-confirms |
-| Address validation gap | Postal API validates at lock time |
+
+| Eliminated                   | How                                           |
+| ---------------------------- | --------------------------------------------- |
+| Manual tracking entry        | Carrier API auto-detects from generated label |
+| Manual delivery confirmation | Carrier tracking auto-confirms                |
+| Address validation gap       | Postal API validates at lock time             |
 
 ### Build Path
+
 1. Integrate address validation API (SmartyStreets, Google Address Validation)
 2. Generate shipping labels with tracking (EasyPost, Shippo)
 3. Auto-track delivery status via carrier webhooks
@@ -719,6 +780,7 @@ Matching literally never runs.
 ### Journey A: "I want to trade a card" (end-to-end)
 
 **Current**: 15+ actions across 5 modules, multiple broken routes
+
 ```
 Register (3) → Deposit (4) → Create listing (5) → [MATCHING BROKEN] →
 Accept trade (1) → [5 TRANSITIONS MISSING] → Confirm delivery (1) → Done
@@ -726,6 +788,7 @@ Total: 14+ user actions, 6 blocked transitions
 ```
 
 **Target**: 7 actions, all automated transitions
+
 ```
 Register (2, with saved payment) → Deposit (2, inline) → Create listing (3, AI-assisted) →
 [MATCHING AUTO] → Accept trade (1) → [AUTO-TRANSITIONS] → Auto-complete → Done
@@ -737,6 +800,7 @@ Total: 8 user actions, 0 blocked transitions
 ### Journey B: "I want to digitise and sell a card"
 
 **Current**: 8 actions, 3 authenticator steps
+
 ```
 Submit digitisation (2) → Ship card (1) → [AUTH: receive, verify, mint = 3] →
 List token (1) → Buyer purchases (1) → Done
@@ -744,6 +808,7 @@ Total: 5 user + 3 authenticator = 8 actions
 ```
 
 **Target**: 4 actions, 2 authenticator steps
+
 ```
 Submit digitisation (1, auto-suggest vault) → Ship card (1) →
 [AUTH: receive+verify = 1, auto-mint] → List token (auto-suggested price) →
@@ -757,24 +822,24 @@ Total: 3 user + 1 authenticator = 4 actions
 
 ## Implementation Priority Matrix
 
-| Priority | Module | Build Item | Actions Eliminated | Effort |
-|----------|--------|-----------|-------------------|--------|
-| ~~**P0**~~ | ~~Matching~~ | ~~Trigger route + cron~~ | ~~Unblocks entire platform~~ | ✅ Done |
-| ~~**P0**~~ | ~~Trade~~ | ~~6 missing transition routes~~ | ~~Unblocks trade lifecycle~~ | ✅ Done |
-| ~~**P0**~~ | ~~Disputes~~ | ~~POST /api/disputes route~~ | ~~Unblocks user protection~~ | ✅ Done |
-| ~~**P0**~~ | ~~Auth Onboarding~~ | ~~Activation route~~ | ~~Unblocks authenticator flow~~ | ✅ Done |
-| ~~**P0**~~ | ~~Deposit~~ | ~~ACH payment method (Stripe `us_bank_account`)~~ | ~~Turns margin-negative → positive~~ | ✅ Done |
-| ~~**P1**~~ | ~~Trade~~ | ~~Auto-transitions (ACCEPTED→ESCROWED, etc.)~~ | ~~-4 user actions per trade~~ | ✅ Done |
-| ~~**P1**~~ | ~~Trade~~ | ~~Wrap transitionTrade in $transaction~~ | ~~Prevents inconsistent state~~ | ✅ Already done |
-| ~~**P1**~~ | ~~KYC~~ | ~~Build KYC UI page~~ | ~~Unblocks KYC flow~~ | ✅ Done |
-| ~~**P1**~~ | ~~Photo~~ | ~~Trust-based exemption~~ | ~~-1 action per trusted trade~~ | ✅ Done |
-| ~~**P1**~~ | ~~Shipping~~ | ~~Address validation at lock~~ | ~~Prevents misdirects~~ | ✅ Done |
-| ~~**P2**~~ | ~~Listings~~ | ~~Background AI, price suggestion~~ | ~~-2 actions per listing~~ | ✅ Done |
-| ~~**P2**~~ | ~~Deposit~~ | ~~Stripe Elements inline~~ | ~~-2 actions per deposit~~ | ✅ Done |
-| ~~**P2**~~ | ~~Withdrawal~~ | ~~Merged onboarding flow~~ | ~~-2 actions first time~~ | ✅ Done |
-| ~~**P2**~~ | ~~Digitisation~~ | ~~Merge verify+mint steps~~ | ~~-1 authenticator action~~ | ✅ Done |
-| ~~**P2**~~ | ~~Redemption~~ | ~~Auto-detect country, carrier tracking~~ | ~~-2 actions per redemption~~ | ✅ Done |
-| ~~**P2**~~ | ~~Shipping~~ | ~~Carrier tracking integration~~ | ~~-2 user actions per trade~~ | ✅ Done |
+| Priority   | Module              | Build Item                                        | Actions Eliminated                   | Effort          |
+| ---------- | ------------------- | ------------------------------------------------- | ------------------------------------ | --------------- |
+| ~~**P0**~~ | ~~Matching~~        | ~~Trigger route + cron~~                          | ~~Unblocks entire platform~~         | ✅ Done         |
+| ~~**P0**~~ | ~~Trade~~           | ~~6 missing transition routes~~                   | ~~Unblocks trade lifecycle~~         | ✅ Done         |
+| ~~**P0**~~ | ~~Disputes~~        | ~~POST /api/disputes route~~                      | ~~Unblocks user protection~~         | ✅ Done         |
+| ~~**P0**~~ | ~~Auth Onboarding~~ | ~~Activation route~~                              | ~~Unblocks authenticator flow~~      | ✅ Done         |
+| ~~**P0**~~ | ~~Deposit~~         | ~~ACH payment method (Stripe `us_bank_account`)~~ | ~~Turns margin-negative → positive~~ | ✅ Done         |
+| ~~**P1**~~ | ~~Trade~~           | ~~Auto-transitions (ACCEPTED→ESCROWED, etc.)~~    | ~~-4 user actions per trade~~        | ✅ Done         |
+| ~~**P1**~~ | ~~Trade~~           | ~~Wrap transitionTrade in $transaction~~          | ~~Prevents inconsistent state~~      | ✅ Already done |
+| ~~**P1**~~ | ~~KYC~~             | ~~Build KYC UI page~~                             | ~~Unblocks KYC flow~~                | ✅ Done         |
+| ~~**P1**~~ | ~~Photo~~           | ~~Trust-based exemption~~                         | ~~-1 action per trusted trade~~      | ✅ Done         |
+| ~~**P1**~~ | ~~Shipping~~        | ~~Address validation at lock~~                    | ~~Prevents misdirects~~              | ✅ Done         |
+| ~~**P2**~~ | ~~Listings~~        | ~~Background AI, price suggestion~~               | ~~-2 actions per listing~~           | ✅ Done         |
+| ~~**P2**~~ | ~~Deposit~~         | ~~Stripe Elements inline~~                        | ~~-2 actions per deposit~~           | ✅ Done         |
+| ~~**P2**~~ | ~~Withdrawal~~      | ~~Merged onboarding flow~~                        | ~~-2 actions first time~~            | ✅ Done         |
+| ~~**P2**~~ | ~~Digitisation~~    | ~~Merge verify+mint steps~~                       | ~~-1 authenticator action~~          | ✅ Done         |
+| ~~**P2**~~ | ~~Redemption~~      | ~~Auto-detect country, carrier tracking~~         | ~~-2 actions per redemption~~        | ✅ Done         |
+| ~~**P2**~~ | ~~Shipping~~        | ~~Carrier tracking integration~~                  | ~~-2 user actions per trade~~        | ✅ Done         |
 
 **Total P0**: 5.5 days — ✅ All done
 **Total P1**: 9 days — ✅ All done
@@ -789,6 +854,7 @@ After all paths are built, the system should satisfy this invariant:
 > **No human action exists that the system could perform with equal or greater reliability.**
 
 Every remaining human action is one where human judgment adds value that automation cannot replicate:
+
 - **Accept a trade**: Only the user knows if they want this trade
 - **Upload photos**: Only the user has the physical card
 - **File a dispute**: Only the user knows something is wrong

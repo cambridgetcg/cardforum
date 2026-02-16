@@ -20,7 +20,7 @@ A $30 card can cost $60 by the time it arrives. This prices out most collectors 
 
 ## The Insight
 
-Trading cards are **fungible**. A card of the same name, set, edition, language, and condition is interchangeable with any other copy. You don't need *that specific card* — you need *an equivalent card*.
+Trading cards are **fungible**. A card of the same name, set, edition, language, and condition is interchangeable with any other copy. You don't need _that specific card_ — you need _an equivalent card_.
 
 This means cross-border trades can be fulfilled **locally** if the platform can find matching counterparts in each region.
 
@@ -53,11 +53,11 @@ The locality principle extends to money. When cards in a trade have different va
 
 **Three cost layers eliminated simultaneously:**
 
-| Cost | Traditional | CardForum |
-|------|------------|-----------|
-| International shipping | $15–40+ | $0 (local only) |
-| Customs / import tax | 5–25% | $0 (no cross-border goods) |
-| International payment fees | 2–5% | $0 (local settlement) |
+| Cost                       | Traditional | CardForum                  |
+| -------------------------- | ----------- | -------------------------- |
+| International shipping     | $15–40+     | $0 (local only)            |
+| Customs / import tax       | 5–25%       | $0 (no cross-border goods) |
+| International payment fees | 2–5%        | $0 (local settlement)      |
 
 ## Supported TCGs
 
@@ -79,4 +79,4 @@ The locality principle extends to money. When cards in a trade have different va
 
 ## The Vision
 
-A world where a collector in Buenos Aires and a collector in Seoul can trade as easily and cheaply as two people in the same city — because on CardForum, every trade *is* a local trade.
+A world where a collector in Buenos Aires and a collector in Seoul can trade as easily and cheaply as two people in the same city — because on CardForum, every trade _is_ a local trade.

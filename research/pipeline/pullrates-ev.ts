@@ -20,12 +20,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import type { TCG } from "./types";
-import type {
-  BoxLanguage,
-  PullRateReport,
-  EVReport,
-  EVBreakdown,
-} from "./pullrates-types";
+import type { BoxLanguage, PullRateReport, EVReport, EVBreakdown } from "./pullrates-types";
 import { normalizeRarity } from "./pullrates-types";
 import { getAvailableSetCodes } from "./pullrates-box-structures";
 
@@ -38,14 +33,28 @@ const TCG_DIR_MAP: Record<TCG, string> = {
   mtg: "mtg",
 };
 
-function loadPullRateReport(tcg: TCG, setCode: string, language: BoxLanguage): PullRateReport | null {
-  const filePath = path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `pullrates-${setCode}-${language}.json`);
+function loadPullRateReport(
+  tcg: TCG,
+  setCode: string,
+  language: BoxLanguage,
+): PullRateReport | null {
+  const filePath = path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `pullrates-${setCode}-${language}.json`,
+  );
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
 function getOutputPath(tcg: TCG, setCode: string, language: BoxLanguage): string {
-  return path.join(process.cwd(), "research", TCG_DIR_MAP[tcg], `ev-report-${setCode}-${language}.json`);
+  return path.join(
+    process.cwd(),
+    "research",
+    TCG_DIR_MAP[tcg],
+    `ev-report-${setCode}-${language}.json`,
+  );
 }
 
 // ── Price Loading ─────────────────────────────────────────────
@@ -81,8 +90,9 @@ function loadTcgplayerPrices(tcg: TCG, setCode: string): CardPrice[] {
     if (!card.rarity) continue;
 
     // Skip parallel/foil variants for base price calculation
-    const isParallel = card.name?.toLowerCase().includes("(parallel)") ||
-                       card.name?.toLowerCase().includes("alternate art");
+    const isParallel =
+      card.name?.toLowerCase().includes("(parallel)") ||
+      card.name?.toLowerCase().includes("alternate art");
     if (isParallel) continue;
 
     // Use Normal subType price first, fall back to any available price
@@ -201,9 +211,10 @@ function computeEV(
     return null;
   }
 
-  const prices = priceSource === "tcgplayer"
-    ? loadTcgplayerPrices(tcg, setCode)
-    : loadCardmarketPrices(tcg, setCode);
+  const prices =
+    priceSource === "tcgplayer"
+      ? loadTcgplayerPrices(tcg, setCode)
+      : loadCardmarketPrices(tcg, setCode);
 
   if (prices.length === 0) {
     console.error(`  No price data found for ${tcg}/${setCode} from ${priceSource}`);
@@ -224,9 +235,8 @@ function computeEV(
 
   for (const rate of report.rates) {
     const rarityPrices = pricesByRarity[rate.rarity] ?? [];
-    const avgPrice = rarityPrices.length > 0
-      ? rarityPrices.reduce((a, b) => a + b, 0) / rarityPrices.length
-      : 0;
+    const avgPrice =
+      rarityPrices.length > 0 ? rarityPrices.reduce((a, b) => a + b, 0) / rarityPrices.length : 0;
     const medPrice = median(rarityPrices);
 
     const evContribution = rate.perBox * avgPrice;
@@ -263,7 +273,7 @@ function computeEV(
   for (const b of breakdown.filter((b) => b.evContribution > 0)) {
     console.log(
       `    ${b.rarity.padEnd(10)} ${b.expectedPerBox.toFixed(2)} cards × $${(b.avgCardPrice / 100).toFixed(2)} avg = ` +
-      `$${(b.evContribution / 100).toFixed(2)} (${(b.evShare * 100).toFixed(1)}%)`,
+        `$${(b.evContribution / 100).toFixed(2)} (${(b.evShare * 100).toFixed(1)}%)`,
     );
   }
 
@@ -289,23 +299,25 @@ async function main() {
   const tcg = (args.find((a, i) => args[i - 1] === "--tcg") ?? "onepiece") as TCG;
   const setArg = args.find((a, i) => args[i - 1] === "--set");
   const languageArg = (args.find((a, i) => args[i - 1] === "--language") ?? "EN") as BoxLanguage;
-  const priceSource = (args.find((a, i) => args[i - 1] === "--price-source") ?? "tcgplayer") as "tcgplayer" | "cardmarket";
+  const priceSource = (args.find((a, i) => args[i - 1] === "--price-source") ?? "tcgplayer") as
+    | "tcgplayer"
+    | "cardmarket";
   const isAll = args.includes("--all");
   const isDryRun = args.includes("--dry-run");
 
-  const setCodes = isAll
-    ? getAvailableSetCodes(tcg)
-    : setArg
-      ? [setArg]
-      : [];
+  const setCodes = isAll ? getAvailableSetCodes(tcg) : setArg ? [setArg] : [];
 
   if (setCodes.length === 0) {
-    console.error("Usage: --tcg <tcg> --set <code> [--price-source tcgplayer|cardmarket] OR --tcg <tcg> --all");
+    console.error(
+      "Usage: --tcg <tcg> --set <code> [--price-source tcgplayer|cardmarket] OR --tcg <tcg> --all",
+    );
     process.exit(1);
   }
 
   console.log(`\n=== Expected Value Computation ===`);
-  console.log(`TCG: ${tcg}, Sets: ${setCodes.join(", ")}, Prices: ${priceSource}, Language: ${languageArg}`);
+  console.log(
+    `TCG: ${tcg}, Sets: ${setCodes.join(", ")}, Prices: ${priceSource}, Language: ${languageArg}`,
+  );
 
   let successCount = 0;
   let errorCount = 0;
@@ -325,7 +337,9 @@ async function main() {
       fs.writeFileSync(outPath, JSON.stringify(evReport, null, 2));
       console.log(`  → Saved to ${path.relative(process.cwd(), outPath)}`);
     } else {
-      console.log(`  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode, languageArg))}`);
+      console.log(
+        `  [dry-run] Would save to ${path.relative(process.cwd(), getOutputPath(tcg, setCode, languageArg))}`,
+      );
     }
 
     successCount++;

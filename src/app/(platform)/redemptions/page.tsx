@@ -204,9 +204,7 @@ export default function RedemptionsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Redemptions</h1>
-          <p className="mt-1 text-sm text-gray-600">
-            Track your physical card redemption requests
-          </p>
+          <p className="mt-1 text-sm text-gray-600">Track your physical card redemption requests</p>
         </div>
       </div>
       <Suspense fallback={<p className="mt-6 text-gray-500">Loading...</p>}>

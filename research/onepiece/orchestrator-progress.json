@@ -1,0 +1,64 @@
+{
+  "tcg": "onepiece",
+  "startedAt": "2026-02-16T12:20:45.004Z",
+  "lastUpdated": "2026-02-16T12:20:45.007Z",
+  "completedStages": {
+    "discover-cm": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 1
+    },
+    "scrape-cm": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "enrich": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "import-cm": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "discover-tcp": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "fetch-tcp": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "import-tcp": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "verify": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "import-factories": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "refresh-prices": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "trends-prices": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "trends-search": {
+      "completedAt": "2026-02-16T12:20:45.006Z",
+      "durationMs": 0
+    },
+    "trends-correlate": {
+      "completedAt": "2026-02-16T12:20:45.007Z",
+      "durationMs": 0
+    },
+    "trends-report": {
+      "completedAt": "2026-02-16T12:20:45.007Z",
+      "durationMs": 0
+    }
+  },
+  "failedStages": {}
+}

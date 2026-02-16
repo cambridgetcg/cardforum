@@ -42,7 +42,7 @@ export function ConditionBadge({
   return (
     <Badge
       variant={config.variant}
-      className={size === "sm" ? "text-[10px] px-1.5 py-0" : ""}
+      className={size === "sm" ? "px-1.5 py-0 text-[10px]" : ""}
       title={config.title}
     >
       {config.label}

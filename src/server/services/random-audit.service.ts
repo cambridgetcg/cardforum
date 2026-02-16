@@ -103,7 +103,7 @@ export async function submitAuditResult(
     conditionMatchesListing: boolean;
     notes: string;
     confidenceLevel: string;
-  }
+  },
 ) {
   const audit = await db.authenticatorAudit.findUnique({
     where: { id: auditId },

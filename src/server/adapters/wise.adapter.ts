@@ -320,20 +320,14 @@ export async function createAndFundTransfer(
 /**
  * Get transfer status by ID.
  */
-export async function getTransfer(
-  config: WiseConfig,
-  transferId: number,
-): Promise<WiseTransfer> {
+export async function getTransfer(config: WiseConfig, transferId: number): Promise<WiseTransfer> {
   return wiseRequest<WiseTransfer>(config, "GET", `/v1/transfers/${transferId}`);
 }
 
 /**
  * Cancel a transfer.
  */
-export async function cancelTransfer(
-  config: WiseConfig,
-  transferId: number,
-): Promise<void> {
+export async function cancelTransfer(config: WiseConfig, transferId: number): Promise<void> {
   await wiseRequest<void>(config, "PUT", `/v1/transfers/${transferId}/cancel`);
 }
 
@@ -438,8 +432,12 @@ export class WisePayoutAdapter implements IPayoutProvider {
     return { transferId: String(transfer.id) };
   }
 
-  async createTransferFromPayment(_params: import("../ports/payment.port").MarketplaceTransferParams): Promise<import("../ports/payment.port").TransferResult> {
-    throw new Error("Wise does not support marketplace transfers from payment intents. Use Stripe for marketplace settlement.");
+  async createTransferFromPayment(
+    _params: import("../ports/payment.port").MarketplaceTransferParams,
+  ): Promise<import("../ports/payment.port").TransferResult> {
+    throw new Error(
+      "Wise does not support marketplace transfers from payment intents. Use Stripe for marketplace settlement.",
+    );
   }
 }
 
@@ -495,8 +493,8 @@ function buildRecipientDetails(
       // For other currencies, pass through all metadata as details
       // Caller should consult Wise's account-requirements API
       return Object.fromEntries(
-        Object.entries(meta).filter(([k]) =>
-          !["currency", "accountType", "accountHolderName"].includes(k),
+        Object.entries(meta).filter(
+          ([k]) => !["currency", "accountType", "accountHolderName"].includes(k),
         ),
       );
   }
@@ -515,10 +513,7 @@ export function verifyAndParseWebhook(
   signature: string,
   secret: string,
 ): WiseWebhookEvent {
-  const expectedSig = crypto
-    .createHmac("sha256", secret)
-    .update(rawBody)
-    .digest("hex");
+  const expectedSig = crypto.createHmac("sha256", secret).update(rawBody).digest("hex");
 
   if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSig))) {
     throw new Error("Wise webhook signature verification failed");

@@ -173,10 +173,7 @@ export async function releaseFeesToAuthenticators(tradeId: string, tx?: TxClient
  * Forfeit an authenticator's fee when their verification fails.
  * The fee is returned to the escrow pool (not released to authenticator).
  */
-export async function forfeitAuthenticatorFee(
-  assignmentId: string,
-  reason: string
-) {
+export async function forfeitAuthenticatorFee(assignmentId: string, reason: string) {
   const assignment = await db.verificationAssignment.findUnique({
     where: { id: assignmentId },
     include: {
@@ -227,11 +224,7 @@ export async function forfeitAuthenticatorFee(
 /**
  * Record an insurance bond payment for a PREMIUM tier authenticator.
  */
-export async function recordInsuranceBond(
-  authenticatorId: string,
-  userId: string,
-  amount: number
-) {
+export async function recordInsuranceBond(authenticatorId: string, userId: string, amount: number) {
   const auth = await db.authenticator.findUnique({
     where: { id: authenticatorId },
   });

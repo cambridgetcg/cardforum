@@ -125,9 +125,10 @@ export default function AdminDisputeDetailPage() {
   }
 
   const isResolvable = ["OPEN", "INVESTIGATING", "ESCALATED"].includes(dispute.status);
-  const escrowTotal = dispute.trade.escrow?.entries
-    .filter((e) => e.type === "HOLD")
-    .reduce((sum, e) => sum + e.amount, 0) ?? 0;
+  const escrowTotal =
+    dispute.trade.escrow?.entries
+      .filter((e) => e.type === "HOLD")
+      .reduce((sum, e) => sum + e.amount, 0) ?? 0;
 
   return (
     <div className="space-y-6">
@@ -150,7 +151,9 @@ export default function AdminDisputeDetailPage() {
 
       {/* Dispute Info */}
       <Card>
-        <CardHeader><h2 className="font-semibold">Dispute Details</h2></CardHeader>
+        <CardHeader>
+          <h2 className="font-semibold">Dispute Details</h2>
+        </CardHeader>
         <CardContent className="space-y-3">
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
@@ -164,11 +167,16 @@ export default function AdminDisputeDetailPage() {
             <div>
               <span className="text-gray-500">Trade:</span>
               <p>
-                <Link href={`/trades/${dispute.tradeId}`} className="font-mono text-indigo-600 hover:underline">
+                <Link
+                  href={`/trades/${dispute.tradeId}`}
+                  className="font-mono text-indigo-600 hover:underline"
+                >
                   {dispute.tradeId.slice(0, 12)}
-                </Link>
-                {" "}
-                <Badge variant={STATUS_BADGE[dispute.trade.status] ?? "default"} className="text-xs">
+                </Link>{" "}
+                <Badge
+                  variant={STATUS_BADGE[dispute.trade.status] ?? "default"}
+                  className="text-xs"
+                >
                   {dispute.trade.status}
                 </Badge>
               </p>
@@ -188,7 +196,9 @@ export default function AdminDisputeDetailPage() {
           {/* Evidence */}
           {dispute.evidence.length > 0 && (
             <div>
-              <span className="text-sm text-gray-500">Evidence ({dispute.evidence.length} items):</span>
+              <span className="text-sm text-gray-500">
+                Evidence ({dispute.evidence.length} items):
+              </span>
               <div className="mt-2 flex gap-2 overflow-x-auto">
                 {dispute.evidence.map((item, i) =>
                   item.startsWith("data:image/") ? (
@@ -199,8 +209,10 @@ export default function AdminDisputeDetailPage() {
                       className="h-24 w-24 rounded border object-cover"
                     />
                   ) : (
-                    <p key={i} className="rounded bg-gray-50 px-3 py-2 text-xs">{item}</p>
-                  )
+                    <p key={i} className="rounded bg-gray-50 px-3 py-2 text-xs">
+                      {item}
+                    </p>
+                  ),
                 )}
               </div>
             </div>
@@ -210,7 +222,9 @@ export default function AdminDisputeDetailPage() {
 
       {/* Trade Legs */}
       <Card>
-        <CardHeader><h2 className="font-semibold">Trade Legs ({dispute.trade.legs.length})</h2></CardHeader>
+        <CardHeader>
+          <h2 className="font-semibold">Trade Legs ({dispute.trade.legs.length})</h2>
+        </CardHeader>
         <CardContent>
           <div className="space-y-3">
             {dispute.trade.legs.map((leg) => (
@@ -224,13 +238,19 @@ export default function AdminDisputeDetailPage() {
                   <span className="font-medium">
                     {leg.haveListing?.card.name ?? "Unknown card"}
                   </span>
-                  <Badge variant="default" className="text-xs">{leg.status}</Badge>
+                  <Badge variant="default" className="text-xs">
+                    {leg.status}
+                  </Badge>
                 </div>
                 <div className="mt-1 text-gray-500">
                   Region: {leg.region}
                   {leg.haveListing && ` | Value: $${(leg.haveListing.askPrice / 100).toFixed(2)}`}
                   {leg.verification?.authenticator && (
-                    <> | Authenticator: {leg.verification.authenticator.businessName ?? "Unknown"} ({leg.verification.authenticator.tier})</>
+                    <>
+                      {" "}
+                      | Authenticator: {leg.verification.authenticator.businessName ?? "Unknown"} (
+                      {leg.verification.authenticator.tier})
+                    </>
                   )}
                 </div>
                 {leg.id === dispute.tradeLegId && (
@@ -245,7 +265,9 @@ export default function AdminDisputeDetailPage() {
       {/* Escrow */}
       {dispute.trade.escrow && (
         <Card>
-          <CardHeader><h2 className="font-semibold">Escrow</h2></CardHeader>
+          <CardHeader>
+            <h2 className="font-semibold">Escrow</h2>
+          </CardHeader>
           <CardContent>
             <div className="mb-2 text-sm">
               Status: <Badge variant="default">{dispute.trade.escrow.status}</Badge>
@@ -254,7 +276,10 @@ export default function AdminDisputeDetailPage() {
             {dispute.trade.escrow.entries.length > 0 && (
               <div className="space-y-1">
                 {dispute.trade.escrow.entries.map((entry, i) => (
-                  <div key={i} className="flex justify-between rounded bg-gray-50 px-3 py-1 text-xs">
+                  <div
+                    key={i}
+                    className="flex justify-between rounded bg-gray-50 px-3 py-1 text-xs"
+                  >
                     <span>{entry.type}</span>
                     <span>${(entry.amount / 100).toFixed(2)}</span>
                   </div>
@@ -268,12 +293,12 @@ export default function AdminDisputeDetailPage() {
       {/* Resolution Form */}
       {isResolvable && (
         <Card>
-          <CardHeader><h2 className="font-semibold">Resolve Dispute</h2></CardHeader>
+          <CardHeader>
+            <h2 className="font-semibold">Resolve Dispute</h2>
+          </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
-                Resolution
-              </label>
+              <label className="mb-1 block text-sm font-medium text-gray-700">Resolution</label>
               <Select
                 value={resolutionStatus}
                 onChange={(e) => setResolutionStatus(e.target.value)}
@@ -286,11 +311,9 @@ export default function AdminDisputeDetailPage() {
               </Select>
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
-                Notes
-              </label>
+              <label className="mb-1 block text-sm font-medium text-gray-700">Notes</label>
               <textarea
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                 rows={3}
                 placeholder="Explain the resolution decision..."
                 value={resolutionNotes}
@@ -298,10 +321,7 @@ export default function AdminDisputeDetailPage() {
               />
             </div>
             <div className="flex justify-end gap-2">
-              <Button
-                onClick={handleResolve}
-                disabled={submitting || !resolutionNotes.trim()}
-              >
+              <Button onClick={handleResolve} disabled={submitting || !resolutionNotes.trim()}>
                 {submitting ? "Resolving..." : "Resolve Dispute"}
               </Button>
             </div>

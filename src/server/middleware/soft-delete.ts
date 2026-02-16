@@ -84,7 +84,18 @@ export function applySoftDeleteMiddleware(
     }
 
     // Intercept find → add where deletedAt = null
-    if (["findFirst", "findMany", "findUnique", "findFirstOrThrow", "findUniqueOrThrow", "count", "aggregate", "groupBy"].includes(params.action)) {
+    if (
+      [
+        "findFirst",
+        "findMany",
+        "findUnique",
+        "findFirstOrThrow",
+        "findUniqueOrThrow",
+        "count",
+        "aggregate",
+        "groupBy",
+      ].includes(params.action)
+    ) {
       if (!params.args) params.args = {};
       if (params.args.where) {
         // Don't override if deletedAt is explicitly queried

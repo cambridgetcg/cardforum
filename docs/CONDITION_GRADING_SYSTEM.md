@@ -1,6 +1,6 @@
 # Unified Card Condition Grading System — Brainstorm
 
-*A framework for systematic, dimension-based condition assessment for raw trading cards on CardForum.*
+_A framework for systematic, dimension-based condition assessment for raw trading cards on CardForum._
 
 ---
 
@@ -8,14 +8,15 @@
 
 CardForum currently has two disconnected systems for card quality:
 
-| System | Type | Basis | Precision |
-|--------|------|-------|-----------|
-| Raw conditions | Categorical | 5 labels (NM → DMG) | Low — "Near Mint" means different things to different people |
-| Professional grading | Numeric | 1–10 scale per company | High — but requires expensive third-party service ($20–150/card) |
+| System               | Type        | Basis                  | Precision                                                        |
+| -------------------- | ----------- | ---------------------- | ---------------------------------------------------------------- |
+| Raw conditions       | Categorical | 5 labels (NM → DMG)    | Low — "Near Mint" means different things to different people     |
+| Professional grading | Numeric     | 1–10 scale per company | High — but requires expensive third-party service ($20–150/card) |
 
 The raw condition system (`src/types/domain.ts:21-38`) is a **label taxonomy**, not a grading framework. An authenticator looking at a card has no structured guide for distinguishing LP from MP. The assessment is subjective, inconsistent, and non-reproducible.
 
 Professional grading (PSA/BGS/CGC/SGC) solves this with structured dimension scoring, but:
+
 - Costs $20–150+ per card
 - Takes weeks to months
 - Only economical for cards worth $50+
@@ -31,18 +32,19 @@ Professional grading (PSA/BGS/CGC/SGC) solves this with structured dimension sco
 
 PSA evaluates four dimensions and produces a composite integer grade:
 
-| Dimension | Weight | What's Evaluated |
-|-----------|--------|------------------|
-| Centering | Lower | Print alignment front/back (e.g., 60/40 front, 75/25 back) |
-| Corners | High | Sharpness of all 4 corners — whitening, rounding, bending |
-| Edges | High | Edge integrity — whitening, chipping, nicks, peeling |
-| Surface | High | Surface quality — scratches, print defects, staining, holo scratches |
+| Dimension | Weight | What's Evaluated                                                     |
+| --------- | ------ | -------------------------------------------------------------------- |
+| Centering | Lower  | Print alignment front/back (e.g., 60/40 front, 75/25 back)           |
+| Corners   | High   | Sharpness of all 4 corners — whitening, rounding, bending            |
+| Edges     | High   | Edge integrity — whitening, chipping, nicks, peeling                 |
+| Surface   | High   | Surface quality — scratches, print defects, staining, holo scratches |
 
 PSA produces a **single integer** (1–10). The lowest dimension tends to cap the overall grade. A card with PSA-10 corners but PSA-7 centering will land around PSA 8.
 
 ### BGS (Beckett Grading Services) — Sub-Grade Transparency
 
 BGS's key innovation: **visible sub-grades**. Each label shows:
+
 ```
 BGS 9.5 Gem Mint
   Centering:  9.5
@@ -51,11 +53,12 @@ BGS 9.5 Gem Mint
   Surface:    10.0
 ```
 
-This transparency lets collectors understand *why* a card got its grade. A BGS 9 with Surface 10 / Corners 8.5 tells a different story than Surface 8.5 / Corners 10.
+This transparency lets collectors understand _why_ a card got its grade. A BGS 9 with Surface 10 / Corners 8.5 tells a different story than Surface 8.5 / Corners 10.
 
 ### CGC (Certified Guaranty Company) — Edge Innovation
 
 CGC adds a fifth dimension for certain cards: **Eye Appeal**, a holistic "does this card look good?" check. This captures things no single dimension scores:
+
 - Print quality variation (darker/lighter prints within the same print run)
 - Holo pattern quality (some holo patterns are more vivid)
 - Ink coverage consistency
@@ -105,14 +108,15 @@ CGC adds a fifth dimension for certain cards: **Eye Appeal**, a holistic "does t
 
 ### Dimension Weights
 
-| Dimension | Weight | Rationale |
-|-----------|--------|-----------|
-| **Surface (S)** | 30% | Largest visual area, most impactful on appearance and handling wear |
-| **Corners (C)** | 25% | Highly visible, most common wear point, hard to repair |
-| **Edges (E)** | 25% | Visible on all sides, reveals handling history |
-| **Centering (N)** | 20% | Manufacturing defect (not wear), less impactful on condition perception |
+| Dimension         | Weight | Rationale                                                               |
+| ----------------- | ------ | ----------------------------------------------------------------------- |
+| **Surface (S)**   | 30%    | Largest visual area, most impactful on appearance and handling wear     |
+| **Corners (C)**   | 25%    | Highly visible, most common wear point, hard to repair                  |
+| **Edges (E)**     | 25%    | Visible on all sides, reveals handling history                          |
+| **Centering (N)** | 20%    | Manufacturing defect (not wear), less impactful on condition perception |
 
 **Composite formula**:
+
 ```
 CCS = (S × 0.30) + (C × 0.25) + (E × 0.25) + (N × 0.20)
 ```
@@ -130,23 +134,23 @@ IF min(S, C, E, N) < (CCS - 2.0):
 
 Each dimension is scored on a 1.0–10.0 scale in 0.5 increments:
 
-| Score | Label | General Standard |
-|-------|-------|-----------------|
-| **10.0** | Perfect | Flawless under 10x magnification |
-| **9.5** | Gem | Near-flawless, only most minor imperfection under 10x |
-| **9.0** | Mint | Very minor imperfection visible under 10x, invisible to naked eye |
-| **8.5** | NM-MT+ | Minor imperfection visible under 5x magnification |
-| **8.0** | NM-MT | Minor imperfection barely visible to naked eye |
-| **7.5** | NM+ | Slight imperfection visible to naked eye upon close inspection |
-| **7.0** | Near Mint | Noticeable but minor wear visible to naked eye |
-| **6.5** | EX-MT+ | Moderate wear noticeable at arm's length |
-| **6.0** | EX-MT | Clear wear visible at arm's length |
-| **5.5** | EX+ | Significant wear across the dimension |
-| **5.0** | Excellent | Major wear — multiple defects in this dimension |
-| **4.0** | VG-EX | Heavy wear — clearly affected |
-| **3.0** | Very Good | Severe wear — dimension substantially degraded |
-| **2.0** | Good | Extreme wear — dimension heavily compromised |
-| **1.0** | Poor | Destroyed — dimension non-functional |
+| Score    | Label     | General Standard                                                  |
+| -------- | --------- | ----------------------------------------------------------------- |
+| **10.0** | Perfect   | Flawless under 10x magnification                                  |
+| **9.5**  | Gem       | Near-flawless, only most minor imperfection under 10x             |
+| **9.0**  | Mint      | Very minor imperfection visible under 10x, invisible to naked eye |
+| **8.5**  | NM-MT+    | Minor imperfection visible under 5x magnification                 |
+| **8.0**  | NM-MT     | Minor imperfection barely visible to naked eye                    |
+| **7.5**  | NM+       | Slight imperfection visible to naked eye upon close inspection    |
+| **7.0**  | Near Mint | Noticeable but minor wear visible to naked eye                    |
+| **6.5**  | EX-MT+    | Moderate wear noticeable at arm's length                          |
+| **6.0**  | EX-MT     | Clear wear visible at arm's length                                |
+| **5.5**  | EX+       | Significant wear across the dimension                             |
+| **5.0**  | Excellent | Major wear — multiple defects in this dimension                   |
+| **4.0**  | VG-EX     | Heavy wear — clearly affected                                     |
+| **3.0**  | Very Good | Severe wear — dimension substantially degraded                    |
+| **2.0**  | Good      | Extreme wear — dimension heavily compromised                      |
+| **1.0**  | Poor      | Destroyed — dimension non-functional                              |
 
 ---
 
@@ -164,35 +168,35 @@ Corner Assessment Protocol:
 4. If 2+ corners are worse than the worst, subtract 0.5
 ```
 
-| Score | Corner Condition |
-|-------|-----------------|
-| 10.0 | All 4 corners razor-sharp, no whitening under 10x |
-| 9.0 | Virtually perfect, faintest hint of rounding on 1 corner under 10x |
-| 8.0 | Slight rounding on 1–2 corners, no whitening visible to naked eye |
-| 7.0 | Minor rounding on 2–3 corners, very slight whitening possible |
-| 6.0 | Noticeable rounding on all corners, light whitening on 1–2 |
-| 5.0 | Moderate rounding, visible whitening on 2+ corners |
-| 4.0 | Significant rounding, clear whitening, possible minor peeling |
-| 3.0 | Heavy rounding, extensive whitening, possible creasing at corners |
-| 2.0 | Severely rounded/bent, major whitening/peeling |
-| 1.0 | Corners destroyed — missing material, heavy creasing |
+| Score | Corner Condition                                                   |
+| ----- | ------------------------------------------------------------------ |
+| 10.0  | All 4 corners razor-sharp, no whitening under 10x                  |
+| 9.0   | Virtually perfect, faintest hint of rounding on 1 corner under 10x |
+| 8.0   | Slight rounding on 1–2 corners, no whitening visible to naked eye  |
+| 7.0   | Minor rounding on 2–3 corners, very slight whitening possible      |
+| 6.0   | Noticeable rounding on all corners, light whitening on 1–2         |
+| 5.0   | Moderate rounding, visible whitening on 2+ corners                 |
+| 4.0   | Significant rounding, clear whitening, possible minor peeling      |
+| 3.0   | Heavy rounding, extensive whitening, possible creasing at corners  |
+| 2.0   | Severely rounded/bent, major whitening/peeling                     |
+| 1.0   | Corners destroyed — missing material, heavy creasing               |
 
 ### Edges (E) — 25% Weight
 
 Edges are scored by evaluating all four edges. Same worst-edge protocol as corners.
 
-| Score | Edge Condition |
-|-------|---------------|
-| 10.0 | All edges clean and sharp, no whitening under 10x |
-| 9.0 | Virtually perfect, faintest chipping on 1 edge under 10x |
-| 8.0 | Very slight chipping/whitening on 1–2 edges, naked eye clean |
-| 7.0 | Minor whitening on 2–3 edges, slight roughness to touch |
-| 6.0 | Noticeable whitening along edges, minor chipping visible |
-| 5.0 | Moderate whitening/chipping on multiple edges |
-| 4.0 | Significant edge wear, possible delamination starting |
-| 3.0 | Heavy edge wear, visible peeling, roughness |
-| 2.0 | Severe edge damage, delamination present |
-| 1.0 | Edges destroyed — major peeling, missing material |
+| Score | Edge Condition                                               |
+| ----- | ------------------------------------------------------------ |
+| 10.0  | All edges clean and sharp, no whitening under 10x            |
+| 9.0   | Virtually perfect, faintest chipping on 1 edge under 10x     |
+| 8.0   | Very slight chipping/whitening on 1–2 edges, naked eye clean |
+| 7.0   | Minor whitening on 2–3 edges, slight roughness to touch      |
+| 6.0   | Noticeable whitening along edges, minor chipping visible     |
+| 5.0   | Moderate whitening/chipping on multiple edges                |
+| 4.0   | Significant edge wear, possible delamination starting        |
+| 3.0   | Heavy edge wear, visible peeling, roughness                  |
+| 2.0   | Severe edge damage, delamination present                     |
+| 1.0   | Edges destroyed — major peeling, missing material            |
 
 ### Surface (S) — 30% Weight
 
@@ -203,6 +207,7 @@ Surface Score = (Front × 0.60) + (Back × 0.40)
 ```
 
 **Front surface defects** (in order of severity):
+
 - Scratches (micro, light, deep)
 - Print defects (ink dots, rollers marks — factory defects)
 - Staining / discoloration
@@ -211,32 +216,33 @@ Surface Score = (Front × 0.60) + (Back × 0.40)
 - Ink loss / fading
 
 **Back surface defects**:
+
 - Whitening / wear marks
 - Scratches
 - Staining
 - Print quality issues
 
-| Score | Surface Condition |
-|-------|------------------|
-| 10.0 | Flawless front and back under 10x, perfect print quality |
-| 9.0 | Very faint surface wear under 10x, perfect to naked eye |
-| 8.0 | Minor surface marks under 5x, faint haze on back possible |
-| 7.0 | Light scratching visible to naked eye upon close inspection |
-| 6.0 | Moderate scratching or light crease, visible at normal viewing |
-| 5.0 | Significant scratching, possible light staining, minor creasing |
-| 4.0 | Heavy scratching, noticeable creasing or staining |
-| 3.0 | Severe surface damage, multiple creases, ink loss possible |
-| 2.0 | Extreme surface damage, heavy creasing, significant ink loss |
-| 1.0 | Surface destroyed — writing, heavy ink loss, structural damage |
+| Score | Surface Condition                                               |
+| ----- | --------------------------------------------------------------- |
+| 10.0  | Flawless front and back under 10x, perfect print quality        |
+| 9.0   | Very faint surface wear under 10x, perfect to naked eye         |
+| 8.0   | Minor surface marks under 5x, faint haze on back possible       |
+| 7.0   | Light scratching visible to naked eye upon close inspection     |
+| 6.0   | Moderate scratching or light crease, visible at normal viewing  |
+| 5.0   | Significant scratching, possible light staining, minor creasing |
+| 4.0   | Heavy scratching, noticeable creasing or staining               |
+| 3.0   | Severe surface damage, multiple creases, ink loss possible      |
+| 2.0   | Extreme surface damage, heavy creasing, significant ink loss    |
+| 1.0   | Surface destroyed — writing, heavy ink loss, structural damage  |
 
 #### TCG-Specific Surface Considerations
 
-| TCG | Special Surface Factors |
-|-----|------------------------|
-| **Pokemon** | Holo pattern quality on holos/reverse holos; texture clarity on full-arts; "silvering" on edge of holo window |
-| **One Piece** | Manga art panels — check for ink density consistency; alternate art finish quality |
-| **Yu-Gi-Oh!** | Secret rare rainbow pattern integrity; ghost rare visibility; ultra rare foil consistency |
-| **MTG** | Alpha/Beta cards have distinct card stock; foil curling is common but not a surface defect per se; print run variation is wider |
+| TCG           | Special Surface Factors                                                                                                         |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Pokemon**   | Holo pattern quality on holos/reverse holos; texture clarity on full-arts; "silvering" on edge of holo window                   |
+| **One Piece** | Manga art panels — check for ink density consistency; alternate art finish quality                                              |
+| **Yu-Gi-Oh!** | Secret rare rainbow pattern integrity; ghost rare visibility; ultra rare foil consistency                                       |
+| **MTG**       | Alpha/Beta cards have distinct card stock; foil curling is common but not a surface defect per se; print run variation is wider |
 
 ### Centering (N) — 20% Weight
 
@@ -248,22 +254,23 @@ Example: 55/45 front, 60/40 back
 ```
 
 Front centering matters more than back (same 60/40 ratio):
+
 ```
 Centering Score = (Front Score × 0.60) + (Back Score × 0.40)
 ```
 
 | Score | Front Centering | Back Centering |
-|-------|----------------|----------------|
-| 10.0 | 50/50 to 52/48 | 50/50 to 55/45 |
-| 9.0 | 53/47 to 55/45 | 56/44 to 60/40 |
-| 8.0 | 56/44 to 58/42 | 61/39 to 65/35 |
-| 7.0 | 59/41 to 62/38 | 66/34 to 70/30 |
-| 6.0 | 63/37 to 65/35 | 71/29 to 75/25 |
-| 5.0 | 66/34 to 70/30 | 76/24 to 80/20 |
-| 4.0 | 71/29 to 75/25 | 81/19 to 85/15 |
-| 3.0 | 76/24 to 80/20 | 86/14 to 90/10 |
-| 2.0 | 81/19 to 85/15 | 91/9 to 95/5 |
-| 1.0 | 86/14 or worse | 96/4 or worse |
+| ----- | --------------- | -------------- |
+| 10.0  | 50/50 to 52/48  | 50/50 to 55/45 |
+| 9.0   | 53/47 to 55/45  | 56/44 to 60/40 |
+| 8.0   | 56/44 to 58/42  | 61/39 to 65/35 |
+| 7.0   | 59/41 to 62/38  | 66/34 to 70/30 |
+| 6.0   | 63/37 to 65/35  | 71/29 to 75/25 |
+| 5.0   | 66/34 to 70/30  | 76/24 to 80/20 |
+| 4.0   | 71/29 to 75/25  | 81/19 to 85/15 |
+| 3.0   | 76/24 to 80/20  | 86/14 to 90/10 |
+| 2.0   | 81/19 to 85/15  | 91/9 to 95/5   |
+| 1.0   | 86/14 or worse  | 96/4 or worse  |
 
 ---
 
@@ -284,7 +291,7 @@ CCS Score   Condition Tier    PSA Equivalent    Market Perception
 1.0 – 2.5   DMG (Damaged)     Below PSA 1       Bulk or parts value
 ```
 
-**Backward compatibility**: The existing `conditionMeetsMinimum()` function (`domain.ts:56-61`) continues to work unchanged. CCS adds precision *within* each tier — a CCS 9.5 NM and a CCS 9.0 NM are both "NM" but the 9.5 commands a higher price.
+**Backward compatibility**: The existing `conditionMeetsMinimum()` function (`domain.ts:56-61`) continues to work unchanged. CCS adds precision _within_ each tier — a CCS 9.5 NM and a CCS 9.0 NM are both "NM" but the 9.5 commands a higher price.
 
 ### Sub-Tier Notation
 
@@ -424,7 +431,7 @@ $7.50    1    8.5    NM- (8.5)
 $9.00    1    9.5    NM+ (9.5)
 ```
 
-Users can see *why* two NM cards are priced differently.
+Users can see _why_ two NM cards are priced differently.
 
 ### 3. Price Discovery — CCS as Price Predictor
 
@@ -520,15 +527,15 @@ Dimension scores make disagreements specific and resolvable.
 
 A high CCS should predict PSA grade with reasonable accuracy:
 
-| CCS Range | Expected PSA Grade | Confidence |
-|-----------|-------------------|------------|
-| 9.8–10.0 | PSA 10 (Gem Mint) | Low — PSA 10 population control makes this unpredictable |
-| 9.5–9.7 | PSA 9 (Mint) | Medium — centering thresholds may differ |
-| 9.0–9.4 | PSA 8 (NM-MT) | High — well-correlated |
-| 8.0–8.9 | PSA 7 (NM) | High — well-correlated |
-| 7.0–7.9 | PSA 5–6 (EX to EX-MT) | Medium |
-| 5.0–6.9 | PSA 3–4 (VG to VG-EX) | Medium |
-| 3.0–4.9 | PSA 1–2 (PR to Good) | High |
+| CCS Range | Expected PSA Grade    | Confidence                                               |
+| --------- | --------------------- | -------------------------------------------------------- |
+| 9.8–10.0  | PSA 10 (Gem Mint)     | Low — PSA 10 population control makes this unpredictable |
+| 9.5–9.7   | PSA 9 (Mint)          | Medium — centering thresholds may differ                 |
+| 9.0–9.4   | PSA 8 (NM-MT)         | High — well-correlated                                   |
+| 8.0–8.9   | PSA 7 (NM)            | High — well-correlated                                   |
+| 7.0–7.9   | PSA 5–6 (EX to EX-MT) | Medium                                                   |
+| 5.0–6.9   | PSA 3–4 (VG to VG-EX) | Medium                                                   |
+| 3.0–4.9   | PSA 1–2 (PR to Good)  | High                                                     |
 
 **Important caveat**: CCS is NOT a replacement for PSA. PSA grades command market premiums because of the brand, the encapsulation, and the registry. CCS provides structure for raw card assessment — a different value proposition.
 
@@ -552,38 +559,38 @@ PSA Grade: 9
 
 ### Pokemon
 
-| Factor | Adjustment |
-|--------|-----------|
-| Holo scratch sensitivity | Holo cards: Surface sub-score split into Base Surface (50%) and Holo Surface (50%) |
-| Silvering | Edge-adjacent holo bleed counts as Edge defect, not Surface |
-| Full-art texture | Texture clarity scored under Surface; texture wear is a Surface defect |
-| Vintage (WOTC era) | Different card stock — corners are softer by nature; calibrate Corner 10 to WOTC standard |
+| Factor                   | Adjustment                                                                                |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| Holo scratch sensitivity | Holo cards: Surface sub-score split into Base Surface (50%) and Holo Surface (50%)        |
+| Silvering                | Edge-adjacent holo bleed counts as Edge defect, not Surface                               |
+| Full-art texture         | Texture clarity scored under Surface; texture wear is a Surface defect                    |
+| Vintage (WOTC era)       | Different card stock — corners are softer by nature; calibrate Corner 10 to WOTC standard |
 
 ### One Piece
 
-| Factor | Adjustment |
-|--------|-----------|
-| Manga art panels | Panel line clarity scored under Surface |
-| Alternate art | Alternate art finish quality scored under Surface |
+| Factor              | Adjustment                                        |
+| ------------------- | ------------------------------------------------- |
+| Manga art panels    | Panel line clarity scored under Surface           |
+| Alternate art       | Alternate art finish quality scored under Surface |
 | Standard card stock | Modern card stock — same standard across all sets |
 
 ### Yu-Gi-Oh!
 
-| Factor | Adjustment |
-|--------|-----------|
-| Secret rare rainbow | Rainbow pattern integrity scored under Surface |
-| Ghost rare | Ghost visibility scored under Surface — partial visibility is not a defect |
+| Factor               | Adjustment                                                                      |
+| -------------------- | ------------------------------------------------------------------------------- |
+| Secret rare rainbow  | Rainbow pattern integrity scored under Surface                                  |
+| Ghost rare           | Ghost visibility scored under Surface — partial visibility is not a defect      |
 | Different card sizes | OCG (Japanese) cards are slightly different size — centering standards adjusted |
-| 1st Edition stamps | Stamp clarity is not a condition factor (it's a variant, not a defect) |
+| 1st Edition stamps   | Stamp clarity is not a condition factor (it's a variant, not a defect)          |
 
 ### Magic: The Gathering
 
-| Factor | Adjustment |
-|--------|-----------|
-| Alpha/Beta corners | Rounded corners are standard for Alpha — don't penalize |
-| Foil curling | Not a condition defect (reversible) — note but don't score |
-| Print run variation | Darker/lighter prints within same set are not defects |
-| Pack-fresh bowing | New cards often have slight bow — not a defect unless permanent |
+| Factor              | Adjustment                                                      |
+| ------------------- | --------------------------------------------------------------- |
+| Alpha/Beta corners  | Rounded corners are standard for Alpha — don't penalize         |
+| Foil curling        | Not a condition defect (reversible) — note but don't score      |
+| Print run variation | Darker/lighter prints within same set are not defects           |
+| Pack-fresh bowing   | New cards often have slight bow — not a defect unless permanent |
 
 ---
 

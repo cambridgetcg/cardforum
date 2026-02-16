@@ -60,18 +60,19 @@ trade.service.ts
 
 ### 2. Reuse Existing Models Over New Tables
 
-| Need | Solution | Why Not New Table |
-|------|----------|-------------------|
-| Fee metadata | `EscrowEntry.note` JSON | Single use case, evolving schema |
-| Verification result | `VerificationAssignment.result` JSON | Complex nested data, rarely queried |
-| Audit trail | `AuthenticatorAudit.details` JSON | Heterogeneous event types |
-| Aggregate rating | `Authenticator.rating` Float | Computed from source ratings on demand |
+| Need                | Solution                             | Why Not New Table                      |
+| ------------------- | ------------------------------------ | -------------------------------------- |
+| Fee metadata        | `EscrowEntry.note` JSON              | Single use case, evolving schema       |
+| Verification result | `VerificationAssignment.result` JSON | Complex nested data, rarely queried    |
+| Audit trail         | `AuthenticatorAudit.details` JSON    | Heterogeneous event types              |
+| Aggregate rating    | `Authenticator.rating` Float         | Computed from source ratings on demand |
 
 **Insight**: JSON fields in Prisma are powerful for evolving schemas. We can add fields to fee metadata without migrations. The trade-off is weaker query capabilities — acceptable since these fields are read for display, not filtered.
 
 ### 3. Pure Computation Libraries
 
 Rating computation (`lib/authenticator-ratings.ts`) and fee calculation (`lib/authenticator-fees.ts`) are pure functions with zero database access. Benefits:
+
 - Unit testable without mocking Prisma
 - Reusable across services (rating lib used by both rating.service and tier-promotion.service)
 - Clear separation: lib computes, service orchestrates
@@ -138,18 +139,18 @@ final_rating = last_90d_avg × 0.60 + days_91_180_avg × 0.30 + lifetime_avg × 
 
 ### Promotion Thresholds
 
-| Tier | Verifications | Rating | Days Active | Special |
-|------|--------------|--------|-------------|---------|
-| VERIFIED | 50+ | 4.5+ | 90+ | 0 disputes lost |
-| PREMIUM | 200+ | 4.8+ | 180+ | Insurance bond + staff audit |
+| Tier     | Verifications | Rating | Days Active | Special                      |
+| -------- | ------------- | ------ | ----------- | ---------------------------- |
+| VERIFIED | 50+           | 4.5+   | 90+         | 0 disputes lost              |
+| PREMIUM  | 200+          | 4.8+   | 180+        | Insurance bond + staff audit |
 
 ### Value Caps
 
-| Tier | Max Card Value |
-|------|---------------|
-| STANDARD | $100 |
-| VERIFIED | $500 |
-| PREMIUM | Unlimited |
+| Tier     | Max Card Value |
+| -------- | -------------- |
+| STANDARD | $100           |
+| VERIFIED | $500           |
+| PREMIUM  | Unlimited      |
 
 **Design rationale**: Progressive trust. New authenticators handle low-value cards. As they build track record, they unlock higher-value verifications. PREMIUM requires real financial commitment (insurance bond) — skin in the game.
 
@@ -167,11 +168,11 @@ final_rating = last_90d_avg × 0.60 + days_91_180_avg × 0.30 + lifetime_avg × 
 
 ### Frequency by Tier
 
-| Tier | Audit Rate | Rationale |
-|------|-----------|-----------|
-| STANDARD | 1 in 10 (10%) | New, needs more oversight |
-| VERIFIED | 1 in 20 (5%) | Proven, moderate oversight |
-| PREMIUM | 1 in 50 (2%) | Trusted, minimal oversight |
+| Tier     | Audit Rate    | Rationale                  |
+| -------- | ------------- | -------------------------- |
+| STANDARD | 1 in 10 (10%) | New, needs more oversight  |
+| VERIFIED | 1 in 20 (5%)  | Proven, moderate oversight |
+| PREMIUM  | 1 in 50 (2%)  | Trusted, minimal oversight |
 
 ### How It Works
 
@@ -187,11 +188,11 @@ final_rating = last_90d_avg × 0.60 + days_91_180_avg × 0.30 + lifetime_avg × 
 
 ### Per-Verification Fees
 
-| Tier | Base Fee | Platform Share | Authenticator Share |
-|------|----------|---------------|-------------------|
-| STANDARD | $3.00 | $0.90 (30%) | $2.10 |
-| VERIFIED | $4.00 | $1.00 (25%) | $3.00 |
-| PREMIUM | $5.00 | $1.00 (20%) | $4.00 |
+| Tier     | Base Fee | Platform Share | Authenticator Share |
+| -------- | -------- | -------------- | ------------------- |
+| STANDARD | $3.00    | $0.90 (30%)    | $2.10               |
+| VERIFIED | $4.00    | $1.00 (25%)    | $3.00               |
+| PREMIUM  | $5.00    | $1.00 (20%)    | $4.00               |
 
 ### Fee Lifecycle
 
@@ -244,14 +245,14 @@ The wallet system (trade holds, settlements, refunds) was built independently bu
 ```typescript
 // trade.service.ts - transitionTrade()
 if (newStatus === "ESCROWED") {
-  await holdWalletFunds(tradeId);       // Wallet: hold trade value
+  await holdWalletFunds(tradeId); // Wallet: hold trade value
 }
 if (newStatus === "AUTHENTICATING") {
-  await assignForLegs(tradeId);          // Authenticator: assign verifiers
-  await holdVerificationFees(tradeId);   // Authenticator: hold verifier fees
+  await assignForLegs(tradeId); // Authenticator: assign verifiers
+  await holdVerificationFees(tradeId); // Authenticator: hold verifier fees
 }
 if (newStatus === "COMPLETED") {
-  await settleWalletFunds(tradeId);      // Wallet: settle payments
+  await settleWalletFunds(tradeId); // Wallet: settle payments
   await releaseFeesToAuthenticators(tradeId); // Authenticator: pay verifiers
 }
 ```
@@ -295,6 +296,7 @@ Photo approval (for cards > $50) feeds into authenticator verification. The auth
 ## Metrics for Monitoring
 
 Once deployed, track:
+
 - **Verification throughput**: Completions per day per region
 - **Assignment acceptance rate**: % of assignments accepted within 24h
 - **Audit divergence rate**: % of random audits that escalate
@@ -332,9 +334,12 @@ Services import `db` from `@/lib/db.ts` (singleton via `globalForPrisma`). The t
 - Manifested as "No record found for an update" in `$transaction` blocks
 
 **Fix**: `getTestDb()` now returns the service's `db` directly:
+
 ```typescript
 import { db as serviceDb } from "@/lib/db";
-export function getTestDb(): PrismaClient { return serviceDb; }
+export function getTestDb(): PrismaClient {
+  return serviceDb;
+}
 ```
 
 **Lesson**: In integration tests, always share the same database client between test utilities and application code. Multiple PrismaClient instances connecting to the same database can see different data within the same process due to connection pool behavior.
@@ -355,34 +360,34 @@ Without `fileParallelism: false`, test files ran concurrently, causing `deleteMa
 
 ### Schema Discoveries via Test Failures
 
-| Discovery | Found By | Impact |
-|-----------|----------|--------|
-| `Authenticator.isActive` defaults to `true` | Test expected `false` for SUBMITTED | Design choice: gated by `applicationStatus` in service layer, not `isActive` |
-| `Trade` requires `MatchProposal` relation | Prisma validation error in `createTestTrade` | `proposalId` is non-optional on Trade model |
-| `TradeLeg` has no `cardId` field | Prisma validation error | Card reference comes through `haveListing` / `wantListing` relations |
-| `computeTimeWeightedRating([])` returns 5.0 | Test expected 0 | Intentional: new authenticators get default 5.0 rating |
-| `Escrow` is separate from `EscrowEntry` | FK cleanup ordering | Must delete `EscrowEntry` before `Escrow` before `Trade` |
+| Discovery                                   | Found By                                     | Impact                                                                       |
+| ------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------- |
+| `Authenticator.isActive` defaults to `true` | Test expected `false` for SUBMITTED          | Design choice: gated by `applicationStatus` in service layer, not `isActive` |
+| `Trade` requires `MatchProposal` relation   | Prisma validation error in `createTestTrade` | `proposalId` is non-optional on Trade model                                  |
+| `TradeLeg` has no `cardId` field            | Prisma validation error                      | Card reference comes through `haveListing` / `wantListing` relations         |
+| `computeTimeWeightedRating([])` returns 5.0 | Test expected 0                              | Intentional: new authenticators get default 5.0 rating                       |
+| `Escrow` is separate from `EscrowEntry`     | FK cleanup ordering                          | Must delete `EscrowEntry` before `Escrow` before `Trade`                     |
 
 ### Test Coverage Summary
 
-| Area | Tests | What's Covered |
-|------|-------|----------------|
-| **User Registration** | 4 | Create with hashed password, duplicate rejection, optional fields, hash validation |
-| **Credentials Login** | 4 | Valid credentials, wrong password, nonexistent email, OAuth user without password |
-| **Input Validation** | 3 | Password length, email presence |
-| **Application Submit** | 5 | New application, business name, multi-TCG, duplicate rejection (SUBMITTED, ACTIVE) |
-| **Reapplication** | 2 | REVOKED after 30d (allowed), REVOKED within 30d (blocked) |
-| **Application Review** | 4 | Approve compound transition, audit trail, reject, request_info |
-| **Activation** | 2 | APPROVED→ACTIVE, non-APPROVED rejection |
-| **Full Lifecycle** | 1 | Register→Apply→Review→Activate→Dashboard→TierEligibility |
-| **Regions** | 1 | List available regions |
-| **Admin Listing** | 1 | List pending applications with user info |
-| **Rating Computation** | 4 | Weighted score, null components, time-weighted decay, empty default |
-| **Fee Calculation** | 4 | STANDARD/VERIFIED/PREMIUM fees, multi-leg trade fees |
-| **Verification Assignment** | 3 | Successful assignment, no authenticator in region, participant exclusion |
-| **Verification Results** | 3 | Pass (authentic), fail (counterfeit→dispute), unauthorized rejection |
-| **Rating Submission** | 1 | Submit rating with aggregate recalc |
-| **Tier Promotion** | 2 | Insufficient verifications, low rating |
+| Area                        | Tests | What's Covered                                                                     |
+| --------------------------- | ----- | ---------------------------------------------------------------------------------- |
+| **User Registration**       | 4     | Create with hashed password, duplicate rejection, optional fields, hash validation |
+| **Credentials Login**       | 4     | Valid credentials, wrong password, nonexistent email, OAuth user without password  |
+| **Input Validation**        | 3     | Password length, email presence                                                    |
+| **Application Submit**      | 5     | New application, business name, multi-TCG, duplicate rejection (SUBMITTED, ACTIVE) |
+| **Reapplication**           | 2     | REVOKED after 30d (allowed), REVOKED within 30d (blocked)                          |
+| **Application Review**      | 4     | Approve compound transition, audit trail, reject, request_info                     |
+| **Activation**              | 2     | APPROVED→ACTIVE, non-APPROVED rejection                                            |
+| **Full Lifecycle**          | 1     | Register→Apply→Review→Activate→Dashboard→TierEligibility                           |
+| **Regions**                 | 1     | List available regions                                                             |
+| **Admin Listing**           | 1     | List pending applications with user info                                           |
+| **Rating Computation**      | 4     | Weighted score, null components, time-weighted decay, empty default                |
+| **Fee Calculation**         | 4     | STANDARD/VERIFIED/PREMIUM fees, multi-leg trade fees                               |
+| **Verification Assignment** | 3     | Successful assignment, no authenticator in region, participant exclusion           |
+| **Verification Results**    | 3     | Pass (authentic), fail (counterfeit→dispute), unauthorized rejection               |
+| **Rating Submission**       | 1     | Submit rating with aggregate recalc                                                |
+| **Tier Promotion**          | 2     | Insufficient verifications, low rating                                             |
 
 ### Test Isolation Strategy
 

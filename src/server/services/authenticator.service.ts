@@ -27,10 +27,7 @@ import { assertCanApplyAsAuthenticator } from "./kyc.service";
  * Submit an authenticator application.
  * Creates the Authenticator record in SUBMITTED status.
  */
-export async function submitApplication(
-  userId: string,
-  input: AuthenticatorApplicationInput
-) {
+export async function submitApplication(userId: string, input: AuthenticatorApplicationInput) {
   // KYC gate: authenticators must have Enhanced KYC
   await assertCanApplyAsAuthenticator(userId);
 
@@ -42,9 +39,7 @@ export async function submitApplication(
   if (existing) {
     const terminal = ["ACTIVE", "ONBOARDING", "APPROVED", "PENDING_REVIEW", "SUBMITTED"];
     if (terminal.includes(existing.applicationStatus)) {
-      throw new Error(
-        `You already have an application in status: ${existing.applicationStatus}`
-      );
+      throw new Error(`You already have an application in status: ${existing.applicationStatus}`);
     }
     // Allow re-application from REVOKED (after cooldown) or DRAFT
     if (existing.applicationStatus === "REVOKED") {
@@ -134,13 +129,13 @@ export async function getAuthenticatorProfile(userId: string) {
 /**
  * List pending applications (admin endpoint).
  */
-export async function listApplications(
-  status?: AuthenticatorApplicationStatus
-) {
+export async function listApplications(status?: AuthenticatorApplicationStatus) {
   return db.authenticator.findMany({
-    where: status ? { applicationStatus: status } : {
-      applicationStatus: { in: ["SUBMITTED", "PENDING_REVIEW", "MORE_INFO_NEEDED"] },
-    },
+    where: status
+      ? { applicationStatus: status }
+      : {
+          applicationStatus: { in: ["SUBMITTED", "PENDING_REVIEW", "MORE_INFO_NEEDED"] },
+        },
     include: {
       user: { select: { name: true, email: true, image: true, createdAt: true } },
     },
@@ -154,7 +149,7 @@ export async function listApplications(
 export async function reviewApplication(
   authenticatorId: string,
   reviewerId: string,
-  input: ApplicationReviewInput
+  input: ApplicationReviewInput,
 ) {
   const authenticator = await db.authenticator.findUnique({
     where: { id: authenticatorId },
@@ -162,8 +157,7 @@ export async function reviewApplication(
 
   if (!authenticator) throw new Error("Authenticator not found");
 
-  const currentStatus =
-    authenticator.applicationStatus as AuthenticatorApplicationStatus;
+  const currentStatus = authenticator.applicationStatus as AuthenticatorApplicationStatus;
 
   // Map review action to target status
   const targetStatusMap = {
@@ -180,15 +174,11 @@ export async function reviewApplication(
       throw new Error("Cannot transition from SUBMITTED to PENDING_REVIEW");
     }
     if (!canTransitionApplication("PENDING_REVIEW", targetStatus)) {
-      throw new Error(
-        `Cannot transition from PENDING_REVIEW to ${targetStatus}`
-      );
+      throw new Error(`Cannot transition from PENDING_REVIEW to ${targetStatus}`);
     }
   } else {
     if (!canTransitionApplication(currentStatus, targetStatus)) {
-      throw new Error(
-        `Cannot transition from ${currentStatus} to ${targetStatus}`
-      );
+      throw new Error(`Cannot transition from ${currentStatus} to ${targetStatus}`);
     }
   }
 
@@ -263,19 +253,17 @@ export async function assignForLegs(tradeId: string, tx?: TxClient) {
   const assignments = [];
 
   for (const leg of legs) {
-    const cardValue = leg.haveListing?.askPrice
-      ?? leg.gradedHaveListing?.askPrice
-      ?? 0;
+    const cardValue = leg.haveListing?.askPrice ?? leg.gradedHaveListing?.askPrice ?? 0;
 
     const authenticator = await findBestAuthenticator(
       leg.region,
       cardValue,
-      [leg.fromUserId, leg.toUserId] // exclude trade participants
+      [leg.fromUserId, leg.toUserId], // exclude trade participants
     );
 
     if (!authenticator) {
       throw new Error(
-        `No eligible authenticator available in region "${leg.region}" for card value $${(cardValue / 100).toFixed(2)}`
+        `No eligible authenticator available in region "${leg.region}" for card value $${(cardValue / 100).toFixed(2)}`,
       );
     }
 
@@ -311,7 +299,7 @@ export async function assignForLegs(tradeId: string, tx?: TxClient) {
 async function findBestAuthenticator(
   region: string,
   cardValueCents: number,
-  excludeUserIds: string[]
+  excludeUserIds: string[],
 ) {
   // Find eligible tiers based on card value
   const eligibleTiers: AuthenticatorTier[] = [];
@@ -349,8 +337,7 @@ async function findBestAuthenticator(
   };
 
   candidates.sort((a, b) => {
-    const tierDiff =
-      (tierPriority[b.tier] ?? 0) - (tierPriority[a.tier] ?? 0);
+    const tierDiff = (tierPriority[b.tier] ?? 0) - (tierPriority[a.tier] ?? 0);
     if (tierDiff !== 0) return tierDiff;
 
     const ratingDiff = b.rating - a.rating;
@@ -361,9 +348,7 @@ async function findBestAuthenticator(
   });
 
   // Return the best candidate that isn't at capacity
-  return (
-    candidates.find((c) => c.currentLoad < c.maxLoad) ?? null
-  );
+  return candidates.find((c) => c.currentLoad < c.maxLoad) ?? null;
 }
 
 // ─── Verification Result Processing ────────────────────────
@@ -375,7 +360,7 @@ async function findBestAuthenticator(
 export async function submitVerificationResult(
   assignmentId: string,
   authenticatorUserId: string,
-  input: VerificationResultInput
+  input: VerificationResultInput,
 ) {
   const assignment = await db.verificationAssignment.findUnique({
     where: { id: assignmentId },
@@ -399,7 +384,7 @@ export async function submitVerificationResult(
   }
   if (assignment.tradeLeg.status !== "AUTHENTICATING") {
     throw new Error(
-      `Trade leg is in status ${assignment.tradeLeg.status}, expected AUTHENTICATING`
+      `Trade leg is in status ${assignment.tradeLeg.status}, expected AUTHENTICATING`,
     );
   }
 
@@ -447,15 +432,13 @@ export async function submitVerificationResult(
         where: { tradeId: assignment.tradeLeg.tradeId },
       });
       const allVerified = allLegs.every(
-        (leg) =>
-          leg.id === assignment.tradeLegId || leg.status === "VERIFIED"
+        (leg) => leg.id === assignment.tradeLegId || leg.status === "VERIFIED",
       );
 
       if (allVerified) {
         // Advance trade to VERIFIED
         const trade = assignment.tradeLeg.trade;
-        const statusHistory =
-          (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+        const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
         statusHistory.push({
           status: "VERIFIED",
           at: new Date().toISOString(),
@@ -475,8 +458,7 @@ export async function submitVerificationResult(
 
       // Move trade to DISPUTED
       const trade = assignment.tradeLeg.trade;
-      const statusHistory =
-        (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
+      const statusHistory = (trade.statusHistory as Array<{ status: string; at: string }>) ?? [];
       statusHistory.push({
         status: "DISPUTED",
         at: new Date().toISOString(),
@@ -520,10 +502,12 @@ export async function submitVerificationResult(
       const slabResult = await verifySlabForTradeLeg(assignment.tradeLegId);
       // Merge slab result into the verification assignment result
       const existingResult = (result.result ?? {}) as Record<string, unknown>;
-      const mergedResult = JSON.parse(JSON.stringify({
-        ...existingResult,
-        slabVerification: slabResult,
-      }));
+      const mergedResult = JSON.parse(
+        JSON.stringify({
+          ...existingResult,
+          slabVerification: slabResult,
+        }),
+      );
       await db.verificationAssignment.update({
         where: { id: assignmentId },
         data: { result: mergedResult },
@@ -553,10 +537,7 @@ export async function submitVerificationResult(
  * Get a specific verification assignment with full context.
  * Used by the authenticator verification UI.
  */
-export async function getVerificationAssignment(
-  assignmentId: string,
-  authenticatorUserId: string
-) {
+export async function getVerificationAssignment(assignmentId: string, authenticatorUserId: string) {
   const assignment = await db.verificationAssignment.findUnique({
     where: { id: assignmentId },
     include: {

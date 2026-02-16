@@ -22,7 +22,11 @@ import { BrightDataClient, loadBrightDataConfig } from "./brightdata";
 import { scrapeExpansion, generateSummary } from "./scrape-cardmarket";
 import type { ScrapeResult, CardmarketCard } from "./scrape-cardmarket";
 import type { ExpansionEntry } from "./discover-expansions";
-import { inferSetCode as inferSetCodeFromMappings, getMapping } from "./set-code-mappings";
+import {
+  inferSetCode as inferSetCodeFromMappings,
+  getMapping,
+  normalizeSetCode,
+} from "./set-code-mappings";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -50,9 +54,7 @@ function filterExpansions(
   config: ProductFilterConfig,
 ): ExpansionEntry[] {
   // Filter by product type
-  let filtered = allExpansions.filter((e) =>
-    config.productTypes.includes(e.productType),
-  );
+  let filtered = allExpansions.filter((e) => config.productTypes.includes(e.productType));
 
   // Exclude language variants if requested
   if (config.excludeNonEnglish) {
@@ -149,7 +151,8 @@ async function main() {
     // Infer language if not already set
     if (!exp.language) {
       if (exp.name.includes("(Japanese)")) exp.language = "JP";
-      else if (exp.name.includes("(Non-English)") || exp.name.includes("(Non English)")) exp.language = "NEL";
+      else if (exp.name.includes("(Non-English)") || exp.name.includes("(Non English)"))
+        exp.language = "NEL";
       else if (exp.name.includes("(Asia Region Legal)")) exp.language = "AL";
       else if (exp.name.includes("(Pre-Errata)")) exp.language = "PE";
       else exp.language = "EN";
@@ -157,7 +160,7 @@ async function main() {
 
     const officialCode = inferSetCodeFromMappings(exp.name);
     if (officialCode) {
-      const normalized = officialCode.replace(/-/g, "");
+      const normalized = normalizeSetCode(officialCode);
       if (normalized !== exp.code) {
         console.log(`  Code fix: "${exp.name}" ${exp.code} → ${normalized} [${exp.language}]`);
       }
@@ -186,12 +189,16 @@ async function main() {
   };
   const expansions = filterExpansions(languageFiltered, config);
 
-  console.log(`\n=== Scraping ${expansions.length} products (types: ${productTypes.join(", ")}) ===\n`);
+  console.log(
+    `\n=== Scraping ${expansions.length} products (types: ${productTypes.join(", ")}) ===\n`,
+  );
 
   if (dryRun) {
     console.log("DRY RUN: Would scrape the following:");
     for (const exp of expansions.slice(0, 30)) {
-      console.log(`  ${exp.code.padEnd(12)} ${(exp.language || "EN").padEnd(4)} ${exp.name.padEnd(50)} (ID: ${exp.cardmarketId})`);
+      console.log(
+        `  ${exp.code.padEnd(12)} ${(exp.language || "EN").padEnd(4)} ${exp.name.padEnd(50)} (ID: ${exp.cardmarketId})`,
+      );
     }
     if (expansions.length > 30) {
       console.log(`  ... and ${expansions.length - 30} more`);
@@ -213,13 +220,9 @@ async function main() {
     console.log(`\n[${i + 1}/${expansions.length}] ${exp.code} [${lang}] - ${exp.name}`);
 
     try {
-      const result = await scrapeExpansion(
-        client,
-        exp.cardmarketId,
-        exp.code,
-        exp.name,
-        { delayMs: 2000 },
-      );
+      const result = await scrapeExpansion(client, exp.cardmarketId, exp.code, exp.name, {
+        delayMs: 2000,
+      });
 
       // Tag all cards with the language
       for (const card of result.cards) {
@@ -234,7 +237,10 @@ async function main() {
       fs.writeFileSync(jsonPath, JSON.stringify({ ...result, language: lang }, null, 2));
 
       // Save summary
-      const summaryPath = path.join(OUT_DIR, `cardmarket-${exp.code.toLowerCase()}${suffix}-summary.md`);
+      const summaryPath = path.join(
+        OUT_DIR,
+        `cardmarket-${exp.code.toLowerCase()}${suffix}-summary.md`,
+      );
       fs.writeFileSync(summaryPath, generateSummary(result));
 
       console.log(`  ✓ Saved: ${result.totalCards} cards [${lang}]`);

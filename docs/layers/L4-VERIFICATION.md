@@ -7,7 +7,7 @@
 
 ## Purpose
 
-The fungibility axiom assumes a NM Luffy in Tokyo equals a NM Luffy in Berlin. Verification is the layer that *enforces* this assumption. It bridges the gap between digital claims and physical reality through authenticator inspection, AI comparison, and photographic evidence.
+The fungibility axiom assumes a NM Luffy in Tokyo equals a NM Luffy in Berlin. Verification is the layer that _enforces_ this assumption. It bridges the gap between digital claims and physical reality through authenticator inspection, AI comparison, and photographic evidence.
 
 This layer only activates for AUTHENTICATED trades (cross-region). DIRECT trades (local) skip to Layer 6.
 
@@ -15,14 +15,14 @@ This layer only activates for AUTHENTICATED trades (cross-region). DIRECT trades
 
 ## Module Inventory
 
-| Module | File | Lines | Status | Callers |
-|--------|------|-------|--------|---------|
-| Authenticator service | `src/server/services/authenticator.service.ts` | 600 | ACTIVE | 8 files |
-| Photo approval service | `src/server/services/photo-approval.service.ts` | 200 | ACTIVE | 2 files |
-| Condition comparison | `src/server/services/condition-comparison.service.ts` | 194 | ACTIVE | 2 files |
-| AI grading service | `src/server/services/ai-grading.service.ts` | 136 | ACTIVE | 1 file |
-| Slab verification | `src/server/services/slab-verification.service.ts` | 172 | **DORMANT** | 1 file (not triggered) |
-| Random audit | `src/server/services/random-audit.service.ts` | 189 | **DORMANT** | 1 file (not triggered) |
+| Module                 | File                                                  | Lines | Status      | Callers                |
+| ---------------------- | ----------------------------------------------------- | ----- | ----------- | ---------------------- |
+| Authenticator service  | `src/server/services/authenticator.service.ts`        | 600   | ACTIVE      | 8 files                |
+| Photo approval service | `src/server/services/photo-approval.service.ts`       | 200   | ACTIVE      | 2 files                |
+| Condition comparison   | `src/server/services/condition-comparison.service.ts` | 194   | ACTIVE      | 2 files                |
+| AI grading service     | `src/server/services/ai-grading.service.ts`           | 136   | ACTIVE      | 1 file                 |
+| Slab verification      | `src/server/services/slab-verification.service.ts`    | 172   | **DORMANT** | 1 file (not triggered) |
+| Random audit           | `src/server/services/random-audit.service.ts`         | 189   | **DORMANT** | 1 file (not triggered) |
 
 ---
 
@@ -106,11 +106,11 @@ This layer only activates for AUTHENTICATED trades (cross-region). DIRECT trades
 
 ## Authenticator Tier System
 
-| Tier | Value Cap | Promotion Threshold | Rating Req |
-|------|-----------|-------------------|------------|
-| STANDARD | $500 | Entry level | N/A |
-| VERIFIED | $2,000 | 50 verifications | 4.5+ |
-| PREMIUM | $10,000 | 200 verifications | 4.8+ |
+| Tier     | Value Cap | Promotion Threshold | Rating Req |
+| -------- | --------- | ------------------- | ---------- |
+| STANDARD | $500      | Entry level         | N/A        |
+| VERIFIED | $2,000    | 50 verifications    | 4.5+       |
+| PREMIUM  | $10,000   | 200 verifications   | 4.8+       |
 
 Tier caps from `AUTHENTICATOR_TIER_VALUE_CAPS` in constants.
 
@@ -142,6 +142,7 @@ Verification Result
 ## Progress
 
 ### Photo Gate
+
 - [x] Photo approval model and service
 - [x] Threshold-based gating (askPrice ≥ config threshold)
 - [x] Trust exemption (aiAgreementRate ≥ 0.9, count ≥ 5)
@@ -150,6 +151,7 @@ Verification Result
 - [ ] Photo review admin UI (reviewer queue)
 
 ### Authenticator Assignment
+
 - [x] Region + tier + capacity matching
 - [x] Self-verification exclusion
 - [x] Load balancing (prefer least loaded)
@@ -159,6 +161,7 @@ Verification Result
 - [ ] Assignment timeout (auto-reassign if not completed in SLA)
 
 ### Verification Workflow
+
 - [x] Authenticator result submission
 - [x] VERIFIED/FAILED leg status transitions
 - [x] All-legs-verified → trade VERIFIED
@@ -167,6 +170,7 @@ Verification Result
 - [ ] Authenticator dashboard UI (verification queue)
 
 ### Condition Comparison
+
 - [x] AI vs authenticator CCS comparison
 - [x] Per-dimension delta computation
 - [x] Agreement tracking (deltaComposite ≤ 1.0)
@@ -175,6 +179,7 @@ Verification Result
 - [ ] Comparison analytics dashboard
 
 ### Dormant Services
+
 - [ ] **Random audit**: Service implemented (189 lines), needs cron trigger + config activation
 - [ ] **Slab verification**: Service implemented (172 lines), needs BGS/CGC/SGC API keys
 - [ ] **Reserve assignment timeout**: Service implemented (156 lines), needs timeout handler
@@ -183,13 +188,13 @@ Verification Result
 
 ## Gaps
 
-| Gap | Impact | Effort | Blocked By |
-|-----|--------|--------|------------|
-| Random audit not triggered | No probabilistic quality assurance | 4 hours | Config activation |
-| Slab verification dormant | Can't verify graded cards (PSA only) | External | BGS/CGC/SGC APIs |
-| Reserve assignment dormant | No authenticator failover | 1 day | Primary timeout handler |
-| No authenticator dashboard | Authenticators can't see their queue | 2 days | Nothing |
-| Condition comparison partially dormant | Trust loop doesn't fully close | 4 hours | Wire into verification result handler |
+| Gap                                    | Impact                               | Effort   | Blocked By                            |
+| -------------------------------------- | ------------------------------------ | -------- | ------------------------------------- |
+| Random audit not triggered             | No probabilistic quality assurance   | 4 hours  | Config activation                     |
+| Slab verification dormant              | Can't verify graded cards (PSA only) | External | BGS/CGC/SGC APIs                      |
+| Reserve assignment dormant             | No authenticator failover            | 1 day    | Primary timeout handler               |
+| No authenticator dashboard             | Authenticators can't see their queue | 2 days   | Nothing                               |
+| Condition comparison partially dormant | Trust loop doesn't fully close       | 4 hours  | Wire into verification result handler |
 
 ---
 

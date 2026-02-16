@@ -1,27 +1,32 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { db } from "@/lib/db";
 
-// GET /api/marketplace?tcg=...&set=...&query=...&page=1&limit=20
+// GET /api/marketplace?tcg=...&set=...&query=...&language=EN&page=1&limit=20
 // Returns cards that have at least one active listing, with bid/ask aggregates.
 // Aggregates use usdEquivalent for cross-currency comparison.
+// The `language` param partitions the order book (EN, JP). Default: EN.
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const query = searchParams.get("query") ?? "";
   const tcg = searchParams.get("tcg");
   const set = searchParams.get("set");
+  const language = searchParams.get("language") ?? "EN";
   const page = Math.max(1, Number(searchParams.get("page") ?? 1));
   const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") ?? 20)));
   const skip = (page - 1) * limit;
 
-  // 1. Find cardIds that have at least one active listing
+  // 1. Find cardIds that have at least one active listing in the requested language
   const [activeHaveCardIds, activeWantCardIds] = await Promise.all([
     db.haveListing.findMany({
-      where: { isActive: true },
+      where: { isActive: true, language },
       select: { cardId: true },
       distinct: ["cardId"],
     }),
     db.wantListing.findMany({
-      where: { isActive: true },
+      where: {
+        isActive: true,
+        OR: [{ language }, { language: null }],
+      },
       select: { cardId: true },
       distinct: ["cardId"],
     }),
@@ -65,18 +70,21 @@ export async function GET(req: NextRequest) {
 
   const cardIds = cards.map((c) => c.id);
 
-  // 3. Get bid/ask aggregates in USD-equivalent for cross-currency comparison.
-  //    Also aggregate on raw askPrice/bidPrice (legacy, for same-currency orderbooks).
+  // 3. Get bid/ask aggregates in USD-equivalent, filtered by language partition.
   const [askAggs, bidAggs] = await Promise.all([
     db.haveListing.groupBy({
       by: ["cardId"],
-      where: { cardId: { in: cardIds }, isActive: true },
+      where: { cardId: { in: cardIds }, isActive: true, language },
       _min: { askPrice: true, usdEquivalent: true },
       _count: true,
     }),
     db.wantListing.groupBy({
       by: ["cardId"],
-      where: { cardId: { in: cardIds }, isActive: true },
+      where: {
+        cardId: { in: cardIds },
+        isActive: true,
+        OR: [{ language }, { language: null }],
+      },
       _max: { bidPrice: true, usdEquivalent: true },
       _count: true,
     }),

@@ -11,15 +11,12 @@ export async function GET() {
 
   const profile = await getAuthenticatorProfile(session.user.id);
   if (!profile) {
-    return NextResponse.json(
-      { error: "Not an authenticator" },
-      { status: 403 }
-    );
+    return NextResponse.json({ error: "Not an authenticator" }, { status: 403 });
   }
   if (profile.applicationStatus !== "ACTIVE") {
     return NextResponse.json(
       { error: "Authenticator account not active", status: profile.applicationStatus },
-      { status: 403 }
+      { status: 403 },
     );
   }
 

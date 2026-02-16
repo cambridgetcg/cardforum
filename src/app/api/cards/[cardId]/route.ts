@@ -2,10 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { db } from "@/lib/db";
 
 // GET /api/cards/[cardId] — single card with variants and active listings
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: Promise<{ cardId: string }> }
-) {
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ cardId: string }> }) {
   const { cardId } = await params;
 
   const card = await db.card.findUnique({

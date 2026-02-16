@@ -4,6 +4,7 @@
 > through fungibility, for both single-leg (2-user) and multi-leg (N-user) cycles.
 
 **See also**:
+
 - `EXCHANGE_FLOW.md` — Conceptual foundation (two-layer model, value gap problem, kidney exchange analogy)
 - `MATCHING_ENGINE.md` — Algorithm design (graph model, DFS, scoring, packing)
 - `AUTHENTICATOR_DESIGN.md` — Authenticator subsystem (onboarding, tiering, trust architecture)
@@ -93,7 +94,7 @@ Mode: AUTHENTICATED (authenticators handle custody + shipping)
 ### 2.1 Why Fungibility Makes This Work
 
 A Near Mint Charizard in Tokyo is identical to a Near Mint Charizard in London.
-The recipient doesn't care *which* physical copy they receive — only that it meets
+The recipient doesn't care _which_ physical copy they receive — only that it meets
 their specified card identity + condition requirements.
 
 This means the matching engine can **substitute** local equivalents for international
@@ -121,13 +122,13 @@ Source: `cycle-finder.ts:15-26` (ListingEdge), `matching.service.ts:36-61` (edge
 
 ### 2.3 Fungibility Levels and Match Probability
 
-| Level | Description | Example | Match Probability |
-|-------|-------------|---------|-------------------|
-| L1: Exact | Same card, variant, language, condition | EN NM Holo Charizard | Highest |
-| L2: Condition Upgrade | Same card, have is better condition | Want LP, have NM | High |
-| L3: Language Flexible | Same card, any language accepted | Want "any lang" Charizard | Medium-High |
-| L4: Variant Flexible | Same game card, any printing | Want "any" Charizard | High |
-| L5: Not Fungible | Different card or hard mismatch | Charizard != Blastoise | Zero |
+| Level                 | Description                             | Example                   | Match Probability |
+| --------------------- | --------------------------------------- | ------------------------- | ----------------- |
+| L1: Exact             | Same card, variant, language, condition | EN NM Holo Charizard      | Highest           |
+| L2: Condition Upgrade | Same card, have is better condition     | Want LP, have NM          | High              |
+| L3: Language Flexible | Same card, any language accepted        | Want "any lang" Charizard | Medium-High       |
+| L4: Variant Flexible  | Same game card, any printing            | Want "any" Charizard      | High              |
+| L5: Not Fungible      | Different card or hard mismatch         | Charizard != Blastoise    | Zero              |
 
 Users control their fungibility level per listing. The platform should **nudge** toward
 wider fungibility (L3–L4) to maximize match probability, especially in low-liquidity regions.
@@ -260,7 +261,7 @@ EU region:
 ```
 
 **Important nuance**: The matching engine doesn't distinguish "principal" from "counterpart."
-It just finds cycles. A 3-user cross-region *logical* trade manifests as a 6-user *physical*
+It just finds cycles. A 3-user cross-region _logical_ trade manifests as a 6-user _physical_
 cycle where all legs happen to be local. The engine treats all 6 users equally.
 
 ### 4.2 Settlement in Multi-Leg Cycles
@@ -340,20 +341,20 @@ The scorer penalizes regionally imbalanced cycles:
 score -= WEIGHTS.regionalImbalancePenalty * (regionalImbalance / avgTradeValue);
 ```
 
-This *prefers* balanced cycles but doesn't *require* them. Unbalanced cycles
+This _prefers_ balanced cycles but doesn't _require_ them. Unbalanced cycles
 still execute, but rank lower.
 
 Source: `scorer.ts:12-22`, `bridge-builder.ts:125-142`
 
 ### 5.3 Settlement Approaches (by priority)
 
-| Priority | Approach | When | How |
-|----------|----------|------|-----|
-| 1 | **Intra-regional netting** | Balance achievable within region | Debtors pay creditors locally |
-| 2 | **Multi-cycle netting** | Imbalance in one cycle, opposite in another | Net across cycles before settling |
-| 3 | **Platform credit** | Small imbalance (< $10) | Platform absorbs, settles periodically |
-| 4 | **Crypto settlement** | Large imbalance, no local offset | Stablecoin transfer between authenticators |
-| 5 | **Accept the gap** | Tiny imbalance (< $2) | Authenticator fee structure absorbs it |
+| Priority | Approach                   | When                                        | How                                        |
+| -------- | -------------------------- | ------------------------------------------- | ------------------------------------------ |
+| 1        | **Intra-regional netting** | Balance achievable within region            | Debtors pay creditors locally              |
+| 2        | **Multi-cycle netting**    | Imbalance in one cycle, opposite in another | Net across cycles before settling          |
+| 3        | **Platform credit**        | Small imbalance (< $10)                     | Platform absorbs, settles periodically     |
+| 4        | **Crypto settlement**      | Large imbalance, no local offset            | Stablecoin transfer between authenticators |
+| 5        | **Accept the gap**         | Tiny imbalance (< $2)                       | Authenticator fee structure absorbs it     |
 
 ### 5.4 Regional Balance Enforcement Tiers
 
@@ -440,6 +441,7 @@ No JP user HAS Charizard.
 ```
 
 **Resolution options**:
+
 1. **Wait**: Keep listings active, match when liquidity appears
 2. **Facilitate international**: Fall back to direct international shipping
    (authenticators still verify, but cards cross borders)
@@ -470,12 +472,13 @@ US region net: +$20 (US exports $20 of value)
 For v1: The scorer penalizes this cycle (score -= 25 for imbalance).
 If a balanced alternative exists, the engine picks it. If not, this
 cycle still executes and the $20 gap is handled via:
+
 - Platform credit (deferred netting)
 - Wallet-to-wallet within the platform (no actual bank transfer)
 
 **Insight**: When all settlements flow through platform wallets (not bank
 accounts), "international money movement" is actually just database
-operations. The regulatory concern is *withdrawals* to local bank accounts,
+operations. The regulatory concern is _withdrawals_ to local bank accounts,
 not the settlement itself. This simplifies the v1 approach significantly.
 
 **Key realization**: The platform wallet acts as a clearing layer. Users deposit
@@ -496,6 +499,7 @@ The card no longer satisfies the edge constraint.
 ```
 
 **Resolution**:
+
 1. Authenticator reports condition downgrade
 2. Platform checks if downgraded condition still satisfies the want listing
    - If `conditionMeetsMinimum(LP, minCondition)` → still valid, continue
@@ -530,6 +534,7 @@ Atomicity rule: ALL legs must pass. One failure blocks everything.
 ```
 
 **Resolution**:
+
 1. Trade enters DISPUTED
 2. All cards held at authenticators (no one receives anything)
 3. **Option A (Strict)**: Cancel entire trade. Return all cards. Penalize Dave.
@@ -563,6 +568,7 @@ Timeline:
 ```
 
 **Resolution**:
+
 1. Dave forfeits escrow deposit (commitment deposit, not the full trade value)
 2. Trade enters CANCELLED (not DISPUTED — Dave's failure is clear-cut)
 3. Cards already at authenticators are returned to Alice, Bob, Charlie
@@ -592,6 +598,7 @@ Recipient receives LP card, not the NM they were promised.
 ```
 
 **Resolution**:
+
 1. Recipient opens dispute with photo evidence
 2. Platform compares authenticator's verification photos (timestamped at intake)
    with recipient's received-item photos
@@ -607,6 +614,7 @@ handoff: user → authenticator (intake photos), authenticator verification
 This creates an immutable audit trail.
 
 **Prevention**:
+
 - Random audits: second authenticator spot-checks first authenticator's work
 - Insurance bonds: PREMIUM authenticators post bonds covering potential losses
 - Tiering: new authenticators only handle low-value cards until trust is built
@@ -668,6 +676,7 @@ Fungibility breaks — there is no equivalent in Bob's region.
 ```
 
 **Resolution**:
+
 1. Matching engine finds no local-fulfillment cycle
 2. Platform offers **facilitated international shipping**:
    - Alice (JP) has the card, Bob (US) wants it
@@ -700,6 +709,7 @@ Engine matches Alice at $100 — Bob pays more than market.
 ```
 
 **Resolution**:
+
 1. **Price staleness detection**: Flag listings whose askPrice deviates
    significantly from current market price (requires price oracle)
 2. **Notification**: "Your Charizard listing is $30 above current market.
@@ -763,6 +773,7 @@ Auth-Tokyo's processing time: 48h+ (exceeds 3-day timeout).
 ```
 
 **Resolution**:
+
 1. Authenticator capacity tracking: Each authenticator has a `maxConcurrent` limit
 2. Matching engine queries available authenticator capacity before proposing
 3. If no authenticator available in region → match is deferred, not proposed
@@ -774,6 +785,7 @@ the match is worthless. Authenticator availability should be a first-class
 input to the matching engine, not an afterthought.
 
 **Recommendation**: Add authenticator capacity as an edge filter:
+
 ```
 edge.isViable = priceViable AND conditionViable AND authenticatorAvailable(region)
 ```
@@ -797,10 +809,12 @@ Both proposals try to consume Alice's listing.
 
 **Resolution**: The packer (`packer.ts`) should ensure proposals are disjoint
 BEFORE presenting them to users. But even with packing, a race can occur if:
+
 - Packing runs periodically (not real-time)
 - New proposals are generated between packing runs
 
 **Safeguard**: At Trade creation time, verify all listings are still active:
+
 ```
 CREATE TRADE:
   1. Begin transaction
@@ -848,7 +862,7 @@ Source: `bridge-builder.ts:160-199` (isAutoAcceptEligible)
 
 **Insight**: Partial pre-commitment still provides value — it reduces the
 number of users who must take action, improving acceptance probability.
-A 4-user cycle with 2 auto-accept has p = 1.0 * 0.8 * 1.0 * 0.8 = 0.64
+A 4-user cycle with 2 auto-accept has p = 1.0 _ 0.8 _ 1.0 \* 0.8 = 0.64
 instead of 0.8^4 = 0.41.
 
 ---
@@ -872,6 +886,7 @@ Chain through authenticator:
 Source: `chain-finder.ts` (findChains, ChainAnchor)
 
 **Key difference from cycles**:
+
 - Chains are **sequential**, not simultaneous. If Bob ghosts, Alice already
   has her Pikachu. Only Bob's leg fails.
 - Chains don't require zero-sum. The authenticator absorbs value differences
@@ -915,24 +930,24 @@ inventory is available. Fall back to cycles when it's not.
 
 ### Referenced Components — Status
 
-| Component | File | Status |
-|-----------|------|--------|
-| Cycle finder (DFS, depth 6) | `cycle-finder.ts` | IMPLEMENTED |
-| Bridge builder (settlements, regional balance) | `bridge-builder.ts` | IMPLEMENTED |
-| Scorer (multi-criteria) | `scorer.ts` | IMPLEMENTED |
-| Greedy packer (disjoint selection) | `packer.ts` | IMPLEMENTED |
-| Chain finder (authenticator-seeded) | `chain-finder.ts` | IMPLEMENTED |
-| Matching pipeline (orchestration) | `matching.service.ts` | IMPLEMENTED |
-| Trade lifecycle (state machine) | `trade.service.ts` | IMPLEMENTED |
-| Wallet (holds, settlements) | `wallet.service.ts` | IMPLEMENTED |
-| Escrow (hold/release) | `escrow.service.ts` | IMPLEMENTED (but see known bugs) |
-| AI grading pre-check | `ai-grading.service.ts` | IMPLEMENTED |
-| Random audit service | `random-audit.service.ts` | IMPLEMENTED |
-| Auto-accept constraints | `bridge-builder.ts:147-199` | IMPLEMENTED |
-| Regional balance scoring | `scorer.ts:12-22` | IMPLEMENTED (penalty weight = -25) |
-| Price oracle | — | NOT IMPLEMENTED |
-| Multi-currency wallets | — | NOT IMPLEMENTED |
-| ILP solver | — | NOT IMPLEMENTED |
+| Component                                      | File                        | Status                             |
+| ---------------------------------------------- | --------------------------- | ---------------------------------- |
+| Cycle finder (DFS, depth 6)                    | `cycle-finder.ts`           | IMPLEMENTED                        |
+| Bridge builder (settlements, regional balance) | `bridge-builder.ts`         | IMPLEMENTED                        |
+| Scorer (multi-criteria)                        | `scorer.ts`                 | IMPLEMENTED                        |
+| Greedy packer (disjoint selection)             | `packer.ts`                 | IMPLEMENTED                        |
+| Chain finder (authenticator-seeded)            | `chain-finder.ts`           | IMPLEMENTED                        |
+| Matching pipeline (orchestration)              | `matching.service.ts`       | IMPLEMENTED                        |
+| Trade lifecycle (state machine)                | `trade.service.ts`          | IMPLEMENTED                        |
+| Wallet (holds, settlements)                    | `wallet.service.ts`         | IMPLEMENTED                        |
+| Escrow (hold/release)                          | `escrow.service.ts`         | IMPLEMENTED (but see known bugs)   |
+| AI grading pre-check                           | `ai-grading.service.ts`     | IMPLEMENTED                        |
+| Random audit service                           | `random-audit.service.ts`   | IMPLEMENTED                        |
+| Auto-accept constraints                        | `bridge-builder.ts:147-199` | IMPLEMENTED                        |
+| Regional balance scoring                       | `scorer.ts:12-22`           | IMPLEMENTED (penalty weight = -25) |
+| Price oracle                                   | —                           | NOT IMPLEMENTED                    |
+| Multi-currency wallets                         | —                           | NOT IMPLEMENTED                    |
+| ILP solver                                     | —                           | NOT IMPLEMENTED                    |
 
 ### Known Bugs Blocking Clean Execution
 
@@ -941,6 +956,7 @@ inventory is available. Fall back to cycles when it's not.
 - **BUG-3 (Stale Escrow)**: `releaseEscrow()`/`refundEscrow()` are never called on COMPLETED/CANCELLED. Escrow records stay HELD forever. Fix: wire into terminal state transitions.
 
 ### v1 (Now)
+
 1. Fix BUG-1, BUG-2, BUG-3 (prerequisite for any settlement flow)
 2. Add greedy packer to matching pipeline (disjoint cycle selection — see MATCHING_ENGINE.md §4.3)
 3. Regional balance scoring penalty (Approach B — already has -25 weight, tune threshold)
@@ -948,6 +964,7 @@ inventory is available. Fall back to cycles when it's not.
 5. Basic authenticator capacity check before proposing matches
 
 ### v2 (Scale)
+
 1. Multi-cycle netting (Approach C) for regional settlement
 2. Rescue matching (E4 Option B) for failed legs
 3. Streaming mode for 2-user matches
@@ -955,6 +972,7 @@ inventory is available. Fall back to cycles when it's not.
 5. Reputation-gated cycle length (E5 prevention)
 
 ### v3 (Maturity)
+
 1. ILP solver for optimal cycle packing
 2. Price oracle for individual rationality check
 3. Multi-currency wallets
@@ -965,19 +983,19 @@ inventory is available. Fall back to cycles when it's not.
 
 ## 10. Summary of Key Insights
 
-| # | Insight | Section |
-|---|---------|---------|
-| 1 | Minimum 4 participants for cross-region bridge (2 principals + 2 counterparts) | 3.2 |
-| 2 | Platform wallet eliminates FX from matching — settle in cents, convert at boundaries | E7 |
-| 3 | Condition disputes are #1 expected dispute type — CCS + AI pre-check mitigate | E3 |
-| 4 | Authenticator capacity is a hidden matching constraint — should be first-class input | E11 |
-| 5 | Chains are more robust than cycles (sequential vs atomic) but require inventory | E14 |
-| 6 | Partial pre-commitment still improves acceptance probability significantly | E13 |
-| 7 | Listing deactivation must be atomic with Trade creation (double-spend prevention) | E12 |
-| 8 | Non-fungible cards (exclusives, ultra-rares) need facilitated international fallback | E8 |
-| 9 | Regional value imbalance is a database operation when all settlement is in-wallet | E2 |
-| 10 | Rescue matching for failed legs is highest-value v2 feature (saves 3 users' time) | E4 |
-| 11 | Score formula naturally prefers shorter cycles — 2x3 always beats 1x6 | E10 |
-| 12 | Ghost prevention needs progressive trust: new users → short cycles only | E5 |
-| 13 | Authenticator dishonesty mitigated by photo audit trail at every custody transfer | E6 |
-| 14 | Price staleness is a market efficiency problem — heuristic detection until oracle exists | E9 |
+| #   | Insight                                                                                  | Section |
+| --- | ---------------------------------------------------------------------------------------- | ------- |
+| 1   | Minimum 4 participants for cross-region bridge (2 principals + 2 counterparts)           | 3.2     |
+| 2   | Platform wallet eliminates FX from matching — settle in cents, convert at boundaries     | E7      |
+| 3   | Condition disputes are #1 expected dispute type — CCS + AI pre-check mitigate            | E3      |
+| 4   | Authenticator capacity is a hidden matching constraint — should be first-class input     | E11     |
+| 5   | Chains are more robust than cycles (sequential vs atomic) but require inventory          | E14     |
+| 6   | Partial pre-commitment still improves acceptance probability significantly               | E13     |
+| 7   | Listing deactivation must be atomic with Trade creation (double-spend prevention)        | E12     |
+| 8   | Non-fungible cards (exclusives, ultra-rares) need facilitated international fallback     | E8      |
+| 9   | Regional value imbalance is a database operation when all settlement is in-wallet        | E2      |
+| 10  | Rescue matching for failed legs is highest-value v2 feature (saves 3 users' time)        | E4      |
+| 11  | Score formula naturally prefers shorter cycles — 2x3 always beats 1x6                    | E10     |
+| 12  | Ghost prevention needs progressive trust: new users → short cycles only                  | E5      |
+| 13  | Authenticator dishonesty mitigated by photo audit trail at every custody transfer        | E6      |
+| 14  | Price staleness is a market efficiency problem — heuristic detection until oracle exists | E9      |

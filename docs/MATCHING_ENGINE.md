@@ -51,6 +51,7 @@ Source: `src/server/matching/cycle-finder.ts`
 ### 2.2 Edge Construction
 
 An edge from A to B exists when:
+
 1. A has a `HaveListing` for Card X
 2. B has a `WantListing` for Card X
 3. A's condition meets B's `minCondition` threshold
@@ -61,14 +62,14 @@ Source: `src/server/services/matching.service.ts:36-61`
 
 ### 2.3 What the Graph Captures
 
-| Property | Represented? | How |
-|----------|-------------|-----|
-| Card identity | Yes | `cardId` on edge |
-| Condition compatibility | Yes | `conditionMeetsMinimum()` filter |
-| Price viability | Yes | `bidPrice >= askPrice` filter |
-| Geographic location | Partially | `haveRegion`/`wantRegion` on edges, but not used to constrain cycles |
-| User preferences | No | No preference ranking beyond min condition |
-| Time waiting | No | No priority for older listings |
+| Property                | Represented? | How                                                                  |
+| ----------------------- | ------------ | -------------------------------------------------------------------- |
+| Card identity           | Yes          | `cardId` on edge                                                     |
+| Condition compatibility | Yes          | `conditionMeetsMinimum()` filter                                     |
+| Price viability         | Yes          | `bidPrice >= askPrice` filter                                        |
+| Geographic location     | Partially    | `haveRegion`/`wantRegion` on edges, but not used to constrain cycles |
+| User preferences        | No           | No preference ranking beyond min condition                           |
+| Time waiting            | No           | No priority for older listings                                       |
 
 ### 2.4 What the Graph Doesn't Capture (Yet)
 
@@ -101,11 +102,13 @@ Source: `src/server/services/matching.service.ts:36-61`
 **Algorithm**: Bounded DFS from every user node, max depth 6.
 
 **Strengths**:
+
 - Finds all valid cycles exhaustively
 - Deduplicates via sorted edge-key hashing
 - Simple, correct, readable
 
 **Limitations**:
+
 - **O(N^k) worst case** where N = users, k = max depth. With 10,000 users and depth 6, this becomes intractable.
 - **No region pruning** — explores cross-region edges even though fully-local cycles are preferred. A region-first partition would dramatically reduce search space.
 - **No disjoint selection** — finds ALL cycles but doesn't select the optimal non-overlapping subset. Two proposals may share the same listing.
@@ -131,12 +134,14 @@ score = 100                                    (base)
 ```
 
 **What this rewards**:
+
 - Short cycles (2-leg = 80 base, 6-leg = 40 base)
 - Local fulfillment (huge 30-point bonus)
 - Better card conditions
 - Value-balanced trades (less cash exchanged)
 
 **What this ignores** (see §5):
+
 - Fairness (listing age, match difficulty)
 - Individual rationality (is this better than the user's alternative?)
 - Regional settlement balance
@@ -158,12 +163,12 @@ This is **NP-hard** for cycles of length ≥ 3. For length = 2 only, it reduces 
 
 ### 4.3 Practical Approaches
 
-| Approach | Complexity | Quality | Practical? |
-|----------|-----------|---------|------------|
-| Exact ILP | Exponential | Optimal | Only for small instances (< 1000 listings) |
-| Column generation | Iterative, practical | Near-optimal | Yes — standard in kidney exchange |
-| Greedy + local search | O(n log n) | Good | Yes — fast, easy to implement |
-| Greedy only | O(n log n) | Decent | Yes — good for v1 |
+| Approach              | Complexity           | Quality      | Practical?                                 |
+| --------------------- | -------------------- | ------------ | ------------------------------------------ |
+| Exact ILP             | Exponential          | Optimal      | Only for small instances (< 1000 listings) |
+| Column generation     | Iterative, practical | Near-optimal | Yes — standard in kidney exchange          |
+| Greedy + local search | O(n log n)           | Good         | Yes — fast, easy to implement              |
+| Greedy only           | O(n log n)           | Decent       | Yes — good for v1                          |
 
 **Recommended for v1**: Greedy approach — sort proposals by score, iterate, skip any that conflict with already-selected proposals. Simple, fast, good enough.
 
@@ -200,6 +205,7 @@ The **Top Trading Cycles (TTC)** algorithm (Shapley & Scarf, 1974) is the gold s
 4. Remove matched users, repeat
 
 TTC guarantees three properties:
+
 - **Strategy-proof**: No incentive to lie about preferences
 - **Pareto optimal**: No way to improve one user without worsening another
 - **Individually rational**: Everyone gets something ≥ what they started with
@@ -209,6 +215,7 @@ TTC guarantees three properties:
 If users can game the matching engine — posting inflated prices, hiding good cards, timing listings strategically — the platform loses trust. Strategy-proofness means the **dominant strategy is to list honestly**.
 
 The current implementation is NOT strategy-proof. A user could:
+
 - List a card at an inflated askPrice to avoid being matched in "bad" cycles
 - Post a low bidPrice to only match in favorable trades
 - Wait to list until they see what's available (sniping)
@@ -231,12 +238,12 @@ A TTC-inspired approach for CardForum:
 
 **Solutions**:
 
-| Mechanism | How It Works | Tradeoff |
-|-----------|-------------|----------|
-| **Wait-time priority** | Listings that have waited longer get scoring bonus | May select slightly worse cycles to include long-waiters |
-| **Difficulty bonus** | Rare cards / small regions get scoring bonus | Same — trades off global optimality for equity |
-| **Reserved capacity** | X% of matching capacity reserved for hard-to-match | Reduces total throughput |
-| **Extended cycle length** | Allow longer cycles (5-6) for rare matches | More coordination risk, but only way to match some users |
+| Mechanism                 | How It Works                                       | Tradeoff                                                 |
+| ------------------------- | -------------------------------------------------- | -------------------------------------------------------- |
+| **Wait-time priority**    | Listings that have waited longer get scoring bonus | May select slightly worse cycles to include long-waiters |
+| **Difficulty bonus**      | Rare cards / small regions get scoring bonus       | Same — trades off global optimality for equity           |
+| **Reserved capacity**     | X% of matching capacity reserved for hard-to-match | Reduces total throughput                                 |
+| **Extended cycle length** | Allow longer cycles (5-6) for rare matches         | More coordination risk, but only way to match some users |
 
 **Recommended**: Wait-time priority + difficulty bonus in the scorer. Simple, effective, doesn't require architectural changes.
 
@@ -266,6 +273,7 @@ REGIONAL PROBLEM:
 The matching engine should add a constraint: **net settlements within each region should be close to zero**.
 
 This means:
+
 - For every dollar that flows OUT of a user in Region X, a dollar should flow IN to another user in Region X
 - Value imbalances are absorbed within regions, not across them
 
@@ -297,6 +305,7 @@ score -= WEIGHTS.regionalImbalancePenalty × (regionalImbalance / avgTradeValue)
 ### 7.1 The Acceptance Problem
 
 When the engine finds a 4-person cycle, all 4 must accept. If each accepts with 80% probability:
+
 - 2-person: 64% success
 - 3-person: 51% success
 - 4-person: 41% success
@@ -324,6 +333,7 @@ When the engine finds a match fitting these parameters, it executes **without re
 ### 7.3 Impact on Throughput
 
 With pre-commitment:
+
 - Acceptance probability jumps to ~100% for pre-committed participants
 - Longer cycles become viable (6-leg with all pre-committed = ~100%)
 - Matching can run continuously (streaming) instead of batch-and-wait
@@ -348,14 +358,14 @@ The matching engine checks: if ALL participants in a cycle have `autoAccept = tr
 
 ### 8.1 Computational Complexity by Phase
 
-| Phase | Complexity | Bottleneck at |
-|-------|-----------|---------------|
-| Edge building | O(H × W_per_card) | ~100K listings |
-| Cycle finding (DFS, k=6) | O(N^k) worst | ~1K active users |
-| Bridge building | O(cycles × legs) | ~10K cycles |
-| Scoring | O(proposals) | Never |
-| Packing (greedy) | O(proposals × log) | Never |
-| Packing (ILP) | Exponential | ~5K proposals |
+| Phase                    | Complexity         | Bottleneck at    |
+| ------------------------ | ------------------ | ---------------- |
+| Edge building            | O(H × W_per_card)  | ~100K listings   |
+| Cycle finding (DFS, k=6) | O(N^k) worst       | ~1K active users |
+| Bridge building          | O(cycles × legs)   | ~10K cycles      |
+| Scoring                  | O(proposals)       | Never            |
+| Packing (greedy)         | O(proposals × log) | Never            |
+| Packing (ILP)            | Exponential        | ~5K proposals    |
 
 ### 8.2 Optimizations for Scale
 
@@ -376,11 +386,11 @@ DO:
 
 ### 8.3 Batch vs Streaming Architecture
 
-| Mode | When | What |
-|------|------|------|
-| **Streaming** | On new listing | Check for 2-person matches instantly (O(1) index lookup) |
-| **Batch (fast)** | Every 15 min | Run 3-leg cycle finding for recent listings |
-| **Batch (deep)** | Every 6 hours | Full cycle enumeration up to depth 6, ILP packing |
+| Mode             | When           | What                                                     |
+| ---------------- | -------------- | -------------------------------------------------------- |
+| **Streaming**    | On new listing | Check for 2-person matches instantly (O(1) index lookup) |
+| **Batch (fast)** | Every 15 min   | Run 3-leg cycle finding for recent listings              |
+| **Batch (deep)** | Every 6 hours  | Full cycle enumeration up to depth 6, ILP packing        |
 
 Streaming catches the easy wins immediately. Batch finds the complex multi-leg cycles that streaming misses.
 
@@ -390,16 +400,16 @@ Streaming catches the easy wins immediately. Batch finds the complex multi-leg c
 
 ### 9.1 Structural Mapping
 
-| Kidney Exchange | CardForum | Notes |
-|----------------|-----------|-------|
-| Incompatible donor-patient pair | User with have ≠ want | The fundamental unit |
-| Compatibility graph | Listing match graph | Same structure |
-| Cycle = simultaneous surgeries | Cycle = simultaneous trades | Same atomicity requirement |
-| Altruistic donor (no patient) | Authenticator inventory | Breaks deadlocks, seeds cycles |
-| Max cycle length = 3-4 | Max cycle length = 4-6 | Cards are lower stakes → longer cycles viable |
-| UNOS matching algorithm | CardForum matching engine | Same problem class |
-| Sensitized patients (hard to match) | Rare card seekers | Same fairness challenge |
-| Non-directed donor chains | Authenticator-bridged chains | See §9.2 |
+| Kidney Exchange                     | CardForum                    | Notes                                         |
+| ----------------------------------- | ---------------------------- | --------------------------------------------- |
+| Incompatible donor-patient pair     | User with have ≠ want        | The fundamental unit                          |
+| Compatibility graph                 | Listing match graph          | Same structure                                |
+| Cycle = simultaneous surgeries      | Cycle = simultaneous trades  | Same atomicity requirement                    |
+| Altruistic donor (no patient)       | Authenticator inventory      | Breaks deadlocks, seeds cycles                |
+| Max cycle length = 3-4              | Max cycle length = 4-6       | Cards are lower stakes → longer cycles viable |
+| UNOS matching algorithm             | CardForum matching engine    | Same problem class                            |
+| Sensitized patients (hard to match) | Rare card seekers            | Same fairness challenge                       |
+| Non-directed donor chains           | Authenticator-bridged chains | See §9.2                                      |
 
 ### 9.2 Altruistic Chains
 
@@ -439,26 +449,26 @@ This is a powerful mechanism for breaking the cold start problem. Authenticators
 
 ### 10.1 What's Good
 
-| Aspect | Assessment |
-|--------|-----------|
-| Graph model | Clean, correct. Users as nodes, labeled directed edges. |
-| Cycle finding | Correct DFS with deduplication. Depth 6 is reasonable. |
-| Settlement computation | Correct zero-sum calculation. |
-| Scoring | Multi-criteria, reasonable weights. Value balance bonus is smart. |
-| Code quality | Well-structured, readable, good separation of concerns. |
+| Aspect                 | Assessment                                                        |
+| ---------------------- | ----------------------------------------------------------------- |
+| Graph model            | Clean, correct. Users as nodes, labeled directed edges.           |
+| Cycle finding          | Correct DFS with deduplication. Depth 6 is reasonable.            |
+| Settlement computation | Correct zero-sum calculation.                                     |
+| Scoring                | Multi-criteria, reasonable weights. Value balance bonus is smart. |
+| Code quality           | Well-structured, readable, good separation of concerns.           |
 
 ### 10.2 What's Missing
 
-| Gap | Impact | Priority |
-|-----|--------|----------|
-| **No disjoint packing** | Overlapping proposals cause conflicts | HIGH — add greedy packer |
-| **No regional settlement balance** | Value gaps may require international payment | HIGH — add scoring penalty |
-| **No pre-commitment** | Low acceptance rates on longer cycles | MEDIUM — add auto-accept |
-| **No fairness mechanism** | Long-waiters systematically disadvantaged | MEDIUM — add wait-time bonus |
-| **No region-first partitioning** | Won't scale past ~1K users | MEDIUM — partition before DFS |
-| **No streaming mode** | 2-person matches delayed until next batch | LOW for v1 |
-| **No language/edition matching** | Could match JP want with EN have | LOW — data model exists |
-| **No altruistic chains** | Missing powerful cold-start mechanism | LOW for v1 |
+| Gap                                | Impact                                       | Priority                      |
+| ---------------------------------- | -------------------------------------------- | ----------------------------- |
+| **No disjoint packing**            | Overlapping proposals cause conflicts        | HIGH — add greedy packer      |
+| **No regional settlement balance** | Value gaps may require international payment | HIGH — add scoring penalty    |
+| **No pre-commitment**              | Low acceptance rates on longer cycles        | MEDIUM — add auto-accept      |
+| **No fairness mechanism**          | Long-waiters systematically disadvantaged    | MEDIUM — add wait-time bonus  |
+| **No region-first partitioning**   | Won't scale past ~1K users                   | MEDIUM — partition before DFS |
+| **No streaming mode**              | 2-person matches delayed until next batch    | LOW for v1                    |
+| **No language/edition matching**   | Could match JP want with EN have             | LOW — data model exists       |
+| **No altruistic chains**           | Missing powerful cold-start mechanism        | LOW for v1                    |
 
 ### 10.3 The Critical Path
 
@@ -477,31 +487,31 @@ v3:         ILP solver + altruistic chains + fairness mechanisms
 
 ### 11.1 Philosophical
 
-| Question | Options | Tension |
-|----------|---------|---------|
-| **Optimize for what?** | Max matches vs max fairness vs max user satisfaction | Efficiency ↔ equity |
-| **Who controls matching?** | Engine proposes, user accepts vs engine auto-executes | Autonomy ↔ throughput |
-| **How much transparency?** | Show score breakdown vs black-box ranking | Trust ↔ gaming risk |
+| Question                          | Options                                                    | Tension                          |
+| --------------------------------- | ---------------------------------------------------------- | -------------------------------- |
+| **Optimize for what?**            | Max matches vs max fairness vs max user satisfaction       | Efficiency ↔ equity              |
+| **Who controls matching?**        | Engine proposes, user accepts vs engine auto-executes      | Autonomy ↔ throughput            |
+| **How much transparency?**        | Show score breakdown vs black-box ranking                  | Trust ↔ gaming risk              |
 | **Allow international fallback?** | Show "no local match, ship internationally?" vs local-only | Completeness ↔ purity of concept |
 
 ### 11.2 Technical
 
-| Question | Options | Tradeoff |
-|----------|---------|----------|
-| **Cycle length cap** | 3, 4, or 6? | Matches found ↔ coordination risk |
-| **Batch frequency** | 15min, 1h, 6h? | Freshness ↔ compute cost |
-| **Packing algorithm** | Greedy, ILP, or hybrid? | Simplicity ↔ optimality |
-| **Region granularity** | Country, city, or custom zone? | Match density ↔ shipping cost savings |
-| **Price model** | Ask price only, bid-ask, or platform-set? | User control ↔ matching efficiency |
+| Question               | Options                                   | Tradeoff                              |
+| ---------------------- | ----------------------------------------- | ------------------------------------- |
+| **Cycle length cap**   | 3, 4, or 6?                               | Matches found ↔ coordination risk     |
+| **Batch frequency**    | 15min, 1h, 6h?                            | Freshness ↔ compute cost              |
+| **Packing algorithm**  | Greedy, ILP, or hybrid?                   | Simplicity ↔ optimality               |
+| **Region granularity** | Country, city, or custom zone?            | Match density ↔ shipping cost savings |
+| **Price model**        | Ask price only, bid-ask, or platform-set? | User control ↔ matching efficiency    |
 
 ### 11.3 Strategic
 
-| Question | Why It Matters |
-|----------|---------------|
-| **Should authenticators trade?** | If yes, they're liquidity AND infrastructure. Conflicts of interest? |
-| **Should the engine show alternatives?** | "This match saves you $23 vs TCGPlayer" — powerful but requires price oracle |
+| Question                                     | Why It Matters                                                                                                                             |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Should authenticators trade?**             | If yes, they're liquidity AND infrastructure. Conflicts of interest?                                                                       |
+| **Should the engine show alternatives?**     | "This match saves you $23 vs TCGPlayer" — powerful but requires price oracle                                                               |
 | **Should failed matches re-enter the pool?** | If a 4-leg cycle fails because one user ghosts, the other 3 cards are already at authenticators. Can the engine immediately re-match them? |
-| **Should the engine learn?** | Track which cycles succeed/fail and adjust scoring weights. Reinforcement learning on match quality. |
+| **Should the engine learn?**                 | Track which cycles succeed/fail and adjust scoring weights. Reinforcement learning on match quality.                                       |
 
 ---
 
@@ -510,11 +520,13 @@ v3:         ILP solver + altruistic chains + fairness mechanisms
 The matching engine is not a search algorithm. It's not a recommendation system. It's a **clearing house** — an institution that sits between all participants and ensures trades settle fairly, efficiently, and locally.
 
 Its closest relatives are:
+
 - **Kidney exchange algorithms** (cycle-finding in compatibility graphs)
 - **Financial clearing houses** (netting settlements across participants)
 - **Stock exchange matching engines** (order-driven, pre-committed trades)
 
 It inherits principles from all three:
+
 - From kidney exchange: cycle-finding, fairness for hard-to-match, altruistic chains
 - From clearing houses: settlement netting, regional balance, atomic settlement
 - From stock exchanges: pre-commitment, continuous matching, price discovery

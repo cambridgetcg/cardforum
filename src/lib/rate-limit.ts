@@ -82,7 +82,9 @@ class MemoryBackend implements RateLimitBackend {
 // ─── Redis Backend (Upstash) ────────────────────────────
 
 class RedisBackend implements RateLimitBackend {
-  private redis: { eval: (script: string, keys: string[], args: string[]) => Promise<unknown> } | null = null;
+  private redis: {
+    eval: (script: string, keys: string[], args: string[]) => Promise<unknown>;
+  } | null = null;
 
   private async getRedis() {
     if (this.redis) return this.redis;
@@ -133,11 +135,11 @@ class RedisBackend implements RateLimitBackend {
     `;
 
     try {
-      const result = await redis.eval(
+      const result = (await redis.eval(
         script,
         [redisKey],
         [String(cutoff), String(config.maxRequests), String(now), String(windowMs)],
-      ) as [number, number, number];
+      )) as [number, number, number];
 
       return {
         allowed: result[0] === 1,
@@ -182,10 +184,7 @@ export async function checkRateLimit(
  * Use this in middleware where async is inconvenient.
  * Falls back to memory even if Redis is configured.
  */
-export function checkRateLimitSync(
-  key: string,
-  config: RateLimitConfig,
-): RateLimitResult {
+export function checkRateLimitSync(key: string, config: RateLimitConfig): RateLimitResult {
   const now = Date.now();
   const cutoff = now - config.windowMs;
 

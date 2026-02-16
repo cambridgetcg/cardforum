@@ -640,6 +640,7 @@ model HaveListing {
   autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
   autoAcceptRegions        String[]  // regions the user will auto-accept trades from
   isDMM                    Boolean   @default(false) // Created by DMM service, not user
+  preferBalancedSwap       Boolean   @default(false) // user prefers equal-value swaps (netting moat)
 
   // AI grading fields (Phase 1)
   aiGradingResult          Json?     // full Ximilar API response for audit
@@ -652,6 +653,8 @@ model HaveListing {
   sellerOverrodeAI         Boolean   @default(false)
   overrideReason           String?   // seller's explanation for overriding AI (Phase 3)
 
+  lastRefreshedAt          DateTime  @default(now()) // staleness tracking — updated when user or cron refreshes
+
   createdAt                DateTime  @default(now())
   updatedAt                DateTime  @updatedAt
 
@@ -662,8 +665,10 @@ model HaveListing {
   conditionComparisons ConditionComparison[]
 
   @@index([cardId, condition, isActive])
+  @@index([cardId, isActive, language, usdEquivalent])
   @@index([userId])
   @@index([userId, isActive, createdAt])
+  @@index([isActive, lastRefreshedAt])
   @@map("have_listings")
 }
 
@@ -686,6 +691,9 @@ model WantListing {
   autoAcceptMaxCycleLength Int?      // max cycle length the user will auto-accept
   autoAcceptRegions        String[]  // regions the user will auto-accept trades from
   isDMM                    Boolean   @default(false) // Created by DMM service, not user
+  preferBalancedSwap       Boolean   @default(false) // user prefers equal-value swaps (netting moat)
+  lastRefreshedAt          DateTime  @default(now()) // staleness tracking
+
   createdAt                DateTime   @default(now())
   updatedAt                DateTime   @updatedAt
 
@@ -695,8 +703,10 @@ model WantListing {
   tradeLegs TradeLeg[] @relation("WantListingLeg")
 
   @@index([cardId, minCondition, isActive])
+  @@index([cardId, isActive, language, usdEquivalent])
   @@index([userId])
   @@index([userId, isActive, createdAt])
+  @@index([isActive, lastRefreshedAt])
   @@map("want_listings")
 }
 
@@ -721,6 +731,7 @@ model GradedHaveListing {
   autoAcceptMaxGap         Int?
   autoAcceptMaxCycleLength Int?
   autoAcceptRegions        String[]
+  lastRefreshedAt          DateTime       @default(now())
   createdAt                DateTime       @default(now())
   updatedAt                DateTime       @updatedAt
 
@@ -730,6 +741,7 @@ model GradedHaveListing {
 
   @@index([cardId, gradingCompany, grade, isActive])
   @@index([userId])
+  @@index([isActive, lastRefreshedAt])
   @@map("graded_have_listings")
 }
 
@@ -752,6 +764,7 @@ model GradedWantListing {
   autoAcceptMaxGap         Int?
   autoAcceptMaxCycleLength Int?
   autoAcceptRegions        String[]
+  lastRefreshedAt          DateTime        @default(now())
   createdAt                DateTime        @default(now())
   updatedAt                DateTime        @updatedAt
 
@@ -761,6 +774,7 @@ model GradedWantListing {
 
   @@index([cardId, isActive])
   @@index([userId])
+  @@index([isActive, lastRefreshedAt])
   @@map("graded_want_listings")
 }
 
@@ -812,6 +826,7 @@ model SealedHaveListing {
   autoAcceptMaxGap         Int?
   autoAcceptMaxCycleLength Int?
   autoAcceptRegions        String[]
+  lastRefreshedAt          DateTime        @default(now())
   createdAt                DateTime        @default(now())
   updatedAt                DateTime        @updatedAt
 
@@ -821,6 +836,7 @@ model SealedHaveListing {
 
   @@index([sealedProductId, condition, isActive])
   @@index([userId])
+  @@index([isActive, lastRefreshedAt])
   @@map("sealed_have_listings")
 }
 
@@ -842,6 +858,7 @@ model SealedWantListing {
   autoAcceptMaxGap         Int?
   autoAcceptMaxCycleLength Int?
   autoAcceptRegions        String[]
+  lastRefreshedAt          DateTime         @default(now())
   createdAt                DateTime         @default(now())
   updatedAt                DateTime         @updatedAt
 
@@ -851,6 +868,7 @@ model SealedWantListing {
 
   @@index([sealedProductId, minCondition, isActive])
   @@index([userId])
+  @@index([isActive, lastRefreshedAt])
   @@map("sealed_want_listings")
 }
 

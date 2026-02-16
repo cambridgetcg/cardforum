@@ -119,6 +119,17 @@ export interface TcgplayerCard {
   prices: TcgplayerPriceEntry[];
 }
 
+export interface TcgplayerSealedProduct {
+  productId: number;
+  name: string;
+  cleanName: string;
+  url: string;
+  imageUrl: string;
+  groupId: number;
+  setCode: string;
+  prices: TcgplayerPriceEntry[];
+}
+
 export interface TcgplayerScrapeResult {
   tcg: string;
   groupName: string;
@@ -130,6 +141,7 @@ export interface TcgplayerScrapeResult {
   durationMs: number;
   cards: TcgplayerCard[];
   sealedProducts: number;
+  sealedProductData?: TcgplayerSealedProduct[];
   errors: string[];
 }
 
@@ -152,12 +164,10 @@ export function getExtendedDataValue(data: ExtendedDataEntry[], name: string): s
 }
 
 /**
- * Normalize a TCGPlayer abbreviation to a set code.
- * Strips dashes: "OP-01" → "OP01", "ST-21" → "ST21"
+ * Re-export normalizeSetCode from the canonical source.
+ * @see set-code-mappings.ts
  */
-export function normalizeSetCode(abbreviation: string): string {
-  return abbreviation.replace(/-/g, "").toUpperCase();
-}
+export { normalizeSetCode } from "./set-code-mappings";
 
 /**
  * Classify whether a group is supplemental based on its abbreviation.
@@ -194,7 +204,10 @@ export function inferProductType(code: string): string | null {
  * For One Piece: "Normal" → "regular", "Foil" → "parallel"
  * For Pokemon: "Normal" → "regular", "Holofoil" → "holofoil", etc.
  */
-export function mapSubTypeToVersion(subTypeName: string, tcg: string): { version: string; treatment: string } {
+export function mapSubTypeToVersion(
+  subTypeName: string,
+  tcg: string,
+): { version: string; treatment: string } {
   const sub = subTypeName.toLowerCase();
 
   if (tcg === "ONEPIECE") {
@@ -205,7 +218,8 @@ export function mapSubTypeToVersion(subTypeName: string, tcg: string): { version
   if (tcg === "POKEMON") {
     if (sub === "normal") return { version: "", treatment: "regular" };
     if (sub === "holofoil") return { version: "Holofoil", treatment: "holofoil" };
-    if (sub === "reverse holofoil") return { version: "Reverse Holofoil", treatment: "reverse_holofoil" };
+    if (sub === "reverse holofoil")
+      return { version: "Reverse Holofoil", treatment: "reverse_holofoil" };
     if (sub.includes("1st edition")) return { version: "1st Edition", treatment: "regular" };
   }
 
@@ -229,4 +243,18 @@ export function mapSubTypeToVersion(subTypeName: string, tcg: string): { version
  */
 export function isSealed(product: TcgcsvProduct): boolean {
   return !product.extendedData || product.extendedData.length === 0;
+}
+
+/**
+ * Infer sealed product type from product name.
+ */
+export function inferSealedProductType(name: string): string {
+  const lower = name.toLowerCase();
+  if (lower.includes("booster box")) return "BOOSTER_BOX";
+  if (lower.includes("booster pack")) return "BOOSTER_PACK";
+  if (lower.includes("starter deck")) return "STARTER_DECK";
+  if (lower.includes("bundle")) return "BUNDLE";
+  if (lower.includes("collection box")) return "COLLECTION_BOX";
+  if (lower.includes("premium pack")) return "PREMIUM_PACK";
+  return "OTHER";
 }

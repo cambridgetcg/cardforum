@@ -13,10 +13,7 @@ import {
   assertCanTrade,
   assertCanApplyAsAuthenticator,
 } from "@/server/services/kyc.service";
-import {
-  KYC_BASIC_LISTING_CAP_CENTS,
-  KYC_BASIC_TRADE_CAP_CENTS,
-} from "@/lib/constants";
+import { KYC_BASIC_LISTING_CAP_CENTS, KYC_BASIC_TRADE_CAP_CENTS } from "@/lib/constants";
 
 const db = getTestDb();
 
@@ -36,9 +33,9 @@ describe("KYC Gate Enforcement", () => {
     it("blocks UNVERIFIED users from creating any listing", async () => {
       const user = await createTestUser({ email: "gate-list-unv@test.com" });
 
-      await expect(
-        assertCanCreateListing(user.id, 1000),
-      ).rejects.toThrow(/KYC verification required to create listings/);
+      await expect(assertCanCreateListing(user.id, 1000)).rejects.toThrow(
+        /KYC verification required to create listings/,
+      );
     });
 
     it("allows BASIC_VERIFIED user to list under cap", async () => {
@@ -93,9 +90,9 @@ describe("KYC Gate Enforcement", () => {
     it("blocks UNVERIFIED users from trading", async () => {
       const user = await createTestUser({ email: "gate-trade-unv@test.com" });
 
-      await expect(
-        assertCanTrade(user.id, 1000),
-      ).rejects.toThrow(/KYC verification required to trade/);
+      await expect(assertCanTrade(user.id, 1000)).rejects.toThrow(
+        /KYC verification required to trade/,
+      );
     });
 
     it("allows BASIC_VERIFIED user to trade under cap", async () => {
@@ -104,9 +101,7 @@ describe("KYC Gate Enforcement", () => {
 
       await approveBasicKYC(user.id, admin.id);
 
-      await expect(
-        assertCanTrade(user.id, KYC_BASIC_TRADE_CAP_CENTS),
-      ).resolves.toBeUndefined();
+      await expect(assertCanTrade(user.id, KYC_BASIC_TRADE_CAP_CENTS)).resolves.toBeUndefined();
     });
 
     it("blocks BASIC_VERIFIED user from high-value trade", async () => {
@@ -115,9 +110,9 @@ describe("KYC Gate Enforcement", () => {
 
       await approveBasicKYC(user.id, admin.id);
 
-      await expect(
-        assertCanTrade(user.id, KYC_BASIC_TRADE_CAP_CENTS + 1),
-      ).rejects.toThrow(/require Enhanced KYC/);
+      await expect(assertCanTrade(user.id, KYC_BASIC_TRADE_CAP_CENTS + 1)).rejects.toThrow(
+        /require Enhanced KYC/,
+      );
     });
 
     it("allows ENHANCED_VERIFIED user for high-value trade", async () => {
@@ -138,9 +133,9 @@ describe("KYC Gate Enforcement", () => {
     it("blocks UNVERIFIED user from applying", async () => {
       const user = await createTestUser({ email: "gate-auth-unv@test.com" });
 
-      await expect(
-        assertCanApplyAsAuthenticator(user.id),
-      ).rejects.toThrow(/Enhanced KYC verification required/);
+      await expect(assertCanApplyAsAuthenticator(user.id)).rejects.toThrow(
+        /Enhanced KYC verification required/,
+      );
     });
 
     it("blocks BASIC_VERIFIED user from applying", async () => {
@@ -149,9 +144,9 @@ describe("KYC Gate Enforcement", () => {
 
       await approveBasicKYC(user.id, admin.id);
 
-      await expect(
-        assertCanApplyAsAuthenticator(user.id),
-      ).rejects.toThrow(/Enhanced KYC verification required/);
+      await expect(assertCanApplyAsAuthenticator(user.id)).rejects.toThrow(
+        /Enhanced KYC verification required/,
+      );
     });
 
     it("allows ENHANCED_VERIFIED user to apply", async () => {
@@ -160,9 +155,7 @@ describe("KYC Gate Enforcement", () => {
 
       await fullyVerifyUser(user.id, admin.id);
 
-      await expect(
-        assertCanApplyAsAuthenticator(user.id),
-      ).resolves.toBeUndefined();
+      await expect(assertCanApplyAsAuthenticator(user.id)).resolves.toBeUndefined();
     });
   });
 
@@ -177,9 +170,9 @@ describe("KYC Gate Enforcement", () => {
       const { suspendKYC } = await import("@/server/services/kyc.service");
       await suspendKYC(user.id, admin.id, "Investigation");
 
-      await expect(
-        assertCanCreateListing(user.id, 1000),
-      ).rejects.toThrow(/KYC verification required/);
+      await expect(assertCanCreateListing(user.id, 1000)).rejects.toThrow(
+        /KYC verification required/,
+      );
     });
 
     it("blocks SUSPENDED user from trading", async () => {
@@ -190,9 +183,7 @@ describe("KYC Gate Enforcement", () => {
       const { suspendKYC } = await import("@/server/services/kyc.service");
       await suspendKYC(user.id, admin.id, "Investigation");
 
-      await expect(
-        assertCanTrade(user.id, 1000),
-      ).rejects.toThrow(/KYC verification required/);
+      await expect(assertCanTrade(user.id, 1000)).rejects.toThrow(/KYC verification required/);
     });
 
     it("blocks SUSPENDED user from authenticator application", async () => {
@@ -203,9 +194,9 @@ describe("KYC Gate Enforcement", () => {
       const { suspendKYC } = await import("@/server/services/kyc.service");
       await suspendKYC(user.id, admin.id, "Investigation");
 
-      await expect(
-        assertCanApplyAsAuthenticator(user.id),
-      ).rejects.toThrow(/Enhanced KYC verification required/);
+      await expect(assertCanApplyAsAuthenticator(user.id)).rejects.toThrow(
+        /Enhanced KYC verification required/,
+      );
     });
   });
 });

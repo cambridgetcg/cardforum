@@ -1,0 +1,14 @@
+{
+  "expansion": "Starter Deck: Egghead",
+  "expansionId": 6444,
+  "setCode": "ST29",
+  "totalPages": 0,
+  "totalCards": 0,
+  "scrapedAt": "2026-02-16T15:03:21.497Z",
+  "durationMs": 6177,
+  "cards": [],
+  "errors": [
+    "Page 1 failed: Cloudflare challenge not solved"
+  ],
+  "language": "EN"
+}

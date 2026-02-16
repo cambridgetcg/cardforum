@@ -50,15 +50,15 @@ CardForum's payment system is a **platform wallet** backed by Stripe. Users depo
 
 ### Service Map (35 functions across 7 services)
 
-| Service | Functions | Role |
-|---------|-----------|------|
-| `wallet.service.ts` | 12 | Double-entry ledger, balance, holds, settlements |
-| `escrow.service.ts` | 3 | Escrow tracking (create, release, refund) |
-| `fee.service.ts` | 6 | Verification fee lifecycle (hold, debit, refund, release, forfeit, insurance) |
-| `payout.service.ts` | 7 | Stripe Connect transfers + webhook handlers |
-| `stripe.service.ts` | 2 | Checkout sessions for deposits |
-| `connect.service.ts` | 6 | Express account lifecycle |
-| `stripe.ts` (lib) | 1 | Singleton Stripe client |
+| Service              | Functions | Role                                                                          |
+| -------------------- | --------- | ----------------------------------------------------------------------------- |
+| `wallet.service.ts`  | 12        | Double-entry ledger, balance, holds, settlements                              |
+| `escrow.service.ts`  | 3         | Escrow tracking (create, release, refund)                                     |
+| `fee.service.ts`     | 6         | Verification fee lifecycle (hold, debit, refund, release, forfeit, insurance) |
+| `payout.service.ts`  | 7         | Stripe Connect transfers + webhook handlers                                   |
+| `stripe.service.ts`  | 2         | Checkout sessions for deposits                                                |
+| `connect.service.ts` | 6         | Express account lifecycle                                                     |
+| `stripe.ts` (lib)    | 1         | Singleton Stripe client                                                       |
 
 ---
 
@@ -83,6 +83,7 @@ User completes payment on Stripe
 ```
 
 **Key details**:
+
 - Deposit range: $5–$10,000 (`MIN_DEPOSIT_CENTS=500`, `MAX_DEPOSIT_CENTS=1_000_000`)
 - Stripe Customer is lazily created and cached on `User.stripeCustomerId`
 - Payment method: Stripe Checkout (card only, no crypto/bank transfer yet)
@@ -173,6 +174,7 @@ Stripe webhook:
 ```
 
 **Key details**:
+
 - Minimum withdrawal: $10 (`MIN_WITHDRAWAL_CENTS=1000`)
 - Connect Express accounts for automated payouts
 - Immediate rollback on transfer failure (no stuck funds)
@@ -223,6 +225,7 @@ case "checkout.session.completed": {
 **Problem**: If Stripe retries the webhook (network timeout, 5xx response, etc.), `deposit()` runs again with the same `paymentIntentId`. The `WalletTransaction` model has no unique constraint on `stripePaymentIntentId`, so a duplicate row is created and the user's balance is inflated.
 
 **Fix**: Add idempotency check before deposit:
+
 ```typescript
 // Check if we already processed this payment
 const existing = await db.walletTransaction.findFirst({
@@ -269,11 +272,11 @@ This function exists but is never imported or called anywhere. Platform fees are
 
 ## 4. Previously Documented Bugs — Status
 
-| Bug | Description | Status | Evidence |
-|-----|-------------|--------|----------|
-| **BUG-1 DOUBLE FEE** | `settleWalletFunds` calls `captureFee()` causing 2x fees | **FIXED** | `settleWalletFunds` (trade.service.ts:273) only calls `releaseFromTrade` for negative-net users. No `captureFee` call. |
-| **BUG-2 NO ESCROW** | `createEscrow()` never called | **FIXED** | Called at trade.service.ts:115 in ESCROWED transition. |
-| **BUG-3 STALE ESCROW** | `releaseEscrow`/`refundEscrow` never called | **FIXED** | `releaseEscrow` at trade.service.ts:165 (COMPLETED), `refundEscrow` at trade.service.ts:183 (CANCELLED). |
+| Bug                    | Description                                              | Status    | Evidence                                                                                                               |
+| ---------------------- | -------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **BUG-1 DOUBLE FEE**   | `settleWalletFunds` calls `captureFee()` causing 2x fees | **FIXED** | `settleWalletFunds` (trade.service.ts:273) only calls `releaseFromTrade` for negative-net users. No `captureFee` call. |
+| **BUG-2 NO ESCROW**    | `createEscrow()` never called                            | **FIXED** | Called at trade.service.ts:115 in ESCROWED transition.                                                                 |
+| **BUG-3 STALE ESCROW** | `releaseEscrow`/`refundEscrow` never called              | **FIXED** | `releaseEscrow` at trade.service.ts:165 (COMPLETED), `refundEscrow` at trade.service.ts:183 (CANCELLED).               |
 
 All three bugs documented in the 2026-02-14 audit are now resolved.
 
@@ -283,20 +286,20 @@ All three bugs documented in the 2026-02-14 audit are now resolved.
 
 The webhook handler currently processes 5 event types. Several important events are not handled.
 
-| Event | Handled? | Risk if Missing |
-|-------|----------|-----------------|
-| `checkout.session.completed` | Yes | — |
-| `account.updated` | Yes | — |
-| `transfer.paid` | Yes | — |
-| `transfer.failed` | Yes | — |
-| `transfer.reversed` | Yes | — |
-| `payment_intent.payment_failed` | **No** | User sees "processing" but payment failed. No notification. |
-| `charge.dispute.created` | **No** | Stripe chargeback goes unnoticed. Platform loses funds. |
-| `charge.dispute.closed` | **No** | Won disputes aren't tracked. |
-| `charge.refund.updated` | **No** | Refund status changes not reflected. |
-| `account.application.deauthorized` | **No** | User disconnects Stripe but `connectOnboardingComplete` stays true. |
-| `payout.paid` | **No** | Can't confirm Express payout reached user's bank. |
-| `payout.failed` | **No** | Express payout failed at bank level — user not notified. |
+| Event                              | Handled? | Risk if Missing                                                     |
+| ---------------------------------- | -------- | ------------------------------------------------------------------- |
+| `checkout.session.completed`       | Yes      | —                                                                   |
+| `account.updated`                  | Yes      | —                                                                   |
+| `transfer.paid`                    | Yes      | —                                                                   |
+| `transfer.failed`                  | Yes      | —                                                                   |
+| `transfer.reversed`                | Yes      | —                                                                   |
+| `payment_intent.payment_failed`    | **No**   | User sees "processing" but payment failed. No notification.         |
+| `charge.dispute.created`           | **No**   | Stripe chargeback goes unnoticed. Platform loses funds.             |
+| `charge.dispute.closed`            | **No**   | Won disputes aren't tracked.                                        |
+| `charge.refund.updated`            | **No**   | Refund status changes not reflected.                                |
+| `account.application.deauthorized` | **No**   | User disconnects Stripe but `connectOnboardingComplete` stays true. |
+| `payout.paid`                      | **No**   | Can't confirm Express payout reached user's bank.                   |
+| `payout.failed`                    | **No**   | Express payout failed at bank level — user not notified.            |
 
 ### Priority Additions
 
@@ -310,26 +313,26 @@ The webhook handler currently processes 5 event types. Several important events 
 
 ### What's Done Right
 
-| Area | Implementation | Location |
-|------|----------------|----------|
-| Webhook signature verification | `constructEvent(body, signature, secret)` | webhooks/route.ts:22 |
-| Auth on all wallet routes | `auth()` session check | All /api/wallet/* routes |
-| Zod validation on amounts | `depositSchema`, `withdrawalSchema` | validators.ts |
-| Atomic balance updates | Single-transaction read-update-log | wallet.service.ts:27 |
-| Balance-below-zero guard | `if (balanceAfter < 0) throw` | wallet.service.ts:34 |
-| Payout rollback on failure | Immediate `creditBackFailedPayout()` | payout.service.ts:37 |
-| Connect account check | Onboarding + account ID verified | payout.service.ts:16 |
-| Singleton Stripe client | Global caching like PrismaClient | stripe.ts:19 |
+| Area                           | Implementation                            | Location                  |
+| ------------------------------ | ----------------------------------------- | ------------------------- |
+| Webhook signature verification | `constructEvent(body, signature, secret)` | webhooks/route.ts:22      |
+| Auth on all wallet routes      | `auth()` session check                    | All /api/wallet/\* routes |
+| Zod validation on amounts      | `depositSchema`, `withdrawalSchema`       | validators.ts             |
+| Atomic balance updates         | Single-transaction read-update-log        | wallet.service.ts:27      |
+| Balance-below-zero guard       | `if (balanceAfter < 0) throw`             | wallet.service.ts:34      |
+| Payout rollback on failure     | Immediate `creditBackFailedPayout()`      | payout.service.ts:37      |
+| Connect account check          | Onboarding + account ID verified          | payout.service.ts:16      |
+| Singleton Stripe client        | Global caching like PrismaClient          | stripe.ts:19              |
 
 ### Remaining Gaps
 
-| Gap | Risk | Mitigation |
-|-----|------|------------|
-| No rate limiting on deposit/withdraw | User could spam Stripe sessions | Add rate limit middleware |
-| No maximum withdrawal per day/week | Large fraud window | Add configurable daily/weekly limits |
-| No IP or device fingerprinting | Compromised account → drained wallet | Add anomaly detection |
-| No CSRF protection on wallet POST routes | Low (Next.js App Router is resistant) | Cookie-based CSRF tokens for extra safety |
-| `STRIPE_WEBHOOK_SECRET` assumed to exist (`!` assertion) | Runtime crash if missing | Validate env at startup |
+| Gap                                                      | Risk                                  | Mitigation                                |
+| -------------------------------------------------------- | ------------------------------------- | ----------------------------------------- |
+| No rate limiting on deposit/withdraw                     | User could spam Stripe sessions       | Add rate limit middleware                 |
+| No maximum withdrawal per day/week                       | Large fraud window                    | Add configurable daily/weekly limits      |
+| No IP or device fingerprinting                           | Compromised account → drained wallet  | Add anomaly detection                     |
+| No CSRF protection on wallet POST routes                 | Low (Next.js App Router is resistant) | Cookie-based CSRF tokens for extra safety |
+| `STRIPE_WEBHOOK_SECRET` assumed to exist (`!` assertion) | Runtime crash if missing              | Validate env at startup                   |
 
 ---
 
@@ -337,18 +340,18 @@ The webhook handler currently processes 5 event types. Several important events 
 
 All wallet activity is recorded as immutable `WalletTransaction` entries with a `balanceAfter` snapshot:
 
-| Type | Direction | When |
-|------|-----------|------|
-| `DEPOSIT` | + | Stripe Checkout completed |
-| `WITHDRAWAL` | - | User withdraws via Stripe Connect |
-| `WITHDRAWAL_REVERSAL` | + | Failed/reversed payout restored |
-| `TRADE_HOLD` | - | Trade enters ESCROWED |
-| `TRADE_RELEASE` | + | Trade settles (negative-net users) |
-| `TRADE_REFUND` | + | Trade cancelled, hold returned |
-| `TRADE_FEE` | - | **Dead code** — never used |
-| `VERIFICATION_FEE` | - | Authenticated trade enters AUTHENTICATING |
-| `VERIFICATION_FEE_REFUND` | + | Authenticated trade cancelled post-auth |
-| `AUTHENTICATOR_EARN` | + | Authenticator paid on COMPLETED |
+| Type                      | Direction | When                                      |
+| ------------------------- | --------- | ----------------------------------------- |
+| `DEPOSIT`                 | +         | Stripe Checkout completed                 |
+| `WITHDRAWAL`              | -         | User withdraws via Stripe Connect         |
+| `WITHDRAWAL_REVERSAL`     | +         | Failed/reversed payout restored           |
+| `TRADE_HOLD`              | -         | Trade enters ESCROWED                     |
+| `TRADE_RELEASE`           | +         | Trade settles (negative-net users)        |
+| `TRADE_REFUND`            | +         | Trade cancelled, hold returned            |
+| `TRADE_FEE`               | -         | **Dead code** — never used                |
+| `VERIFICATION_FEE`        | -         | Authenticated trade enters AUTHENTICATING |
+| `VERIFICATION_FEE_REFUND` | +         | Authenticated trade cancelled post-auth   |
+| `AUTHENTICATOR_EARN`      | +         | Authenticator paid on COMPLETED           |
 
 ---
 
@@ -356,10 +359,10 @@ All wallet activity is recorded as immutable `WalletTransaction` entries with a 
 
 The system maintains **two parallel tracking mechanisms** for trades:
 
-| System | Purpose | Moves Money? |
-|--------|---------|-------------|
-| **Wallet** (User.walletBalance + WalletTransaction) | Real balance tracking | Yes — atomic updates |
-| **Escrow** (Escrow + EscrowEntry) | Audit trail and status tracking | No — purely informational |
+| System                                              | Purpose                         | Moves Money?              |
+| --------------------------------------------------- | ------------------------------- | ------------------------- |
+| **Wallet** (User.walletBalance + WalletTransaction) | Real balance tracking           | Yes — atomic updates      |
+| **Escrow** (Escrow + EscrowEntry)                   | Audit trail and status tracking | No — purely informational |
 
 **Why both?** The wallet handles actual balance changes. The escrow model provides a single place to track the lifecycle of locked funds (HELD → RELEASED/REFUNDED) and authenticator fee breakdowns, useful for dispute resolution and reporting.
 
@@ -374,6 +377,7 @@ The system maintains **two parallel tracking mechanisms** for trades:
 Express accounts are used for user payouts. Users go through Stripe-hosted onboarding to set up their bank accounts.
 
 **Flow**:
+
 ```
 POST /api/connect/onboard
   → createConnectAccount(userId)    [connect.service.ts:8]
@@ -399,14 +403,15 @@ The `account.updated` webhook may arrive before the user returns from Stripe's o
 
 ### Currently Implemented
 
-| Revenue | Mechanism | Rate/Amount |
-|---------|-----------|-------------|
-| **Platform trading fee** | Implicit in hold/release (unreleased hold portion) | 2.2% of `askPrice` per card sent |
-| **Verification fee share** | `platformShare` from `calculateVerificationFee()` | 20–30% of $3–$5 per card |
+| Revenue                    | Mechanism                                          | Rate/Amount                      |
+| -------------------------- | -------------------------------------------------- | -------------------------------- |
+| **Platform trading fee**   | Implicit in hold/release (unreleased hold portion) | 2.2% of `askPrice` per card sent |
+| **Verification fee share** | `platformShare` from `calculateVerificationFee()`  | 20–30% of $3–$5 per card         |
 
 ### Revenue Tracking Gap
 
 There is no mechanism to **aggregate or report** platform revenue. The revenue exists (implicitly in unreleased holds, explicitly in fee entries), but no service or API computes:
+
 - Total platform revenue over a period
 - Revenue breakdown by source (trading fees vs verification shares)
 - Revenue per trade or per user
@@ -438,6 +443,7 @@ When a Stripe transfer fails (`handleTransferFailed`), the wallet is credited ba
 ### GAP-4: No Chargeback Protection
 
 If a user deposits via Stripe Checkout, trades cards, withdraws, then files a chargeback:
+
 1. Stripe debits the platform
 2. User still has the cards they received
 3. Platform has no automated response
@@ -474,49 +480,49 @@ Authenticators earn money via `creditAuthenticatorEarning()` which credits their
 
 ## 13. Recommendations — Prioritized
 
-| Priority | Action | Effort | Impact |
-|----------|--------|--------|--------|
-| **P0** | Fix deposit idempotency (unique index on `stripePaymentIntentId`) | 1h | Prevents duplicate deposits |
-| **P0** | Add `charge.dispute.created` webhook handler | 2h | Prevents chargeback fraud |
-| **P1** | Fix webhook error handling (return 500 after idempotency fix) | 30m | Ensures failed deposits are retried |
-| **P1** | Add `account.application.deauthorized` handler | 30m | Keeps Connect status accurate |
-| **P1** | Add `GET /api/wallet/payouts` route | 30m | Surfaces payout status to users |
-| **P2** | Delete `captureFee` dead code | 5m | Reduces confusion |
-| **P2** | Add rate limiting to wallet endpoints | 1h | Prevents Stripe session spam |
-| **P2** | Create `reporting.service.ts` for revenue tracking | 2h | Platform insights |
-| **P3** | Add reconciliation job (Stripe vs wallet balances) | 4h | Catches discrepancies |
-| **P3** | Add partial refund support | 3h | Enables per-leg dispute resolution |
-| **P3** | Add payout retry mechanism | 2h | Handles transient failures |
+| Priority | Action                                                            | Effort | Impact                              |
+| -------- | ----------------------------------------------------------------- | ------ | ----------------------------------- |
+| **P0**   | Fix deposit idempotency (unique index on `stripePaymentIntentId`) | 1h     | Prevents duplicate deposits         |
+| **P0**   | Add `charge.dispute.created` webhook handler                      | 2h     | Prevents chargeback fraud           |
+| **P1**   | Fix webhook error handling (return 500 after idempotency fix)     | 30m    | Ensures failed deposits are retried |
+| **P1**   | Add `account.application.deauthorized` handler                    | 30m    | Keeps Connect status accurate       |
+| **P1**   | Add `GET /api/wallet/payouts` route                               | 30m    | Surfaces payout status to users     |
+| **P2**   | Delete `captureFee` dead code                                     | 5m     | Reduces confusion                   |
+| **P2**   | Add rate limiting to wallet endpoints                             | 1h     | Prevents Stripe session spam        |
+| **P2**   | Create `reporting.service.ts` for revenue tracking                | 2h     | Platform insights                   |
+| **P3**   | Add reconciliation job (Stripe vs wallet balances)                | 4h     | Catches discrepancies               |
+| **P3**   | Add partial refund support                                        | 3h     | Enables per-leg dispute resolution  |
+| **P3**   | Add payout retry mechanism                                        | 2h     | Handles transient failures          |
 
 ---
 
 ## Appendix A: File Reference
 
-| File | Path | Purpose |
-|------|------|---------|
-| Stripe client | `src/lib/stripe.ts` | Singleton Stripe SDK instance |
-| Auth fee calc | `src/lib/authenticator-fees.ts` | Tier-based fee breakdown |
-| Constants | `src/lib/constants.ts` | All fee rates, limits, thresholds |
-| Wallet service | `src/server/services/wallet.service.ts` | Core ledger (12 functions) |
-| Escrow service | `src/server/services/escrow.service.ts` | Escrow tracking (3 functions) |
-| Fee service | `src/server/services/fee.service.ts` | Verification fee lifecycle (6 functions) |
-| Payout service | `src/server/services/payout.service.ts` | Stripe transfers (7 functions) |
-| Stripe service | `src/server/services/stripe.service.ts` | Checkout sessions (2 functions) |
-| Connect service | `src/server/services/connect.service.ts` | Express accounts (6 functions) |
-| Trade service | `src/server/services/trade.service.ts` | Orchestrator for all payment flows |
-| Webhook route | `src/app/api/stripe/webhooks/route.ts` | Stripe event handler |
-| Deposit route | `src/app/api/wallet/deposit/route.ts` | POST deposit |
-| Withdraw route | `src/app/api/wallet/withdraw/route.ts` | POST withdraw |
-| Balance route | `src/app/api/wallet/balance/route.ts` | GET balance |
-| History route | `src/app/api/wallet/history/route.ts` | GET transactions |
-| Onboard route | `src/app/api/connect/onboard/route.ts` | POST create Connect account |
-| Status route | `src/app/api/connect/status/route.ts` | GET Connect status |
-| Dashboard route | `src/app/api/connect/dashboard/route.ts` | POST Express dashboard link |
+| File            | Path                                     | Purpose                                  |
+| --------------- | ---------------------------------------- | ---------------------------------------- |
+| Stripe client   | `src/lib/stripe.ts`                      | Singleton Stripe SDK instance            |
+| Auth fee calc   | `src/lib/authenticator-fees.ts`          | Tier-based fee breakdown                 |
+| Constants       | `src/lib/constants.ts`                   | All fee rates, limits, thresholds        |
+| Wallet service  | `src/server/services/wallet.service.ts`  | Core ledger (12 functions)               |
+| Escrow service  | `src/server/services/escrow.service.ts`  | Escrow tracking (3 functions)            |
+| Fee service     | `src/server/services/fee.service.ts`     | Verification fee lifecycle (6 functions) |
+| Payout service  | `src/server/services/payout.service.ts`  | Stripe transfers (7 functions)           |
+| Stripe service  | `src/server/services/stripe.service.ts`  | Checkout sessions (2 functions)          |
+| Connect service | `src/server/services/connect.service.ts` | Express accounts (6 functions)           |
+| Trade service   | `src/server/services/trade.service.ts`   | Orchestrator for all payment flows       |
+| Webhook route   | `src/app/api/stripe/webhooks/route.ts`   | Stripe event handler                     |
+| Deposit route   | `src/app/api/wallet/deposit/route.ts`    | POST deposit                             |
+| Withdraw route  | `src/app/api/wallet/withdraw/route.ts`   | POST withdraw                            |
+| Balance route   | `src/app/api/wallet/balance/route.ts`    | GET balance                              |
+| History route   | `src/app/api/wallet/history/route.ts`    | GET transactions                         |
+| Onboard route   | `src/app/api/connect/onboard/route.ts`   | POST create Connect account              |
+| Status route    | `src/app/api/connect/status/route.ts`    | GET Connect status                       |
+| Dashboard route | `src/app/api/connect/dashboard/route.ts` | POST Express dashboard link              |
 
 ## Appendix B: Environment Variables
 
-| Variable | Required | Purpose |
-|----------|----------|---------|
-| `STRIPE_SECRET_KEY` | Yes | Server-side Stripe API key |
-| `STRIPE_WEBHOOK_SECRET` | Yes | Webhook signature verification |
-| `NEXT_PUBLIC_APP_URL` | No (defaults to localhost:3000) | Checkout return/cancel URLs |
+| Variable                | Required                        | Purpose                        |
+| ----------------------- | ------------------------------- | ------------------------------ |
+| `STRIPE_SECRET_KEY`     | Yes                             | Server-side Stripe API key     |
+| `STRIPE_WEBHOOK_SECRET` | Yes                             | Webhook signature verification |
+| `NEXT_PUBLIC_APP_URL`   | No (defaults to localhost:3000) | Checkout return/cancel URLs    |

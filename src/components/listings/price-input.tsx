@@ -34,13 +34,11 @@ export function PriceInput({
         {type === "have" ? "Your Price" : "Max Price"}
       </label>
       <p className="mt-0.5 text-xs text-gray-500">
-        {type === "have"
-          ? "Minimum you want for this card"
-          : "Maximum you'll pay for this card"}
+        {type === "have" ? "Minimum you want for this card" : "Maximum you'll pay for this card"}
       </p>
       <div className="mt-1.5 flex items-center gap-2">
         <div className="relative flex-1">
-          <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-500">
+          <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-sm text-gray-500">
             {currencyInfo?.symbol ?? currency}
           </span>
           <Input
@@ -58,7 +56,7 @@ export function PriceInput({
         <select
           value={currency}
           onChange={(e) => onCurrencyChange(e.target.value as SupportedCurrency)}
-          className="h-10 rounded-lg border border-gray-300 bg-white px-2 text-sm text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
+          className="h-10 rounded-lg border border-gray-300 bg-white px-2 text-sm text-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
         >
           {SUPPORTED_CURRENCIES.map((c) => (
             <option key={c} value={c}>

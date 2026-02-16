@@ -46,9 +46,7 @@ export function DeliveryConfirmation({
   return (
     <div className="flex items-center justify-between rounded-lg border border-green-200 bg-green-50 px-3 py-2">
       <div>
-        <p className="text-sm font-medium text-green-800">
-          Did you receive {cardName}?
-        </p>
+        <p className="text-sm font-medium text-green-800">Did you receive {cardName}?</p>
         <p className="text-xs text-green-600">
           Confirming delivery will complete this leg of the trade
         </p>

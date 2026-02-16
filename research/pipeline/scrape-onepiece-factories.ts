@@ -63,11 +63,26 @@ const OP_SETS: OPSet[] = [
   { code: "OP02", name: "Paramount War", jpRelease: "2022-11-04", enRelease: "2023-03-10" },
   { code: "OP03", name: "Pillars of Strength", jpRelease: "2023-01-27", enRelease: "2023-06-30" },
   { code: "OP04", name: "Kingdoms of Intrigue", jpRelease: "2023-04-28", enRelease: "2023-09-22" },
-  { code: "OP05", name: "Awakening of the New Era", jpRelease: "2023-08-25", enRelease: "2023-12-08" },
+  {
+    code: "OP05",
+    name: "Awakening of the New Era",
+    jpRelease: "2023-08-25",
+    enRelease: "2023-12-08",
+  },
   { code: "OP06", name: "Wings of the Captain", jpRelease: "2023-11-25", enRelease: "2024-03-08" },
-  { code: "OP07", name: "500 Years into the Future", jpRelease: "2024-02-24", enRelease: "2024-06-28" },
+  {
+    code: "OP07",
+    name: "500 Years into the Future",
+    jpRelease: "2024-02-24",
+    enRelease: "2024-06-28",
+  },
   { code: "OP08", name: "Two Legends", jpRelease: "2024-05-25", enRelease: "2024-09-13" },
-  { code: "OP09", name: "Emperors in the New World", jpRelease: "2024-08-31", enRelease: "2024-12-06" },
+  {
+    code: "OP09",
+    name: "Emperors in the New World",
+    jpRelease: "2024-08-31",
+    enRelease: "2024-12-06",
+  },
   { code: "OP10", name: "Royal Blood", jpRelease: "2024-11-30" },
 ];
 
@@ -75,8 +90,18 @@ const OP_SETS: OPSet[] = [
 const OP_STARTERS: OPSet[] = [
   { code: "ST01", name: "Straw Hat Crew", jpRelease: "2022-07-22", enRelease: "2022-12-02" },
   { code: "ST02", name: "Worst Generation", jpRelease: "2022-07-22", enRelease: "2022-12-02" },
-  { code: "ST03", name: "The Seven Warlords of the Sea", jpRelease: "2022-07-22", enRelease: "2022-12-02" },
-  { code: "ST04", name: "Animal Kingdom Pirates", jpRelease: "2022-07-22", enRelease: "2022-12-02" },
+  {
+    code: "ST03",
+    name: "The Seven Warlords of the Sea",
+    jpRelease: "2022-07-22",
+    enRelease: "2022-12-02",
+  },
+  {
+    code: "ST04",
+    name: "Animal Kingdom Pirates",
+    jpRelease: "2022-07-22",
+    enRelease: "2022-12-02",
+  },
 ];
 
 // Language → factory mapping
@@ -172,7 +197,9 @@ function generateAllRuns(scrapedLanguages: string[]): ScrapedProductionRun[] {
           language: lang,
           factoryName: factory.name,
           factoryCountry: factory.country,
-          printingPeriod: set.enRelease ? `${set.enRelease.slice(0, 4)} Q${Math.ceil(parseInt(set.enRelease.slice(5, 7)) / 3)}` : undefined,
+          printingPeriod: set.enRelease
+            ? `${set.enRelease.slice(0, 4)} Q${Math.ceil(parseInt(set.enRelease.slice(5, 7)) / 3)}`
+            : undefined,
           confidence: "LIKELY",
           source: "https://en.onepiece-cardgame.com",
           notes: `European ${lang.toUpperCase()} localization via Bandai Europe.`,
@@ -220,7 +247,9 @@ async function main() {
   // 2. Generate runs from known data + scrape confirmation
   console.log("\nGenerating production runs from known set data...");
   const allRuns = generateAllRuns(scrapedLanguages);
-  console.log(`  Generated ${allRuns.length} production runs across ${OP_SETS.length + OP_STARTERS.length} sets.`);
+  console.log(
+    `  Generated ${allRuns.length} production runs across ${OP_SETS.length + OP_STARTERS.length} sets.`,
+  );
 
   const durationMs = Date.now() - start;
 

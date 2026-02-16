@@ -14,10 +14,12 @@ import { TCG_LABELS, TCG_BADGE_COLORS, type TCG, type Condition } from "@/types/
 import type { AIGradingResult } from "@/types/ximilar";
 import {
   toMinorUnits,
+  fromMinorUnits,
   getCurrencyExponent,
+  CURRENCY_INFO,
   type SupportedCurrency,
 } from "@/lib/currency";
-import { Camera, ArrowLeft } from "lucide-react";
+import { Camera, ArrowLeft, Zap } from "lucide-react";
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -71,6 +73,9 @@ export function IntentPanel({
   const [autoAcceptMaxGap, setAutoAcceptMaxGap] = useState("");
   const [autoAcceptMaxCycleLength, setAutoAcceptMaxCycleLength] = useState(4);
 
+  // Market price mode
+  const [isMarketPrice, setIsMarketPrice] = useState(false);
+
   // UI state
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -88,6 +93,7 @@ export function IntentPanel({
       setQuantity(1);
       setNotes("");
       setAutoAccept(false);
+      setIsMarketPrice(false);
       setError("");
     }
   }, [open, initialCard]);
@@ -107,11 +113,11 @@ export function IntentPanel({
   // Compute price in minor units for market context
   const numericPrice = parseFloat(price);
   const priceMinor =
-    !isNaN(numericPrice) && numericPrice > 0
-      ? toMinorUnits(numericPrice, currency)
-      : null;
+    !isNaN(numericPrice) && numericPrice > 0 ? toMinorUnits(numericPrice, currency) : null;
 
-  const title = type === "have" ? "I have this card" : "I want this card";
+  const isZeroDecimal = getCurrencyExponent(currency) === 0;
+  const currencyInfo = CURRENCY_INFO[currency];
+  const title = type === "have" ? "Sell this card" : "Buy this card";
 
   function handleCardSelect(selected: CardData) {
     setCard(selected);
@@ -129,6 +135,15 @@ export function IntentPanel({
     setAiSuggestedCondition(result.suggestedCondition);
     setCondition(result.suggestedCondition);
     setShowAIGrading(false);
+  }
+
+  function handleUseMarketPrice(priceCents: number) {
+    const display = fromMinorUnits(priceCents, currency);
+    setPrice(display.toFixed(isZeroDecimal ? 0 : 2));
+    setIsMarketPrice(true);
+    setAutoAccept(true);
+    setAutoAcceptMaxGap("0");
+    setAutoAcceptMaxCycleLength(4);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -150,8 +165,7 @@ export function IntentPanel({
       return;
     }
 
-    const sellerOverrodeAI =
-      aiSuggestedCondition !== null && aiSuggestedCondition !== condition;
+    const sellerOverrodeAI = aiSuggestedCondition !== null && aiSuggestedCondition !== condition;
 
     const body = {
       type,
@@ -173,7 +187,9 @@ export function IntentPanel({
                   aiCCSCentering: aiResult.ccs.centering,
                   aiCCSComposite: aiResult.ccs.composite,
                   sellerOverrodeAI,
-                  ...(sellerOverrodeAI ? { overrideReason: "User selected different condition" } : {}),
+                  ...(sellerOverrodeAI
+                    ? { overrideReason: "User selected different condition" }
+                    : {}),
                 }
               : {}),
           }
@@ -186,7 +202,9 @@ export function IntentPanel({
       ...(notes && { notes }),
       ...(autoAccept && {
         autoAccept: true,
-        ...(autoAcceptMaxGap && { autoAcceptMaxGap: toMinorUnits(parseFloat(autoAcceptMaxGap), currency) }),
+        ...(autoAcceptMaxGap && {
+          autoAcceptMaxGap: toMinorUnits(parseFloat(autoAcceptMaxGap), currency),
+        }),
         autoAcceptMaxCycleLength,
       }),
     };
@@ -212,7 +230,6 @@ export function IntentPanel({
   }
 
   // Confirmation text
-  const isZeroDecimal = getCurrencyExponent(currency) === 0;
   const confirmText =
     card && price
       ? type === "have"
@@ -223,9 +240,7 @@ export function IntentPanel({
   return (
     <Sheet open={open} onClose={onClose} title={title}>
       {/* Card search mode */}
-      {showCardSearch && (
-        <CardSearch onSelect={handleCardSelect} mode="select" />
-      )}
+      {showCardSearch && <CardSearch onSelect={handleCardSelect} mode="select" />}
 
       {/* AI grading mode */}
       {showAIGrading && card && (
@@ -238,10 +253,7 @@ export function IntentPanel({
             <ArrowLeft className="h-4 w-4" />
             Back to listing
           </button>
-          <AIGradingStep
-            onComplete={handleAIComplete}
-            onSkip={() => setShowAIGrading(false)}
-          />
+          <AIGradingStep onComplete={handleAIComplete} onSkip={() => setShowAIGrading(false)} />
         </div>
       )}
 
@@ -251,15 +263,11 @@ export function IntentPanel({
           {/* Card preview header */}
           <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-3">
             {card.imageUrl && (
-              <img
-                src={card.imageUrl}
-                alt={card.name}
-                className="h-16 w-12 rounded object-cover"
-              />
+              <img src={card.imageUrl} alt={card.name} className="h-16 w-12 rounded object-cover" />
             )}
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 truncate">{card.name}</h3>
-              <p className="text-sm text-gray-600 truncate">
+            <div className="min-w-0 flex-1">
+              <h3 className="truncate font-semibold text-gray-900">{card.name}</h3>
+              <p className="truncate text-sm text-gray-600">
                 {card.setName}
                 {card.setCode && ` (${card.setCode})`}
                 {card.number && ` #${card.number}`}
@@ -303,12 +311,11 @@ export function IntentPanel({
             <div className="rounded-lg bg-blue-50 p-3 text-sm text-blue-800">
               <div className="flex items-center justify-between">
                 <span className="font-medium">
-                  AI Assessment: CCS {aiResult.ccs.composite.toFixed(1)} ({aiResult.suggestedSubTier})
+                  AI Assessment: CCS {aiResult.ccs.composite.toFixed(1)} (
+                  {aiResult.suggestedSubTier})
                 </span>
                 {aiSuggestedCondition !== condition && (
-                  <span className="text-xs text-amber-700">
-                    You selected {condition}
-                  </span>
+                  <span className="text-xs text-amber-700">You selected {condition}</span>
                 )}
               </div>
               <div className="mt-1 grid grid-cols-4 gap-2 text-xs text-blue-600">
@@ -320,14 +327,37 @@ export function IntentPanel({
             </div>
           )}
 
-          {/* Price */}
-          <PriceInput
-            value={price}
-            onChange={setPrice}
-            currency={currency}
-            onCurrencyChange={setCurrency}
-            type={type}
-          />
+          {/* Price — market mode: read-only display */}
+          {isMarketPrice ? (
+            <div className="flex items-center justify-between rounded-lg bg-emerald-50 px-4 py-3">
+              <div>
+                <p className="text-sm font-medium text-emerald-800">
+                  <Zap className="mr-1 inline h-3.5 w-3.5" />
+                  {type === "have" ? "Selling" : "Buying"} at {currencyInfo?.symbol ?? currency}
+                  {price}
+                </p>
+                <p className="text-xs text-emerald-600">
+                  Matching the best {type === "have" ? "bid" : "ask"} price &middot; Auto-accept on
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsMarketPrice(false)}
+                className="text-xs font-medium text-emerald-700 underline hover:text-emerald-900"
+              >
+                Change
+              </button>
+            </div>
+          ) : (
+            /* Price — manual mode: normal input */
+            <PriceInput
+              value={price}
+              onChange={setPrice}
+              currency={currency}
+              onCurrencyChange={setCurrency}
+              type={type}
+            />
+          )}
 
           {/* Market context */}
           <MarketContextCard
@@ -337,6 +367,7 @@ export function IntentPanel({
             userPriceMinor={priceMinor}
             currency={currency}
             onApplySuggestion={setPrice}
+            onUseMarketPrice={handleUseMarketPrice}
           />
 
           {/* Advanced fields */}
@@ -357,9 +388,7 @@ export function IntentPanel({
           />
 
           {/* Error */}
-          {error && (
-            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>
-          )}
+          {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">{error}</p>}
 
           {/* Confirmation text */}
           {confirmText && (
@@ -370,19 +399,10 @@ export function IntentPanel({
 
           {/* Submit */}
           <div className="flex gap-3 border-t border-gray-100 pt-4">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={onClose}
-              className="flex-1"
-            >
+            <Button type="button" variant="outline" onClick={onClose} className="flex-1">
               Cancel
             </Button>
-            <Button
-              type="submit"
-              disabled={loading || !price}
-              className="flex-1"
-            >
+            <Button type="submit" disabled={loading || !price} className="flex-1">
               {loading ? "Listing..." : "List It"}
             </Button>
           </div>

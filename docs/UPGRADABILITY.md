@@ -12,12 +12,12 @@
 
 ### Scoring Key
 
-| Score | Meaning | Upgrade Cost |
-|-------|---------|-------------|
-| 1-3 | **Flexible** — swap with config change or single-file edit | Hours |
-| 4-6 | **Moderate** — requires multi-file refactor but no architecture change | Days |
-| 7-8 | **Rigid** — requires architecture changes, new abstractions | Weeks |
-| 9-10 | **Brittle** — deeply embedded, upgrade = partial rewrite | Months |
+| Score | Meaning                                                                | Upgrade Cost |
+| ----- | ---------------------------------------------------------------------- | ------------ |
+| 1-3   | **Flexible** — swap with config change or single-file edit             | Hours        |
+| 4-6   | **Moderate** — requires multi-file refactor but no architecture change | Days         |
+| 7-8   | **Rigid** — requires architecture changes, new abstractions            | Weeks        |
+| 9-10  | **Brittle** — deeply embedded, upgrade = partial rewrite               | Months       |
 
 ---
 
@@ -27,13 +27,13 @@
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `lib/stripe.ts` | Direct `new Stripe()` — bare SDK, no adapter | Every payment call goes through vendor API |
-| `stripe.service.ts` | Checkout session creation with Stripe-specific params | Cannot swap to Paddle/LemonSqueezy |
-| `payout.service.ts` | `getStripe().transfers.create()` — vendor method calls | Payout flow locked to Stripe Connect |
-| `connect.service.ts` | Express account lifecycle — Stripe-specific onboarding | Connect model locked to Stripe |
-| `webhooks/route.ts` | 12 Stripe-specific event types handled inline | Webhook format locked to Stripe |
+| File                 | Coupling Point                                         | Impact                                     |
+| -------------------- | ------------------------------------------------------ | ------------------------------------------ |
+| `lib/stripe.ts`      | Direct `new Stripe()` — bare SDK, no adapter           | Every payment call goes through vendor API |
+| `stripe.service.ts`  | Checkout session creation with Stripe-specific params  | Cannot swap to Paddle/LemonSqueezy         |
+| `payout.service.ts`  | `getStripe().transfers.create()` — vendor method calls | Payout flow locked to Stripe Connect       |
+| `connect.service.ts` | Express account lifecycle — Stripe-specific onboarding | Connect model locked to Stripe             |
+| `webhooks/route.ts`  | 12 Stripe-specific event types handled inline          | Webhook format locked to Stripe            |
 
 ### Why It's Rigid
 
@@ -72,6 +72,7 @@ Phase 3: Rewire Services (1 day)
 ```
 
 **Configuration**:
+
 ```typescript
 // src/server/config/payment.config.ts
 export const paymentProvider = process.env.PAYMENT_PROVIDER ?? "stripe";
@@ -86,13 +87,13 @@ export const paymentProvider = process.env.PAYMENT_PROVIDER ?? "stripe";
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `lib/db.ts` | `PrismaPg` adapter — locked to PostgreSQL | Cannot use MySQL/SQLite |
-| All 28 services | `db.model.findMany/create/update` — Prisma query API | Cannot swap ORM |
-| `schema.prisma` | 18 enums — database-backed, require migration to extend | Adding a TCG = migration |
-| `schema.prisma` | `onDelete: Cascade` on 12+ relations | No soft-delete, hard to audit |
-| Generated types | `@/generated/prisma/client` imported in 30+ files | Prisma types leak everywhere |
+| File            | Coupling Point                                          | Impact                        |
+| --------------- | ------------------------------------------------------- | ----------------------------- |
+| `lib/db.ts`     | `PrismaPg` adapter — locked to PostgreSQL               | Cannot use MySQL/SQLite       |
+| All 28 services | `db.model.findMany/create/update` — Prisma query API    | Cannot swap ORM               |
+| `schema.prisma` | 18 enums — database-backed, require migration to extend | Adding a TCG = migration      |
+| `schema.prisma` | `onDelete: Cascade` on 12+ relations                    | No soft-delete, hard to audit |
+| Generated types | `@/generated/prisma/client` imported in 30+ files       | Prisma types leak everywhere  |
 
 ### Why It's Rigid
 
@@ -133,6 +134,7 @@ Phase 4: Soft-Delete Foundation (2 days)
 ```
 
 **Quick Win** (do now):
+
 - Add missing composite indexes:
   ```prisma
   @@index([userId, isActive, createdAt])  // on HaveListing, WantListing
@@ -148,12 +150,12 @@ Phase 4: Soft-Delete Foundation (2 days)
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `lib/auth.ts` | `NextAuth()` + `PrismaAdapter(db)` — auth tied to ORM | Auth + DB double-coupled |
-| `middleware.ts` | Hardcoded cookie names (`authjs.session-token`) | Auth library change breaks middleware |
-| `middleware.ts` | Hardcoded protected paths array (15 paths) | New routes need 2-place update |
-| 60+ API routes | `await auth()` — session check repeated in every handler | No auth middleware abstraction |
+| File            | Coupling Point                                           | Impact                                |
+| --------------- | -------------------------------------------------------- | ------------------------------------- |
+| `lib/auth.ts`   | `NextAuth()` + `PrismaAdapter(db)` — auth tied to ORM    | Auth + DB double-coupled              |
+| `middleware.ts` | Hardcoded cookie names (`authjs.session-token`)          | Auth library change breaks middleware |
+| `middleware.ts` | Hardcoded protected paths array (15 paths)               | New routes need 2-place update        |
+| 60+ API routes  | `await auth()` — session check repeated in every handler | No auth middleware abstraction        |
 
 ### Why It's Rigid
 
@@ -198,14 +200,14 @@ Phase 4: RBAC Foundation (1 day)
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `cycle-finder.ts` | `MAX_CYCLE_DEPTH = 6` hardcoded | Cannot tune per-environment |
-| `scorer.ts` | 12 weight constants inline | Cannot A/B test scoring |
-| `packer.ts` | Greedy single-pass, `maxPacked = 50` | Cannot swap to ILP solver |
-| `matching.service.ts` | Monolithic `runMatching()` — load+match+persist in one function | Cannot test matching without DB |
-| `chain-finder.ts` | Chains forced into `Cycle` type (leaky abstraction) | Cannot add chain-specific logic |
-| `ListingEdge` | 1:1 edge model, no language/variant fields | Cannot match on extended criteria |
+| File                  | Coupling Point                                                  | Impact                            |
+| --------------------- | --------------------------------------------------------------- | --------------------------------- |
+| `cycle-finder.ts`     | `MAX_CYCLE_DEPTH = 6` hardcoded                                 | Cannot tune per-environment       |
+| `scorer.ts`           | 12 weight constants inline                                      | Cannot A/B test scoring           |
+| `packer.ts`           | Greedy single-pass, `maxPacked = 50`                            | Cannot swap to ILP solver         |
+| `matching.service.ts` | Monolithic `runMatching()` — load+match+persist in one function | Cannot test matching without DB   |
+| `chain-finder.ts`     | Chains forced into `Cycle` type (leaky abstraction)             | Cannot add chain-specific logic   |
+| `ListingEdge`         | 1:1 edge model, no language/variant fields                      | Cannot match on extended criteria |
 
 ### What's Already Good
 
@@ -258,13 +260,13 @@ Phase 5: Feature Flags (0.5 day)
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `lib/constants.ts` | `PLATFORM_FEE_RATE = 0.022` — compile-time constant | Fee change = deploy |
-| `lib/constants.ts` | `AUTHENTICATOR_FEE_STRUCTURE` — per-tier fees hardcoded | Cannot set per-authenticator fees |
-| `lib/authenticator-fees.ts` | `calculateVerificationFee()` — formula inline | Cannot override fee calc |
-| `lib/authenticator-ratings.ts` | Time-decay weights hardcoded | Cannot experiment with algorithms |
-| `lib/ccs.ts` | CCS dimension weights hardcoded | Cannot adjust per-TCG |
+| File                           | Coupling Point                                          | Impact                            |
+| ------------------------------ | ------------------------------------------------------- | --------------------------------- |
+| `lib/constants.ts`             | `PLATFORM_FEE_RATE = 0.022` — compile-time constant     | Fee change = deploy               |
+| `lib/constants.ts`             | `AUTHENTICATOR_FEE_STRUCTURE` — per-tier fees hardcoded | Cannot set per-authenticator fees |
+| `lib/authenticator-fees.ts`    | `calculateVerificationFee()` — formula inline           | Cannot override fee calc          |
+| `lib/authenticator-ratings.ts` | Time-decay weights hardcoded                            | Cannot experiment with algorithms |
+| `lib/ccs.ts`                   | CCS dimension weights hardcoded                         | Cannot adjust per-TCG             |
 
 ### Upgrade Plan
 
@@ -298,6 +300,7 @@ Phase 3: Replace Hardcoded Constants (1 day)
 ```
 
 **Algorithm Versioning** (medium-term):
+
 ```
 Phase 4: Strategy Registry (2 days)
 ├── Create src/server/strategies/
@@ -325,17 +328,18 @@ Phase 4: Strategy Registry (2 days)
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `schema.prisma` | `TradeStatus` enum — 12 values, DB-backed | Adding state = migration |
-| `types/domain.ts` | `AUTHENTICATED_TRANSITIONS` — hardcoded transition map | Must sync with enum |
-| `trade.service.ts` | `transitionTrade()` — 200+ lines of inline state handling | Each state has bespoke logic |
-| `trade-status-badge.tsx` | Status→color mapping hardcoded | UI must sync with enum |
-| `trade-card.tsx` | Button visibility tied to status values | UI logic hardcoded |
+| File                     | Coupling Point                                            | Impact                       |
+| ------------------------ | --------------------------------------------------------- | ---------------------------- |
+| `schema.prisma`          | `TradeStatus` enum — 12 values, DB-backed                 | Adding state = migration     |
+| `types/domain.ts`        | `AUTHENTICATED_TRANSITIONS` — hardcoded transition map    | Must sync with enum          |
+| `trade.service.ts`       | `transitionTrade()` — 200+ lines of inline state handling | Each state has bespoke logic |
+| `trade-status-badge.tsx` | Status→color mapping hardcoded                            | UI must sync with enum       |
+| `trade-card.tsx`         | Button visibility tied to status values                   | UI logic hardcoded           |
 
 ### Why It's the Most Rigid Module
 
 The trade state machine is the **spine** of the platform. Every module touches it:
+
 - Escrow triggers on ESCROWED
 - Photo approval triggers on CARDS_SUBMITTED
 - Authenticator assignment triggers on AUTHENTICATING
@@ -343,6 +347,7 @@ The trade state machine is the **spine** of the platform. Every module touches i
 - Wallet refunds trigger on CANCELLED
 
 Adding a state (e.g., PAYMENT_PENDING between ACCEPTED and ESCROWED) requires:
+
 1. Schema migration
 2. Update `domain.ts` transition maps (2 maps: authenticated + direct)
 3. Update `transitionTrade()` handler
@@ -392,13 +397,13 @@ Phase 3: Dynamic Status Registry (1 day)
 
 ### What's Rigid
 
-| Area | Coupling Point | Impact |
-|------|----------------|--------|
-| Data fetching | `useState + useEffect + fetch()` in 17 components | No cache, no dedup |
-| API calls | `fetch("/api/endpoint")` URLs hardcoded in components | Cannot batch, cannot mock |
-| Auth | `useSession()` from `next-auth/react` | Auth library change breaks UI |
-| Routing | `next/link`, `useRouter` from `next/navigation` | Framework change breaks navigation |
-| Styling | 189 hardcoded color values (`bg-indigo-600`) | Theme change = find-replace |
+| Area          | Coupling Point                                        | Impact                             |
+| ------------- | ----------------------------------------------------- | ---------------------------------- |
+| Data fetching | `useState + useEffect + fetch()` in 17 components     | No cache, no dedup                 |
+| API calls     | `fetch("/api/endpoint")` URLs hardcoded in components | Cannot batch, cannot mock          |
+| Auth          | `useSession()` from `next-auth/react`                 | Auth library change breaks UI      |
+| Routing       | `next/link`, `useRouter` from `next/navigation`       | Framework change breaks navigation |
+| Styling       | 189 hardcoded color values (`bg-indigo-600`)          | Theme change = find-replace        |
 
 ### What's Already Good
 
@@ -447,12 +452,12 @@ Phase 4: Error Boundaries (0.5 day)
 
 ### What's Rigid
 
-| Service | Direct Imports | Impact |
-|---------|---------------|--------|
-| `trade.service.ts` | 6 services imported | Circular dependency risk |
-| `authenticator.service.ts` | 3 services imported | Tight coupling |
-| `fee.service.ts` | 2 services imported | Wallet coupling |
-| `matching.service.ts` | 3 services imported | Matching + persistence coupled |
+| Service                    | Direct Imports      | Impact                         |
+| -------------------------- | ------------------- | ------------------------------ |
+| `trade.service.ts`         | 6 services imported | Circular dependency risk       |
+| `authenticator.service.ts` | 3 services imported | Tight coupling                 |
+| `fee.service.ts`           | 2 services imported | Wallet coupling                |
+| `matching.service.ts`      | 3 services imported | Matching + persistence coupled |
 
 ### Why It's Rigid
 
@@ -500,11 +505,11 @@ Phase 3: Async Event Queue (future)
 
 ### What's Rigid
 
-| File | Coupling Point | Impact |
-|------|----------------|--------|
-| `ai-grading.service.ts` | Ximilar API URL + auth hardcoded | Cannot swap provider |
-| `ai-grading.service.ts` | Response parsing tied to Ximilar format | Different API = rewrite parser |
-| `lib/ccs.ts` | CCS formula assumes specific input dimensions | New provider may have different dimensions |
+| File                    | Coupling Point                                | Impact                                     |
+| ----------------------- | --------------------------------------------- | ------------------------------------------ |
+| `ai-grading.service.ts` | Ximilar API URL + auth hardcoded              | Cannot swap provider                       |
+| `ai-grading.service.ts` | Response parsing tied to Ximilar format       | Different API = rewrite parser             |
+| `lib/ccs.ts`            | CCS formula assumes specific input dimensions | New provider may have different dimensions |
 
 ### Upgrade Plan
 
@@ -567,14 +572,14 @@ Phase 3: Feature Toggles (1 day)
 
 ### Missing Across All Modules
 
-| Concern | Current State | Target |
-|---------|---------------|--------|
-| **Logging** | `console.log` scattered | Structured logger (pino) with correlation IDs |
-| **Error handling** | `throw new Error()` everywhere | Domain-specific error classes with codes |
-| **Monitoring** | None | OpenTelemetry spans on critical paths |
-| **Rate limiting** | None | Per-route rate limits (upstash/ratelimit) |
-| **Caching** | None | Redis for config, API responses, session |
-| **Versioning** | None | API versioning headers or path prefix |
+| Concern            | Current State                  | Target                                        |
+| ------------------ | ------------------------------ | --------------------------------------------- |
+| **Logging**        | `console.log` scattered        | Structured logger (pino) with correlation IDs |
+| **Error handling** | `throw new Error()` everywhere | Domain-specific error classes with codes      |
+| **Monitoring**     | None                           | OpenTelemetry spans on critical paths         |
+| **Rate limiting**  | None                           | Per-route rate limits (upstash/ratelimit)     |
+| **Caching**        | None                           | Redis for config, API responses, session      |
+| **Versioning**     | None                           | API versioning headers or path prefix         |
 
 ---
 
@@ -582,39 +587,39 @@ Phase 3: Feature Toggles (1 day)
 
 ### Tier 1: Do Now (Unblock Everything Else)
 
-| # | Module | Action | Effort | Impact |
-|---|--------|--------|--------|--------|
-| 1 | Config | Create `PlatformConfig` table + service | 1.5 days | All business params become dynamic |
-| 2 | Auth | Create `withAuth()` middleware wrapper | 1 day | Removes 300+ lines of boilerplate |
-| 3 | DB | Add missing composite indexes | 1 hour | Performance baseline |
-| 4 | Types | Invert enum flow (domain.ts → Prisma) | 0.5 day | Single source of truth |
+| #   | Module | Action                                  | Effort   | Impact                             |
+| --- | ------ | --------------------------------------- | -------- | ---------------------------------- |
+| 1   | Config | Create `PlatformConfig` table + service | 1.5 days | All business params become dynamic |
+| 2   | Auth   | Create `withAuth()` middleware wrapper  | 1 day    | Removes 300+ lines of boilerplate  |
+| 3   | DB     | Add missing composite indexes           | 1 hour   | Performance baseline               |
+| 4   | Types  | Invert enum flow (domain.ts → Prisma)   | 0.5 day  | Single source of truth             |
 
 ### Tier 2: Enable Clean Growth (Next Sprint)
 
-| # | Module | Action | Effort | Impact |
-|---|--------|--------|--------|--------|
-| 5 | Payment | Extract `IPaymentProvider` interface | 2 days | Vendor independence |
-| 6 | Frontend | Add React Query + API client | 2 days | Data fetching solved |
-| 7 | Matching | Extract config + strategy interfaces | 1.5 days | Algorithm swappable |
-| 8 | Events | Domain event bus for service decoupling | 2 days | Service independence |
+| #   | Module   | Action                                  | Effort   | Impact               |
+| --- | -------- | --------------------------------------- | -------- | -------------------- |
+| 5   | Payment  | Extract `IPaymentProvider` interface    | 2 days   | Vendor independence  |
+| 6   | Frontend | Add React Query + API client            | 2 days   | Data fetching solved |
+| 7   | Matching | Extract config + strategy interfaces    | 1.5 days | Algorithm swappable  |
+| 8   | Events   | Domain event bus for service decoupling | 2 days   | Service independence |
 
 ### Tier 3: Architecture Maturity (Next Quarter)
 
-| # | Module | Action | Effort | Impact |
-|---|--------|--------|--------|--------|
-| 9 | DB | Repository pattern for top 5 services | 3 days | ORM swappable |
-| 10 | Trade | State machine library + event-driven transitions | 4 days | State changes composable |
-| 11 | Frontend | Theme system (CSS variables) | 1 day | Visual identity swappable |
-| 12 | Grading | `IGradingProvider` interface | 1 day | AI vendor swappable |
+| #   | Module   | Action                                           | Effort | Impact                    |
+| --- | -------- | ------------------------------------------------ | ------ | ------------------------- |
+| 9   | DB       | Repository pattern for top 5 services            | 3 days | ORM swappable             |
+| 10  | Trade    | State machine library + event-driven transitions | 4 days | State changes composable  |
+| 11  | Frontend | Theme system (CSS variables)                     | 1 day  | Visual identity swappable |
+| 12  | Grading  | `IGradingProvider` interface                     | 1 day  | AI vendor swappable       |
 
 ### Tier 4: Future-Proofing (When Needed)
 
-| # | Module | Action | Effort | Impact |
-|---|--------|--------|--------|--------|
-| 13 | DB | Soft-delete foundation | 2 days | GDPR/audit ready |
-| 14 | Matching | ILP solver option | 2 weeks | Optimal matching |
-| 15 | Auth | Full RBAC system | 2 days | Role-based access |
-| 16 | Frontend | Design system package | 1 week | Multi-platform ready |
+| #   | Module   | Action                 | Effort  | Impact               |
+| --- | -------- | ---------------------- | ------- | -------------------- |
+| 13  | DB       | Soft-delete foundation | 2 days  | GDPR/audit ready     |
+| 14  | Matching | ILP solver option      | 2 weeks | Optimal matching     |
+| 15  | Auth     | Full RBAC system       | 2 days  | Role-based access    |
+| 16  | Frontend | Design system package  | 1 week  | Multi-platform ready |
 
 ---
 
@@ -622,15 +627,15 @@ Phase 3: Feature Toggles (1 day)
 
 Current time to swap each vendor completely:
 
-| Vendor | Current | Target (After Plan) |
-|--------|---------|---------------------|
-| **Stripe** | ~4 days | < 1 day (adapter swap) |
-| **Prisma** | ~2 weeks | ~3 days (repository swap) |
-| **Auth.js** | ~3 days | < 1 day (auth port swap) |
-| **Ximilar** | ~1 day | < 2 hours (adapter swap) |
-| **PostgreSQL** | ~3 days | ~1 day (adapter + config) |
-| **Next.js** | ~4-6 weeks | ~2-3 weeks (components reusable) |
-| **Tailwind** | ~1 week | ~2 days (theme tokens abstract colors) |
+| Vendor         | Current    | Target (After Plan)                    |
+| -------------- | ---------- | -------------------------------------- |
+| **Stripe**     | ~4 days    | < 1 day (adapter swap)                 |
+| **Prisma**     | ~2 weeks   | ~3 days (repository swap)              |
+| **Auth.js**    | ~3 days    | < 1 day (auth port swap)               |
+| **Ximilar**    | ~1 day     | < 2 hours (adapter swap)               |
+| **PostgreSQL** | ~3 days    | ~1 day (adapter + config)              |
+| **Next.js**    | ~4-6 weeks | ~2-3 weeks (components reusable)       |
+| **Tailwind**   | ~1 week    | ~2 days (theme tokens abstract colors) |
 
 ---
 
@@ -710,6 +715,6 @@ The upgradability plan is complete when:
 
 ## Changelog
 
-| Date | Change |
-|------|--------|
+| Date       | Change                                                          |
+| ---------- | --------------------------------------------------------------- |
 | 2026-02-15 | Initial audit — 10 modules assessed, 16 upgrade actions planned |

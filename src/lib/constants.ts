@@ -1,5 +1,5 @@
 // ─── Platform Fee & Wallet ─────────────────────────────
-export const PLATFORM_FEE_RATE = 0.022; // 2.2% seller fee per card sent
+export const PLATFORM_FEE_RATE = 0.022; // 2.2% fee on net settlement (equal swaps = $0 fee)
 export const MIN_DEPOSIT_CENTS = 500; // $5
 export const MAX_DEPOSIT_CENTS = 10_000_00; // $10,000
 export const MIN_WITHDRAWAL_CENTS = 1000; // $10

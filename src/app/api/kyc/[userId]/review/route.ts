@@ -11,10 +11,7 @@ const reviewBodySchema = z.object({
 });
 
 // POST /api/kyc/[userId]/review — Review a user's KYC (admin)
-export async function POST(
-  req: NextRequest,
-  { params }: { params: Promise<{ userId: string }> },
-) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ userId: string }> }) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -29,10 +26,7 @@ export async function POST(
   const body = await req.json();
   const parsed = reviewBodySchema.safeParse(body);
   if (!parsed.success) {
-    return NextResponse.json(
-      { error: parsed.error.flatten().fieldErrors },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
   }
 
   try {
@@ -53,11 +47,7 @@ export async function POST(
         );
         break;
       case "revoke":
-        user = await revokeKYC(
-          userId,
-          session.user.id,
-          parsed.data.reason ?? "No reason provided",
-        );
+        user = await revokeKYC(userId, session.user.id, parsed.data.reason ?? "No reason provided");
         break;
       case "reinstate":
         if (!parsed.data.reinstateToStatus) {
@@ -66,11 +56,7 @@ export async function POST(
             { status: 400 },
           );
         }
-        user = await reinstateKYC(
-          userId,
-          session.user.id,
-          parsed.data.reinstateToStatus,
-        );
+        user = await reinstateKYC(userId, session.user.id, parsed.data.reinstateToStatus);
         break;
     }
 

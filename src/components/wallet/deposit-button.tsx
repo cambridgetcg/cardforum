@@ -104,7 +104,9 @@ export function DepositButton({ onDeposited }: { onDeposited?: () => void }) {
         if (res.ok) {
           onDeposited?.();
         }
-      } catch { /* ignore */ }
+      } catch {
+        /* ignore */
+      }
     }, 2000);
     return () => clearInterval(interval);
   }, [onDeposited]);
@@ -250,7 +252,7 @@ export function DepositButton({ onDeposited }: { onDeposited?: () => void }) {
 
       <div className="flex gap-2">
         <div className="relative flex-1">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">$</span>
+          <span className="absolute top-1/2 left-3 -translate-y-1/2 text-sm text-gray-400">$</span>
           <Input
             type="number"
             min="5"

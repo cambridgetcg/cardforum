@@ -34,30 +34,18 @@ export async function POST(
   };
 
   if (!status || !VALID_RESOLUTIONS.includes(status as DisputeStatus)) {
-    return NextResponse.json(
-      { error: "Invalid resolution status" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Invalid resolution status" }, { status: 400 });
   }
 
   if (!resolution || typeof resolution !== "string") {
-    return NextResponse.json(
-      { error: "Resolution reason is required" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Resolution reason is required" }, { status: 400 });
   }
 
   try {
-    await resolveDispute(
-      disputeId,
-      session.user.id,
-      status as DisputeStatus,
-      resolution,
-    );
+    await resolveDispute(disputeId, session.user.id, status as DisputeStatus, resolution);
     return NextResponse.json({ success: true });
   } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Failed to resolve dispute";
+    const message = err instanceof Error ? err.message : "Failed to resolve dispute";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

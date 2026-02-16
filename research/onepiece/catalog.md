@@ -7,30 +7,32 @@
 The One Piece Card Game has multiple distinct product lines, each with its own set code prefix:
 
 **Booster Packs (OP-xx)**
+
 - The primary card release vehicle. Each booster set introduces approximately 120 new cards.
 - Individual booster packs contain 6 cards each. A booster box contains 24 packs.
 - Sets released so far: OP-01 through OP-15 (with more planned).
 - Release cadence: approximately every 3 months.
 
-| Set Code | Name | JP Release | EN Release (approx.) |
-|----------|------|------------|---------------------|
-| OP-01 | Romance Dawn | Jul 2022 | Dec 2022 |
-| OP-02 | Paramount War | Nov 2022 | Mar 2023 |
-| OP-03 | Pillars of Strength | Jan 2023 | Jun 2023 |
-| OP-04 | Kingdoms of Intrigue | Apr 2023 | Sep 2023 |
-| OP-05 | Awakening of the New Era | Jun 2023 | Dec 2023 |
-| OP-06 | Wings of the Captain | Aug 2023 | Mar 2024 |
-| OP-07 | 500 Years in the Future | Nov 2023 | Jun 2024 |
-| OP-08 | Two Legends | Feb 2024 | Sep 2024 |
-| OP-09 | Emperors in the New World | May 2024 | Jan 2025 |
-| OP-10 | Royal Blood | Nov 2024 | Mar 2025 |
-| OP-11 | (title varies) | Feb 2025 | Jun 2025 |
-| OP-12 | Legacy of the Master | May 2025 | Aug 2025 |
-| OP-13 | Carrying On His Will | Aug 2025 | Nov 2025 |
-| OP-14 | (Seven Warlords themed) | Nov 2025 | Jan 2026 |
-| OP-15 | Adventure on God's Island | TBD 2026 | TBD 2026 |
+| Set Code | Name                      | JP Release | EN Release (approx.) |
+| -------- | ------------------------- | ---------- | -------------------- |
+| OP-01    | Romance Dawn              | Jul 2022   | Dec 2022             |
+| OP-02    | Paramount War             | Nov 2022   | Mar 2023             |
+| OP-03    | Pillars of Strength       | Jan 2023   | Jun 2023             |
+| OP-04    | Kingdoms of Intrigue      | Apr 2023   | Sep 2023             |
+| OP-05    | Awakening of the New Era  | Jun 2023   | Dec 2023             |
+| OP-06    | Wings of the Captain      | Aug 2023   | Mar 2024             |
+| OP-07    | 500 Years in the Future   | Nov 2023   | Jun 2024             |
+| OP-08    | Two Legends               | Feb 2024   | Sep 2024             |
+| OP-09    | Emperors in the New World | May 2024   | Jan 2025             |
+| OP-10    | Royal Blood               | Nov 2024   | Mar 2025             |
+| OP-11    | (title varies)            | Feb 2025   | Jun 2025             |
+| OP-12    | Legacy of the Master      | May 2025   | Aug 2025             |
+| OP-13    | Carrying On His Will      | Aug 2025   | Nov 2025             |
+| OP-14    | (Seven Warlords themed)   | Nov 2025   | Jan 2026             |
+| OP-15    | Adventure on God's Island | TBD 2026   | TBD 2026             |
 
 **Starter Decks (ST-xx)**
+
 - Pre-built, playable 61-card decks with 17 unique card variations.
 - Numbered ST-01 through ST-30 (and counting).
 - Often released in batches (e.g., ST-15 through ST-20 released simultaneously on Oct 25, 2024).
@@ -40,16 +42,19 @@ The One Piece Card Game has multiple distinct product lines, each with its own s
 - ST-29: Egghead (Jan 16, 2026); ST-30: Ace & Luffy (Jun 12, 2026).
 
 **Extra Boosters (EB-xx)**
+
 - Supplementary sets with unique card pools (not just reprints).
 - EB-01: Memorial Collection (Jan 27, 2024, ~80 unique cards).
 - EB-02, EB-03, EB-04 also released/announced.
 
 **Premium Boosters (PRB-xx)**
+
 - Reprint-focused sets with new artwork.
 - PRB-01: "One Piece Card The Best" (~404 cards, reprints from OP-01 through OP-06 plus exclusives).
 - PRB-02 also released, sparking excitement for making cards more accessible.
 
 **Other Product Types:**
+
 - Devil Fruits Collections (DF-01, DF-02, DF-03) -- special themed collections.
 - Official Card Sleeves (numbered volumes).
 - Premium Card Collections.
@@ -89,6 +94,7 @@ Every card has a unique identifier composed of:
 ### Promo Card Numbering
 
 Promotional cards use the `P-xxx` designation:
+
 - `P-001`, `P-012`, etc.
 - Promo numbering is sequential across all promo releases (not per-event).
 - As of research, there are approximately **596 kinds** of promotional cards cataloged.
@@ -96,6 +102,7 @@ Promotional cards use the `P-xxx` designation:
 ### Reprint Numbering (Critical Complexity)
 
 **Reprints retain the ORIGINAL set code and card number.** This is a major cataloging challenge:
+
 - A card reprinted in PRB-01 still carries its original `OP01-xxx` number.
 - SP (Special) reprints also use the original card's set code.
 - The only way to distinguish original prints from reprints is through physical markers (stamps, texture differences), not the card ID itself.
@@ -103,6 +110,7 @@ Promotional cards use the `P-xxx` designation:
 ### Block Number System
 
 Introduced as an additional organizational layer:
+
 - Block 1: OP-01 through OP-04
 - Block 2: OP-05 through OP-08
 - Block 3: OP-09 through OP-12
@@ -117,47 +125,48 @@ Introduced as an additional organizational layer:
 
 ### Base Rarities (printed on card)
 
-| Abbreviation | Full Name | Visual Identifier | Pull Rate | Notes |
-|---|---|---|---|---|
-| **C** | Common | "C" symbol, no foil, smooth | 50%+ of pack contents | Deck foundation |
-| **UC** | Uncommon | "UC" symbol, no foil | 2-4 per pack | Supporting cards |
-| **R** | Rare | "R" symbol, non-refractive foil border | 1+ guaranteed per pack | Can have alt-art parallels |
-| **SR** | Super Rare | "SR" symbol, silver border, holofoil | 8-10 per box (~1 per 2-3 packs) | Key competitive cards |
-| **SEC** | Secret Rare | "SEC" symbol, gold foil, full-card art, textured holo | ~1 per box | Chase cards |
-| **L** | Leader | "L" symbol, red card back | ~1 per 4-6 packs | Mandatory deck centerpiece |
-| **TR** | Treasure Rare | "TR" symbol, exclusive visual treatment | ~1 per box | Introduced in OP-06 (EN); collector-focused |
-| **SP** | Special Rare | "SP" symbol, full-art, unique foil texture | ~1 per several boxes (~0.35% per pack) | Ultra-rare collector cards |
+| Abbreviation | Full Name     | Visual Identifier                                     | Pull Rate                              | Notes                                       |
+| ------------ | ------------- | ----------------------------------------------------- | -------------------------------------- | ------------------------------------------- |
+| **C**        | Common        | "C" symbol, no foil, smooth                           | 50%+ of pack contents                  | Deck foundation                             |
+| **UC**       | Uncommon      | "UC" symbol, no foil                                  | 2-4 per pack                           | Supporting cards                            |
+| **R**        | Rare          | "R" symbol, non-refractive foil border                | 1+ guaranteed per pack                 | Can have alt-art parallels                  |
+| **SR**       | Super Rare    | "SR" symbol, silver border, holofoil                  | 8-10 per box (~1 per 2-3 packs)        | Key competitive cards                       |
+| **SEC**      | Secret Rare   | "SEC" symbol, gold foil, full-card art, textured holo | ~1 per box                             | Chase cards                                 |
+| **L**        | Leader        | "L" symbol, red card back                             | ~1 per 4-6 packs                       | Mandatory deck centerpiece                  |
+| **TR**       | Treasure Rare | "TR" symbol, exclusive visual treatment               | ~1 per box                             | Introduced in OP-06 (EN); collector-focused |
+| **SP**       | Special Rare  | "SP" symbol, full-art, unique foil texture            | ~1 per several boxes (~0.35% per pack) | Ultra-rare collector cards                  |
 
 ### Parallel / Alternate Art Variants
 
 This is where complexity explodes. **Any rarity level can have parallel versions:**
 
-| Variant Type | Visual Identifier | Pull Rate | Description |
-|---|---|---|---|
-| **Alt Art (Parallel)** | Star symbol (star) above rarity letter | 1-3 per box | Different artwork, same card stats. Full-frame art, background foil texture. |
-| **Manga Rare** | Star symbol, B&W manga panel art, textured foil | ~1 per case (288 packs) or 1 per 500-1,500 packs | Artwork from Eiichiro Oda's original manga. Pinnacle of rarity. |
-| **Golden Manga** | Gold-foil treatment on manga art | Extremely rare | Introduced in OP-09 (e.g., Gol D. Roger). |
-| **Red Manga** | Red-themed manga art treatment | Extremely rare | Introduced in OP-13. Luffy OP13-118 Red Manga has sold raw for ~$8,950, PSA 10 for $20k-$24k+. |
-| **God Pack / Demon Pack** | Full pack of ultra-rare alt-arts | ~1 per 10-20 cases (120-240 boxes) | A single booster pack containing all ultra-rare parallels. |
+| Variant Type              | Visual Identifier                               | Pull Rate                                        | Description                                                                                    |
+| ------------------------- | ----------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| **Alt Art (Parallel)**    | Star symbol (star) above rarity letter          | 1-3 per box                                      | Different artwork, same card stats. Full-frame art, background foil texture.                   |
+| **Manga Rare**            | Star symbol, B&W manga panel art, textured foil | ~1 per case (288 packs) or 1 per 500-1,500 packs | Artwork from Eiichiro Oda's original manga. Pinnacle of rarity.                                |
+| **Golden Manga**          | Gold-foil treatment on manga art                | Extremely rare                                   | Introduced in OP-09 (e.g., Gol D. Roger).                                                      |
+| **Red Manga**             | Red-themed manga art treatment                  | Extremely rare                                   | Introduced in OP-13. Luffy OP13-118 Red Manga has sold raw for ~$8,950, PSA 10 for $20k-$24k+. |
+| **God Pack / Demon Pack** | Full pack of ultra-rare alt-arts                | ~1 per 10-20 cases (120-240 boxes)               | A single booster pack containing all ultra-rare parallels.                                     |
 
 ### Print-Run Distinguishing Marks
 
 For cards from OP-01 through OP-04:
+
 - **Original prints**: No stamp on the card name tag area.
 - **Premium Booster reprints (PRB)**: Circular "One Piece" stamp on bottom left of name tag.
 - **From OP-05 onward**: All prints (original and reprint) include stamps, making this distinction method only useful for early sets.
 
 ### Tournament/Promo Exclusive Variants
 
-| Source | Description | Example |
-|---|---|---|
-| **Championship Winner Cards** | Extremely rare, event-specific | Championship 2023/2024 logo cards |
-| **Regional Top Cut** | Distributed to tournament top finishers | Top 64 Nami R, Top 16 Roronoa Zoro R, Top 8 Sanji SR |
-| **Standard Battle Packs** | Asia-Pacific tournament series | Winner gets Parallel Art Roronoa Zoro |
-| **Flagship Battle Packs** | Asia-Pacific exclusive | Top 8 gets Parallel Art Charlotte Pudding; Winner gets Parallel Art Trafalgar Law |
-| **Promotion Packs** | Distributed at events/purchases | Numbered promotion pack volumes (e.g., Promotion Pack 2022, Vol.6, Vol.11) |
-| **Super Pre-Release** | Exclusive Leader Card illustration + gold stamp | Set-specific pre-release events |
-| **Box Toppers** | Special card included in each booster box | One per sealed box purchase |
+| Source                        | Description                                     | Example                                                                           |
+| ----------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Championship Winner Cards** | Extremely rare, event-specific                  | Championship 2023/2024 logo cards                                                 |
+| **Regional Top Cut**          | Distributed to tournament top finishers         | Top 64 Nami R, Top 16 Roronoa Zoro R, Top 8 Sanji SR                              |
+| **Standard Battle Packs**     | Asia-Pacific tournament series                  | Winner gets Parallel Art Roronoa Zoro                                             |
+| **Flagship Battle Packs**     | Asia-Pacific exclusive                          | Top 8 gets Parallel Art Charlotte Pudding; Winner gets Parallel Art Trafalgar Law |
+| **Promotion Packs**           | Distributed at events/purchases                 | Numbered promotion pack volumes (e.g., Promotion Pack 2022, Vol.6, Vol.11)        |
+| **Super Pre-Release**         | Exclusive Leader Card illustration + gold stamp | Set-specific pre-release events                                                   |
+| **Box Toppers**               | Special card included in each booster box       | One per sealed box purchase                                                       |
 
 ### Variant Hierarchy (for a single card ID)
 
@@ -186,13 +195,13 @@ OP05-119 SEC* MR   (Secret Rare, Manga Rare variant)
 
 ### Official Languages (5 total)
 
-| Language | Region Availability | Launch Timing | Notes |
-|---|---|---|---|
-| **Japanese (JP)** | Japan (usable in Asia regions) | Jul 2022 (original launch) | First to receive all sets. Gold standard for collectors. |
-| **English (EN)** | Global (North America, Europe, Oceania, Asia) | Dec 2022 | Largest international market. Playable in Taiwan/Thailand from Nov 2025. |
-| **French (FR)** | Europe only | Feb 2025 (starting with OP-09) | Late entrant. Previous sets not available in French. |
-| **Simplified Chinese (CN)** | China only | Varies | Restricted to Chinese market. |
-| **Korean (KR)** | Korea only | Varies | Restricted to Korean market. |
+| Language                    | Region Availability                           | Launch Timing                  | Notes                                                                    |
+| --------------------------- | --------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------ |
+| **Japanese (JP)**           | Japan (usable in Asia regions)                | Jul 2022 (original launch)     | First to receive all sets. Gold standard for collectors.                 |
+| **English (EN)**            | Global (North America, Europe, Oceania, Asia) | Dec 2022                       | Largest international market. Playable in Taiwan/Thailand from Nov 2025. |
+| **French (FR)**             | Europe only                                   | Feb 2025 (starting with OP-09) | Late entrant. Previous sets not available in French.                     |
+| **Simplified Chinese (CN)** | China only                                    | Varies                         | Restricted to Chinese market.                                            |
+| **Korean (KR)**             | Korea only                                    | Varies                         | Restricted to Korean market.                                             |
 
 ### Cross-Language Play Rules
 
@@ -220,32 +229,33 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 
 ### Official Sources
 
-| Source | URL | Coverage |
-|---|---|---|
+| Source                                | URL                                                                    | Coverage                                |
+| ------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------- |
 | **Official One Piece Card Game (EN)** | [en.onepiece-cardgame.com](https://en.onepiece-cardgame.com/cardlist/) | Official card list, rules, product info |
-| **Official One Piece Card Game (JP)** | onepiece-cardgame.com | Japanese official site |
+| **Official One Piece Card Game (JP)** | onepiece-cardgame.com                                                  | Japanese official site                  |
 
 ### Community Databases
 
-| Source | URL | Strengths |
-|---|---|---|
-| **Limitless One Piece** | [onepiece.limitlesstcg.com](https://onepiece.limitlesstcg.com/cards) | Advanced card search, tournament results, promo card database, deck lists |
-| **onepiece-cardgame.dev** | [onepiece-cardgame.dev](https://onepiece-cardgame.dev/) | Card library and deck builder |
-| **onepiece.gg** | [onepiece.gg](https://onepiece.gg/) | Card database, decklists, set info |
-| **One Piece Top Decks** | [onepiecetopdecks.com](https://onepiecetopdecks.com/) | Meta analysis, rulings, promo card info |
-| **OPTCG.one** | optcg.one | Card database |
+| Source                    | URL                                                                  | Strengths                                                                 |
+| ------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Limitless One Piece**   | [onepiece.limitlesstcg.com](https://onepiece.limitlesstcg.com/cards) | Advanced card search, tournament results, promo card database, deck lists |
+| **onepiece-cardgame.dev** | [onepiece-cardgame.dev](https://onepiece-cardgame.dev/)              | Card library and deck builder                                             |
+| **onepiece.gg**           | [onepiece.gg](https://onepiece.gg/)                                  | Card database, decklists, set info                                        |
+| **One Piece Top Decks**   | [onepiecetopdecks.com](https://onepiecetopdecks.com/)                | Meta analysis, rulings, promo card info                                   |
+| **OPTCG.one**             | optcg.one                                                            | Card database                                                             |
 
 ### Developer APIs
 
-| API | URL | Details |
-|---|---|---|
-| **OPTCG API** | [optcgapi.com](https://optcgapi.com/) | RESTful, no auth required, GET only. Covers OP-01 through OP-11 + all starter decks. |
-| **API TCG** | [apitcg.com](https://www.apitcg.com/) | Multi-game API (One Piece, Pokemon, Digimon, etc.). Docs at [docs.apitcg.com](https://docs.apitcg.com/). |
-| **JustTCG API** | [justtcg.com/docs](https://justtcg.com/docs) | Real-time pricing data for TCGs including One Piece. |
+| API             | URL                                          | Details                                                                                                  |
+| --------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **OPTCG API**   | [optcgapi.com](https://optcgapi.com/)        | RESTful, no auth required, GET only. Covers OP-01 through OP-11 + all starter decks.                     |
+| **API TCG**     | [apitcg.com](https://www.apitcg.com/)        | Multi-game API (One Piece, Pokemon, Digimon, etc.). Docs at [docs.apitcg.com](https://docs.apitcg.com/). |
+| **JustTCG API** | [justtcg.com/docs](https://justtcg.com/docs) | Real-time pricing data for TCGs including One Piece.                                                     |
 
 ### OPTCG API Data Model (Most Complete Available)
 
 **Endpoints:**
+
 - `/api/allSets/` -- All set names and IDs
 - `/api/allSetCards/` -- All cards from all sets
 - `/api/sets/{set_id}/` -- Cards in a specific set
@@ -257,6 +267,7 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 - `/api/sets/card/twoweeks/{card_id}/` -- Card with 14-day price history
 
 **Card Data Fields:**
+
 - `card_id` (e.g., "OP01-001")
 - `card_name`
 - `card_set_id`, `set_name`, `set_id`
@@ -277,6 +288,7 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 **Price History:** Day1-Day13 fields tracking daily inventory and market prices over two weeks.
 
 **Limitations of existing APIs:**
+
 - OPTCG API only covers through OP-11 (not current).
 - None of the APIs adequately model the **variant/parallel** dimension -- they track the base card but not all physical variants.
 - Language coverage is primarily English.
@@ -300,15 +312,16 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 
 ### Specific Price Examples (as of late 2025 / early 2026)
 
-| Card | Variant | JP Price | EN Price | Notes |
-|---|---|---|---|---|
-| Ace (OP-13) | Manga Rare | ~$1,200-$1,700 raw | ~$4,000+ raw | EN 2-5x premium |
-| Luffy OP13-118 | Red Manga | -- | ~$8,950 raw, $20k-$24k PSA 10 | Flagship chase card |
-| God Pack exclusives | Red Parallels | $200-$300+ | Higher | Pull rate ~1/10-20 cases |
+| Card                | Variant       | JP Price           | EN Price                      | Notes                    |
+| ------------------- | ------------- | ------------------ | ----------------------------- | ------------------------ |
+| Ace (OP-13)         | Manga Rare    | ~$1,200-$1,700 raw | ~$4,000+ raw                  | EN 2-5x premium          |
+| Luffy OP13-118      | Red Manga     | --                 | ~$8,950 raw, $20k-$24k PSA 10 | Flagship chase card      |
+| God Pack exclusives | Red Parallels | $200-$300+         | Higher                        | Pull rate ~1/10-20 cases |
 
 ### JP vs EN Market Dynamics
 
 **Japanese advantages:**
+
 - Earlier access (4-6 months ahead).
 - Lower box prices (often half or less of EN MSRP).
 - "Prestige" factor for first-appearance rarities.
@@ -316,6 +329,7 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 - Wilder price fluctuations before global release (speculative market).
 
 **English advantages:**
+
 - Larger global buyer pool = higher resale liquidity.
 - Tighter supply = higher individual card prices.
 - More tournament-driven demand (play value).
@@ -327,6 +341,7 @@ The card ID (`OP01-001`, etc.) is **language-independent** -- the same numbering
 ### Cataloging Implications for Market Data
 
 A pricing/cataloging system must track:
+
 - **Language** independently (JP card != EN card for market purposes)
 - **Variant** independently (base SR != Alt Art SR != Manga Rare SR)
 - **Print source** (original OP-01 print != PRB-01 reprint)
@@ -338,24 +353,24 @@ A pricing/cataloging system must track:
 
 ### Card Types (5 total)
 
-| Type | Role | Key Stats |
-|---|---|---|
-| **Leader** | Mandatory 1-per-deck centerpiece. Stays on field. | Life, Power, Color(s), Attribute |
-| **Character** | Played to board (max 5 at once). | Cost, Power, Counter, Color, Attribute, Sub-types |
-| **Event** | One-time use abilities, goes to trash. | Cost, Color |
-| **Stage** | Ongoing field effects (max 1 at once). | Cost, Color |
-| **DON!!** | Resource cards (separate 10-card deck, white backs). | +1000 Power when attached |
+| Type          | Role                                                 | Key Stats                                         |
+| ------------- | ---------------------------------------------------- | ------------------------------------------------- |
+| **Leader**    | Mandatory 1-per-deck centerpiece. Stays on field.    | Life, Power, Color(s), Attribute                  |
+| **Character** | Played to board (max 5 at once).                     | Cost, Power, Counter, Color, Attribute, Sub-types |
+| **Event**     | One-time use abilities, goes to trash.               | Cost, Color                                       |
+| **Stage**     | Ongoing field effects (max 1 at once).               | Cost, Color                                       |
+| **DON!!**     | Resource cards (separate 10-card deck, white backs). | +1000 Power when attached                         |
 
 ### Colors (6 total)
 
-| Color | Introduced | Playstyle |
-|---|---|---|
-| **Red** | OP-01 | Aggressive, Rush keyword |
-| **Green** | OP-01 | Tempo manipulation, DON ramp |
-| **Blue** | OP-01 | Control, hand/board manipulation |
-| **Purple** | OP-01 | Heavy DON ramp, life-as-resource |
-| **Black** | OP-02 | Cost reduction, trash low-cost units |
-| **Yellow** | OP-03 | Life manipulation, Trigger effects |
+| Color      | Introduced | Playstyle                            |
+| ---------- | ---------- | ------------------------------------ |
+| **Red**    | OP-01      | Aggressive, Rush keyword             |
+| **Green**  | OP-01      | Tempo manipulation, DON ramp         |
+| **Blue**   | OP-01      | Control, hand/board manipulation     |
+| **Purple** | OP-01      | Heavy DON ramp, life-as-resource     |
+| **Black**  | OP-02      | Cost reduction, trash low-cost units |
+| **Yellow** | OP-03      | Life manipulation, Trigger effects   |
 
 Multi-color Leaders exist from the first set, allowing dual-color deck construction.
 

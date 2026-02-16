@@ -19,9 +19,9 @@ import type { TCG } from "@/generated/prisma/enums";
 // ─── Types ──────────────────────────────────────────────
 
 interface DimensionMetrics {
-  bias: number;    // signed mean (AI - Auth)
-  mad: number;     // mean absolute delta
-  stdDev: number;  // standard deviation of signed deltas
+  bias: number; // signed mean (AI - Auth)
+  mad: number; // mean absolute delta
+  stdDev: number; // standard deviation of signed deltas
   count: number;
 }
 
@@ -101,11 +101,7 @@ interface ComparisonRecord {
  * 7. Persist CalibrationReport
  */
 export async function runCalibration(): Promise<CalibrationReportSummary | null> {
-  const [
-    minSampleSize,
-    recentWindowDays,
-    baselineWindowDays,
-  ] = await Promise.all([
+  const [minSampleSize, recentWindowDays, baselineWindowDays] = await Promise.all([
     getConfig("calibration.min_sample_size"),
     getConfig("calibration.recent_window_days"),
     getConfig("calibration.baseline_window_days"),
@@ -116,39 +112,37 @@ export async function runCalibration(): Promise<CalibrationReportSummary | null>
   const baselineStart = new Date(now.getTime() - baselineWindowDays * 24 * 60 * 60 * 1000);
 
   // Load recent comparisons (must have signed deltas)
-  const recentComparisons = await db.conditionComparison.findMany({
+  const recentComparisons = (await db.conditionComparison.findMany({
     where: {
       createdAt: { gte: recentStart },
       signedDeltaComposite: { not: null },
     },
     orderBy: { createdAt: "desc" },
-  }) as ComparisonRecord[];
+  })) as ComparisonRecord[];
 
   if (recentComparisons.length < minSampleSize) {
     return null; // Insufficient data
   }
 
   // Load baseline comparisons (for drift detection)
-  const baselineComparisons = await db.conditionComparison.findMany({
+  const baselineComparisons = (await db.conditionComparison.findMany({
     where: {
       createdAt: { gte: baselineStart, lt: recentStart },
       signedDeltaComposite: { not: null },
     },
-  }) as ComparisonRecord[];
+  })) as ComparisonRecord[];
 
   // Compute metrics
   const recentMetrics = computeDimensionMetrics(recentComparisons);
   const agreementRate = recentComparisons.filter((c) => c.agreed).length / recentComparisons.length;
-  const confidenceLevel = recentComparisons.length >= 50
-    ? "HIGH"
-    : recentComparisons.length >= 20
-      ? "MODERATE"
-      : "LOW";
+  const confidenceLevel =
+    recentComparisons.length >= 50 ? "HIGH" : recentComparisons.length >= 20 ? "MODERATE" : "LOW";
 
   // Drift detection
-  const drift = baselineComparisons.length >= minSampleSize
-    ? await detectDrift(recentMetrics, computeDimensionMetrics(baselineComparisons))
-    : { detected: false, dimensions: [] as string[], details: {} };
+  const drift =
+    baselineComparisons.length >= minSampleSize
+      ? await detectDrift(recentMetrics, computeDimensionMetrics(baselineComparisons))
+      : { detected: false, dimensions: [] as string[], details: {} };
 
   // Authenticator outliers
   const outliers = await findAuthenticatorOutliers(recentComparisons);
@@ -157,7 +151,7 @@ export async function runCalibration(): Promise<CalibrationReportSummary | null>
   const perTcgBreakdown = computePerTcgBreakdown(recentComparisons);
 
   // Weight suggestion
-  const currentWeights = await getConfig("ccs.dimension_weights") as Record<string, number>;
+  const currentWeights = (await getConfig("ccs.dimension_weights")) as Record<string, number>;
   const suggestedWeights = suggestWeightAdjustments(recentMetrics, currentWeights);
 
   // Persist report
@@ -216,7 +210,8 @@ export function computeDimensionMetrics(comparisons: ComparisonRecord[]): AllDim
   const result = {} as AllDimensionMetrics;
 
   for (const dim of dims) {
-    const signedKey = `signedDelta${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof ComparisonRecord;
+    const signedKey =
+      `signedDelta${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof ComparisonRecord;
     const absKey = `delta${dim.charAt(0).toUpperCase()}${dim.slice(1)}` as keyof ComparisonRecord;
 
     const signedValues = comparisons
@@ -224,17 +219,18 @@ export function computeDimensionMetrics(comparisons: ComparisonRecord[]): AllDim
       .filter((v): v is number => v != null);
     const absValues = comparisons.map((c) => c[absKey] as number);
 
-    const bias = signedValues.length > 0
-      ? signedValues.reduce((sum, v) => sum + v, 0) / signedValues.length
-      : 0;
-    const mad = absValues.length > 0
-      ? absValues.reduce((sum, v) => sum + v, 0) / absValues.length
-      : 0;
+    const bias =
+      signedValues.length > 0
+        ? signedValues.reduce((sum, v) => sum + v, 0) / signedValues.length
+        : 0;
+    const mad =
+      absValues.length > 0 ? absValues.reduce((sum, v) => sum + v, 0) / absValues.length : 0;
 
     // Standard deviation of signed deltas
     let stdDev = 0;
     if (signedValues.length > 1) {
-      const variance = signedValues.reduce((sum, v) => sum + (v - bias) ** 2, 0) / (signedValues.length - 1);
+      const variance =
+        signedValues.reduce((sum, v) => sum + (v - bias) ** 2, 0) / (signedValues.length - 1);
       stdDev = Math.sqrt(variance);
     }
 
@@ -316,9 +312,8 @@ export async function findAuthenticatorOutliers(
     const signedDeltas = recs
       .map((c) => c.signedDeltaComposite)
       .filter((v): v is number => v != null);
-    const biasComposite = signedDeltas.length > 0
-      ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length
-      : 0;
+    const biasComposite =
+      signedDeltas.length > 0 ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length : 0;
 
     if (avgDelta >= outlierThreshold) {
       const auth = authMap.get(authId);
@@ -341,7 +336,10 @@ export async function findAuthenticatorOutliers(
 
 export function computePerTcgBreakdown(
   comparisons: ComparisonRecord[],
-): Record<string, { count: number; agreementRate: number; biasComposite: number; madComposite: number }> {
+): Record<
+  string,
+  { count: number; agreementRate: number; biasComposite: number; madComposite: number }
+> {
   const byTcg = new Map<string, ComparisonRecord[]>();
   for (const c of comparisons) {
     const tcg = c.tcg ?? "UNKNOWN";
@@ -350,16 +348,18 @@ export function computePerTcgBreakdown(
     byTcg.set(tcg, group);
   }
 
-  const result: Record<string, { count: number; agreementRate: number; biasComposite: number; madComposite: number }> = {};
+  const result: Record<
+    string,
+    { count: number; agreementRate: number; biasComposite: number; madComposite: number }
+  > = {};
 
   for (const [tcg, recs] of byTcg.entries()) {
     const agreedCount = recs.filter((c) => c.agreed).length;
     const signedDeltas = recs
       .map((c) => c.signedDeltaComposite)
       .filter((v): v is number => v != null);
-    const bias = signedDeltas.length > 0
-      ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length
-      : 0;
+    const bias =
+      signedDeltas.length > 0 ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length : 0;
     const mad = recs.reduce((s, c) => s + c.deltaComposite, 0) / recs.length;
 
     result[tcg] = {
@@ -427,7 +427,13 @@ export async function getLatestCalibrationReport() {
   });
 }
 
-export async function getCalibrationHistory({ limit = 20, offset = 0 }: { limit?: number; offset?: number }) {
+export async function getCalibrationHistory({
+  limit = 20,
+  offset = 0,
+}: {
+  limit?: number;
+  offset?: number;
+}) {
   const [reports, total] = await Promise.all([
     db.calibrationReport.findMany({
       orderBy: { createdAt: "desc" },
@@ -449,15 +455,19 @@ export async function getCalibrationHistory({ limit = 20, offset = 0 }: { limit?
   return { reports, total };
 }
 
-export async function getAuthenticatorCalibrationStats({ windowDays = 30 }: { windowDays?: number }) {
+export async function getAuthenticatorCalibrationStats({
+  windowDays = 30,
+}: {
+  windowDays?: number;
+}) {
   const since = new Date(Date.now() - windowDays * 24 * 60 * 60 * 1000);
 
-  const comparisons = await db.conditionComparison.findMany({
+  const comparisons = (await db.conditionComparison.findMany({
     where: {
       createdAt: { gte: since },
       signedDeltaComposite: { not: null },
     },
-  }) as ComparisonRecord[];
+  })) as ComparisonRecord[];
 
   // Group by authenticator
   const byAuth = new Map<string, ComparisonRecord[]>();
@@ -478,28 +488,29 @@ export async function getAuthenticatorCalibrationStats({ windowDays = 30 }: { wi
 
   const outlierThreshold = await getConfig("calibration.outlier_delta_threshold");
 
-  return [...byAuth.entries()].map(([authId, recs]) => {
-    const agreedCount = recs.filter((c) => c.agreed).length;
-    const avgDelta = recs.reduce((s, c) => s + c.deltaComposite, 0) / recs.length;
-    const signedDeltas = recs
-      .map((c) => c.signedDeltaComposite)
-      .filter((v): v is number => v != null);
-    const biasComposite = signedDeltas.length > 0
-      ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length
-      : 0;
-    const auth = authMap.get(authId);
+  return [...byAuth.entries()]
+    .map(([authId, recs]) => {
+      const agreedCount = recs.filter((c) => c.agreed).length;
+      const avgDelta = recs.reduce((s, c) => s + c.deltaComposite, 0) / recs.length;
+      const signedDeltas = recs
+        .map((c) => c.signedDeltaComposite)
+        .filter((v): v is number => v != null);
+      const biasComposite =
+        signedDeltas.length > 0 ? signedDeltas.reduce((s, v) => s + v, 0) / signedDeltas.length : 0;
+      const auth = authMap.get(authId);
 
-    return {
-      authenticatorId: authId,
-      name: auth?.businessName ?? "Unknown",
-      tier: auth?.tier ?? "STANDARD",
-      comparisons: recs.length,
-      agreementRate: round3(agreedCount / recs.length),
-      avgDeltaComposite: round3(avgDelta),
-      biasComposite: round3(biasComposite),
-      isOutlier: avgDelta >= outlierThreshold,
-    };
-  }).sort((a, b) => a.agreementRate - b.agreementRate);
+      return {
+        authenticatorId: authId,
+        name: auth?.businessName ?? "Unknown",
+        tier: auth?.tier ?? "STANDARD",
+        comparisons: recs.length,
+        agreementRate: round3(agreedCount / recs.length),
+        avgDeltaComposite: round3(avgDelta),
+        biasComposite: round3(biasComposite),
+        isOutlier: avgDelta >= outlierThreshold,
+      };
+    })
+    .sort((a, b) => a.agreementRate - b.agreementRate);
 }
 
 // ─── Weight Application ─────────────────────────────────
@@ -510,7 +521,7 @@ export async function applyCalibrationWeights(reportId: string, adminId: string)
   if (report.status !== "GENERATED") throw new Error("Report already processed");
   if (!report.suggestedWeights) throw new Error("No suggested weights");
 
-  const oldWeights = await getConfig("ccs.dimension_weights") as Record<string, number>;
+  const oldWeights = (await getConfig("ccs.dimension_weights")) as Record<string, number>;
   const newWeights = report.suggestedWeights as Record<string, number>;
 
   await setConfig("ccs.dimension_weights", newWeights, adminId);
@@ -551,9 +562,12 @@ export async function dismissCalibrationReport(reportId: string, adminId: string
 /**
  * Handle authenticator.verified events — check for extreme deltas.
  */
-export async function onAuthenticatorVerified(
-  payload: { tradeLegId: string; tradeId: string; authentic: boolean; conditionMatches: boolean },
-): Promise<void> {
+export async function onAuthenticatorVerified(payload: {
+  tradeLegId: string;
+  tradeId: string;
+  authentic: boolean;
+  conditionMatches: boolean;
+}): Promise<void> {
   const threshold = await getConfig("calibration.extreme_delta_threshold");
 
   const comparison = await db.conditionComparison.findUnique({
@@ -570,7 +584,7 @@ export async function onAuthenticatorVerified(
   if (comparison.deltaComposite >= threshold) {
     console.warn(
       `[Calibration] Extreme delta alert: tradeLeg=${payload.tradeLegId} ` +
-      `delta=${comparison.deltaComposite} threshold=${threshold}`,
+        `delta=${comparison.deltaComposite} threshold=${threshold}`,
     );
 
     eventBus.emitAsync("calibration.extreme_delta_alert", {
@@ -661,12 +675,15 @@ export async function analyzeMatchOutcomes(windowDays = 90): Promise<MatchQualit
     completionRate: round3(completed.length / outcomes.length),
     avgScoreCompleted: round3(avgScore(completed)),
     avgScoreCancelled: round3(avgScore(cancelled)),
-    avgCompletionDays: completionDays.length > 0
-      ? round3(completionDays.reduce((s, d) => s + d, 0) / completionDays.length)
-      : 0,
+    avgCompletionDays:
+      completionDays.length > 0
+        ? round3(completionDays.reduce((s, d) => s + d, 0) / completionDays.length)
+        : 0,
     localityCorrelation: {
-      localCompletionRate: localTotal.length > 0 ? round3(localCompleted.length / localTotal.length) : 0,
-      remoteCompletionRate: remoteTotal.length > 0 ? round3(remoteCompleted.length / remoteTotal.length) : 0,
+      localCompletionRate:
+        localTotal.length > 0 ? round3(localCompleted.length / localTotal.length) : 0,
+      remoteCompletionRate:
+        remoteTotal.length > 0 ? round3(remoteCompleted.length / remoteTotal.length) : 0,
     },
     cycleLengthCorrelation,
     scorerWeightSuggestion: scorerSuggestion,
@@ -707,8 +724,10 @@ function suggestScorerWeightAdjustments(
   let anyChange = false;
 
   for (const key of scalarKeys) {
-    const completedAvg = completedWeights.reduce((s, w) => s + ((w[key] as number) ?? 0), 0) / completedWeights.length;
-    const failedAvg = failedWeights.reduce((s, w) => s + ((w[key] as number) ?? 0), 0) / failedWeights.length;
+    const completedAvg =
+      completedWeights.reduce((s, w) => s + ((w[key] as number) ?? 0), 0) / completedWeights.length;
+    const failedAvg =
+      failedWeights.reduce((s, w) => s + ((w[key] as number) ?? 0), 0) / failedWeights.length;
     const diff = completedAvg - failedAvg;
 
     // If completed trades had higher value for this weight, nudge up (conservative)

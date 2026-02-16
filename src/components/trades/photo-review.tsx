@@ -12,13 +12,7 @@ interface PhotoReviewProps {
   onReviewed: () => void;
 }
 
-export function PhotoReview({
-  tradeId,
-  legId,
-  photos,
-  attempts,
-  onReviewed,
-}: PhotoReviewProps) {
+export function PhotoReview({ tradeId, legId, photos, attempts, onReviewed }: PhotoReviewProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [rejecting, setRejecting] = useState(false);
   const [rejectionNote, setRejectionNote] = useState("");
@@ -120,18 +114,10 @@ export function PhotoReview({
         </div>
       ) : (
         <div className="flex gap-2">
-          <Button
-            size="sm"
-            onClick={() => handleDecision(true)}
-            disabled={submitting}
-          >
+          <Button size="sm" onClick={() => handleDecision(true)} disabled={submitting}>
             {submitting ? "Approving..." : "Approve"}
           </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => setRejecting(true)}
-          >
+          <Button size="sm" variant="outline" onClick={() => setRejecting(true)}>
             Reject
           </Button>
         </div>

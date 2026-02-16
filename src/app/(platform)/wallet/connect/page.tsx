@@ -16,7 +16,7 @@ function ConnectContent() {
   useEffect(() => {
     if (refresh === "true") {
       // The onboarding link expired — generate a fresh one and redirect back
-      setRedirecting(true);
+      setRedirecting(true); // eslint-disable-line react-hooks/set-state-in-effect
       fetch("/api/connect/onboard", { method: "POST" })
         .then((res) => res.json())
         .then((data) => {
@@ -60,9 +60,7 @@ function ConnectContent() {
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-gray-600">
-        Something went wrong with the onboarding process.
-      </p>
+      <p className="text-sm text-gray-600">Something went wrong with the onboarding process.</p>
       <Link href="/wallet">
         <Button variant="outline">Back to Wallet</Button>
       </Link>

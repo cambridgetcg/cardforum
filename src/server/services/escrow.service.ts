@@ -1,7 +1,12 @@
 import { db } from "@/lib/db";
 import type { TxClient } from "./wallet.service";
 
-export async function createEscrow(tradeId: string, amount: number, currency = "USD", tx?: TxClient) {
+export async function createEscrow(
+  tradeId: string,
+  amount: number,
+  currency = "USD",
+  tx?: TxClient,
+) {
   const client = tx ?? db;
   return client.escrow.create({
     data: {

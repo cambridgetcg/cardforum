@@ -14,10 +14,7 @@ import type { SubmitBasicKYCInput, SubmitEnhancedKYCInput, ReviewKYCInput } from
  * Submit basic KYC (government ID + selfie).
  * Transitions user from UNVERIFIED or BASIC_REJECTED → BASIC_PENDING.
  */
-export async function submitBasicKYC(
-  userId: string,
-  input: SubmitBasicKYCInput,
-) {
+export async function submitBasicKYC(userId: string, input: SubmitBasicKYCInput) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   const from = user.kycStatus as KYCStatus;
 
@@ -75,10 +72,7 @@ export async function submitBasicKYC(
  * Submit enhanced KYC (proof of address + optional bank verification).
  * Transitions user from BASIC_VERIFIED or ENHANCED_REJECTED → ENHANCED_PENDING.
  */
-export async function submitEnhancedKYC(
-  userId: string,
-  input: SubmitEnhancedKYCInput,
-) {
+export async function submitEnhancedKYC(userId: string, input: SubmitEnhancedKYCInput) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   const from = user.kycStatus as KYCStatus;
 
@@ -166,9 +160,7 @@ export async function getKYCStatus(userId: string) {
 /**
  * List users with pending KYC submissions.
  */
-export async function listPendingKYC(
-  statusFilter?: "BASIC_PENDING" | "ENHANCED_PENDING",
-) {
+export async function listPendingKYC(statusFilter?: "BASIC_PENDING" | "ENHANCED_PENDING") {
   const where = statusFilter
     ? { kycStatus: statusFilter }
     : { kycStatus: { in: ["BASIC_PENDING" as const, "ENHANCED_PENDING" as const] } };
@@ -194,11 +186,7 @@ export async function listPendingKYC(
 /**
  * Approve or reject a KYC submission.
  */
-export async function reviewKYC(
-  userId: string,
-  reviewerId: string,
-  input: ReviewKYCInput,
-) {
+export async function reviewKYC(userId: string, reviewerId: string, input: ReviewKYCInput) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   const from = user.kycStatus as KYCStatus;
 
@@ -261,11 +249,7 @@ export async function reviewKYC(
 /**
  * Suspend a verified user's KYC.
  */
-export async function suspendKYC(
-  userId: string,
-  reviewerId: string,
-  reason: string,
-) {
+export async function suspendKYC(userId: string, reviewerId: string, reason: string) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   const from = user.kycStatus as KYCStatus;
 
@@ -301,11 +285,7 @@ export async function suspendKYC(
 /**
  * Revoke a suspended user's KYC (terminal state).
  */
-export async function revokeKYC(
-  userId: string,
-  reviewerId: string,
-  reason: string,
-) {
+export async function revokeKYC(userId: string, reviewerId: string, reason: string) {
   const user = await db.user.findUniqueOrThrow({ where: { id: userId } });
   const from = user.kycStatus as KYCStatus;
 
@@ -401,10 +381,7 @@ export async function getUserKYCLevel(
  * Assert that a user can create a listing at the given price.
  * BASIC KYC required for ≤$500, ENHANCED for >$500.
  */
-export async function assertCanCreateListing(
-  userId: string,
-  askPriceCents: number,
-) {
+export async function assertCanCreateListing(userId: string, askPriceCents: number) {
   const level = await getUserKYCLevel(userId);
 
   if (level === "UNVERIFIED") {
@@ -413,9 +390,7 @@ export async function assertCanCreateListing(
 
   const listingCap = await getConfig("kyc.basic_listing_cap_cents");
   if (askPriceCents > listingCap && !kycLevelMeetsMinimum(level, "ENHANCED")) {
-    throw new Error(
-      `Listings over $${listingCap / 100} require Enhanced KYC verification.`,
-    );
+    throw new Error(`Listings over $${listingCap / 100} require Enhanced KYC verification.`);
   }
 }
 
@@ -423,10 +398,7 @@ export async function assertCanCreateListing(
  * Assert that a user can participate in a trade at the given value.
  * BASIC KYC required for ≤$1,000, ENHANCED for >$1,000.
  */
-export async function assertCanTrade(
-  userId: string,
-  tradeValueCents: number,
-) {
+export async function assertCanTrade(userId: string, tradeValueCents: number) {
   const level = await getUserKYCLevel(userId);
 
   if (level === "UNVERIFIED") {
@@ -435,9 +407,7 @@ export async function assertCanTrade(
 
   const tradeCap = await getConfig("kyc.basic_trade_cap_cents");
   if (tradeValueCents > tradeCap && !kycLevelMeetsMinimum(level, "ENHANCED")) {
-    throw new Error(
-      `Trades over $${tradeCap / 100} require Enhanced KYC verification.`,
-    );
+    throw new Error(`Trades over $${tradeCap / 100} require Enhanced KYC verification.`);
   }
 }
 
@@ -449,8 +419,6 @@ export async function assertCanApplyAsAuthenticator(userId: string) {
   const level = await getUserKYCLevel(userId);
 
   if (!kycLevelMeetsMinimum(level, "ENHANCED")) {
-    throw new Error(
-      "Enhanced KYC verification required to apply as an authenticator.",
-    );
+    throw new Error("Enhanced KYC verification required to apply as an authenticator.");
   }
 }

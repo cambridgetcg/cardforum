@@ -56,9 +56,7 @@ export function RecordShipment({
       className="flex items-end gap-2 rounded-lg border border-blue-200 bg-blue-50 px-3 py-2"
     >
       <div className="flex-1">
-        <p className="mb-1 text-sm font-medium text-blue-800">
-          Ship {cardName} to recipient
-        </p>
+        <p className="mb-1 text-sm font-medium text-blue-800">Ship {cardName} to recipient</p>
         <p className="mb-2 text-xs text-blue-600">
           {role === "authenticator"
             ? "Enter the outbound tracking number after shipping"

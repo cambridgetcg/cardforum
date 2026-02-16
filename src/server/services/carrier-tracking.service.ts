@@ -5,7 +5,14 @@ import { db } from "@/lib/db";
 export interface TrackingStatus {
   carrier: string;
   trackingNumber: string;
-  status: "PRE_TRANSIT" | "IN_TRANSIT" | "OUT_FOR_DELIVERY" | "DELIVERED" | "FAILED" | "RETURNED" | "UNKNOWN";
+  status:
+    | "PRE_TRANSIT"
+    | "IN_TRANSIT"
+    | "OUT_FOR_DELIVERY"
+    | "DELIVERED"
+    | "FAILED"
+    | "RETURNED"
+    | "UNKNOWN";
   statusDetail: string;
   estimatedDelivery: string | null;
   lastUpdate: string;
@@ -64,7 +71,10 @@ class GenericCarrierAdapter implements CarrierAdapter {
     };
   }
 
-  private async getAfterShipStatus(trackingNumber: string, apiKey: string): Promise<TrackingStatus> {
+  private async getAfterShipStatus(
+    trackingNumber: string,
+    apiKey: string,
+  ): Promise<TrackingStatus> {
     const res = await fetch(`https://api.aftership.com/v4/trackings/${trackingNumber}`, {
       headers: {
         "aftership-api-key": apiKey,
@@ -101,15 +111,24 @@ class GenericCarrierAdapter implements CarrierAdapter {
 
 function mapAfterShipStatus(tag: string): TrackingStatus["status"] {
   switch (tag) {
-    case "InfoReceived": return "PRE_TRANSIT";
-    case "InTransit": return "IN_TRANSIT";
-    case "OutForDelivery": return "OUT_FOR_DELIVERY";
-    case "Delivered": return "DELIVERED";
-    case "AvailableForPickup": return "OUT_FOR_DELIVERY";
-    case "AttemptFail": return "FAILED";
-    case "Exception": return "FAILED";
-    case "Expired": return "FAILED";
-    default: return "UNKNOWN";
+    case "InfoReceived":
+      return "PRE_TRANSIT";
+    case "InTransit":
+      return "IN_TRANSIT";
+    case "OutForDelivery":
+      return "OUT_FOR_DELIVERY";
+    case "Delivered":
+      return "DELIVERED";
+    case "AvailableForPickup":
+      return "OUT_FOR_DELIVERY";
+    case "AttemptFail":
+      return "FAILED";
+    case "Exception":
+      return "FAILED";
+    case "Expired":
+      return "FAILED";
+    default:
+      return "UNKNOWN";
   }
 }
 
