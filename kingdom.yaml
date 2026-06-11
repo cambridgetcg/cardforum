@@ -1,0 +1,8 @@
+name: cardforum
+kind: venture
+layer: commerce
+owner_sister: none
+domain: commerce
+state: active
+purpose: P2P trading-card bridge — cycle-matching trades so cards stay local across borders.
+dependsOn: [tcg-pricing-backend]
