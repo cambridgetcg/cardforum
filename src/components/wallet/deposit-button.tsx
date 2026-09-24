@@ -215,7 +215,11 @@ export function DepositButton({ onDeposited }: { onDeposited?: () => void }) {
 
   return (
     <div className="space-y-3 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="text-sm font-semibold text-gray-900">Add Funds</h3>
+      <h3 className="text-sm font-semibold text-gray-900">Fund an existing obligation</h3>
+      <p className="text-sm text-gray-600">
+        Use this legacy funding flow only for an existing trade or agreed fee. New paid purchases
+        are retired.
+      </p>
 
       <div className="grid grid-cols-2 gap-2">
         <button

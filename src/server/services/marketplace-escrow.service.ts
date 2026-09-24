@@ -1,3 +1,4 @@
+import { assertNewTradeHoldsAllowed } from "@/lib/commerce-policy";
 /**
  * Marketplace Escrow Service
  *
@@ -87,6 +88,11 @@ export async function createTradeHolds(tradeId: string): Promise<HoldResult> {
   const bridgeLegs = toBridgeLegs(legs);
   const settlements = computeSettlements(bridgeLegs);
   const holds = await calculateHoldAmounts(legs, settlements);
+  const trade = await db.trade.findUniqueOrThrow({
+    where: { id: tradeId },
+    select: { statusHistory: true },
+  });
+  assertNewTradeHoldsAllowed(trade.statusHistory, holds);
 
   const payments: HoldResult["payments"] = [];
   let totalHeld = 0;

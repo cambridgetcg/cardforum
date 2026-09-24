@@ -144,7 +144,7 @@ export default function WalletPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Wallet</h1>
-      <p className="mt-1 text-sm text-gray-600">Manage your funds for trading</p>
+      <p className="mt-1 text-sm text-gray-600">Existing balances, obligations and withdrawals</p>
       <Suspense fallback={<p className="mt-6 text-gray-500">Loading wallet...</p>}>
         <WalletContent />
       </Suspense>

@@ -65,7 +65,7 @@ export function TransactionHistory({ transactions }: TransactionHistoryProps) {
   if (transactions.length === 0) {
     return (
       <div className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-        <p className="text-sm text-gray-500">No transactions yet. Deposit funds to get started.</p>
+        <p className="text-sm text-gray-500">No recorded transactions.</p>
       </div>
     );
   }

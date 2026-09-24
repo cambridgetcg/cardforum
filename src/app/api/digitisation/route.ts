@@ -1,10 +1,10 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { createDigitisationSchema } from "@/lib/validators";
 import {
-  createDigitisationRequest,
-  getUserDigitisationRequests,
-} from "@/server/services/digitisation.service";
+  NEW_PAID_COMMERCE_RETIRED_MESSAGE,
+  NEW_PAID_COMMERCE_RETIRED_STATUS,
+} from "@/lib/commerce-policy";
+import { getUserDigitisationRequests } from "@/server/services/digitisation.service";
 
 // GET /api/digitisation — List current user's digitisation requests
 export async function GET() {
@@ -18,26 +18,9 @@ export async function GET() {
 }
 
 // POST /api/digitisation — Create a new digitisation request
-export async function POST(req: NextRequest) {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const body = await req.json();
-  const parsed = createDigitisationSchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json({ error: parsed.error.flatten().fieldErrors }, { status: 400 });
-  }
-
-  try {
-    const request = await createDigitisationRequest({
-      userId: session.user.id,
-      ...parsed.data,
-    });
-    return NextResponse.json(request, { status: 201 });
-  } catch (err) {
-    const message = err instanceof Error ? err.message : "Failed to create request";
-    return NextResponse.json({ error: message }, { status: 400 });
-  }
+export async function POST() {
+  return NextResponse.json(
+    { error: NEW_PAID_COMMERCE_RETIRED_MESSAGE, code: "NEW_PAID_COMMERCE_RETIRED" },
+    { status: NEW_PAID_COMMERCE_RETIRED_STATUS, headers: { "Cache-Control": "no-store" } },
+  );
 }

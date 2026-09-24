@@ -1,3 +1,5 @@
+import { hasUnpaidTradeAdmission, assertNewPaidCommerceAllowed } from "@/lib/commerce-policy";
+import { assertNewTradeRemainsUnpaid } from "./trade-admission.service";
 import { db } from "@/lib/db";
 import { canTransition, type TradeStatus, type TradeMode } from "@/types/domain";
 import { computeSettlements } from "@/server/matching/bridge-builder";
@@ -69,6 +71,10 @@ export async function transitionTrade(tradeId: string, userId: string, newStatus
   const mode = (trade.mode ?? "AUTHENTICATED") as TradeMode;
   if (!canTransition(trade.status as TradeStatus, newStatus, mode)) {
     throw new Error(`Cannot transition from ${trade.status} to ${newStatus}`);
+  }
+
+  if (["ACCEPTED", "ESCROWED", "AUTHENTICATING"].includes(newStatus)) {
+    await assertNewTradeRemainsUnpaid(trade);
   }
 
   // ─── Read-only gates (outside transaction) ────────
@@ -549,6 +555,8 @@ export async function requestAuthentication(tradeId: string, userId: string) {
   if (trade.userAId !== userId && trade.userBId !== userId) {
     throw new Error("Not authorized");
   }
+
+  if (hasUnpaidTradeAdmission(trade.statusHistory)) assertNewPaidCommerceAllowed();
 
   return db.trade.update({
     where: { id: tradeId },

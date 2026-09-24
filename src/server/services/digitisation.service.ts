@@ -1,3 +1,4 @@
+import { assertNewPaidCommerceAllowed } from "@/lib/commerce-policy";
 import { db } from "@/lib/db";
 import { DIGITISATION_TRANSITIONS } from "@/types/domain";
 import type {
@@ -44,6 +45,7 @@ async function getRequestOrThrow(requestId: string) {
 export async function createDigitisationRequest(
   input: CreateDigitisationInput,
 ): Promise<DigitisationRequest> {
+  assertNewPaidCommerceAllowed();
   // Validate authenticator is a vault operator
   const auth = await db.authenticator.findUniqueOrThrow({
     where: { id: input.authenticatorId },

@@ -1,5 +1,7 @@
 "use client";
 
+import { hasUnpaidTradeAdmission } from "@/lib/commerce-policy";
+
 import { useEffect, useState, useCallback } from "react";
 import { useSession } from "next-auth/react";
 import { useParams, useRouter } from "next/navigation";
@@ -443,7 +445,10 @@ export default function TradeDetailPage() {
   const canCancel =
     transitions[trade.status].includes("CANCELLED") &&
     !["COMPLETED", "REJECTED", "CANCELLED"].includes(trade.status);
-  const canRequestAuth = isDirect && ["PROPOSED", "ACCEPTED"].includes(trade.status);
+  const canRequestAuth =
+    isDirect &&
+    !hasUnpaidTradeAdmission(trade.statusHistory) &&
+    ["PROPOSED", "ACCEPTED"].includes(trade.status);
 
   const isPreEscrow = ["PROPOSED", "ACCEPTED"].includes(trade.status);
   const needsAddress = isPreEscrow && addresses.length === 0;

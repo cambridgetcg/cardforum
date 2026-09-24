@@ -1,3 +1,4 @@
+import { assertNewPaidCommerceAllowed } from "@/lib/commerce-policy";
 import { db } from "@/lib/db";
 import { getConfigs } from "@/server/services/config.service";
 import { transferToken } from "./digital-token.service";
@@ -93,6 +94,7 @@ export async function delistToken(listingId: string, userId: string): Promise<vo
 // ─── Buy Flow ───────────────────────────────────────────
 
 export async function buyToken(listingId: string, buyerId: string): Promise<DigitalTrade> {
+  assertNewPaidCommerceAllowed();
   return db
     .$transaction(
       async (tx) => {

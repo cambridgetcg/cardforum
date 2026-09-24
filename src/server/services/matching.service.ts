@@ -1,3 +1,4 @@
+import { canCreateUnpaidTrade, UNPAID_TRADE_ADMISSION } from "@/lib/commerce-policy";
 import { db } from "@/lib/db";
 import { eventBus } from "@/server/events/event-bus";
 import "@/server/events/subscribers";
@@ -291,7 +292,10 @@ export async function runMatching(): Promise<BridgeProposal[]> {
 
     // 5b. Check auto-accept eligibility
     const constraints = await loadAutoAcceptConstraints(proposal);
-    if (isAutoAcceptEligible(proposal, constraints)) {
+    if (
+      canCreateUnpaidTrade(proposal.tradeMode, proposal.legs) &&
+      isAutoAcceptEligible(proposal, constraints)
+    ) {
       const participantIds = proposal.userIds;
 
       const trade = await db.trade.create({
@@ -303,7 +307,7 @@ export async function runMatching(): Promise<BridgeProposal[]> {
           mode: proposal.tradeMode ?? "AUTHENTICATED",
           status: "ACCEPTED",
           statusHistory: [
-            { status: "PROPOSED", at: new Date().toISOString() },
+            { status: "PROPOSED", at: new Date().toISOString(), admission: UNPAID_TRADE_ADMISSION },
             { status: "ACCEPTED", at: new Date().toISOString(), auto: true },
           ],
           legs: {

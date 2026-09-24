@@ -1,3 +1,9 @@
+import { canCreateUnpaidProposal } from "@/server/services/trade-admission.service";
+import {
+  UNPAID_TRADE_ADMISSION,
+  NEW_PAID_COMMERCE_RETIRED_MESSAGE,
+  NEW_PAID_COMMERCE_RETIRED_STATUS,
+} from "@/lib/commerce-policy";
 import { NextResponse, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -67,6 +73,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Not part of this proposal" }, { status: 403 });
     }
 
+    if (!(await canCreateUnpaidProposal(proposal.tradeMode, proposal.legs))) {
+      return NextResponse.json(
+        { error: NEW_PAID_COMMERCE_RETIRED_MESSAGE, code: "NEW_PAID_COMMERCE_RETIRED" },
+        { status: NEW_PAID_COMMERCE_RETIRED_STATUS, headers: { "Cache-Control": "no-store" } },
+      );
+    }
+
     // Use first two distinct users as userA and userB
     const trade = await db.trade.create({
       data: {
@@ -76,7 +89,9 @@ export async function POST(req: NextRequest) {
         participantIds: userIds,
         mode: proposal.tradeMode ?? "AUTHENTICATED",
         status: "PROPOSED",
-        statusHistory: [{ status: "PROPOSED", at: new Date().toISOString() }],
+        statusHistory: [
+          { status: "PROPOSED", at: new Date().toISOString(), admission: UNPAID_TRADE_ADMISSION },
+        ],
         legs: {
           create: proposal.legs.map((leg) => ({
             haveListingId: leg.haveListingId,

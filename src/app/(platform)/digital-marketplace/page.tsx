@@ -50,7 +50,6 @@ export default function DigitalMarketplacePage() {
   const [loading, setLoading] = useState(true);
   const [tcgFilter, setTcgFilter] = useState<TCG | "">("");
   const [conditionFilter, setConditionFilter] = useState<Condition | "">("");
-  const [buyingId, setBuyingId] = useState<string | null>(null);
   const currentUserId = session?.user?.id ?? "";
 
   const fetchListings = useCallback(async () => {
@@ -74,31 +73,11 @@ export default function DigitalMarketplacePage() {
     fetchListings();
   }, [fetchListings]);
 
-  async function handleBuy(listingId: string) {
-    if (buyingId) return;
-    setBuyingId(listingId);
-
-    try {
-      const res = await fetch(`/api/digital-marketplace/${listingId}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
-      if (res.ok) {
-        fetchListings();
-      } else {
-        const data = await res.json();
-        alert(typeof data.error === "string" ? data.error : "Purchase failed");
-      }
-    } finally {
-      setBuyingId(null);
-    }
-  }
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900">Digital Marketplace</h1>
       <p className="mt-1 text-sm text-gray-600">
-        Buy and sell digital tokens — instant, global, no shipping
+        Inspect existing digital-token listings. New purchases are retired.
       </p>
 
       <div className="mt-6 space-y-4">
@@ -158,7 +137,6 @@ export default function DigitalMarketplacePage() {
                   seller={listing.seller}
                   token={listing.token}
                   currentUserId={currentUserId}
-                  onBuy={handleBuy}
                 />
               ))}
             </div>
