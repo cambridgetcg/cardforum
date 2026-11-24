@@ -68,7 +68,7 @@ export function RegisterForm() {
     <Card className="mx-auto w-full max-w-md">
       <CardHeader>
         <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
-        <p className="text-sm text-gray-600">Join CardForum and start trading</p>
+        <p className="text-sm text-gray-600">New paid trades and purchases are closed.</p>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-3">
