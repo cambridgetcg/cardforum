@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CardForum — P2P Trading Card Bridge",
+  title: "CardForum",
   description:
-    "Trade cards globally without international shipping. CardForum bridges local trades so your cards never cross borders.",
+    "An earlier card-trading project by Cambridge TCG. New paid trades and purchases ended in September 2026.",
 };
 
 export default function RootLayout({

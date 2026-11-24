@@ -116,9 +116,6 @@ export function Header() {
                   Log In
                 </Button>
               </Link>
-              <Link href="/register">
-                <Button size="sm">Get Started</Button>
-              </Link>
             </>
           )}
         </nav>
@@ -254,9 +251,6 @@ export function Header() {
                   <Button variant="outline" size="sm">
                     Log In
                   </Button>
-                </Link>
-                <Link href="/register" onClick={() => setMobileOpen(false)}>
-                  <Button size="sm">Get Started</Button>
                 </Link>
               </div>
             )}
